@@ -1,7 +1,4 @@
-<ul></ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
+<ul>
+    <li><a href="{{ route('home') }}">Home</a></li>
+    <li><a href="{{ route('contacto') }}">Contacto</a></li>     
 </ul>
