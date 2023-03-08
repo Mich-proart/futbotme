@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/', [Controller::class, 'index'])->name('home');
 
 Route::view('/contacto', 'contact')->name('contacto');

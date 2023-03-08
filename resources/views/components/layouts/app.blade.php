@@ -7,7 +7,7 @@
         <title>futbolme - {{ $title ?? 'Titulo Web' }}</title>
         <meta name="description" content="{{ $metaDescription }}">
     </head>
-    <body>
+    <body>        
 
         {{-- navbar --}}
         <x-layouts.navigation />

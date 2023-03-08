@@ -1,0 +1,101 @@
+{
+    "Regional": [
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "2644",
+            "torneo_nombre": "TERCERA DIVISIÓN - Grupo 18A",
+            "temporada_id": "2643",
+            "categoria_torneo_id": "1",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "2645",
+            "torneo_nombre": "TERCERA DIVISIÓN - Grupo 18B",
+            "temporada_id": "2644",
+            "categoria_torneo_id": "1",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "362",
+            "torneo_nombre": "COPA RFEF :: Castilla - La Mancha",
+            "temporada_id": "275",
+            "categoria_torneo_id": "1",
+            "tipo_torneo": "2"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "50",
+            "torneo_nombre": "PRIMERA AUTONÓMICA PREFERENTE - Grupo 1",
+            "temporada_id": "48",
+            "categoria_torneo_id": "4",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "51",
+            "torneo_nombre": "PRIMERA AUTONÓMICA PREFERENTE - Grupo 2",
+            "temporada_id": "49",
+            "categoria_torneo_id": "4",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "2709",
+            "torneo_nombre": "PRIMERA AUTONÓMICA PREFERENTE - Grupo 3",
+            "temporada_id": "2708",
+            "categoria_torneo_id": "4",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "343",
+            "torneo_nombre": "PRIMERA AUTONÓMICA PREFERENTE - Promoción de Ascenso",
+            "temporada_id": "256",
+            "categoria_torneo_id": "4",
+            "tipo_torneo": "2"
+        },
+        {
+            "id": "1",
+            "nombre": "Senior Masculino",
+            "torneo_id": "1760",
+            "torneo_nombre": "PRIMERA AUT. PREFERENTE - Clasificación Copa S.M. El Rey",
+            "temporada_id": "1747",
+            "categoria_torneo_id": "4",
+            "tipo_torneo": "2"
+        }
+    ],
+    "Juvenil": [
+        {
+            "id": "3",
+            "nombre": "Juvenil Masculino",
+            "torneo_id": "2721",
+            "torneo_nombre": "LIGA NACIONAL JUVENIL - Grupo 15A",
+            "temporada_id": "2720",
+            "categoria_torneo_id": "5",
+            "tipo_torneo": "1"
+        },
+        {
+            "id": "3",
+            "nombre": "Juvenil Masculino",
+            "torneo_id": "2722",
+            "torneo_nombre": "LIGA NACIONAL JUVENIL - Grupo 15B",
+            "temporada_id": "2721",
+            "categoria_torneo_id": "5",
+            "tipo_torneo": "1"
+        }
+    ],
+    "Cadete": [],
+    "Infantil": [],
+    "Alevin": [],
+    "Femenino": [],
+    "Fútbol Sala": []
+}

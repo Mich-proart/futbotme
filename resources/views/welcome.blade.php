@@ -2,12 +2,12 @@
 
     <h1>Esto es de la home</h1>
 
-    @dump($ejemplos)
+    @dump($users)
 
-    @foreach ( $ejemplos as $ejemplo)
+    {{-- @foreach ( $users as $ejemplo)
 
         {{ $ejemplo['title']}}
 
-    @endforeach
+    @endforeach --}}
 
 </x-layouts.app>
