@@ -11,6 +11,8 @@
 
         {{-- navbar --}}
         <x-layouts.navigation />
+
+        @include('components.menuphp')         
         
         {{-- contenido principal del documento --}}
         {{ $slot }}

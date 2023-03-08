@@ -1,0 +1,1 @@
+<?php echo "menu solo php aqui hacemos la lectura fichero";
