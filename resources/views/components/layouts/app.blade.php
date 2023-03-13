@@ -10,9 +10,7 @@
     <body>        
 
         {{-- navbar --}}
-        <x-layouts.navigation />
-
-        @include('components.menuphp')         
+        <x-layouts.navigation />              
         
         {{-- contenido principal del documento --}}
         {{ $slot }}

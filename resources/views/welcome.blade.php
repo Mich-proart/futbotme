@@ -2,7 +2,7 @@
 
     <h1>Esto es de la home</h1>
 
-    @dump($users)
+    {{-- @dump($users) --}}
 
     {{-- @foreach ( $users as $ejemplo)
 
