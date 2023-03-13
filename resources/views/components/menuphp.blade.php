@@ -12,10 +12,13 @@
 
         foreach ($iObj[$indice] as $element) {
 
-            if ($indice == 'autonomica' || $indice == 'europa' || $indice == 'america') {
-                echo $element[0]['nombre'] . $element[0]['id'] . $element[0]['nombrePais'] . "<br>"; 
+            if(isset($element[0])){
+
+                echo $element[0]['nombre'] ." - ". $element[0]['id'] ." - ". $element[0]['nombrePais'] . "<br>"; 
+
             }else{
-                echo $element['nombre'] . $element['id'] . $element['nombrePais'] . "<br>";   
+                
+                echo $element['nombre'] ." - ". $element['id'] ." - ". $element['nombrePais'] . "<br>";   
             } 
         }
     }
