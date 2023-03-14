@@ -1,6 +1,8 @@
-<ul>
-    <li><a href="{{ route('home') }}">Home</a></li>
-    <li><a href="{{ route('contacto') }}">Contacto</a></li>     
-</ul>
-
-@include('components.menuphp')   
+<nav class="navBar">
+    <div class="content-top-nav-bar">
+        <h1 class="text-top-nav-bar">Fútbol en directo, livescore - resultados de partidos de fútbol</h1>
+    </div>
+    <div class="content-navbar">
+        @include('components.menuphp')   
+    </div>
+</nav>

@@ -1,25 +1,55 @@
-<?php $datos = file_get_contents(base_path()."/resources/assets/menu.json");?>
+<?php $datos = file_get_contents(base_path()."/resources/views/components/menu.json");?>
 
 <?php $iObj = json_decode($datos, true);?>
 
-<?php foreach ($iObj as $key => $value) {  
+<ul class="listado-padres-content">
 
-    $indice = $key;
+    <?php foreach ($iObj as $key => $value) { ?>     
 
-    echo $indice."<br>";
+        <?php $indice = $key;?>
+        
+        <li class="item-parent"><?php echo $indice;?>
 
-    if (count($iObj[$indice]) > 0){
+            <?php if (count($iObj[$indice]) > 0){ ?>
 
-        foreach ($iObj[$indice] as $element) {
+                <ul class="listado-childrens-content">
 
-            if(isset($element[0])){
+                    <?php foreach ($iObj[$indice] as $element) { ?>
 
-                echo $element[0]['nombre'] ." - ". $element[0]['id'] ." - ". $element[0]['nombrePais'] . "<br>"; 
+                        <?php if(isset($element[0])){ ?>
 
-            }else{
-                
-                echo $element['nombre'] ." - ". $element['id'] ." - ". $element['nombrePais'] . "<br>";   
-            } 
-        }
-    }
-}
+                            <li class="item-children"><?php echo $element[0]['nombre'];?></li>
+
+                            {{-- echo $element[0]['nombre'] ." - ". $element[0]['id'] ." - ". $element[0]['nombrePais'] . "<br>";  --}}
+
+                        <?php }else{ ?>
+
+                            <li class="item-children"><?php echo $element['nombre'];?></li>
+                            
+                            {{-- echo $element['nombre'] ." - ". $element['id'] ." - ". $element['nombrePais'] . "<br>";    --}}
+
+                        <?php } ?>
+
+                    <?php }?>
+
+                </ul>
+
+            <?php }?>
+
+        </li>
+
+    <?php }?>
+
+    <li>
+        
+        <a href="{{ route('home') }}">Home</a>
+    
+    </li>
+
+    <li>
+        
+        <a href="{{ route('contacto') }}">Contacto</a>
+    
+    </li>     
+
+</ul>
