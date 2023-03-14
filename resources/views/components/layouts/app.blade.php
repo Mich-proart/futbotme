@@ -15,10 +15,12 @@
         <meta name="description" content="{{ $metaDescription }}">
 
         {{-- css files --}}
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-navbar.css') }}">
 
         {{-- js files --}}
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/custom.js') }}"></script>
 
     </head>
