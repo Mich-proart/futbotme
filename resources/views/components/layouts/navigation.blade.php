@@ -24,7 +24,7 @@
 
             <a href="{{ url('/')}}" class="h-100 w-100">
 
-                <img src="{{ asset('assets/images/logo.svg') }}" alt="logo futbolme">
+                <img src="{{ asset('assets/images/logo.svg') }}" alt="logo color blanco futbolme">
 
             </a>            
 

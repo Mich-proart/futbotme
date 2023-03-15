@@ -35,6 +35,9 @@
         {{-- contenido principal del documento --}}
         {{ $slot }}
 
+        {{-- footer --}}
+        <x-layouts.footer />
+
     </body>
 
 </html>
