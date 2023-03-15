@@ -1,0 +1,19 @@
+/* GENERIC VARIABLES ROOT */
+
+:root {
+  --color-dark-green: #01210F;
+  --color-brand-green: #025325;
+  --color-silver: #E5E5E5;
+  --color-white: #FFF;
+  --color-black: #000;
+  --fs-standar: 13px;
+  --border-silver-1: 1px solid #BBBBBB;
+}
+
+
+@media (min-width: 992px) { 
+
+  :root {        
+    --fs-standar: 16px;
+  }
+}

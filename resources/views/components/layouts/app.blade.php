@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
 
         {{-- js files --}}
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

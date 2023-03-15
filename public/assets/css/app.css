@@ -12,3 +12,48 @@ body {
     font-size: 1.6rem;
     font-family: Arial, sans-serif;
 }
+
+/* +++++++++++++++++ */
+/* +++++++++++++++++ */
+/* GENERIC STYLES */
+
+/* solo mobile */
+@media (max-width: 991px) {
+    
+    .bg-overlay-menu {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color-black);
+        opacity: .4;
+    }
+    .flotante-menu-mobile {
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        top: 4%;
+        width: 90%;
+        right: 0;
+        height: 65%;
+    }
+}
+
+/* simulacion cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* desktop media */
+@media (min-width: 992px) { 
+
+    /* espacios laterales genericos */
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
