@@ -1,4 +1,4 @@
-<div class="bg-overlay-menu"></div>
+{{-- <div class="bg-overlay-menu"></div> --}}
 
 <div class="content-top-nav-bar py-3 bg-dark-green">
 
@@ -42,7 +42,7 @@
 
     </div>
 
-    <nav class="content-navbar flotante-menu-mobile bg-silver">
+    {{-- <nav class="content-navbar flotante-menu-mobile bg-silver">
 
         <div class="content-top-bar-flotante text-end py-1 border-bottom-complet">
 
@@ -50,7 +50,7 @@
 
         </div>        
 
-    </nav>
+    </nav> --}}
 
     {{-- <nav class="content-navbar">
 
