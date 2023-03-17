@@ -12,10 +12,22 @@
 
 /* colors */
 .color-white{
-    color: var(--color-white);
+    color: var(--color-white)!important;
+}
+.color-black{
+    color: var(--color-black)!important;
+}
+.color-gray-contrast{
+    color: var(--color-gray-contrast);
+}
+.color-green-second{
+    color: var(--color-green-second);
 }
 
 /* size fonts */
+.fs-00{
+    font-size: var(--fs-small);
+}
 .fs-01{
     font-size: var(--fs-standar);
 }
@@ -23,4 +35,10 @@
 /* borders */
 .border-bottom-complet{
     border-bottom: var(--border-silver-1);
+}
+.border-top-green-second{
+    border-top: var(--border-green-second-1);
+}
+.border-bottom-green-second{
+    border-bottom: var(--border-green-second-1);
 }

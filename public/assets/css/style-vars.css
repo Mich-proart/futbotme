@@ -3,11 +3,16 @@
 :root {
   --color-dark-green: #01210F;
   --color-brand-green: #025325;
+  --color-green-second: #99CCAF;
+  --color-greengris:#CCE6D7;
   --color-silver: #E5E5E5;
   --color-white: #FFF;
   --color-black: #000;
+  --color-gray-contrast:#565656;
   --fs-standar: 13px;
+  --fs-small:11px;
   --border-silver-1: 1px solid #BBBBBB;
+  --border-green-second-1: 1px solid #99CCAF;
 }
 
 
@@ -15,5 +20,6 @@
 
   :root {        
     --fs-standar: 16px;
+    --fs-small:14px
   }
 }

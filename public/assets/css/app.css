@@ -47,6 +47,25 @@ body {
     cursor: pointer;
 }
 
+/* enlace sin estilos */
+.enlace-unstyle{
+    text-decoration: none;    
+}
+
+/* boton generico green gris con icono green dark */
+.border-radius-50{
+    border-radius: 50%;
+}
+.btn-green-gris{
+    background-color: var(--color-greengris);    
+    width: 35px !important;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 /* desktop media */
 @media (min-width: 992px) { 
