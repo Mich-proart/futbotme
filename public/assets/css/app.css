@@ -13,13 +13,43 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* simulacion cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* enlace sin estilos */
+.enlace-unstyle{
+    text-decoration: none;    
+}
+
+/* border-50 */
+.border-radius-50{
+    border-radius: 50%;
+}
+
+/* boton generico green gris con icono green dark */
+.btn-green-gris{
+    background-color: var(--color-greengris);    
+    width: 35px !important;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* espacios laterales genericos */
+.container-fluid-custom {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /* +++++++++++++++++ */
 /* +++++++++++++++++ */
 /* GENERIC STYLES */
 
 /* solo mobile */
 @media (max-width: 991px) {
-    
     .bg-overlay-menu {
         height: 100%;
         width: 100%;
@@ -42,36 +72,10 @@ body {
     }
 }
 
-/* simulacion cursor */
-.cursor-pointer {
-    cursor: pointer;
-}
-
-/* enlace sin estilos */
-.enlace-unstyle{
-    text-decoration: none;    
-}
-
-/* boton generico green gris con icono green dark */
-.border-radius-50{
-    border-radius: 50%;
-}
-.btn-green-gris{
-    background-color: var(--color-greengris);    
-    width: 35px !important;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
 /* desktop media */
 @media (min-width: 992px) { 
-
     /* espacios laterales genericos */
-    .container-fluid {
+    .container-fluid-custom {
         padding-left: 15px;
         padding-right: 15px;
     }
