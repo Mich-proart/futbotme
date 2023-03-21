@@ -44,7 +44,7 @@
 
     <nav class="content-navbar flotante-menu-mobile bg-silver" style="display:none;">
 
-        <div class="content-top-bar-flotante text-end py-1 border-bottom-complet container-fluid-custom">
+        <div class="content-top-bar-flotante d-flex align-items-center justify-content-end py-1 border-bottom-complet container-fluid-custom">
             <div class="px-2 cursor-pointer py-2 cerrar-menu">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3249 0.558362C10.6333 0.249987 11.1333 0.249987 11.4416 0.558362C11.75 0.866736 11.75 1.36671 11.4416 1.67508L7.1167 6.00002L11.4416 10.3249C11.75 10.6333 11.75 11.1333 11.4416 11.4416C11.1333 11.75 10.6333 11.75 10.3249 11.4416L5.99998 7.11674L1.67508 11.4416C1.36671 11.75 0.866736 11.75 0.558362 11.4416C0.249987 11.1333 0.249987 10.6333 0.558362 10.3249L4.88325 6.00002L0.558365 1.67517C0.249989 1.36679 0.249987 0.866818 0.558361 0.558442C0.866734 0.250066 1.36671 0.250064 1.67508 0.558437L5.99998 4.8833L10.3249 0.558362Z" fill="#025325"/>
