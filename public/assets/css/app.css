@@ -28,6 +28,11 @@ body {
     border-radius: 50%;
 }
 
+/* d-none personalizada */
+.ocultar-icon{
+    display: none;
+}
+
 /* boton generico green gris con icono green dark */
 .btn-green-gris{
     background-color: var(--color-greengris);    
