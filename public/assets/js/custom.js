@@ -45,8 +45,7 @@ $(document).ready(function () {
             $('.ul-children-children').fadeOut()
             $('.content-li-children').removeClass('abierto')
             $('.content-icon-sub-sub-menu-manus').removeClass('ocultar-icon')
-            $('.content-icon-sub-sub-menu-minus').addClass('ocultar-icon')
-    
+            $('.content-icon-sub-sub-menu-minus').addClass('ocultar-icon')    
     
             $(this).closest('.li-children').find('.ul-children-children').fadeOut()
             $(this).removeClass('abierto')
@@ -59,7 +58,6 @@ $(document).ready(function () {
             $('.content-li-children').removeClass('abierto')
             $('.content-icon-sub-sub-menu-manus').removeClass('ocultar-icon')
             $('.content-icon-sub-sub-menu-minus').addClass('ocultar-icon')
-    
     
             $(this).closest('.li-children').find('.ul-children-children').fadeIn()
             $(this).addClass('abierto')
