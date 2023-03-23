@@ -36,6 +36,9 @@
 .border-bottom-complet{
     border-bottom: var(--border-silver-1);
 }
+.border-top-complet{
+    border-top: var(--border-silver-1);
+}
 .border-top-green-second{
     border-top: var(--border-green-second-1);
 }

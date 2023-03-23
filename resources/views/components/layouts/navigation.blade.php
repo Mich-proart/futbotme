@@ -1,15 +1,19 @@
+{{-- overla menu mobile --}}
 <div class="bg-overlay-menu" style="display:none;"></div>
 
+{{-- publicidad escrita top bar --}}
 <div class="content-top-nav-bar py-3 bg-dark-green">
 
     <h1 class="text-top-nav-bar mb-0 color-white text-center fs-01">Fútbol en directo, livescore - resultados de partidos de fútbol</h1>
 
 </div>
 
-<header class="navBar container-fluid bg-brand-green py-4">
+{{-- content header --}}
+<header class="navBar container-fluid bg-brand-green py-4">    
 
     <div class="d-flex align-items-center justify-content-between">
 
+        {{-- icono buscador --}}
         <div class="content-buscador cursor-pointer">
 
             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,6 +24,7 @@
 
         </div>
 
+        {{-- logo web --}}
         <div class="content-logo">
 
             <a href="{{ url('/')}}" class="h-100 w-100">
@@ -30,6 +35,7 @@
 
         </div>
 
+        {{-- hamburguesa desplegable menu --}}
         <div class="content-icon-menu cursor-pointer">
 
             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,6 +50,7 @@
 
     <nav class="content-navbar flotante-menu-mobile bg-silver" style="display:none;">
 
+        {{-- cerrar menu mobile --}}
         <div class="content-top-bar-flotante d-flex align-items-center justify-content-end py-1 border-bottom-complet container-fluid-custom">
             <div class="px-2 cursor-pointer py-2 cerrar-menu">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,12 +59,15 @@
             </div>
         </div>   
                 
-        <div class="content-center-bar-flotante container-fluid-custom">
+        <div class="content-center-bar-flotante">
             <div class="center-bar-flotante-top">
-                <ul class="list-unstyled ul-parent">
-                    <li class="li-parent cursor-pointer">
+                <ul class="list-unstyled ul-parent container-fluid-custom mb-0">
+
+
+                    
+                    <li class="li-parent cursor-pointer py-1">
                         <div class="content-li-parent d-flex align-items-center">
-                            <div class="svg-content me-3">
+                            <div class="svg-content me-3 pb-1">
                                 <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
                                 </svg>                                    
@@ -130,10 +140,10 @@
                     </li>
 
 
-
-                    <li class="li-parent cursor-pointer">
+{{-- 
+                    <li class="li-parent cursor-pointer py-1">
                         <div class="content-li-parent d-flex align-items-center">
-                            <div class="svg-content me-3">
+                            <div class="svg-content me-3 pb-1">
                                 <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
                                 </svg>                                    
@@ -170,15 +180,15 @@
                                 </ul>                                 
                             </li>
                         </ul>                   
-                    </li>
+                    </li> --}}
 
 
 
 
 
-                    <li class="li-parent cursor-pointer">
+                    {{-- <li class="li-parent cursor-pointer py-1">
                         <div class="content-li-parent d-flex align-items-center">
-                            <div class="svg-content me-3">
+                            <div class="svg-content me-3 pb-1">
                                 <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
                                 </svg>                                    
@@ -215,7 +225,7 @@
                                 </ul>                                 
                             </li>
                         </ul>                   
-                    </li>
+                    </li> --}}
 
 
                     
@@ -223,7 +233,7 @@
             </div>
 
             <div class="center-bar-flotante-center">
-                <ul class="list-unstyled ps-4">
+                <ul class="list-unstyled ps-5 mb-0 border-top-complet border-bottom-complet py-2">
                     <li>
                         <div class="d-flex align-items-center">
                             <div class="svg-content">
@@ -264,12 +274,12 @@
             </div>
 
             <div class="center-bar-flotante-bottom">
-                <ul class="list-unstyled ps-5">
-                    <li>
+                <ul class="list-unstyled ps-5 border-bottom-complet py-2">
+                    <li class="mb-1 ps-2">
                         <div class="d-flex align-items-center"></div>
                         <p class="mb-0"><a href="" class="enlace-unstyle color-black">Noticias</a></p>  
                     </li>
-                    <li>
+                    <li class="ps-2">
                         <div class="d-flex align-items-center"></div>
                         <p class="mb-0"><a href="" class="enlace-unstyle color-black">Contacto</a></p>  
                     </li>
@@ -277,10 +287,11 @@
             </div>
         </div>
 
-        <div class="content-bottom-bar-flotante container-fluid-custom">
-            <div class="content-input-buscador">
-                <input type="text" placeholder="Buscar Equipo o Jugador">
-                <div class="content-icon-buscador">
+        {{-- buscador mobile menu --}}
+        <div class="content-bottom-bar-flotante container-fluid-custom pt-4">
+            <div class="content-input-buscador position-relative">
+                <input class="w-100 py-2 px-4" type="text" placeholder="Buscar Equipo o Jugador">
+                <div class="content-icon-buscador d-flex align-items-center justify-content-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1034 15.0517C19.1034 17.0133 17.5133 18.6034 15.5517 18.6034C13.5902 18.6034 12 17.0133 12 15.0517C12 13.0902 13.5902 11.5 15.5517 11.5C17.5133 11.5 19.1034 13.0902 19.1034 15.0517ZM18.3972 18.6046C17.6179 19.2296 16.6285 19.6034 15.5517 19.6034C13.0379 19.6034 11 17.5656 11 15.0517C11 12.5379 13.0379 10.5 15.5517 10.5C18.0656 10.5 20.1034 12.5379 20.1034 15.0517C20.1034 16.1286 19.7295 17.1181 19.1044 17.8975L22.3535 21.1467C22.5488 21.3419 22.5488 21.6585 22.3535 21.8538C22.1583 22.049 21.8417 22.049 21.6464 21.8538L18.3972 18.6046Z" fill="black"/>
                     </svg>                    

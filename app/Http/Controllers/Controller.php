@@ -13,7 +13,11 @@ class Controller extends BaseController{
     
     public function index(){
 
-        $users = DB::table('categoria')->get();
+        //$users = DB::table('categoria')->get();
+
+        $users = [
+            'hola' => 'mundo'
+        ];
  
         return view('welcome', ['users' => $users]);
     }
