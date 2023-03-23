@@ -1,5 +1,10 @@
 /* solo mobile */
 @media (max-width: 991px) {
+    /* listado de todos los elementos del menu */
+    .ul-todos-elements-menu{
+        height: 32vh;
+        overflow-y: scroll;
+    }
     /* buscador menu deslizable */
     .content-icon-buscador{
         position: absolute;

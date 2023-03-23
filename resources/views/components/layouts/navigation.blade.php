@@ -48,10 +48,10 @@
 
     </div>
 
-    <nav class="content-navbar flotante-menu-mobile bg-silver" style="display:none;">
+    {{-- <nav class="content-navbar flotante-menu-mobile bg-silver" style="display:none;"> --}}
 
         {{-- cerrar menu mobile --}}
-        <div class="content-top-bar-flotante d-flex align-items-center justify-content-end py-1 border-bottom-complet container-fluid-custom">
+        {{-- <div class="content-top-bar-flotante d-flex align-items-center justify-content-end py-1 border-bottom-complet container-fluid-custom">
             <div class="px-2 cursor-pointer py-2 cerrar-menu">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3249 0.558362C10.6333 0.249987 11.1333 0.249987 11.4416 0.558362C11.75 0.866736 11.75 1.36671 11.4416 1.67508L7.1167 6.00002L11.4416 10.3249C11.75 10.6333 11.75 11.1333 11.4416 11.4416C11.1333 11.75 10.6333 11.75 10.3249 11.4416L5.99998 7.11674L1.67508 11.4416C1.36671 11.75 0.866736 11.75 0.558362 11.4416C0.249987 11.1333 0.249987 10.6333 0.558362 10.3249L4.88325 6.00002L0.558365 1.67517C0.249989 1.36679 0.249987 0.866818 0.558361 0.558442C0.866734 0.250066 1.36671 0.250064 1.67508 0.558437L5.99998 4.8833L10.3249 0.558362Z" fill="#025325"/>
@@ -61,10 +61,12 @@
                 
         <div class="content-center-bar-flotante">
             <div class="center-bar-flotante-top">
+
+
+
+
+
                 <ul class="list-unstyled ul-parent container-fluid-custom mb-0">
-
-
-                    
                     <li class="li-parent cursor-pointer py-1">
                         <div class="content-li-parent d-flex align-items-center">
                             <div class="svg-content me-3 pb-1">
@@ -75,35 +77,6 @@
                             <p class="mb-0">Ligas Españolas</p>  
                         </div> 
                         <ul class="list-unstyled ul-children" style="display:none;">
-                            <li class="li-children">
-                                <div class="content-li-children d-flex align-items-center">
-                                    <div class="content-icon-sub-sub-menu-manus">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 15.5V10.5H16.5V15.5H21.5V16.5H16.5V21.5H15.5V16.5H10.5V15.5H15.5Z" fill="#434242"/>
-                                            <path d="M15.5 10.5V10.25H15.25V10.5H15.5ZM15.5 15.5V15.75H15.75V15.5H15.5ZM16.5 10.5H16.75V10.25H16.5V10.5ZM16.5 15.5H16.25V15.75H16.5V15.5ZM21.5 15.5H21.75V15.25H21.5V15.5ZM21.5 16.5V16.75H21.75V16.5H21.5ZM16.5 16.5V16.25H16.25V16.5H16.5ZM16.5 21.5V21.75H16.75V21.5H16.5ZM15.5 21.5H15.25V21.75H15.5V21.5ZM15.5 16.5H15.75V16.25H15.5V16.5ZM10.5 16.5H10.25V16.75H10.5V16.5ZM10.5 15.5V15.25H10.25V15.5H10.5ZM15.25 10.5V15.5H15.75V10.5H15.25ZM16.5 10.25H15.5V10.75H16.5V10.25ZM16.75 15.5V10.5H16.25V15.5H16.75ZM21.5 15.25H16.5V15.75H21.5V15.25ZM21.75 16.5V15.5H21.25V16.5H21.75ZM16.5 16.75H21.5V16.25H16.5V16.75ZM16.75 21.5V16.5H16.25V21.5H16.75ZM15.5 21.75H16.5V21.25H15.5V21.75ZM15.25 16.5V21.5H15.75V16.5H15.25ZM10.5 16.75H15.5V16.25H10.5V16.75ZM10.25 15.5V16.5H10.75V15.5H10.25ZM15.5 15.25H10.5V15.75H15.5V15.25Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <div class="content-icon-sub-sub-menu-minus ocultar-icon">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.5 16.5H10V17H10.5V16.5ZM21.5 16.5V17H22V16.5H21.5ZM10.5 15.5V15H10V15.5H10.5ZM21.5 15.5H22V15H21.5V15.5ZM10.5 17H21.5V16H10.5V17ZM10 15.5V16.5H11V15.5H10ZM21.5 15H10.5V16H21.5V15ZM22 16.5V15.5H21V16.5H22Z" fill="#434242"/>
-                                        </svg>                                            
-                                    </div>
-                                    <div class="content-icon-bandera">    
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M23.0968 10.6384H8.90322C8.6637 10.6384 8.43399 10.7279 8.26452 10.8873C8.09516 11.0468 8 11.263 8 11.4885V20.5115C8 20.737 8.09516 20.9532 8.26452 21.1127C8.43399 21.2721 8.66371 21.3616 8.90322 21.3616H23.0968C23.3363 21.3616 23.566 21.2721 23.7355 21.1127C23.9048 20.9532 24 20.737 24 20.5115V11.4885C24 11.263 23.9048 11.0468 23.7355 10.8873C23.566 10.7279 23.3363 10.6384 23.0968 10.6384ZM23.4839 11.4885V20.5115C23.4839 20.5595 23.4737 20.607 23.4542 20.6512L16.4478 16L23.4542 11.3489C23.4737 11.3931 23.4839 11.4406 23.4839 11.4885V11.4885ZM8.51612 20.5115V11.4885C8.51612 11.4405 8.52626 11.393 8.54585 11.3488L15.5522 16L8.54585 20.6511C8.52626 20.6069 8.51612 20.5594 8.51612 20.5115V20.5115ZM9.10289 11.124H22.8971L15.9999 15.7027L9.10289 11.124ZM16.0001 16.297L22.8974 20.8757H9.10318L16.0001 16.297Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <p class="mb-0">1ª División</p>  
-                                </div> 
-                                <ul class="list-unstyled ps-3 ul-children-children ocultar-icon">
-                                    <li>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0">1ª División</p>  
-                                        </div>                                
-                                    </li>   
-                                </ul>                                 
-                            </li>
-
 
 
                             <li class="li-children">
@@ -135,101 +108,15 @@
                                 </ul>                                 
                             </li>
 
-
                         </ul>                   
-                    </li>
-
-
-{{-- 
-                    <li class="li-parent cursor-pointer py-1">
-                        <div class="content-li-parent d-flex align-items-center">
-                            <div class="svg-content me-3 pb-1">
-                                <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
-                                </svg>                                    
-                            </div>
-                            <p class="mb-0">Ligas Españolas 1</p>  
-                        </div> 
-                        <ul class="list-unstyled ul-children" style="display:none;">
-                            <li class="li-children">
-                                <div class="content-li-children d-flex align-items-center">
-                                    <div class="content-icon-sub-sub-menu-manus">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 15.5V10.5H16.5V15.5H21.5V16.5H16.5V21.5H15.5V16.5H10.5V15.5H15.5Z" fill="#434242"/>
-                                            <path d="M15.5 10.5V10.25H15.25V10.5H15.5ZM15.5 15.5V15.75H15.75V15.5H15.5ZM16.5 10.5H16.75V10.25H16.5V10.5ZM16.5 15.5H16.25V15.75H16.5V15.5ZM21.5 15.5H21.75V15.25H21.5V15.5ZM21.5 16.5V16.75H21.75V16.5H21.5ZM16.5 16.5V16.25H16.25V16.5H16.5ZM16.5 21.5V21.75H16.75V21.5H16.5ZM15.5 21.5H15.25V21.75H15.5V21.5ZM15.5 16.5H15.75V16.25H15.5V16.5ZM10.5 16.5H10.25V16.75H10.5V16.5ZM10.5 15.5V15.25H10.25V15.5H10.5ZM15.25 10.5V15.5H15.75V10.5H15.25ZM16.5 10.25H15.5V10.75H16.5V10.25ZM16.75 15.5V10.5H16.25V15.5H16.75ZM21.5 15.25H16.5V15.75H21.5V15.25ZM21.75 16.5V15.5H21.25V16.5H21.75ZM16.5 16.75H21.5V16.25H16.5V16.75ZM16.75 21.5V16.5H16.25V21.5H16.75ZM15.5 21.75H16.5V21.25H15.5V21.75ZM15.25 16.5V21.5H15.75V16.5H15.25ZM10.5 16.75H15.5V16.25H10.5V16.75ZM10.25 15.5V16.5H10.75V15.5H10.25ZM15.5 15.25H10.5V15.75H15.5V15.25Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <div class="content-icon-sub-sub-menu-minus ocultar-icon">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.5 16.5H10V17H10.5V16.5ZM21.5 16.5V17H22V16.5H21.5ZM10.5 15.5V15H10V15.5H10.5ZM21.5 15.5H22V15H21.5V15.5ZM10.5 17H21.5V16H10.5V17ZM10 15.5V16.5H11V15.5H10ZM21.5 15H10.5V16H21.5V15ZM22 16.5V15.5H21V16.5H22Z" fill="#434242"/>
-                                        </svg>                                            
-                                    </div>
-                                    <div class="content-icon-bandera">    
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M23.0968 10.6384H8.90322C8.6637 10.6384 8.43399 10.7279 8.26452 10.8873C8.09516 11.0468 8 11.263 8 11.4885V20.5115C8 20.737 8.09516 20.9532 8.26452 21.1127C8.43399 21.2721 8.66371 21.3616 8.90322 21.3616H23.0968C23.3363 21.3616 23.566 21.2721 23.7355 21.1127C23.9048 20.9532 24 20.737 24 20.5115V11.4885C24 11.263 23.9048 11.0468 23.7355 10.8873C23.566 10.7279 23.3363 10.6384 23.0968 10.6384ZM23.4839 11.4885V20.5115C23.4839 20.5595 23.4737 20.607 23.4542 20.6512L16.4478 16L23.4542 11.3489C23.4737 11.3931 23.4839 11.4406 23.4839 11.4885V11.4885ZM8.51612 20.5115V11.4885C8.51612 11.4405 8.52626 11.393 8.54585 11.3488L15.5522 16L8.54585 20.6511C8.52626 20.6069 8.51612 20.5594 8.51612 20.5115V20.5115ZM9.10289 11.124H22.8971L15.9999 15.7027L9.10289 11.124ZM16.0001 16.297L22.8974 20.8757H9.10318L16.0001 16.297Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <p class="mb-0">1ª División 1.1</p>  
-                                </div> 
-                                <ul class="list-unstyled ps-3 ul-children-children ocultar-icon">
-                                    <li>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0">1ª División 1.1</p>  
-                                        </div>                                
-                                    </li>   
-                                </ul>                                 
-                            </li>
-                        </ul>                   
-                    </li> --}}
-
-
-
-
-
-                    {{-- <li class="li-parent cursor-pointer py-1">
-                        <div class="content-li-parent d-flex align-items-center">
-                            <div class="svg-content me-3 pb-1">
-                                <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
-                                </svg>                                    
-                            </div>
-                            <p class="mb-0">Ligas Españolas 2</p>  
-                        </div> 
-                        <ul class="list-unstyled ul-children" style="display:none;">
-                            <li class="li-children">
-                                <div class="content-li-children d-flex align-items-center">
-                                    <div class="content-icon-sub-sub-menu-manus">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 15.5V10.5H16.5V15.5H21.5V16.5H16.5V21.5H15.5V16.5H10.5V15.5H15.5Z" fill="#434242"/>
-                                            <path d="M15.5 10.5V10.25H15.25V10.5H15.5ZM15.5 15.5V15.75H15.75V15.5H15.5ZM16.5 10.5H16.75V10.25H16.5V10.5ZM16.5 15.5H16.25V15.75H16.5V15.5ZM21.5 15.5H21.75V15.25H21.5V15.5ZM21.5 16.5V16.75H21.75V16.5H21.5ZM16.5 16.5V16.25H16.25V16.5H16.5ZM16.5 21.5V21.75H16.75V21.5H16.5ZM15.5 21.5H15.25V21.75H15.5V21.5ZM15.5 16.5H15.75V16.25H15.5V16.5ZM10.5 16.5H10.25V16.75H10.5V16.5ZM10.5 15.5V15.25H10.25V15.5H10.5ZM15.25 10.5V15.5H15.75V10.5H15.25ZM16.5 10.25H15.5V10.75H16.5V10.25ZM16.75 15.5V10.5H16.25V15.5H16.75ZM21.5 15.25H16.5V15.75H21.5V15.25ZM21.75 16.5V15.5H21.25V16.5H21.75ZM16.5 16.75H21.5V16.25H16.5V16.75ZM16.75 21.5V16.5H16.25V21.5H16.75ZM15.5 21.75H16.5V21.25H15.5V21.75ZM15.25 16.5V21.5H15.75V16.5H15.25ZM10.5 16.75H15.5V16.25H10.5V16.75ZM10.25 15.5V16.5H10.75V15.5H10.25ZM15.5 15.25H10.5V15.75H15.5V15.25Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <div class="content-icon-sub-sub-menu-minus ocultar-icon">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.5 16.5H10V17H10.5V16.5ZM21.5 16.5V17H22V16.5H21.5ZM10.5 15.5V15H10V15.5H10.5ZM21.5 15.5H22V15H21.5V15.5ZM10.5 17H21.5V16H10.5V17ZM10 15.5V16.5H11V15.5H10ZM21.5 15H10.5V16H21.5V15ZM22 16.5V15.5H21V16.5H22Z" fill="#434242"/>
-                                        </svg>                                            
-                                    </div>
-                                    <div class="content-icon-bandera">    
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M23.0968 10.6384H8.90322C8.6637 10.6384 8.43399 10.7279 8.26452 10.8873C8.09516 11.0468 8 11.263 8 11.4885V20.5115C8 20.737 8.09516 20.9532 8.26452 21.1127C8.43399 21.2721 8.66371 21.3616 8.90322 21.3616H23.0968C23.3363 21.3616 23.566 21.2721 23.7355 21.1127C23.9048 20.9532 24 20.737 24 20.5115V11.4885C24 11.263 23.9048 11.0468 23.7355 10.8873C23.566 10.7279 23.3363 10.6384 23.0968 10.6384ZM23.4839 11.4885V20.5115C23.4839 20.5595 23.4737 20.607 23.4542 20.6512L16.4478 16L23.4542 11.3489C23.4737 11.3931 23.4839 11.4406 23.4839 11.4885V11.4885ZM8.51612 20.5115V11.4885C8.51612 11.4405 8.52626 11.393 8.54585 11.3488L15.5522 16L8.54585 20.6511C8.52626 20.6069 8.51612 20.5594 8.51612 20.5115V20.5115ZM9.10289 11.124H22.8971L15.9999 15.7027L9.10289 11.124ZM16.0001 16.297L22.8974 20.8757H9.10318L16.0001 16.297Z" fill="#434242"/>
-                                        </svg>
-                                    </div>
-                                    <p class="mb-0">1ª División 2.1</p>  
-                                </div> 
-                                <ul class="list-unstyled ps-3 ul-children-children ocultar-icon">
-                                    <li>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0">1ª División 2.2</p>  
-                                        </div>                                
-                                    </li>   
-                                </ul>                                 
-                            </li>
-                        </ul>                   
-                    </li> --}}
-
-
-                    
+                    </li>                
                 </ul>
+
+
+
+
+
+
             </div>
 
             <div class="center-bar-flotante-center">
@@ -285,10 +172,10 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
 
         {{-- buscador mobile menu --}}
-        <div class="content-bottom-bar-flotante container-fluid-custom pt-4">
+        {{-- <div class="content-bottom-bar-flotante container-fluid-custom pt-4">
             <div class="content-input-buscador position-relative">
                 <input class="w-100 py-2 px-4" type="text" placeholder="Buscar Equipo o Jugador">
                 <div class="content-icon-buscador d-flex align-items-center justify-content-center">
@@ -299,12 +186,12 @@
             </div>
         </div>
 
-    </nav>
+    </nav> --}}
 
-    {{-- <nav class="content-navbar">
+    <nav class="content-navbar">
 
         @include('components.menuphp')   
 
-    </nav> --}}
+    </nav>
 
 </header>
