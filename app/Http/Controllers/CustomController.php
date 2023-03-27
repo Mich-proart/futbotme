@@ -7,10 +7,13 @@ use App\Models\CustomModel;
 
 class CustomController extends Controller{
     
-    public function test(){        
+    public function indexContacto(){        
 
-        $array = ['esto es solo dato'];
+        return view('contact');
+    }
+
+    public function indexNoticias(){        
  
-        return $array;
+        return view('notices');
     }
 }

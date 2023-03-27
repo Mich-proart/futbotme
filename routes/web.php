@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\CustomController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 
-Route::view('/contacto', 'contact')->name('contacto');
+Route::get('/noticias', [CustomController::class, 'indexNoticias'])->name('noticias');
+
+Route::get('/contacto', [CustomController::class, 'indexContacto'])->name('contacto');
