@@ -11,14 +11,17 @@ use Illuminate\Support\Facades\DB;
 
 class Controller extends BaseController{
     
-    public function index(){
-
-        //$users = DB::table('categoria')->get();
+    public function index(){        
 
         $users = [
             'hola' => 'mundo'
         ];
  
         return view('welcome', ['users' => $users]);
+    }
+
+    public function indexCategorias($primer){
+
+        return view('categories',['primer' => $primer]);
     }
 }

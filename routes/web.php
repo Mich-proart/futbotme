@@ -10,3 +10,6 @@ Route::get('/', [Controller::class, 'index'])->name('home');
 Route::get('/noticias', [CustomController::class, 'indexNoticias'])->name('noticias');
 
 Route::get('/contacto', [CustomController::class, 'indexContacto'])->name('contacto');
+
+
+Route::get('/{dinamic}/{otraruta}', [Controller::class, 'indexCategorias'])->name('categories');
