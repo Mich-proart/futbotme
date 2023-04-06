@@ -22,6 +22,12 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
 
+        {{-- css files existent to futbolme --}}
+        <link rel="stylesheet" href="{{ asset('assets/css/paises.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/paises.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/comunidades.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/comunidades.min.css') }}">
+
         {{-- js files --}}
         <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
