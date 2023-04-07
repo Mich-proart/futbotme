@@ -12,3 +12,26 @@
         right: 0;
     }
 }
+
+@media (min-width: 992px) {
+    /* children flotante de menu */
+    .children-flotante{
+        position: absolute;
+        background-color:   var(--color-silver);
+        padding: 15px 15px;
+        top: 100%;
+        left: -130%;
+        width: 450px;
+    }
+    /* mantenemos menu abierto en desktop */
+    .content-navbar.flotante-menu-mobile.open-desktop{
+        display: block!important;
+    }
+    /* buscador menu deslizable */
+    .content-icon-buscador{
+        position: absolute;
+        top: 10%;
+        right: 0;
+    }
+}
+
