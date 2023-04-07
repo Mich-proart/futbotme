@@ -11,5 +11,4 @@ Route::get('/noticias', [CustomController::class, 'indexNoticias'])->name('notic
 
 Route::get('/contacto', [CustomController::class, 'indexContacto'])->name('contacto');
 
-
-Route::get('/{dinamic}/{otraruta}', [Controller::class, 'indexCategorias'])->name('categories');
+Route::get('/resultados-directo/torneo/{nombre}/{id}', [Controller::class, 'indexCategorias'])->name('categories');

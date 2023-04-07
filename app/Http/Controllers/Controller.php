@@ -20,8 +20,8 @@ class Controller extends BaseController{
         return view('welcome', ['users' => $users]);
     }
 
-    public function indexCategorias($primer){
+    public function indexCategorias($nombre){
 
-        return view('categories',['primer' => $primer]);
+        return view('categories',['nombre' => $nombre]);
     }
 }
