@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
 }
-  
+
 html {
     font-size: 62.5%;
 }
-  
+
 body {
     font-size: 1.6rem;
     font-family: Arial, sans-serif;
@@ -19,23 +19,23 @@ body {
 }
 
 /* enlace sin estilos */
-.enlace-unstyle{
-    text-decoration: none;    
+.enlace-unstyle {
+    text-decoration: none;
 }
 
 /* border-50 */
-.border-radius-50{
+.border-radius-50 {
     border-radius: 50%;
 }
 
 /* d-none personalizada */
-.ocultar-icon{
+.ocultar-icon {
     display: none;
 }
 
 /* boton generico green gris con icono green dark */
-.btn-green-gris{
-    background-color: var(--color-greengris);    
+.btn-green-gris {
+    background-color: var(--color-greengris);
     width: 35px !important;
     height: 35px;
     display: flex;
@@ -47,6 +47,97 @@ body {
 .container-fluid-custom {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/* BOTON DE PARTIDOS OCULTOS */
+.btn-vocultos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 16px;
+
+    border-radius: 3px;
+}
+
+.publi1 {
+    width: auto;
+    height: 96px;
+    background: #093654;
+}
+
+.publi2 {
+    width: auto;
+    height: 104px;
+    background: #093654;
+}
+
+.publi3 {
+    width: 368px;
+    height: 72px;
+    background: #093654;
+}
+
+.circle_fuera {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: transparent;
+    border: solid 1px #99CCAF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle_dentro {
+    width: 10.4px;
+    height: 10.4px;
+    border-radius: 100%;
+    background: #008037;
+}
+
+.br-0 {
+    border-radius: 0px !important;
+}
+
+/* ACORDEONES */
+.accordion-item {
+    background-color: #fff;
+    border: var(--border-grey);
+}
+.accordion-button::after{
+    content: none;
+}
+.hora{
+    border-radius: 3px;
+    padding: .25rem .5rem;
+    background-color: var(--color-silver);
+    color:var(--color-gray-medium);
+    font-size: 11px;
+}
+.goles-local,
+.goles-visitante{
+    font-size: var(--fs-large);
+    color: var(--color-red);
+}
+.w-custom{
+    width: 100%;
+}
+/* PARTIDOS EN DIRECTO */
+#PartidosEnDirecto .accordion-button:not(.collapsed),
+#PartidosEnDirecto .accordion-button {
+    box-shadow: none !important;
+    outline: none !important;
+    background: var(--color-green-directo);
+    border: var(--border-grey);
+    color:var(--color-gray-medium);
+}
+
+#PartidosEnDirecto .accordion-button:focus {
+    z-index: 3;
+    border: var(--border-grey);
+    outline: 0;
+    /* box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); */
+    box-shadow: none !important;
 }
 
 /* +++++++++++++++++ */
@@ -66,6 +157,7 @@ body {
         background-color: var(--color-black);
         opacity: .4;
     }
+
     .flotante-menu-mobile {
         position: absolute;
         z-index: 1;
@@ -78,10 +170,33 @@ body {
 }
 
 /* desktop media */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
+
     /* espacios laterales genericos */
     .container-fluid-custom {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .w-custom{
+        width: 50%;
+    }
+
+    .publi1 {
+        width: 1320px;
+        height: 96px;
+        background: #093654;
+    }
+    
+    .publi2 {
+        width: 280px;
+        height: 260px;
+        background: #093654;
+    }
+    
+    .publi3 {
+        width: 200px;
+        height: 400px;
+        background: #093654;
     }
 }

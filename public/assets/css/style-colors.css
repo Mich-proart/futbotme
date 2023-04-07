@@ -8,7 +8,15 @@
 .bg-silver {
     background-color: var(--color-silver);
 }
-
+.bg-white-light {
+    background-color: var(--color-white-light);
+}
+.bg-green-directo{
+    background-color: var(--color-green-directo);
+}
+.bg-greengris{
+    background-color: var(--color-greengris);
+}
 
 /* colors */
 .color-white{
@@ -20,8 +28,17 @@
 .color-gray-contrast{
     color: var(--color-gray-contrast);
 }
+.color-gray-medium{
+    color: var(--color-gray-medium);
+}
 .color-green-second{
     color: var(--color-green-second);
+}
+.color-brand-green {
+    color: var(--color-brand-green);
+}
+.color-red {
+    color: var(--color-red);
 }
 
 /* size fonts */
@@ -31,7 +48,12 @@
 .fs-01{
     font-size: var(--fs-standar);
 }
-
+.fs-02{
+    font-size: var(--fs-torneos);
+}
+.fs-03{
+    font-size: var(--fs-large);
+}
 /* borders */
 .border-bottom-complet{
     border-bottom: var(--border-silver-1);
@@ -44,4 +66,7 @@
 }
 .border-bottom-green-second{
     border-bottom: var(--border-green-second-1);
+}
+.border-grey{
+    border: var(--border-grey);
 }
