@@ -4,12 +4,14 @@ $(document).ready(function () {
     $(document).on('click','.content-icon-menu',function(){
         $('.content-navbar').fadeIn()        
         $('.bg-overlay-menu').fadeIn()
+        $('body').addClass('overflow-y-hidden')
     })
 
     // cerrar menu mobile
     $(document).on('click','.cerrar-menu, .bg-overlay-menu',function(){
         $('.content-navbar').fadeOut()
         $('.bg-overlay-menu').fadeOut()
+        $('body').removeClass('overflow-y-hidden')
     })
 
     // abrir y cerrar menu nivel parent
@@ -32,7 +34,7 @@ $(document).ready(function () {
             $('.svg-content').find('svg').css('rotate','0deg')
 
             $(this).addClass('girado')
-            $(this).find('.svg-content').find('svg').css('rotate','90deg')  
+            is_mobile() ? $(this).find('.svg-content').find('svg').css('rotate','90deg') : $(this).find('.svg-content').find('svg').css('rotate','180deg')   
             $(this).closest('.li-parent').find('.ul-children').fadeIn()  
         }
     })

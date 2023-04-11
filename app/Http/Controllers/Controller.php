@@ -24,4 +24,10 @@ class Controller extends BaseController{
 
         return view('categories',['nombre' => $nombre]);
     }
+
+    public function indexCategoriasAscenso($nacional){
+
+        return view('categories',['nombre' => $nacional]);
+    }
+
 }
