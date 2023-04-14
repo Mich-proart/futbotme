@@ -1,10 +1,10 @@
-<nav class="container-fluid-custom content-navbar flotante-menu-mobile bg-silver navbar-desktop remove-mobile">
+<nav class="container-fluid-custom content-navbar flotante-menu-mobile bg-silver navbar-desktop remove-mobile py-3">
 
     <div class="content-center-bar-flotante">
 
         <div class="center-bar-flotante-top">            
 
-            <ul class="list-unstyled ul-parent mb-0 ul-todos-elements-menu d-lg-flex">
+            <ul class="list-unstyled ul-parent mb-0 ul-todos-elements-menu d-lg-flex justify-content-evenly">
 
                 <?php foreach ( $menuStatic as $value) { ?>     
 
@@ -12,15 +12,15 @@
 
                         <div class="content-li-parent d-flex align-items-center">
 
-                            <?php echo $value['enlace'] == '' ? '<p class="mb-0">'.$value['textoFront'].'</p>' : '<p><a class="enlace-unstyle color-black" href="'.$value['enlace'].'">'.$value['textoFront'].'</a></p>';?>                            
+                            <?php echo $value['enlace'] == '' ? '<p class="mb-0 me-4">'.$value['textoFront'].'</p>' : '<p class="mb-0 me-4"><a class="enlace-unstyle color-black" href="'.$value['enlace'].'">'.$value['textoFront'].'</a></p>';?>                            
 
                             <?php if($value['enlace'] == ''){ ?>
 
-                                <div class="svg-content me-3 pb-1">
+                                <div class="svg-content me-3">
 
-                                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                                        <path d="M8.05811 6L0.0581055 0L0.0581055 12L8.05811 6Z" fill="#434242"/>
+                                        <path d="M16.8777 12.0957C16.7208 11.9629 16.4733 11.9691 16.325 12.1095L12 16.2043L7.67505 12.1095C7.52669 11.9691 7.27924 11.9629 7.12235 12.0957C6.96546 12.2285 6.95854 12.4501 7.1069 12.5905L11.6023 16.8467C11.8183 17.0511 12.1817 17.0511 12.3977 16.8467L16.8931 12.5905C17.0415 12.4501 17.0345 12.2285 16.8777 12.0957Z" fill="#434242"/>
 
                                     </svg>                                    
 
@@ -90,7 +90,7 @@
 
                                                                     <div class="d-flex align-items-center">
 
-                                                                        <p class="mb-0"> <a class="enlace-unstyle color-black" href="<?php echo $items['ruta'];?>"><?php echo $items['nombre'];?></a></p>  
+                                                                        <p class="mb-0"><a class="enlace-unstyle color-black" href="<?php echo $items['ruta'];?>"><?php echo $items['nombre'];?></a></p>  
 
                                                                     </div>                                
 
@@ -124,6 +124,26 @@
                     </li>
 
                 <?php }?>
+
+                <li class="li-parent cursor-pointer py-1 position-relative">
+
+                    <div class="content-li-parent d-flex align-items-center">
+
+                        <p class="mb-0 me-4"><a class="enlace-unstyle color-black" href="{{ url('/noticias')}}">Noticias</a></p>                            
+                        
+                    </div>
+                    
+                </li>
+
+                <li class="li-parent cursor-pointer py-1 position-relative">
+
+                    <div class="content-li-parent d-flex align-items-center">
+
+                        <p class="mb-0"><a class="enlace-unstyle color-black" href="{{ url('/contacto')}}">Contacto</a></p>                            
+                        
+                    </div>
+                    
+                </li>
 
             </ul>
 
