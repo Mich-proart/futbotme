@@ -31,3 +31,4 @@ auth.json
 /.fleet
 /.idea
 /.vscode
+.htaccess
