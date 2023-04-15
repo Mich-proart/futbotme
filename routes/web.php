@@ -11,4 +11,6 @@ Route::get('/noticias', [CustomController::class, 'indexNoticias'])->name('notic
 
 Route::get('/contacto', [CustomController::class, 'indexContacto'])->name('contacto');
 
-Route::get('/resultados-directo/torneo/{nombre}/{id}', [Controller::class, 'indexCategorias'])->name('categories');
+Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'indexCategorias'])->name('categories');
+
+Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories');

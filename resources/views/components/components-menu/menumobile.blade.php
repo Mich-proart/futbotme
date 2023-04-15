@@ -170,7 +170,7 @@
 
                         </div>
 
-                        <p class="mb-0">Partidos Televisados</p>  
+                        <p class="mb-0"><a href="{{ url('/partidos')}}" class="enlace-unstyle color-black">Partidos Televisados</a></p>  
 
                     </div>                    
 
@@ -192,7 +192,7 @@
 
                         </div>
 
-                        <p class="mb-0">Ascensos y descensos</p>  
+                        <p class="mb-0"><a href="{{ url('/ascensos-y-descensos/nacional')}}" class="enlace-unstyle color-black">Ascensos y descensos</a></p>  
 
                     </div>                    
 
@@ -214,7 +214,7 @@
 
                         </div>
 
-                        <p class="mb-0">Calcular Gol Average</p>  
+                        <p class="mb-0"><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-black">Calcular Gol Average</a></p>  
 
                     </div>                    
 
@@ -251,7 +251,7 @@
     </div>
 
     {{-- buscador mobile menu --}}
-    <div class="content-bottom-bar-flotante container-fluid-custom pt-4">
+    <div class="content-bottom-bar-flotante container-fluid-custom pt-4 pb-4 bg-silver">
 
         <div class="content-input-buscador position-relative">
 

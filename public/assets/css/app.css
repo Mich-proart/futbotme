@@ -33,6 +33,11 @@ body {
     display: none;
 }
 
+/* esconder eje y */
+.overflow-y-hidden{
+    overflow-y: hidden!important;
+}
+
 /* boton generico green gris con icono green dark */
 .btn-green-gris {
     background-color: var(--color-greengris);
@@ -156,6 +161,7 @@ body {
         right: 0;
         background-color: var(--color-black);
         opacity: .4;
+        z-index: 2;
     }
 
     .flotante-menu-mobile {
@@ -166,6 +172,7 @@ body {
         width: 90%;
         right: 0;
         height: 65%;
+        z-index: 2;
     }
 }
 
@@ -198,5 +205,9 @@ body {
         width: 200px;
         height: 400px;
         background: #093654;
+    }
+    .flotante-menu-mobile {
+        z-index: 2;
+        position: relative;
     }
 }
