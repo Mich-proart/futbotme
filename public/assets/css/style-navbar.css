@@ -20,7 +20,7 @@
         background-color:   var(--color-silver);
         padding: 15px 15px;
         top: 100%;
-        left: -130%;
+        left: 0%;
         width: 450px;
     }
     /* mantenemos menu abierto en desktop */
