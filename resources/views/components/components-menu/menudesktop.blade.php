@@ -296,50 +296,6 @@
 
                 <?php }?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <li class="li-parent cursor-pointer py-1 position-relative">
-
-                    <div class="content-li-parent d-flex align-items-center">
-
-                        <p class="mb-0 me-4"><a class="enlace-unstyle color-black" href="{{ url('/noticias')}}">Noticias</a></p>                            
-                        
-                    </div>
-                    
-                </li>
-
-                <li class="li-parent cursor-pointer py-1 position-relative">
-
-                    <div class="content-li-parent d-flex align-items-center">
-
-                        <p class="mb-0"><a class="enlace-unstyle color-black" href="{{ url('/contacto')}}">Contacto</a></p>                            
-                        
-                    </div>
-                    
-                </li>
-
             </ul>
 
         </div>

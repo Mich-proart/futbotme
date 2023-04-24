@@ -8,6 +8,14 @@
 
 </div>
 
+<div class="publicidad-header bg-dark-green">
+    <div class="container-fluid-custom pb-lg-5 pb-3">
+        <div class="content-publi d-flex align-items-center justify-content-center" style="height: 88px;background-color:#827C6E;">
+            <p class="mb-0 text-white">Publicidad Banner 1320x88px</p>
+        </div>
+    </div>    
+</div>
+
 {{-- content header --}}
 <header class="navBar bg-brand-green">    
 
