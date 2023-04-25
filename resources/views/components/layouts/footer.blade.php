@@ -34,23 +34,6 @@
                     </div>                                
                 </div>                                
             </div>
-
-
-
-            {{-- <div class="row mt-2 mb-2">
-                <div class="col-12">
-                    <div class="content-footer-text">
-                        <div class="content-footer-text-top d-flex align-items-center justify-content-center">
-                            <a href="" class="enlace-unstyle"><span class="text-politicas text-condiciones-de-uso color-black fs-01">Condiciones de uso</span></a>  
-                            <span class="separator px-1">|</span>          
-                            <a href="" class="enlace-unstyle"><span class="text-politicas text-politica-cookies color-black fs-01">Política de cookies y privacidad</span></a>            
-                        </div>
-                        <div class="content-footer-text-bottom d-flex align-items-center justify-content-center mt-2">
-                            <p class="mb-0 text-center color-gray-contrast fs-00">Copyright 1999-2023 Futbolme.com - Todos derechos reservados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
         <div class="container-fluid-custom py-3">
             <div class="row">

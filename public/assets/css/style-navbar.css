@@ -8,8 +8,13 @@
     /* buscador menu deslizable */
     .content-icon-buscador{
         position: absolute;
-        top: 10%;
+        top: 28%;
+        right: 6%;
+    }
+    .content-input-buscador-mobile{
+        left: 0;
         right: 0;
+        bottom: -67px;
     }
 }
 

@@ -274,4 +274,4 @@
 
 @include('components.components-menu.menudesktop')
 
-{{-- @include('components.components-menu.menumobile') --}}
+@include('components.components-menu.menumobile')

@@ -67,4 +67,9 @@ $(document).ready(function () {
             $(this).find('.content-icon-sub-sub-menu-minus').removeClass('ocultar-icon')
         }
     })
+
+    // abrir y cerrar input del buscador
+    $(document).on('click', '.content-buscador', function(){
+        $('.content-input-buscador-mobile').fadeToggle("slow");
+    })
 })
