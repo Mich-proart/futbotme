@@ -8,10 +8,18 @@
 
 </div>
 
+<div class="publicidad-header bg-dark-green remove-mobile">
+    <div class="container-fluid-custom pb-lg-5 pb-3">
+        <div class="content-publi d-flex align-items-center justify-content-center" style="height: 88px;background-color:#827C6E;">
+            <p class="mb-0 text-white">Publicidad Banner 1320x88px</p>
+        </div>
+    </div>    
+</div>
+
 {{-- content header --}}
 <header class="navBar bg-brand-green">    
 
-    <div class="container-fluid-custom d-flex align-items-center justify-content-between py-lg-4 py-4">
+    <div class="container-fluid-custom d-flex align-items-center justify-content-between py-lg-4 py-4 position-relative">
 
         {{-- icono buscador --}}
         <div class="content-buscador cursor-pointer remove-desktop">
@@ -23,6 +31,23 @@
             </svg>            
 
         </div>
+
+        {{-- buscador mobile menu --}}        
+        <div style="display:none;" class="content-input-buscador content-input-buscador-mobile position-absolute remove-desktop py-4 container-fluid-custom bg-silver">
+
+            <input class="w-100 py-2 px-4" type="text" placeholder="Buscar Equipo o Jugador">
+
+            <div class="content-icon-buscador content-icon-buscador-mobile d-flex align-items-center justify-content-center">
+
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1034 15.0517C19.1034 17.0133 17.5133 18.6034 15.5517 18.6034C13.5902 18.6034 12 17.0133 12 15.0517C12 13.0902 13.5902 11.5 15.5517 11.5C17.5133 11.5 19.1034 13.0902 19.1034 15.0517ZM18.3972 18.6046C17.6179 19.2296 16.6285 19.6034 15.5517 19.6034C13.0379 19.6034 11 17.5656 11 15.0517C11 12.5379 13.0379 10.5 15.5517 10.5C18.0656 10.5 20.1034 12.5379 20.1034 15.0517C20.1034 16.1286 19.7295 17.1181 19.1044 17.8975L22.3535 21.1467C22.5488 21.3419 22.5488 21.6585 22.3535 21.8538C22.1583 22.049 21.8417 22.049 21.6464 21.8538L18.3972 18.6046Z" fill="black"/>
+
+                </svg>                    
+
+            </div>
+
+        </div>                    
 
         {{-- logo web --}}
         <div class="content-logo">
