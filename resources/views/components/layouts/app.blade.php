@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style-footer.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-icon.css') }}">
 
         {{-- css files existent to futbolme --}}
         <link rel="stylesheet" href="{{ asset('assets/css/paises.css') }}">
