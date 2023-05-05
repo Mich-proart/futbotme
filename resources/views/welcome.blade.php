@@ -1,6 +1,6 @@
 <x-layouts.app title="Home" meta-description="Home page">
 
-    <div class="col-lg-7 col-12 px-lg-4">
+    <section>
         <div class="container-fluid px-0">
             <div class="row row-cols-2 g-0 justify-content-between">
                 <div class="col-lg-7 col-12 ">
@@ -26,10 +26,9 @@
                                 <div class="d-flex align-items-center justify-content-center">
                                     <h2 class="fs-00 mb-0" id="currentDate"></h2>
                                     <div class="field ps-2">
-                                        <form class="form-input" id="date-search"
-                                            onsubmit="return setDate(this)">
-                                            <input type="date" class="text-field w-15" name="date"
-                                                id="date" required>
+                                        <form class="form-input" id="date-search" onsubmit="return setDate(this)">
+                                            <input type="date" class="text-field w-15" name="date" id="date"
+                                                required>
                                             {{-- <button type="submit" class="btn btn-small"
                                                 title="Pesquisar"><i class="bi bi-search"></i></button> --}}
                                         </form>
@@ -102,9 +101,9 @@
                             <h4 class="fs-00 d-lg-inline-block">RFEF</h4>
                         </div>
 
-                        <button class="accordion-button w-auto py-3 px-4" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
-                            aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <button class="accordion-button w-auto py-3 px-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
                             <i class="color-gray-medium bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
@@ -131,7 +130,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">Real Madrid</h3>
@@ -172,9 +172,9 @@
                             <h4 class="fs-00 d-lg-inline-block">RFEF</h4>
                         </div>
 
-                        <button class="accordion-button w-auto py-3 px-4" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                            aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                        <button class="accordion-button w-auto py-3 px-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseTwo">
                             <i class="color-gray-medium bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
@@ -201,7 +201,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">Real Madrid</h3>
@@ -242,9 +243,9 @@
                             <h4 class="fs-00 d-lg-inline-block">RFEF</h4>
                         </div>
 
-                        <button class="accordion-button w-auto py-3 px-4" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetree"
-                            aria-expanded="true" aria-controls="panelsStayOpen-collapsetree">
+                        <button class="accordion-button w-auto py-3 px-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapsetree" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapsetree">
                             <i class="color-gray-medium bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
@@ -271,7 +272,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">
@@ -336,9 +338,9 @@
                             <h4 class="fs-00 d-lg-inline-block">Italia</h4>
                         </div>
 
-                        <button class="accordion-button w-auto py-3 px-4" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapseOne"
-                            aria-expanded="true" aria-controls="panelFuturosOpen-collapseOne">
+                        <button class="accordion-button w-auto py-3 px-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelFuturosOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelFuturosOpen-collapseOne">
                             <i class="color-white bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
@@ -365,7 +367,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">Equipo 01 nombre sin
@@ -407,7 +410,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">Equipo 01 nombre sin
@@ -450,7 +454,8 @@
                                 </div>
 
                             </div>
-                            <div class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
+                            <div
+                                class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                                 <div class="local">
                                     <i class="bi bi-shield"></i>
                                     <h3 class="d-inline-block color-black fs-01">Equipo 01 nombre sin
@@ -483,7 +488,7 @@
 
             </div>
         </div>
-    </div>
-                
+    </section>
+
 
 </x-layouts.app>
