@@ -16,4 +16,35 @@ class CustomController extends Controller{
  
         return view('notices');
     }
+
+    public function indexPreguntas(){
+
+        return view('preguntas-frecuentes');
+    }
+
+    public function indexPublicidad(){
+
+        return view('publicidad');
+    }
+
+    public function indexPartidos(){
+
+        return view('partidos');
+    }
+
+    public function indexGolAverage(){
+
+        return view('gol-average');
+    }
+
+    public function indexPoliticaCookies(){
+
+        return view('politica-cookies');
+    }
+
+    public function indexCondicionesUso(){
+
+        return view('condiciones-uso');
+    }
+
 }
