@@ -1,3 +1,4 @@
+// hacemos los cambios en partidos directos cambios solo de valores para no afectar el html solo los datos
 const partidosDirecto = (respuesta) =>{
 
     var fechaActual = new Date();
@@ -10,11 +11,10 @@ const partidosDirecto = (respuesta) =>{
     jQuery('.update-un-minuto').text(hora + ":" + minutos)
 }
 
-
 /*
 *
-*funcion generica para realizar las peticiones de api
-*
+* funcion generica para realizar las peticiones de api
+* para reutilizar la funcion la dividimos con switch 
 */
 const hacerPeticion = (tipoPeticion) =>{
 
