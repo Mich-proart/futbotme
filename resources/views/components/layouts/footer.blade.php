@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="content-logo">
-                        <a href="{{ url('/')}}" class="h-100 w-100">
+                        <a href="{{ url('/')}}" class="h-100 w-100 textos-dinamicos-footer" url-static="texto">
                             <img src="{{ asset('assets/images/logo-footer.svg') }}" alt="logo color verde futbolme">
                         </a>                            
                     </div>

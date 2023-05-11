@@ -35,6 +35,8 @@
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/custom.js') }}"></script>
         <script src="{{ asset('assets/js/general.js') }}"></script>
+        <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
+        <script src="{{ asset('assets/js/customVars.js') }}"></script>
 
     </head>
 
