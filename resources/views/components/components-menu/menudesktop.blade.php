@@ -22,7 +22,7 @@
                                                                      
                             </div>  
 
-                            <p class="mb-0 me-4 fs-00"><?php echo $value['textoWeb'];?></p>                          
+                            <p class="mb-0 fs-00"><?php echo $value['textoWeb'];?></p>                          
 
                         </div>
 
@@ -66,7 +66,7 @@
                                                 
                                             </div>
 
-                                            <?php echo $element['subMenu'] == 'on' ? '<p class="mb-0 me-4 fs-000">'.$element['texto'].'</p>' : '<p class="mb-0 ms-3 fs-000"><a class="enlace-unstyle color-black" href="'.$element['enlace'].'">'.$element['texto'].'</a></p>';?>                                                                        
+                                            <?php echo $element['subMenu'] == 'on' ? '<p class="mb-0 fs-000">'.$element['texto'].'</p>' : '<p class="mb-0 ms-3"><a class="enlace-unstyle color-black fs-000" href="'.$element['enlace'].'">'.$element['texto'].'</a></p>';?>                                                                        
 
                                         </div> 
 
@@ -81,7 +81,7 @@
 
                                                         <div class="d-flex align-items-center">
 
-                                                            <a class="enlace-unstyle color-black fs-000" href="<?php echo $valueChildren['enlace'];?>"><p class="mb-0"><?php echo $valueChildren['texto'];?></p></a>
+                                                            <a class="enlace-unstyle color-black" href="<?php echo $valueChildren['enlace'];?>"><p class="mb-0 fs-000"><?php echo $valueChildren['texto'];?></p></a>
 
                                                         </div>                                
 
@@ -141,7 +141,7 @@
 
                                                             <div class="d-flex align-items-center">
 
-                                                                <a class="enlace-unstyle color-black fs-000" href="<?php echo $extrafillStatic['enlace'];?>"><p class="mb-0"><?php echo $extrafillStatic['texto'];?></p></a>
+                                                                <a class="enlace-unstyle color-black" href="<?php echo $extrafillStatic['enlace'];?>"><p class="mb-0 fs-000"><?php echo $extrafillStatic['texto'];?></p></a>
 
                                                             </div>                                
 
@@ -202,7 +202,7 @@
                                                 
                                                         <div class="content-icon-bandera"> 
                                                 
-                                                            <i style="" class="mx-3 <?php echo $elements[0]['nombreComunidad'] == 'SIN COMUNIDAD' ?  'pais flag'.$elements[0]['imagenPais'].'b' : 'comunidad flag'.$elements[0]['imagenComunidad'];?>"></i>
+                                                            <i style="" class="ms-0 me-3 <?php echo $elements[0]['nombreComunidad'] == 'SIN COMUNIDAD' ?  'pais flag'.$elements[0]['imagenPais'].'b' : 'comunidad flag'.$elements[0]['imagenComunidad'];?>"></i>
                                                             
                                                         </div>
                                                 
@@ -222,7 +222,7 @@
 
                                                                 <div class="d-flex align-items-center">
 
-                                                                    <a class="enlace-unstyle color-black fs-000" href="<?php echo $itemsChlidrens['ruta'];?>"><p class="mb-0"><?php echo $nombre;?></p></a>
+                                                                    <a class="enlace-unstyle color-black" href="<?php echo $itemsChlidrens['ruta'];?>"><p class="mb-0 fs-000"><?php echo $nombre;?></p></a>
 
                                                                 </div>                                
 
@@ -246,47 +246,6 @@
                                 <?php }?>
 
                             </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <?php }?>
 
