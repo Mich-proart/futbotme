@@ -1,0 +1,10 @@
+
+/* estilos genericos */
+.input-generic,
+.input-generic::placeholder{
+    font-size: var(--fs-small);
+}
+input:focus {
+    outline: none!important;
+}
+  

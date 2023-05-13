@@ -5,12 +5,6 @@
         height: 33vh;
         overflow-y: scroll;
     }
-    /* buscador menu deslizable */
-    .content-icon-buscador{
-        position: absolute;
-        top: 28%;
-        right: 6%;
-    }
     .content-input-buscador-mobile{
         left: 0;
         right: 0;
@@ -26,12 +20,6 @@
     /* mantenemos menu abierto en desktop */
     .content-navbar.flotante-menu-mobile.open-desktop{
         display: block!important;
-    }
-    /* buscador menu deslizable */
-    .content-icon-buscador{
-        position: absolute;
-        top: 10%;
-        right: 0;
     }
 }
 
