@@ -4,7 +4,7 @@
 {{-- publicidad escrita top bar --}}
 <div class="content-top-nav-bar py-3 bg-dark-green">
 
-    <h1 class="text-top-nav-bar mb-0 color-white text-center fs-01">Fútbol en directo, livescore - resultados de partidos de fútbol</h1>
+    <h1 class="text-top-nav-bar mb-0 color-white text-center fs-00">Fútbol en directo, livescore - resultados de partidos de fútbol</h1>
 
 </div>
 
@@ -87,7 +87,7 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/partidos')}}" class="enlace-unstyle color-white">Partidos Televisados</a></p>  
+                        <p class="mb-0 color-white"><a href="{{ url('/partidos')}}" class="enlace-unstyle color-white fs-00">Partidos Televisados</a></p>  
 
                     </div>                    
 
@@ -109,7 +109,7 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/ascensos-y-descensos/nacional')}}" class="enlace-unstyle color-white">Ascensos y descensos</a></p>
+                        <p class="mb-0 color-white"><a href="{{ url('/ascensos-y-descensos/nacional')}}" class="enlace-unstyle color-white fs-00">Ascensos y descensos</a></p>
 
                     </div>                    
 
@@ -131,7 +131,7 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-white">Calcular Gol Average</a></p>
+                        <p class="mb-0 color-white"><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-white fs-00">Calcular Gol Average</a></p>
 
                     </div>                    
 

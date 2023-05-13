@@ -300,7 +300,7 @@
 
                         </div>
 
-                        <p class="mb-0"><a href="{{ url('/partidos')}}" class="enlace-unstyle color-black">Partidos Televisados</a></p>  
+                        <p class="mb-0"><a href="{{ url('/partidos')}}" class="enlace-unstyle color-black fs-01">Partidos Televisados</a></p>  
 
                     </div>                    
 
@@ -322,7 +322,7 @@
 
                         </div>
 
-                        <p class="mb-0"><a href="{{ url('/ascensos-y-descensos/nacional')}}" class="enlace-unstyle color-black">Ascensos y descensos</a></p>  
+                        <p class="mb-0"><a href="{{ url('/ascensos-y-descensos/nacional')}}" class="enlace-unstyle color-black fs-01">Ascensos y descensos</a></p>  
 
                     </div>                    
 
@@ -344,7 +344,7 @@
 
                         </div>
 
-                        <p class="mb-0"><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-black">Calcular Gol Average</a></p>  
+                        <p class="mb-0"><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-black fs-01">Calcular Gol Average</a></p>  
 
                     </div>                    
 
@@ -362,7 +362,7 @@
 
                     <div class="d-flex align-items-center"></div>                    
 
-                    <p class="mb-0"><a href="{{ url('/noticias')}}" class="enlace-unstyle color-black">Noticias</a></p>  
+                    <p class="mb-0"><a href="{{ url('/noticias')}}" class="enlace-unstyle color-black fs-01">Noticias</a></p>  
 
                 </li>
 
@@ -370,7 +370,7 @@
 
                     <div class="d-flex align-items-center"></div>
 
-                    <p class="mb-0"><a href="{{ url('/contacto')}}" class="enlace-unstyle color-black">Contacto</a></p>  
+                    <p class="mb-0"><a href="{{ url('/contacto')}}" class="enlace-unstyle color-black fs-01">Contacto</a></p>  
 
                 </li>
 
