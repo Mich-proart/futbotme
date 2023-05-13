@@ -20,13 +20,8 @@
 
 @media (min-width: 992px) {
     /* children flotante de menu */
-    .children-flotante{
-        position: absolute;
-        background-color:   var(--color-silver);
-        padding: 15px 15px;
-        top: 100%;
-        left: 0%;
-        width: 450px;
+    .children-flotante{                
+        padding: 10px 15px;                        
     }
     /* mantenemos menu abierto en desktop */
     .content-navbar.flotante-menu-mobile.open-desktop{

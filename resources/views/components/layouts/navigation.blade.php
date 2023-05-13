@@ -174,10 +174,4 @@
 
     </div>
 
-    <div class="content-navbar">
-
-        @include('components.menuphp')   
-
-    </div>
-
 </header>

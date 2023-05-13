@@ -45,11 +45,16 @@
         {{-- navbar --}}
         <x-layouts.navigation />              
         
-        <section class="py-5 bg-white-light">
+        <section class="bg-white-light">
             <div class="container-fluid container-fluid-custom">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-lg-0 mb-4">
-                        <div class="publi2"></div>
+                        <div class="content-navbar">
+                            @include('components.menuphp')                       
+                        </div>
+                        <div class="content-publi-left mt-5">
+                            <div class="publi2"></div>
+                        </div>
                     </div>
 
                     <div class="col-lg-7 col-12 px-lg-4">
@@ -57,7 +62,7 @@
                         {{ $slot }}
                     </div>
 
-                    <div class="col-lg-2 col-12">
+                    <div class="col-lg-2 col-12 pt-5">
                         <div class="publi3">
                             <div class="invisible">
                                 publicidad publicidad publicidad publicidad publicidad publicidad
