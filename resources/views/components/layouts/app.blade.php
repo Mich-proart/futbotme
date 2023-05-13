@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-navbar.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-general.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-icon.css') }}">
@@ -33,6 +34,7 @@
         {{-- js files --}}
         <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
         <script src="{{ asset('assets/js/custom.js') }}"></script>
         <script src="{{ asset('assets/js/general.js') }}"></script>
         <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
