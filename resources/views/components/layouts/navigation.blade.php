@@ -147,7 +147,7 @@
 
                         <div class="d-flex align-items-center justify-content-center">
                             
-                            <input class="w-100 py-2 px-3 input-generic border-0" type="text" placeholder="Buscar Equipo o Jugador">
+                            <input class="w-100 py-2 px-3 input-generic border-0 input-text-buscador" type="text" placeholder="Buscar Equipo o Jugador">
                             
                             <div class="content-icon-buscador d-flex align-items-center justify-content-center cursor-pointer" style="background: var(--color-white);">
                                 
