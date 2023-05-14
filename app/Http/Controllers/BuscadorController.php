@@ -16,36 +16,19 @@ class BuscadorController extends Controller{
     public function buscador(Request $request){ 
 
         // Obtener la variable ingresada en el input
-        $data = $request->all()['formData'];   
-        
-        // Array para almacenar Jugador y Equipo
-        $arrayJugadorEquipo = array();
+        $data = $request->all()['formData'];                   
         
         $users = DB::table('jugador')
-            ->select(DB::raw('nombre'))
+            ->select(DB::raw('*'))
             ->where('nombre', 'LIKE', '%'.$data.'%')            
             ->get();
 
-        $objJugadores = [
-            'llave' => 'jugadores',
-            'valor' => $users
-        ];
-    
-        array_push($arrayJugadorEquipo, $objJugadores);
-
         $teams = DB::table('equipo')
-            ->select(DB::raw('nombre'))
+            ->select(DB::raw('*'))
             ->where('nombre', 'LIKE', '%'.$data.'%')            
             ->get();
         
-        $objEquipos = [
-            'llave' => 'equipos',
-            'valor' => $teams
-        ];
-
-        array_push($arrayJugadorEquipo, $objEquipos);
-
         // Retornar la respuesta (en formato JSON)
-        return response()->json(['message' => $arrayJugadorEquipo]);
+        return response()->json(['jugadores' => $users, 'equipos' => $teams]);        
     }
 }

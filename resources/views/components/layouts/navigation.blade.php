@@ -143,7 +143,7 @@
 
                 <li>
 
-                    <div class="content-input-buscador position-relative">
+                    <div class="content-input-buscador">
 
                         <div class="d-flex align-items-center justify-content-center">
                             
@@ -157,6 +157,30 @@
                                     
                                 </svg>                    
                                 
+                            </div>
+
+                            <div class="content-resultado-buscador" style="position: absolute;height: 60vh;top: 63px;width: 50%;background-color: red;z-index: 9;overflow-y: scroll;overflow-x: hidden;">
+                                <div class="numero-resultados d-flex align-items-center justcontent-start">
+                                    <p class="mb-0 px-4 py-2"><span class="num-rest-equipos">0</span> equipos</p> <p class="mb-0 px-4 py-2"><span class="num-rest-jugadores">0</span> jugadores</p>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="card mb-3" style="max-width: 540px;">
+                                            <div class="row g-0">
+                                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                                    <img src="https://futbolme.com/static/img/club/escudo4466.png" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">Senior Masculino</p>
+                                                        <p class="card-text">Localidad</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
 
                         </div>
