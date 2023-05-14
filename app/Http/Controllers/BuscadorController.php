@@ -23,7 +23,7 @@ class BuscadorController extends Controller{
         
         $users = DB::table('jugador')
             ->select(DB::raw('nombre'))
-            ->where('nombre', 'LIKE', $data.'%')            
+            ->where('nombre', 'LIKE', '%'.$data.'%')            
             ->get();
 
         $objJugadores = [
@@ -35,7 +35,7 @@ class BuscadorController extends Controller{
 
         $teams = DB::table('equipo')
             ->select(DB::raw('nombre'))
-            ->where('nombre', 'LIKE', $data.'%')            
+            ->where('nombre', 'LIKE', '%'.$data.'%')            
             ->get();
         
         $objEquipos = [
