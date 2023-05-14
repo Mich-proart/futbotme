@@ -2,14 +2,8 @@
 @media (max-width: 991px) {
     /* listado de todos los elementos del menu */
     .ul-todos-elements-menu{
-        height: 32vh;
+        height: 33vh;
         overflow-y: scroll;
-    }
-    /* buscador menu deslizable */
-    .content-icon-buscador{
-        position: absolute;
-        top: 28%;
-        right: 6%;
     }
     .content-input-buscador-mobile{
         left: 0;
@@ -20,23 +14,12 @@
 
 @media (min-width: 992px) {
     /* children flotante de menu */
-    .children-flotante{
-        position: absolute;
-        background-color:   var(--color-silver);
-        padding: 15px 15px;
-        top: 100%;
-        left: 0%;
-        width: 450px;
+    .children-flotante{                
+        padding: 10px 15px;                        
     }
     /* mantenemos menu abierto en desktop */
     .content-navbar.flotante-menu-mobile.open-desktop{
         display: block!important;
-    }
-    /* buscador menu deslizable */
-    .content-icon-buscador{
-        position: absolute;
-        top: 10%;
-        right: 0;
     }
 }
 

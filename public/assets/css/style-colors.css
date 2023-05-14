@@ -61,14 +61,14 @@
 }
 
 /* size fonts */
+.fs-000{
+    font-size: var(--fs-small-xs);
+}
 .fs-00{
     font-size: var(--fs-small);
 }
 .fs-01{
     font-size: var(--fs-standar);
-}
-.fs-02{
-    font-size: var(--fs-torneos);
 }
 .fs-03{
     font-size: var(--fs-large);

@@ -34,7 +34,7 @@ $(document).ready(function () {
             $('.svg-content').find('svg').css('rotate','0deg')
 
             $(this).addClass('girado')
-            is_mobile() ? $(this).find('.svg-content').find('svg').css('rotate','90deg') : $(this).find('.svg-content').find('svg').css('rotate','180deg')   
+            is_mobile() ? $(this).find('.svg-content').find('svg').css('rotate','180deg') : $(this).find('.svg-content').find('svg').css('rotate','180deg')   
             $(this).closest('.li-parent').find('.ul-children').fadeIn()  
         }
     })

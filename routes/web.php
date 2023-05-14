@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomController;
+use App\Http\Controllers\ApiController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,6 @@ Route::get('/condiciones-uso', [CustomController::class, 'indexCondicionesUso'])
 Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'indexCategorias'])->name('categories');
 
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories');
+
+// peticiones api
+Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');

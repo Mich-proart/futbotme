@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-navbar.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-general.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-icon.css') }}">
@@ -33,8 +34,11 @@
         {{-- js files --}}
         <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
         <script src="{{ asset('assets/js/custom.js') }}"></script>
         <script src="{{ asset('assets/js/general.js') }}"></script>
+        <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
+        <script src="{{ asset('assets/js/customVars.js') }}"></script>
 
     </head>
 
@@ -43,11 +47,16 @@
         {{-- navbar --}}
         <x-layouts.navigation />              
         
-        <section class="py-5 bg-white-light">
+        <section class="bg-white-light">
             <div class="container-fluid container-fluid-custom">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-lg-0 mb-4">
-                        <div class="publi2"></div>
+                        <div class="content-navbar">
+                            @include('components.menuphp')                       
+                        </div>
+                        <div class="content-publi-left mt-5">
+                            <div class="publi2"></div>
+                        </div>
                     </div>
 
                     <div class="col-lg-7 col-12 px-lg-4">
@@ -55,7 +64,7 @@
                         {{ $slot }}
                     </div>
 
-                    <div class="col-lg-2 col-12">
+                    <div class="col-lg-2 col-12 pt-5">
                         <div class="publi3">
                             <div class="invisible">
                                 publicidad publicidad publicidad publicidad publicidad publicidad

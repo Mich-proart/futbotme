@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="content-logo">
-                        <a href="{{ url('/')}}" class="h-100 w-100">
+                        <a href="{{ url('/')}}" class="h-100 w-100 textos-dinamicos-footer" url-static="texto">
                             <img src="{{ asset('assets/images/logo-footer.svg') }}" alt="logo color verde futbolme">
                         </a>                            
                     </div>
@@ -22,14 +22,14 @@
                         <div class="col-12 col-lg-3"></div>
                         <div class="col-12 col-lg-3"></div>
                         <div class="col-12 col-lg-3">
-                            <p><a href="{{ url('/preguntas-frecuentes')}}" class="enlace-unstyle color-black">FAQ</a></p>
-                            <p><a href="{{ url('/noticias')}}" class="enlace-unstyle color-black">Noticias</a></p>
-                            <p><a href="{{ url('/publicidad')}}" class="enlace-unstyle color-black">Publicidad</a></p>                                                                                 
+                            <p><a href="{{ url('/preguntas-frecuentes')}}" class="enlace-unstyle color-black fs-00">FAQ</a></p>
+                            <p><a href="{{ url('/noticias')}}" class="enlace-unstyle color-black fs-00">Noticias</a></p>
+                            <p><a href="{{ url('/publicidad')}}" class="enlace-unstyle color-black fs-00">Publicidad</a></p>                                                                                 
                         </div>
                         <div class="col-12 col-lg-3">
-                            <p><a href="{{ url('/contacto')}}" class="enlace-unstyle color-black">Contacto</a></p>   
-                            <p><a href="{{ url('/partidos')}}" class="enlace-unstyle color-black">Livescore</a></p>                            
-                            <p><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-black">Golaverage</a></p>                                                        
+                            <p><a href="{{ url('/contacto')}}" class="enlace-unstyle color-black fs-00">Contacto</a></p>   
+                            <p><a href="{{ url('/partidos')}}" class="enlace-unstyle color-black fs-00">Livescore</a></p>                            
+                            <p><a href="{{ url('/gol-average')}}" class="enlace-unstyle color-black fs-00">Golaverage</a></p>                                                        
                         </div>
                     </div>                                
                 </div>                                
@@ -38,12 +38,12 @@
         <div class="container-fluid-custom py-3">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center justify-content-lg-start justify-content-center">
-                    <p class="mb-0 color-gray-contrast fs-00">Copyright 1999-2023 Futbolme.com Todos derechos reservados.</p>        
+                    <p class="mb-0 color-gray-contrast fs-000">Copyright 1999-2023 Futbolme.com Todos derechos reservados.</p>        
                 </div>
                 <div class="col-lg-6 d-flex align-items-center justify-content-lg-end justify-content-center">
-                    <a href="{{ url('/politica-cookies')}}" class="enlace-unstyle"><span class="text-politicas text-politica-cookies color-black fs-00">Política de cookies y privacidad</span></a>            
+                    <a href="{{ url('/politica-cookies')}}" class="enlace-unstyle"><span class="text-politicas text-politica-cookies color-black fs-000">Política de cookies y privacidad</span></a>            
                     <span class="px-lg-3 px-2">|</span>
-                    <a href="{{ url('/condiciones-uso')}}" class="enlace-unstyle"><span class="text-politicas text-condiciones-de-uso color-black fs-00">Condiciones de uso</span></a>  
+                    <a href="{{ url('/condiciones-uso')}}" class="enlace-unstyle"><span class="text-politicas text-condiciones-de-uso color-black fs-000">Condiciones de uso</span></a>  
                 </div>
             </div>
         </div>
