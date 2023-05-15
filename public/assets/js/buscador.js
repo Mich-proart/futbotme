@@ -7,8 +7,23 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
     for (const iterator of arrayEquipos) {
 
         let response = `
-
-        `
+        <li>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <img src="${urlBase}assets/images/img/club/escudo${iterator.clubId}.png" class="img-fluid rounded-start" alt="${iterator.nombreCorto}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text"><small class="text-muted">${iterator.tipo}</small></p>
+                            <h3 class="card-title titulo-equ-text">${iterator.nombreCompleto}</h3>
+                            <p class="card-text categoria-equ-text">${iterator.categoria}</p>
+                            <p class="card-text localidad-equ-text">Localidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>`
 
         jQuery(contentResponse).append(response);
         
@@ -24,8 +39,23 @@ const generateCardJugadores = (arrayJugadores, contentResponse) =>{
     for (const iterator of arrayJugadores) {
 
         let response = `
-        
-        `
+        <li>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <img src="https://futbolme.com/static/img/club/escudo4466.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text"><small class="text-muted">${iterator.tipo}</small></p>
+                            <h3 class="card-title titulo-equ-text">${iterator.nombre} ${iterator.apellidos}</h3>
+                            <p class="card-text categoria-equ-text">Senior Masculino</p>
+                            <p class="card-text localidad-equ-text">Localidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>`
 
         jQuery(contentResponse).append(response);
         

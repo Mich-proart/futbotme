@@ -69,6 +69,8 @@ class BuscadorController extends Controller{
                 'nombre' => $value->nombre,
                 'nombreCompleto' => $value->nombre_completo,
                 'nombreCorto' => $value->nombreCorto,
+                'clubId' => $value->club_id,
+                'categoria' => HelperFunctions::categoriaClub($value->categoria_id),
                 'fundado' => $value->fundado,
                 'debutNacional' => $value->debut_nacional,
                 'escudo' => $value->escudo,

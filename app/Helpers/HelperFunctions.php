@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-//use App\Models\OtraTabla;
+use App\Models\OtraTabla;
 
 class HelperFunctions
 {
@@ -14,4 +14,17 @@ class HelperFunctions
     }
 
     // Otras funciones auxiliares aquí
+
+
+    public static function categoriaClub($id){
+
+        return "valor categoria";
+        // $categoria = DB::table('categoria')
+        // ->select(DB::raw('nombre'))
+        // ->where('id', '=', $id)            
+        // ->get();
+
+        // return $categoria;
+
+    }
 }
