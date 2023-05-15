@@ -163,7 +163,7 @@
                                 <div class="numero-resultados d-flex align-items-center justcontent-start">
                                     <p class="mb-0 px-4 py-2"><span class="num-rest-equipos">0</span> equipos</p> <p class="mb-0 px-4 py-2"><span class="num-rest-jugadores">0</span> jugadores</p>
                                 </div>
-                                <ul class="list-unstyled">
+                                <ul class="list-unstyled listado-result-equipos-jugadores">
                                     <li>
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row g-0">
@@ -172,9 +172,9 @@
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">Senior Masculino</p>
-                                                        <p class="card-text">Localidad</p>
+                                                        <h3 class="card-title titulo-equ-text">Card title</h3>
+                                                        <p class="card-text categoria-equ-text">Senior Masculino</p>
+                                                        <p class="card-text localidad-equ-text">Localidad</p>
                                                     </div>
                                                 </div>
                                             </div>

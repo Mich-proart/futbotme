@@ -1,11 +1,35 @@
-const generateCardEquipos = (arrayEquipos) =>{
+const generateCardEquipos = (arrayEquipos, contentResponse) =>{
+
+    console.log(arrayEquipos)
 
     jQuery('.num-rest-equipos').text(arrayEquipos.length)
+
+    for (const iterator of arrayEquipos) {
+
+        let response = `
+
+        `
+
+        jQuery(contentResponse).append(response);
+        
+    }
 }
 
-const generateCardJugadores = (arrayJugadores) =>{
+const generateCardJugadores = (arrayJugadores, contentResponse) =>{
+
+    console.log(arrayJugadores)
 
     jQuery('.num-rest-jugadores').text(arrayJugadores.length)
+
+    for (const iterator of arrayJugadores) {
+
+        let response = `
+        
+        `
+
+        jQuery(contentResponse).append(response);
+        
+    }
 }
 
 
@@ -23,10 +47,17 @@ const buscadoResponse = (urlPeticion, formData) =>{
         },
         success: function(response) { 
 
-            // seteamos valores de las cards de resultados
-            generateCardEquipos(response.equipos)
+            console.log(response)
 
-            generateCardJugadores(response.jugadores)
+            // vaciamos el contenedor para agregar resultados
+            let contentResponse = jQuery('.listado-result-equipos-jugadores')
+
+            jQuery(contentResponse).empty();
+
+            // seteamos valores de las cards de resultados
+            generateCardEquipos(response.equipos, contentResponse)
+
+            generateCardJugadores(response.jugadores, contentResponse)
         }
     })               
 }
