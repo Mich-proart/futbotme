@@ -143,11 +143,11 @@
 
                 <li>
 
-                    <div class="content-input-buscador position-relative">
+                    <div class="content-input-buscador">
 
                         <div class="d-flex align-items-center justify-content-center">
                             
-                            <input class="w-100 py-2 px-3 input-generic border-0" type="text" placeholder="Buscar Equipo o Jugador">
+                            <input class="w-100 py-2 px-3 input-generic border-0 input-text-buscador" type="text" placeholder="Buscar Equipo o Jugador">
                             
                             <div class="content-icon-buscador d-flex align-items-center justify-content-center cursor-pointer" style="background: var(--color-white);">
                                 
@@ -157,6 +157,30 @@
                                     
                                 </svg>                    
                                 
+                            </div>
+
+                            <div class="content-resultado-buscador" style="position: absolute;height: 60vh;top: 63px;width: 50%;background-color: red;z-index: 9;overflow-y: scroll;overflow-x: hidden;">
+                                <div class="numero-resultados d-flex align-items-center justcontent-start">
+                                    <p class="mb-0 px-4 py-2"><span class="num-rest-equipos">0</span> equipos</p> <p class="mb-0 px-4 py-2"><span class="num-rest-jugadores">0</span> jugadores</p>
+                                </div>
+                                <ul class="list-unstyled listado-result-equipos-jugadores">
+                                    <li>
+                                        <div class="card mb-3" style="max-width: 540px;">
+                                            <div class="row g-0">
+                                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                                    <img src="https://futbolme.com/static/img/club/escudo4466.png" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h3 class="card-title titulo-equ-text">Card title</h3>
+                                                        <p class="card-text categoria-equ-text">Senior Masculino</p>
+                                                        <p class="card-text localidad-equ-text">Localidad</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
 
                         </div>

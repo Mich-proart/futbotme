@@ -10,6 +10,8 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <title>futbolme - {{ $title ?? 'Titulo Web' }}</title>
 
         <meta name="description" content="{{ $metaDescription }}">
@@ -31,7 +33,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/comunidades.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/comunidades.min.css') }}">
 
-        {{-- js files --}}
+        {{-- js files --}}        
         <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/app.js') }}"></script>
@@ -39,6 +41,7 @@
         <script src="{{ asset('assets/js/general.js') }}"></script>
         <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
         <script src="{{ asset('assets/js/customVars.js') }}"></script>
+        <script src="{{ asset('assets/js/buscador.js') }}"></script>        
 
     </head>
 
