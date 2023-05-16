@@ -1,12 +1,9 @@
 // hacemos los cambios en partidos directos cambios solo de valores para no afectar el html solo los datos
 const partidosDirecto = (respuesta) =>{
 
-    var fechaActual = new Date();
-    var hora = fechaActual.getHours();
-    var minutos = fechaActual.getMinutes();
-    var segundos = fechaActual.getSeconds();
-
-    console.log(respuesta)
+    let fechaActual = new Date();
+    let hora = fechaActual.getHours();
+    let minutos = fechaActual.getMinutes();    
 
     jQuery('.update-un-minuto').text(hora + ":" + minutos)
 }
@@ -62,7 +59,14 @@ const hacerPeticion = (tipoPeticion) =>{
     xmlhttp.send();
 }
 
+/*** inicio de ejecuciones ****/
 $(document).ready(function () {
+
+    /* 
+    *
+    * ejecutamos la peticion y luego cada 1 minuto 
+    * 
+    */
 
     hacerPeticion('partidosDirecto')
 
@@ -71,4 +75,10 @@ $(document).ready(function () {
         hacerPeticion('partidosDirecto')
         
     }, 60000);
+
+    /* 
+    *
+    * ejecutamos la peticion y luego cada 1 minuto 
+    * 
+    */
 })

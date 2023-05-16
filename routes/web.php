@@ -3,7 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomController;
 use App\Http\Controllers\ApiController;
-
+use App\Http\Controllers\BuscadorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
@@ -30,3 +30,6 @@ Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategor
 
 // peticiones api
 Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');
+
+// buscador
+Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');
