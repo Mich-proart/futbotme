@@ -9,7 +9,6 @@ const scrollToTop = () =>{
 // funcion con la que detectamos si estamos en http o https 
 const is_htttps = () => (location.protocol === 'https:') ? true : false
 
-
 $(document).ready(function () {
 
     // volver arriba

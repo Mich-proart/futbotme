@@ -41,6 +41,8 @@ const hacerPeticion = (tipoPeticion) =>{
 
             respuesta = JSON.parse(respuesta)
 
+            console.log(respuesta)
+
             // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
             switch (tipoPeticion) {
 
@@ -51,10 +53,14 @@ const hacerPeticion = (tipoPeticion) =>{
                 break;
             }          
         }
-    };    
+    };   
     
     // Realizar la petición a la API (en este caso, se utiliza la API de ejemplo 'https://ejemplo.com/api')
     xmlhttp.open("GET", urlPeticion, true);
+
+    // Configura las cabeceras personalizadas
+    xmlhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+    
 
     xmlhttp.send();
 }
