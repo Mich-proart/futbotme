@@ -73,14 +73,3 @@ $(document).ready(function () {
         $('.content-input-buscador-mobile').fadeToggle("slow");
     })
 })
-
-function is_htttps(){
-	if (location.protocol === 'https:') {
-    	console.log('La página utiliza protocolo seguro (HTTPS).');
-		return true;
-	}else{
-		console.log('ESTAS EN LOCAL JORGE');
-		return false;
-	}
-	
-}
