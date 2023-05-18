@@ -102,7 +102,7 @@ $(document).ready(function () {
 
         hacerPeticion('partidosDirecto')
         
-    }, 500);
+    }, 6000);
 
     /* 
     *
