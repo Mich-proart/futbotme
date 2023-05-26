@@ -6,6 +6,30 @@ const partidosDirecto = (respuesta) =>{
     let minutos = fechaActual.getMinutes();    
 
     jQuery('.update-un-minuto').text(hora + ":" + minutos)
+
+    let contentPartidos = jQuery('.content-partidos-live')
+
+    contentPartidos.empty();
+
+    for (const iterator of respuesta) {
+
+        let obj = `
+        <div class="w-100 mb-3">
+        <span class="equipo-directo" attr-id="">${iterator.home.name} </span><span class="marcador">${iterator.ss}</span><span class="equipo-directo" attr-id=""> ${iterator.away.name}</span></div>`
+
+        jQuery(contentPartidos).append(obj);
+
+        console.log(iterator)
+
+        console.log(iterator.ss)
+        
+
+        console.log(iterator.scores+" - "+iterator.scores)
+
+    }
+
+
+
 }
 
 /*
@@ -39,7 +63,7 @@ const hacerPeticion = (tipoPeticion) =>{
             // La respuesta se ha recibido correctamente
             let respuesta = xmlhttp.responseText;
 
-            respuesta = JSON.parse(respuesta)
+            respuesta = JSON.parse(respuesta)            
 
             // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
             switch (tipoPeticion) {
@@ -51,10 +75,14 @@ const hacerPeticion = (tipoPeticion) =>{
                 break;
             }          
         }
-    };    
+    };   
     
     // Realizar la petición a la API (en este caso, se utiliza la API de ejemplo 'https://ejemplo.com/api')
     xmlhttp.open("GET", urlPeticion, true);
+
+    // Configura las cabeceras personalizadas
+    xmlhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+    
 
     xmlhttp.send();
 }
@@ -74,7 +102,7 @@ $(document).ready(function () {
 
         hacerPeticion('partidosDirecto')
         
-    }, 60000);
+    }, 6000);
 
     /* 
     *
