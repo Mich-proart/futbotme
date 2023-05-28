@@ -16,3 +16,24 @@ input:focus {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+/* Custom Scroll */
+
+.content-resultado-buscador::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+}
+
+.content-resultado-buscador::-webkit-scrollbar-track {
+    background: #1d1d1f;
+    /* color of the tracking area */
+}
+
+.content-resultado-buscador::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 1px solid #1d1d1f;
+    /* creates padding around scroll thumb */
+}
