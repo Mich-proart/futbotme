@@ -159,15 +159,15 @@
                                 
                             </div>
 
-                            <div class="content-resultado-buscador" style="position: absolute;height: 60vh;top: 63px;width: 50%;background-color: red;z-index: 9;overflow-y: scroll;overflow-x: hidden;">
-                                <div class="numero-resultados d-flex align-items-center justcontent-start">
+                            <div class="content-resultado-buscador py-4">
+                                <div class="numero-resultados d-flex align-items-center justcontent-start mb-4">
                                     <p class="mb-0 px-4 py-2"><span class="num-rest-equipos">0</span> equipos</p> <p class="mb-0 px-4 py-2"><span class="num-rest-jugadores">0</span> jugadores</p>
                                 </div>
                                 <ul class="list-unstyled listado-result-equipos-jugadores">
                                     <li>
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row g-0">
-                                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                                <div class="col-md-4 d-flex align-items-center justify-content-center ps-3">
                                                     <img src="https://futbolme.com/static/img/club/escudo4466.png" class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-8">

@@ -8,3 +8,11 @@ input:focus {
     outline: none!important;
 }
   
+.content-resultado-buscador{
+    position: absolute;
+    top: 63px;
+    background-color: var(--color-silver);
+    z-index: 9;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
