@@ -30,10 +30,10 @@ input:focus {
 }
 
 .content-resultado-buscador::-webkit-scrollbar-thumb {
-    background-color: var(--color-dark-green);
+    background-color: rgba(255, 255, 255, 0.25);
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
-    border: 1px solid #1d1d1f;
+    border: 1px solid var(--color-dark-green);
     /* creates padding around scroll thumb */
 }
