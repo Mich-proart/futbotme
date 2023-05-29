@@ -12,13 +12,9 @@
 
                         <div class="content-li-parent d-flex align-items-center bg-greengris">
 
-                            <div class="svg-content">
+                            <div class="svg-content py-2 px-3">
 
-                                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                                    <path d="M16 20.4868L22 12.4868L10 12.4868L16 20.4868Z" fill="#4E4E4E"/>
-
-                                </svg>
+                                <i class="bi bi-chevron-down"></i>
                                                                      
                             </div>  
 

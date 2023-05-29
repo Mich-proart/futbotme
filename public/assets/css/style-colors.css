@@ -26,6 +26,9 @@
 .bg-feature{
     background-color: var(--color-green-feature);
 }
+.bg-whitte{
+    background-color: var(--color-white);
+}
 
 /* colors */
 .color-white{
