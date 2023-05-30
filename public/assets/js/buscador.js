@@ -85,7 +85,7 @@ const buscadoResponse = (urlPeticion, formData) =>{
             jQuery(contentResponse).empty();
 
             // mostramos contenedor de resultados
-            jQuery('.div-resultados-mobile').fadeIn("slow");
+            is_mobile() && jQuery('.div-resultados-mobile').fadeIn("slow");
 
             // seteamos valores de las cards de resultados
             generateCardEquipos(response.equipos, contentResponse)
