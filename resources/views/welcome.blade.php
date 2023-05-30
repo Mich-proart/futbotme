@@ -2,9 +2,10 @@
 
     <section>
         <p>aqui directos</p>
-        <div class="content-equipos">
+
+        <div class="content-equipos mb-5 pb-5">
             <div class="d-flex content-partidos-live flex-wrap">
-                {{-- <span class="equipo-directo" attr-id="">equipo uno </span><span class="marcador">1</span> - <span class="marcador">2</span><span class="equipo-directo" attr-id=""> equipo dos</span> --}}
+                               
             </div>
         </div>
         <div class="container-fluid px-0">

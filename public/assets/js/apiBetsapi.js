@@ -3,7 +3,7 @@ const partidosDirecto = (respuesta) =>{
 
     let fechaActual = new Date();
     let hora = fechaActual.getHours();
-    let minutos = fechaActual.getMinutes();    
+    let minutos = fechaActual.getMinutes();      
 
     jQuery('.update-un-minuto').text(hora + ":" + minutos)
 
@@ -13,23 +13,25 @@ const partidosDirecto = (respuesta) =>{
 
     for (const iterator of respuesta) {
 
+        let partePartido = iterator.timer.tm > 45 ? 2 : 1
+
         let obj = `
-        <div class="w-100 mb-3">
-        <span class="equipo-directo" attr-id="">${iterator.home.name} </span><span class="marcador">${iterator.ss}</span><span class="equipo-directo" attr-id=""> ${iterator.away.name}</span></div>`
+        <div class="w-100 mb-5">
+            <div class="div-tiempo-de-juego d-flex">
+                <span class="div-primer-tiempo">${partePartido}<span>T</span></span>
+                <span class="mx-2"></span>
+                <span class="">Minuto <span class="div-minutos-tiempo">${iterator.timer.tm}</span></span>
+            </div> 
+            <span class="equipo-directo" attr-id="">${iterator.home.name} </span><span class="marcador">${iterator.ss}</span><span class="equipo-directo" attr-id=""> ${iterator.away.name}</span>
+        </div>`
 
         jQuery(contentPartidos).append(obj);
 
-        console.log(iterator)
-
-        console.log(iterator.ss)
-        
-
-        console.log(iterator.scores+" - "+iterator.scores)
-
+        console.log(iterator)        
+        console.log(iterator.home.name)
+        console.log(iterator.timer)            
+        console.log(iterator.timer.tm)            
     }
-
-
-
 }
 
 /*
@@ -102,7 +104,7 @@ $(document).ready(function () {
 
         hacerPeticion('partidosDirecto')
         
-    }, 6000);
+    }, 60000000);
 
     /* 
     *
