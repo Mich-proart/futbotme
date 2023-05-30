@@ -65,7 +65,7 @@
 
         </div>
 
-        <div class="div-resultados-mobile bg-silver remove-desktop" style="display:none; position: absolute;bottom: -552px;left: 0;right: 0;width: 100%;height: 500px;padding: 15px;overflow-y: auto;">
+        <div class="div-resultados-mobile bg-silver remove-desktop" style="display:none;">
 
             <ul class="list-unstyled listado-result-equipos-jugadores">
 
