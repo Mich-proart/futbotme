@@ -91,6 +91,26 @@ const buscadoResponse = (urlPeticion, formData) =>{
             generateCardEquipos(response.equipos, contentResponse)
 
             generateCardJugadores(response.jugadores, contentResponse)
+
+            if(jQuery(response.equipos).length == 0) {
+                if(jQuery(response.jugadores).length == 0){
+                                    
+                    jQuery('.div-resultados-mobile').css({
+                        'bottom':'-115px',
+                        'height':'50px'
+                    })   
+
+                    jQuery('.listado-result-equipos-jugadores').empty()
+
+                    jQuery('.listado-result-equipos-jugadores').append('<li class="px-lg-4">No Resultados...</li>')
+                }
+            }else{
+
+                jQuery('.div-resultados-mobile').css({
+                    'bottom':'-615px',
+                    'height':'550px'
+                })  
+            }
         }
     })               
 }
