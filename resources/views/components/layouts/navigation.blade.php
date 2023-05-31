@@ -187,10 +187,11 @@
 
                             </div>
 
-                            <div class="content-resultado-buscador py-4">
-                                <div class="numero-resultados d-flex align-items-center justcontent-start mb-4">
-                                    <p class="mb-0 px-4 py-2"><span class="num-rest-equipos">0</span> equipos</p>
-                                    <p class="mb-0 px-4 py-2"><span class="num-rest-jugadores">0</span> jugadores</p>
+                            <div class="content-resultado-buscador">
+                                <div class="numero-resultados d-flex align-items-center justify-content-between mb-4">
+                                    <p class="mb-0 px-4 py-2 fs-00"><span class="num-rest-equipos">0</span> equipos</p>
+                                    <p class="mb-0 px-4 py-2 fs-00"><span class="num-rest-jugadores">0</span> jugadores</p>
+                                    <p class="mb-0 px-4 fs-00"><button type="button" class="btn-close" aria-label="Close"></button></p>
                                 </div>
                                 <ul class="list-unstyled listado-result-equipos-jugadores">
                                     <li>
@@ -199,13 +200,13 @@
                                                 <div
                                                     class="col-md-4 d-flex align-items-center justify-content-center ps-3">
                                                     <img src="https://futbolme.com/static/img/club/escudo4466.png"
-                                                        class="img-fluid rounded-start" alt="...">
+                                                        class="img-fluid rounded-start px-4" alt="...">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <h3 class="card-title titulo-equ-text">Card title</h3>
-                                                        <p class="card-text categoria-equ-text">Senior Masculino</p>
-                                                        <p class="card-text localidad-equ-text">Localidad</p>
+                                                        <p class="card-text categoria-equ-text fs-00 mb-1">Senior Masculino</p>
+                                                        <p class="card-text localidad-equ-text fs-00 ">Localidad</p>
                                                     </div>
                                                 </div>
                                             </div>

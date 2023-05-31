@@ -75,6 +75,11 @@ const buscadoResponse = (urlPeticion, formData) =>{
         headers: {
              'X-CSRF-TOKEN': csrfToken
         },
+        beforeSend: function() {
+            // Eliminamos lupa y reemplazamos por spinner
+            $('.content-icon-buscador span').removeClass('icon-search p-2');
+            $('.content-icon-buscador span').addClass('spinner-border spinner-border-sm p-3');
+        },
         success: function(response) { 
 
             console.log(response)
@@ -111,7 +116,14 @@ const buscadoResponse = (urlPeticion, formData) =>{
                     'height':'550px'
                 })  
             }
-        }
+        },
+        complete: function() {
+            // Eliminamos spinner y reemplazamos por lupa
+            $('.content-icon-buscador span').removeClass('spinner-border spinner-border-sm p-3');
+            $('.content-icon-buscador span').addClass('icon-search p-2');
+            //Mostramos el buscador cuando ya encontro
+            $('.content-resultado-buscador').addClass('showbuscador');
+        },
     })               
 }
 
@@ -121,5 +133,10 @@ $(document).ready(function () {
     $(document).on('keyup', '.input-text-buscador', function(){
 
         $(this).val().length > 2 && buscadoResponse(`${urlBase}buscador`, $(this).val())    
+    });
+    //quitamos resultados del buscador 
+    $('.numero-resultados .btn-close').on('click', function () {
+        $('.content-resultado-buscador').removeClass('showbuscador');
+        $('.input-text-buscador').val('');
     })
 })
