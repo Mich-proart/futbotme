@@ -11,7 +11,9 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <img src="${urlBase}assets/images/img/club/escudo${iterator.clubId}.png" class="img-fluid rounded-start" alt="${iterator.nombreCorto}">
+                        <a href="https://futbolme.loading.net/resultados-directo/equipo/${iterator.nombreCompleto}/${iterator.clubId}"> 
+                            <img src="https://futbolme.com/static/img/club/escudo${iterator.clubId}.png" class="img-fluid rounded-start" alt="${iterator.nombreCorto}">
+                        </a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -43,11 +45,13 @@ const generateCardJugadores = (arrayJugadores, contentResponse) =>{
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <img src="https://futbolme.com/static/img/club/escudo4466.png" class="img-fluid rounded-start" alt="...">
+                        <a href="https://futbolme.loading.net/resultados-directo/jugador/${iterator.apodo}/${iterator.idJugador}"> 
+                            <img src="https://futbolme.com/static/img/jugadores/jugador${iterator.idJugador}.jpg" class="img-fluid rounded-start" alt="...">
+                        </a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <p class="card-text"><small class="text-muted">${iterator.tipo}</small></p>
+                            <p class="card-text"><small class="text-muted">${iterator.apodo}</small></p>
                             <h3 class="card-title titulo-equ-text">${iterator.nombre} ${iterator.apellidos}</h3>
                             <p class="card-text categoria-equ-text">Senior Masculino</p>
                             <p class="card-text localidad-equ-text">Localidad</p>
