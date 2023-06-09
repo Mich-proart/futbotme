@@ -64,6 +64,11 @@ input:focus {
     font-weight: 600;
 }
 
+.logo_s {
+    max-width: 20px;
+    max-height: 20px;
+}
+
 @media (max-width: 991px) {
     /* contenedor de resultados mobile */
     .div-resultados-mobile{
