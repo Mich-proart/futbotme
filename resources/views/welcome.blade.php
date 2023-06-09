@@ -1,13 +1,6 @@
 <x-layouts.app title="Home" meta-description="Home page">
 
     <section>
-        <p>aqui directos</p>
-
-        <div class="content-equipos mb-5 pb-5">
-            <div class="d-flex content-partidos-live flex-wrap">
-                               
-            </div>
-        </div>
         <div class="container-fluid px-0">
             <div class="row row-cols-2 g-0 justify-content-between">
                 <div class="col-lg-7 col-12 ">

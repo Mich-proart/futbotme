@@ -71,7 +71,6 @@ const partidosDirecto = (respuesta) => {
                         ${iterator.home.name} 
                     </h3>
                     <div class="goleadores text-end">
-                        <span class="d-block">31´- Amh, 1-0</span>
                     </div>
                 </div>
 
@@ -87,9 +86,6 @@ const partidosDirecto = (respuesta) => {
                         ${iterator.away.name}
                     </h3>
                     <div class="goleadores">
-                        <span class="d-block">35´- Iñaki Williams (pen.), 1-1</span>
-                        <span class="d-block">45´- Iñaki Williams, 1-2</span>
-                        <span class="d-block">90+5´- Iñaki Williams, 1-2</span>
                     </div>
                 </div>
             </div>
