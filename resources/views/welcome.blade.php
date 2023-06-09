@@ -1,7 +1,7 @@
 <x-layouts.app title="Home" meta-description="Home page">
 
     <section>
-        <div class="container-fluid px-0">
+        <div class="container-fluid px-0 pt-lg-5 pt-3">
             <div class="row row-cols-2 g-0 justify-content-between">
                 <div class="col-lg-7 col-12 ">
                     <h2 class="fs-00 mb-4">Partidos para hoy: <span class="color-feature">En directo:
