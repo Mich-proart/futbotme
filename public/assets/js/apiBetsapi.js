@@ -67,7 +67,7 @@ const partidosDirecto = (respuesta) => {
                     <div
                         class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
                         <div class="local">
-                            <img src="https://assets.b365api.com/images/team/s/${iterator.home.image_id}.png" class="logo_s img-fluid">
+                            <img src="https://assets.b365api.com/images/team/m/${iterator.home.image_id}.png" class="logo_s img-fluid">
                             <h3 class="d-inline-block color-black fs-01">
                                 ${iterator.home.name} 
                             </h3>
@@ -82,7 +82,7 @@ const partidosDirecto = (respuesta) => {
                         </div>
 
                         <div class="visitante">
-                            <img src="https://assets.b365api.com/images/team/s/${iterator.away.image_id}.png" class="logo_s img-fluid">
+                            <img src="https://assets.b365api.com/images/team/m/${iterator.away.image_id}.png" class="logo_s img-fluid">
                             <h3 class="d-inline-block color-black fs-01">
                                 ${iterator.away.name}
                             </h3>
