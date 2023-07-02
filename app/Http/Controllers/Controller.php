@@ -29,5 +29,4 @@ class Controller extends BaseController{
 
         return view('categories',['nombre' => $nacional]);
     }
-
 }
