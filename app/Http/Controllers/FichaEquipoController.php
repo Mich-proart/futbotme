@@ -18,8 +18,9 @@ class FichaEquipoController extends Controller
         $teams = DB::table('equipo')
             ->join('club', 'equipo.club_id', '=', 'club.id')
             ->join('categoria', 'equipo.categoria_id', '=', 'categoria.id')
-            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo'))
-            ->where('club.slug', '=', $club)
+            ->join('estadio', 'equipo.estadio_id', '=', 'estadio.id')
+            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo, estadio.nombre AS nombreEstadio, estadio.direccion AS estadioDireccion, estadio.inaguracion AS estadioInauguracion, estadio.capacidad AS estadioCapacidad'))
+            ->where('equipo.id', '=', $id)
             ->where('equipo.slug', '!=', '""')
             ->where('club.slug', '!=', '""')
             ->where('equipo.nombre_completo', '!=', '""') 
@@ -27,6 +28,13 @@ class FichaEquipoController extends Controller
             ->where('categoria.slug', '!=', 'alevin')           
             ->get();
 
-        return view('fichaEquipo', ['teams' => $teams]);
+        $teamProvincia = DB::table('club')
+            ->join('localidad', 'club.localidad_id', '=', 'localidad.id')
+            ->join('provincia', 'localidad.provincia_id', '=', 'provincia.id')
+            ->select(DB::raw('provincia.nombre AS nombreProvincia'))
+            ->where('club.slug', '=', $club)
+            ->get();
+
+        return view('fichaEquipo', ['teams' => $teams, 'teamProvincia' => $teamProvincia]);
     }
 }

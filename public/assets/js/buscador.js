@@ -11,7 +11,7 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <a href="${urlBase}resultados-directo/equipo/${iterator.slug}/${iterator.clubId}"> 
+                        <a href="${urlBase}resultados-directo/equipo/${iterator.slug}/${iterator.idEquipo}/datos"> 
                             <img src="https://futbolme.com/static/img/club/escudo${iterator.clubId}.png" class="img-fluid rounded-start" alt="${iterator.nombreCorto}">
                         </a>
                     </div>

@@ -31,7 +31,7 @@ Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'in
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
 
 // equipos
-Route::get('/resultados-directo/equipo/{club?}/{id?}', [FichaEquipoController::class, 'indexEquipos'])->name('equipos');
+Route::get('/resultados-directo/equipo/{club?}/{id?}/datos', [FichaEquipoController::class, 'indexEquipos'])->name('equipos');
 
 // jugador 
 Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorController::class, 'indexJugador'])->name('jugadores');

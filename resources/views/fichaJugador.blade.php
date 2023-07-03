@@ -1,8 +1,13 @@
 <x-layouts.app title="Ficha jugador" meta-description="ficha individual del jugador">
 
 <?php $arrayPosiciones = array(
-    '2'=>'Defensa'
+    '1'=>'Portero',
+    '2'=>'Defensa',
+    '3'=>'Medio Campo',
+    '4'=>'Delantero'
 );?>
+
+<img src="https://futbolme.com/static/img/jugadores/jugador{{$datos[0]->idJugador}}.jpg" alt="{{ $datos[0]->nombreJugador }}">
 
 Nombre: {{ $datos[0]->nombreJugador }}
 <br>
