@@ -70,7 +70,8 @@ class BuscadorController extends Controller{
         $teams = DB::table('equipo')
             ->join('club', 'equipo.club_id', '=', 'club.id')
             ->join('categoria', 'equipo.categoria_id', '=', 'categoria.id')
-            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo'))
+            ->join('localidad', 'club.localidad_id', '=', 'localidad.id')
+            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo, localidad.nombre AS nombreLocalidad'))
             ->where('equipo.nombre', 'LIKE', '%'.$data.'%')
             ->where('equipo.slug', '!=', '""')
             ->where('club.slug', '!=', '""')
@@ -97,7 +98,8 @@ class BuscadorController extends Controller{
                 'sexo' => $value->sexoEquipo,
                 'slug' => $value->slugClub,
                 'betsapi' => $value->betsapiEquipo,
-                'codigoRFEF' => $value->codigoRFEF_Equipo,                                
+                'codigoRFEF' => $value->codigoRFEF_Equipo,   
+                'localidad' => $value->nombreLocalidad                             
             ];
 
             array_push($arrayEquipos, $objEquipo);

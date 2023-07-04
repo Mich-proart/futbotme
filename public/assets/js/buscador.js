@@ -20,7 +20,7 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
                             <p class="card-text"><small class="text-muted">${iterator.tipo}</small></p>
                             <h3 class="card-title titulo-equ-text">${iterator.nombreCompleto}</h3>
                             <p class="card-text categoria-equ-text">${iterator.categoria}</p>
-                            <p class="card-text localidad-equ-text">Localidad</p>
+                            <p class="card-text localidad-equ-text">Localidad: ${iterator.localidad}</p>
                         </div>
                     </div>
                 </div>
