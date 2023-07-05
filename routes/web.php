@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\BuscadorController;
+use App\Http\Controllers\FichaJugadorController;
+use App\Http\Controllers\FichaEquipoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
@@ -26,10 +28,17 @@ Route::get('/condiciones-uso', [CustomController::class, 'indexCondicionesUso'])
 
 Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'indexCategorias'])->name('categories');
 
-Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories');
+Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
+
+// equipos
+Route::get('/resultados-directo/equipo/{club?}/{id?}/datos', [FichaEquipoController::class, 'indexEquipos'])->name('equipos');
+
+// jugador 
+Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorController::class, 'indexJugador'])->name('jugadores');
 
 // peticiones api
 Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');
 
+/******* *******/
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');

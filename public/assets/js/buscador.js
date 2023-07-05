@@ -11,7 +11,7 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <a href="https://futbolme.loading.net/resultados-directo/equipo/${iterator.nombreCompleto}/${iterator.clubId}"> 
+                        <a href="${urlBase}resultados-directo/equipo/${iterator.slug}/${iterator.idEquipo}/datos"> 
                             <img src="https://futbolme.com/static/img/club/escudo${iterator.clubId}.png" class="img-fluid rounded-start" alt="${iterator.nombreCorto}">
                         </a>
                     </div>
@@ -20,14 +20,14 @@ const generateCardEquipos = (arrayEquipos, contentResponse) =>{
                             <p class="card-text"><small class="text-muted">${iterator.tipo}</small></p>
                             <h3 class="card-title titulo-equ-text">${iterator.nombreCompleto}</h3>
                             <p class="card-text categoria-equ-text">${iterator.categoria}</p>
-                            <p class="card-text localidad-equ-text">Localidad</p>
+                            <p class="card-text localidad-equ-text">Localidad: ${iterator.localidad}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </li>`
 
-        jQuery(contentResponse).append(response);
+        jQuery(contentResponse).append(response);            
         
     }
 }
@@ -45,7 +45,7 @@ const generateCardJugadores = (arrayJugadores, contentResponse) =>{
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <a href="https://futbolme.loading.net/resultados-directo/jugador/${iterator.apodo}/${iterator.idJugador}"> 
+                        <a href="${urlBase}resultados-directo/jugador/${iterator.apodo}/${iterator.idJugador}"> 
                             <img src="https://futbolme.com/static/img/jugadores/jugador${iterator.idJugador}.jpg" class="img-fluid rounded-start" alt="...">
                         </a>
                     </div>
@@ -53,7 +53,7 @@ const generateCardJugadores = (arrayJugadores, contentResponse) =>{
                         <div class="card-body">
                             <p class="card-text"><small class="text-muted">${iterator.apodo}</small></p>
                             <h3 class="card-title titulo-equ-text">${iterator.nombre} ${iterator.apellidos}</h3>
-                            <p class="card-text categoria-equ-text">Senior Masculino</p>
+                            <p class="card-text categoria-equ-text">${iterator.equipoActual}</p>
                             <p class="card-text localidad-equ-text">Localidad</p>
                         </div>
                     </div>

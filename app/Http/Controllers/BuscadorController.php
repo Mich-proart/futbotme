@@ -13,7 +13,7 @@ use App\Helpers\HelperFunctions;
 
 
 class BuscadorController extends Controller{
-    
+
     public function buscador(Request $request){ 
 
         // Obtener la variable ingresada en el input
@@ -23,29 +23,41 @@ class BuscadorController extends Controller{
         $arrayJugadores = array();
         
         $users = DB::table('jugador')
-            ->select(DB::raw('*'))
-            ->where('nombre', 'LIKE', '%'.$data.'%')            
+            ->join('equipo', 'jugador.equipoActual_id', '=', 'equipo.id')
+            ->select(DB::raw('jugador.id AS idJugador, jugador.nombre AS nombreJugador, jugador.apellidos AS apellidosJugador, jugador.apodo AS apodoJugador, jugador.sexo AS sexoJugador, jugador.fecha_nacimiento AS fecha_nacimiento_Jugador, jugador.lugar_nacimiento AS lugar_nacimiento_Jugador, jugador.altura AS alturaJugador, jugador.peso AS pesoJugador, jugador.dorsal AS dorsalJugador, jugador.es_fichaje AS es_fichaje_Jugador, jugador.es_baja AS es_baja_Jugador, jugador.posicion AS posicionJugador, equipo.nombre AS nombreEquipo'))
+            ->where('jugador.nombre', 'LIKE', '%'.$data.'%')            
             ->get();
 
         // formateamos valores del jugador para obtener mas datos con relacion en otras tablas
         foreach ($users as $value) {
+
+            // Convertir a minúsculas
+            $apodoJugadorMinusculas = strtolower($value->apodoJugador);
+
+            // Reemplazar espacios con guiones
+            $apodoSinEspacios = str_replace(' ', '-', $apodoJugadorMinusculas);
+
+            // Reemplazar caracteres acentuados
+            $acentos = array('á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú');
+            $sinAcentos = array('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
+            $apodoSinAcentos = str_replace($acentos, $sinAcentos, $apodoSinEspacios);
             
             $objJugador = [
                 'tipo' => 'jugador',
-                'idJugador' => $value->id,
-                'nombre' => $value->nombre,
-                'apellidos' => $value->apellidos,
-                'apodo' => $value->apodo,
-                'sexo' => $value->sexo,
-                'fechaNacimiento' => $value->fecha_nacimiento,
-                'lugarNacimiento' => $value->lugar_nacimiento,
-                'altura' => $value->altura,
-                'peso' => $value->peso,
-                'dorsal' => $value->dorsal,
-                'esFichaje' => $value->es_fichaje,
-                'esBaja' => $value->es_baja,
-                'posicion' => $value->posicion,  
-                'valorFunction' =>HelperFunctions::obtenerDatosOtraTabla($value->id)
+                'idJugador' => $value->idJugador,
+                'nombre' => $value->nombreJugador,
+                'apellidos' => $value->apellidosJugador,
+                'apodo' => $apodoSinAcentos,
+                'sexo' => $value->sexoJugador,
+                'fechaNacimiento' => $value->fecha_nacimiento_Jugador,
+                'lugarNacimiento' => $value->lugar_nacimiento_Jugador,
+                'altura' => $value->alturaJugador,
+                'peso' => $value->pesoJugador,
+                'dorsal' => $value->dorsalJugador,
+                'esFichaje' => $value->es_fichaje_Jugador,
+                'esBaja' => $value->es_baja_Jugador,
+                'posicion' => $value->posicionJugador,  
+                'equipoActual' =>$value->nombreEquipo
             ];
 
             array_push($arrayJugadores, $objJugador);
@@ -56,8 +68,16 @@ class BuscadorController extends Controller{
         $arrayEquipos = array();
 
         $teams = DB::table('equipo')
-            ->select(DB::raw('*'))
-            ->where('nombre', 'LIKE', '%'.$data.'%')            
+            ->join('club', 'equipo.club_id', '=', 'club.id')
+            ->join('categoria', 'equipo.categoria_id', '=', 'categoria.id')
+            ->join('localidad', 'club.localidad_id', '=', 'localidad.id')
+            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo, localidad.nombre AS nombreLocalidad'))
+            ->where('equipo.nombre', 'LIKE', '%'.$data.'%')
+            ->where('equipo.slug', '!=', '""')
+            ->where('club.slug', '!=', '""')
+            ->where('equipo.nombre_completo', '!=', '""') 
+            ->where('equipo.nombre_completo', '!=', '""')
+            ->where('categoria.slug', '!=', 'alevin')           
             ->get();
 
         // formateamos valores del equipo para obtener mas datos con relacion en otras tablas
@@ -65,28 +85,27 @@ class BuscadorController extends Controller{
 
             $objEquipo = [
                 'tipo' => 'equipo',
-                'idEquipo' => $value->id,
-                'nombre' => $value->nombre,
-                'nombreCompleto' => $value->nombre_completo,
-                'nombreCorto' => $value->nombreCorto,
-                'clubId' => $value->club_id,
-                'categoria' => HelperFunctions::categoriaClub($value->categoria_id),
-                'fundado' => $value->fundado,
-                'debutNacional' => $value->debut_nacional,
-                'escudo' => $value->escudo,
-                'sexo' => $value->sexo,
-                'slug' => $value->slug,
-                'betsapi' => $value->betsapi,
-                'codigoRFEF' => $value->codigoRFEF,
-                'fundado' => $value->fundado,
-                'fundado' => $value->fundado,
-                'fundado' => $value->fundado,
+                'idEquipo' => $value->idEquipo,
+                'nombre' => $value->nombreEquipo,
+                'nombreCompleto' => $value->nombreCompletoEquipo,
+                'nombreCorto' => $value->nombreCortoEquipo,
+                'clubId' => $value->club_id_Equipo,
+                //'categoria' => HelperFunctions::categoriaClub($value->categoria_id),
+                'categoria' => $value->nombreCategoria,
+                'fundado' => $value->fundadoEquipo,
+                'debutNacional' => $value->debut_nacional_Equipo,
+                'escudo' => $value->escudoEquipo,
+                'sexo' => $value->sexoEquipo,
+                'slug' => $value->slugClub,
+                'betsapi' => $value->betsapiEquipo,
+                'codigoRFEF' => $value->codigoRFEF_Equipo,   
+                'localidad' => $value->nombreLocalidad                             
             ];
 
             array_push($arrayEquipos, $objEquipo);
         }
         
         // Retornar la respuesta (en formato JSON)
-        return response()->json(['jugadores' => $arrayJugadores, 'equipos' => $arrayEquipos]);        
+        return response()->json(['jugadores' => $arrayJugadores, 'equipos' => $arrayEquipos]);
     }
 }
