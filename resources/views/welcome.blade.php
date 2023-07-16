@@ -490,5 +490,21 @@
         </div>
     </section>
 
+    <div class="d-flex p-2">
+
+        <div class="list-group w-50 lista-locales">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            locales
+            </a>
+        </div>
+
+        <div class="list-group w-50 lista-visitantes">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            visitantes
+            </a>
+          </div>
+
+    </div>
+
 
 </x-layouts.app>

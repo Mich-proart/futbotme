@@ -39,6 +39,9 @@ Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorControlle
 // peticiones api
 Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');
 
+// peticion alineaciones
+Route::post('/api/bestApiAlineaciones', [ApiController::class, 'obtenerDatosBestApiAlineaciones'])->name('apiBestApiAlineaciones');
+
 /******* *******/
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');

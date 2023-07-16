@@ -18,13 +18,27 @@ class FichaEquipoController extends Controller
         $teams = DB::table('equipo')
             ->join('club', 'equipo.club_id', '=', 'club.id')
             ->join('categoria', 'equipo.categoria_id', '=', 'categoria.id')
-            ->join('estadio', 'equipo.estadio_id', '=', 'estadio.id')
-            ->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo, estadio.nombre AS nombreEstadio, estadio.direccion AS estadioDireccion, estadio.inaguracion AS estadioInauguracion, estadio.capacidad AS estadioCapacidad'))
+            //->join('estadio', 'estadio.id', '=', 'equipo.estadio_id')
+            //->join('estadio', 'equipo.estadio_id', '=', 'estadio.id')
+            //->select(DB::raw('equipo.id AS idEquipo, equipo.nombre AS nombreEquipo, equipo.nombre_completo AS nombreCompletoEquipo, equipo.nombreCorto AS nombreCortoEquipo, equipo.club_id AS club_id_Equipo, categoria.nombre AS nombreCategoria, equipo.fundado AS fundadoEquipo, equipo.debut_nacional AS debut_nacional_Equipo, equipo.escudo AS escudoEquipo, equipo.sexo AS sexoEquipo, club.slug AS slugClub, equipo.betsapi AS betsapiEquipo, equipo.codigoRFEF AS codigoRFEF_Equipo, estadio.nombre AS nombreEstadio, estadio.direccion AS estadioDireccion, estadio.inaguracion AS estadioInauguracion, estadio.capacidad AS estadioCapacidad'))
+            ->select(DB::raw('
+            equipo.id AS idEquipo, 
+            equipo.nombre AS nombreEquipo, 
+            equipo.nombre_completo AS nombreCompletoEquipo, 
+            equipo.nombreCorto AS nombreCortoEquipo, 
+            equipo.club_id AS club_id_Equipo, 
+            categoria.nombre AS nombreCategoria, 
+            equipo.fundado AS fundadoEquipo, 
+            equipo.debut_nacional AS debut_nacional_Equipo, 
+            equipo.escudo AS escudoEquipo, 
+            equipo.sexo AS sexoEquipo, 
+            club.slug AS slugClub, 
+            equipo.betsapi AS betsapiEquipo, 
+            equipo.codigoRFEF AS codigoRFEF_Equipo'))
             ->where('equipo.id', '=', $id)
             ->where('equipo.slug', '!=', '""')
             ->where('club.slug', '!=', '""')
-            ->where('equipo.nombre_completo', '!=', '""') 
-            ->where('equipo.nombre_completo', '!=', '""')
+            ->where('equipo.nombre_completo', '!=', '""')             
             ->where('categoria.slug', '!=', 'alevin')           
             ->get();
 
@@ -35,6 +49,12 @@ class FichaEquipoController extends Controller
             ->where('club.slug', '=', $club)
             ->get();
 
-        return view('fichaEquipo', ['teams' => $teams, 'teamProvincia' => $teamProvincia]);
+        $teamEstadio = DB::table('estadio')
+            ->join('equipo', 'estadio.id', '=', 'equipo.estadio_id')            
+            ->select(DB::raw('estadio.nombre AS nombreEstadio, estadio.direccion AS estadioDireccion, estadio.inaguracion AS estadioInauguracion, estadio.capacidad AS estadioCapacidad'))
+            ->where('equipo.id', '=', $id)
+            ->get();
+
+        return view('fichaEquipo', ['teams' => $teams, 'teamProvincia' => $teamProvincia, 'teamEstadio' => $teamEstadio]);        
     }
 }

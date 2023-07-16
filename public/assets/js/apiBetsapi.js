@@ -1,18 +1,16 @@
 // hacemos los cambios en partidos directos cambios solo de valores para no afectar el html solo los datos
 const partidosDirecto = (respuesta) => {
-
     let fechaActual = new Date();
     let hora = fechaActual.getHours();
     let minutos = fechaActual.getMinutes();
 
-    jQuery('.update-un-minuto').text(hora + ":" + minutos)
+    jQuery(".update-un-minuto").text(hora + ":" + minutos);
 
-    let contentPartidos = jQuery('#PartidosEnDirecto')
+    let contentPartidos = jQuery("#PartidosEnDirecto");
 
     contentPartidos.empty();
 
     for (const iterator of respuesta) {
-
         //let partePartido = iterator.timer.tm > 45 ? 2 : 1
 
         let obj = `
@@ -29,6 +27,7 @@ const partidosDirecto = (respuesta) => {
 
                 <div class="py-2 col-lg-10 col">
                     <i class="bi bi-x-square fs-4 pe-2"></i>
+                    <span class="idRespuestaLiga">${iterator.league.id}</span>
                     <h3 class="d-inline-block color-black fs-01">${iterator.league.name}</h3>
                     <span>-</span>
                     <h4 class="fs-00 d-lg-inline-block">RFEF</h4>
@@ -93,53 +92,48 @@ const partidosDirecto = (respuesta) => {
 
                 </div>
             </div>
-        </div>`
+        </div>`;
 
         jQuery(contentPartidos).append(obj);
 
-        console.log(iterator)
+        console.log(iterator);
     }
-}
+};
 
 /*
-*
-* funcion generica para realizar las peticiones de api
-* para reutilizar la funcion la dividimos con switch 
-*/
+ *
+ * funcion generica para realizar las peticiones de api
+ * para reutilizar la funcion la dividimos con switch
+ */
 const hacerPeticion = (tipoPeticion) => {
-
     let xmlhttp, urlPeticion;
 
     // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
     switch (tipoPeticion) {
-
-        case 'partidosDirecto':
-
-            urlPeticion = `${urlBase}api/bestApi`
+        case "partidosDirecto":
+            urlPeticion = `${urlBase}api/bestApi`;
 
             break;
     }
 
     // Verda código para navegadores modernos
     // False código para navegadores antiguos (IE6, IE5)
-    window.XMLHttpRequest ? xmlhttp = new XMLHttpRequest() : xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    window.XMLHttpRequest
+        ? (xmlhttp = new XMLHttpRequest())
+        : (xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"));
 
     // Función de callback para manejar la respuesta de la API
     xmlhttp.onreadystatechange = function () {
-
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-
             // La respuesta se ha recibido correctamente
             let respuesta = xmlhttp.responseText;
 
-            respuesta = JSON.parse(respuesta)
+            respuesta = JSON.parse(respuesta);
 
             // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
             switch (tipoPeticion) {
-
-                case 'partidosDirecto':
-
-                    partidosDirecto(respuesta)
+                case "partidosDirecto":
+                    partidosDirecto(respuesta);
 
                     break;
             }
@@ -152,30 +146,88 @@ const hacerPeticion = (tipoPeticion) => {
     // Configura las cabeceras personalizadas
     xmlhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
 
-
     xmlhttp.send();
-}
+};
+
+const obtenerAlineacion = (btnIdLiga) => {  
+    
+    jQuery.ajax({
+        url: `${urlBase}api/bestApiAlineaciones`, // AJAX handler,
+        type: 'POST',
+        data: {
+            valorId: jQuery(btnIdLiga).text(),
+        },
+        headers: {
+             'X-CSRF-TOKEN': csrfToken
+        },
+        beforeSend: function() {
+
+        },
+        complete: function () {
+
+            //jQuery('.content-spiner-resultados-feed').addClass('ocultar-icon').removeClass('d-flex')
+        },
+        success: function (data) {
+
+            let result = JSON.parse(data)  
+            
+            jQuery('.lista-locales').empty()
+            jQuery('.lista-visitantes').empty()
+
+            
+            // condicon para alineacion locales
+            if (result.local != '') {
+                
+                for (const iterator of result.local) {
+                 
+                    console.log(iterator)
+                    jQuery('.lista-locales').append(`<a href="#" class="list-group-item list-group-item-action">${iterator.player.name} - ${iterator.pos} - ${iterator.shirtnumber}</a>`)
+                }                
+
+            }else{
+                console.log("VACIO LOCALES")
+            }
+
+            // condicion para alineacion visitantes
+            if(result.visitante != ''){
+
+                for (const iterator of result.visitante) {
+
+                    jQuery('.lista-visitantes').append(`<a href="#" class="list-group-item list-group-item-action">${iterator.player.name} - ${iterator.pos} - ${iterator.shirtnumber}</a>`)
+                    
+                }
+
+            }else{
+                console.log("VACIO VISITANTES")
+            }            
+        }
+    })
+};
 
 /*** inicio de ejecuciones ****/
 $(document).ready(function () {
+    /*
+     *
+     * ejecutamos la peticion y luego cada 1 minuto
+     *
+     */
 
-    /* 
-    *
-    * ejecutamos la peticion y luego cada 1 minuto 
-    * 
-    */
-
-    hacerPeticion('partidosDirecto')
+    hacerPeticion("partidosDirecto");
 
     setInterval(() => {
-
-        hacerPeticion('partidosDirecto')
-
+        hacerPeticion("partidosDirecto");
     }, 60000000);
 
-    /* 
-    *
-    * ejecutamos la peticion y luego cada 1 minuto 
-    * 
-    */
-})
+    /*
+     *
+     * ejecutamos la peticion y luego cada 1 minuto
+     *
+     */
+
+
+    jQuery(document).on('click', '.idRespuestaLiga', function(){
+
+        obtenerAlineacion(jQuery(this))
+
+    })
+});
