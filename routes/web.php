@@ -7,8 +7,11 @@ use App\Http\Controllers\BuscadorController;
 use App\Http\Controllers\FichaJugadorController;
 use App\Http\Controllers\FichaEquipoController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
+
+//Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
 Route::get('/noticias', [CustomController::class, 'indexNoticias'])->name('noticias');
 
@@ -42,3 +45,8 @@ Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDi
 /******* *******/
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

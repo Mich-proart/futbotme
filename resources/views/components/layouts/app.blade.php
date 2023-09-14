@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style-vars.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-colors.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/style-icon.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/icon.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/app-creative.min.css') }}">
 
         {{-- css files existent to futbolme --}}
         <link rel="stylesheet" href="{{ asset('assets/css/paises.css') }}">
@@ -42,6 +44,8 @@
         <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
         <script src="{{ asset('assets/js/customVars.js') }}"></script>
         <script src="{{ asset('assets/js/buscador.js') }}"></script>        
+        <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     </head>
 
