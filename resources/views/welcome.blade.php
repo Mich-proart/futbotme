@@ -490,5 +490,4 @@
         </div>
     </section>
 
-
 </x-layouts.app>

@@ -48,4 +48,21 @@
             </div>
         </div>
     </div>
+                <!-- includes jquery y socket.io -->
+        <!-- Incluye jQuery desde el CDN -->
+        
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+        <script>
+            $(function(){
+                console.log("ejecutando socket io")
+                let ip_addres = "192.168.0.107"
+                //let ip_addres = "172.25.1.184"
+                let port = 3000
+                
+                let socket = io(`${ip_addres}:${port}`)
+
+                console.log(socket)
+            })
+        </script>
 </footer>
