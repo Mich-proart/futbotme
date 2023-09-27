@@ -46,7 +46,8 @@ Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDi
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');
 
+/* login */
+
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
