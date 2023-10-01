@@ -8,7 +8,7 @@
                                                             <div class="card-body py-0" data-simplebar style="max-height: 562px">
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-2.jpg" class="me-2 rounded-circle" height="48" alt="Brandon Smith" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-2.jpg" class="me-2 rounded-circle" height="48" alt="Brandon Smith" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">4:30am</span>
@@ -24,7 +24,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start bg-light p-2">
-                                                                        <img src="assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="48" alt="Shreyu N" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="48" alt="Shreyu N" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">5:30am</span>
@@ -39,7 +39,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-7.jpg" class="me-2 rounded-circle" height="48" alt="Maria C" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-7.jpg" class="me-2 rounded-circle" height="48" alt="Maria C" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Thu</span>
@@ -55,7 +55,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-10.jpg" class="me-2 rounded-circle" height="48" alt="Rhonda D" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-10.jpg" class="me-2 rounded-circle" height="48" alt="Rhonda D" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Wed</span>
@@ -70,7 +70,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-3.jpg" class="me-2 rounded-circle" height="48" alt="Michael H" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-3.jpg" class="me-2 rounded-circle" height="48" alt="Michael H" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Tue</span>
@@ -86,7 +86,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-6.jpg" class="me-2 rounded-circle" height="48" alt="Thomas R" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-6.jpg" class="me-2 rounded-circle" height="48" alt="Thomas R" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Tue</span>
@@ -101,7 +101,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-8.jpg" class="me-2 rounded-circle" height="48" alt="Thomas J" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-8.jpg" class="me-2 rounded-circle" height="48" alt="Thomas J" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Tue</span>
@@ -116,7 +116,7 @@
                                                                 
                                                                 <a href="javascript:void(0);" class="text-body">
                                                                     <div class="d-flex align-items-start mt-1 p-2">
-                                                                        <img src="assets/images/users/avatar-1.jpg" class="me-2 rounded-circle" height="48" alt="Ricky J" />
+                                                                        <img src="{{ url('/') }}/assets/images/users/avatar-1.jpg" class="me-2 rounded-circle" height="48" alt="Ricky J" />
                                                                         <div class="w-100 overflow-hidden">
                                                                             <h5 class="mt-0 mb-0 font-14">
                                                                                 <span class="float-end text-muted font-12">Mon</span>
