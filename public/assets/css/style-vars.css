@@ -3,6 +3,7 @@
 :root {
   --color-dark-green: #01210F;
   --color-brand-green: #025325;
+  --color-gradient-green: linear-gradient(90deg, #025325 10.8%, #022913 97.77%);
   --color-green-second: #99CCAF;
   --color-green-directo: #EAF9F0;
   --color-greengris:#CCE6D7;

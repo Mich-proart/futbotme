@@ -5,6 +5,11 @@
 .bg-brand-green {
     background-color: var(--color-brand-green);
 }
+
+.bg-gradient-green {
+    background: var(--color-gradient-green);
+}
+
 .bg-silver {
     background-color: var(--color-silver);
 }
@@ -14,39 +19,39 @@
 .bg-white-light {
     background-color: var(--color-white-light);
 }
-.bg-green-directo{
+.bg-green-directo {
     background-color: var(--color-green-directo);
 }
-.bg-greengris{
+.bg-greengris {
     background-color: var(--color-greengris);
 }
-.bg-gray{
+.bg-gray {
     background-color: var(--color-gray);
 }
-.bg-feature{
+.bg-feature {
     background-color: var(--color-green-feature);
 }
-.bg-whitte{
+.bg-whitte {
     background-color: var(--color-white);
 }
 
 /* colors */
-.color-white{
-    color: var(--color-white)!important;
+.color-white {
+    color: var(--color-white) !important;
 }
-.color-black{
-    color: var(--color-black)!important;
+.color-black {
+    color: var(--color-black) !important;
 }
-.color-gray{
+.color-gray {
     color: var(--color-gray);
 }
-.color-gray-contrast{
+.color-gray-contrast {
     color: var(--color-gray-contrast);
 }
-.color-gray-medium{
+.color-gray-medium {
     color: var(--color-gray-medium);
 }
-.color-green-second{
+.color-green-second {
     color: var(--color-green-second);
 }
 .color-brand-green {
@@ -55,40 +60,40 @@
 .color-red {
     color: var(--color-red);
 }
-.color-feature{
+.color-feature {
     color: var(--color-green-feature);
 }
 
-.color-live{
+.color-live {
     color: var(--color-green-live);
 }
 
 /* size fonts */
-.fs-000{
+.fs-000 {
     font-size: var(--fs-small-xs);
 }
-.fs-00{
+.fs-00 {
     font-size: var(--fs-small);
 }
-.fs-01{
+.fs-01 {
     font-size: var(--fs-standar);
 }
-.fs-03{
+.fs-03 {
     font-size: var(--fs-large);
 }
 /* borders */
-.border-bottom-complet{
+.border-bottom-complet {
     border-bottom: var(--border-silver-1);
 }
-.border-top-complet{
+.border-top-complet {
     border-top: var(--border-silver-1);
 }
-.border-top-green-second{
+.border-top-green-second {
     border-top: var(--border-green-second-1);
 }
-.border-bottom-green-second{
+.border-bottom-green-second {
     border-bottom: var(--border-green-second-1);
 }
-.border-grey{
+.border-grey {
     border: var(--border-grey);
 }

@@ -20,7 +20,7 @@
 </div>
 
 {{-- content header --}}
-<header class="navBar bg-brand-green">
+<header class="navBar bg-gradient-green">
 
     <div
         class="container-fluid-custom d-flex align-items-center justify-content-between py-lg-4 py-4 position-relative">
