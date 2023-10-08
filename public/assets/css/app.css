@@ -8,9 +8,28 @@ html {
     font-size: 62.5%;
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/Inter_Variable.ttf);
+}
+
 body {
     font-size: 1.6rem;
-    font-family: Arial, sans-serif;
+    font-family: "inter";
+}
+
+/* size fonts */
+.fs-000 {
+    font-size: var(--fs-small-xs);
+}
+.fs-00 {
+    font-size: var(--fs-small);
+}
+.fs-01 {
+    font-size: var(--fs-standar);
+}
+.fs-03 {
+    font-size: var(--fs-large);
 }
 
 /* simulacion cursor */
@@ -34,8 +53,8 @@ body {
 }
 
 /* esconder eje y */
-.overflow-y-hidden{
-    overflow-y: hidden!important;
+.overflow-y-hidden {
+    overflow-y: hidden !important;
 }
 
 /* boton generico green gris con icono green dark */
@@ -87,17 +106,17 @@ body {
     background: #093654;
 }
 
-.w-15{
+.w-15 {
     width: 15%;
 }
-.va-middle{
+.va-middle {
     vertical-align: middle;
 }
-.va-top{
+.va-top {
     vertical-align: top;
 }
 
-.icon-resolve-filled{
+.icon-resolve-filled {
     display: flex;
 }
 
@@ -105,7 +124,7 @@ body {
     border-radius: 0px !important;
 }
 
-.grid-center-xy{
+.grid-center-xy {
     place-items: center;
 }
 
@@ -114,68 +133,96 @@ body {
     background-color: #fff;
     border: var(--border-grey);
 }
-.accordion-button::after{
+.accordion-button::after {
     content: none;
 }
-.hora{
-    border-radius: 3px;
-    padding: .25rem .5rem;
-    background-color: var(--color-green-feature);
-    color:var(--color-white);
-    font-size: 13px;
-}
 
-.w-custom{
+.w-custom {
     width: 100%;
 }
+
+/* PARTIDOS EN GENERAL */
+
+.nombre_torneo_liga {
+    color: var(--White, #fff);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    text-transform: uppercase;
+    margin-bottom: 0px !important;
+}
+
+#PartidosFuturos .nombre_torneo_liga{
+    color: var(--color-black, #252525); 
+}
+
+.bandera_pais {
+    border: solid #fff 2px;
+}
+
+.mas_info_partido span {
+    color: var(--color-gray-medium);
+}
+
+.local h3,
+.visitante h3 {
+    color: var(--color-black, #252525);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+}
+
+.marcador * {
+    text-align: center;
+    font-size: var(--fs-large);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 120% */
+}
+
 /* PARTIDOS EN DIRECTO */
 
 #PartidosEnDirecto .accordion-header {
     box-shadow: none !important;
     outline: none !important;
-    background: var(--color-green-directo);
+    background: var(--color-livescore);
     border: none;
-    color:var(--color-black);
 }
 
 #PartidosEnDirecto .accordion-button:not(.collapsed),
-#PartidosEnDirecto .accordion-button{
+#PartidosEnDirecto .accordion-button {
     box-shadow: none !important;
     outline: none !important;
-    background: var(--color-green-live);
-    border-color: var(--color-green-live);
-    color:var(--color-black);
+    background: var(--color-brand-green);
+    border-color: var(--color-brand-green);
 }
 
 #PartidosEnDirecto .accordion-button:focus {
     z-index: 3;
-    border: var(--border-grey);
+    border: var(--color-brand-green);
     outline: 0;
     /* box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); */
     box-shadow: none !important;
 }
 
-#PartidosEnDirecto .jornada_tiempo{
+#PartidosEnDirecto .jornada_tiempo {
     font-weight: 600;
     color: var(--color-brand-green);
 }
 
 #PartidosEnDirecto .goles-local,
 #PartidosEnDirecto .goles-visitante,
-#PartidosEnDirecto .goles-local+span{
-    font-size: var(--fs-large);
+#PartidosEnDirecto .goles-local + span {
     color: var(--color-red);
-    font-weight: 700;
 }
 
-#PartidosEnDirecto .hora{
+#PartidosEnDirecto .hora {
     border-radius: 3px;
-    padding: .25rem .5rem;
-    background-color: var(--color-green-feature);
-    color:var(--color-white);
     font-size: 13px;
 }
-
 
 /* FUTUROS Y FINALIZADOS */
 
@@ -184,16 +231,15 @@ body {
     outline: none !important;
     background: var(--color-silver-medium);
     border: none;
-    color:var(--color-black);
 }
 
 #PartidosFuturos .accordion-button:not(.collapsed),
-#PartidosFuturos .accordion-button{
+#PartidosFuturos .accordion-button {
     box-shadow: none !important;
     outline: none !important;
     background: var(--color-gray-medium);
     border-color: var(--color-gray-medium);
-    color:var(--color-white);
+    color: var(--color-white);
 }
 
 #PartidosFuturos .accordion-button:focus {
@@ -203,54 +249,52 @@ body {
     /* box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); */
     box-shadow: none !important;
 }
-#PartidosFuturos .jornada_tiempo{
+#PartidosFuturos .jornada_tiempo {
     font-weight: 500;
     color: var(--color-gray-medium);
 }
 
 #PartidosFuturos .partido_futuro .goles-local,
 #PartidosFuturos .partido_futuro .goles-visitante,
-#PartidosFuturos .partido_futuro .goles-local+span{
+#PartidosFuturos .partido_futuro .goles-local + span {
     font-size: var(--fs-large);
     color: var(--color-gray);
     font-weight: 700;
 }
 
-#PartidosFuturos .accordion-body{
-    background-color: var(--color-gris)
+#PartidosFuturos .accordion-body {
+    background-color: var(--color-gris);
 }
 
-#PartidosFuturos .partido_futuro .hora{
+#PartidosFuturos .partido_futuro .hora {
     border-radius: 3px;
-    padding: .25rem .5rem;
-    background-color: var(--color-white);
-    color:var(--color-gray-medium);
+    color: var(--color-gray-medium);
     font-size: 13px;
 }
 
 #PartidosFuturos .partido_finalizado .goles-local,
 #PartidosFuturos .partido_finalizado .goles-visitante,
-#PartidosFuturos .partido_finalizado .goles-local+span{
+#PartidosFuturos .partido_finalizado .goles-local + span {
     font-size: var(--fs-large);
-    color: var(--color-green-feature);
+    color: var(--color-brand-green);
     font-weight: 700;
 }
 
-#PartidosFuturos .partido_finalizado .hora{
+#PartidosFuturos .partido_finalizado .hora {
     border-radius: 3px;
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
     background-color: var(--color-gray);
-    color:var(--color-black);
+    color: var(--color-black);
     font-size: 13px;
 }
 /* ESTILOS PARA TODOS LOS PARTIDO */
 
-.goleadores span{
+.goleadores span {
     font-size: 11px;
     color: var(--color-gray-medium);
 }
 
-.marcador{
+.marcador {
     text-align: center;
 }
 
@@ -269,7 +313,7 @@ body {
         left: 0;
         right: 0;
         background-color: var(--color-black);
-        opacity: .4;
+        opacity: 0.4;
         z-index: 2;
     }
 
@@ -283,19 +327,17 @@ body {
         height: 65%;
         z-index: 2;
     }
-    
 }
 
 /* desktop media */
 @media (min-width: 992px) {
-
     /* espacios laterales genericos */
     .container-fluid-custom {
         padding-left: 60px;
         padding-right: 60px;
     }
 
-    .w-custom{
+    .w-custom {
         width: 50%;
     }
 
@@ -304,13 +346,13 @@ body {
         height: 96px;
         background: #093654;
     }
-    
+
     .publi2 {
         width: 100%;
         height: 260px;
         background: #093654;
     }
-    
+
     .publi3 {
         width: 100%;
         height: 400px;
@@ -320,7 +362,7 @@ body {
         z-index: 2;
         position: relative;
     }
-    .local{
+    .local {
         text-align: right;
     }
 }

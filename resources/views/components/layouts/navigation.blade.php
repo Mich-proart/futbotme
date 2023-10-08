@@ -28,13 +28,13 @@
         {{-- icono buscador --}}
         <div class="content-buscador cursor-pointer remove-desktop">
 
-            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10.1369 5.69469C10.1369 8.20268 8.1038 10.2358 5.59581 10.2358C3.08782 10.2358 1.05469 8.20268 1.05469 5.69469C1.05469 3.18669 3.08782 1.15356 5.59581 1.15356C8.1038 1.15356 10.1369 3.18669 10.1369 5.69469ZM9.14437 9.95066C8.18311 10.753 6.94584 11.2358 5.59581 11.2358C2.53553 11.2358 0.0546875 8.75497 0.0546875 5.69469C0.0546875 2.63441 2.53553 0.153564 5.59581 0.153564C8.65609 0.153564 11.1369 2.63441 11.1369 5.69469C11.1369 7.04487 10.654 8.28227 9.85151 9.24358L13.7993 13.1913C13.9945 13.3866 13.9945 13.7032 13.7993 13.8984C13.604 14.0937 13.2874 14.0937 13.0922 13.8984L9.14437 9.95066Z"
-                    fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.1369 5.69469C10.1369 8.20268 8.1038 10.2358 5.59581 10.2358C3.08782 10.2358 1.05469 8.20268 1.05469 5.69469C1.05469 3.18669 3.08782 1.15356 5.59581 1.15356C8.1038 1.15356 10.1369 3.18669 10.1369 5.69469ZM9.14437 9.95066C8.18311 10.753 6.94584 11.2358 5.59581 11.2358C2.53553 11.2358 0.0546875 8.75497 0.0546875 5.69469C0.0546875 2.63441 2.53553 0.153564 5.59581 0.153564C8.65609 0.153564 11.1369 2.63441 11.1369 5.69469C11.1369 7.04487 10.654 8.28227 9.85151 9.24358L13.7993 13.1913C13.9945 13.3866 13.9945 13.7032 13.7993 13.8984C13.604 14.0937 13.2874 14.0937 13.0922 13.8984L9.14437 9.95066Z"
+                        fill="white" />
 
-            </svg>
+                </svg>
 
         </div>
 
@@ -131,8 +131,8 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/partidos') }}"
-                                class="enlace-unstyle color-white fs-00">Partidos Televisados</a></p>
+                        <p class="mb-0 color-white">
+                            <a href="{{ url('/partidos') }}" class="enlace-unstyle color-white fs-00 fw-semibold">Partidos Televisados</a></p>
 
                     </div>
 
@@ -148,8 +148,9 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/ascensos-y-descensos/nacional') }}"
-                                class="enlace-unstyle color-white fs-00">Ascensos y descensos</a></p>
+                        <p class="mb-0 color-white">
+                            <a href="{{ url('/ascensos-y-descensos/nacional') }}" class="enlace-unstyle color-white fs-00 fw-semibold">Ascensos y descensos</a>
+                        </p>
 
                     </div>
 
@@ -165,8 +166,9 @@
 
                         </div>
 
-                        <p class="mb-0 color-white"><a href="{{ url('/gol-average') }}"
-                                class="enlace-unstyle color-white fs-00">Calcular Gol Average</a></p>
+                        <p class="mb-0 color-white">
+                            <a href="{{ url('/gol-average') }}" class="enlace-unstyle color-white fs-00 fw-semibold">Calcular Gol Average</a>
+                        </p>
 
                     </div>
 
@@ -178,7 +180,7 @@
 
                         <div class="d-flex align-items-center justify-content-center bg-whitte">
 
-                            <input class="w-100 py-2 px-3 input-generic border-0 input-text-buscador" type="text"
+                            <input class="w-100 py-2 ps-lg-5 ps-3 pe-3 input-generic border-0 input-text-buscador" type="text"
                                 placeholder="Buscar Equipo o Jugador">
 
                             <div class="content-icon-buscador d-flex align-items-center justify-content-center cursor-pointer bg-whitte">

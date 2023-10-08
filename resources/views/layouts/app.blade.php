@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="es">
 
     <head>
 
@@ -22,11 +22,12 @@
         {{-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> --}}
 
         <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        {{-- ESTA LINEA DE AQUI ABAJO LA COMENTE PERO NO SE PARA QUE SIRVE HAY QUE INVESTIGAR --}}
+        {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
         
     </head>
 
-    <body>
+    <body class="loading" data-layout-color="light" data-layout="topnav" data-layout-mode="fluid" data-rightbar-onstart="true">
         <div id="app">
 
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -112,7 +113,19 @@
             </main>
 
         </div>
-        
+        <!-- bundle -->
+        <script src="{{ asset('assets_admin/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('assets_admin/js/app.min.js') }}"></script>
+
+
+        <!-- third party js -->
+        <script src="{{ asset('assets_admin/js/vendor/chart.min.js') }}"></script>
+
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="{{ asset('assets_admin/js/pages/demo.dashboard-projects.js') }}"></script>
+        <!-- end demo js-->
     </body>
 
 </html>

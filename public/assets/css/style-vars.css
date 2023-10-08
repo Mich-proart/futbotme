@@ -8,7 +8,9 @@
   --color-green-directo: #EAF9F0;
   --color-greengris:#CCE6D7;
   --color-green-feature:#1FA95A;
+  --color-livescore:#22854C;
   --color-green-live:#99CCAF;
+  --color-green-minutos:#6CAB56;
   --color-silver: #E5E5E5;
   --color-silver-medium: #DFDEDE;
   --color-white: #FFF;
@@ -17,8 +19,10 @@
   --color-black: #252525;
   --color-gray-contrast:#565656;
   --color-gray:#BBBBBB;
+  --color-gray-hora:#AAAAAA;
   --color-gray-medium:#4E4E4E;
   --color-red:#F24822;
+  --color-red-minutos:#9D1F3D;
   --fs-large:16px;
   --fs-standar: 14px;
   --fs-small:12px;

@@ -10,6 +10,7 @@
     background: var(--color-gradient-green);
 }
 
+
 .bg-silver {
     background-color: var(--color-silver);
 }
@@ -22,17 +23,36 @@
 .bg-green-directo {
     background-color: var(--color-green-directo);
 }
+
+.bg-green-live {
+    background-color: var(--color-green-live);
+}
+
+.bg-green-minutos {
+    background-color: var(--color-green-minutos);
+}
+
 .bg-greengris {
     background-color: var(--color-greengris);
 }
+
 .bg-gray {
     background-color: var(--color-gray);
 }
+
+.bg-gray-hora {
+    background-color: var(--color-gray-hora);
+}
+
 .bg-feature {
     background-color: var(--color-green-feature);
 }
 .bg-whitte {
     background-color: var(--color-white);
+}
+
+.bg-red-minutos{
+    background-color: var(--color-red-minutos);
 }
 
 /* colors */
@@ -68,19 +88,10 @@
     color: var(--color-green-live);
 }
 
-/* size fonts */
-.fs-000 {
-    font-size: var(--fs-small-xs);
+.color-livescore{
+    color: var(--color-livescore);
 }
-.fs-00 {
-    font-size: var(--fs-small);
-}
-.fs-01 {
-    font-size: var(--fs-standar);
-}
-.fs-03 {
-    font-size: var(--fs-large);
-}
+
 /* borders */
 .border-bottom-complet {
     border-bottom: var(--border-silver-1);
