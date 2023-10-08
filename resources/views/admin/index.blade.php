@@ -1,1060 +1,726 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Begin page -->
-    <div class="wrapper">
 
-        <!-- ============================================================== -->
-        <!-- Start Page Content here -->
-        <!-- ============================================================== -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Fixed Columns</h4>
+                <p class="text-muted font-14">
+                    When making use of DataTables' x-axis scrolling feature you may wish to fix the left or right most columns in place
+                </p>
 
-        <div class="content-page">
-            <div class="content">
-                <div class="topnav shadow-sm">
-                    <div class="container-fluid">
-                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+                <ul class="nav nav-tabs nav-bordered mb-3">
+                    <li class="nav-item">
+                        <a href="#fixed-columns-preview" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#fixed-columns-code" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
+                            Code
+                        </a>
+                    </li>
+                </ul> <!-- end nav-->
 
-                            <div class="collapse navbar-collapse" id="topnav-menu-content">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboards"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="uil-dashboard me-1"></i>Dashboards <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-dashboards">
-                                            <a href="dashboard-analytics.html" class="dropdown-item">Analytics</a>
-                                            <a href="index.html" class="dropdown-item">Ecommerce</a>
-                                            <a href="dashboard-Partidos.html" class="dropdown-item">Partidos</a>
-                                            <a href="dashboard-wallet.html" class="dropdown-item">E-Wallet</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="uil-apps me-1"></i>Apps <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-apps">
-                                            <a href="apps-calendar.html" class="dropdown-item">Calendar</a>
-                                            <a href="apps-chat.html" class="dropdown-item">Chat</a>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-crm" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    CRM <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-crm">
-                                                    <a href="crm-dashboard.html" class="dropdown-item">Dashboard</a>
-                                                    <a href="crm-Partidos.html" class="dropdown-item">Project</a>
-                                                    <a href="crm-orders-list.html" class="dropdown-item">Orders List</a>
-                                                    <a href="crm-clients.html" class="dropdown-item">Clients</a>
-                                                    <a href="crm-management.html" class="dropdown-item">Management</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-ecommerce" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Ecommerce <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-ecommerce">
-                                                    <a href="apps-ecommerce-products.html"
-                                                        class="dropdown-item">Products</a>
-                                                    <a href="apps-ecommerce-products-details.html"
-                                                        class="dropdown-item">Products Details</a>
-                                                    <a href="apps-ecommerce-orders.html" class="dropdown-item">Orders</a>
-                                                    <a href="apps-ecommerce-orders-details.html" class="dropdown-item">Order
-                                                        Details</a>
-                                                    <a href="apps-ecommerce-customers.html"
-                                                        class="dropdown-item">Customers</a>
-                                                    <a href="apps-ecommerce-shopping-cart.html"
-                                                        class="dropdown-item">Shopping Cart</a>
-                                                    <a href="apps-ecommerce-checkout.html"
-                                                        class="dropdown-item">Checkout</a>
-                                                    <a href="apps-ecommerce-sellers.html" class="dropdown-item">Sellers</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-email" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Email <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-email">
-                                                    <a href="apps-email-inbox.html" class="dropdown-item">Inbox</a>
-                                                    <a href="apps-email-read.html" class="dropdown-item">Read Email</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-project" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Partidos <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-project">
-                                                    <a href="apps-Partidos-list.html" class="dropdown-item">List</a>
-                                                    <a href="apps-Partidos-details.html" class="dropdown-item">Details</a>
-                                                    <a href="apps-Partidos-gantt.html" class="dropdown-item">Gantt</a>
-                                                    <a href="apps-Partidos-add.html" class="dropdown-item">Create
-                                                        Project</a>
-                                                </div>
-                                            </div>
-                                            <a href="apps-social-feed.html" class="dropdown-item">Social Feed</a>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-Directos" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Directos <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-Directos">
-                                                    <a href="apps-Directos.html" class="dropdown-item">List</a>
-                                                    <a href="apps-Directos-details.html" class="dropdown-item">Details</a>
-                                                    <a href="apps-kanban.html" class="dropdown-item">Kanban Board</a>
-                                                </div>
-                                            </div>
-                                            <a href="apps-file-manager.html" class="dropdown-item">File Manager</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="uil-copy-alt me-1"></i>Pages <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-pages">
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-auth" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Authenitication <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-auth">
-                                                    <a href="pages-login.html" class="dropdown-item">Login</a>
-                                                    <a href="pages-login-2.html" class="dropdown-item">Login 2</a>
-                                                    <a href="pages-register.html" class="dropdown-item">Register</a>
-                                                    <a href="pages-register-2.html" class="dropdown-item">Register 2</a>
-                                                    <a href="pages-logout.html" class="dropdown-item">Logout</a>
-                                                    <a href="pages-logout-2.html" class="dropdown-item">Logout 2</a>
-                                                    <a href="pages-recoverpw.html" class="dropdown-item">Recover
-                                                        Password</a>
-                                                    <a href="pages-recoverpw-2.html" class="dropdown-item">Recover
-                                                        Password 2</a>
-                                                    <a href="pages-lock-screen.html" class="dropdown-item">Lock Screen</a>
-                                                    <a href="pages-lock-screen-2.html" class="dropdown-item">Lock Screen
-                                                        2</a>
-                                                    <a href="pages-confirm-mail.html" class="dropdown-item">Confirm
-                                                        Mail</a>
-                                                    <a href="pages-confirm-mail-2.html" class="dropdown-item">Confirm Mail
-                                                        2</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-error" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Error <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-error">
-                                                    <a href="pages-404.html" class="dropdown-item">Error 404</a>
-                                                    <a href="pages-404-alt.html" class="dropdown-item">Error 404-alt</a>
-                                                    <a href="pages-500.html" class="dropdown-item">Error 500</a>
-                                                </div>
-                                            </div>
-                                            <a href="pages-starter.html" class="dropdown-item">Starter Page</a>
-                                            <a href="pages-preloader.html" class="dropdown-item">With Preloader</a>
-                                            <a href="pages-profile.html" class="dropdown-item">Profile</a>
-                                            <a href="pages-profile-2.html" class="dropdown-item">Profile 2</a>
-                                            <a href="pages-invoice.html" class="dropdown-item">Invoice</a>
-                                            <a href="pages-faq.html" class="dropdown-item">FAQ</a>
-                                            <a href="pages-pricing.html" class="dropdown-item">Pricing</a>
-                                            <a href="pages-maintenance.html" class="dropdown-item">Maintenance</a>
-                                            <a href="pages-timeline.html" class="dropdown-item">Timeline</a>
-                                            <a href="landing.html" class="dropdown-item">Landing</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle arrow-none" href="#"
-                                            id="topnav-components" role="button" data-bs-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <i class="uil-package me-1"></i>Components <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-components">
-                                            <a href="widgets.html" class="dropdown-item">Widgets</a>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-ui-kit" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Base UI 1 <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-ui-kit">
-                                                    <a href="ui-accordions.html" class="dropdown-item">Accordions</a>
-                                                    <a href="ui-alerts.html" class="dropdown-item">Alerts</a>
-                                                    <a href="ui-avatars.html" class="dropdown-item">Avatars</a>
-                                                    <a href="ui-badges.html" class="dropdown-item">Badges</a>
-                                                    <a href="ui-breadcrumb.html" class="dropdown-item">Breadcrumb</a>
-                                                    <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
-                                                    <a href="ui-cards.html" class="dropdown-item">Cards</a>
-                                                    <a href="ui-carousel.html" class="dropdown-item">Carousel</a>
-                                                    <a href="ui-dropdowns.html" class="dropdown-item">Dropdowns</a>
-                                                    <a href="ui-embed-video.html" class="dropdown-item">Embed Video</a>
-                                                    <a href="ui-grid.html" class="dropdown-item">Grid</a>
-                                                    <a href="ui-list-group.html" class="dropdown-item">List Group</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-ui-kit2" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Base UI 2 <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-ui-kit2">
-                                                    <a href="ui-modals.html" class="dropdown-item">Modals</a>
-                                                    <a href="ui-notifications.html"
-                                                        class="dropdown-item">Notifications</a>
-                                                    <a href="ui-offcanvas.html" class="dropdown-item">Offcanvas</a>
-                                                    <a href="ui-placeholders.html" class="dropdown-item">Placeholders</a>
-                                                    <a href="ui-pagination.html" class="dropdown-item">Pagination</a>
-                                                    <a href="ui-popovers.html" class="dropdown-item">Popovers</a>
-                                                    <a href="ui-progress.html" class="dropdown-item">Progress</a>
-                                                    <a href="ui-ribbons.html" class="dropdown-item">Ribbons</a>
-                                                    <a href="ui-spinners.html" class="dropdown-item">Spinners</a>
-                                                    <a href="ui-tabs.html" class="dropdown-item">Tabs</a>
-                                                    <a href="ui-tooltips.html" class="dropdown-item">Tooltips</a>
-                                                    <a href="ui-typography.html" class="dropdown-item">Typography</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-extended-ui" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Extended UI <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-extended-ui">
-                                                    <a href="extended-dragula.html" class="dropdown-item">Dragula</a>
-                                                    <a href="extended-range-slider.html" class="dropdown-item">Range
-                                                        Slider</a>
-                                                    <a href="extended-ratings.html" class="dropdown-item">Ratings</a>
-                                                    <a href="extended-scrollbar.html" class="dropdown-item">Scrollbar</a>
-                                                    <a href="extended-scrollspy.html" class="dropdown-item">Scrollspy</a>
-                                                    <a href="extended-treeview.html" class="dropdown-item">Treeview</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-charts" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Charts <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-charts">
-                                                    <div class="dropdown">
-                                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                            id="topnav-apex-charts" role="button"
-                                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
-                                                            Apex Charts <div class="arrow-down"></div>
-                                                        </a>
-                                                        <div class="dropdown-menu" aria-labelledby="topnav-apex-charts">
-                                                            <a href="charts-apex-area.html" class="dropdown-item">Area</a>
-                                                            <a href="charts-apex-bar.html" class="dropdown-item">Bar</a>
-                                                            <a href="charts-apex-bubble.html"
-                                                                class="dropdown-item">Bubble</a>
-                                                            <a href="charts-apex-candlestick.html"
-                                                                class="dropdown-item">Candlestick</a>
-                                                            <a href="charts-apex-column.html"
-                                                                class="dropdown-item">Column</a>
-                                                            <a href="charts-apex-heatmap.html"
-                                                                class="dropdown-item">Heatmap</a>
-                                                            <a href="charts-apex-line.html" class="dropdown-item">Line</a>
-                                                            <a href="charts-apex-mixed.html"
-                                                                class="dropdown-item">Mixed</a>
-                                                            <a href="charts-apex-pie.html" class="dropdown-item">Pie</a>
-                                                            <a href="charts-apex-radar.html"
-                                                                class="dropdown-item">Radar</a>
-                                                            <a href="charts-apex-radialbar.html"
-                                                                class="dropdown-item">RadialBar</a>
-                                                            <a href="charts-apex-scatter.html"
-                                                                class="dropdown-item">Scatter</a>
-                                                            <a href="charts-apex-sparklines.html"
-                                                                class="dropdown-item">Sparklines</a>
-                                                        </div>
-                                                    </div>
-                                                    <a href="charts-chartjs.html" class="dropdown-item">Chartjs</a>
-                                                    <a href="charts-brite.html" class="dropdown-item">Britecharts</a>
-                                                    <a href="charts-sparkline.html" class="dropdown-item">Sparklines</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-forms" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Forms <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-forms">
-                                                    <a href="form-elements.html" class="dropdown-item">Basic Elements</a>
-                                                    <a href="form-advanced.html" class="dropdown-item">Form Advanced</a>
-                                                    <a href="form-validation.html" class="dropdown-item">Validation</a>
-                                                    <a href="form-wizard.html" class="dropdown-item">Wizard</a>
-                                                    <a href="form-fileuploads.html" class="dropdown-item">File Uploads</a>
-                                                    <a href="form-editors.html" class="dropdown-item">Editors</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-tables" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Tables <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-tables">
-                                                    <a href="tables-basic.html" class="dropdown-item">Basic Tables</a>
-                                                    <a href="tables-datatable.html" class="dropdown-item">Data Tables</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-icons" role="button" data-bs-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Icons <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-icons">
-                                                    <a href="icons-dripicons.html" class="dropdown-item">Dripicons</a>
-                                                    <a href="icons-mdi.html" class="dropdown-item">Material Design</a>
-                                                    <a href="icons-unicons.html" class="dropdown-item">Unicons</a>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                                    id="topnav-maps" role="button" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    Maps <div class="arrow-down"></div>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="topnav-maps">
-                                                    <a href="maps-google.html" class="dropdown-item">Google Maps</a>
-                                                    <a href="maps-vector.html" class="dropdown-item">Vector Maps</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="fixed-columns-preview">
+                        <table id="fixed-columns-datatable" class="table table-striped nowrap row-border order-column w-100">
+                            <thead>
+                                <tr>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                    <th>Extn.</th>
+                                    <th>E-mail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger</td>
+                                    <td>Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td>$320,800</td>
+                                    <td>5421</td>
+                                    <td>t.nixon@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett</td>
+                                    <td>Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011/07/25</td>
+                                    <td>$170,750</td>
+                                    <td>8422</td>
+                                    <td>g.winters@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton</td>
+                                    <td>Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009/01/12</td>
+                                    <td>$86,000</td>
+                                    <td>1562</td>
+                                    <td>a.cox@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric</td>
+                                    <td>Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2012/03/29</td>
+                                    <td>$433,060</td>
+                                    <td>6224</td>
+                                    <td>c.kelly@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Airi</td>
+                                    <td>Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008/11/28</td>
+                                    <td>$162,700</td>
+                                    <td>5407</td>
+                                    <td>a.satou@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Brielle</td>
+                                    <td>Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2012/12/02</td>
+                                    <td>$372,000</td>
+                                    <td>4804</td>
+                                    <td>b.williamson@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Herrod</td>
+                                    <td>Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>2012/08/06</td>
+                                    <td>$137,500</td>
+                                    <td>9608</td>
+                                    <td>h.chandler@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Rhona</td>
+                                    <td>Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>2010/10/14</td>
+                                    <td>$327,900</td>
+                                    <td>6200</td>
+                                    <td>r.davidson@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Colleen</td>
+                                    <td>Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>2009/09/15</td>
+                                    <td>$205,500</td>
+                                    <td>2360</td>
+                                    <td>c.hurst@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Sonya</td>
+                                    <td>Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>2008/12/13</td>
+                                    <td>$103,600</td>
+                                    <td>1667</td>
+                                    <td>s.frost@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jena</td>
+                                    <td>Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>30</td>
+                                    <td>2008/12/19</td>
+                                    <td>$90,560</td>
+                                    <td>3814</td>
+                                    <td>j.gaines@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Quinn</td>
+                                    <td>Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2013/03/03</td>
+                                    <td>$342,000</td>
+                                    <td>9497</td>
+                                    <td>q.flynn@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Charde</td>
+                                    <td>Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td>36</td>
+                                    <td>2008/10/16</td>
+                                    <td>$470,600</td>
+                                    <td>6741</td>
+                                    <td>c.marshall@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Haley</td>
+                                    <td>Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>43</td>
+                                    <td>2012/12/18</td>
+                                    <td>$313,500</td>
+                                    <td>3597</td>
+                                    <td>h.kennedy@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Tatyana</td>
+                                    <td>Fitzpatrick</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>19</td>
+                                    <td>2010/03/17</td>
+                                    <td>$385,750</td>
+                                    <td>1965</td>
+                                    <td>t.fitzpatrick@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael</td>
+                                    <td>Silva</td>
+                                    <td>Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>66</td>
+                                    <td>2012/11/27</td>
+                                    <td>$198,500</td>
+                                    <td>1581</td>
+                                    <td>m.silva@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Paul</td>
+                                    <td>Byrd</td>
+                                    <td>Chief Financial Officer (CFO)</td>
+                                    <td>New York</td>
+                                    <td>64</td>
+                                    <td>2010/06/09</td>
+                                    <td>$725,000</td>
+                                    <td>3059</td>
+                                    <td>p.byrd@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Gloria</td>
+                                    <td>Little</td>
+                                    <td>Systems Administrator</td>
+                                    <td>New York</td>
+                                    <td>59</td>
+                                    <td>2009/04/10</td>
+                                    <td>$237,500</td>
+                                    <td>1721</td>
+                                    <td>g.little@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Bradley</td>
+                                    <td>Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>2012/10/13</td>
+                                    <td>$132,000</td>
+                                    <td>2558</td>
+                                    <td>b.greer@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Dai</td>
+                                    <td>Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>35</td>
+                                    <td>2012/09/26</td>
+                                    <td>$217,500</td>
+                                    <td>2290</td>
+                                    <td>d.rios@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jenette</td>
+                                    <td>Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td>30</td>
+                                    <td>2011/09/03</td>
+                                    <td>$345,000</td>
+                                    <td>1937</td>
+                                    <td>j.caldwell@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Yuri</td>
+                                    <td>Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td>40</td>
+                                    <td>2009/06/25</td>
+                                    <td>$675,000</td>
+                                    <td>6154</td>
+                                    <td>y.berry@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Caesar</td>
+                                    <td>Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>21</td>
+                                    <td>2011/12/12</td>
+                                    <td>$106,450</td>
+                                    <td>8330</td>
+                                    <td>c.vance@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Doris</td>
+                                    <td>Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sidney</td>
+                                    <td>23</td>
+                                    <td>2010/09/20</td>
+                                    <td>$85,600</td>
+                                    <td>3023</td>
+                                    <td>d.wilder@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Angelica</td>
+                                    <td>Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2009/10/09</td>
+                                    <td>$1,200,000</td>
+                                    <td>5797</td>
+                                    <td>a.ramos@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Gavin</td>
+                                    <td>Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>42</td>
+                                    <td>2010/12/22</td>
+                                    <td>$92,575</td>
+                                    <td>8822</td>
+                                    <td>g.joyce@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jennifer</td>
+                                    <td>Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td>28</td>
+                                    <td>2010/11/14</td>
+                                    <td>$357,650</td>
+                                    <td>9239</td>
+                                    <td>j.chang@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Brenden</td>
+                                    <td>Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>28</td>
+                                    <td>2011/06/07</td>
+                                    <td>$206,850</td>
+                                    <td>1314</td>
+                                    <td>b.wagner@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiona</td>
+                                    <td>Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td>48</td>
+                                    <td>2010/03/11</td>
+                                    <td>$850,000</td>
+                                    <td>2947</td>
+                                    <td>f.green@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Shou</td>
+                                    <td>Itou</td>
+                                    <td>Regional Marketing</td>
+                                    <td>Tokyo</td>
+                                    <td>20</td>
+                                    <td>2011/08/14</td>
+                                    <td>$163,000</td>
+                                    <td>8899</td>
+                                    <td>s.itou@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Michelle</td>
+                                    <td>House</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Sidney</td>
+                                    <td>37</td>
+                                    <td>2011/06/02</td>
+                                    <td>$95,400</td>
+                                    <td>2769</td>
+                                    <td>m.house@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Suki</td>
+                                    <td>Burks</td>
+                                    <td>Developer</td>
+                                    <td>London</td>
+                                    <td>53</td>
+                                    <td>2009/10/22</td>
+                                    <td>$114,500</td>
+                                    <td>6832</td>
+                                    <td>s.burks@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Prescott</td>
+                                    <td>Bartlett</td>
+                                    <td>Technical Author</td>
+                                    <td>London</td>
+                                    <td>27</td>
+                                    <td>2011/05/07</td>
+                                    <td>$145,000</td>
+                                    <td>3606</td>
+                                    <td>p.bartlett@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Gavin</td>
+                                    <td>Cortez</td>
+                                    <td>Team Leader</td>
+                                    <td>San Francisco</td>
+                                    <td>22</td>
+                                    <td>2008/10/26</td>
+                                    <td>$235,500</td>
+                                    <td>2860</td>
+                                    <td>g.cortez@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Martena</td>
+                                    <td>Mccray</td>
+                                    <td>Post-Sales support</td>
+                                    <td>Edinburgh</td>
+                                    <td>46</td>
+                                    <td>2011/03/09</td>
+                                    <td>$324,050</td>
+                                    <td>8240</td>
+                                    <td>m.mccray@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Unity</td>
+                                    <td>Butler</td>
+                                    <td>Marketing Designer</td>
+                                    <td>San Francisco</td>
+                                    <td>47</td>
+                                    <td>2009/12/09</td>
+                                    <td>$85,675</td>
+                                    <td>5384</td>
+                                    <td>u.butler@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Howard</td>
+                                    <td>Hatfield</td>
+                                    <td>Office Manager</td>
+                                    <td>San Francisco</td>
+                                    <td>51</td>
+                                    <td>2008/12/16</td>
+                                    <td>$164,500</td>
+                                    <td>7031</td>
+                                    <td>h.hatfield@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Hope</td>
+                                    <td>Fuentes</td>
+                                    <td>Secretary</td>
+                                    <td>San Francisco</td>
+                                    <td>41</td>
+                                    <td>2010/02/12</td>
+                                    <td>$109,850</td>
+                                    <td>6318</td>
+                                    <td>h.fuentes@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Vivian</td>
+                                    <td>Harrell</td>
+                                    <td>Financial Controller</td>
+                                    <td>San Francisco</td>
+                                    <td>62</td>
+                                    <td>2009/02/14</td>
+                                    <td>$452,500</td>
+                                    <td>9422</td>
+                                    <td>v.harrell@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Timothy</td>
+                                    <td>Mooney</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>37</td>
+                                    <td>2008/12/11</td>
+                                    <td>$136,200</td>
+                                    <td>7580</td>
+                                    <td>t.mooney@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jackson</td>
+                                    <td>Bradshaw</td>
+                                    <td>Director</td>
+                                    <td>New York</td>
+                                    <td>65</td>
+                                    <td>2008/09/26</td>
+                                    <td>$645,750</td>
+                                    <td>1042</td>
+                                    <td>j.bradshaw@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Olivia</td>
+                                    <td>Liang</td>
+                                    <td>Support Engineer</td>
+                                    <td>Singapore</td>
+                                    <td>64</td>
+                                    <td>2011/02/03</td>
+                                    <td>$234,500</td>
+                                    <td>2120</td>
+                                    <td>o.liang@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Bruno</td>
+                                    <td>Nash</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>38</td>
+                                    <td>2011/05/03</td>
+                                    <td>$163,500</td>
+                                    <td>6222</td>
+                                    <td>b.nash@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Sakura</td>
+                                    <td>Yamamoto</td>
+                                    <td>Support Engineer</td>
+                                    <td>Tokyo</td>
+                                    <td>37</td>
+                                    <td>2009/08/19</td>
+                                    <td>$139,575</td>
+                                    <td>9383</td>
+                                    <td>s.yamamoto@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Thor</td>
+                                    <td>Walton</td>
+                                    <td>Developer</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2013/08/11</td>
+                                    <td>$98,540</td>
+                                    <td>8327</td>
+                                    <td>t.walton@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Finn</td>
+                                    <td>Camacho</td>
+                                    <td>Support Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>47</td>
+                                    <td>2009/07/07</td>
+                                    <td>$87,500</td>
+                                    <td>2927</td>
+                                    <td>f.camacho@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Serge</td>
+                                    <td>Baldwin</td>
+                                    <td>Data Coordinator</td>
+                                    <td>Singapore</td>
+                                    <td>64</td>
+                                    <td>2012/04/09</td>
+                                    <td>$138,575</td>
+                                    <td>8352</td>
+                                    <td>s.baldwin@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenaida</td>
+                                    <td>Frank</td>
+                                    <td>Software Engineer</td>
+                                    <td>New York</td>
+                                    <td>63</td>
+                                    <td>2010/01/04</td>
+                                    <td>$125,250</td>
+                                    <td>7439</td>
+                                    <td>z.frank@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Zorita</td>
+                                    <td>Serrano</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>56</td>
+                                    <td>2012/06/01</td>
+                                    <td>$115,000</td>
+                                    <td>4389</td>
+                                    <td>z.serrano@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jennifer</td>
+                                    <td>Acosta</td>
+                                    <td>Junior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>43</td>
+                                    <td>2013/02/01</td>
+                                    <td>$75,650</td>
+                                    <td>3431</td>
+                                    <td>j.acosta@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Cara</td>
+                                    <td>Stevens</td>
+                                    <td>Sales Assistant</td>
+                                    <td>New York</td>
+                                    <td>46</td>
+                                    <td>2011/12/06</td>
+                                    <td>$145,600</td>
+                                    <td>3990</td>
+                                    <td>c.stevens@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Hermione</td>
+                                    <td>Butler</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2011/03/21</td>
+                                    <td>$356,250</td>
+                                    <td>1016</td>
+                                    <td>h.butler@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Lael</td>
+                                    <td>Greer</td>
+                                    <td>Systems Administrator</td>
+                                    <td>London</td>
+                                    <td>21</td>
+                                    <td>2009/02/27</td>
+                                    <td>$103,500</td>
+                                    <td>6733</td>
+                                    <td>l.greer@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonas</td>
+                                    <td>Alexander</td>
+                                    <td>Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>30</td>
+                                    <td>2010/07/14</td>
+                                    <td>$86,500</td>
+                                    <td>8196</td>
+                                    <td>j.alexander@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Shad</td>
+                                    <td>Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                    <td>51</td>
+                                    <td>2008/11/13</td>
+                                    <td>$183,000</td>
+                                    <td>6373</td>
+                                    <td>s.decker@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael</td>
+                                    <td>Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td>29</td>
+                                    <td>2011/06/27</td>
+                                    <td>$183,000</td>
+                                    <td>5384</td>
+                                    <td>m.bruce@datatables.net</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna</td>
+                                    <td>Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                    <td>2011/01/25</td>
+                                    <td>$112,000</td>
+                                    <td>4226</td>
+                                    <td>d.snider@datatables.net</td>
+                                </tr>
+                            </tbody>
+                        </table>                                                    
+                    </div> <!-- end preview-->
+                
+                    <div class="tab-pane" id="fixed-columns-code">
+                        <pre class="mb-0">
+                            <span class="html escape">
+                                &lt;table id=&quot;fixed-columns-datatable&quot; class=&quot;table nowrap row-border order-column w-100&quot;&gt;
+                                    &lt;thead&gt;
+                                        &lt;tr&gt;
+                                            &lt;th&gt;First name&lt;/th&gt;
+                                            &lt;th&gt;Last name&lt;/th&gt;
+                                            &lt;th&gt;Position&lt;/th&gt;
+                                            &lt;th&gt;Office&lt;/th&gt;
+                                            &lt;th&gt;Age&lt;/th&gt;
+                                            &lt;th&gt;Start date&lt;/th&gt;
+                                            &lt;th&gt;Salary&lt;/th&gt;
+                                            &lt;th&gt;Extn.&lt;/th&gt;
+                                            &lt;th&gt;E-mail&lt;/th&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/thead&gt;
+                                    &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                            &lt;td&gt;Tiger&lt;/td&gt;
+                                            &lt;td&gt;Nixon&lt;/td&gt;
+                                            &lt;td&gt;System Architect&lt;/td&gt;
+                                            &lt;td&gt;Edinburgh&lt;/td&gt;
+                                            &lt;td&gt;61&lt;/td&gt;
+                                            &lt;td&gt;2011/04/25&lt;/td&gt;
+                                            &lt;td&gt;$320,800&lt;/td&gt;
+                                            &lt;td&gt;5421&lt;/td&gt;
+                                            &lt;td&gt;t.nixon@datatables.net&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                            &lt;td&gt;Garrett&lt;/td&gt;
+                                            &lt;td&gt;Winters&lt;/td&gt;
+                                            &lt;td&gt;Accountant&lt;/td&gt;
+                                            &lt;td&gt;Tokyo&lt;/td&gt;
+                                            &lt;td&gt;63&lt;/td&gt;
+                                            &lt;td&gt;2011/07/25&lt;/td&gt;
+                                            &lt;td&gt;$170,750&lt;/td&gt;
+                                            &lt;td&gt;8422&lt;/td&gt;
+                                            &lt;td&gt;g.winters@datatables.net&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+                                &lt;/table&gt; 
+                            </span>
+                        </pre> <!-- end highlight-->
+                    </div> <!-- end preview code-->
+                </div> <!-- end tab-content-->
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div><!-- end col-->
+</div> <!-- end row-->
 
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="uil-window me-1"></i>Layouts <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-layouts">
-                                            <a href="layouts-vertical.html" class="dropdown-item">Vertical</a>
-                                            <a href="layouts-detached.html" class="dropdown-item">Detached</a>
-                                            <a href="layouts-full.html" class="dropdown-item">Full</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-
-
-                <!-- Start Content-->
-                <div class="container-fluid">
-
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                        <li class="breadcrumb-item active">Partidos</li>
-                                    </ol>
-                                </div>
-                                <h4 class="page-title">Partidos</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end page title -->
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card widget-inline">
-                                <div class="card-body p-0">
-                                    <div class="row g-0">
-                                        <div class="col-sm-6 col-lg-3">
-                                            <div class="card shadow-none m-0">
-                                                <div class="card-body text-center">
-                                                    <i class="dripicons-briefcase text-muted"
-                                                        style="font-size: 24px;"></i>
-                                                    <h3><span>29</span></h3>
-                                                    <p class="text-muted font-15 mb-0">Total Partidos</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6 col-lg-3">
-                                            <div class="card shadow-none m-0 border-start">
-                                                <div class="card-body text-center">
-                                                    <i class="dripicons-checklist text-muted"
-                                                        style="font-size: 24px;"></i>
-                                                    <h3><span>715</span></h3>
-                                                    <p class="text-muted font-15 mb-0">Total Directos</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6 col-lg-3">
-                                            <div class="card shadow-none m-0 border-start">
-                                                <div class="card-body text-center">
-                                                    <i class="dripicons-user-group text-muted"
-                                                        style="font-size: 24px;"></i>
-                                                    <h3><span>31</span></h3>
-                                                    <p class="text-muted font-15 mb-0">Members</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6 col-lg-3">
-                                            <div class="card shadow-none m-0 border-start">
-                                                <div class="card-body text-center">
-                                                    <i class="dripicons-graph-line text-muted"
-                                                        style="font-size: 24px;"></i>
-                                                    <h3><span>93%</span> <i class="mdi mdi-arrow-up text-success"></i></h3>
-                                                    <p class="text-muted font-15 mb-0">Productivity</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div> <!-- end row -->
-                                </div>
-                            </div> <!-- end card-box-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="header-title">Project Status</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Weekly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Monthly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-3 my-4 chartjs-chart" style="height: 207px;">
-                                        <canvas id="project-status-chart" data-colors="#42d29d,#f9bc0d,#fa6767"></canvas>
-                                    </div>
-
-                                    <div class="row text-center mt-2 py-2">
-                                        <div class="col-sm-4">
-                                            <div class="my-2 my-sm-0">
-                                                <i class="mdi mdi-trending-up text-success mt-3 h3"></i>
-                                                <h3 class="fw-normal">
-                                                    <span>64%</span>
-                                                </h3>
-                                                <p class="text-muted mb-0">Completed</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="my-2 my-sm-0">
-                                                <i class="mdi mdi-trending-down text-primary mt-3 h3"></i>
-                                                <h3 class="fw-normal">
-                                                    <span>26%</span>
-                                                </h3>
-                                                <p class="text-muted mb-0"> In-progress</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="my-2 my-sm-0">
-                                                <i class="mdi mdi-trending-down text-danger mt-3 h3"></i>
-                                                <h3 class="fw-normal">
-                                                    <span>10%</span>
-                                                </h3>
-                                                <p class="text-muted mb-0"> Behind</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end row-->
-
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-
-                        <div class="col-lg-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h4 class="header-title">Directos</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Weekly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Monthly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p><b>107</b> Directos completed out of 195</p>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-centered table-nowrap table-hover mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="font-14 my-1"><a href="javascript:void(0);"
-                                                                class="text-body">Coffee detail page - Main Page</a></h5>
-                                                        <span class="text-muted font-13">Due in 3 days</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Status</span> <br />
-                                                        <span class="badge badge-warning-lighten">In-progress</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Assigned to</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">Logan R. Cohn</h5>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Total time spend</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">3h 20min</h5>
-                                                    </td>
-                                                    <td class="table-action" style="width: 90px;">
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-pencil"></i></a>
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-delete"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="font-14 my-1"><a href="javascript:void(0);"
-                                                                class="text-body">Drinking bottle graphics</a></h5>
-                                                        <span class="text-muted font-13">Due in 27 days</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Status</span> <br />
-                                                        <span class="badge badge-danger-lighten">Outdated</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Assigned to</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">Jerry F. Powell</h5>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Total time spend</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">12h 21min</h5>
-                                                    </td>
-                                                    <td class="table-action" style="width: 90px;">
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-pencil"></i></a>
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-delete"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="font-14 my-1"><a href="javascript:void(0);"
-                                                                class="text-body">App design and development</a></h5>
-                                                        <span class="text-muted font-13">Due in 7 days</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Status</span> <br />
-                                                        <span class="badge badge-success-lighten">Completed</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Assigned to</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">Scot M. Smith</h5>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Total time spend</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">78h 05min</h5>
-                                                    </td>
-                                                    <td class="table-action" style="width: 90px;">
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-pencil"></i></a>
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-delete"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="font-14 my-1"><a href="javascript:void(0);"
-                                                                class="text-body">Poster illustation design</a></h5>
-                                                        <span class="text-muted font-13">Due in 5 days</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Status</span> <br />
-                                                        <span class="badge badge-warning-lighten">In-progress</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Assigned to</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">John P. Ritter</h5>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Total time spend</span>
-                                                        <h5 class="font-14 mt-1 fw-normal">26h 58min</h5>
-                                                    </td>
-                                                    <td class="table-action" style="width: 90px;">
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-pencil"></i></a>
-                                                        <a href="javascript: void(0);" class="action-icon"> <i
-                                                                class="mdi mdi-delete"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end table-responsive-->
-
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h4 class="header-title">Directos Overview</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Weekly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Monthly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div dir="ltr">
-                                        <div class="mt-3 chartjs-chart" style="height: 320px;">
-                                            <canvas id="task-area-chart" data-bgColor="#3688fc"
-                                                data-borderColor="#3688fc"></canvas>
-                                        </div>
-                                    </div>
-
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-
-                    <div class="row">
-                        <div class="col-xl-5">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h4 class="header-title">Recent Activities</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Weekly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Monthly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-centered table-nowrap table-hover mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-start">
-                                                            <img class="me-2 rounded-circle"
-                                                                src="assets/images/users/avatar-2.jpg" width="40"
-                                                                alt="Generic placeholder image">
-                                                            <div>
-                                                                <h5 class="mt-0 mb-1">Soren Drouin<small
-                                                                        class="fw-normal ms-3">18 Jan 2019 11:28
-                                                                        pm</small></h5>
-                                                                <span class="font-13">Completed "Design new
-                                                                    idea"...</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Project</span> <br />
-                                                        <p class="mb-0">Hyper Mockup</p>
-                                                    </td>
-                                                    <td class="table-action" style="width: 50px;">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Settings</a>
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Action</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-start">
-                                                            <img class="me-2 rounded-circle"
-                                                                src="assets/images/users/avatar-6.jpg" width="40"
-                                                                alt="Generic placeholder image">
-                                                            <div>
-                                                                <h5 class="mt-0 mb-1">Anne Simard<small
-                                                                        class="fw-normal ms-3">18 Jan 2019 11:09
-                                                                        pm</small></h5>
-                                                                <span class="font-13">Assigned task "Poster illustation
-                                                                    design"...</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Project</span> <br />
-                                                        <p class="mb-0">Hyper Mockup</p>
-                                                    </td>
-                                                    <td class="table-action" style="width: 50px;">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Settings</a>
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Action</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-start">
-                                                            <img class="me-2 rounded-circle"
-                                                                src="assets/images/users/avatar-3.jpg" width="40"
-                                                                alt="Generic placeholder image">
-                                                            <div>
-                                                                <h5 class="mt-0 mb-1">Nicolas Chartier<small
-                                                                        class="fw-normal ms-3">15 Jan 2019 09:29
-                                                                        pm</small></h5>
-                                                                <span class="font-13">Completed "Drinking bottle
-                                                                    graphics"...</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Project</span> <br />
-                                                        <p class="mb-0">Web UI Design</p>
-                                                    </td>
-                                                    <td class="table-action" style="width: 50px;">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Settings</a>
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Action</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-start">
-                                                            <img class="me-2 rounded-circle"
-                                                                src="assets/images/users/avatar-4.jpg" width="40"
-                                                                alt="Generic placeholder image">
-                                                            <div>
-                                                                <h5 class="mt-0 mb-1">Gano Cloutier<small
-                                                                        class="fw-normal ms-3">10 Jan 2019 08:36
-                                                                        pm</small></h5>
-                                                                <span class="font-13">Completed "Design new
-                                                                    idea"...</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Project</span> <br />
-                                                        <p class="mb-0">UBold Admin</p>
-                                                    </td>
-                                                    <td class="table-action" style="width: 50px;">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Settings</a>
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Action</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-start">
-                                                            <img class="me-2 rounded-circle"
-                                                                src="assets/images/users/avatar-5.jpg" width="40"
-                                                                alt="Generic placeholder image">
-                                                            <div>
-                                                                <h5 class="mt-0 mb-1">Francis Achin<small
-                                                                        class="fw-normal ms-3">08 Jan 2019 12:28
-                                                                        pm</small></h5>
-                                                                <span class="font-13">Assigned task "Hyper app
-                                                                    design"...</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="text-muted font-13">Project</span> <br />
-                                                        <p class="mb-0">Website Mockup</p>
-                                                    </td>
-                                                    <td class="table-action" style="width: 50px;">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Settings</a>
-                                                                <!-- item-->
-                                                                <a href="javascript:void(0);"
-                                                                    class="dropdown-item">Action</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end table-responsive-->
-
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-
-                        <div class="col-xl-7">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h4 class="header-title">Your Calendar</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Weekly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Monthly Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div data-provide="datepicker-inline" data-date-today-highlight="true"
-                                                class="calendar-widget"></div>
-                                        </div> <!-- end col-->
-                                        <div class="col-md-5">
-                                            <ul class="list-unstyled mt-1">
-                                                <li class="mb-4">
-                                                    <p class="text-muted mb-1 font-13">
-                                                        <i class="mdi mdi-calendar"></i> 7:30 AM - 10:00 AM
-                                                    </p>
-                                                    <h5>Meeting with BD Team</h5>
-                                                </li>
-                                                <li class="mb-4">
-                                                    <p class="text-muted mb-1 font-13">
-                                                        <i class="mdi mdi-calendar"></i> 10:30 AM - 11:45 AM
-                                                    </p>
-                                                    <h5>Design Review - Hyper Admin</h5>
-                                                </li>
-                                                <li class="mb-4">
-                                                    <p class="text-muted mb-1 font-13">
-                                                        <i class="mdi mdi-calendar"></i> 12:15 PM - 02:00 PM
-                                                    </p>
-                                                    <h5>Setup Github Repository</h5>
-                                                </li>
-                                                <li>
-                                                    <p class="text-muted mb-1 font-13">
-                                                        <i class="mdi mdi-calendar"></i> 5:30 PM - 07:00 PM
-                                                    </p>
-                                                    <h5>Meeting with Design Studio</h5>
-                                                </li>
-                                            </ul>
-                                        </div> <!-- end col -->
-                                    </div>
-                                    <!-- end row -->
-
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-
-                    </div>
-                    <!-- end row-->
-
-                </div>
-                <!-- container -->
-
-            </div>
-            <!-- content -->
-
-            <!-- Footer Start -->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> © Hyper - Coderthemes.com
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-md-end footer-links d-none d-md-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- end Footer -->
-
-        </div>
-
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
-
-
-    </div>
-    <!-- END wrapper -->
-
-    <!-- Right Sidebar -->
-    <div class="end-bar">
-
-        <div class="rightbar-title">
-            <a href="javascript:void(0);" class="end-bar-toggle float-end">
-                <i class="dripicons-cross noti-icon"></i>
-            </a>
-            <h5 class="m-0">Settings</h5>
-        </div>
-
-        <div class="rightbar-content h-100" data-simplebar>
-
-            <div class="p-3">
-                <div class="alert alert-warning" role="alert">
-                    <strong>Customize </strong> the overall color scheme, layout width, etc.
-                </div>
-
-                <!-- Settings -->
-                <h5 class="mt-3">Color Scheme</h5>
-                <hr class="mt-1" />
-
-                <div class="form-check form-switch mb-1">
-                    <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="light"
-                        id="light-mode-check" checked />
-                    <label class="form-check-label" for="light-mode-check">Light Mode</label>
-                </div>
-
-                <div class="form-check form-switch mb-1">
-                    <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="dark"
-                        id="dark-mode-check" />
-                    <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
-                </div>
-
-                <!-- Width -->
-                <h5 class="mt-4">Width</h5>
-                <hr class="mt-1" />
-                <div class="form-check form-switch mb-1">
-                    <input type="checkbox" class="form-check-input" name="width" value="fluid" id="fluid-check"
-                        checked />
-                    <label class="form-check-label" for="fluid-check">Fluid</label>
-                </div>
-                <div class="form-check form-switch mb-1">
-                    <input type="checkbox" class="form-check-input" name="width" value="boxed" id="boxed-check" />
-                    <label class="form-check-label" for="boxed-check">Boxed</label>
-                </div>
-
-
-                <div class="d-grid mt-4">
-                    <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
-
-                    <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/"
-                        class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Purchase
-                        Now</a>
-                </div>
-            </div> <!-- end padding-->
-
-        </div>
-    </div>
-
-    <div class="rightbar-overlay"></div>
-    <!-- /End-bar -->
 @endsection
