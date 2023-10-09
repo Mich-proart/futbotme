@@ -6,4 +6,12 @@ use App\Http\Controllers\Admin\AdminController;
 // Rutas para el panel admin 
 Route::get('admin-panel', [AdminController::class, 'index']);
 
-Route::get('admin-panel/test', [AdminController::class, 'test']);
+Route::get('admin-panel/torneos', [AdminController::class, 'indexTorneos']);
+
+Route::get('admin-panel/agenda', [AdminController::class, 'indexAgenda']);
+
+Route::get('admin-panel/federaciones', [AdminController::class, 'indexFederaciones']);
+
+Route::get('admin-panel/clubes', [AdminController::class, 'indexClubes']);
+
+Route::get('admin-panel/jugadores', [AdminController::class, 'indexJugadores']);

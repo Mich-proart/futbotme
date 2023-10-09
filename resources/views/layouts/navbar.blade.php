@@ -438,7 +438,46 @@
 
             <div class="collapse navbar-collapse" id="topnav-menu-content">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Directos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/torneos') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Torneos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/agenda') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Agenda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/federaciones') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Federaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/clubes') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Clubes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/jugadores') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Jugadores
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                            Diseñar Menu
+                        </a>
+                    </li>
+
+                    
+
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-dashboards" role="button" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -451,8 +490,8 @@
                             <a href="dashboard-projects.html" class="dropdown-item">Projects</a>
                             <a href="dashboard-wallet.html" class="dropdown-item">E-Wallet</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
+                    </li> --}}
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-apps" role="button" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -552,8 +591,8 @@
                             <a href="apps-file-manager.html" class="dropdown-item">File
                                 Manager</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
+                    </li> --}}
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-pages" role="button" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -615,8 +654,8 @@
                             <a href="pages-timeline.html" class="dropdown-item">Timeline</a>
                             <a href="landing.html" class="dropdown-item">Landing</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
+                    </li> --}}
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-components" role="button" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -811,8 +850,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-
+                    </li> --}}
+{{-- 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-layouts" role="button" data-bs-toggle="dropdown"
@@ -824,7 +863,7 @@
                             <a href="layouts-detached.html" class="dropdown-item">Detached</a>
                             <a href="layouts-full.html" class="dropdown-item">Full</a>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </nav>
