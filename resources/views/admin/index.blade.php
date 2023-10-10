@@ -3,6 +3,9 @@
 @section('content')
 
 <div class="row mt-5">
+    <div class="col-lg-3">
+        <button class="btn btn-primary my-3 btn-importar" id="resetBtn">Importar Datos</button>
+    </div>
     <div class="col-12">
         <div class="card">
             <div class="card-body">

@@ -170,5 +170,10 @@
         <script src="{{ asset('assets_admin/js/vendor/fixedColumns.bootstrap5.min.js') }}"></script>
         <script src="{{ asset('assets_admin/js/vendor/fixedHeader.bootstrap5.min.js') }}"></script>
         <script src="{{ asset('assets_admin/js/pages/demo.datatable-init.js') }}"></script>
+
+        {{-- custom scripts --}}
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script src="{{ asset('assets/js/customVars.js') }}"></script>
+        <script src="{{ asset('assets_admin/js/import.js') }}"></script>
     </body>
 </html>
