@@ -12,6 +12,35 @@ $(document).ready(function () {
 
     $('.btn-hoy').trigger('click');
 
+
+    /* INPUT NUMBER DE JORNADA DESKTOP */
+    var input = $('#jornada_actual'),
+        input_val = parseInt(input.val()),
+        btn_add = $('.jornada_actual_add'),
+        btn_remove = $('.jornada_actual_remove');
+
+    input.keyup(function () {
+        input_val = parseInt(input.val())
+    });
+
+    btn_add.click(function (e) {
+        if (e.shiftKey) {
+            input_val += 10
+        } else {
+            input_val++
+        }
+        input.val(input_val);
+    });
+
+    btn_remove.click(function (e) {
+        if (input_val > 11 && e.shiftKey) {
+            input_val -= 10
+        } else if (input_val > 1) {
+            input_val--
+        }
+        input.val(input_val);
+    });
+
 })
 
 // verificamos si es mobile o no para eliminar elementos en la vista DESKTOP Y MOBILE
@@ -24,6 +53,8 @@ const is_mobile = () => {
         return true
     }
 }
+
+
 
 //ESTO ES PARA EL CALENDARIO DE LA HOME
 
@@ -219,3 +250,4 @@ function nextDay() {
 }
 
 document.onload = generateCalendar(date);
+

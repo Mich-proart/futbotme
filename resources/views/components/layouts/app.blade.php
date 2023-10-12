@@ -58,7 +58,8 @@
                             @include('components.menuphp')                       
                         </div>
                         <div class="content-publi-left mt-5">
-                            <div class="publi2"></div>
+                            {{-- <div class="publi2"></div> --}}
+                            <img src="{{ asset('assets/images/test_publi2.png') }}" alt="test_publi" class="img-fluid">
                         </div>
                     </div>
 
@@ -68,11 +69,12 @@
                     </div>
 
                     <div class="col-lg-2 col-12 pt-5">
-                        <div class="publi3">
+                        {{-- <div class="publi3">
                             <div class="invisible">
                                 publicidad publicidad publicidad publicidad publicidad publicidad
                             </div>
-                        </div>
+                        </div> --}}
+                        <img src="{{ asset('assets/images/test_publi3.png') }}" alt="test_publi" class="img-fluid">
                     </div>
                 </div>
             </div>

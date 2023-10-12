@@ -40,6 +40,10 @@
     background-color: var(--color-gray);
 }
 
+.bg-gray-light {
+    background-color: var(--color-gray-light);
+}
+
 .bg-gray-hora {
     background-color: var(--color-gray-hora);
 }
