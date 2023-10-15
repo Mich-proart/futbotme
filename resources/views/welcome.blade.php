@@ -145,9 +145,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -156,8 +158,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -222,9 +226,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -233,8 +239,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -300,9 +308,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
@@ -316,8 +326,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -397,9 +409,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -408,8 +422,10 @@
                                     <span class="goles-visitante">-</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -444,9 +460,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -455,8 +473,10 @@
                                     <span class="goles-visitante">-</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -491,9 +511,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
@@ -507,8 +529,10 @@
                                     <span class="goles-visitante">16</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>

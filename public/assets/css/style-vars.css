@@ -26,9 +26,9 @@
   --color-red:#F24822;
   --color-red-minutos:#9D1F3D;
   --fs-large:16px;
-  --fs-standar: 14px;
-  --fs-small:12px;
-  --fs-small-xs:10px;
+  --fs-standar: 16px;/* 14px */
+  --fs-small:14px;/* 12px */
+  --fs-small-xs:12px;/* 10px */
   --border-silver-1: 1px solid #BBBBBB;
   --border-green-second-1: 1px solid #99CCAF;
   --border-grey: 1px solid #F0F0F0;
@@ -40,7 +40,7 @@
   :root {        
     --fs-large:18px;
     --fs-standar: 16px;
-    --fs-small:14px;
-    --fs-small-xs:12px;
+    --fs-small:16px;/* 14px */
+    --fs-small-xs:14px; /* 12px */
   }
 }

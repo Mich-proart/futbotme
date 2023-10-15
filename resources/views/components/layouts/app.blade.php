@@ -57,7 +57,7 @@
                         <div class="content-navbar">
                             @include('components.menuphp')                       
                         </div>
-                        <div class="content-publi-left mt-5">
+                        <div class="content-publi-left mt-5 d-lg-block d-none">
                             {{-- <div class="publi2"></div> --}}
                             <img src="{{ asset('assets/images/test_publi2.png') }}" alt="test_publi" class="img-fluid">
                         </div>

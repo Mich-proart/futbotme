@@ -2,7 +2,7 @@
 
 
 
-    <section class="header_cat px-lg-4 px-0 py-4 my-3">
+    <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
             <div class="rounded-circle bandera_pais">
                 <img src="https://flagcdn.com/es.svg" width="32" height="32" alt="bandera del pais del torneo"
@@ -16,40 +16,40 @@
             partido, que materializan 128 victorias locales, 100 empates y 78 victorias visitantes.</p>
     </section>
     <section>
-        <ul class="nav nav-pills mb-3" id="pills_tab_cat" role="tablist">
+        <ul class="nav nav-pills mb-3 justify-content-lg-start justify-content-center pb-2" id="pills_tab_cat"
+            role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3 active" id="pills-jornada-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3 active" id="pills-jornada-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-jornada" type="button" role="tab"
                     aria-controls="pills-jornada" aria-selected="true">Jornada</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3" id="pills-goleadores-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-goleadores-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-goleadores" type="button" role="tab"
                     aria-controls="pills-goleadores" aria-selected="false">Goleadores</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3" id="pills-equipo-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-equipo-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-equipo" type="button" role="tab"
                     aria-controls="pills-equipo" aria-selected="false">Equipo</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3" id="pills-calendario-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-calendario-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-calendario" type="button" role="tab"
                     aria-controls="pills-calendario" aria-selected="false">Calendario</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3" id="pills-fichajes-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-fichajes-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-fichajes" type="button" role="tab"
                     aria-controls="pills-fichajes" aria-selected="false">Fichajes</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3"
-                    id="pills-ascensos-descensos-tab" data-bs-toggle="pill" data-bs-target="#pills-ascensos-descensos"
-                    type="button" role="tab" aria-controls="pills-ascensos-descensos"
-                    aria-selected="false">Ascensos y descensos</button>
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-ascensos-descensos-tab"
+                    data-bs-toggle="pill" data-bs-target="#pills-ascensos-descensos" type="button" role="tab"
+                    aria-controls="pills-ascensos-descensos" aria-selected="false">Ascensos y descensos</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-lg-0 mb-3" id="pills-golaverage-tab"
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-golaverage-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-golaverage" type="button" role="tab"
                     aria-controls="pills-golaverage" aria-selected="false">Calcular Golaverage</button>
             </li>
@@ -96,9 +96,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid">
                                 </div>
                             </div>
 
@@ -108,8 +110,10 @@
                                 <span class="goles-visitante">0</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid">
                                 </div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
@@ -146,9 +150,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid">
                                 </div>
                             </div>
 
@@ -158,8 +164,10 @@
                                 <span class="goles-visitante">0</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid">
                                 </div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
@@ -195,9 +203,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid">
                                 </div>
                             </div>
 
@@ -207,8 +217,10 @@
                                 <span class="goles-visitante">0</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid">
                                 </div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
@@ -244,9 +256,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid"></div>
                             </div>
 
                             <div class="col-auto marcador px-lg-4 px-3">
@@ -255,8 +269,10 @@
                                 <span class="goles-visitante">-</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid"></div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
                         </div>
@@ -291,9 +307,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid"></div>
                             </div>
 
                             <div class="col-auto marcador px-lg-4 px-3">
@@ -302,8 +320,10 @@
                                 <span class="goles-visitante">-</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid"></div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
                         </div>
@@ -338,9 +358,11 @@
                         </div>
                         <div
                             class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                            <div class="local">
+                            <div class="local col-5">
                                 <h3 class="d-inline-block">Real Madrid</h3>
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2829.png"
+                                        class="logo_s img-fluid"></div>
                                 <div class="goleadores">
                                     <span class="d-block">0-1, Amath - 21´</span>
                                     <span class="d-block">0-2, Joan - 30´</span>
@@ -354,8 +376,10 @@
                                 <span class="goles-visitante">16</span>
                             </div>
 
-                            <div class="visitante">
-                                <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                            <div class="visitante col-5">
+                                <div class="escudo d-lg-inline-block d-none"><img
+                                        src="https://assets.b365api.com/images/team/m/2817.png"
+                                        class="logo_s img-fluid"></div>
                                 <h3 class="d-inline-block">FC Barcelona</h3>
                             </div>
                         </div>
@@ -614,20 +638,20 @@
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
-                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid">
+                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid" class="img-fluid">
                                 </a>
                             </div>
 
                             <div class="nombre">
-                                <a class="text-decoration-none fs-01 color-black fw-medium"
-                                    href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415"> Real
+                                <a class="text-decoration-none fs-03 color-black fw-semibold"
+                                    href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415" class="img-fluid"> Real
                                     Madrid</a>
                             </div>
 
                             <div class="indumentaria">
                                 <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
                                     <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq369.png" alt="">
+                                        src="https://futbolme.com//static/img/equipaciones/eq369.png" alt="" class="img-fluid">
                                 </a>
                             </div>
 
@@ -635,19 +659,19 @@
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="#">
-                                    <img src="https://assets.b365api.com/images/team/b/2817.png" alt="Real Madrid">
+                                    <img src="https://assets.b365api.com/images/team/b/2817.png" alt="Real Madrid" class="img-fluid">
                                 </a>
                             </div>
 
                             <div class="nombre">
-                                <a class="text-decoration-none fs-01 color-black fw-medium" href="#"> FC
+                                <a class="text-decoration-none fs-03 color-black fw-semibold" href="#"> FC
                                     Barcelona</a>
                             </div>
 
                             <div class="indumentaria">
                                 <a href="#">
                                     <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq699.png" alt="">
+                                        src="https://futbolme.com//static/img/equipaciones/eq699.png" alt="" class="img-fluid">
                                 </a>
                             </div>
 
@@ -692,9 +716,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                 </div>
 
@@ -704,8 +730,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
@@ -740,9 +768,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                 </div>
 
@@ -752,8 +782,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
@@ -788,9 +820,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                 </div>
 
@@ -800,8 +834,10 @@
                                     <span class="goles-visitante">0</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
@@ -841,9 +877,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -852,8 +890,10 @@
                                     <span class="goles-visitante">-</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -888,9 +928,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                 </div>
 
                                 <div class="col-auto marcador px-lg-4 px-3">
@@ -899,8 +941,10 @@
                                     <span class="goles-visitante">-</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -940,9 +984,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
@@ -956,8 +1002,10 @@
                                     <span class="goles-visitante">16</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -992,9 +1040,11 @@
                             </div>
                             <div
                                 class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                                <div class="local">
+                                <div class="local col-5">
                                     <h3 class="d-inline-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid"></div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
@@ -1008,8 +1058,10 @@
                                     <span class="goles-visitante">16</span>
                                 </div>
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><i class="bi bi-shield"></i></div>
+                                <div class="visitante col-5">
+                                    <div class="escudo d-lg-inline-block d-none"><img
+                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid"></div>
                                     <h3 class="d-inline-block">FC Barcelona</h3>
                                 </div>
                             </div>
@@ -1029,19 +1081,18 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button
-                                class="d-flex align-items-center justify-content-between accordion-button bg-silver-medium"
+                                class="d-flex align-items-center justify-content-between accordion-button bg-green-directo"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                                 aria-expanded="false" aria-controls="flush-collapseOne">
                                 <div class="escudo_nombre">
 
-                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid">
-                                    <span class="text-decoration-none fs-01 color-black fw-medium"> Real
+                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid" class="img-fluid">
+                                    <span class="text-decoration-none fs-03 color-black fw-semibold"> Real
                                         Madrid</span>
                                 </div>
 
-                                <div class="rounded-circle bandera_pais">
-                                    <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                        alt="bandera del pais del torneo" class="rounded-circle">
+                                <div class="indumentaria">
+                                    <img src="https://futbolme.com//static/img/equipaciones/eq369.png" alt="" class="img-fluid">
                                 </div>
                             </button>
                         </h2>
@@ -1072,7 +1123,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button
-                                class="d-flex align-items-center justify-content-between accordion-button bg-silver-medium collapsed"
+                                class="d-flex align-items-center justify-content-between accordion-button bg-green-directo collapsed"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
                                 aria-expanded="false" aria-controls="flush-collapseTwo">
                                 <div class="escudo_nombre">
@@ -1113,7 +1164,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button
-                                class="d-flex align-items-center justify-content-between accordion-button bg-silver-medium collapsed"
+                                class="d-flex align-items-center justify-content-between accordion-button bg-green-directo collapsed"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                                 aria-expanded="false" aria-controls="flush-collapseThree">
                                 <div class="escudo_nombre">

@@ -176,10 +176,11 @@ body {
 .visitante h3 {
     color: var(--color-black, #252525);
 
-    font-size: 14px;
+    font-size: 16px; /* 14px */
     font-style: normal;
     font-weight: 600;
     line-height: 20px; /* 142.857% */
+    margin-bottom: 0px;
 }
 
 .marcador * {
@@ -321,6 +322,17 @@ body {
 
 /* CATEGORIAS: LIGAS Y TORNEOS */
 
+#pills_tab_cat {
+    border-radius: 6px;
+    background: var(--color-green-second, #99ccaf);
+    padding: 1.5rem;
+}
+
+.header_cat {
+    border-radius: 6px;
+    background: var(--color-silver-medium, #dfdede);
+}
+
 #pills_tab_cat .nav-link {
     color: var(--color-black, #252525);
     border-radius: 3px;
@@ -399,6 +411,14 @@ body {
     --bs-table-hover-bg: #e5e6e7;
 }
 
+/* EQUIPO */
+
+.indumentaria img,
+#pills-equipo .escudo img,
+.escudo_nombre img {
+    max-height: 60px;
+}
+
 /* CALENDARIO */
 .fecha_calendario_cat {
     color: var(--color-brand-green, #025325);
@@ -410,10 +430,10 @@ body {
 
 /* FICHAJES */
 #accordionFichajes .accordion-button:not(.collapsed) {
-    background-color: var(--color-silver-medium);
+    background-color: var(--color-green-directo);
 }
 
-#accordionFichajes .accordion-button:focus{
+#accordionFichajes .accordion-button:focus {
     outline: none;
     box-shadow: none !important;
 }
@@ -449,6 +469,7 @@ body {
     }
 
     /* CATEGORIAS: LIGAS Y TORNEOS */
+
     #pills_tab_cat .nav-link {
         background: var(--color-silver-medium, #dfdede);
     }
@@ -492,15 +513,6 @@ body {
     }
 
     /* CATEGORIAS: LIGAS Y TORNEOS */
-    .header_cat {
-        border-radius: 6px;
-        background: var(--color-silver-medium, #dfdede);
-    }
-    #pills_tab_cat {
-        border-radius: 6px;
-        background: var(--color-green-second, #99ccaf);
-        padding: 1.5rem;
-    }
 
     #pills_tab_cat .nav-link {
         color: var(--color-black, #252525);
