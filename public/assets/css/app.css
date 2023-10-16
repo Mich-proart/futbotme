@@ -22,12 +22,15 @@ body {
 .fs-000 {
     font-size: var(--fs-small-xs);
 }
+
 .fs-00 {
     font-size: var(--fs-small);
 }
+
 .fs-01 {
     font-size: var(--fs-standar);
 }
+
 .fs-03 {
     font-size: var(--fs-large);
 }
@@ -109,9 +112,11 @@ body {
 .w-15 {
     width: 15%;
 }
+
 .va-middle {
     vertical-align: middle;
 }
+
 .va-top {
     vertical-align: top;
 }
@@ -140,6 +145,7 @@ body {
     background-color: #fff;
     border: var(--border-grey);
 }
+
 .accordion-button::after {
     content: none;
 }
@@ -155,7 +161,8 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
     text-transform: uppercase;
     margin-bottom: 0px !important;
 }
@@ -176,10 +183,12 @@ body {
 .visitante h3 {
     color: var(--color-black, #252525);
 
-    font-size: 16px; /* 14px */
+    font-size: 16px;
+    /* 14px */
     font-style: normal;
     font-weight: 600;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
+    /* 142.857% */
     margin-bottom: 0px;
 }
 
@@ -188,7 +197,8 @@ body {
     font-size: var(--fs-large);
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 120% */
+    line-height: 24px;
+    /* 120% */
 }
 
 /* PARTIDOS EN DIRECTO */
@@ -224,10 +234,10 @@ body {
 
 #PartidosEnDirecto .goles-local,
 #PartidosEnDirecto .goles-visitante,
-#PartidosEnDirecto .goles-local + span,
+#PartidosEnDirecto .goles-local+span,
 .PartidosEnDirecto .goles-local,
 .PartidosEnDirecto .goles-visitante,
-.PartidosEnDirecto .goles-local + span {
+.PartidosEnDirecto .goles-local+span {
     color: var(--color-red);
 }
 
@@ -236,6 +246,19 @@ body {
     border-radius: 3px;
     font-size: 13px;
 }
+
+/* Regla para .bg_1_minutos a .bg_45_minutos */
+[class^="bg_"][class$="_minutos"]:not(.bg_46_minutos):not(.bg_47_minutos) {
+    background-color: var(--color-green-minutos);
+}
+
+/* Regla para .bg_46_minutos a .bg_120_minutos */
+.bg_46_minutos,
+.bg_47_minutos,
+[class^="bg_"][class*="minutos"][class$="_minutos"]:not(.bg_1_minutos):not(.bg_2_minutos) {
+    background-color: var(--color-red-minutos);
+}
+
 
 /* FUTUROS Y FINALIZADOS */
 
@@ -262,6 +285,7 @@ body {
     /* box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); */
     box-shadow: none !important;
 }
+
 #PartidosFuturos .jornada_tiempo,
 .PartidosFuturos .jornada_tiempo {
     font-weight: 500;
@@ -270,10 +294,10 @@ body {
 
 #PartidosFuturos .partido_futuro .goles-local,
 #PartidosFuturos .partido_futuro .goles-visitante,
-#PartidosFuturos .partido_futuro .goles-local + span,
+#PartidosFuturos .partido_futuro .goles-local+span,
 .PartidosFuturos .partido_futuro .goles-local,
 .PartidosFuturos .partido_futuro .goles-visitante,
-.PartidosFuturos .partido_futuro .goles-local + span {
+.PartidosFuturos .partido_futuro .goles-local+span {
     font-size: var(--fs-large);
     color: var(--color-gray);
     font-weight: 700;
@@ -292,10 +316,10 @@ body {
 
 #PartidosFuturos .partido_finalizado .goles-local,
 #PartidosFuturos .partido_finalizado .goles-visitante,
-#PartidosFuturos .partido_finalizado .goles-local + span,
+#PartidosFuturos .partido_finalizado .goles-local+span,
 .PartidosFuturos .partido_finalizado .goles-local,
 .PartidosFuturos .partido_finalizado .goles-visitante,
-.PartidosFuturos .partido_finalizado .goles-local + span {
+.PartidosFuturos .partido_finalizado .goles-local+span {
     font-size: var(--fs-large);
     color: var(--color-brand-green);
     font-weight: 700;
@@ -309,6 +333,7 @@ body {
     color: var(--color-black);
     font-size: 13px;
 }
+
 /* ESTILOS PARA TODOS LOS PARTIDO */
 
 .goleadores span {
@@ -341,7 +366,7 @@ body {
 }
 
 #pills_tab_cat.nav-pills .nav-link.active,
-#pills_tab_cat.nav-pills .show > .nav-link {
+#pills_tab_cat.nav-pills .show>.nav-link {
     border-radius: 3px;
     color: #fff;
     background-color: var(--color-brand-green, #025325);
@@ -359,7 +384,7 @@ body {
     padding: 1rem 0.5rem;
 }
 
-.table#latabla > :not(caption) > * > * {
+.table#latabla> :not(caption)>*>* {
     border-bottom-width: 4px;
     border-color: #f7f7f7;
 }
@@ -401,7 +426,7 @@ body {
     line-height: 26px;
 }
 
-.table#tabla_goleadores > :not(caption) > * > * {
+.table#tabla_goleadores> :not(caption)>*>* {
     border-bottom-width: 4px;
     border-color: #f7f7f7;
 }
@@ -477,6 +502,7 @@ body {
 
 /* desktop media */
 @media (min-width: 992px) {
+
     /* espacios laterales genericos */
     .container-fluid-custom {
         padding-left: 60px;
@@ -504,10 +530,12 @@ body {
         height: 400px;
         background: #093654;
     }
+
     .flotante-menu-mobile {
         z-index: 2;
         position: relative;
     }
+
     .local {
         text-align: right;
     }
@@ -538,6 +566,7 @@ body {
         position: relative;
         background: #818583;
     }
+
     .wrapper::before {
         content: "JORNADA";
         position: absolute;
@@ -583,13 +612,16 @@ body {
         -ms-user-select: none;
         user-select: none;
     }
+
     .input-button:hover {
         background: var(--color-gray-contrast, #565656);
     }
+
     .input-button.jornada_actual_add {
         top: 0;
         right: 1px;
     }
+
     .input-button.jornada_actual_remove {
         bottom: 0;
         right: 1px;

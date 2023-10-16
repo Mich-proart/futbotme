@@ -17,32 +17,35 @@ const partidosDirecto = (respuesta) => {
 
         let obj = `
         <div class="accordion-item br-0">
-            <h2 class="accordion-header d-flex align-items-center justify-content-between" id="panelsStayOpen-heading-${iterator.id}">
+            <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
+                id="panelsStayOpen-heading${iterator.id}">
 
-                <div class="d-block py-2 px-4">
-                    <span class="icon-resolve-filled">
-                        <span class="path1"></span>
-                        <span class="path2"></span>
-                        <span class="path3"></span>
-                    </span>
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+                    <div class="d-block ps-4">
+                        <span class="icon-resolve-filled">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </span>
+                    </div>
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
+                    </div>
+
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">${iterator.league.name} <span>-</span> RFEF
+                    </h3>
                 </div>
 
-                <div class="py-2 col-lg-10 col">
-                    <i class="bi bi-x-square fs-4 pe-2"></i>
-                    <h3 class="d-inline-block color-black fs-01">${iterator.league.name}</h3>
-                    <span>-</span>
-                    <h4 class="fs-00 d-lg-inline-block">RFEF</h4>
-                </div>
-
-                <button class="accordion-button w-auto py-3 px-4" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapse-${iterator.id}" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapse-${iterator.id}">
-                    <i class="color-gray-medium bi bi-chevron-up fs-3"></i>
+                <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${iterator.id}" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapse${iterator.id}">
+                    <i class="bi bi-chevron-up fs-3"></i>
                 </button>
             </h2>
-            
-            <div id="panelsStayOpen-collapse-${iterator.id}" class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-heading-${iterator.id}">
+            <div id="panelsStayOpen-collapse${iterator.id}" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-heading${iterator.id}">
                 <div class="accordion-body border-bottom">
                     <div class="d-flex aling-items-center justify-content-between ">
                         <div class="col-2 d-flex aling-items-center ">
@@ -54,25 +57,27 @@ const partidosDirecto = (respuesta) => {
                                 </span>
                             </div>
                             <div>
-                                <span class="mx-4 hora d-inline-block mt-2 fw-bold">17:30</span>
+                                <span
+                                    class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-${iterator.timer.tm}-minutos text-white">${iterator.timer.tm}’</span>
                             </div>
 
                         </div>
-                        <span class="fs-00 d-grid grid-center-xy jornada_tiempo">${iterator.timer.tm}’</span>
-                        <div class="col-2">
-                            <span class="icon-TV d-inline-block fs-1 d-grid grid-center-xy"></span>
+
+                        <div
+                            class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                            <span class="icon-alienacion d-inline-block fs-1"></span>
+                            <span class="icon-ball d-inline-block fs-1"></span>
+                            <span class="icon-TV d-inline-block fs-1"></span>
                         </div>
 
                     </div>
                     <div
                         class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                        <div class="local">
-                            <img src="https://assets.b365api.com/images/team/m/${iterator.home.image_id}.png" class="logo_s img-fluid">
-                            <h3 class="d-inline-block color-black fs-01">
-                                ${iterator.home.name} 
-                            </h3>
-                            <div class="goleadores text-end">
-                            </div>
+                        <div class="local col-5">
+                            <h3 class="d-inline-block">${iterator.home.name} </h3>
+                            <div class="escudo d-lg-inline-block d-none"><img
+                                    src="https://assets.b365api.com/images/team/m/${iterator.home.image_id}.png"
+                                    class="logo_s img-fluid"></div>
                         </div>
 
                         <div class="col-auto marcador px-lg-4 px-3">
@@ -81,20 +86,17 @@ const partidosDirecto = (respuesta) => {
                             <span class="goles-visitante">${iterator.scores[1].away}</span>
                         </div>
 
-                        <div class="visitante">
-                            <img src="https://assets.b365api.com/images/team/m/${iterator.away.image_id}.png" class="logo_s img-fluid">
-                            <h3 class="d-inline-block color-black fs-01">
-                                ${iterator.away.name}
-                            </h3>
-                            <div class="goleadores">
-                            </div>
+                        <div class="visitante col-5">
+                            <div class="escudo d-lg-inline-block d-none"><img
+                                    src="https://assets.b365api.com/images/team/m/${iterator.away.image_id}.png"
+                                    class="logo_s img-fluid"></div>
+                            <h3 class="d-inline-block">${iterator.away.name}</h3>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>`
-
         jQuery(contentPartidos).append(obj);
 
         console.log(iterator)
