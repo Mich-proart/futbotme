@@ -58,7 +58,7 @@ const partidosDirecto = (respuesta) => {
                             </div>
                             <div>
                                 <span
-                                    class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-${iterator.timer.tm}-minutos text-white">${iterator.timer.tm}’</span>
+                                    class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_${iterator.timer.tm}_minutos text-white">${iterator.timer.tm}’</span>
                             </div>
 
                         </div>
