@@ -83,7 +83,7 @@ const partidosDirecto = (respuesta) => {
                         <div class="col-auto marcador px-lg-4 px-3">
                             <span class="goles-local">${iterator.scores[1].home}</span>
                             <span class="fs-01 color-red">-</span>
-                            <span class="goles-visitante">${iterator.scores[1].away}</span>
+                            <span class="goles-visitante">${iterator.scores[2].away}</span>
                         </div>
 
                         <div class="visitante col-5">
