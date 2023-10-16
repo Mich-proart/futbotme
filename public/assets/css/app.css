@@ -248,15 +248,28 @@ body {
 }
 
 /* Regla para .bg_1_minutos a .bg_45_minutos */
-[class^="bg_"][class$="_minutos"]:not(.bg_46_minutos):not(.bg_47_minutos) {
+/* [class^="bg_"][class$="_minutos"]:not(.bg_46_minutos):not(.bg_47_minutos) {
     background-color: var(--color-green-minutos);
-}
+} */
 
 /* Regla para .bg_46_minutos a .bg_120_minutos */
-.bg_46_minutos,
+/* .bg_46_minutos,
 .bg_47_minutos,
 [class^="bg_"][class*="minutos"][class$="_minutos"]:not(.bg_1_minutos):not(.bg_2_minutos) {
     background-color: var(--color-red-minutos);
+} */
+
+
+/* Para .bg_1_minutos a .bg_45_minutos */
+[class^="bg_"][class*="_minutos"]:nth-child(n+1):nth-child(-n+45) {
+    /* Reglas que deseas aplicar */
+    background-color: #002e14;
+}
+
+/* Para .bg_46_minutos a .bg_120_minutos */
+[class^="bg_"][class*="_minutos"]:nth-child(n+46):nth-child(-n+120) {
+    /* Reglas que deseas aplicar */
+    background-color: #002e14;
 }
 
 
