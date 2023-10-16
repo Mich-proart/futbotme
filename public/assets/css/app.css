@@ -259,18 +259,16 @@ body {
     background-color: var(--color-red-minutos);
 } */
 
-
-/* Para .bg_1_minutos a .bg_45_minutos */
-[class^="bg_"][class*="_minutos"]:nth-child(n+1):nth-child(-n+45) {
-    /* Reglas que deseas aplicar */
+/* Para clases en el rango de .bg_1_minutos a .bg_45_minutos */
+[class^="bg_"][class*="minutos"]:not([class*="bg_46_minutos"]):not([class*="bg_47_minutos"]) {
     background-color: #002e14;
 }
 
-/* Para .bg_46_minutos a .bg_120_minutos */
-[class^="bg_"][class*="_minutos"]:nth-child(n+46):nth-child(-n+120) {
-    /* Reglas que deseas aplicar */
+/* Para clases en el rango de .bg_46_minutos a .bg_120_minutos */
+[class^="bg_"][class*="minutos"][class*="bg_46_minutos"], [class^="bg_"][class*="minutos"][class*="bg_47_minutos"], [class^="bg_"][class*="minutos"][class*="bg_48_minutos"] /* Continúa esta secuencia para el rango deseado */ {
     background-color: #002e14;
 }
+
 
 
 /* FUTUROS Y FINALIZADOS */
