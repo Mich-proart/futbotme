@@ -248,25 +248,103 @@ body {
 }
 
 /* Regla para .bg_1_minutos a .bg_45_minutos */
-/* [class^="bg_"][class$="_minutos"]:not(.bg_46_minutos):not(.bg_47_minutos) {
+.bg_1_minutos,
+.bg_2_minutos,
+.bg_3_minutos,
+.bg_4_minutos,
+.bg_5_minutos,
+.bg_6_minutos,
+.bg_7_minutos,
+.bg_8_minutos,
+.bg_9_minutos,
+.bg_10_minutos,
+.bg_11_minutos,
+.bg_12_minutos,
+.bg_13_minutos,
+.bg_14_minutos,
+.bg_15_minutos,
+.bg_16_minutos,
+.bg_17_minutos,
+.bg_18_minutos,
+.bg_19_minutos,
+.bg_20_minutos,
+.bg_21_minutos,
+.bg_22_minutos,
+.bg_23_minutos,
+.bg_24_minutos,
+.bg_25_minutos,
+.bg_26_minutos,
+.bg_27_minutos,
+.bg_28_minutos,
+.bg_29_minutos,
+.bg_30_minutos,
+.bg_31_minutos,
+.bg_32_minutos,
+.bg_33_minutos,
+.bg_34_minutos,
+.bg_35_minutos,
+.bg_36_minutos,
+.bg_37_minutos,
+.bg_38_minutos,
+.bg_39_minutos,
+.bg_40_minutos,
+.bg_41_minutos,
+.bg_42_minutos,
+.bg_43_minutos,
+.bg_44_minutos,
+.bg_45_minutos {
     background-color: var(--color-green-minutos);
-} */
-
-/* Regla para .bg_46_minutos a .bg_120_minutos */
-/* .bg_46_minutos,
-.bg_47_minutos,
-[class^="bg_"][class*="minutos"][class$="_minutos"]:not(.bg_1_minutos):not(.bg_2_minutos) {
-    background-color: var(--color-red-minutos);
-} */
-
-/* Para clases en el rango de .bg_1_minutos a .bg_45_minutos */
-[class^="bg_"][class*="minutos"]:not([class*="bg_46_minutos"]):not([class*="bg_47_minutos"]) {
-    background-color: #002e14;
 }
 
-/* Para clases en el rango de .bg_46_minutos a .bg_120_minutos */
-[class^="bg_"][class*="minutos"][class*="bg_46_minutos"], [class^="bg_"][class*="minutos"][class*="bg_47_minutos"], [class^="bg_"][class*="minutos"][class*="bg_48_minutos"] /* Continúa esta secuencia para el rango deseado */ {
-    background-color: #002e14;
+/* Regla para .bg_46_minutos a .bg_120_minutos */
+.bg_46_minutos,
+.bg_47_minutos,
+.bg_48_minutos,
+.bg_49_minutos,
+.bg_50_minutos,
+.bg_51_minutos,
+.bg_52_minutos,
+.bg_53_minutos,
+.bg_54_minutos,
+.bg_55_minutos,
+.bg_56_minutos,
+.bg_57_minutos,
+.bg_58_minutos,
+.bg_59_minutos,
+.bg_60_minutos,
+.bg_61_minutos,
+.bg_62_minutos,
+.bg_63_minutos,
+.bg_64_minutos,
+.bg_65_minutos,
+.bg_66_minutos,
+.bg_67_minutos,
+.bg_68_minutos,
+.bg_69_minutos,
+.bg_70_minutos,
+.bg_71_minutos,
+.bg_72_minutos,
+.bg_73_minutos,
+.bg_74_minutos,
+.bg_75_minutos,
+.bg_76_minutos,
+.bg_77_minutos,
+.bg_78_minutos,
+.bg_79_minutos,
+.bg_80_minutos,
+.bg_81_minutos,
+.bg_82_minutos,
+.bg_83_minutos,
+.bg_84_minutos,
+.bg_85_minutos,
+.bg_86_minutos,
+.bg_87_minutos,
+.bg_88_minutos,
+.bg_89_minutos,
+.bg_90_minutos,
+.bg_91_minutos,
+.bg_92_min {
+    background-color: var(--color-red-minutos);
 }
 
 
