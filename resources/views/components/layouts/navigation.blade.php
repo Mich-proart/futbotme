@@ -130,7 +130,8 @@
                         </div>
 
                         <p class="mb-0 color-white">
-                            <a href="{{ url('/partidos') }}" class="enlace-unstyle color-white fs-00 fw-semibold">Partidos Televisados</a></p>
+                            <a href="{{ url('/partidos-televisados') }}" class="enlace-unstyle color-white fs-00 fw-semibold">Partidos Televisados</a>
+                        </p>
 
                     </div>
 

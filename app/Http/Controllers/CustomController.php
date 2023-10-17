@@ -27,9 +27,13 @@ class CustomController extends Controller{
         return view('publicidad');
     }
 
-    public function indexPartidos(){
-
+    /* public function indexPartidos(){
+        ESTABA MAL LA RUTA, ERA LA SIGUIENTE QUE ES PARTIDOS TELEVISADOS
         return view('partidos');
+    } */
+
+    public function indexPartidosTelevisados(){
+        return view('televisados');
     }
 
     public function indexGolAverage(){
@@ -46,9 +50,6 @@ class CustomController extends Controller{
 
         return view('condiciones-uso');
     }
-    public function indexPartidosTelevisados(){
-
-        return view('televisados');
-    }
+    
 
 }
