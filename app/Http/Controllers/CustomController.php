@@ -46,5 +46,9 @@ class CustomController extends Controller{
 
         return view('condiciones-uso');
     }
+    public function indexPartidosTelevisados(){
+
+        return view('partidos-televisados');
+    }
 
 }
