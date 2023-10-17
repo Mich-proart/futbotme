@@ -29,6 +29,8 @@ Route::get('/politica-cookies', [CustomController::class, 'indexPoliticaCookies'
 
 Route::get('/condiciones-uso', [CustomController::class, 'indexCondicionesUso'])->name('condiciones-uso');
 
+Route::get('/partidos-televisados', [CustomController::class, 'indexPartidosTelevisados'])->name('partidos-televisados');
+
 Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'indexCategorias'])->name('categories');
 
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
