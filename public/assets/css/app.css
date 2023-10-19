@@ -192,6 +192,7 @@ body {
     margin-bottom: 0px;
 }
 
+
 .marcador * {
     text-align: center;
     font-size: var(--fs-small);
@@ -201,14 +202,6 @@ body {
     /* 120% */
 }
 
-.partido_alineado{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 15px;
-    align-items: start;
-    justify-content: center;
-    width: auto;
-}
 
 /* PARTIDOS EN DIRECTO */
 
@@ -597,10 +590,33 @@ body {
     #pills_tab_cat .nav-link {
         background: var(--color-silver-medium, #dfdede);
     }
+
+    .local h3{
+        text-align: right;
+    }
+    
+    
+    .partido_alineado{
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        gap: 15px;
+        align-items: start;
+        justify-content: center;
+        width: auto;
+    }
 }
 
 /* desktop media */
 @media (min-width: 992px) {
+
+    .partido_alineado{
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        gap: 15px;
+        align-items: start;
+        justify-content: center;
+        width: auto;
+    }
 
     /* espacios laterales genericos */
     .container-fluid-custom {
