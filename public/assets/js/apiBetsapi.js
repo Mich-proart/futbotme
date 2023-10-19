@@ -72,21 +72,21 @@ const partidosDirecto = (respuesta) => {
 
                     </div>
                     <div
-                        class="row mx-0 row-cols-3 g-0 align-items-start justify-content-lg-center justify-content-between my-2">
-                        <div class="local col-5">
+                        class="mx-0 partido_alineado my-2">
+                        <div class="local">
                             <h3 class="d-inline-block">${iterator.home.name} </h3>
                             <div class="escudo d-lg-inline-block d-none"><img
                                     src="https://assets.b365api.com/images/team/m/${iterator.home.image_id}.png"
                                     class="logo_s img-fluid"></div>
                         </div>
 
-                        <div class="col-auto marcador px-lg-4 px-3">
+                        <div class="marcador px-lg-4 px-3">
                             <span class="goles-local">${iterator.scores[1].home}</span>
                             <span class="fs-01 color-red">-</span>
                             <span class="goles-visitante">${iterator.scores[2].away}</span>
                         </div>
 
-                        <div class="visitante col-5">
+                        <div class="visitante">
                             <div class="escudo d-lg-inline-block d-none"><img
                                     src="https://assets.b365api.com/images/team/m/${iterator.away.image_id}.png"
                                     class="logo_s img-fluid"></div>
