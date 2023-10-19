@@ -205,7 +205,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 15px;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     width: auto;
 }
