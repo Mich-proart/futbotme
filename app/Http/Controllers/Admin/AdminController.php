@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
+
 
 // Controlador para el panel de admin
 class AdminController extends Controller
@@ -30,7 +34,24 @@ class AdminController extends Controller
 
     // function para obtener todos los clubes de comunidades
     public function indexClubes(){
-        return view('admin.club');
+        $clubes = DB::table('club')
+        //->join('pais', 'club.pais_id', '=', 'pais.id')
+        //->select(DB::raw('club.nombre','club.localidad_id','club.pais_id','club.id','club.web','club.codigoRFEF','pais.nombre'))
+        ->select('*')
+        ->limit(10)
+
+
+        // $users = DB::table('jugador')
+        //     ->join('equipo', 'jugador.equipoActual_id', '=', 'equipo.id')
+        //     ->select(DB::raw('jugador.id AS idJugador, jugador.nombre AS nombreJugador, jugador.apellidos AS apellidosJugador, jugador.apodo AS apodoJugador, jugador.sexo AS sexoJugador, jugador.fecha_nacimiento AS fecha_nacimiento_Jugador, jugador.lugar_nacimiento AS lugar_nacimiento_Jugador, jugador.altura AS alturaJugador, jugador.peso AS pesoJugador, jugador.dorsal AS dorsalJugador, jugador.es_fichaje AS es_fichaje_Jugador, jugador.es_baja AS es_baja_Jugador, jugador.posicion AS posicionJugador, equipo.nombre AS nombreEquipo'))
+        //     ->where('jugador.nombre', 'LIKE', '%'.$data.'%')            
+        //     ->get();
+
+
+
+
+        ->get();
+        return view('admin.club', ['clubes' => $clubes]);
     }
 
     // function para obtener todos los jugadores de la base de datos
