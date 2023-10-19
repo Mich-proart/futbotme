@@ -144,7 +144,7 @@
 
                             </div>
                             <div
-                                class="partido_alineado my-2">
+                                class="mx-0 partido_alineado my-2">
                                 <div class="local">
                                     <h3 class="d-inline-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
