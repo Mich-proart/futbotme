@@ -419,7 +419,7 @@ body {
 .PartidosFuturos .partido_finalizado .goles-local,
 .PartidosFuturos .partido_finalizado .goles-visitante,
 .PartidosFuturos .partido_finalizado .goles-local+span {
-    font-size: var(--fs-large);
+    font-size: var(--fs-small);
     color: var(--color-brand-green);
     font-weight: 700;
 }
