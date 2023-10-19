@@ -194,7 +194,7 @@ body {
 
 .marcador * {
     text-align: center;
-    font-size: var(--fs-large);
+    font-size: var(--fs-small);
     font-style: normal;
     font-weight: 700;
     line-height: 24px;

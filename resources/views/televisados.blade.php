@@ -1,11 +1,11 @@
 <x-layouts.app title="PARTIDOS DE FÚTBOL TELEVISADOS" meta-description="PARTIDOS DE FÚTBOL TELEVISADOS page">
 
-    <h1>esto es la pagina de PARTIDOS DE FÚTBOL TELEVISADOS</h1>
+    
     <section class="header_cat p-4 my-3">
-        <div class="d-flex align-items-center mb-3">
-            <h1 class="color-brand-green text-uppercase ps-3 mb-0"> PARTIDOS DE FÚTBOL TELEVISADOS</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="color-brand-green text-uppercase mb-0"> PARTIDOS DE FÚTBOL TELEVISADOS</h1>
             <div class="dropdown">
-                <button class="btn btn-secondary text-white bg-brand-green dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary fs-01 text-white bg-brand-green dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Filtro por canal de TV
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
