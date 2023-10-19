@@ -201,6 +201,15 @@ body {
     /* 120% */
 }
 
+.partido_alineado{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
 /* PARTIDOS EN DIRECTO */
 
 #PartidosEnDirecto .accordion-header {
