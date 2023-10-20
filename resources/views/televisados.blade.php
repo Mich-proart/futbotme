@@ -26,148 +26,186 @@
     {{-- HOY --}}
     <div>
         <h2 class="fecha_calendario_cat mb-4">Jueves, 20 de Abril de 2023</h2>
-        <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
+        <div id="" class="PartidosEnDirecto bg-white pb-lg-4 pb-3 mb-2">
+            <div
+                class="bg-green-livescore d-flex align-items-center justify-content-between text-white px-lg-4 px-3 mb-3">
 
-            <div class="d-flex aling-items-center justify-content-between ">
-                <div class="col-2 d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-red-minutos text-white">74’</span>
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
                     </div>
 
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span>
-                    <span class="icon-TV d-inline-block fs-1"></span>
-                </div>
+                <div class="canales">
 
+                </div>
             </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between ">
+                    <div class="col-2 d-flex aling-items-center ">
+
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-4 bg-red-minutos text-white">74’</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        <span class="icon-alienacion d-inline-block fs-1"></span>
+                        <span class="icon-ball d-inline-block fs-1"></span>
+                        <span class="icon-TV d-inline-block fs-1"></span>
+                    </div>
+
+                </div>
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">4</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">0</span>
+                    </div>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
                     </div>
                 </div>
+            </div>
 
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">4</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">0</span>
+
+        </div>
+        <div id="" class="PartidosEnDirecto bg-white pb-lg-4 pb-3 mb-2">
+            <div
+                class="bg-green-livescore d-flex align-items-center justify-content-between text-white px-lg-4 px-3 mb-3">
+
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
+                    </div>
+
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                <div class="canales">
+
+                </div>
+            </div>
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between ">
+                    <div class="col-2 d-flex aling-items-center ">
+
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
+                        </div>
+
                     </div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        <span class="icon-alienacion d-inline-block fs-1"></span>
+                        <span class="icon-ball d-inline-block fs-1"></span>
+                        <span class="icon-TV d-inline-block fs-1"></span>
+                    </div>
+
+                </div>
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">4</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">0</span>
+                    </div>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
+        <div id="" class="PartidosEnDirecto bg-white pb-lg-4 pb-3 mb-2">
+            <div
+                class="bg-green-livescore d-flex align-items-center justify-content-between text-white px-lg-4 px-3 mb-3">
 
-            <div class="d-flex aling-items-center justify-content-between ">
-                <div class="col-2 d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
                     </div>
 
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span>
-                    <span class="icon-TV d-inline-block fs-1"></span>
-                </div>
+                <div class="canales">
 
-            </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
-                    </div>
-                </div>
-
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">4</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">0</span>
-                </div>
-
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
-                    </div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
                 </div>
             </div>
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between ">
+                    <div class="col-2 d-flex aling-items-center ">
 
-        </div>
-        <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
+                        </div>
 
-            <div class="d-flex aling-items-center justify-content-between ">
-                <div class="col-2 d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
                     </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
+
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        <span class="icon-alienacion d-inline-block fs-1"></span>
+                        <span class="icon-ball d-inline-block fs-1"></span>
+                        <span class="icon-TV d-inline-block fs-1"></span>
                     </div>
 
                 </div>
-
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span>
-                    <span class="icon-TV d-inline-block fs-1"></span>
-                </div>
-
-            </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
                     </div>
-                </div>
 
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">4</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">0</span>
-                </div>
-
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">4</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">0</span>
                     </div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -175,95 +213,125 @@
     {{-- RESTO DE JORNADAS --}}
     <div class="jornadas_anteriores_futuras my-4">
         <h2 class="fecha_calendario_cat mb-4">Martes, 22 de Abril de 2023</h2>
-        <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2">
-            <div class="d-flex aling-items-center justify-content-between partido_futuro">
-                <div class="col d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+        <div id="" class="PartidosFuturos bg-white pb-lg-4 pb-3 mb-2">
+            <div
+                class="bg-silver-medium d-flex align-items-center justify-content-between color-black px-lg-4 px-3 mb-3">
+
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
                     </div>
 
-                </div>
-                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                        30</span></div>
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span> --}}
-                    <span class="icon-TV d-inline-block fs-1"></span>
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
+                <div class="canales">
+
+                </div>
             </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"></div>
-                </div>
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between partido_futuro">
+                    <div class="col d-flex aling-items-center ">
 
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">-</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">-</span>
-                </div>
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                        </div>
 
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid"></div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
+                    <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
+                            30</span></div>
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
+                    <span class="icon-ball d-inline-block fs-1"></span> --}}
+                        <span class="icon-TV d-inline-block fs-1"></span>
+                    </div>
+
+                </div>
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">-</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">-</span>
+                    </div>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2">
-            <div class="d-flex aling-items-center justify-content-between partido_futuro">
-                <div class="col d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+        <div id="" class="PartidosFuturos bg-white pb-lg-4 pb-3 mb-2">
+            <div
+                class="bg-silver-medium d-flex align-items-center justify-content-between color-black px-lg-4 px-3 mb-3">
+
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
                     </div>
 
-                </div>
-                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                        30</span></div>
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span> --}}
-                    <span class="icon-TV d-inline-block fs-1"></span>
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
+                <div class="canales">
+
+                </div>
             </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"></div>
-                </div>
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between partido_futuro">
+                    <div class="col d-flex aling-items-center ">
 
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">-</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">-</span>
-                </div>
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                        </div>
 
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid"></div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
+                    <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
+                            30</span></div>
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
+                    <span class="icon-ball d-inline-block fs-1"></span> --}}
+                        <span class="icon-TV d-inline-block fs-1"></span>
+                    </div>
+
+                </div>
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">-</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">-</span>
+                    </div>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
                 </div>
             </div>
 
@@ -274,53 +342,68 @@
 
     <div class="jornadas_anteriores_futuras my-4">
         <h2 class="fecha_calendario_cat mb-4">Sábado, 04 de Mayo de 2023</h2>
-        <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2 ">
-            <div class="d-flex aling-items-center justify-content-between partido_finalizado">
-                <div class="col d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+        <div id="" class="PartidosFuturos bg-white pb-lg-4 pb-3 mb-2 ">
+            <div
+                class="bg-silver-medium d-flex align-items-center justify-content-between color-black px-lg-4 px-3 mb-3">
+
+                <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+
+                    <div class="d-inline-flex rounded-circle bandera_pais">
+                        <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                            alt="bandera del pais del torneo" class="rounded-circle">
                     </div>
 
-                </div>
-                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                        30</span></div>
-                <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                    <span class="icon-ball d-inline-block fs-1"></span>
-                    <span class="icon-TV d-inline-block fs-1"></span>
+                    <h3 class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey </h3>
                 </div>
 
+                <div class="canales">
+
+                </div>
             </div>
-            <div class="mx-0 partido_alineado my-2 my-2">
-                <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"></div>
-                    <div class="goleadores">
-                        <span class="d-block">0-1, Amath - 21´</span>
-                        <span class="d-block">0-2, Joan - 30´</span>
-                        <span class="d-block">1-3, Ronaldo - 55´</span>
+            <div class="px-lg-4 px-3">
+                <div class="d-flex aling-items-center justify-content-between partido_finalizado">
+                    <div class="col d-flex aling-items-center ">
+
+                        <div>
+                            <span
+                                class="hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                        </div>
+
                     </div>
-                </div>
+                    <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
+                            30</span></div>
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                        <span class="icon-alienacion d-inline-block fs-1"></span>
+                        <span class="icon-ball d-inline-block fs-1"></span>
+                        <span class="icon-TV d-inline-block fs-1"></span>
+                    </div>
 
-                <div class="marcador px-lg-4 px-3">
-                    <span class="goles-local">10</span>
-                    <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante">16</span>
                 </div>
+                <div class="mx-0 partido_alineado my-2 my-2">
+                    <div class="local">
+                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
+                        </div>
+                        <div class="goleadores">
+                            <span class="d-block">0-1, Amath - 21´</span>
+                            <span class="d-block">0-2, Joan - 30´</span>
+                            <span class="d-block">1-3, Ronaldo - 55´</span>
+                        </div>
+                    </div>
 
-                <div class="visitante">
-                    <div class="escudo d-lg-inline-block d-none"><img
-                            src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid"></div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+                    <div class="marcador px-lg-4 px-3">
+                        <span class="goles-local">10</span>
+                        <span class="fs-01 color-red">-</span>
+                        <span class="goles-visitante">16</span>
+                    </div>
+
+                    <div class="visitante">
+                        <div class="escudo d-lg-inline-block d-none"><img
+                                src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
+                        </div>
+                        <h3 class="d-inline-block">FC Barcelona</h3>
+                    </div>
                 </div>
             </div>
 
@@ -329,16 +412,10 @@
         <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2 ">
             <div class="d-flex aling-items-center justify-content-between partido_finalizado">
                 <div class="col d-flex aling-items-center ">
-                    <div class="d-block py-2 px-1 fs-2">
-                        <span class="icon-resolve-filled">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </span>
-                    </div>
+
                     <div>
                         <span
-                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                            class="hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
                     </div>
 
                 </div>

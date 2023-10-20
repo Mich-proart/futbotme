@@ -157,7 +157,6 @@ body {
 /* PARTIDOS EN GENERAL */
 
 .nombre_torneo_liga {
-    color: var(--White, #fff);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

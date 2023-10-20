@@ -24,6 +24,10 @@
     background-color: var(--color-green-directo);
 }
 
+.bg-green-livescore{
+    background-color: var(--color-livescore);
+}
+
 .bg-green-live {
     background-color: var(--color-green-live);
 }
