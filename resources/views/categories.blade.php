@@ -94,17 +94,16 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid">
                                 </div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">4</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">0</span>
@@ -115,7 +114,7 @@
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid">
                                 </div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -148,17 +147,16 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid">
                                 </div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">4</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">0</span>
@@ -169,7 +167,7 @@
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid">
                                 </div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -201,17 +199,16 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid">
                                 </div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">4</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">0</span>
@@ -222,7 +219,7 @@
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid">
                                 </div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -254,16 +251,15 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid"></div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">-</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">-</span>
@@ -273,7 +269,7 @@
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid"></div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -305,16 +301,15 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid"></div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">-</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">-</span>
@@ -324,7 +319,7 @@
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid"></div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -356,10 +351,9 @@
                             </div>
 
                         </div>
-                        <div
-                            class="mx-0 partido_alineado my-2">
+                        <div class="mx-0 partido_alineado my-2">
                             <div class="local">
-                                <h3 class="d-inline-block">Real Madrid</h3>
+                                <h3 class="d-block">Real Madrid</h3>
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2829.png"
                                         class="logo_s img-fluid"></div>
@@ -370,7 +364,7 @@
                                 </div>
                             </div>
 
-                            <div class="marcador px-lg-4 px-3">
+                            <div class="marcador">
                                 <span class="goles-local">10</span>
                                 <span class="fs-01 color-red">-</span>
                                 <span class="goles-visitante">16</span>
@@ -380,7 +374,7 @@
                                 <div class="escudo d-lg-inline-block d-none"><img
                                         src="https://assets.b365api.com/images/team/m/2817.png"
                                         class="logo_s img-fluid"></div>
-                                <h3 class="d-inline-block">FC Barcelona</h3>
+                                <h3 class="d-block">FC Barcelona</h3>
                             </div>
                         </div>
 
@@ -638,20 +632,23 @@
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
-                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid" class="img-fluid">
+                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid"
+                                        class="img-fluid">
                                 </a>
                             </div>
 
                             <div class="nombre">
-                                <a class="text-decoration-none fs-03 color-black fw-semibold"
-                                    href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415" class="img-fluid"> Real
+                                <a class="text-decoration-none fs-22px color-black fw-semibold"
+                                    href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415"
+                                    class="img-fluid"> Real
                                     Madrid</a>
                             </div>
 
                             <div class="indumentaria">
                                 <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
                                     <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq369.png" alt="" class="img-fluid">
+                                        src="https://futbolme.com//static/img/equipaciones/eq369.png" alt=""
+                                        class="img-fluid">
                                 </a>
                             </div>
 
@@ -659,19 +656,21 @@
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="#">
-                                    <img src="https://assets.b365api.com/images/team/b/2817.png" alt="Real Madrid" class="img-fluid">
+                                    <img src="https://assets.b365api.com/images/team/b/2817.png" alt="Real Madrid"
+                                        class="img-fluid">
                                 </a>
                             </div>
 
                             <div class="nombre">
-                                <a class="text-decoration-none fs-03 color-black fw-semibold" href="#"> FC
+                                <a class="text-decoration-none fs-22px color-black fw-semibold" href="#"> FC
                                     Barcelona</a>
                             </div>
 
                             <div class="indumentaria">
                                 <a href="#">
                                     <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq699.png" alt="" class="img-fluid">
+                                        src="https://futbolme.com//static/img/equipaciones/eq699.png" alt=""
+                                        class="img-fluid">
                                 </a>
                             </div>
 
@@ -714,17 +713,16 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">4</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">0</span>
@@ -735,7 +733,7 @@
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -766,17 +764,16 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">4</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">0</span>
@@ -787,7 +784,7 @@
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -818,17 +815,16 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">4</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">0</span>
@@ -839,7 +835,7 @@
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -875,16 +871,15 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">-</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">-</span>
@@ -894,7 +889,7 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -926,16 +921,15 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">-</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">-</span>
@@ -945,7 +939,7 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -982,10 +976,9 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
@@ -996,7 +989,7 @@
                                     </div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">10</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">16</span>
@@ -1006,7 +999,7 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -1038,10 +1031,9 @@
                                 </div>
 
                             </div>
-                            <div
-                                class="mx-0 partido_alineado my-2">
+                            <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-inline-block">Real Madrid</h3>
+                                    <h3 class="d-block">Real Madrid</h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
@@ -1052,7 +1044,7 @@
                                     </div>
                                 </div>
 
-                                <div class="marcador px-lg-4 px-3">
+                                <div class="marcador">
                                     <span class="goles-local">10</span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante">16</span>
@@ -1062,7 +1054,7 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-inline-block">FC Barcelona</h3>
+                                    <h3 class="d-block">FC Barcelona</h3>
                                 </div>
                             </div>
 
@@ -1078,7 +1070,7 @@
             <div class="tab-pane fade" id="pills-fichajes" role="tabpanel" aria-labelledby="pills-fichajes-tab">
                 {{-- FICHAJES --}}
                 <div class="accordion accordion-flush" id="accordionFichajes">
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-3">
                         <h2 class="accordion-header">
                             <button
                                 class="d-flex align-items-center justify-content-between accordion-button bg-green-directo"
@@ -1086,22 +1078,24 @@
                                 aria-expanded="false" aria-controls="flush-collapseOne">
                                 <div class="escudo_nombre">
 
-                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid" class="img-fluid">
-                                    <span class="text-decoration-none fs-03 color-black fw-semibold"> Real
+                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid"
+                                        class="img-fluid">
+                                    <span class="text-decoration-none fs-22px color-black fw-semibold"> Real
                                         Madrid</span>
                                 </div>
 
                                 <div class="indumentaria">
-                                    <img src="https://futbolme.com//static/img/equipaciones/eq369.png" alt="" class="img-fluid">
+                                    <img src="https://futbolme.com//static/img/equipaciones/eq369.png" alt=""
+                                        class="img-fluid">
                                 </div>
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionFichajes">
-                            <div class="accordion-body">
+                            <div class="accordion-body bg-white-light px-0">
 
                                 {{-- jugadores --}}
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center item-fichajes">
                                     <img src="https://futbolme.com/static/img/jugadores/jugador1105.jpg"
                                         alt="" class="img-fluid">
                                     <div class="ps-4">
@@ -1109,7 +1103,7 @@
                                         <p class="fs-00 fw-medium">Procedencia: Celta</p>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center item-fichajes">
                                     <img src="https://futbolme.com/static/img/jugadores/jugador1105.jpg"
                                         alt="" class="img-fluid">
                                     <div class="ps-4">
@@ -1120,7 +1114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-3">
                         <h2 class="accordion-header">
                             <button
                                 class="d-flex align-items-center justify-content-between accordion-button bg-green-directo collapsed"
@@ -1129,20 +1123,20 @@
                                 <div class="escudo_nombre">
 
                                     <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid">
-                                    <span class="text-decoration-none fs-01 color-black fw-medium"> Real
+                                    <span class="text-decoration-none fs-22px color-black fw-semibold"> Real
                                         Madrid</span>
                                 </div>
 
-                                <div class="rounded-circle bandera_pais">
-                                    <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                        alt="bandera del pais del torneo" class="rounded-circle">
+                                <div class="indumentaria">
+                                    <img src="https://futbolme.com//static/img/equipaciones/eq369.png" alt=""
+                                        class="img-fluid">
                                 </div>
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                             data-bs-parent="#accordionFichajes">
-                            <div class="accordion-body">
-                                <div class="d-flex align-items-center">
+                            <div class="accordion-body bg-white-light px-0">
+                                <div class="d-flex align-items-center item-fichajes">
                                     <img src="https://futbolme.com/static/img/jugadores/jugador1105.jpg"
                                         alt="" class="img-fluid">
                                     <div class="ps-4">
@@ -1150,7 +1144,7 @@
                                         <p class="fs-00 fw-medium">Procedencia: Celta</p>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center item-fichajes">
                                     <img src="https://futbolme.com/static/img/jugadores/jugador1105.jpg"
                                         alt="" class="img-fluid">
                                     <div class="ps-4">
@@ -1161,7 +1155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-3">
                         <h2 class="accordion-header">
                             <button
                                 class="d-flex align-items-center justify-content-between accordion-button bg-green-directo collapsed"
@@ -1170,20 +1164,21 @@
                                 <div class="escudo_nombre">
 
                                     <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid">
-                                    <span class="text-decoration-none fs-01 color-black fw-medium"> Real
+                                    <span class="text-decoration-none fs-22px color-black fw-semibold"> Real
                                         Madrid</span>
                                 </div>
 
-                                <div class="rounded-circle bandera_pais">
-                                    <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                        alt="bandera del pais del torneo" class="rounded-circle">
+                                <div class="indumentaria">
+                                    <img src="https://futbolme.com//static/img/equipaciones/eq369.png" alt=""
+                                        class="img-fluid">
                                 </div>
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
                             data-bs-parent="#accordionFichajes">
-                            <div class="accordion-body">
-                                <div class="d-flex align-items-center">
+                            <div class="accordion-body bg-white-light px-0">
+
+                                <div class="d-flex align-items-center item-fichajes">
                                     <img src="https://futbolme.com/static/img/jugadores/jugador1105.jpg"
                                         alt="" class="img-fluid">
                                     <div class="ps-4">

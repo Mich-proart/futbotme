@@ -35,6 +35,10 @@ body {
     font-size: var(--fs-large);
 }
 
+.fs-22px {
+    font-size: var(--fs-ciegos);
+}
+
 /* simulacion cursor */
 .cursor-pointer {
     cursor: pointer;
@@ -140,6 +144,23 @@ body {
     align-items: center;
 }
 
+.subtitle_page {
+    color: var(--color-brand-green);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-transform: uppercase;
+}
+
+.subtitle_page2 {
+    color: var(--color-green-feature, #1fa95a);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+}
+
 /* ACORDEONES */
 .accordion-item {
     background-color: #fff;
@@ -157,13 +178,18 @@ body {
 /* PARTIDOS EN GENERAL */
 
 .nombre_torneo_liga {
-    font-size: 16px;
+    font-size: var(--fs-ciegos);
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     /* 150% */
     text-transform: uppercase;
     margin-bottom: 0px !important;
+    text-decoration: none;
+}
+
+#PartidosEnDirecto .nombre_torneo_liga {
+    color: #fff;
 }
 
 #PartidosFuturos .nombre_torneo_liga {
@@ -182,7 +208,7 @@ body {
 .visitante h3 {
     color: var(--color-black, #252525);
 
-    font-size: 16px;
+    font-size: var(--fs-ciegos);
     /* 14px */
     font-style: normal;
     font-weight: 600;
@@ -191,16 +217,28 @@ body {
     margin-bottom: 0px;
 }
 
-
 .marcador * {
     text-align: center;
-    font-size: var(--fs-small);
+    font-size: var(--fs-ciegos);
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     /* 120% */
 }
 
+.local .escudo {
+    padding-left: 1rem;
+}
+.visitante .escudo {
+    padding-right: 1rem;
+}
+
+.local .goleadores {
+    text-align: right;
+}
+.visitante .goleadores {
+    text-align: left;
+}
 
 /* PARTIDOS EN DIRECTO */
 
@@ -235,17 +273,17 @@ body {
 
 #PartidosEnDirecto .goles-local,
 #PartidosEnDirecto .goles-visitante,
-#PartidosEnDirecto .goles-local+span,
+#PartidosEnDirecto .goles-local + span,
 .PartidosEnDirecto .goles-local,
 .PartidosEnDirecto .goles-visitante,
-.PartidosEnDirecto .goles-local+span {
+.PartidosEnDirecto .goles-local + span {
     color: var(--color-red);
 }
 
 #PartidosEnDirecto .hora,
 .PartidosEnDirecto .hora {
     border-radius: 3px;
-    font-size: 13px;
+    font-size: var(--fs-large);
 }
 
 /* Regla para .bg_1_minutos a .bg_45_minutos */
@@ -348,9 +386,6 @@ body {
     background-color: var(--color-red-minutos);
 }
 
-
-
-
 /* FUTUROS Y FINALIZADOS */
 
 #PartidosFuturos .accordion-header {
@@ -385,11 +420,11 @@ body {
 
 #PartidosFuturos .partido_futuro .goles-local,
 #PartidosFuturos .partido_futuro .goles-visitante,
-#PartidosFuturos .partido_futuro .goles-local+span,
+#PartidosFuturos .partido_futuro .goles-local + span,
 .PartidosFuturos .partido_futuro .goles-local,
 .PartidosFuturos .partido_futuro .goles-visitante,
-.PartidosFuturos .partido_futuro .goles-local+span {
-    font-size: var(--fs-large);
+.PartidosFuturos .partido_futuro .goles-local + span {
+    font-size: var(--fs-ciegos);
     color: var(--color-gray);
     font-weight: 700;
 }
@@ -402,16 +437,16 @@ body {
 .PartidosFuturos .partido_futuro .hora {
     border-radius: 3px;
     color: var(--color-gray-medium);
-    font-size: 13px;
+    font-size: var(--fs-large);
 }
 
 #PartidosFuturos .partido_finalizado .goles-local,
 #PartidosFuturos .partido_finalizado .goles-visitante,
-#PartidosFuturos .partido_finalizado .goles-local+span,
+#PartidosFuturos .partido_finalizado .goles-local + span,
 .PartidosFuturos .partido_finalizado .goles-local,
 .PartidosFuturos .partido_finalizado .goles-visitante,
-.PartidosFuturos .partido_finalizado .goles-local+span {
-    font-size: var(--fs-small);
+.PartidosFuturos .partido_finalizado .goles-local + span {
+    font-size: var(--fs-ciegos);
     color: var(--color-brand-green);
     font-weight: 700;
 }
@@ -422,10 +457,15 @@ body {
     padding: 0.25rem 0.5rem;
     background-color: var(--color-gray);
     color: var(--color-black);
-    font-size: 13px;
+    font-size: var(--fs-large);
 }
 
 /* ESTILOS PARA TODOS LOS PARTIDO */
+
+.goleadores {
+    width: 100%;
+    margin-top: 1rem;
+}
 
 .goleadores span {
     font-size: 11px;
@@ -457,7 +497,7 @@ body {
 }
 
 #pills_tab_cat.nav-pills .nav-link.active,
-#pills_tab_cat.nav-pills .show>.nav-link {
+#pills_tab_cat.nav-pills .show > .nav-link {
     border-radius: 3px;
     color: #fff;
     background-color: var(--color-brand-green, #025325);
@@ -475,7 +515,7 @@ body {
     padding: 1rem 0.5rem;
 }
 
-.table#latabla> :not(caption)>*>* {
+.table#latabla > :not(caption) > * > * {
     border-bottom-width: 4px;
     border-color: #f7f7f7;
 }
@@ -517,7 +557,7 @@ body {
     line-height: 26px;
 }
 
-.table#tabla_goleadores> :not(caption)>*>* {
+.table#tabla_goleadores > :not(caption) > * > * {
     border-bottom-width: 4px;
     border-color: #f7f7f7;
 }
@@ -544,14 +584,51 @@ body {
     line-height: 26px;
 }
 
-/* FICHAJES */
+/* ACORDEONES GENERALES VERDES CLARITOS */
 #accordionFichajes .accordion-button:not(.collapsed) {
     background-color: var(--color-green-directo);
+    border-radius: 6px;
+    border-bottom: 0px;
+    box-shadow: none !important;
 }
 
 #accordionFichajes .accordion-button:focus {
     outline: none;
     box-shadow: none !important;
+    border: 0px;
+}
+
+/* ACORDEONES GENERALES VERDES OSCURO */
+
+#accordionAscensos .accordion-button:not(.collapsed) {
+    background-color: var(--color-brand-green);
+    border-bottom: 0px;
+    box-shadow: none !important;
+}
+
+#accordionAscensos .accordion-button:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: 0px;
+}
+
+/* FICHAJES */
+.item-fichajes {
+    background-color: var(--color-white);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+/* ASCENSOS Y DECENSOS PAGE */
+
+.title_page {
+    color: #025325;
+    font-family: Inter;
+    font-size: var(--fs-ciegos);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
 }
 
 /* +++++++++++++++++ */
@@ -590,12 +667,11 @@ body {
         background: var(--color-silver-medium, #dfdede);
     }
 
-    .local h3{
+    .local h3 {
         text-align: right;
     }
-    
-    
-    .partido_alineado{
+
+    .partido_alineado {
         display: grid;
         grid-template-columns: 40% 20% 40%;
         gap: 15px;
@@ -607,8 +683,7 @@ body {
 
 /* desktop media */
 @media (min-width: 992px) {
-
-    .partido_alineado{
+    .partido_alineado {
         display: grid;
         grid-template-columns: 45% 10% 45%;
         gap: 15px;
@@ -652,6 +727,16 @@ body {
 
     .local {
         text-align: right;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .visitante {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     /* CATEGORIAS: LIGAS Y TORNEOS */

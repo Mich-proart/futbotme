@@ -25,6 +25,7 @@
   --color-gray-medium:#4E4E4E;
   --color-red:#F24822;
   --color-red-minutos:#9D1F3D;
+  --fs-ciegos:16px;
   --fs-large:16px;
   --fs-standar: 16px;/* 14px */
   --fs-small:14px;/* 12px */
@@ -38,6 +39,7 @@
 @media (min-width: 992px) { 
 
   :root {        
+    --fs-ciegos:22px;
     --fs-large:18px;
     --fs-standar: 16px;
     --fs-small:16px;/* 14px */

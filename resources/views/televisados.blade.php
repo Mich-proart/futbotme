@@ -64,13 +64,13 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">4</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">0</span>
@@ -80,7 +80,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -125,13 +125,13 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">4</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">0</span>
@@ -141,7 +141,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -185,13 +185,13 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">4</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">0</span>
@@ -201,7 +201,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -252,13 +252,13 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">-</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">-</span>
@@ -268,7 +268,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -314,13 +314,13 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">-</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">-</span>
@@ -330,7 +330,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -381,7 +381,7 @@
                 </div>
                 <div class="mx-0 partido_alineado my-2 my-2">
                     <div class="local">
-                        <h3 class="d-inline-block">Real Madrid</h3>
+                        <h3 class="d-block">Real Madrid</h3>
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid">
                         </div>
@@ -392,7 +392,7 @@
                         </div>
                     </div>
 
-                    <div class="marcador px-lg-4 px-3">
+                    <div class="marcador">
                         <span class="goles-local">10</span>
                         <span class="fs-01 color-red">-</span>
                         <span class="goles-visitante">16</span>
@@ -402,7 +402,7 @@
                         <div class="escudo d-lg-inline-block d-none"><img
                                 src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid">
                         </div>
-                        <h3 class="d-inline-block">FC Barcelona</h3>
+                        <h3 class="d-block">FC Barcelona</h3>
                     </div>
                 </div>
             </div>
@@ -430,7 +430,7 @@
             </div>
             <div class="mx-0 partido_alineado my-2 my-2">
                 <div class="local">
-                    <h3 class="d-inline-block">Real Madrid</h3>
+                    <h3 class="d-block">Real Madrid</h3>
                     <div class="escudo d-lg-inline-block d-none"><img
                             src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"></div>
                     <div class="goleadores">
@@ -440,7 +440,7 @@
                     </div>
                 </div>
 
-                <div class="marcador px-lg-4 px-3">
+                <div class="marcador">
                     <span class="goles-local">10</span>
                     <span class="fs-01 color-red">-</span>
                     <span class="goles-visitante">16</span>
@@ -449,7 +449,7 @@
                 <div class="visitante">
                     <div class="escudo d-lg-inline-block d-none"><img
                             src="https://assets.b365api.com/images/team/m/2817.png" class="logo_s img-fluid"></div>
-                    <h3 class="d-inline-block">FC Barcelona</h3>
+                    <h3 class="d-block">FC Barcelona</h3>
                 </div>
             </div>
 
