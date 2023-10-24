@@ -1,7 +1,7 @@
 !(function ($) {
     "use strict";
 
-    console.log(urlBase);
+    //console.log(urlBase);
 
     // fichero con el que haremos importacion masiva de datos de la API
 
@@ -15,13 +15,27 @@
             "X-CSRF-TOKEN": csrfToken,
         },
         beforeSend: function () {
-            console.log("antes")
+            //console.log("antes")
         },
         success: function (response) {
-            console.log(response)
+            //console.log(response)
         },
         complete: function () {
-            console.log("finally")
+            //console.log("finally")
         },
     });
+
+
+
+            // $("#draggable-menu").sortable({
+            //     cancel: ".remove",
+            //     items: ".item",
+            //     placeholder: 'sortable-placeholde',
+            //   });
+            
+            //   jQuery(".item .remove").on("click", function () {
+            //     $(this).closest(".item").remove();
+            //   });
+
+
 })(window.jQuery);

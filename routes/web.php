@@ -8,6 +8,7 @@ use App\Http\Controllers\FichaJugadorController;
 use App\Http\Controllers\FichaEquipoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 

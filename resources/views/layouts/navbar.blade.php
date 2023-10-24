@@ -439,27 +439,27 @@
             <div class="collapse navbar-collapse" id="topnav-menu-content">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Directos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/torneos') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/torneos/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Torneos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/agenda') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/agenda/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Agenda
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/federaciones') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/federaciones/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Federaciones
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/clubes') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/clubes/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Clubes
                         </a>
                     </li>
@@ -470,7 +470,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/admin-disenho-menu/') }}" role="button" aria-haspopup="true" aria-expanded="false">
                             Diseñar Menu
                         </a>
                     </li>

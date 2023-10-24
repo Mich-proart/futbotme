@@ -7,14 +7,35 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
+//alineacion https://api.b365api.com/v1/event/lineup?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919
 
+// evento https://api.betsapi.com/v1/event/view?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919
 
 // Controlador para el panel de admin
 class AdminController extends Controller
 {
-    // esta funcion solo envia la vista de la home 
-    public function  index(){
-        return view('admin.index');
+
+    // obtenemos los datos de los directos del fichero json y retornamos json de directos 
+    public function obtener_directos_de_json(){
+        // Lee el contenido del archivo JSON
+        $ruta = base_path('directos.json'); // Ruta al archivo JSON
+        $contenido = file_get_contents($ruta);
+    
+        // Decodifica el JSON
+        $datos = json_decode($contenido, true);
+    
+        // Retorna los datos en formato JSON
+        return response()->json($datos);
+    }
+
+    // enviamos la vista y los datos de los directos que vienen del fichero json
+    public function index(){
+        // obtenemos el valor de la funcion de la misma clase
+        $response = $this->obtener_directos_de_json();
+
+        // almacenamos el valor de los results
+        $datos = $response->original['results'];
+        return view('admin.index')->with('datos', $datos);
     }
 
     // funcion para ejecutar los directos directamente de la api y machacar valores en la DB
@@ -59,8 +80,13 @@ class AdminController extends Controller
         return view('admin.jugador');
     }
 
-    // funcion solo para tener todo el tema de la vista
-    public function  test(){
-        return view('admin.example');
+    // funcion con la cual generamos el menu 
+    public function indexCrearMenu(){
+        return view('admin.crearMenu');
     }
 }
+
+// nota ligas y torneos desde la tabla torneos difereciando uno liga dos torneo 
+// nota directos si limite de categoria o liga o torneo agrupados por tipo de competicion 
+// ej. uefa, champins leage
+
