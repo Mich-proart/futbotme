@@ -19,7 +19,7 @@ if ($data !== false) {
         $json_data = json_encode($decoded_data, JSON_PRETTY_PRINT);
 
         if (file_put_contents($ruta, $json_data) !== false) {
-            echo "Los datos se han guardado en datos.json";
+            echo "Los datos se han guardado en directos.json";
         } else {
             echo "Error al guardar los datos en el archivo.";
         }

@@ -9,15 +9,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 
+// importamos funciones externas
+use App\Http\Controllers\Admin\AdminController;
+
 class Controller extends BaseController{
     
-    public function index(){        
+    public function index(){
 
-        $users = [
-            'hola' => 'mundo'
-        ];
- 
-        return view('welcome', ['users' => $users]);
+        // importamos los directos modificados y ordenados por competicion order by ASC
+        $directos = AdminController::obtener_directos_agrupados_competicion();
+        return view('welcome', ['directos' => $directos]);
     }
 
     public function indexCategorias($nombre){

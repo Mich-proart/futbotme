@@ -2,11 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminLigasController;
+use App\Http\Controllers\Admin\AdminTorneosController;
 
 // Rutas para el panel admin 
 Route::get('admin-panel/', [AdminController::class, 'index']);
 
-Route::get('admin-panel/torneos/', [AdminController::class, 'indexTorneos']);
+Route::get('admin-panel/ligas/', [AdminLigasController::class, 'indexLigas']);
+
+Route::get('admin-panel/torneos/', [AdminTorneosController::class, 'indexTorneos']);
 
 Route::get('admin-panel/agenda/', [AdminController::class, 'indexAgenda']);
 

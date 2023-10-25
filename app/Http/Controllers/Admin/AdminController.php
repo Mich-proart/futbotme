@@ -14,33 +14,46 @@ use Illuminate\Support\Facades\DB;
 // Controlador para el panel de admin
 class AdminController extends Controller
 {
+    /*************************************************/
+    /********************* HELPERS *******************/
+    /*************************************************/
 
-    // obtenemos los datos de los directos del fichero json y retornamos json de directos 
-    public function obtener_directos_de_json(){
+    /****** obtenemos los datos de los directos del fichero json y retornamos json de directos *****/
+    public static function obtener_directos_de_json(){
         // Lee el contenido del archivo JSON
         $ruta = base_path('directos.json'); // Ruta al archivo JSON
         $contenido = file_get_contents($ruta);
     
         // Decodifica el JSON
         $datos = json_decode($contenido, true);
+
+        // obtenemos los results donde esta el array de partidos
+        $response = $datos['results'];
     
-        // Retorna los datos en formato JSON
-        return response()->json($datos);
+        // Retorna el array de datos como viene de la API
+        return $response;
     }
+
+    /****** directos agrupados por id de competicion ******/
+    public static function obtener_directos_agrupados_competicion(){
+        // obtenemos los directos a pelo para ordenarlos
+        $response = Self::obtener_directos_de_json();
+        $partidosAgrupados = collect($response)->groupBy('league.id')->sortKeys();
+
+        // retornamos los directos agrupados por competicion
+        return $partidosAgrupados;
+    }
+
+    /*************************************************/
+    /********************* HELPERS *******************/
+    /*************************************************/
 
     // enviamos la vista y los datos de los directos que vienen del fichero json
     public function index(){
         // obtenemos el valor de la funcion de la misma clase
         $response = $this->obtener_directos_de_json();
 
-        // almacenamos el valor de los results
-        $datos = $response->original['results'];
-        return view('admin.index')->with('datos', $datos);
-    }
-
-    // funcion para ejecutar los directos directamente de la api y machacar valores en la DB
-    public function indexTorneos(){
-        return view('admin.torneo');
+        return view('admin.index')->with('datos', $response);
     }
 
     // funcion con la que mostraremos el calendario de dia a dia de los tipos de torneos y cantidad de partidos
@@ -86,7 +99,34 @@ class AdminController extends Controller
     }
 }
 
-// nota ligas y torneos desde la tabla torneos difereciando uno liga dos torneo 
-// nota directos si limite de categoria o liga o torneo agrupados por tipo de competicion 
-// ej. uefa, champins leage
+//consulta torneos
+/*SELECT te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo,
+co.nombre nombreComunidad, tor.betsapi, li.jornadas, li.jornadaActiva from torneo tor 
+INNER JOIN temporada te ON te.torneo_id=tor.id 
+INNER JOIN pais pa ON pa.id=tor.pais_id 
+INNER JOIN comunidad co ON co.id=tor.comunidad_id 
+INNER JOIN liga li ON li.id=tor.id
+WHERE tor.tipo_torneo=2 AND tor.visible>3 
+AND tor.categoria_torneo_id=1 
+ORDER BY tor.apuestaMA DESC, tor.categoria_torneo_id, tor.comunidad_id, tor.orden;*/
+
+/*select te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo,
+co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from  torneo tor
+INNER JOIN temporada te ON te.torneo_id=tor.id
+INNER JOIN pais pa ON pa.id=tor.pais_id
+INNER JOIN comunidad co ON co.id=tor.comunidad_id
+INNER JOIN eliminatorio eli ON eli.id=tor.id
+INNER JOIN fase fa ON fa.id=eli.fase_activa
+INNER JOIN partido p ON te.id=p.temporada_id
+WHERE tor.tipo_torneo=2
+AND tor.visible>3 AND tor.categoria_torneo_id=1
+ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden;*/
+
+/*
+select te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo, co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from torneo tor INNER JOIN temporada te ON te.torneo_id=tor.id INNER JOIN pais pa ON pa.id=tor.pais_id INNER JOIN comunidad co ON co.id=tor.comunidad_id INNER JOIN eliminatorio eli ON eli.id=tor.id INNER JOIN fase fa ON fa.id=eli.fase_activa INNER JOIN partido p ON te.id=p.temporada_id WHERE tor.tipo_torneo=2 AND tor.visible>3 AND tor.categoria_torneo_id=1 ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden; 
+ */
+
+ /*
+ select DISTINCT(te.id), tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo, co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from torneo tor INNER JOIN temporada te ON te.torneo_id=tor.id INNER JOIN pais pa ON pa.id=tor.pais_id INNER JOIN comunidad co ON co.id=tor.comunidad_id INNER JOIN eliminatorio eli ON eli.id=tor.id INNER JOIN fase fa ON fa.id=eli.fase_activa INNER JOIN partido p ON te.id=p.temporada_id WHERE tor.tipo_torneo=2 AND tor.visible>3 AND tor.categoria_torneo_id=1 ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden; 
+ */
 

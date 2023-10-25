@@ -7,12 +7,12 @@ use App\Models\CustomModel;
 
 class CustomController extends Controller{
     
-    public function indexContacto(){        
+    public function indexContacto(){
 
         return view('contact');
     }
 
-    public function indexNoticias(){        
+    public function indexNoticias(){
  
         return view('notices');
     }

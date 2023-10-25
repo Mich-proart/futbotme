@@ -3,6 +3,25 @@
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
+                <div class="col-12">
+                    {{ $directos }}
+                    {{-- @foreach ($datos as $leagueId => $partidosPorLiga)
+                        <h3>Competicion ID: {{ $leagueId }}</h3>
+                        @foreach ($partidosPorLiga as $partido)
+                            <div>
+                                <h4>Partido ID: {{ $partido['id'] }}</h4>
+                                @if (isset($partido['league']))
+                                    <p>Liga: {{ $partido['league']['name'] }}</p>
+                                @else
+                                    <p>Liga no disponible</p>
+                                @endif
+                                <p>Local: {{ $partido['home']['name'] }}</p>
+                                <p>Visitante: {{ $partido['away']['name'] }}</p>
+                                <!-- ... (otros datos que quieras mostrar) -->
+                            </div>
+                        @endforeach
+                    @endforeach --}}
+                </div>
                 <h4 class="px-0 fs-000 mb-1 text-lg-end color-gray-medium d-lg-none d-block">Actualizado: 16:45:52 </h4>
                 <div class="col-lg col-12 ">
                     <div class="container">

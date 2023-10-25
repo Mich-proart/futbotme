@@ -8,16 +8,15 @@
                 <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="16">
             </span>
             <span class="topnav-logo-sm">
-                <img src="{{ asset('assets/images/logo_sm_dark.png') }}" alt=""
-                    height="16">
+                <img src="{{ asset('assets/images/logo_sm_dark.png') }}" alt="" height="16">
             </span>
         </a>
 
         <ul class="list-unstyled topbar-menu float-end mb-0">
 
             <li class="dropdown notification-list d-xl-none">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-haspopup="false" aria-expanded="false">
                     <i class="dripicons-search noti-icon"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
@@ -29,47 +28,44 @@
             </li>
 
             <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                    id="topbar-languagedrop" href="#" role="button" aria-haspopup="true"
-                    aria-expanded="false">
-                    <img src="{{ asset('assets/images/flags/us.jpg') }}" alt="user-image"
-                        class="me-1" height="12"> <span class="align-middle">English</span> <i
-                        class="mdi mdi-chevron-down align-middle"></i>
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" id="topbar-languagedrop"
+                    href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="{{ asset('assets/images/flags/us.jpg') }}" alt="user-image" class="me-1" height="12">
+                    <span class="align-middle">English</span> <i class="mdi mdi-chevron-down align-middle"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu"
                     aria-labelledby="topbar-languagedrop">
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('assets/images/flags/germany.jpg') }}" alt="user-image"
-                            class="me-1" height="12"> <span class="align-middle">German</span>
+                        <img src="{{ asset('assets/images/flags/germany.jpg') }}" alt="user-image" class="me-1"
+                            height="12"> <span class="align-middle">German</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('assets/images/flags/italy.jpg') }}" alt="user-image"
-                            class="me-1" height="12"> <span class="align-middle">Italian</span>
+                        <img src="{{ asset('assets/images/flags/italy.jpg') }}" alt="user-image" class="me-1"
+                            height="12"> <span class="align-middle">Italian</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('assets/images/flags/spain.jpg') }}" alt="user-image"
-                            class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                        <img src="{{ asset('assets/images/flags/spain.jpg') }}" alt="user-image" class="me-1"
+                            height="12"> <span class="align-middle">Spanish</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{{ asset('assets/images/flags/russia.jpg') }}" alt="user-image"
-                            class="me-1" height="12"> <span class="align-middle">Russian</span>
+                        <img src="{{ asset('assets/images/flags/russia.jpg') }}" alt="user-image" class="me-1"
+                            height="12"> <span class="align-middle">Russian</span>
                     </a>
 
                 </div>
             </li>
 
             <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                    href="#" id="topbar-notifydrop" role="button" aria-haspopup="true"
-                    aria-expanded="false">
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
+                    id="topbar-notifydrop" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="dripicons-bell noti-icon"></i>
                     <span class="noti-icon-badge"></span>
                 </a>
@@ -94,8 +90,7 @@
                         <a href="javascript:void(0);"
                             class="dropdown-item p-0 notify-item card unread-noti shadow-none mb-2">
                             <div class="card-body">
-                                <span class="float-end noti-close-btn text-muted"><i
-                                        class="mdi mdi-close"></i></span>
+                                <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon bg-primary">
@@ -105,7 +100,8 @@
                                     <div class="flex-grow-1 text-truncate ms-2">
                                         <h5 class="noti-item-title fw-semibold font-14">Datacorp
                                             <small class="fw-normal text-muted ms-1">1 min
-                                                ago</small></h5>
+                                                ago</small>
+                                        </h5>
                                         <small class="noti-item-subtitle text-muted">Caleb Flakelar
                                             commented on Admin</small>
                                     </div>
@@ -117,8 +113,7 @@
                         <a href="javascript:void(0);"
                             class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                             <div class="card-body">
-                                <span class="float-end noti-close-btn text-muted"><i
-                                        class="mdi mdi-close"></i></span>
+                                <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon bg-info">
@@ -128,7 +123,8 @@
                                     <div class="flex-grow-1 text-truncate ms-2">
                                         <h5 class="noti-item-title fw-semibold font-14">Admin
                                             <small class="fw-normal text-muted ms-1">1 hours
-                                                ago</small></h5>
+                                                ago</small>
+                                        </h5>
                                         <small class="noti-item-subtitle text-muted">New user
                                             registered</small>
                                     </div>
@@ -142,8 +138,7 @@
                         <a href="javascript:void(0);"
                             class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                             <div class="card-body">
-                                <span class="float-end noti-close-btn text-muted"><i
-                                        class="mdi mdi-close"></i></span>
+                                <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
@@ -168,8 +163,7 @@
                         <a href="javascript:void(0);"
                             class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                             <div class="card-body">
-                                <span class="float-end noti-close-btn text-muted"><i
-                                        class="mdi mdi-close"></i></span>
+                                <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon bg-primary">
@@ -190,8 +184,7 @@
                         <a href="javascript:void(0);"
                             class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
                             <div class="card-body">
-                                <span class="float-end noti-close-btn text-muted"><i
-                                        class="mdi mdi-close"></i></span>
+                                <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="notify-icon">
@@ -224,33 +217,29 @@
             </li>
 
             <li class="dropdown notification-list d-none d-sm-inline-block">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown"
-                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="dripicons-view-apps noti-icon"></i>
                 </a>
-                <div
-                    class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
 
                     <div class="p-2">
                         <div class="row g-0">
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/slack.png') }}"
-                                        alt="slack">
+                                    <img src="{{ asset('assets/images/brands/slack.png') }}" alt="slack">
                                     <span>Slack</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/github.png') }}"
-                                        alt="Github">
+                                    <img src="{{ asset('assets/images/brands/github.png') }}" alt="Github">
                                     <span>GitHub</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/dribbble.png') }}"
-                                        alt="dribbble">
+                                    <img src="{{ asset('assets/images/brands/dribbble.png') }}" alt="dribbble">
                                     <span>Dribbble</span>
                                 </a>
                             </div>
@@ -259,22 +248,19 @@
                         <div class="row g-0">
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/bitbucket.png') }}"
-                                        alt="bitbucket">
+                                    <img src="{{ asset('assets/images/brands/bitbucket.png') }}" alt="bitbucket">
                                     <span>Bitbucket</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/dropbox.png') }}"
-                                        alt="dropbox">
+                                    <img src="{{ asset('assets/images/brands/dropbox.png') }}" alt="dropbox">
                                     <span>Dropbox</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('assets/images/brands/g-suite.png') }}"
-                                        alt="G Suite">
+                                    <img src="{{ asset('assets/images/brands/g-suite.png') }}" alt="G Suite">
                                     <span>G Suite</span>
                                 </a>
                             </div>
@@ -292,12 +278,11 @@
             </li>
 
             <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle nav-user arrow-none me-0"
-                    data-bs-toggle="dropdown" id="topbar-userdrop" href="#" role="button"
-                    aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown"
+                    id="topbar-userdrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <span class="account-user-avatar">
-                        <img src="{{ asset('assets/images/users/avatar-1.jpg') }}"
-                            alt="user-image" class="rounded-circle">
+                        <img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt="user-image"
+                            class="rounded-circle">
                     </span>
                     <span>
                         <span class="account-user-name">{{ Auth::user()->name }}</span>
@@ -336,7 +321,8 @@
                     </a>
 
                     <!-- item-->
-                    <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    <a href="{{ route('logout') }}" class="dropdown-item notify-item"
+                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         <i class="mdi mdi-logout me-1"></i>
                         <span>{{ __('Logout') }}</span>
                     </a>
@@ -360,8 +346,7 @@
         <div class="app-search dropdown">
             <form>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..."
-                        id="top-search">
+                    <input type="text" class="form-control" placeholder="Search..." id="top-search">
                     <span class="mdi mdi-magnify search-icon"></span>
                     <button class="input-group-text btn-primary" type="submit">Search</button>
                 </div>
@@ -403,8 +388,8 @@
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <div class="d-flex">
                             <img class="d-flex me-2 rounded-circle"
-                                src="{{ asset('assets/images/users/avatar-2.jpg') }}"
-                                alt="Generic placeholder image" height="32">
+                                src="{{ asset('assets/images/users/avatar-2.jpg') }}" alt="Generic placeholder image"
+                                height="32">
                             <div class="w-100">
                                 <h5 class="m-0 font-14">Erwin Brown</h5>
                                 <span class="font-12 mb-0">UI Designer</span>
@@ -416,8 +401,8 @@
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <div class="d-flex">
                             <img class="d-flex me-2 rounded-circle"
-                                src="{{ asset('assets/images/users/avatar-5.jpg') }}"
-                                alt="Generic placeholder image" height="32">
+                                src="{{ asset('assets/images/users/avatar-5.jpg') }}" alt="Generic placeholder image"
+                                height="32">
                             <div class="w-100">
                                 <h5 class="m-0 font-14">Jacob Deo</h5>
                                 <span class="font-12 mb-0">Developer</span>
@@ -439,43 +424,56 @@
             <div class="collapse navbar-collapse" id="topnav-menu-content">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/') }}" role="button" aria-haspopup="true"
+                            aria-expanded="false">
                             Directos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/torneos/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/ligas/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            Ligas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin-panel/torneos/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Torneos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/agenda/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/agenda/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Agenda
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/federaciones/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/federaciones/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Federaciones
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/clubes/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/clubes/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Clubes
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/jugadores') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/jugadores') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Jugadores
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/admin-disenho-menu/') }}" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{{ url('/admin-panel/admin-disenho-menu/') }}" role="button"
+                            aria-haspopup="true" aria-expanded="false">
                             Diseñar Menu
                         </a>
                     </li>
 
-                    
+
 
                     {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
@@ -851,7 +849,7 @@
                             </div>
                         </div>
                     </li> --}}
-{{-- 
+                    {{-- 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#"
                             id="topnav-layouts" role="button" data-bs-toggle="dropdown"
