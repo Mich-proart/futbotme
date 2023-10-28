@@ -66,28 +66,6 @@ class AdminController extends Controller
         return view('admin.federacion');
     }
 
-    // function para obtener todos los clubes de comunidades
-    public function indexClubes(){
-        $clubes = DB::table('club')
-        //->join('pais', 'club.pais_id', '=', 'pais.id')
-        //->select(DB::raw('club.nombre','club.localidad_id','club.pais_id','club.id','club.web','club.codigoRFEF','pais.nombre'))
-        ->select('*')
-        ->limit(10)
-
-
-        // $users = DB::table('jugador')
-        //     ->join('equipo', 'jugador.equipoActual_id', '=', 'equipo.id')
-        //     ->select(DB::raw('jugador.id AS idJugador, jugador.nombre AS nombreJugador, jugador.apellidos AS apellidosJugador, jugador.apodo AS apodoJugador, jugador.sexo AS sexoJugador, jugador.fecha_nacimiento AS fecha_nacimiento_Jugador, jugador.lugar_nacimiento AS lugar_nacimiento_Jugador, jugador.altura AS alturaJugador, jugador.peso AS pesoJugador, jugador.dorsal AS dorsalJugador, jugador.es_fichaje AS es_fichaje_Jugador, jugador.es_baja AS es_baja_Jugador, jugador.posicion AS posicionJugador, equipo.nombre AS nombreEquipo'))
-        //     ->where('jugador.nombre', 'LIKE', '%'.$data.'%')            
-        //     ->get();
-
-
-
-
-        ->get();
-        return view('admin.club', ['clubes' => $clubes]);
-    }
-
     // function para obtener todos los jugadores de la base de datos
     public function indexJugadores(){
         return view('admin.jugador');
@@ -98,35 +76,3 @@ class AdminController extends Controller
         return view('admin.crearMenu');
     }
 }
-
-//consulta torneos
-/*SELECT te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo,
-co.nombre nombreComunidad, tor.betsapi, li.jornadas, li.jornadaActiva from torneo tor 
-INNER JOIN temporada te ON te.torneo_id=tor.id 
-INNER JOIN pais pa ON pa.id=tor.pais_id 
-INNER JOIN comunidad co ON co.id=tor.comunidad_id 
-INNER JOIN liga li ON li.id=tor.id
-WHERE tor.tipo_torneo=2 AND tor.visible>3 
-AND tor.categoria_torneo_id=1 
-ORDER BY tor.apuestaMA DESC, tor.categoria_torneo_id, tor.comunidad_id, tor.orden;*/
-
-/*select te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo,
-co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from  torneo tor
-INNER JOIN temporada te ON te.torneo_id=tor.id
-INNER JOIN pais pa ON pa.id=tor.pais_id
-INNER JOIN comunidad co ON co.id=tor.comunidad_id
-INNER JOIN eliminatorio eli ON eli.id=tor.id
-INNER JOIN fase fa ON fa.id=eli.fase_activa
-INNER JOIN partido p ON te.id=p.temporada_id
-WHERE tor.tipo_torneo=2
-AND tor.visible>3 AND tor.categoria_torneo_id=1
-ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden;*/
-
-/*
-select te.id, tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo, co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from torneo tor INNER JOIN temporada te ON te.torneo_id=tor.id INNER JOIN pais pa ON pa.id=tor.pais_id INNER JOIN comunidad co ON co.id=tor.comunidad_id INNER JOIN eliminatorio eli ON eli.id=tor.id INNER JOIN fase fa ON fa.id=eli.fase_activa INNER JOIN partido p ON te.id=p.temporada_id WHERE tor.tipo_torneo=2 AND tor.visible>3 AND tor.categoria_torneo_id=1 ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden; 
- */
-
- /*
- select DISTINCT(te.id), tor.nombre, tor.pais_id, tor.comunidad_id, tor.apuestaMA, pa.nombre nombrePais, tor.categoria_torneo_id, tor.apifutbol_tipo, co.nombre nombreComunidad , eli.fase_activa, fa.tipo_eliminatoria from torneo tor INNER JOIN temporada te ON te.torneo_id=tor.id INNER JOIN pais pa ON pa.id=tor.pais_id INNER JOIN comunidad co ON co.id=tor.comunidad_id INNER JOIN eliminatorio eli ON eli.id=tor.id INNER JOIN fase fa ON fa.id=eli.fase_activa INNER JOIN partido p ON te.id=p.temporada_id WHERE tor.tipo_torneo=2 AND tor.visible>3 AND tor.categoria_torneo_id=1 ORDER BY tor.categoria_torneo_id, tor.comunidad_id, tor.orden; 
- */
-

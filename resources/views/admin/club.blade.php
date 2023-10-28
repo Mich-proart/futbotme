@@ -2,7 +2,29 @@
 
 @section('content')
     <div class="row mt-5">
-        <?php dd($clubes) ?>
+        <div class="col-lg-2">
+            <h2 class="mt-0">Paises</h2>
+            <select class="disparador-paises w-100 me-3">
+                <option value="0" selected>paises</option>
+                @foreach ($paises as $key => $pais)
+                    <option value="{{ $pais->id }}" data-nombre="{{ $pais->nombre }}">{{ $pais->nombre }}</option>
+                @endforeach
+            </select>
+        </div><!-- end col-->
+
+        <div class="col-lg-10 position-relative">
+            <div class="spinner-border spiner-clubes" role="status" style="display:none;position: absolute;top: 50%;left: 45%;width: 100px;height:100px;z-index: 10;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="placeholder-fantasma d-flex align-items-center justify-content-center" style="height: 300px;opacity: .3;">
+                <h1>Escoger pais</h1>
+            </div>
+        </div>
+
+
+
+        
+        <?php //dd($clubes) ?>
         <div class="col-12">
             <div class="card">
                 <div class="card-body">

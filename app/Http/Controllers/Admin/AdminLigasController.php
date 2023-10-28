@@ -97,19 +97,6 @@ class AdminLigasController extends Controller
     }
     // index
     public function indexLigas(){
-        // $resultados = Torneo::select('temporada.id', 'torneo.nombre', 'torneo.pais_id', 'torneo.comunidad_id', 'torneo.apuestaMA', 'pais.nombre as nombrePais', 'torneo.categoria_torneo_id', 'torneo.apifutbol_tipo', 'comunidad.nombre as nombreComunidad', 'torneo.betsapi', 'liga.jornadas', 'liga.jornadaActiva')
-        // ->join('temporada', 'temporada.torneo_id', '=', 'torneo.id')
-        // ->join('pais', 'pais.id', '=', 'torneo.pais_id')
-        // ->join('comunidad', 'comunidad.id', '=', 'torneo.comunidad_id')
-        // ->join('liga', 'liga.id', '=', 'torneo.id')
-        // ->where('torneo.tipo_torneo', 1)
-        // ->where('torneo.visible', '>', 3)
-        // ->where('torneo.categoria_torneo_id', 1)
-        // ->orderBy('torneo.apuestaMA', 'desc')
-        // ->orderBy('torneo.categoria_torneo_id')
-        // ->orderBy('torneo.comunidad_id')
-        // ->orderBy('torneo.orden')
-        // ->get();
         $resultados = '';
         return view('admin.liga')->with('resultados', $resultados);
     }
