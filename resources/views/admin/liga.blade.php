@@ -3,10 +3,7 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-lg-2">
-            {{-- onchange="cargar_torneos(this.value,2,<?php //echo $externo;
-            ?>)"> --}}
-            {{-- onchange="cargar_torneos(this.value,1,<?php //echo $externo
-            ?>)" --}}
+            {{-- onchange="cargar_torneos(this.value,1,<?php //echo $externo?>)" --}}
             <h2 class="mt-0">Ligas</h2>
             <select attr-tipo-competicion="1" class="disparador-competicion w-100 me-3">
                 <option value="0" selected>Categorias</option>
