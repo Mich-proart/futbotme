@@ -181,9 +181,15 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/customVars.js') }}"></script>
     <script src="{{ asset('assets_admin/js/import.js') }}"></script>
+    <script src="{{ asset('assets_admin/js/ligas-torneos.js') }}"></script>
 
     {{-- ejecucion del cliente donde recibimos datos del servidor --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+
+    {{-- real --}}
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script> --}}
+
+
+    
     {{-- <script>
         const socket = io("http://localhost:3000"); // Reemplaza con la URL de tu servidor
 
@@ -201,7 +207,10 @@
             console.log("Desconectado del servidor");
         });
     </script> --}}
-    <script>
+
+
+    {{-- real --}}
+    {{-- <script>
         const socket = io("http://localhost:3000");
 
         socket.on('json-data', (datos) => {
@@ -213,7 +222,7 @@
             console.log('Nuevos datos recibidos:', nuevosDatos);
             // Aquí puedes procesar los nuevos datos como lo desees
         });
-    </script>
+    </script> --}}
 
 </body>
 

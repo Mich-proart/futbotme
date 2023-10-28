@@ -21,3 +21,7 @@ Route::get('admin-panel/clubes/', [AdminController::class, 'indexClubes']);
 Route::get('admin-panel/jugadores/', [AdminController::class, 'indexJugadores']);
 
 Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
+
+// Peticiones post 
+Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'indexCompeticionesLigas'])->name('indexCompeticionesLigas');
+Route::post('admin-panel/competicion-torneos/', [AdminTorneosController::class, 'indexCompeticionesTorneos'])->name('indexCompeticionesTorneos');
