@@ -6,9 +6,6 @@
             <h1>Aqui mostraremos todos los jugadores</h1>
         </div><!-- end col-->
         <div class="col-12">
-            {{-- @foreach ( $jugadores as $jugador ) --}}
-                {{-- {{ var_dump($jugador->nombre) }} --}}
-            {{-- @endforeach --}}
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">Clubes</h4>

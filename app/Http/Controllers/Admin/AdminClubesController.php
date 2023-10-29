@@ -8,10 +8,23 @@ use Illuminate\Support\Facades\DB;
 
 class AdminClubesController extends Controller
 {
+    /*************************************************/
+    /********************* HELPERS *******************/
+    /*************************************************/
+    // funcion para obtener los paises y devolverlos
+    public static function getAllPaises(){
+        $paises = DB::table('pais')
+        ->select('nombre', 'id')
+        ->orderBy('nombre')
+        ->get();
+        return $paises;
+    }
+    /*************************************************/
+    /********************* HELPERS *******************/
+    /*************************************************/
 
     // funcion para obtener los paises
     public static function getClubes(Request $request){
-
         // Obtener la variable enviada por el front
         $data = $request->all()['formData']; 
         $id_pais = $data['idPais'];
@@ -28,10 +41,7 @@ class AdminClubesController extends Controller
     // function para obtener todos los clubes de comunidades
     public function indexPaises(){
         
-        $paises = DB::table('pais')
-        ->select('nombre', 'id')
-        ->orderBy('nombre')
-        ->get();
+        $paises = Self::getAllPaises();
 
         return view('admin.club', ['paises' => $paises]);
     }

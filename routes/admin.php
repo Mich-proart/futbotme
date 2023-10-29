@@ -20,9 +20,11 @@ Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederacio
 
 Route::get('admin-panel/clubes/', [AdminClubesController::class, 'indexPaises']);
 
-Route::get('admin-panel/jugadores/', [AdminJugadoresController::class, 'indexJugadores']);
-
 Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
+
+// jugadores
+Route::get('admin-panel/jugadores/', [AdminJugadoresController::class, 'indexJugadores']);
+Route::get('admin-panel/jugadores/editar-jugador/{id}', [AdminJugadoresController::class, 'editarJugador']);
 
 // Peticiones post ligas y torneos
 Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'indexCompeticionesLigas'])->name('indexCompeticionesLigas');

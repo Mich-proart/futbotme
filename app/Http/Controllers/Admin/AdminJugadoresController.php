@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//imports
+use App\Http\Controllers\Admin\AdminClubesController;
+
 class AdminJugadoresController extends Controller
 {
     /*************************************************/
@@ -44,15 +47,24 @@ class AdminJugadoresController extends Controller
     /********************* HELPERS *******************/
     /*************************************************/
 
+    // editamos usuario 
+    public static function editarJugador($id){
+        
+        // obtenemos los datos del jugador seleccionado
+        $dataJugador = DB::table('jugador')
+        ->select('*')
+        ->where('id', '=', $id)
+        ->orderBy('nombre')
+        ->get();
+
+        // importamos funcion con la que obtenemos los paises
+        $paises = AdminClubesController::getAllPaises();
+        return view('admin.editarJugador', ['dataJugador' => $dataJugador, 'paises' => $paises]);
+    }
+
     // function para obtener todos los jugadores de la base de datos
     public function indexJugadores(){
-
-        $jugadores = DB::table('jugador')
-        ->select('*')
-        ->orderBy('nombre')
-        ->limit(30)
-        ->get();
-        //dd($jugadores);
+        $jugadores = '';
         return view('admin.jugador', ['jugadores' => $jugadores]);
     }
 }

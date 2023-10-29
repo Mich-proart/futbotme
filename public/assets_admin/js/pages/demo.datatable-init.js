@@ -227,10 +227,6 @@ $(document).ready(function () {
     // $("#fixed-columns-datatable-jugadores").DataTable({
     // })
 
-    const csrfToken = $('meta[name="csrf-token"]').attr("content");
-
-    console.log(csrfToken);
-
     new DataTable("#fixed-columns-datatable-jugadores", {
         ajax: {
             url: `${urlBase}admin-panel/jugadores-ajax/`,
@@ -249,6 +245,16 @@ $(document).ready(function () {
             { data: "lugarNacimiento" },
             { data: "equipoActual" },
             { data: "caracteristicas" },
+        ],
+        columnDefs: [
+            {
+                targets: +1,
+                data: "nombre",
+                render: function (data, type, row, meta) {
+                    // console.log(row.idJugador)
+                    return `<a target="_blank" href="/admin-panel/jugadores/editar-jugador/${row.idJugador}">${data}</a>`;
+                },
+            },
         ],
         scrollY: "calc(100vh - 0px)",
         scrollX: !0,
@@ -293,6 +299,18 @@ $(document).ready(function () {
             );
         },
     });
+
+    // $("#tabla").dataTable({
+    //     columnDefs: [
+    //         {
+    //             targets: +1,
+    //             data: "perfil",
+    //             render: function (data, type, row, meta) {
+    //                 return '<a href=/perfil/"' + data + '">Perfil</a>';
+    //             },
+    //         },
+    //     ],
+    // });
 
     // $(".dataTables_length select").addClass("form-select form-select-sm"),
     // $(".dataTables_length label").addClass("form-label");
