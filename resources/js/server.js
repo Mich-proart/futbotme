@@ -69,7 +69,8 @@ const socketIo = require("socket.io");
 const fs = require("fs");
 const app = express();
 const server = http.createServer(app);
-const rutaJson = "/home/d-shisnet/Documentos/futbotme/directos.json";
+//const rutaJson = "/home/d-shisnet/Documentos/futbotme/directos.json";
+const rutaJson = "/futbotme.eu/directos.json";
 
 // aregamos cors para permitir conexions
 const io = require("socket.io")(server, {
