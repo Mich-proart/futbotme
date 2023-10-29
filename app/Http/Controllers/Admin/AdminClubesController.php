@@ -10,7 +10,7 @@ class AdminClubesController extends Controller
 {
 
     // funcion para obtener los paises
-    public static function getPaises(Request $request){
+    public static function getClubes(Request $request){
 
         // Obtener la variable enviada por el front
         $data = $request->all()['formData']; 

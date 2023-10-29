@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminLigasController;
 use App\Http\Controllers\Admin\AdminTorneosController;
 use App\Http\Controllers\Admin\AdminClubesController;
+use App\Http\Controllers\Admin\AdminJugadoresController;
 
 // Rutas para el panel admin 
 Route::get('admin-panel/', [AdminController::class, 'index']);
@@ -19,7 +20,7 @@ Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederacio
 
 Route::get('admin-panel/clubes/', [AdminClubesController::class, 'indexPaises']);
 
-Route::get('admin-panel/jugadores/', [AdminController::class, 'indexJugadores']);
+Route::get('admin-panel/jugadores/', [AdminJugadoresController::class, 'indexJugadores']);
 
 Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
 
@@ -28,4 +29,4 @@ Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'ind
 Route::post('admin-panel/competicion-torneos/', [AdminTorneosController::class, 'indexCompeticionesTorneos'])->name('indexCompeticionesTorneos');
 
 // Peticiones post clubs
-Route::post('admin-panel/pais-club/', [AdminClubesController::class, 'getPaises'])->name('getPaises');
+Route::post('admin-panel/pais-club/', [AdminClubesController::class, 'getClubes'])->name('getClubes');

@@ -19,9 +19,7 @@
             <div class="placeholder-fantasma placeholder-fantasma-clubes d-flex align-items-center justify-content-center" style="height: 300px;opacity: .3;">
                 <h1>Escoger pais</h1>
             </div>
-            <ul class="list-group list-group-flush listado-club-por-pais">
-                <li class="list-group-item" style="cursor:pointer;">pais</li>
-            </ul>
+            <ul class="list-group list-group-flush listado-club-por-pais"></ul>
         </div>
     </div> <!-- end row-->
 @endsection
