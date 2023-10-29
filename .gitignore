@@ -22,6 +22,7 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 /public/assets/images/img/club
+/resources/js/server.js
 
 # Custom
 
