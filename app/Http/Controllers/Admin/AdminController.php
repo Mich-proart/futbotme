@@ -66,11 +66,6 @@ class AdminController extends Controller
         return view('admin.federacion');
     }
 
-    // function para obtener todos los jugadores de la base de datos
-    public function indexJugadores(){
-        return view('admin.jugador');
-    }
-
     // funcion con la cual generamos el menu 
     public function indexCrearMenu(){
         return view('admin.crearMenu');
