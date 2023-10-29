@@ -27,18 +27,5 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div> <!-- end row-->
 @endsection

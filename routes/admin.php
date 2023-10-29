@@ -30,3 +30,6 @@ Route::post('admin-panel/competicion-torneos/', [AdminTorneosController::class, 
 
 // Peticiones post clubs
 Route::post('admin-panel/pais-club/', [AdminClubesController::class, 'getClubes'])->name('getClubes');
+
+// Peticiones post jugadores
+Route::post('admin-panel/jugadores-ajax/', [AdminJugadoresController::class, 'getJugadoresAjax'])->name('getJugadoresAjax');

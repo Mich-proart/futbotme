@@ -22,7 +22,6 @@ class AdminClubesController extends Controller
         ->where('pais_id', '=', $id_pais)
         ->orderBy('nombre')
         ->get();
-
         echo json_encode($club);
     }
     
