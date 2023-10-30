@@ -215,6 +215,10 @@ body {
     line-height: 20px;
     /* 142.857% */
     margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: .5rem;
+    max-width: 303px;
 }
 
 .marcador * {

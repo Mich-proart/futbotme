@@ -3,25 +3,9 @@
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
-                <div class="col-12">
+                {{-- <div class="col-12">
                     {{ $directos }}
-                    {{-- @foreach ($datos as $leagueId => $partidosPorLiga)
-                        <h3>Competicion ID: {{ $leagueId }}</h3>
-                        @foreach ($partidosPorLiga as $partido)
-                            <div>
-                                <h4>Partido ID: {{ $partido['id'] }}</h4>
-                                @if (isset($partido['league']))
-                                    <p>Liga: {{ $partido['league']['name'] }}</p>
-                                @else
-                                    <p>Liga no disponible</p>
-                                @endif
-                                <p>Local: {{ $partido['home']['name'] }}</p>
-                                <p>Visitante: {{ $partido['away']['name'] }}</p>
-                                <!-- ... (otros datos que quieras mostrar) -->
-                            </div>
-                        @endforeach
-                    @endforeach --}}
-                </div>
+                </div> --}}
                 <h4 class="px-0 fs-000 mb-1 text-lg-end color-gray-medium d-lg-none d-block">Actualizado: 16:45:52 </h4>
                 <div class="col-lg col-12 ">
                     <div class="container">
@@ -107,34 +91,101 @@
         <div class="container-fluid px-0 my-2">
             {{-- LIVESCORE --}}
             <div class="accordion" id="PartidosEnDirecto">
-                <div class="accordion-item br-0">
-                    <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
-                        id="panelsStayOpen-headingOne">
 
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
+                @foreach ($directos as $leagueId => $partidosPorLiga)
+                    <div class="accordion-item br-0">
+                        <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
+                            id="panelsStayOpen-headingTwo">
+
+                            <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+                                <div class="d-block ps-4">
+                                    <span class="icon-resolve-filled">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                        <span class="path3"></span>
+                                    </span>
+                                </div>
+
+                                <div class="d-inline-flex rounded-circle bandera_pais">
+                                    <img src="https://flagcdn.com/{{ $partidosPorLiga[0]['league']['cc'] }}.svg"
+                                        width="32" height="32" alt="bandera del pais del torneo"
+                                        class="rounded-circle">
+                                </div>
+                                @if ($partidosPorLiga[0]['league'])
+                                    <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"
+                                        id="{{ $leagueId }}">{{ $partidosPorLiga[0]['league']['name'] }}</a>
+                                @else
+                                    <p>Liga no disponible</p>
+                                @endif
+
                             </div>
+                            <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
+                                aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}">
+                                <i class="bi bi-chevron-up fs-3"></i>
+                            </button>
+                        </h2>
+                        @foreach ($partidosPorLiga as $partido)
+                            <div id="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
+                                class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
+                                <div class="accordion-body border-bottom">
+                                    <div class="d-flex aling-items-center justify-content-between ">
+                                        <div class="col-2 d-flex aling-items-center ">
+                                            <div class="d-block py-2 px-1 fs-2">
+                                                <span class="icon-resolve-filled">
+                                                    <span class="path1"></span>
+                                                    <span class="path2"></span>
+                                                    <span class="path3"></span>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span
+                                                    class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_{{ $partido['timer']['tm'] }}_minutos text-white">{{ $partido['timer']['tm'] }}’</span>
+                                            </div>
 
-                            <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                    alt="bandera del pais del torneo" class="rounded-circle">
+                                        </div>
+
+                                        <div
+                                            class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                                            <span class="icon-alienacion d-inline-block fs-1"></span>
+                                            <span class="icon-ball d-inline-block fs-1"></span>
+                                            <span class="icon-TV d-inline-block fs-1"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="mx-0 partido_alineado my-2">
+                                        <div class="local">
+                                            <h3 class="d-block">{{ $partido['home']['name'] }}</h3>
+                                            <div class="escudo d-lg-inline-block d-none"><img
+                                                    src="https://assets.b365api.com/images/team/m/{{ $partido['home']['image_id'] }}.png"
+                                                    class="logo_s img-fluid"></div>
+                                        </div>
+
+                                        <div class="marcador">
+                                            <span class="goles-local">{{ $partido['ss'] }}</span>
+                                            {{-- <span class="fs-01 color-red">-</span>
+                                    <span class="goles-visitante">0</span> --}}
+                                        </div>
+
+                                        <div class="visitante">
+                                            <div class="escudo d-lg-inline-block d-none"><img
+                                                    src="https://assets.b365api.com/images/team/m/{{ $partido['away']['image_id'] }}.png"
+                                                    class="logo_s img-fluid"></div>
+                                            <h3 class="d-block">{{ $partido['away']['name'] }}</h3>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+                        @endforeach
+                    </div>
+                @endforeach
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey
-                                <span>-</span> RFEF</a>
-                        </div>
+               {{--  <div class="accordion-item br-0">
 
-                        <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            <i class="bi bi-chevron-up fs-3"></i>
-                        </button>
-                    </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body border-bottom">
@@ -352,7 +403,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>
