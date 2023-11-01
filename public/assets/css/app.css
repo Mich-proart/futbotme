@@ -178,7 +178,7 @@ body {
 /* PARTIDOS EN GENERAL */
 
 .nombre_torneo_liga {
-    font-size: var(--fs-ciegos);
+    font-size: var(--fs-large);
     font-style: normal;
     font-weight: 700;
     line-height: 24px;

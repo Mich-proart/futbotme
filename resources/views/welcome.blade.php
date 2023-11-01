@@ -457,13 +457,12 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
-                                <span>-</span> <?php echo $partidos[0]['nombreFase']; ?></a>
+                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php $partidos[0]['idTemporada']; ?>"
-                            aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php $partidos[0]['idTemporada']; ?>">
+                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>"
+                            aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>">
                             <i class="bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
@@ -489,8 +488,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                                        30</span></div>
+                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span></div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
@@ -552,8 +550,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?>
-                                <span>-</span> <?php echo $partidos[0]['nombreFase']; ?></a>
+                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
@@ -584,8 +581,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                                        30</span></div>
+                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span></div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1"></span>
