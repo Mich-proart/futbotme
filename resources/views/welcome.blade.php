@@ -3,9 +3,43 @@
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
-                {{-- <div class="col-12">
-                    {{ $directos }}
-                </div> --}}
+                <div class="col-12">
+                    <em class="text-danger">"estos partidos y datos esta condicionado estatico por el dia 2023-10-31"</em>
+                    <br><br>
+                    <?php echo "PARTIDOS TERMINADOS</br>";?>
+                    <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) {
+                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
+                            foreach ($partidos as $partidoInfo) {
+                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
+                            }
+                            echo "</br></br>";
+                        }
+                    ?>
+        
+                    <br><br><br>
+        
+                    <?php echo "PARTIDOS EN JUEGO</br>";?>
+                    <?php foreach ($partidosEnJuegoCurDate as $nombreTemporada => $partidos) {
+                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
+                            foreach ($partidos as $partidoInfo) {
+                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
+                            }
+                            echo "</br></br>";
+                        }
+                    ?>
+        
+                    <br><br><br>
+        
+                    <?php echo "PARTIDOS PENDIENTES DE JUGAR</br>";?>
+                    <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) {
+                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
+                            foreach ($partidos as $partidoInfo) {
+                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
+                            }
+                            echo "</br></br></br></br>";
+                        }
+                    ?>
+                </div>
                 <h4 class="px-0 fs-000 mb-1 text-lg-end color-gray-medium d-lg-none d-block">Actualizado: 16:45:52 </h4>
                 <div class="col-lg col-12 ">
                     <div class="container">

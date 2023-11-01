@@ -17,8 +17,18 @@ class Controller extends BaseController{
     public function index(){
 
         // importamos los directos modificados y ordenados por competicion order by ASC
-        $directos = AdminController::obtener_directos_agrupados_competicion();
-        return view('welcome', ['directos' => $directos]);
+        $directosFhicheroJson = AdminController::obtener_directos_agrupados_competicion();
+        $partidosPorJugarCurDate = AdminController::get_partidos_curtdate(0);
+        $partidosEnJuegoCurDate = AdminController::get_partidos_curtdate(2);
+        $partidosTerminadosCurDate = AdminController::get_partidos_curtdate(1);
+
+        // retornamos los datos de directo DB, finalizados DB, por Jugar DB
+        return view('welcome', [
+            'directos' => $directosFhicheroJson,
+            'partidosPorJugarCurDate'=>$partidosPorJugarCurDate,
+            'partidosEnJuegoCurDate'=>$partidosEnJuegoCurDate,
+            'partidosTerminadosCurDate'=>$partidosTerminadosCurDate
+        ]);
     }
 
     public function indexCategorias($nombre){
