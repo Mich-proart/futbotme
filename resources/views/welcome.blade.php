@@ -437,7 +437,7 @@
 
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
-                    print_r($partidos); ?>
+                    //print_r($partidos); ?>
 
                 <div class="accordion-item br-0">
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
@@ -467,12 +467,11 @@
                             <i class="bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
-
-
-                    <?php foreach ($partidos as $partidoInfo) { ?>
-                    {{-- echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . </br>"; --}}
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
+
+                        <?php foreach ($partidos as $partidoInfo) { ?>
+                        {{-- echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . </br>"; --}}
 
                         <div class="accordion-body border-bottom partido_futuro">
                             <div class="d-flex aling-items-center justify-content-between ">
@@ -524,8 +523,9 @@
 
                         </div>
 
+
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
 
                 <?php } ?>
@@ -562,12 +562,11 @@
                             <i class="bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
-                    <?php foreach ($partidos as $partidoInfo) {
-                            //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
-                            ?>
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
-
+                        <?php foreach ($partidos as $partidoInfo) {
+                            //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
+                            ?>
 
                         <div class="accordion-body border-bottom partido_finalizado">
                             <div class="d-flex aling-items-center justify-content-between ">
@@ -623,8 +622,9 @@
                             </div>
 
                         </div>
+
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
                 <?php } ?>
 
