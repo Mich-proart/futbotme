@@ -4,6 +4,7 @@
     <div class="row mt-5">
         <div class="col-12">
             <h1>Pagina federacion</h1>
+            <p>ver que poner en esta pagina</p>
         </div><!-- end col-->
         <div class="col-12">
             <div class="card">

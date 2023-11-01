@@ -22,6 +22,42 @@ class AdminController extends Controller
     /********************* HELPERS *******************/
     /*************************************************/
 
+    /****** obtenemos todos los partidos del dia sin agrupar, solo partidos del dia *****/
+    public static function get_all_partidos_curtdate(){
+        $fechaActual = Carbon::now();
+        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
+        $fechaActual = '2023-10-31';
+        $partidosObj = array();
+        $dataPartidosDia = DB::table('partido')
+        ->select('*')
+        ->where('fecha', '=', $fechaActual)
+        ->get();
+
+        // convertimos el resultado a obj con repuestas personalizadas
+        //echo "<pre>";
+        foreach ($dataPartidosDia as $key => $value) {
+            $obj = [
+                'idPartido' => $value->id,
+                'idBetsapi' => $value->betsapi,
+                'tituloTemporada' => Self::get_name_temporada($value->temporada_id),
+                'fecha' => $value->fecha,
+                'hora' => $value->hora_prevista,
+                'estadoPartido' => $value->estado_partido,
+                'idLocal' => $value->equipoLocal_id,
+                'nombreLocal' => Self::get_name_equipo($value->equipoLocal_id)[0]->nombre,
+                'golLocal' => $value->goles_local,
+                'idVisitante' => $value->equipoVisitante_id,
+                'nombreVisitante' => Self::get_name_equipo($value->equipoVisitante_id)[0]->nombre,
+                'golVisitante' => $value->goles_visitante
+            ];
+            //var_dump($value);
+            array_push($partidosObj, $obj);
+        }
+        //echo "</pre>";
+        //dd($partidosObj);
+        return $partidosObj;
+    }
+
     /****** obtenemos los datos de los directos del fichero json y retornamos json de directos *****/
     public static function obtener_directos_de_json(){
         // Lee el contenido del archivo JSON
@@ -83,20 +119,13 @@ class AdminController extends Controller
         //$horaActual = Carbon::now()->format('H:i:s');
         //$fechaActual = '2023-11-01';
         $fechaActual = '2023-10-31';
-
-        //$horaActual = '23:00:00';
         $partidosDia = [];
-        if($estado == 0){
-            $estado_verif = [0];
-        }
-
-        if($estado == 1){
-            $estado_verif = [1];
-        }
-
-        if($estado == 2 || $estado == 6){
-            $estado_verif = [2,6];
-        }
+        $partidosAgrupados = [];
+        if($estado == 0){ $estado_verif = [0];}
+        if($estado == 1){ $estado_verif = [1];}
+        if($estado == 2 || $estado == 6){ $estado_verif = [2,6];}
+        // aqui mandamos a traer todos los partidos con todos los estados
+        if($estado == 100){ $estado_verif = [0,1,2,3,4,5,6,7,8,9,10,11];}
         $dataPartidosDia = DB::table('partido')
         ->select('*')
         ->where('fecha', '=', $fechaActual)
@@ -129,7 +158,6 @@ class AdminController extends Controller
         }
 
         // Creamos un nuevo array para organizar los partidos por temporada
-        $partidosAgrupados = [];
         foreach ($partidosDia as $partido) {
             $nombreTemporada = $partido["nombreTemporadaSeccion"];
             $idTemporada = $partido['idTemporadaSeccion'];
@@ -143,6 +171,7 @@ class AdminController extends Controller
             }
             $partidosAgrupados[$nombreTemporada][] = $partidoDetalle;
         }
+
         // ordenamo el resultado para devolverlo ordenado por el nombre
         ksort($partidosAgrupados);
         return $partidosAgrupados;
@@ -154,24 +183,57 @@ class AdminController extends Controller
 
     // enviamos la vista y los datos de los directos que vienen del fichero json
     public function index(){
-        // obtenemos el valor de la funcion de la misma clase
-        $response = $this->obtener_directos_de_json();
-        // estados partidos || 0 -> no jugado || 1-> final || 2-> en juego
-        $partidosPorJugarCurDate = $this->get_partidos_curtdate(0);
-        $partidosEnJuegoCurDate = $this->get_partidos_curtdate(2);
-        $partidosTerminadosCurDate = $this->get_partidos_curtdate(1);
-
-        return view('admin.index')->with([
-            'datos' => $response, 
-            'partidosPorJugarCurDate'=>$partidosPorJugarCurDate,
-            'partidosEnJuegoCurDate'=>$partidosEnJuegoCurDate,
-            'partidosTerminadosCurDate'=>$partidosTerminadosCurDate
-        ]);
+        // obtenemos todos los partidos del dia
+        $partidosTodosLosEstados = $this->get_all_partidos_curtdate();
+        return view('admin.index')->with(['partidosTodosLosEstados'=>$partidosTodosLosEstados,]);
     }
 
+    // editamos los partidos que estan en la db
+    public function editarPartido(Request $request){
+        // Obtener la variable enviada por el front
+        $data = $request->all()['formData']; 
+        $id_partido = $data['idPartido'];
+        $temporada_partido  = $data['idTemporadaPartido'];
+        $fecha_partido = $data['fechaPartido'];
+        $hora_partido = $data['horaPartido'];
+        $estado_partido = $data['estadoPartido'];
+        $id_local_partido = $data['idLocalPartido'];
+        $gol_local_partido = $data['golLocalPartido'];
+        $id_visitante_partido = $data['idVisitantePartido'];
+        $gol_visitante_partido = $data['golVisitantePartido'];
+
+        DB::table('partido')
+        ->where('id', $id_partido)
+        ->where('temporada_id', $temporada_partido)
+        ->where('fecha', $fecha_partido)
+        ->where('equipoLocal_id', $id_local_partido)
+        ->where('equipoVisitante_id', $id_visitante_partido)
+        ->update([
+            'estado_partido' => $estado_partido,
+            'fecha' => $fecha_partido,
+            'hora_prevista' => $hora_partido,
+            'goles_local' => $gol_local_partido,
+            'goles_visitante' => $gol_visitante_partido
+        ]);
+    } 
+
+
+
+
+
+
+
+
+
+
+    //////////////////////////////////////
+    ////////////////////////////////////// MOVER LUEGO A SU PROPIO CONTROLADOR
+    //////////////////////////////////////
     // funcion con la que mostraremos el calendario de dia a dia de los tipos de torneos y cantidad de partidos
     public function indexAgenda(){
-        return view('admin.agenda');
+
+        $response = $this->obtener_directos_de_json();
+        return view('admin.agenda')->with(['datos' => $response]);
     }
 
     // function para obtener todas las federaciones de todas las comunidades 
