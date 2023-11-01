@@ -4,41 +4,23 @@
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
                 <div class="col-12">
-                    <em class="text-danger">"estos partidos y datos esta condicionado estatico por el dia 2023-10-31"</em>
-                    <br><br>
-                    <?php echo "PARTIDOS TERMINADOS</br>";?>
-                    <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) {
-                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
-                            foreach ($partidos as $partidoInfo) {
-                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
-                            }
-                            echo "</br></br>";
-                        }
-                    ?>
-        
-                    <br><br><br>
-        
-                    <?php echo "PARTIDOS EN JUEGO</br>";?>
+                    {{-- <em class="text-danger">"estos partidos y datos esta condicionado estatico por el dia
+                        2023-10-31"</em>
+                    <br><br> --}}
+
+                    <?php echo 'PARTIDOS EN JUEGO</br>'; ?>
                     <?php foreach ($partidosEnJuegoCurDate as $nombreTemporada => $partidos) {
-                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
-                            foreach ($partidos as $partidoInfo) {
-                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
-                            }
-                            echo "</br></br>";
+                        echo "Temporada: $nombreTemporada , Id:" . $partidos[0]['idTemporada'] . ', Fase: ' . $partidos[0]['nombreFase'] . '</br>';
+                        foreach ($partidos as $partidoInfo) {
+                            echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] . ', Equipo Local: ' . $partidoInfo['datosTemporadaSeccion']['nombre_local'] . ', Equipo Visitante: ' . $partidoInfo['datosTemporadaSeccion']['nombre_visitante'] . '</br>';
                         }
+                        echo '</br></br>';
+                    }
                     ?>
-        
+
                     <br><br><br>
-        
-                    <?php echo "PARTIDOS PENDIENTES DE JUGAR</br>";?>
-                    <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) {
-                            echo "Temporada: $nombreTemporada , Id:".$partidos[0]['idTemporada'].", Fase: ".$partidos[0]['nombreFase']."</br>";
-                            foreach ($partidos as $partidoInfo) {
-                                echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . ", Equipo Local: " . $partidoInfo['datosTemporadaSeccion']["nombre_local"] . ", Equipo Visitante: " . $partidoInfo['datosTemporadaSeccion']["nombre_visitante"] . "</br>";
-                            }
-                            echo "</br></br></br></br>";
-                        }
-                    ?>
+
+
                 </div>
                 <h4 class="px-0 fs-000 mb-1 text-lg-end color-gray-medium d-lg-none d-block">Actualizado: 16:45:52 </h4>
                 <div class="col-lg col-12 ">
@@ -82,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-lg col-12 mt-lg-0 mt-4 px-lg-3 px-0">
-                    <h4 class="fs-000 mb-1 text-lg-end color-gray-medium d-lg-block d-none">Actualizado: 16:45:52 </h4>
+                    {{-- <h4 class="fs-000 mb-1 text-lg-end color-gray-medium d-lg-block d-none">Actualizado: 16:45:52 </h4> --}}
                     <h2 class="fs-00  mb-0 text-lg-end fw-semibold color-black">Partidos para hoy: <span
                             class="pratidos_totales_dia">30</span> | <span class="color-feature ">En directo: 8</span>
                     </h2>
@@ -218,7 +200,7 @@
                     </div>
                 @endforeach
 
-               {{--  <div class="accordion-item br-0">
+                {{--  <div class="accordion-item br-0">
 
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                         aria-labelledby="panelsStayOpen-headingOne">
@@ -450,10 +432,16 @@
 
             {{-- FUTUROS Y FINALIZADOS --}}
 
+
             <div class="accordion" id="PartidosFuturos">
+
+                {{-- PARTIDOS FUTUROS --}}
+                <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
+                    print_r($partidos); ?>
+
                 <div class="accordion-item br-0">
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
-                        id="panelFuturosOpen-headingOne">
+                        id="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
                         <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
                             <div class="d-block ps-4">
@@ -469,18 +457,22 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey
-                                <span>-</span> RFEF</a>
+                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
+                                <span>-</span> <?php echo $partidos[0]['nombreFase']; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapseOne"
-                            aria-expanded="true" aria-controls="panelFuturosOpen-collapseOne">
+                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php $partidos[0]['idTemporada']; ?>"
+                            aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php $partidos[0]['idTemporada']; ?>">
                             <i class="bi bi-chevron-up fs-3"></i>
                         </button>
                     </h2>
-                    <div id="panelFuturosOpen-collapseOne" class="accordion-collapse collapse show"
-                        aria-labelledby="panelFuturosOpen-headingOne">
+
+
+                    <?php foreach ($partidos as $partidoInfo) { ?>
+                    {{-- echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . </br>"; --}}
+                    <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
+                        aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
                         <div class="accordion-body border-bottom partido_futuro">
                             <div class="d-flex aling-items-center justify-content-between ">
@@ -503,14 +495,14 @@
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
-                                    <span class="icon-ball d-inline-block fs-1"></span> --}}
+                                            <span class="icon-ball d-inline-block fs-1"></span> --}}
                                     <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
                             </div>
                             <div class="partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
+                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
@@ -526,63 +518,56 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-block">FC Barcelona</h3>
+                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="accordion-body border-bottom partido_futuro">
-                            <div class="d-flex aling-items-center justify-content-between ">
-                                <div class="col d-flex aling-items-center ">
-                                    <div class="d-block py-2 px-1 fs-2">
-                                        <span class="icon-resolve-filled">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
-                                    </div>
+                    </div>
+                    <?php } ?>
+                </div>
 
-                                </div>
-                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
-                                        30</span></div>
-                                <div
-                                    class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
-                                    <span class="icon-ball d-inline-block fs-1"></span> --}}
-                                    <span class="icon-TV d-inline-block fs-1"></span>
-                                </div>
+                <?php } ?>
 
-                            </div>
-                            <div class="partido_alineado my-2">
-                                <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none">
-                                        <img src="https://assets.b365api.com/images/team/m/2829.png"
-                                            class="logo_s img-fluid">
-                                    </div>
-                                </div>
+                {{-- PARTIDOS FINALIZADOS --}}
 
-                                <div class="marcador">
-                                    <span class="goles-local">-</span>
-                                    <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">-</span>
-                                </div>
+                {{-- echo 'PARTIDOS TERMINADOS</br>' --}}
+                <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) { ?>
+                <div class="accordion-item br-0">
+                    <h2 class="accordion-header d-flex align-items-center justify-content-between"
+                        id="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none">
-                                        <img src="https://assets.b365api.com/images/team/m/2817.png"
-                                            class="logo_s img-fluid">
-                                    </div>
-                                    <h3 class="d-block">FC Barcelona</h3>
-                                </div>
+                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+                            <div class="d-block ps-4">
+                                <span class="icon-resolve-filled">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                    <span class="path3"></span>
+                                </span>
                             </div>
 
+                            <div class="d-inline-flex rounded-circle bandera_pais">
+                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                                    alt="bandera del pais del torneo" class="rounded-circle">
+                            </div>
+
+                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?>
+                                <span>-</span> <?php echo $partidos[0]['nombreFase']; ?></a>
                         </div>
+
+                        <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>"
+                            aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>">
+                            <i class="bi bi-chevron-up fs-3"></i>
+                        </button>
+                    </h2>
+                    <?php foreach ($partidos as $partidoInfo) {
+                            //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
+                            ?>
+                    <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
+                        aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
+
 
                         <div class="accordion-body border-bottom partido_finalizado">
                             <div class="d-flex aling-items-center justify-content-between ">
@@ -612,7 +597,7 @@
                             </div>
                             <div class="partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
+                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2829.png"
                                             class="logo_s img-fluid"></div>
@@ -633,13 +618,15 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"></div>
-                                    <h3 class="d-block">FC Barcelona</h3>
+                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
+                <?php } ?>
 
 
 
