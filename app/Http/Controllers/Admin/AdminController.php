@@ -136,6 +136,8 @@ class AdminController extends Controller
         // de la respuesta generamos array matriz para tener temporadas y partidos dentro
         foreach ($dataPartidosDia as $key => $value) {
             $obj = [
+                'fechaPartido' => $value->fecha,
+                'horaPartido' => $value->hora_prevista,
                 'idFase' => Self::get_name_fase($value->jornada)[0]->id,
                 'nombreFase' => Self::get_name_fase($value->jornada)[0]->nombre,
                 'partidoId' => $value->id,
