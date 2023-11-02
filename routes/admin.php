@@ -18,7 +18,9 @@ Route::get('admin-panel/agenda/', [AdminController::class, 'indexAgenda']);
 
 Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederaciones']);
 
+// clubes
 Route::get('admin-panel/clubes/', [AdminClubesController::class, 'indexPaises']);
+Route::get('admin-panel/clubes/{id}', [AdminClubesController::class, 'editarClub']);
 
 Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
 

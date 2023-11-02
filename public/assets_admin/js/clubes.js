@@ -25,8 +25,10 @@
                     console.log(response);
                     let result = JSON.parse(response)
                     for (const iterator of result) {
-                        $('.listado-club-por-pais').append(
-                        `<li class="list-group-item" style="cursor:pointer;">${iterator.nombre}</li>`);
+                        if(iterator.nombre != ''){
+                            $('.listado-club-por-pais').append(
+                            `<li class="list-group-item"><a href="clubes/${iterator.id}">${iterator.nombre}</a></li>`);
+                        }
                     }
                 },
                 complete: function () {

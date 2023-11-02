@@ -205,7 +205,7 @@ class AdminController extends Controller
         $id_visitante_partido = $data['idVisitantePartido'];
         $gol_visitante_partido = $data['golVisitantePartido'];
 
-        DB::table('partido')
+        $filasActualizadas = DB::table('partido')
         ->where('id', $id_partido)
         ->where('temporada_id', $temporada_partido)
         ->where('fecha', $fecha_partido)
@@ -218,6 +218,8 @@ class AdminController extends Controller
             'goles_local' => $gol_local_partido,
             'goles_visitante' => $gol_visitante_partido
         ]);
+
+        return json_encode($filasActualizadas);
     } 
 
 

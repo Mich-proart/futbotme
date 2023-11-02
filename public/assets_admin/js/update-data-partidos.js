@@ -1,3 +1,10 @@
+const alertFeed = (alertColor, alertTexto) =>{
+    jQuery('.alert-generic-panel').removeClass('alert-danger alert-success')
+    jQuery('.alert-generic-panel').addClass(alertColor)
+    jQuery('.alert-generic-panel').text(alertTexto)
+    jQuery('.alert-generic-panel').fadeIn().delay(3500).fadeOut().delay(1500)
+}
+
 !(function ($) {
     "use strict";
 
@@ -24,18 +31,11 @@
             headers: {
                 "X-CSRF-TOKEN": csrfToken,
             },
-            beforeSend: function () {
-                // $(".spiner-competiciones").fadeIn();
-                // $(acordion).html("");
-            },
+            beforeSend: function () {},
             success: function (response) {
-                console.log(response);
-                // let result = JSON.parse(response);
-                // $(acordion).append(result);
+                (response > '0') ? alertFeed('alert-success', 'cambios guardados') : alertFeed('alert-danger', '0 cambios detectados')
             },
-            complete: function () {
-                //$(".spiner-competiciones").fadeOut();
-            },
+            complete: function () {},
         });
     });
 })(window.jQuery);

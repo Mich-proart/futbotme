@@ -68,6 +68,14 @@
                                                 <label class="form-label">Fichaje?</label>
                                                 <input type="text" class="form-control" placeholder="{{ $dataJugador[0]->es_fichaje }}" value="{{ $dataJugador[0]->es_fichaje }}">
                                             </div>
+                                            <div class="col-xl-4 col-12 mb-3">
+                                                <label class="form-label">Procedencia</label>
+                                                <input type="text" class="form-control" placeholder="{{ $dataJugador[0]->equipoProcedencia_id }}" value="{{ $dataJugador[0]->equipoProcedencia_id }}">
+                                            </div>
+                                            <div class="col-xl-4 col-12 mb-3">
+                                                <label class="form-label">Equipo actual</label>
+                                                <input type="text" class="form-control" placeholder="{{ $dataJugador[0]->equipoActual_id }}" value="{{ $dataJugador[0]->equipoActual_id }}">
+                                            </div>
                                             <div class="col-xl-12 col-12 mb-3">
                                                 <label for="jugador-select-pais" class="form-label">Pais</label>
                                                 <select class="form-select" id="jugador-select-pais">
@@ -77,17 +85,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
-                                        <ul class="mb-0 list-inline">
-                                            <li class="list-inline-item me-3">
-                                                <h5 class="mb-1">$ 25,184</h5>
-                                                <p class="mb-0 font-13">Total Revenue</p>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <h5 class="mb-1">5482</h5>
-                                                <p class="mb-0 font-13">Number of Orders</p>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -98,74 +95,26 @@
         </div> <!-- end col-->
     </div> <!-- end row-->
     <div class="row">
-        <div class="col-xl-4">
-            <!-- Personal-Information -->
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mt-0 mb-3">Palmarés</h4>
-                    <textarea  class="w-100" id="" cols="30" rows="10">
-                        {{ $dataJugador[0]->palmares }}
-                    </textarea>
-                    <hr/>
-                    <h4 class="header-title mt-0 mb-3">Características</h4>
-                    <textarea class="w-100" name="" id="" cols="30" rows="10">
-                        {{ $dataJugador[0]->caracteristicas }}
-                    </textarea>
-                    <div class="text-start">
-                        <p class="text-muted"><strong>Full Name :</strong> <span class="ms-2">Michael A. Franklin</span></p>
-
-                        <p class="text-muted"><strong>Mobile :</strong><span class="ms-2">(+12) 123 1234 567</span></p>
-
-                        <p class="text-muted"><strong>Email :</strong> <span class="ms-2">coderthemes@gmail.com</span></p>
-
-                        <p class="text-muted"><strong>Location :</strong> <span class="ms-2">USA</span></p>
-
-                        <p class="text-muted"><strong>Languages :</strong>
-                            <span class="ms-2"> English, German, Spanish </span>
-                        </p>
-                        <p class="text-muted mb-0" id="tooltip-container"><strong>Elsewhere :</strong>
-                            <a class="d-inline-block ms-2 text-muted" data-bs-placement="top" data-bs-container="#tooltip-container" data-bs-toggle="tooltip" href="" title="Facebook"><i class="mdi mdi-facebook"></i></a>
-                            <a class="d-inline-block ms-2 text-muted" data-bs-placement="top" data-bs-container="#tooltip-container" data-bs-toggle="tooltip" href="" title="Twitter"><i class="mdi mdi-twitter"></i></a>
-                            <a class="d-inline-block ms-2 text-muted" data-bs-placement="top" data-bs-container="#tooltip-container" data-bs-toggle="tooltip" href="" title="Skype"><i class="mdi mdi-skype"></i></a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <!-- Personal-Information -->
-        </div>
-
-        <div class="col-xl-8">
+        <div class="col-12">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-12">
                     <div class="card tilebox-one">
                         <div class="card-body">
-                            <i class="dripicons-basket float-end text-muted"></i>
-                            <h6 class="text-muted text-uppercase mt-0">Orders</h6>
-                            <h2 class="m-b-20">1,587</h2>
-                            <span class="badge bg-primary"> +11% </span> <span class="text-muted">From previous period</span>
+                            <h4 class="header-title mt-0 mb-3">Palmarés</h4>
+                            <textarea  class="w-100" id="" cols="30" rows="10">
+                                {{ $dataJugador[0]->palmares }}
+                            </textarea>
                         </div> <!-- end card-body-->
                     </div> <!--end card-->
                 </div><!-- end col -->
 
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-12">
                     <div class="card tilebox-one">
                         <div class="card-body">
-                            <i class="dripicons-box float-end text-muted"></i>
-                            <h6 class="text-muted text-uppercase mt-0">Revenue</h6>
-                            <h2 class="m-b-20">$<span>46,782</span></h2>
-                            <span class="badge bg-danger"> -29% </span> <span class="text-muted">From previous period</span>
-                        </div> <!-- end card-body-->
-                    </div> <!--end card-->
-                </div><!-- end col -->
-
-                <div class="col-sm-4">
-                    <div class="card tilebox-one">
-                        <div class="card-body">
-                            <i class="dripicons-jewel float-end text-muted"></i>
-                            <h6 class="text-muted text-uppercase mt-0">Product Sold</h6>
-                            <h2 class="m-b-20">1,890</h2>
-                            <span class="badge bg-primary"> +89% </span> <span class="text-muted">Last year</span>
+                            <h4 class="header-title mt-0 mb-3">Características</h4>
+                            <textarea class="w-100" name="" id="" cols="30" rows="10">
+                                {{ $dataJugador[0]->caracteristicas }}
+                            </textarea>
                         </div> <!-- end card-body-->
                     </div> <!--end card-->
                 </div><!-- end col -->
@@ -175,7 +124,7 @@
             <div class="card text-white bg-success overflow-hidden">
                 <div class="card-body">
                     <div class="toll-free-box text-center">
-                        <h4> <i class="mdi mdi-deskphone"></i> Toll Free : 1-234-567-8901</h4>
+                        <h4> <i class="mdi mdi-deskphone"></i> Futbolme - © 1999-2023</h4>
                     </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->

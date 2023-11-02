@@ -33,6 +33,9 @@
 <body class="loading" data-layout-color="light" data-layout="topnav" data-layout-mode="fluid"
     data-rightbar-onstart="true">
 
+    <div class="alert alert-generic-panel" role="alert" style="display:none;position: absolute;z-index: 9999;top: 99px;right: 30px;padding: 24px;font-size: 18px;font-weight: bold;">
+        A simple success alert—check it out!
+    </div>
     <!-- Begin page -->
     <div class="wrapper">
 
@@ -191,7 +194,7 @@
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script> --}}
 
 
-    
+
     {{-- <script>
         const socket = io("http://localhost:3000"); // Reemplaza con la URL de tu servidor
 

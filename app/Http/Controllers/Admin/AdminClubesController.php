@@ -19,6 +19,14 @@ class AdminClubesController extends Controller
         ->get();
         return $paises;
     }
+
+    public static function getDataClub($id){
+        $dataClub = DB::table('club')
+        ->select('*')
+        ->where('id', '=', $id)
+        ->get();
+        return $dataClub;
+    }
     /*************************************************/
     /********************* HELPERS *******************/
     /*************************************************/
@@ -44,5 +52,11 @@ class AdminClubesController extends Controller
         $paises = Self::getAllPaises();
 
         return view('admin.club', ['paises' => $paises]);
+    }
+
+    public function editarClub($id){
+        
+        $dataClub = Self::getDataClub($id);
+        return view('admin.editarClub', ['dataClub' => $dataClub]);
     }
 }

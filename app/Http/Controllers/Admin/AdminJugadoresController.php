@@ -24,6 +24,16 @@ class AdminJugadoresController extends Controller
         return $jugadores;
     }
 
+    // funcion con la que obtenemos todos los datos de un jugador
+    public static function getDataJugador($id){
+        $dataJugador = DB::table('jugador')
+        ->select('*')
+        ->where('id', '=', $id)
+        ->orderBy('nombre')
+        ->get();
+        return $dataJugador;
+    }
+
     // enviamos jugadores en formato ajax 
     public static function getJugadoresAjax(){
         $jugadores = Self::getJugadores();
@@ -51,11 +61,7 @@ class AdminJugadoresController extends Controller
     public static function editarJugador($id){
         
         // obtenemos los datos del jugador seleccionado
-        $dataJugador = DB::table('jugador')
-        ->select('*')
-        ->where('id', '=', $id)
-        ->orderBy('nombre')
-        ->get();
+        $dataJugador = Self::getDataJugador($id);
 
         // importamos funcion con la que obtenemos los paises
         $paises = AdminClubesController::getAllPaises();
