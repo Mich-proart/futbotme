@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 //importaciones
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 
 //alineacion https://api.b365api.com/v1/event/lineup?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919

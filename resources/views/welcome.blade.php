@@ -437,7 +437,9 @@
 
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
-                    //print_r($partidos); ?>
+                    //print_r($partidos); 
+                    $slug = Str::slug($nombreTemporada);
+                ?>
 
                 <div class="accordion-item br-0">
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
@@ -457,7 +459,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
+                            <a href="/{{$slug}}/{{$partidos[0]['idTemporada'];}}" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
@@ -501,7 +503,7 @@
                                 <div class="local">
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2829.png"
+                                            src="https://assets.b365api.com/images/team/m/<?php echo $partidoInfo['datosTemporadaSeccion']['equipoLocal_id']; ?>.png"
                                             class="logo_s img-fluid"></div>
                                 </div>
 
@@ -513,7 +515,7 @@
 
                                 <div class="visitante">
                                     <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2817.png"
+                                            src="https://assets.b365api.com/images/team/m/<?php echo $partidoInfo['datosTemporadaSeccion']['equipoVisitante_id']; ?>.png"
                                             class="logo_s img-fluid"></div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
                                 </div>
