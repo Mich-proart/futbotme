@@ -123,13 +123,9 @@ const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
 const weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
 let date = new Date();
 
-function getCurrentDate(element, asString) {
+function getCurrentDate(element) {
     if (element) {
-        if (asString) {
-            element.textContent = `${weekdays[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`;
-        } else {
-            element.value = date.toISOString().substring(0, 10);
-        }
+        element.value = date.toISOString().substring(0, 10);
     }
     return date;
 }
@@ -196,8 +192,8 @@ function generateCalendar() {
     changeActive();
     changeHeader(date);
     document.getElementById('date').textContent = date;
-    getCurrentDate(document.getElementById("currentDate"), true);
-    getCurrentDate(document.getElementById("date"), false);
+    getCurrentDate(document.getElementById("currentDate"));
+    getCurrentDate(document.getElementById("date"));
 }
 
 function setDate(form) {
