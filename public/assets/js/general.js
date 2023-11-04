@@ -94,6 +94,11 @@ function nextDay() {
     changeHeader(date);
 }
 
+function resetDate() {
+    date = new Date();
+    generateCalendar();
+}   
+
 document.onload = generateCalendar(date);
 
 

@@ -790,18 +790,18 @@ body {
         
     }
      /* Ocultar el texto de la fecha predeterminada */
-     input[type="date"]::-webkit-inner-spin-button,
+     /* input[type="date"]::-webkit-inner-spin-button,
      input[type="date"]::-webkit-calendar-picker-indicator {
        display: none;
        -webkit-appearance: none;
-     }
+     } */
  
      /* Agregar un ícono de calendario personalizado */
-     input[type="date"] {
+     /* input[type="date"] {
        padding: 5px 25px 5px 5px;
        background: transparent url('/assets/images/inputdate.png') no-repeat 95% 50%;
-       background-size: 20px; /* Ajusta el tamaño del icono */
-     }
+       background-size: 20px;
+     } */
 
     /* input {
         height: 54px;

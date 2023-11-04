@@ -43,13 +43,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="calendar d-none" id="table">
-                            <div class="header">
-                                <div class="month" id="month-header">
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg col-12 mt-lg-0 mt-4 px-lg-3 px-0">
