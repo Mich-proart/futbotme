@@ -159,16 +159,16 @@ function changeHeader(dateHeader) {
         const day = dateHeader.getDate().toString().padStart(2, '0');
         const month = (dateHeader.getMonth() + 1).toString().padStart(2, '0');
         currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
-    } else {
-        const month = document.getElementById("month-header");
-        if (month.childNodes[0]) {
-            month.removeChild(month.childNodes[0]);
-        }
-        const headerMonth = document.createElement("h1");
-        const textMonth = document.createTextNode(months[dateHeader.getMonth()].substring(0, 3) + " " + dateHeader.getFullYear());
-        headerMonth.appendChild(textMonth);
-        month.appendChild(headerMonth);
     }
+
+    const month = document.getElementById("month-header");
+    if (month.childNodes[0]) {
+        month.removeChild(month.childNodes[0]);
+    }
+    const headerMonth = document.createElement("h4");
+    const textMonth = document.createTextNode(months[dateHeader.getMonth()].substring(0, 3) + " " + dateHeader.getFullYear());
+    headerMonth.appendChild(textMonth);
+    month.appendChild(headerMonth);
 
 }
 
