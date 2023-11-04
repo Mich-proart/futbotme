@@ -105,19 +105,6 @@ function nextDay() {
     changeHeader(date);
 }
 
-function showCalendar() {
-    const datePickerButton = document.getElementById("calendarIcon");
-    if (datePickerButton) {
-        datePickerButton.addEventListener("click", function () {
-            const inputDate = document.getElementById("date");
-            if (inputDate) {
-                inputDate.click();
-            }
-        });
-    }
-
-}
-
 
 window.onload = function () {
     generateCalendar();
@@ -130,6 +117,27 @@ window.onload = function () {
         currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
     }
 };
+
+function openDatePicker() {
+    const inputDate = document.createElement("input");
+    inputDate.type = "date";
+    inputDate.style.display = "none";
+    inputDate.id = "date"; // Asigna el mismo ID que tenía el campo input original
+
+    // Agrega el campo input de fecha al formulario
+    const form = document.getElementById("date-search");
+    form.appendChild(inputDate);
+
+    // Abre el selector de fecha
+    inputDate.click();
+
+    // Elimina el campo input después de que se seleccione una fecha
+    inputDate.addEventListener("change", function () {
+        form.removeChild(inputDate);
+        setDate(form);
+    });
+}
+
 
 
 
