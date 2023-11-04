@@ -26,13 +26,16 @@
                                     <h2 class="fs-00 mb-0" id="currentDate"></h2>
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
-                                            <input type="date" class="text-field" name="date" id="date" required>
+                                            <input type="date" class="text-field" name="date" id="date"
+                                                required>
                                             {{-- <button type="submit" class="btn btn-small" title="Pesquisar">
                                                 <i class="bi bi-search"></i>
                                             </button> --}}
-                                            {{-- <button type="button" class="btn btn-small">
-                                                <img src="" alt="">
-                                            </button> --}}
+                                            <button type="button" class="btn btn-small" id="calendarIcon"
+                                                onclick="showCalendar()">
+                                                <i class="icon-Calendar"></i>
+                                            </button>
+
                                         </form>
                                     </div>
                                 </div>
@@ -91,7 +94,7 @@
             <div class="accordion" id="PartidosEnDirecto">
 
                 {{-- PARTIDOS MANUALES --}}
-                
+
 
                 <?php foreach ($partidosEnJuegoCurDate as $nombreTemporada => $partidos) { 
                     //print_r($partidos); 
@@ -132,7 +135,8 @@
 
                         <?php foreach ($partidos as $partidoInfo) { ?>
 
-                        <div class="accordion-body border-bottom partido_futuro" id="PartidoID_{{$partidoInfo['datosTemporadaSeccion']["partidoId"]}}">
+                        <div class="accordion-body border-bottom partido_futuro"
+                            id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
                             <div class="d-flex aling-items-center justify-content-between ">
                                 <div class="col d-flex aling-items-center ">
                                     <div class="d-block py-2 px-1 fs-2">
@@ -154,8 +158,8 @@
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1"></span>
-                                            <span class="icon-ball d-inline-block fs-1"></span>
-                                            <span class="icon-TV d-inline-block fs-1"></span>
+                                    <span class="icon-ball d-inline-block fs-1"></span>
+                                    <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
                             </div>

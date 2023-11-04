@@ -105,6 +105,12 @@ function nextDay() {
     changeHeader(date);
 }
 
+function showCalendar() {
+    const dateInput = document.getElementById("date");
+    dateInput.focus();
+}
+
+
 window.onload = function () {
     generateCalendar();
     const currentDateElement = document.getElementById("currentDate");
