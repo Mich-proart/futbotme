@@ -293,8 +293,9 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}"
-                                class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
+                            <a href="/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                                class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
+                            </a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
@@ -382,7 +383,9 @@
                 {{-- PARTIDOS FINALIZADOS --}}
 
                 {{-- echo 'PARTIDOS TERMINADOS</br>' --}}
-                <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) { ?>
+                <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) {
+                $slug = Str::slug($nombreTemporada);    
+                ?>
                 <div class="accordion-item br-0">
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
                         id="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
@@ -401,7 +404,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?></a>
+                            <a href="/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/" class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
