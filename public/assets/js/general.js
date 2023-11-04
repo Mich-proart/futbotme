@@ -106,8 +106,16 @@ function nextDay() {
 }
 
 function showCalendar() {
-    const dateInput = document.getElementById("date");
-    dateInput.click();
+    const datePickerButton = document.getElementById("calendarIcon");
+    if (datePickerButton) {
+        datePickerButton.addEventListener("click", function () {
+            const inputDate = document.getElementById("date");
+            if (inputDate) {
+                inputDate.click();
+            }
+        });
+    }
+
 }
 
 
