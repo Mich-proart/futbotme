@@ -101,7 +101,7 @@ function nextDay() {
     changeHeader(date);
 }
 
-document.onload = function () {
+window.onload = function () {
     generateCalendar();
     const currentDateElement = document.getElementById("currentDate");
     if (currentDateElement) {
