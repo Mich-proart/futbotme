@@ -321,7 +321,7 @@
                                     </div>
                                     <div>
                                         <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white"><?php echo $partidos[0]['horaPartido']; ?></span>
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white"><?php echo $partidoInfo['datosTemporadaSeccion']['horaPartido']; ?></span>
                                     </div>
 
                                 </div>
@@ -416,7 +416,7 @@
                                     </div>
                                     <div>
                                         <span class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">
-                                            <?php echo $partidos[0]['horaPartido']; ?>
+                                            <?php echo $partidoInfo['datosTemporadaSeccion']['horaPartido']; ?>
                                         </span>
                                     </div>
 
