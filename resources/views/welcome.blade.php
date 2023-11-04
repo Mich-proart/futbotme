@@ -64,6 +64,10 @@
                                                 <div class="month" id="month-header">
 
                                                 </div>
+                                                <div class="buttons">
+                                                    <button class="icon" onclick="prevMonth()" title="Mês anterior"><i class="fas fa-chevron-left"></i></button>
+                                                    <button class="icon" onclick="nextMonth()" title="Próximo mês"><i class="fas fa-chevron-right "></i></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

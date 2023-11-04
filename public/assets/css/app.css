@@ -816,3 +816,93 @@ body {
         right: 1px;
     }
 }
+
+
+/* ESTILOS PARA CALENDARIO */
+
+
+.btn-day {
+    font-family: 'Open Sans';
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 99;
+    outline: 0;
+    border-radius: 10px;
+    transition: 0.4s all;
+}
+
+.btn-day.active {
+    color: #FFF;
+    font-weight: 600;
+    z-index: 99;
+}
+
+.btn-day.active::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: #455AF7;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+.calendar {
+    height: 370px;
+    width: 324px;
+    border-radius: 18px;
+    background: #ffffff;
+	  padding: 10px;
+	  user-select: none;
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 18px 18px 0px 0px;
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    color: #262626;
+}
+
+.month {
+    font-size: 0.7em;
+}
+
+
+.weekends th {
+    font-size: 1em;
+    color: gray;
+    font-weight: 400;
+    width: 40px;
+    margin: 10px 0;
+}
+
+#calendar tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 3px;
+}
+
+#calendar td {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99;
+}
