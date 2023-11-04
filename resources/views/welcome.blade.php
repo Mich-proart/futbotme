@@ -65,8 +65,8 @@
 
                                                 </div>
                                                 <div class="buttons">
-                                                    <button class="icon" onclick="prevMonth()" title="Mês anterior"><i class="fas fa-chevron-left"></i></button>
-                                                    <button class="icon" onclick="nextMonth()" title="Próximo mês"><i class="fas fa-chevron-right "></i></button>
+                                                    <button class="icon" onclick="prevMonth()" title="Mes anterior"><i class="bi bi-chevron-left"></i></button>
+                                                    <button class="icon" onclick="nextMonth()" title="Próximo mes"><i class="bi bi-chevron-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>

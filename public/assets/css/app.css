@@ -217,7 +217,7 @@ body {
     margin-bottom: 0px;
     white-space: nowrap;
     overflow: hidden;
-    padding: .5rem;
+    padding: 0.5rem;
     max-width: 303px;
 }
 
@@ -786,7 +786,6 @@ body {
         text-transform: uppercase;
     }
 
-
     .input-button {
         position: absolute;
         width: 75px;
@@ -817,12 +816,10 @@ body {
     }
 }
 
-
 /* ESTILOS PARA CALENDARIO */
 
-
 .btn-day {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-size: 1em;
     display: flex;
     justify-content: center;
@@ -839,29 +836,28 @@ body {
 }
 
 .btn-day.active {
-    color: #FFF;
+    color: #fff;
     font-weight: 600;
     z-index: 99;
 }
 
 .btn-day.active::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 40px;
     height: 40px;
-    background: #455AF7;
+    background: var(--color-livescore);
     border-radius: 10px;
     z-index: -1;
 }
-
 
 .calendar {
     height: 370px;
     width: 324px;
     border-radius: 18px;
     background: #ffffff;
-	  padding: 10px;
-	  user-select: none;
+    padding: 10px;
+    user-select: none;
 }
 
 .calendar .header {
@@ -879,6 +875,20 @@ body {
     font-size: 0.7em;
 }
 
+.icon {
+    padding: 10px;
+    font-size: 1em;
+    margin: 0 0 0 5px;
+    background: #ffffff;
+    color: var(--color-livescore);
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
 
 .weekends th {
     font-size: 1em;
