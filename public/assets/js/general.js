@@ -102,7 +102,11 @@ function resetDate() {
 //document.onload = generateCalendar(date);
 document.onload = () => {
     generateCalendar(date);
-    resetDate();
+    const currentDateElement = document.getElementById("currentDate");
+    if (currentDateElement) {
+        const today = new Date();
+        currentDateElement.textContent = `${weekdays[today.getDay()]}, ${today.getDate()} de ${today.toLocaleString('default', { month: 'long' })} de ${today.getFullYear()}`;
+    }
 };
 
 
