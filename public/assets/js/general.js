@@ -80,9 +80,13 @@ function setDate(form) {
 function changeHeader(dateHeader) {
     const currentDateElement = document.getElementById("currentDate");
     if (currentDateElement) {
-        currentDateElement.textContent = `${weekdays[dateHeader.getDay()]}, ${dateHeader.getDate()} de ${dateHeader.toLocaleString('default', { month: 'long' })} de ${dateHeader.getFullYear()}`;
+        const dayOfWeek = weekdays[dateHeader.getDay()];
+        const day = dateHeader.getDate().toString().padStart(2, '0');
+        const month = (dateHeader.getMonth() + 1).toString().padStart(2, '0');
+        currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
     }
 }
+
 
 function resetDate() {
     date = new Date();
@@ -106,7 +110,10 @@ window.onload = function () {
     const currentDateElement = document.getElementById("currentDate");
     if (currentDateElement) {
         const today = new Date();
-        currentDateElement.textContent = `${weekdays[today.getDay()]}, ${today.getDate()} de ${today.toLocaleString('default', { month: 'long' })} de ${today.getFullYear()}`;
+        const dayOfWeek = weekdays[today.getDay()];
+        const day = today.getDate().toString().padStart(2, '0');
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
     }
 };
 
