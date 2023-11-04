@@ -107,7 +107,7 @@ function nextDay() {
 
 function showCalendar() {
     const dateInput = document.getElementById("date");
-    dateInput.focus();
+    dateInput.click();
 }
 
 
