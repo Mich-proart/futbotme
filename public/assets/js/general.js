@@ -118,25 +118,17 @@ window.onload = function () {
     }
 };
 
-function openDatePicker() {
-    const inputDate = document.createElement("input");
-    inputDate.type = "date";
-    inputDate.style.display = "none";
-    inputDate.id = "date"; // Asigna el mismo ID que tenía el campo input original
 
-    // Agrega el campo input de fecha al formulario
-    const form = document.getElementById("date-search");
-    form.appendChild(inputDate);
-
-    // Abre el selector de fecha
-    inputDate.click();
-
-    // Elimina el campo input después de que se seleccione una fecha
-    inputDate.addEventListener("change", function () {
-        form.removeChild(inputDate);
-        setDate(form);
+// Agregamos un evento clic al botón o imagen para abrir el selector de fecha
+document.getElementById("calendarIcon").addEventListener("click", function() {
+    const dateInput = document.getElementById("date");
+    dateInput.style.display = "block"; // Mostramos el input date
+    dateInput.focus(); // Activamos el selector de fecha
+    dateInput.addEventListener("blur", function() {
+        // Ocultamos el input date cuando se pierde el enfoque
+        dateInput.style.display = "none";
     });
-}
+});
 
 
 

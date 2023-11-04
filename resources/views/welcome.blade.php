@@ -26,12 +26,11 @@
                                     <h2 class="fs-00 mb-0" id="currentDate"></h2>
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
-                                            {{-- <input type="date" class="text-field" name="date" id="date"> --}}
+                                            <input type="date" class="text-field" name="date" id="date" style="display: none;">
                                             {{-- <button type="submit" class="btn btn-small" title="Pesquisar">
                                                 <i class="bi bi-search"></i>
                                             </button> --}}
-                                            <button type="button" class="btn btn-small" id="calendarIcon"
-                                                onclick="openDatePicker()">
+                                            <button type="button" class="btn btn-small" id="calendarIcon">
                                                 <i class="icon-Calendar fs-03"></i>
                                             </button>
 
