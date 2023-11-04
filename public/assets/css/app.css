@@ -799,7 +799,7 @@ body {
      /* Agregar un ícono de calendario personalizado */
      input[type="date"] {
        padding: 5px 25px 5px 5px;
-       /* background: transparent url('/public/assets/images/inputdate.png') no-repeat 95% 50%; */
+       background: transparent url('/assets/images/inputdate.png') no-repeat 95% 50%;
        background-size: 20px; /* Ajusta el tamaño del icono */
      }
 
