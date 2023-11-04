@@ -27,9 +27,12 @@
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
                                             <input type="date" class="text-field" name="date" id="date" required>
-                                            <button type="submit" class="btn btn-small" title="Pesquisar">
+                                            {{-- <button type="submit" class="btn btn-small" title="Pesquisar">
                                                 <i class="bi bi-search"></i>
-                                            </button>
+                                            </button> --}}
+                                            {{-- <button type="button" class="btn btn-small">
+                                                <img src="" alt="">
+                                            </button> --}}
                                         </form>
                                     </div>
                                 </div>
