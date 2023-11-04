@@ -99,7 +99,11 @@ function resetDate() {
     generateCalendar();
 }   
 
-document.onload = generateCalendar(date);
+//document.onload = generateCalendar(date);
+document.onload = () => {
+    generateCalendar(date);
+    resetDate();
+};
 
 
 
