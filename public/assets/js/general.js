@@ -84,24 +84,25 @@ function changeHeader(dateHeader) {
     }
 }
 
+function resetDate() {
+    date = new Date();
+    generateCalendar();
+}
+
 function prevDay() {
     date = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 1);
+    getCurrentDate(document.getElementById("date"));
     changeHeader(date);
 }
 
 function nextDay() {
     date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+    getCurrentDate(document.getElementById("date"));
     changeHeader(date);
 }
 
-function resetDate() {
-    date = new Date();
+document.onload = function () {
     generateCalendar();
-}   
-
-//document.onload = generateCalendar(date);
-document.onload = () => {
-    generateCalendar(date);
     const currentDateElement = document.getElementById("currentDate");
     if (currentDateElement) {
         const today = new Date();
