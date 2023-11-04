@@ -16,26 +16,27 @@
                                 <i class="fas fa-calendar-day"></i> Hoy
                             </button>
 
-                            <div class="day-assets d-flex align-items-center justify-content-between">
+                            <div class="day-assets d-flex align-items-center justify-content-between bg-white">
                                 <button
                                     class="btn bg-gray br-0 px-4 py-2 d-flex align-items-center justify-content-between"
                                     onclick="prevDay()" title="Dia anterior">
                                     <i class=" bi bi-chevron-left fs-5"></i>
                                 </button>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <h2 class="fs-00 mb-0" id="currentDate"></h2>
+                                    
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
                                             <input type="date" class="text-field" name="date" id="date"
-                                                style="display: none;">
+                                                style="display: none;" timezone="local">
 
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            <button type="button" class="btn bg-transparent border-0 color-black " data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal">
                                                 <i class="icon-Calendar fs-03"></i>
                                             </button>
 
                                         </form>
                                     </div>
+                                    <h2 class="fs-00 mb-0" id="currentDate"></h2>
                                 </div>
                                 <button
                                     class="btn bg-gray br-0 px-4 py-2 d-flex align-items-center justify-content-between"
