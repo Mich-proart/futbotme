@@ -325,7 +325,7 @@
                                             {{-- HORA --}}
                                             <?php
                                             $horabd = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
-                                            $HoraLimpia = substr($string, 0, -3); // Elimina los tres últimos caracteres :00
+                                            $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
                                             
                                             echo $HoraLimpia;
                                             ?>
@@ -432,7 +432,7 @@
                                             {{-- HORA --}}
                                             <?php
                                             $horabd = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
-                                            $HoraLimpia = substr($string, 0, -3); // Elimina los tres últimos caracteres :00
+                                            $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
                                             
                                             echo $HoraLimpia;
                                             ?>
