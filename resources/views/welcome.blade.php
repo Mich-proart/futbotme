@@ -253,172 +253,6 @@
 
                         </div>
                     </div>
-                </div>
-
-                <div class="accordion-item br-0">
-                    <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
-                        id="panelsStayOpen-headingTwo">
-
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
-                            </div>
-
-                            <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                    alt="bandera del pais del torneo" class="rounded-circle">
-                            </div>
-
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey
-                                <span>-</span> RFEF</a>
-                        </div>
-                        <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                            aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                            <i class="bi bi-chevron-up fs-3"></i>
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body border-bottom">
-                            <div class="d-flex aling-items-center justify-content-between ">
-                                <div class="col-2 d-flex aling-items-center ">
-                                    <div class="d-block py-2 px-1 fs-2">
-                                        <span class="icon-resolve-filled">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
-                                    </div>
-
-                                </div>
-
-                                <div
-                                    class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                                    <span class="icon-ball d-inline-block fs-1"></span>
-                                    <span class="icon-TV d-inline-block fs-1"></span>
-                                </div>
-
-                            </div>
-                            <div class="partido_alineado my-2">
-                                <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2829.png"
-                                            class="logo_s img-fluid"></div>
-                                </div>
-
-                                <div class="marcador">
-                                    <span class="goles-local">4</span>
-                                    <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">0</span>
-                                </div>
-
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2817.png"
-                                            class="logo_s img-fluid"></div>
-                                    <h3 class="d-block">FC Barcelona</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item br-0">
-                    <h2 class="accordion-header d-flex align-items-center justify-content-between"
-                        id="panelsStayOpen-headingtree">
-
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
-                            </div>
-
-                            <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
-                                    alt="bandera del pais del torneo" class="rounded-circle">
-                            </div>
-
-                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga">Copa de S.M el Rey
-                                <span>-</span> RFEF </a>
-                        </div>
-
-                        <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetree"
-                            aria-expanded="true" aria-controls="panelsStayOpen-collapsetree">
-                            <i class="bi bi-chevron-up fs-3"></i>
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapsetree" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingtree">
-                        <div class="accordion-body border-bottom">
-                            <div class="d-flex aling-items-center justify-content-between ">
-                                <div class="col-2 d-flex aling-items-center ">
-                                    <div class="d-block py-2 px-1 fs-2">
-                                        <span class="icon-resolve-filled">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-green-minutos text-white">10’</span>
-                                    </div>
-
-                                </div>
-
-                                <div
-                                    class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                                    <span class="icon-ball d-inline-block fs-1"></span>
-                                    <span class="icon-TV d-inline-block fs-1"></span>
-                                </div>
-
-                            </div>
-                            <div class="partido_alineado my-2">
-                                <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2829.png"
-                                            class="logo_s img-fluid"></div>
-                                    <div class="goleadores">
-                                        <span class="d-block">0-1, Amath - 21´</span>
-                                        <span class="d-block">0-2, Joan - 30´</span>
-                                        <span class="d-block">1-3, Ronaldo - 55´</span>
-                                    </div>
-                                </div>
-
-                                <div class="marcador">
-                                    <span class="goles-local">4</span>
-                                    <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">0</span>
-                                </div>
-
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2817.png"
-                                            class="logo_s img-fluid"></div>
-                                    <h3 class="d-block">FC Barcelona</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 </div> --}}
 
 
@@ -459,7 +293,8 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="/{{$slug}}/{{$partidos[0]['idTemporada'];}}" class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
+                            <a href="/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}"
+                                class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?></a>
                         </div>
 
                         <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
@@ -486,11 +321,13 @@
                                     </div>
                                     <div>
                                         <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white"><?php echo $partidos[0]['horaPartido']; ?></span>
                                     </div>
 
                                 </div>
-                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span></div>
+                                <div class="col"><span
+                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span>
+                                </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
@@ -578,12 +415,17 @@
                                         </span>
                                     </div>
                                     <div>
-                                        <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">17:30</span>
+                                        <span class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">
+                                            <?php echo $partidos[0]['horaPartido']; ?>
+                                        </span>
                                     </div>
 
                                 </div>
-                                <div class="col"><span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span></div>
+                                <div class="col"> 
+                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo">
+                                        <?php echo $partidos[0]['nombreFase']; ?>
+                                    </span>
+                                </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1"></span>
@@ -595,9 +437,10 @@
                             <div class="partido_alineado my-2">
                                 <div class="local">
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2829.png"
-                                            class="logo_s img-fluid"></div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
+                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidos[0]['equipoLocal_id']; ?>.png" class="logo_s img-fluid">
+                                    </div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
@@ -606,9 +449,9 @@
                                 </div>
 
                                 <div class="marcador ">
-                                    <span class="goles-local">10</span>
+                                    <span class="goles-local"><?php echo $partidos[0]['goles_local']; ?></span>
                                     <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">16</span>
+                                    <span class="goles-visitante"><?php echo $partidos[0]['goles_visitante']; ?></span>
                                 </div>
 
                                 <div class="visitante">
