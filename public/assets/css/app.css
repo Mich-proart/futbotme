@@ -786,7 +786,24 @@ body {
         text-transform: uppercase;
     }
 
-    input {
+    input#date{
+        
+    }
+     /* Ocultar el texto de la fecha predeterminada */
+     input[type="date"]::-webkit-inner-spin-button,
+     input[type="date"]::-webkit-calendar-picker-indicator {
+       display: none;
+       -webkit-appearance: none;
+     }
+ 
+     /* Agregar un ícono de calendario personalizado */
+     input[type="date"] {
+       padding: 5px 25px 5px 5px;
+       background: transparent url('inputdate.png') no-repeat 95% 50%;
+       background-size: 20px; /* Ajusta el tamaño del icono */
+     }
+
+    /* input {
         height: 54px;
         background: transparent;
         border: 0px;
@@ -799,7 +816,7 @@ body {
         font-weight: 700;
         line-height: 20px;
         text-transform: uppercase;
-    }
+    } */
 
     .input-button {
         position: absolute;
