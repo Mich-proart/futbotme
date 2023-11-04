@@ -349,7 +349,7 @@
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
-                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidos[0]['equipoLocal_id']; ?>.png"
+                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidoInfo['datosTemporadaSeccion']['equipoLocal_id']; ?>.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
@@ -468,9 +468,9 @@
                                 </div>
 
                                 <div class="marcador ">
-                                    <span class="goles-local"><?php echo $partidos[0]['goles_local']; ?></span>
+                                    <span class="goles-local"><?php echo $partidoInfo['datosTemporadaSeccion']['goles_local']; ?></span>
                                     <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante"><?php echo $partidos[0]['goles_visitante']; ?></span>
+                                    <span class="goles-visitante"><?php echo $partidoInfo['datosTemporadaSeccion']['goles_visitante']; ?></span>
                                 </div>
 
                                 <div class="visitante">
