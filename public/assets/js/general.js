@@ -142,7 +142,7 @@ function generateCalendar() {
     changeHeader(date);
     document.getElementById('date').textContent = date;
     getCurrentDate(document.getElementById("currentDate"));
-    getCurrentDate(document.getElementById("date"));    
+    getCurrentDate(document.getElementById("date"));
 }
 
 function setDate(form) {
@@ -159,9 +159,19 @@ function changeHeader(dateHeader) {
         const day = dateHeader.getDate().toString().padStart(2, '0');
         const month = (dateHeader.getMonth() + 1).toString().padStart(2, '0');
         currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
+    } else {
+        const month = document.getElementById("month-header");
+        if (month.childNodes[0]) {
+            month.removeChild(month.childNodes[0]);
+        }
+        const headerMonth = document.createElement("h1");
+        const textMonth = document.createTextNode(months[dateHeader.getMonth()].substring(0, 3) + " " + dateHeader.getFullYear());
+        headerMonth.appendChild(textMonth);
+        month.appendChild(headerMonth);
     }
-    
+
 }
+
 
 function changeActive() {
     let btnList = document.querySelectorAll('button.active');
@@ -188,6 +198,16 @@ function changeDate(button) {
     generateCalendar();
 }
 
+function nextMonth() {
+    date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+    generateCalendar();
+}
+
+function prevMonth() {
+    date = new Date(date.getFullYear(), date.getMonth() - 1, 1);
+    generateCalendar();
+}
+
 function prevDay() {
     date = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 1);
     generateCalendar();
@@ -210,7 +230,7 @@ window.onload = function () {
         const month = (today.getMonth() + 1).toString().padStart(2, '0');
         currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
     }
-}; 
+};
 
 
 
