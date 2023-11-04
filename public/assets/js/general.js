@@ -141,14 +141,13 @@ function generateCalendar() {
 } */
 
 function setDate(form) {
-    const newDateInput = new Date(form.date.value); // Fecha ingresada por el usuario
-    const offsetMinutes = newDateInput.getTimezoneOffset(); // Obtén la diferencia de zona horaria en minutos
-
-    // Ajusta la fecha para tener en cuenta la diferencia de zona horaria
-    newDateInput.setMinutes(newDateInput.getMinutes() + offsetMinutes);
-
-    date = new Date(newDateInput.getFullYear(), newDateInput.getMonth(), newDateInput.getDate());
+    let newDate = new Date(form.date.value);
+    
+    // Establecer la hora a medianoche (00:00:00)
+    date = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate(), 0, 0, 0);
+    
     changeHeader(date);
+    
     return false;
 }
 

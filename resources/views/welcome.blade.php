@@ -27,7 +27,7 @@
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
                                             <input type="date" class="text-field" name="date" id="date"
-                                                style="display: none;" timezone="local">
+                                                style="display: none;">
 
                                             <button type="button" class="btn bg-transparent border-0 color-black " data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal">
