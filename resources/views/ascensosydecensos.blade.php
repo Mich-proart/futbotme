@@ -16,9 +16,9 @@
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionAscensos">
-                <div class="accordion-body">
+                <div class="accordion-body px-0">
                     <div class="row row-cols-2">
-                        <div class="col p-0">
+                        <div class="col">
                             <h2 class="subtitle_page bg-silver-medium p-4">PRIMERA DIVISIÓN</h2>
                             <div class="items-equipos mt-4 mb-lg-5 mb-4 px-4">
                                 <h3 class="subtitle_page2">Campeón de liga</h3>
@@ -86,7 +86,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col p-0">
+                        <div class="col">
                             <h2 class="subtitle_page bg-silver-medium p-4">SEGUNDA DIVISIÓN</h2>
                             <div class="items-equipos mt-4 mb-lg-5 mb-4 px-4">
                                 <h3 class="subtitle_page2">Ascienden a 1ª División</h3>
@@ -190,8 +190,8 @@
             <h2 class="accordion-header">
                 <button
                     class="d-flex align-items-center justify-content-between accordion-button bg-brand-green text-white"
-                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo"
-                    aria-expanded="false" aria-controls="flush-collapsetwo">
+                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                    aria-expanded="false" aria-controls="flush-collapseThree">
                     <div class="nombre">
                         <span class="text-decoration-none fs-22px fw-semibold">RFEF</span>
                     </div>
