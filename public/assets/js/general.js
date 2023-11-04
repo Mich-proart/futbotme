@@ -67,6 +67,13 @@ function getCurrentDate(element) {
     return date;
 }
 
+function selectDateInModal(selectedDate) {
+    const dateInput = document.getElementById("date");
+    dateInput.value = selectedDate.toISOString().substring(0, 10);
+    // Cierra el modal si es necesario
+    $('#exampleModal').modal('hide');
+}
+
 function generateCalendar() {
     const calendar = document.getElementById('calendar');
     if (calendar) calendar.remove();
@@ -107,6 +114,11 @@ function generateCalendar() {
             btn = document.createElement('button');
             btn.className = "btn-day";
             btn.addEventListener('click', function () { changeDate(this) });
+            btn.addEventListener('click', function () {
+                const day = parseInt(this.textContent);
+                const newDate = new Date(date.getFullYear(), date.getMonth(), day);
+                selectDateInModal(newDate);
+            });
             week++;
 
             if (i <= lastDay) {
@@ -133,24 +145,12 @@ function generateCalendar() {
     getCurrentDate(document.getElementById("date"));    
 }
 
-/* function setDate(form) {
+function setDate(form) {
     let newDate = new Date(form.date.value);
     date = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate());
     changeHeader(date);
     return false;
-} */
-
-function setDate(form) {
-    let newDate = new Date(form.date.value);
-    
-    // Establecer la hora a medianoche (00:00:00)
-    date = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate(), 0, 0, 0);
-    
-    changeHeader(date);
-    
-    return false;
 }
-
 
 function changeHeader(dateHeader) {
     const currentDateElement = document.getElementById("currentDate");
