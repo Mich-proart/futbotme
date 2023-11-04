@@ -55,83 +55,46 @@ const is_mobile = () => {
 }
 
 
-const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
-const weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
+const weekdays = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 let date = new Date();
 
-function getCurrentDate(element, asString) {
+function getCurrentDate(element) {
     if (element) {
-        if (asString) {
-            element.textContent = `${weekdays[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`;
-        } else {
-            element.value = date.toISOString().substring(0, 10);
-        }
+        element.value = date.toISOString().substring(0, 10);
     }
     return date;
 }
 
 function generateCalendar() {
+    getCurrentDate(document.getElementById("date"));
     changeHeader(date);
-    changeActive();
-
-    /* document.getElementById('date').textContent = date;
-    getCurrentDate(document.getElementById("currentDate"), true);
-    getCurrentDate(document.getElementById("date"), false); */
 }
 
 function setDate(form) {
     let newDate = new Date(form.date.value);
     date = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate());
-    generateCalendar();
+    changeHeader(date);
     return false;
 }
 
 function changeHeader(dateHeader) {
-    const month = document.getElementById("month-header");
-    if (month.childNodes[0]) {
-        month.removeChild(month.childNodes[0]);
+    const currentDateElement = document.getElementById("currentDate");
+    if (currentDateElement) {
+        currentDateElement.textContent = `${weekdays[dateHeader.getDay()]}, ${dateHeader.getDate()} de ${dateHeader.toLocaleString('default', { month: 'long' })} de ${dateHeader.getFullYear()}`;
     }
-    const headerMonth = document.createElement("h1");
-    const textMonth = document.createTextNode(`${months[dateHeader.getMonth()].substring(0, 3)} ${dateHeader.getFullYear()}`);
-    headerMonth.appendChild(textMonth);
-    month.appendChild(headerMonth);
-}
-
-function changeActive() {
-    let btnList = document.querySelectorAll('button.active');
-    btnList.forEach(btn => {
-        btn.classList.remove('active');
-    });
-    btnList = document.getElementsByClassName('btn-day');
-    for (let i = 0; i < btnList.length; i++) {
-        const btn = btnList[i];
-        if (btn.textContent === (date.getDate()).toString()) {
-            btn.classList.add('active');
-        }
-    }
-}
-
-function resetDate() {
-    date = new Date();
-    generateCalendar();
-}
-
-function changeDate(button) {
-    let newDay = parseInt(button.textContent);
-    date = new Date(date.getFullYear(), date.getMonth(), newDay);
-    generateCalendar();
 }
 
 function prevDay() {
     date = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 1);
-    generateCalendar();
+    changeHeader(date);
 }
 
 function nextDay() {
     date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
-    generateCalendar();
+    changeHeader(date);
 }
 
 document.onload = generateCalendar(date);
+
 
 
