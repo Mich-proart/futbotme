@@ -321,7 +321,15 @@
                                     </div>
                                     <div>
                                         <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white"><?php echo $partidoInfo['datosTemporadaSeccion']['horaPartido']; ?></span>
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">
+                                            {{-- HORA --}}
+                                            <?php
+                                            $horabd = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+                                            $HoraLimpia = substr($string, 0, -3); // Elimina los tres últimos caracteres :00
+                                            
+                                            echo $HoraLimpia;
+                                            ?>
+                                        </span>
                                     </div>
 
                                 </div>
@@ -339,9 +347,11 @@
                             <div class="partido_alineado my-2">
                                 <div class="local">
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/<?php echo $partidoInfo['datosTemporadaSeccion']['equipoLocal_id']; ?>.png"
-                                            class="logo_s img-fluid"></div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
+                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidos[0]['equipoLocal_id']; ?>.png"
+                                            class="logo_s img-fluid">
+                                    </div>
                                 </div>
 
                                 <div class="marcador">
@@ -351,9 +361,11 @@
                                 </div>
 
                                 <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/<?php echo $partidoInfo['datosTemporadaSeccion']['equipoVisitante_id']; ?>.png"
-                                            class="logo_s img-fluid"></div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        {{-- escudo --}}
+                                        <img src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid">
+                                    </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
                                 </div>
                             </div>
@@ -415,13 +427,20 @@
                                         </span>
                                     </div>
                                     <div>
-                                        <span class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">
-                                            <?php echo $partidoInfo['datosTemporadaSeccion']['horaPartido']; ?>
+                                        <span
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-3 bg-gray-hora text-white">
+                                            {{-- HORA --}}
+                                            <?php
+                                            $horabd = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+                                            $HoraLimpia = substr($string, 0, -3); // Elimina los tres últimos caracteres :00
+                                            
+                                            echo $HoraLimpia;
+                                            ?>
                                         </span>
                                     </div>
 
                                 </div>
-                                <div class="col"> 
+                                <div class="col">
                                     <span class="fs-00 d-grid grid-center-xy jornada_tiempo">
                                         <?php echo $partidos[0]['nombreFase']; ?>
                                     </span>
@@ -438,8 +457,8 @@
                                 <div class="local">
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
-                                        {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
-                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidos[0]['equipoLocal_id']; ?>.png" class="logo_s img-fluid">
+                                        <img src="https://assets.b365api.com/images/team/m/2829.png"
+                                            class="logo_s img-fluid">
                                     </div>
                                     <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
@@ -455,9 +474,10 @@
                                 </div>
 
                                 <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2817.png"
-                                            class="logo_s img-fluid"></div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        <img src="https://assets.b365api.com/images/team/m/2817.png"
+                                            class="logo_s img-fluid">
+                                    </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
                                 </div>
                             </div>
