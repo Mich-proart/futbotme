@@ -193,13 +193,13 @@ function generateCalendar() {
     changeHeader(date);
     document.getElementById('date').textContent = date;
     getCurrentDate(document.getElementById("currentDate"));
-    getCurrentDate(document.getElementById("date"));
+    getCurrentDate(document.getElementById("date"));    
 }
 
 function setDate(form) {
     let newDate = new Date(form.date.value);
     date = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate());
-    generateCalendar();
+    changeHeader(date);
     return false;
 }
 
