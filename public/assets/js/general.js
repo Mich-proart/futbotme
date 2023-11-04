@@ -56,7 +56,75 @@ const is_mobile = () => {
 
 
 const weekdays = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
 let date = new Date();
+
+function generateCalendar() {
+    const calendar = document.getElementById('calendar');
+    if (calendar) calendar.remove();
+
+    const table = document.createElement("table");
+    table.id = "calendar";
+
+    const trHeader = document.createElement('tr');
+    trHeader.className = 'weekends';
+    weekdays.forEach(week => {
+        const th = document.createElement('th');
+        const w = document.createTextNode(week.substring(0, 3));
+        th.appendChild(w);
+        trHeader.appendChild(th);
+    });
+    table.appendChild(trHeader);
+
+    const weekDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    let tr = document.createElement("tr");
+    let td = '';
+    let empty = '';
+    let btn = document.createElement('button');
+    let week = 0;
+
+    while (week < weekDay) {
+        td = document.createElement("td");
+        empty = document.createTextNode(' ');
+        td.appendChild(empty);
+        tr.appendChild(td);
+        week++;
+    }
+
+    for (let i = 1; i <= lastDay;) {
+        while (week < 7) {
+            td = document.createElement('td');
+            let text = document.createTextNode(i);
+            btn = document.createElement('button');
+            btn.className = "btn-day";
+            btn.addEventListener('click', function () { changeDate(this) });
+            week++;
+
+            if (i <= lastDay) {
+                i++;
+                btn.appendChild(text);
+                td.appendChild(btn)
+            } else {
+                text = document.createTextNode(' ');
+                td.appendChild(text);
+            }
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+        tr = document.createElement("tr");
+        week = 0;
+    }
+
+    const content = document.getElementById('table');
+    content.appendChild(table);
+    changeActive();
+    changeHeader(date);
+    document.getElementById('date').textContent = date;
+    getCurrentDate(document.getElementById("currentDate"), true);
+    getCurrentDate(document.getElementById("date"), false);
+}
+
 
 function getCurrentDate(element) {
     if (element) {
@@ -64,11 +132,11 @@ function getCurrentDate(element) {
     }
     return date;
 }
-
+/* 
 function generateCalendar() {
     getCurrentDate(document.getElementById("date"));
     changeHeader(date);
-}
+} */
 
 function setDate(form) {
     let newDate = new Date(form.date.value);

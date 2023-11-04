@@ -12,7 +12,7 @@
                 <div class="col-lg col-12 ">
                     <div class="container">
                         <div class="calendar-assets">
-                            <button class="btn bth-hoy" onclick="resetDate()" title="Dia atual">
+                            <button class="btn bth-hoy btn-small" onclick="resetDate()" title="Dia atual">
                                 <i class="fas fa-calendar-day"></i> Hoy
                             </button>
 
@@ -26,11 +26,11 @@
                                     <h2 class="fs-00 mb-0" id="currentDate"></h2>
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
-                                            <input type="date" class="text-field" name="date" id="date" style="display: none;">
-                                            {{-- <button type="submit" class="btn btn-small" title="Pesquisar">
-                                                <i class="bi bi-search"></i>
-                                            </button> --}}
-                                            <button type="button" class="btn btn-small" id="calendarIcon">
+                                            <input type="date" class="text-field" name="date" id="date"
+                                                style="display: none;">
+
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                                 <i class="icon-Calendar fs-03"></i>
                                             </button>
 
@@ -44,6 +44,38 @@
                                 </button>
                             </div>
                         </div>
+
+                        <!-- Button trigger modal -->
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title fs-5" id="exampleModalLabel">Calendario</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="calendar d-none" id="table">
+                                            <div class="header">
+                                                <div class="month" id="month-header">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-lg col-12 mt-lg-0 mt-4 px-lg-3 px-0">
