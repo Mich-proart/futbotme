@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminLigasController;
 use App\Http\Controllers\Admin\AdminTorneosController;
 use App\Http\Controllers\Admin\AdminClubesController;
+use App\Http\Controllers\Admin\AdminEquiposController;
 use App\Http\Controllers\Admin\AdminJugadoresController;
 
 // Rutas para el panel admin 
@@ -22,11 +23,14 @@ Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederacio
 Route::get('admin-panel/clubes/', [AdminClubesController::class, 'indexPaises']);
 Route::get('admin-panel/clubes/{id}', [AdminClubesController::class, 'editarClub']);
 
-Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
+// equipos
+Route::get('admin-panel/equipo/{id}', [AdminEquiposController::class, 'editarEquipo']);
 
 // jugadores
 Route::get('admin-panel/jugadores/', [AdminJugadoresController::class, 'indexJugadores']);
 Route::get('admin-panel/jugadores/editar-jugador/{id}', [AdminJugadoresController::class, 'editarJugador']);
+
+Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
 
 // Peticiones post partidos
 Route::post('admin-panel/editar-partido/', [AdminController::class, 'editarPartido'])->name('editarPartido');

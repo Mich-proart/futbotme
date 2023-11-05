@@ -6,9 +6,34 @@
             <h1>{{ $dataClub[0]->nombre }} - Club</h1>
         </div>
         <div class="col-12">
+            <h2>Agregar equipo</h2>
+
+        </div>
+        <div class="col-xl-6 col-12">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nombre" value=""><br>
+                <input type="text" class="form-control" placeholder="Nombre Completo" value="">
+            </div>
+            <div class="mb-3">
+                <select name="">
+                    <option value="1">Senior Masculino</option>
+                    <option value="3">Juvenil Mas.</option>
+                    <option value="2">Senior Femenino</option>
+                </select>
+            </div>
+            <button type="button" class="btn w-25 btn-primary">Guardar</button>
+        </div>
+        <div class="col-12">
             <h2>equipos</h2>
-            <ul>
-                <li><a href="">equipo 1</a></li>
+            <ul class="w-100 list-unstyled d-flex flex-wrap">
+                @foreach ($equipos as $equipo )
+                    <li class="mb-2 w-25 me-3">
+                        <a href="/admin-panel/equipo/{{ $equipo['idEquipo']}}">
+                            {{ $equipo['idEquipo']}} - {{ $equipo['nombreEquipo']}} 
+                            ({{ $equipo['nombreCategoriaEquipo']}} - {{ $equipo['idCategoriaEquipo']}})
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
         <div class="col-xl-6 col-12">
@@ -25,8 +50,12 @@
         </div>
         <div class="col-xl-6 col-12">
             <div class="mb-3">
-                <label for="projectname" class="form-label">Localidad</label>
-                <input type="text" class="form-control" placeholder="{{ $dataClub[0]->localidad_id}}" value="{{ $dataClub[0]->localidad_id}}">
+                <label for="projectname" class="form-label">Localidad</label><br>
+                <select name="" class="localidad-club">
+                    @foreach ( $localidades as $localidad)
+                        <option value="{{ $localidad->id}}" <?php if($localidad->id === $dataClub[0]->localidad_id){ echo "selected";}else{ echo "";}?>>{{ $localidad->nombre}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xl-6 col-12">
@@ -103,8 +132,11 @@
         </div>
         <div class="col-xl-4 col-12">
             <div class="mb-3">
-                <label for="projectname" class="form-label">¿Es selección?</label>
-                <input type="text" class="form-control" placeholder="{{ $dataClub[0]->es_seleccion}}" value="{{ $dataClub[0]->es_seleccion}}">
+                <label for="projectname" class="form-label">¿Es selección?</label><br>
+                <select name="es_seleccion">
+                    <option value="1" <?php if($dataClub[0]->es_seleccion === 1){ echo "selected";}else{ echo "";}?>>Si</option>
+                    <option value="0" <?php if($dataClub[0]->es_seleccion === 0){ echo "selected";}else{ echo "";}?>>No</option>
+                </select>
             </div>
         </div>
         <div class="col-xl-4 col-12">
@@ -122,9 +154,5 @@
         <div class="col-xl-4 col-12 mb-4">
             <button type="button" class="btn btn-primary">Guardar</button>
         </div>
-
-
-
-        
     </div>
 @endsection
