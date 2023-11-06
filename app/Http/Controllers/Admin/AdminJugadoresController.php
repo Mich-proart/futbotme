@@ -34,6 +34,16 @@ class AdminJugadoresController extends Controller
         return $dataJugador;
     }
 
+    // obtenelos los jugadores de un equipo pasando id equipo por parametro
+    public static function getPlantillaForEquipo($idEquipo){
+        $jugadores = DB::table('jugador as j')
+        ->select('j.id', 'j.apodo', 'j.nombre', 'j.apellidos', 'j.posicion', 'j.es_baja')
+        ->where('j.equipoActual_id', $idEquipo)
+        ->orderBy('j.posicion', 'ASC')
+        ->get();
+        return $jugadores;
+    }
+
     // enviamos jugadores en formato ajax 
     public static function getJugadoresAjax(){
         $jugadores = Self::getJugadores();

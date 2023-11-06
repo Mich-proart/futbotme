@@ -149,17 +149,57 @@
                 <label>Temporadas</label>
                 <ul class="list-unstyled">
                     @foreach ($dataTemporadas as $temporada)
-                    <li><span attr-id="{{ $temporada->temporada_id }}">{{ $temporada->nombre }}</span></li>
+                        <li><span attr-id="{{ $temporada->temporada_id }}">{{ $temporada->nombre }}</span></li>
                     @endforeach
                 </ul>
             </div>
         </div>
+        <div class="col-xl-6 col-12">
+            <div class="inbox-widget">
+                @foreach ($dataPlantillaEquipo as $value)
+                    <div class="inbox-item">
+                        <div class="inbox-item-img">
+                            <img src="{{ asset('assets/images/img/jugadores/jugador' . $value->id . '.jpg') }}"
+                                class="rounded-circle" alt="{{ $value->nombre }}">
+                        </div>
+                        <p class="inbox-item-author">{{ $value->nombre }}</p>
+                        @switch($value->posicion)
+                            @case('1')
+                                <?php $posicion = 'POR'; ?>
+                            @break
 
+                            @case('2')
+                                <?php $posicion = 'DEF'; ?>
+                            @break
 
+                            @case('3')
+                                <?php $posicion = 'MED'; ?>
+                            @break
 
+                            @case('4')
+                                <?php $posicion = 'DEL'; ?>
+                            @break
 
+                            @case('5')
+                                <?php $posicion = 'ENT'; ?>
+                            @break
 
+                            @default
+                                <?php $posicion = 'SD'; ?>
+                        @endswitch
 
-
+                        <p class="inbox-item-text">{{ $posicion }}</p>
+                        <p class="inbox-item-date d-flex align-items-center justify-content-center">
+                            <span class="inbox-item-text"><?php if ($value->es_baja == 1) {
+                                echo 'es baja';
+                            } else {
+                                echo 'no baja';
+                            } ?></span>
+                            <a href="/admin-panel/jugadores/editar-jugador/{{$value->id}}" class="btn btn-sm btn-link text-info font-13">Editar</a>
+                        </p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 @endsection

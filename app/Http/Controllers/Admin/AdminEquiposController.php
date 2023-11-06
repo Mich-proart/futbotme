@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//imports
+use App\Http\Controllers\Admin\AdminJugadoresController;
+
 class AdminEquiposController extends Controller
 {
     /*************************************************/
@@ -80,13 +83,15 @@ class AdminEquiposController extends Controller
         $dataEstadios = Self::getDataEstadiosForLocalidad($dataClubLocalidad);
         $dataEquipaciones = Self::getAllEquipaciones();
         $dataTemporadas = Self::getDataTemporadasEquipo($idEquipo);
+        $dataPlantillaEquipo = AdminJugadoresController::getPlantillaForEquipo($idEquipo);
 
         return view('admin.editarEquipo', 
         [
             'dataEquipo' => $dataEquipo,
             'dataEstadios' => $dataEstadios,
             'dataEquipaciones' => $dataEquipaciones,
-            'dataTemporadas' => $dataTemporadas
+            'dataTemporadas' => $dataTemporadas,
+            'dataPlantillaEquipo' => $dataPlantillaEquipo
         ]);
     }
 }
