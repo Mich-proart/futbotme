@@ -43,7 +43,7 @@ Route::get('/resultados-directo/equipo/{club?}/{id?}/datos', [FichaEquipoControl
 Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorController::class, 'indexJugador'])->name('jugadores');
 
 // peticiones api
-Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');
+//Route::get('/api/bestApi', [ApiController::class, 'obtenerDatosBestApiPartidosDirecto'])->name('apiBestApi');
 
 /******* *******/
 // buscador

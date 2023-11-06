@@ -108,55 +108,55 @@ const partidosDirecto = (respuesta) => {
 * funcion generica para realizar las peticiones de api
 * para reutilizar la funcion la dividimos con switch 
 */
-const hacerPeticion = (tipoPeticion) => {
+//const hacerPeticion = (tipoPeticion) => {
 
-    let xmlhttp, urlPeticion;
+    //let xmlhttp, urlPeticion;
 
     // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
-    switch (tipoPeticion) {
+    // switch (tipoPeticion) {
 
-        case 'partidosDirecto':
+    //     case 'partidosDirecto':
 
-            urlPeticion = `${urlBase}api/bestApi`
+    //         urlPeticion = `${urlBase}api/bestApi`
 
-            break;
-    }
+    //         break;
+    // }
 
     // Verda código para navegadores modernos
     // False código para navegadores antiguos (IE6, IE5)
-    window.XMLHttpRequest ? xmlhttp = new XMLHttpRequest() : xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    //window.XMLHttpRequest ? xmlhttp = new XMLHttpRequest() : xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
 
     // Función de callback para manejar la respuesta de la API
-    xmlhttp.onreadystatechange = function () {
+    // xmlhttp.onreadystatechange = function () {
 
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
-            // La respuesta se ha recibido correctamente
-            let respuesta = xmlhttp.responseText;
+    //         // La respuesta se ha recibido correctamente
+    //         let respuesta = xmlhttp.responseText;
 
-            respuesta = JSON.parse(respuesta)
+    //         respuesta = JSON.parse(respuesta)
 
-            // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
-            switch (tipoPeticion) {
+    //         // validamos el tipo de peticion para ejecutar una u otra funcion para devolver distintas respuestas con una misma funcion ajax
+    //         switch (tipoPeticion) {
 
-                case 'partidosDirecto':
+    //             case 'partidosDirecto':
 
-                    partidosDirecto(respuesta)
+    //                 partidosDirecto(respuesta)
 
-                    break;
-            }
-        }
-    };
+    //                 break;
+    //         }
+    //     }
+    // };
 
     // Realizar la petición a la API (en este caso, se utiliza la API de ejemplo 'https://ejemplo.com/api')
-    xmlhttp.open("GET", urlPeticion, true);
+    //xmlhttp.open("GET", urlPeticion, true);
 
     // Configura las cabeceras personalizadas
-    xmlhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+    //xmlhttp.setRequestHeader("X-CSRF-TOKEN", csrfToken);
 
 
-    xmlhttp.send();
-}
+    //xmlhttp.send();
+//}
 
 /*** inicio de ejecuciones ****/
 $(document).ready(function () {
@@ -167,13 +167,13 @@ $(document).ready(function () {
     * 
     */
 
-    hacerPeticion('partidosDirecto')
+    // hacerPeticion('partidosDirecto')
 
-    setInterval(() => {
+    // setInterval(() => {
 
-        hacerPeticion('partidosDirecto')
+    //     hacerPeticion('partidosDirecto')
 
-    }, 60000000);
+    // }, 60000000);
 
     /* 
     *

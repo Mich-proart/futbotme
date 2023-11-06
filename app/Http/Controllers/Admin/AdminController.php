@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use App\Http\Controllers\Admin\AdminEquiposController;
 
 
 //alineacion https://api.b365api.com/v1/event/lineup?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919
@@ -45,10 +46,10 @@ class AdminController extends Controller
                 'hora' => $value->hora_prevista,
                 'estadoPartido' => $value->estado_partido,
                 'idLocal' => $value->equipoLocal_id,
-                'nombreLocal' => Self::get_name_equipo($value->equipoLocal_id)[0]->nombre,
+                'nombreLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
                 'golLocal' => $value->goles_local,
                 'idVisitante' => $value->equipoVisitante_id,
-                'nombreVisitante' => Self::get_name_equipo($value->equipoVisitante_id)[0]->nombre,
+                'nombreVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
                 'golVisitante' => $value->goles_visitante
             ];
             //var_dump($value);
@@ -103,15 +104,6 @@ class AdminController extends Controller
         return $dataFase;
     }
 
-    /****** obtenemos el nombre de equipo por medio de id  *****/
-    public static function get_name_equipo($idEquipo){
-        $dataEquipo = DB::table('equipo')
-        ->select('*')
-        ->where('id', '=', $idEquipo)
-        ->get();
-        return $dataEquipo;
-    }
-
     /****** obtenemos los partidos de pasados en el mismo dia *****/
     public static function get_partidos_curtdate($estado){
         // estados partidos || 0 -> no jugado || 1-> final || 2-> en juego || 6-> descanso
@@ -141,15 +133,17 @@ class AdminController extends Controller
                 'idFase' => Self::get_name_fase($value->jornada)[0]->id,
                 'nombreFase' => Self::get_name_fase($value->jornada)[0]->nombre,
                 'partidoId' => $value->id,
+                'escudoLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->escudo,
                 'equipoLocal_id' => $value->equipoLocal_id,
-                'nombre_local' => Self::get_name_equipo($value->equipoLocal_id)[0]->nombre,
-                'nombre_local_completo' => Self::get_name_equipo($value->equipoLocal_id)[0]->nombre_completo,
-                'nombre_local_corto' => Self::get_name_equipo($value->equipoLocal_id)[0]->nombreCorto,
+                'nombre_local' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
+                'nombre_local_completo' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre_completo,
+                'nombre_local_corto' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombreCorto,
                 'goles_local' => $value->goles_local,
+                'escudoVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->escudo,
                 'equipoVisitante_id' => $value->equipoVisitante_id,
-                'nombre_visitante' => Self::get_name_equipo($value->equipoVisitante_id)[0]->nombre,
-                'nombre_visitante_completo' => Self::get_name_equipo($value->equipoVisitante_id)[0]->nombre_completo,
-                'nombre_visitante_corto' => Self::get_name_equipo($value->equipoVisitante_id)[0]->nombreCorto,
+                'nombre_visitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
+                'nombre_visitante_completo' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo,
+                'nombre_visitante_corto' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto,
                 'goles_visitante' => $value->goles_visitante
             ];
             $obj_parent = [
@@ -177,7 +171,11 @@ class AdminController extends Controller
 
         // ordenamo el resultado para devolverlo ordenado por el nombre
         ksort($partidosAgrupados);
+        // echo "<pre>";
+        // var_dump($partidosAgrupados);
+        // echo "</pre>";
         return $partidosAgrupados;
+
     }
 
     /*************************************************/
