@@ -40,7 +40,7 @@ Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'ind
 Route::post('admin-panel/competicion-torneos/', [AdminTorneosController::class, 'indexCompeticionesTorneos'])->name('indexCompeticionesTorneos');
 
 // Peticiones post clubs
-Route::post('admin-panel/pais-club/', [AdminClubesController::class, 'getClubes'])->name('getClubes');
+Route::get('admin-panel/pais-club/{id}', [AdminClubesController::class, 'getClubes'])->name('getClubes');
 
 // Peticiones post jugadores
 Route::post('admin-panel/jugadores-ajax/', [AdminJugadoresController::class, 'getJugadoresAjax'])->name('getJugadoresAjax');

@@ -54,18 +54,25 @@ class AdminClubesController extends Controller
     /*************************************************/
 
     // funcion para obtener los paises
-    public static function getClubes(Request $request){
-        // Obtener la variable enviada por el front
-        $data = $request->all()['formData']; 
-        $id_pais = $data['idPais'];
-
-        // consulta obtener clubes
-        $club = DB::table('club')
+    public static function getClubes($id){
+        // Obtener la variable enviada por el front // consulta obtener clubes
+        $clubes = DB::table('club')
         ->select('nombre', 'id')
-        ->where('pais_id', '=', $id_pais)
+        ->where('pais_id', '=', $id)
         ->orderBy('nombre')
         ->get();
-        echo json_encode($club);
+        $arrayDataResponse = array();
+        foreach ($clubes as $club) {
+            $objResponse = [
+                'idClub' => $club->id,
+                'nombre' => $club->nombre
+            ];
+            array_push($arrayDataResponse, $objResponse);
+        }
+        $structure = [
+            "data" => $arrayDataResponse
+        ];
+        return json_encode($structure, JSON_PRETTY_PRINT);
     }
     
     // function para obtener todos los clubes de comunidades

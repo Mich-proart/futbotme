@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-lg-2">
             <h2 class="mt-0">Paises</h2>
             <select class="disparador-paises w-100 me-3">
@@ -12,14 +12,22 @@
             </select>
         </div><!-- end col-->
 
-        <div class="col-lg-10 position-relative col-clubes">
-            <div class="spinner-border spiner-clubes" role="status" style="display:none;position: absolute;top: 50%;left: 45%;width: 100px;height:100px;z-index: 10;">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="placeholder-fantasma placeholder-fantasma-clubes d-flex align-items-center justify-content-center" style="height: 300px;opacity: .3;">
-                <h1>Escoger pais</h1>
-            </div>
-            <ul class="list-group list-group-flush listado-club-por-pais"></ul>
+        <div class="col-lg-10 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <table id="fixed-columns-datatable-clubes-paises"
+                        class="table table-striped nowrap row-border order-column w-100">
+                        <thead>
+                            <tr>
+                                <th>idClub</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        {{-- llenamos la tabla por medio de ajax --}}
+                        <tbody></tbody>
+                    </table>
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
         </div>
     </div> <!-- end row-->
 @endsection

@@ -3,12 +3,11 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-12">
-            <h1>Aqui mostraremos todos los jugadores</h1>
+            <h1>Jugadores</h1>
         </div><!-- end col-->
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Clubes</h4>
                     <table id="fixed-columns-datatable-jugadores" class="table table-striped nowrap row-border order-column w-100">
                         <thead>
                             <tr>
