@@ -34,6 +34,8 @@ Route::get('/partidos-televisados', [CustomController::class, 'indexPartidosTele
 
 Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'indexCategorias'])->name('categories');
 
+Route::get('/resultados-directo/torneo/{nombre?}/{id?}/{tabs?}', [Controller::class, 'indexCategorias'])->name('categories');
+
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
 
 // equipos
