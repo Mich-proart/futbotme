@@ -4,3 +4,5 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'openssl' (tried: /usr
 PHP Warning:  Module "curl" is already loaded in Unknown on line 0
 PHP Warning:  PHP Startup: Unable to load dynamic library 'openssl' (tried: /usr/lib/php/20210902/openssl (/usr/lib/php/20210902/openssl: cannot open shared object file: No such file or directory), /usr/lib/php/20210902/openssl.so (/usr/lib/php/20210902/openssl.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
 PHP Warning:  Module "curl" is already loaded in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library 'openssl' (tried: /usr/lib/php/20210902/openssl (/usr/lib/php/20210902/openssl: cannot open shared object file: No such file or directory), /usr/lib/php/20210902/openssl.so (/usr/lib/php/20210902/openssl.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP Warning:  Module "curl" is already loaded in Unknown on line 0

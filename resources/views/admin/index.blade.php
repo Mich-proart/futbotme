@@ -6,6 +6,11 @@
             <a class="btn btn-primary my-3 btn-importar" href="{{ url('/admin-panel') }}" role="button" aria-haspopup="false"
                 aria-expanded="false">Actualizar Datos</a>
         </div>
+        <div class="d-flex align-items-center justify-content-start my-3">
+            <div id="reloj" class="px-3">00:00:00</div>
+            <button class="btn ms-2 w-25 btn-success init-reloj-partido">init partido</button>
+            <button class="btn ms-2 w-25 btn-info detener-reloj-partido">descanso</button>
+        </div>
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
