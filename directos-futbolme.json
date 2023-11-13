@@ -1,0 +1,10 @@
+{
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Ciudad Ejemplo",
+    "hobbies": ["leer", "viajar", "programar"],
+    "trabajo": {
+        "empresa": "Ejemplo Corp",
+        "puesto": "Desarrollador"
+    }
+}

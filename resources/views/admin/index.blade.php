@@ -7,7 +7,8 @@
                 aria-expanded="false">Actualizar Datos</a>
         </div>
         <div class="d-flex align-items-center justify-content-start my-3">
-            <div id="reloj" class="px-3">00:00:00</div>
+            <span attr-id-partido="1114892" class="id-partido-directo-db">1114892</span>
+            <div id="reloj" class="px-3"></div>
             <button class="btn ms-2 w-25 btn-success init-reloj-partido">init partido</button>
             <button class="btn ms-2 w-25 btn-info detener-reloj-partido">descanso</button>
         </div>
@@ -21,7 +22,8 @@
                                 <th scope="col">id betsapi</th>
                                 <th scope="col">temporada</th>
                                 <th scope="col">fecha</th>
-                                <th scope="col">hora</th>
+                                <th scope="col">hora prevista</th>
+                                <th scope="col">hora real</th>
                                 <th scope="col">estado</th>
                                 <th scope="col">local</th>
                                 <th scope="col">visitante</th>
@@ -37,8 +39,12 @@
                                     <td><span attr-id="{{ $partido['tituloTemporada'][0]->id }}" class="fila-idTemporada-directo-partido">{{ $partido['tituloTemporada'][0]->nombre }}</span></td>
                                     <td><span class="fila-fecha-directo-partido">{{ $partido['fecha'] }}</span></td>
                                     <td>
-                                        <input style="width: 68px;" class="fila-hora-directo-partido" type="text" name="" value="{{ $partido['hora'] }}">
-                                        <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['hora'] }}</span>
+                                        <input style="width: 68px;" class="fila-hora-directo-partido" type="text" name="" value="{{ $partido['hora_prevista'] }}">
+                                        <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['hora_prevista'] }}</span>
+                                    </td>
+                                    <td>
+                                        <input style="width: 68px;" class="fila-hora-directo-partido" type="text" name="" value="{{ $partido['hora_real'] }}">
+                                        <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['hora_real'] }}</span>
                                     </td>
                                     <td>
                                         <p class="mb-0" style="opacity: 0;font-size: 0;width: 0;height: 0;">{{ $partido['estadoPartido'] }}</p>

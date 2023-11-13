@@ -48,21 +48,20 @@
             </div>
         </div>
     </div>
-                <!-- includes jquery y socket.io -->
-        <!-- Incluye jQuery desde el CDN -->
-        
-        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 
-        <script>
-            // $(function(){
-            //     console.log("ejecutando socket io")
-            //     let ip_addres = "192.168.0.107"
-            //     //let ip_addres = "172.25.1.184"
-            //     let port = 3000
-                
-            //     let socket = io(`${ip_addres}:${port}`)
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
 
-            //     console.log(socket)
-            // })
-        </script>
+    <script>
+        const socket = io("http://localhost:5000");
+
+        socket.on('json-data-futbolme', (datos) => {
+            console.log('Datos JSON recibidos:', datos);
+            // Aquí puedes procesar los datos como lo desees
+        });
+
+        socket.on('nuevos-datos-futbolme', (nuevosDatos) => {
+            console.log('Nuevos datos recibidos:', nuevosDatos);
+            // Aquí puedes procesar los nuevos datos como lo desees
+        });
+    </script> --}}
 </footer>

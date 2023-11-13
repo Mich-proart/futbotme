@@ -1,105 +1,77 @@
 !(function ($) {
     "use strict";
 
-    //console.log(urlBase);
+    var intervalId;
 
-    // fichero con el que haremos importacion masiva de datos de la API
+    // NUEVO
+    function iniciarReloj(horaPartido) {
+        intervalId = setInterval(() => {
+            // Hora de inicio del partido (en formato HH:mm)
+            var horaInicio = horaPartido;
 
-    // jQuery.ajax({
-    //     url: `${urlBase}admin-panel`,
-    //     type: "GET",
-    //     // data: {
-    //     //     formData,
-    //     // },
-    //     headers: {
-    //         "X-CSRF-TOKEN": csrfToken,
-    //     },
-    //     beforeSend: function () {
-    //         //console.log("antes")
-    //     },
-    //     success: function (response) {
-    //         //console.log(response)
-    //     },
-    //     complete: function () {
-    //         //console.log("finally")
-    //     },
-    // });
+            // Obtener la hora actual
+            var ahora = new Date();
+            var horaActual = ahora.getHours();
+            var minutosActuales = ahora.getMinutes();
+            var segundosActuales = ahora.getSeconds();
 
-    // $("#draggable-menu").sortable({
-    //     cancel: ".remove",
-    //     items: ".item",
-    //     placeholder: 'sortable-placeholde',
-    //   });
+            // Convertir la hora de inicio y la hora actual a segundos
+            var horaInicioArray = horaInicio.split(":");
+            var segundosInicio =
+                parseInt(horaInicioArray[0]) * 3600 +
+                parseInt(horaInicioArray[1]) * 60;
+            var segundosActualesTotal =
+                horaActual * 3600 + minutosActuales * 60 + segundosActuales;
 
-    //   jQuery(".item .remove").on("click", function () {
-    //     $(this).closest(".item").remove();
-    //   });
+            // Calcular la diferencia en segundos
+            var segundosTranscurridos = segundosActualesTotal - segundosInicio;
+
+            // Calcular minutos y segundos
+            var minutosTranscurridos = Math.floor(segundosTranscurridos / 60);
+            var segundosRestantes = segundosTranscurridos % 60;
+
+            // agregamos 0 a los minutos que son menores que dies
+            minutosTranscurridos =
+                minutosTranscurridos < 10
+                    ? "0" + minutosTranscurridos
+                    : minutosTranscurridos;
+
+            // agregamos 0 a los segundos menores que diez
+            segundosRestantes =
+                segundosRestantes < 10
+                    ? "0" + segundosRestantes
+                    : segundosRestantes;
+
+            // agregamos como texto los segundos y minutos a elemento
+            var relojElemento = document.getElementById("reloj");
+            relojElemento.innerHTML =
+                "Minutos: " +
+                minutosTranscurridos +
+                "  Segundos: " +
+                segundosRestantes;
+
+            // Mostrar minutos y segundos transcurridos
+            console.log(
+                "Minutos transcurridos desde el inicio del partido: " +
+                    minutosTranscurridos
+            );
+            console.log(
+                "Segundos transcurridos desde el inicio del partido: " +
+                    segundosRestantes
+            );
+        }, 1000);
+    }
+    // NUEVO
+
+    function detenerReloj() {
+        clearInterval(intervalId);
+    }
+
+    jQuery(".init-reloj-partido").on("click", function () {
+        iniciarReloj("22:00");
+    });
+
+    jQuery(".detener-reloj-partido").on("click", function () {
+        detenerReloj();
+    });
 })(window.jQuery);
-
-// var intervalo;
-
-// function iniciarReloj(tiempoInicial) {
-//     var tiempoInicio = new Date(tiempoInicial).getTime();
-//     var relojElemento = document.getElementById("reloj");
-
-//     intervalo = setInterval(function() {
-//         var ahora = new Date().getTime();
-//         var tiempoTranscurrido = ahora - tiempoInicio;
-
-//         var horas = Math.floor((tiempoTranscurrido % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//         var minutos = Math.floor((tiempoTranscurrido % (1000 * 60 * 60)) / (1000 * 60));
-//         var segundos = Math.floor((tiempoTranscurrido % (1000 * 60)) / 1000);
-
-//         relojElemento.innerHTML = pad(horas) + ":" + pad(minutos) + ":" + pad(segundos);
-//     }, 1000);
-// }
-
-// function pad(numero) {
-//     return numero < 10 ? "0" + numero : numero;
-// }
-
-// function detenerReloj() {
-//     clearInterval(intervalo);
-// }
-
-// jQuery('.init-reloj-partido').on('click', function(){
-//     iniciarReloj("2023-11-08T23:00:00");
-// })
-
-// jQuery('.detener-reloj-partido').on('click', function(){
-//     detenerReloj();
-// })
-
-var tiempoActual = 0; // Tiempo actual del partido en segundos
-var intervalo; // Variable global para almacenar el ID del intervalo
-
-function iniciarReloj() {
-    var relojElemento = document.getElementById("reloj");
-
-    intervalo = setInterval(function () {
-        var minutos = Math.floor(tiempoActual / 60);
-        var segundos = tiempoActual % 60;
-
-        // Asegúrate de que los minutos y segundos tengan dos dígitos
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-
-        relojElemento.innerHTML = "Minuto " + minutos + " : " + segundos;
-        tiempoActual++;
-    }, 1000); // 1 segundo en milisegundos
-}
-
-function detenerReloj() {
-    clearInterval(intervalo);
-}
-
-jQuery(".init-reloj-partido").on("click", function () {
-    console.log("first");
-    iniciarReloj();
-});
-
-jQuery(".detener-reloj-partido").on("click", function () {
-    detenerReloj();
-});
-
-// Llamar a la función para iniciar el reloj con la hora de inicio del partido

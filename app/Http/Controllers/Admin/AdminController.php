@@ -43,7 +43,8 @@ class AdminController extends Controller
                 'idBetsapi' => $value->betsapi,
                 'tituloTemporada' => Self::get_name_temporada($value->temporada_id),
                 'fecha' => $value->fecha,
-                'hora' => $value->hora_prevista,
+                'hora_prevista' => $value->hora_prevista,
+                'hora_real' => $value->hora_real,
                 'estadoPartido' => $value->estado_partido,
                 'idLocal' => $value->equipoLocal_id,
                 'nombreLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
@@ -188,6 +189,57 @@ class AdminController extends Controller
         $partidosTodosLosEstados = $this->get_all_partidos_curtdate();
         return view('admin.index')->with(['partidosTodosLosEstados'=>$partidosTodosLosEstados,]);
     }
+
+
+
+
+
+
+
+
+
+
+
+    public static function initUpdateRelojPartido(Request $request){
+        $data = $request->all()['formData']; 
+        $dataMinutosDb = DB::table('testiempo')
+        ->select('*')
+        ->where('idPartido', '=', $data)
+        ->get();
+
+        $tiemposPartidos = array();
+        foreach ($dataMinutosDb as $key => $value) {
+            $objPartido = [
+                'idPartido' => $value->idPartido,
+                'tiempoPartido' => $value->tiempoPartido
+            ];
+            array_push($tiemposPartidos, $objPartido);
+        }
+        echo \json_encode($tiemposPartidos);
+    }
+
+    public static function updateRelojPartido(Request $request){
+        $data = $request->all()['formData']; 
+        $actualizarTiempo = DB::table('testiempo')
+        ->where('idPartido', $data['idPartido'])
+        ->update([
+            'tiempoPartido' => $data['tiempoPartido']
+        ]);
+
+        $obj = [
+            'idPartido' => $data['idPartido'],
+            'tiempoPartido' => $data['tiempoPartido']
+        ];
+
+        echo json_encode($obj);
+    }
+
+
+
+
+
+
+
 
     // editamos los partidos que estan en la db
     public function editarPartido(Request $request){

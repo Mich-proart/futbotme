@@ -215,6 +215,10 @@
 
 
     {{-- real --}}
+
+
+    {{-- ESTE ES EL ORIGINAL --}}
+    {{-- ESTE ES EL ORIGINAL --}}
     {{-- <script>
         const socket = io("http://localhost:3000");
 
@@ -228,6 +232,8 @@
             // Aquí puedes procesar los nuevos datos como lo desees
         });
     </script> --}}
+    {{-- ESTE ES EL ORIGINAL --}}
+    {{-- ESTE ES EL ORIGINAL --}}
 
 </body>
 
