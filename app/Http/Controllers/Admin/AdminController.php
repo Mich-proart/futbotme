@@ -25,10 +25,7 @@ class AdminController extends Controller
     /*************************************************/
 
     /****** obtenemos todos los partidos del dia sin agrupar, solo partidos del dia *****/
-    public static function get_all_partidos_curtdate(){
-        $fechaActual = Carbon::now();
-        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
-        $fechaActual = '2023-10-31';
+    public static function get_all_partidos_curtdate($fechaActual){
         $partidosObj = array();
         $dataPartidosDia = DB::table('partido')
         ->select('*')
@@ -106,13 +103,8 @@ class AdminController extends Controller
     }
 
     /****** obtenemos los partidos de pasados en el mismo dia *****/
-    public static function get_partidos_curtdate($estado){
+    public static function get_partidos_curtdate($estado, $fechaActual){
         // estados partidos || 0 -> no jugado || 1-> final || 2-> en juego || 6-> descanso
-        $fechaActual = Carbon::now();
-        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
-        //$horaActual = Carbon::now()->format('H:i:s');
-        //$fechaActual = '2023-11-01';
-        $fechaActual = '2023-10-31';
         $partidosDia = [];
         $partidosAgrupados = [];
         if($estado == 0){ $estado_verif = [0];}
@@ -186,91 +178,102 @@ class AdminController extends Controller
     // enviamos la vista y los datos de los directos que vienen del fichero json
     public function index(){
         // obtenemos todos los partidos del dia
-        $partidosTodosLosEstados = $this->get_all_partidos_curtdate();
+        $fechaActual = Carbon::now();
+        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
+        $fechaActual = '2023-10-31';
+        $partidosTodosLosEstados = $this->get_all_partidos_curtdate($fechaActual);
         return view('admin.index')->with(['partidosTodosLosEstados'=>$partidosTodosLosEstados,]);
     }
 
-
-
-
-
-
-
-
-
-
-
-    public static function initUpdateRelojPartido(Request $request){
-        $data = $request->all()['formData']; 
-        $dataMinutosDb = DB::table('testiempo')
-        ->select('*')
-        ->where('idPartido', '=', $data)
-        ->get();
-
-        $tiemposPartidos = array();
-        foreach ($dataMinutosDb as $key => $value) {
-            $objPartido = [
-                'idPartido' => $value->idPartido,
-                'tiempoPartido' => $value->tiempoPartido
-            ];
-            array_push($tiemposPartidos, $objPartido);
-        }
-        echo \json_encode($tiemposPartidos);
-    }
-
-    public static function updateRelojPartido(Request $request){
-        $data = $request->all()['formData']; 
-        $actualizarTiempo = DB::table('testiempo')
-        ->where('idPartido', $data['idPartido'])
-        ->update([
-            'tiempoPartido' => $data['tiempoPartido']
+    public function indexApi(){
+        $fechaActual = Carbon::now();
+        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
+        $fechaActual = '2023-10-31';
+        $partidosTodosLosEstados = $this->get_all_partidos_curtdate($fechaActual);
+        $directosAPI = $this->obtener_directos_de_json();
+        return view('admin.indexApi')->with([
+            'partidosTodosLosEstados'=>$partidosTodosLosEstados,
+            'directosAPI'=>$directosAPI
         ]);
-
-        $obj = [
-            'idPartido' => $data['idPartido'],
-            'tiempoPartido' => $data['tiempoPartido']
-        ];
-
-        echo json_encode($obj);
     }
 
-
-
-
-
-
-
-
-    // editamos los partidos que estan en la db
+    // editar partidos en DB y en JSON
     public function editarPartido(Request $request){
         // Obtener la variable enviada por el front
         $data = $request->all()['formData']; 
         $id_partido = $data['idPartido'];
-        $temporada_partido  = $data['idTemporadaPartido'];
+        $id_partido_betsapi_no = $data['idPartidoBetsapiOno'];
         $fecha_partido = $data['fechaPartido'];
-        $hora_partido = $data['horaPartido'];
+        $hora_prevista = $data['horaPrevistaPartido'];
+        $hora_real = $data['horaRealPartido'];
         $estado_partido = $data['estadoPartido'];
         $id_local_partido = $data['idLocalPartido'];
         $gol_local_partido = $data['golLocalPartido'];
         $id_visitante_partido = $data['idVisitantePartido'];
         $gol_visitante_partido = $data['golVisitantePartido'];
+        $temporada_partido  = $data['idTemporadaPartido'];
 
-        $filasActualizadas = DB::table('partido')
-        ->where('id', $id_partido)
-        ->where('temporada_id', $temporada_partido)
-        ->where('fecha', $fecha_partido)
-        ->where('equipoLocal_id', $id_local_partido)
-        ->where('equipoVisitante_id', $id_visitante_partido)
-        ->update([
-            'estado_partido' => $estado_partido,
-            'fecha' => $fecha_partido,
-            'hora_prevista' => $hora_partido,
-            'goles_local' => $gol_local_partido,
-            'goles_visitante' => $gol_visitante_partido
-        ]);
+        // insercion DB
+        // $filasActualizadas = DB::table('partido')
+        // ->where('id', $id_partido)
+        // ->where('temporada_id', $temporada_partido)
+        // ->where('fecha', $fecha_partido)
+        // ->where('equipoLocal_id', $id_local_partido)
+        // ->where('equipoVisitante_id', $id_visitante_partido)
+        // ->update([
+        //     'estado_partido' => $estado_partido,
+        //     'fecha' => $fecha_partido,
+        //     'hora_prevista' => $hora_partido,
+        //     'goles_local' => $gol_local_partido,
+        //     'goles_visitante' => $gol_visitante_partido
+        // ]);
 
-        return json_encode($filasActualizadas);
+        // fichero JSON
+        $ruta = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
+        // Verifica si el archivo existe
+        if (file_exists($ruta)) {
+            // Lee el contenido del archivo JSON
+            $contenido = file_get_contents($ruta);
+            // Decodifica el contenido JSON
+            $partidos = json_decode($contenido, true); // true para obtener un array asociativo
+            var_dump($partidos);
+            // Manipula los datos según sea necesario
+            // Por ejemplo, podrías hacer algo como
+            foreach ($partidos as $partido) {
+                // Accede a las propiedades del partido
+                $idPartido = key($partido);
+                $datosPartido = $partido[$idPartido];
+                // Realiza las acciones que necesites con los datos del partido
+                // ...
+
+                // Por ejemplo, imprimir información
+                echo "ID Partido: $idPartido<br>";
+                echo "Estado Partido: {$datosPartido['estadoPartido']}<br>";
+                // ...
+            }
+
+            // ... O devuelve los datos para utilizarlos en la vista
+            // return view('tu_vista', compact('partidos'));
+        } else {
+            // Manejar el caso en que el archivo no exista
+            //return "El archivo partidos.json no existe en la raíz del proyecto.";
+        }
+
+        //return json_encode($filasActualizadas);
     } 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

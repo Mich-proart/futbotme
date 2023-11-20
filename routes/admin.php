@@ -9,7 +9,10 @@ use App\Http\Controllers\Admin\AdminEquiposController;
 use App\Http\Controllers\Admin\AdminJugadoresController;
 
 // Rutas para el panel admin 
+
+// rutas directos (DB) y (API)
 Route::get('admin-panel/', [AdminController::class, 'index']);
+Route::get('admin-panel/directos', [AdminController::class, 'indexApi']);
 
 Route::get('admin-panel/ligas/', [AdminLigasController::class, 'indexLigas']);
 
@@ -34,8 +37,6 @@ Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCre
 
 // Peticiones post partidos
 Route::post('admin-panel/editar-partido/', [AdminController::class, 'editarPartido'])->name('editarPartido');
-Route::post('admin-panel/update-reloj-permanencia/', [AdminController::class, 'initUpdateRelojPartido'])->name('initUpdateRelojPartido');
-Route::post('admin-panel/update-reloj-interval/', [AdminController::class, 'updateRelojPartido'])->name('updateRelojPartido');
 
 // Peticiones post ligas y torneos
 Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'indexCompeticionesLigas'])->name('indexCompeticionesLigas');

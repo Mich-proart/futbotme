@@ -3,722 +3,90 @@
     "pager": {
         "page": 1,
         "per_page": 1000,
-        "total": 36
+        "total": 47
     },
     "results": [
         {
-            "id": "7342928",
+            "id": "7494286",
             "sport_id": "1",
-            "time": "1699471800",
+            "time": "1700416800",
             "time_status": "1",
             "league": {
-                "id": "429",
-                "name": "Espa\u00f1a - Copa Federaci\u00f3n",
-                "cc": "es"
+                "id": "11886",
+                "name": "Brasil - Campeonato Sergipano A2",
+                "cc": "br"
             },
             "home": {
-                "id": "7298",
-                "name": "CD San Roque de Lepe",
-                "image_id": "37061",
-                "cc": "es"
+                "id": "185986",
+                "name": "Ol\u00edmpico EC Itabaianinha",
+                "image_id": "529813",
+                "cc": "br"
             },
             "away": {
-                "id": "49985",
-                "name": "CF Talavera",
-                "image_id": "47567",
-                "cc": "es"
-            },
-            "ss": "1-1",
-            "scores": {
-                "2": {
-                    "home": "1",
-                    "away": "1"
-                },
-                "1": {
-                    "home": "1",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "145614429",
-            "timer": {
-                "tm": 117,
-                "ts": 0,
-                "tt": "1",
-                "ta": 0,
-                "md": 3
-            },
-            "stats": {
-                "attacks": [
-                    "147",
-                    "151"
-                ],
-                "ball_safe": [
-                    "125",
-                    "132"
-                ],
-                "corners": [
-                    "7",
-                    "3"
-                ],
-                "corner_f": [
-                    "4",
-                    "1"
-                ],
-                "corner_h": [
-                    "1",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "104",
-                    "99"
-                ],
-                "goals": [
-                    "1",
-                    "1"
-                ],
-                "injuries": [
-                    "1",
-                    "1"
-                ],
-                "off_target": [
-                    "6",
-                    "4"
-                ],
-                "on_target": [
-                    "7",
-                    "8"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "possession_rt": [
-                    "44",
-                    "56"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "4",
-                    "5"
-                ],
-                "yellowred_cards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7385392",
-            "sport_id": "1",
-            "time": "1699472700",
-            "time_status": "1",
-            "league": {
-                "id": "423",
-                "name": "Italia - Serie C - Copa",
-                "cc": "it"
-            },
-            "home": {
-                "id": "670",
-                "name": "AP Turris",
-                "image_id": "111253",
-                "cc": "it"
-            },
-            "o_home": {
-                "id": "247241",
-                "name": "ASD Turris",
-                "image_id": "111253",
-                "cc": null
-            },
-            "away": {
-                "id": "7067",
-                "name": "Juve Stabia",
-                "image_id": "5324",
-                "cc": "it"
-            },
-            "ss": "3-4",
-            "scores": {
-                "2": {
-                    "home": "3",
-                    "away": "4"
-                },
-                "1": {
-                    "home": "0",
-                    "away": "2"
-                }
-            },
-            "bet365_id": "146254997",
-            "timer": {
-                "tm": 106,
-                "ts": 5,
-                "tt": "1",
-                "ta": 0,
-                "md": 3
-            },
-            "stats": {
-                "attacks": [
-                    "109",
-                    "93"
-                ],
-                "corners": [
-                    "8",
-                    "3"
-                ],
-                "corner_f": [
-                    "6",
-                    "1"
-                ],
-                "corner_h": [
-                    "3",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "88",
-                    "60"
-                ],
-                "goals": [
-                    "3",
-                    "4"
-                ],
-                "off_target": [
-                    "12",
-                    "4"
-                ],
-                "on_target": [
-                    "7",
-                    "7"
-                ],
-                "penalties": [
-                    "1",
-                    "0"
-                ],
-                "redcards": [
-                    "1",
-                    "0"
-                ],
-                "substitutions": [
-                    "4",
-                    "4"
-                ],
-                "yellowcards": [
-                    "3",
-                    "5"
-                ]
-            }
-        },
-        {
-            "id": "7450836",
-            "sport_id": "1",
-            "time": "1699473600",
-            "time_status": "3",
-            "league": {
-                "id": "13799",
-                "name": "Argentina - Torneo Regional Amateur",
-                "cc": "ar"
-            },
-            "home": {
-                "id": "7361",
-                "name": "CA Las Palmas",
-                "image_id": "547555",
-                "cc": "ar"
-            },
-            "away": {
-                "id": "322656",
-                "name": "DYC Uni\u00f3n Oncativo",
-                "image_id": "672381",
-                "cc": "ar"
-            },
-            "ss": "4-0",
-            "scores": {
-                "2": {
-                    "home": "4",
-                    "away": "0"
-                },
-                "1": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146298806",
-            "timer": {
-                "tm": 90,
-                "ts": 0,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "83",
-                    "94"
-                ],
-                "corners": [
-                    "8",
-                    "2"
-                ],
-                "corner_f": [
-                    "8",
-                    "2"
-                ],
-                "corner_h": [
-                    "6",
-                    "2"
-                ],
-                "dangerous_attacks": [
-                    "71",
-                    "67"
-                ],
-                "goals": [
-                    "4",
-                    "0"
-                ],
-                "off_target": [
-                    "4",
-                    "2"
-                ],
-                "on_target": [
-                    "4",
-                    "0"
-                ],
-                "penalties": [
-                    "1",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "1"
-                ],
-                "substitutions": [
-                    "5",
-                    "4"
-                ],
-                "yellowcards": [
-                    "3",
-                    "4"
-                ]
-            }
-        },
-        {
-            "id": "7157061",
-            "sport_id": "1",
-            "time": "1699473600",
-            "time_status": "1",
-            "league": {
-                "id": "1040",
-                "name": "UEFA Champions League",
-                "cc": "eu"
-            },
-            "home": {
-                "id": "568",
-                "name": "FC Copenhague",
-                "image_id": "1284",
-                "cc": "dk"
-            },
-            "away": {
-                "id": "10899",
-                "name": "Manchester United",
-                "image_id": "35",
-                "cc": "gb"
-            },
-            "ss": "4-3",
-            "scores": {
-                "1": {
-                    "home": "2",
-                    "away": "2"
-                },
-                "2": {
-                    "home": "4",
-                    "away": "3"
-                }
-            },
-            "bet365_id": "143150485",
-            "timer": {
-                "tm": 93,
-                "ts": 16,
-                "tt": "1",
-                "ta": 5,
-                "md": 1
-            },
-            "stats": {
-                "action_areas": [
-                    "17.6",
-                    "38.0"
-                ],
-                "attacks": [
-                    "104",
-                    "84"
-                ],
-                "ball_safe": [
-                    "59",
-                    "79"
-                ],
-                "corners": [
-                    "3",
-                    "3"
-                ],
-                "corner_h": [
-                    "1",
-                    "2"
-                ],
-                "crosses": [
-                    "26",
-                    "6"
-                ],
-                "crossing_accuracy": [
-                    "0.27",
-                    "0.00"
-                ],
-                "dangerous_attacks": [
-                    "73",
-                    "35"
-                ],
-                "fouls": [
-                    "7",
-                    "6"
-                ],
-                "freekicks": [
-                    "7",
-                    "9"
-                ],
-                "goalattempts": [
-                    "14",
-                    "7"
-                ],
-                "goalkicks": [
-                    "5",
-                    "9"
-                ],
-                "goals": [
-                    "4",
-                    "3"
-                ],
-                "injuries": [
-                    "0",
-                    "1"
-                ],
-                "key_passes": [
-                    "10",
-                    "5"
-                ],
-                "offsides": [
-                    "2",
-                    "0"
-                ],
-                "off_target": [
-                    "8",
-                    "1"
-                ],
-                "on_target": [
-                    "8",
-                    "7"
-                ],
-                "passing_accuracy": [
-                    "0.88",
-                    "0.85"
-                ],
-                "penalties": [
-                    "1",
-                    "1"
-                ],
-                "possession_rt": [
-                    "48",
-                    "52"
-                ],
-                "redcards": [
-                    "0",
-                    "1"
-                ],
-                "saves": [
-                    "3",
-                    "4"
-                ],
-                "shots_blocked": [
-                    "5",
-                    "0"
-                ],
-                "substitutions": [
-                    "5",
-                    "3"
-                ],
-                "throwins": [
-                    "18",
-                    "7"
-                ],
-                "xg": [
-                    "2.13",
-                    "2.98"
-                ],
-                "yellowcards": [
-                    "1",
-                    "1"
-                ],
-                "yellowred_cards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7451058",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "671434",
-                "name": "Juventud Copalera",
-                "image_id": "881019",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "235098",
-                "name": "Sta Lucia FC",
-                "image_id": "344922",
-                "cc": "gt"
-            },
-            "o_away": {
-                "id": "161541",
-                "name": "Santa Lucia FC",
-                "image_id": "58335",
-                "cc": "mt"
-            },
-            "ss": "0-0",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146252708",
-            "timer": {
-                "tm": 46,
-                "ts": 2,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "67",
-                    "61"
-                ],
-                "corners": [
-                    "3",
-                    "5"
-                ],
-                "corner_h": [
-                    "3",
-                    "3"
-                ],
-                "dangerous_attacks": [
-                    "24",
-                    "28"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "off_target": [
-                    "2",
-                    "1"
-                ],
-                "on_target": [
-                    "2",
-                    "3"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7452379",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "258",
-                "name": "Torneo Apertura de El Salvador",
-                "cc": "sv"
-            },
-            "home": {
-                "id": "1424",
-                "name": "CD Drag\u00f3n",
-                "image_id": "109319",
-                "cc": "sv"
-            },
-            "away": {
-                "id": "43592",
-                "name": "CD FAS",
-                "image_id": "24386",
-                "cc": "sv"
+                "id": "912525",
+                "name": "AD Carmopolis",
+                "image_id": "1055087",
+                "cc": "br"
             },
             "ss": "0-1",
             "scores": {
-                "1": {
+                "2": {
                     "home": "0",
                     "away": "1"
                 },
-                "2": {
+                "1": {
                     "home": "0",
                     "away": "1"
                 }
             },
-            "bet365_id": "146364194",
+            "bet365_id": "146726805",
             "timer": {
-                "tm": 45,
+                "tm": 90,
                 "ts": 0,
                 "tt": "0",
                 "ta": 0,
-                "md": 1
+                "md": 4
             },
             "stats": {
                 "attacks": [
-                    "43",
-                    "37"
-                ],
-                "corners": [
-                    "2",
-                    "2"
-                ],
-                "corner_h": [
-                    "2",
-                    "2"
-                ],
-                "dangerous_attacks": [
-                    "27",
-                    "20"
-                ],
-                "goals": [
-                    "0",
-                    "1"
-                ],
-                "off_target": [
-                    "3",
-                    "1"
-                ],
-                "on_target": [
-                    "0",
-                    "2"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "2",
-                    "0"
-                ],
-                "yellowcards": [
-                    "1",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7452366",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "25002",
-                "name": "Guatemala - 2\u00aa Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "47084",
-                "name": "Deportivo Carcha",
-                "image_id": "269747",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "747801",
-                "name": "CSD Jutiapa",
-                "image_id": "929441",
-                "cc": "gt"
-            },
-            "ss": "1-0",
-            "scores": {
-                "1": {
-                    "home": "1",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "1",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146343323",
-            "timer": {
-                "tm": 45,
-                "ts": 0,
-                "tt": "0",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "58",
-                    "46"
+                    "113",
+                    "79"
                 ],
                 "ball_safe": [
-                    "29",
-                    "44"
+                    "44",
+                    "39"
                 ],
                 "corners": [
-                    "6",
-                    "0"
+                    "8",
+                    "4"
+                ],
+                "corner_f": [
+                    "8",
+                    "4"
                 ],
                 "corner_h": [
-                    "6",
-                    "0"
+                    "5",
+                    "2"
                 ],
                 "dangerous_attacks": [
-                    "68",
-                    "27"
+                    "54",
+                    "30"
                 ],
                 "goals": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
+                ],
+                "injuries": [
+                    "0",
+                    "2"
                 ],
                 "off_target": [
                     "6",
-                    "0"
+                    "3"
                 ],
                 "on_target": [
-                    "7",
-                    "0"
+                    "1",
+                    "3"
                 ],
                 "penalties": [
                     "0",
@@ -737,7 +105,111 @@
                     "0"
                 ],
                 "yellowcards": [
+                    "3",
+                    "3"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7481665",
+            "sport_id": "1",
+            "time": "1700416800",
+            "time_status": "1",
+            "league": {
+                "id": "688",
+                "name": "Jamaica - Premier League",
+                "cc": "jm"
+            },
+            "home": {
+                "id": "283093",
+                "name": "Lime Hall",
+                "image_id": "1072966",
+                "cc": "jm"
+            },
+            "away": {
+                "id": "68690",
+                "name": "Cavalier",
+                "image_id": "173720",
+                "cc": "jm"
+            },
+            "ss": "1-1",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146726071",
+            "timer": {
+                "tm": 99,
+                "ts": 37,
+                "tt": "1",
+                "ta": 10,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "87",
+                    "108"
+                ],
+                "ball_safe": [
+                    "67",
+                    "49"
+                ],
+                "corners": [
+                    "0",
+                    "19"
+                ],
+                "corner_h": [
+                    "0",
+                    "7"
+                ],
+                "dangerous_attacks": [
+                    "28",
+                    "90"
+                ],
+                "goals": [
+                    "1",
+                    "1"
+                ],
+                "injuries": [
+                    "5",
+                    "1"
+                ],
+                "off_target": [
                     "2",
+                    "11"
+                ],
+                "on_target": [
+                    "5",
+                    "2"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "32",
+                    "68"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "3",
+                    "5"
+                ],
+                "yellowcards": [
+                    "3",
                     "1"
                 ],
                 "yellowred_cards": [
@@ -747,26 +219,294 @@
             }
         },
         {
-            "id": "7452365",
+            "id": "7494229",
             "sport_id": "1",
-            "time": "1699477200",
+            "time": "1700418600",
             "time_status": "1",
             "league": {
-                "id": "25002",
-                "name": "Guatemala - 2\u00aa Divisi\u00f3n",
-                "cc": "gt"
+                "id": "32720",
+                "name": "Brasil - Encuentros",
+                "cc": "br"
             },
             "home": {
-                "id": "177831",
-                "name": "Chimaltenango FC",
-                "image_id": "366238",
-                "cc": "gt"
+                "id": "767091",
+                "name": "SC Campo Mour\u00e3o",
+                "image_id": null,
+                "cc": null
             },
             "away": {
-                "id": "355900",
-                "name": "Gual\u00e1n FC",
-                "image_id": "736585",
-                "cc": "gt"
+                "id": "162226",
+                "name": "AC Paranavai",
+                "image_id": "21861",
+                "cc": "br"
+            },
+            "ss": "2-0",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "2",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146728131",
+            "timer": {
+                "tm": 72,
+                "ts": 37,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "69",
+                    "51"
+                ],
+                "corners": [
+                    "4",
+                    "5"
+                ],
+                "corner_h": [
+                    "2",
+                    "4"
+                ],
+                "dangerous_attacks": [
+                    "32",
+                    "29"
+                ],
+                "goals": [
+                    "2",
+                    "0"
+                ],
+                "off_target": [
+                    "1",
+                    "7"
+                ],
+                "on_target": [
+                    "5",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "54",
+                    "46"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "5",
+                    "4"
+                ]
+            }
+        },
+        {
+            "id": "7494260",
+            "sport_id": "1",
+            "time": "1700418600",
+            "time_status": "1",
+            "league": {
+                "id": "450",
+                "name": "Brasil - Liga sub-20",
+                "cc": "br"
+            },
+            "home": {
+                "id": "927381",
+                "name": "Uniao Paraense FC sub-20",
+                "image_id": "849227",
+                "cc": "br"
+            },
+            "away": {
+                "id": "312230",
+                "name": "Tapaj\u00f3s sub-20",
+                "image_id": "529961",
+                "cc": "br"
+            },
+            "ss": "0-2",
+            "scores": {
+                "1": {
+                    "home": "0",
+                    "away": "1"
+                },
+                "2": {
+                    "home": "0",
+                    "away": "2"
+                }
+            },
+            "bet365_id": "146727365",
+            "timer": {
+                "tm": 76,
+                "ts": 23,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "82",
+                    "89"
+                ],
+                "corners": [
+                    "2",
+                    "2"
+                ],
+                "corner_h": [
+                    "0",
+                    "2"
+                ],
+                "dangerous_attacks": [
+                    "25",
+                    "31"
+                ],
+                "goals": [
+                    "0",
+                    "2"
+                ],
+                "off_target": [
+                    "4",
+                    "4"
+                ],
+                "on_target": [
+                    "2",
+                    "7"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "1",
+                    "0"
+                ],
+                "substitutions": [
+                    "5",
+                    "3"
+                ],
+                "yellowcards": [
+                    "0",
+                    "2"
+                ]
+            }
+        },
+        {
+            "id": "7494261",
+            "sport_id": "1",
+            "time": "1700418600",
+            "time_status": "1",
+            "league": {
+                "id": "450",
+                "name": "Brasil - Liga sub-20",
+                "cc": "br"
+            },
+            "home": {
+                "id": "932899",
+                "name": "Cruzeirao SC sub-20",
+                "image_id": "1070726",
+                "cc": "br"
+            },
+            "away": {
+                "id": "721788",
+                "name": "SC Paraense sub-20",
+                "image_id": "662065",
+                "cc": "br"
+            },
+            "ss": "0-1",
+            "scores": {
+                "1": {
+                    "home": "0",
+                    "away": "1"
+                },
+                "2": {
+                    "home": "0",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146771841",
+            "timer": {
+                "tm": 78,
+                "ts": 19,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "75",
+                    "68"
+                ],
+                "corners": [
+                    "2",
+                    "2"
+                ],
+                "corner_h": [
+                    "1",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "38",
+                    "43"
+                ],
+                "goals": [
+                    "0",
+                    "1"
+                ],
+                "off_target": [
+                    "6",
+                    "2"
+                ],
+                "on_target": [
+                    "1",
+                    "4"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "1",
+                    "0"
+                ],
+                "substitutions": [
+                    "4",
+                    "5"
+                ],
+                "yellowcards": [
+                    "2",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7482844",
+            "sport_id": "1",
+            "time": "1700418600",
+            "time_status": "1",
+            "league": {
+                "id": "637",
+                "name": "El Salvador - Liga B",
+                "cc": "sv"
+            },
+            "home": {
+                "id": "541859",
+                "name": "C.D. Platense Municipal Zacatecoluca - B",
+                "image_id": "822802",
+                "cc": "sv"
+            },
+            "away": {
+                "id": "24954",
+                "name": "CD Drag\u00f3n - B",
+                "image_id": "781910",
+                "cc": "sv"
             },
             "ss": "1-0",
             "scores": {
@@ -779,10 +519,10 @@
                     "away": "0"
                 }
             },
-            "bet365_id": "146343316",
+            "bet365_id": "146777105",
             "timer": {
-                "tm": 46,
-                "ts": 2,
+                "tm": 82,
+                "ts": 25,
                 "tt": "1",
                 "ta": 0,
                 "md": 1
@@ -790,55 +530,55 @@
             "stats": {
                 "attacks": [
                     "61",
-                    "42"
+                    "94"
                 ],
                 "ball_safe": [
-                    "18",
-                    "19"
+                    "42",
+                    "44"
                 ],
                 "corners": [
-                    "4",
-                    "0"
+                    "6",
+                    "1"
                 ],
                 "corner_h": [
-                    "4",
-                    "0"
+                    "3",
+                    "1"
                 ],
                 "dangerous_attacks": [
-                    "41",
-                    "17"
+                    "53",
+                    "56"
                 ],
                 "goals": [
                     "1",
                     "0"
                 ],
                 "off_target": [
-                    "6",
-                    "5"
+                    "9",
+                    "4"
                 ],
                 "on_target": [
-                    "1",
-                    "0"
+                    "2",
+                    "2"
                 ],
                 "penalties": [
-                    "1",
+                    "0",
                     "0"
                 ],
                 "possession_rt": [
-                    "67",
-                    "33"
+                    "44",
+                    "56"
                 ],
                 "redcards": [
                     "0",
                     "0"
                 ],
                 "substitutions": [
-                    "1",
+                    "0",
                     "0"
                 ],
                 "yellowcards": [
                     "0",
-                    "1"
+                    "3"
                 ],
                 "yellowred_cards": [
                     "0",
@@ -847,32 +587,26 @@
             }
         },
         {
-            "id": "7452316",
+            "id": "7494259",
             "sport_id": "1",
-            "time": "1699477200",
+            "time": "1700418600",
             "time_status": "1",
             "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
+                "id": "450",
+                "name": "Brasil - Liga sub-20",
+                "cc": "br"
             },
             "home": {
-                "id": "245610",
-                "name": "Solola FC",
-                "image_id": "366236",
-                "cc": "gt"
-            },
-            "o_home": {
-                "id": "202183",
-                "name": "CSD Solol\u00e1",
-                "image_id": "366236",
-                "cc": null
+                "id": "212456",
+                "name": "Sao Francisco sub-20",
+                "image_id": "440796",
+                "cc": "br"
             },
             "away": {
-                "id": "57731",
-                "name": "Deportivo Iztapa",
-                "image_id": "111283",
-                "cc": "gt"
+                "id": "363903",
+                "name": "Bragantino do Par\u00e1 sub-20",
+                "image_id": "663811",
+                "cc": "br"
             },
             "ss": "0-2",
             "scores": {
@@ -885,612 +619,50 @@
                     "away": "2"
                 }
             },
-            "bet365_id": "146364198",
+            "bet365_id": "146727362",
             "timer": {
-                "tm": 45,
-                "ts": 9,
+                "tm": 81,
+                "ts": 39,
                 "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "56",
-                    "54"
-                ],
-                "corners": [
-                    "7",
-                    "1"
-                ],
-                "corner_h": [
-                    "7",
-                    "1"
-                ],
-                "dangerous_attacks": [
-                    "28",
-                    "15"
-                ],
-                "goals": [
-                    "0",
-                    "2"
-                ],
-                "off_target": [
-                    "8",
-                    "5"
-                ],
-                "on_target": [
-                    "4",
-                    "3"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "1",
-                    "0"
-                ],
-                "yellowcards": [
-                    "3",
-                    "3"
-                ]
-            }
-        },
-        {
-            "id": "7451046",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "82719",
-                "name": "Nueva Concepcion",
-                "image_id": "501258",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "228495",
-                "name": "Club Deportivo Quich\u00e9 FC",
-                "image_id": "473341",
-                "cc": "gt"
-            },
-            "ss": "0-0",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146252706",
-            "timer": {
-                "tm": 46,
-                "ts": 24,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "44",
-                    "53"
-                ],
-                "ball_safe": [
-                    "24",
-                    "26"
-                ],
-                "corners": [
-                    "3",
-                    "1"
-                ],
-                "corner_h": [
-                    "3",
-                    "1"
-                ],
-                "dangerous_attacks": [
-                    "31",
-                    "24"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "off_target": [
-                    "2",
-                    "1"
-                ],
-                "on_target": [
-                    "0",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "possession_rt": [
-                    "45",
-                    "55"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "1",
-                    "0"
-                ],
-                "yellowcards": [
-                    "2",
-                    "2"
-                ],
-                "yellowred_cards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7451045",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "824240",
-                "name": "Deportivo Fraijanes",
-                "image_id": "782916",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "30359",
-                "name": "Aurora",
-                "image_id": "325823",
-                "cc": "gt"
-            },
-            "ss": "0-1",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "1"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "1"
-                }
-            },
-            "bet365_id": "146252704",
-            "timer": {
-                "tm": 47,
-                "ts": 26,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "55",
-                    "53"
-                ],
-                "corners": [
-                    "0",
-                    "3"
-                ],
-                "corner_h": [
-                    "0",
-                    "3"
-                ],
-                "dangerous_attacks": [
-                    "30",
-                    "27"
-                ],
-                "goals": [
-                    "0",
-                    "1"
-                ],
-                "off_target": [
-                    "9",
-                    "7"
-                ],
-                "on_target": [
-                    "2",
-                    "4"
-                ],
-                "penalties": [
-                    "0",
-                    "1"
-                ],
-                "possession_rt": [
-                    "47",
-                    "53"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "1",
-                    "2"
-                ]
-            }
-        },
-        {
-            "id": "7451044",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "482879",
-                "name": "Cuilapa FC",
-                "image_id": "810564",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "377854",
-                "name": "Deportivo Barberena FC",
-                "image_id": "771256",
-                "cc": "gt"
-            },
-            "o_away": {
-                "id": "737699",
-                "name": "Deportivo Barberena",
-                "image_id": "771256",
-                "cc": null
-            },
-            "ss": "1-0",
-            "scores": {
-                "1": {
-                    "home": "1",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "1",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146252702",
-            "timer": {
-                "tm": 45,
-                "ts": 0,
-                "tt": "0",
                 "ta": 0,
                 "md": 1
             },
             "stats": {
                 "attacks": [
                     "64",
-                    "59"
+                    "77"
                 ],
                 "corners": [
-                    "3",
-                    "0"
+                    "0",
+                    "13"
                 ],
                 "corner_h": [
-                    "3",
-                    "0"
+                    "0",
+                    "7"
                 ],
                 "dangerous_attacks": [
-                    "26",
-                    "15"
-                ],
-                "goals": [
-                    "1",
-                    "0"
-                ],
-                "off_target": [
-                    "4",
-                    "4"
-                ],
-                "on_target": [
-                    "1",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "2",
-                    "1"
-                ]
-            }
-        },
-        {
-            "id": "7451003",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "258",
-                "name": "Torneo Apertura de El Salvador",
-                "cc": "sv"
-            },
-            "home": {
-                "id": "262743",
-                "name": "Fuerte San Francisco",
-                "image_id": "534017",
-                "cc": "sv"
-            },
-            "away": {
-                "id": "10004",
-                "name": "CD \u00c1guila",
-                "image_id": "24385",
-                "cc": "sv"
-            },
-            "ss": "0-0",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146323118",
-            "timer": {
-                "tm": 45,
-                "ts": 0,
-                "tt": "0",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "35",
-                    "29"
-                ],
-                "corners": [
-                    "1",
-                    "1"
-                ],
-                "corner_h": [
-                    "1",
-                    "1"
-                ],
-                "dangerous_attacks": [
-                    "17",
-                    "17"
+                    "28",
+                    "68"
                 ],
                 "goals": [
                     "0",
-                    "0"
-                ],
-                "off_target": [
-                    "5",
-                    "4"
-                ],
-                "on_target": [
-                    "2",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "possession_rt": [
-                    "51",
-                    "49"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7450477",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "44146",
-                "name": "Marquense",
-                "image_id": "7019",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "44104",
-                "name": "Suchitepequez",
-                "image_id": "7022",
-                "cc": "gt"
-            },
-            "ss": "2-0",
-            "scores": {
-                "1": {
-                    "home": "2",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "2",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146252696",
-            "timer": {
-                "tm": 46,
-                "ts": 38,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "35",
-                    "32"
-                ],
-                "ball_safe": [
-                    "15",
-                    "14"
-                ],
-                "corners": [
-                    "1",
-                    "0"
-                ],
-                "corner_h": [
-                    "1",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "20",
-                    "14"
-                ],
-                "goals": [
-                    "2",
-                    "0"
-                ],
-                "off_target": [
-                    "1",
-                    "3"
-                ],
-                "on_target": [
-                    "2",
-                    "1"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "possession_rt": [
-                    "56",
-                    "44"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "4",
                     "2"
                 ],
-                "yellowred_cards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7448182",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "260",
-                "name": "Guatemala - Primera Divisi\u00f3n",
-                "cc": "gt"
-            },
-            "home": {
-                "id": "50009",
-                "name": "Universidad de San Carlos",
-                "image_id": "23428",
-                "cc": "gt"
-            },
-            "away": {
-                "id": "236342",
-                "name": "CS Deportivo Sacachispas",
-                "image_id": "7604",
-                "cc": "gt"
-            },
-            "ss": "0-1",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "1"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "1"
-                }
-            },
-            "bet365_id": "146252710",
-            "timer": {
-                "tm": 46,
-                "ts": 13,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "60",
-                    "37"
-                ],
-                "corners": [
-                    "2",
-                    "0"
-                ],
-                "corner_h": [
-                    "2",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "39",
-                    "26"
-                ],
-                "goals": [
-                    "0",
-                    "1"
-                ],
                 "off_target": [
                     "2",
-                    "1"
+                    "7"
                 ],
                 "on_target": [
                     "2",
-                    "4"
+                    "5"
                 ],
                 "penalties": [
                     "0",
                     "0"
+                ],
+                "possession_rt": [
+                    "41",
+                    "59"
                 ],
                 "redcards": [
                     "0",
@@ -1498,291 +670,127 @@
                 ],
                 "substitutions": [
                     "2",
-                    "0"
+                    "3"
                 ],
                 "yellowcards": [
-                    "0",
-                    "1"
+                    "2",
+                    "3"
                 ]
             }
         },
         {
-            "id": "7418100",
+            "id": "6677466",
             "sport_id": "1",
-            "time": "1699477200",
+            "time": "1700419500",
             "time_status": "1",
             "league": {
-                "id": "637",
-                "name": "El Salvador - Liga B",
-                "cc": "sv"
+                "id": "328",
+                "name": "Brasil - Serie B",
+                "cc": "br"
             },
             "home": {
-                "id": "6454",
-                "name": "Santa Tecla - B",
-                "image_id": "778016",
-                "cc": "sv"
+                "id": "1455",
+                "name": "Club Guaran\u00ed",
+                "image_id": "1972",
+                "cc": "br"
             },
             "away": {
-                "id": "34918",
-                "name": "CD Luis \u00c1ngel Firpo - B",
-                "image_id": "781566",
-                "cc": "sv"
+                "id": "2064",
+                "name": "ABC",
+                "image_id": "21838",
+                "cc": "br"
             },
-            "ss": "0-1",
+            "ss": "1-2",
             "scores": {
                 "1": {
-                    "home": "0",
+                    "home": "1",
                     "away": "1"
                 },
                 "2": {
-                    "home": "0",
-                    "away": "1"
+                    "home": "1",
+                    "away": "2"
                 }
             },
-            "bet365_id": "146270042",
+            "bet365_id": "146605593",
             "timer": {
-                "tm": 45,
-                "ts": 0,
-                "tt": "0",
+                "tm": 63,
+                "ts": 45,
+                "tt": "1",
                 "ta": 0,
                 "md": 1
             },
             "stats": {
+                "action_areas": [
+                    "14.9",
+                    "39.0"
+                ],
                 "attacks": [
-                    "55",
+                    "107",
                     "35"
                 ],
                 "ball_safe": [
                     "54",
-                    "38"
+                    "43"
                 ],
                 "corners": [
-                    "4",
-                    "2"
+                    "7",
+                    "0"
                 ],
                 "corner_h": [
                     "4",
+                    "0"
+                ],
+                "crosses": [
+                    "17",
                     "2"
+                ],
+                "crossing_accuracy": [
+                    "0.24",
+                    "0.00"
                 ],
                 "dangerous_attacks": [
                     "45",
-                    "28"
-                ],
-                "goals": [
-                    "0",
-                    "1"
-                ],
-                "off_target": [
-                    "8",
-                    "5"
-                ],
-                "on_target": [
-                    "3",
-                    "2"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ],
-                "yellowred_cards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7376108",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "182",
-                "name": "Chile - Primera B",
-                "cc": "cl"
-            },
-            "home": {
-                "id": "46003",
-                "name": "La Serena",
-                "image_id": "5031",
-                "cc": "cl"
-            },
-            "away": {
-                "id": "33555",
-                "name": "Deportes Temuco",
-                "image_id": "119072",
-                "cc": "cl"
-            },
-            "ss": "1-0",
-            "scores": {
-                "1": {
-                    "home": "1",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "1",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "145652126",
-            "timer": {
-                "tm": 45,
-                "ts": 0,
-                "tt": "0",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "39",
-                    "38"
-                ],
-                "corners": [
-                    "2",
-                    "0"
-                ],
-                "corner_h": [
-                    "2",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "24",
-                    "16"
-                ],
-                "goals": [
-                    "1",
-                    "0"
-                ],
-                "off_target": [
-                    "3",
-                    "3"
-                ],
-                "on_target": [
-                    "5",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "1",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "1",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "6782583",
-            "sport_id": "1",
-            "time": "1699477200",
-            "time_status": "1",
-            "league": {
-                "id": "223",
-                "name": "Costa Rica - Primera Divisi\u00f3n",
-                "cc": "cr"
-            },
-            "home": {
-                "id": "1458",
-                "name": "Municipal Perez Zeledon",
-                "image_id": "6576",
-                "cc": "cr"
-            },
-            "away": {
-                "id": "85690",
-                "name": "AD Guanacasteca",
-                "image_id": "269779",
-                "cc": "cr"
-            },
-            "ss": "0-0",
-            "scores": {
-                "1": {
-                    "home": "0",
-                    "away": "0"
-                },
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146028618",
-            "timer": {
-                "tm": 45,
-                "ts": 55,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "66",
-                    "65"
-                ],
-                "ball_safe": [
-                    "67",
-                    "47"
-                ],
-                "corners": [
-                    "2",
-                    "1"
-                ],
-                "corner_h": [
-                    "2",
-                    "1"
-                ],
-                "dangerous_attacks": [
-                    "39",
-                    "35"
+                    "9"
                 ],
                 "fouls": [
                     "5",
-                    "13"
+                    "6"
                 ],
                 "goalattempts": [
-                    "5",
+                    "7",
                     "2"
                 ],
                 "goals": [
-                    "0",
-                    "0"
+                    "1",
+                    "2"
                 ],
                 "injuries": [
-                    "1",
+                    "0",
                     "1"
                 ],
-                "offsides": [
-                    "1",
-                    "1"
+                "key_passes": [
+                    "12",
+                    "0"
                 ],
                 "off_target": [
-                    "6",
-                    "4"
+                    "17",
+                    "1"
                 ],
                 "on_target": [
-                    "3",
-                    "0"
+                    "5",
+                    "2"
+                ],
+                "passing_accuracy": [
+                    "0.79",
+                    "0.50"
                 ],
                 "penalties": [
                     "0",
                     "0"
+                ],
+                "possession_rt": [
+                    "70",
+                    "30"
                 ],
                 "redcards": [
                     "0",
@@ -1793,16 +801,20 @@
                     "3"
                 ],
                 "shots_blocked": [
-                    "4",
-                    "2"
+                    "5",
+                    "0"
                 ],
                 "substitutions": [
                     "2",
-                    "2"
+                    "1"
+                ],
+                "xg": [
+                    "1.51",
+                    "0.29"
                 ],
                 "yellowcards": [
                     "1",
-                    "1"
+                    "3"
                 ],
                 "yellowred_cards": [
                     "0",
@@ -1811,144 +823,66 @@
             }
         },
         {
-            "id": "7452380",
+            "id": "7473556",
             "sport_id": "1",
-            "time": "1699478100",
+            "time": "1700419800",
             "time_status": "1",
             "league": {
-                "id": "258",
-                "name": "Torneo Apertura de El Salvador",
-                "cc": "sv"
+                "id": "32774",
+                "name": "Brasil - Encuentros - Femenino",
+                "cc": "br"
             },
             "home": {
-                "id": "254368",
-                "name": "CD Platense Zacatecoluca",
-                "image_id": "526689",
-                "cc": "sv"
+                "id": "273042",
+                "name": "Cruzeiro EC - Femenino",
+                "image_id": "552283",
+                "cc": "br"
             },
             "away": {
-                "id": "1417",
-                "name": "Alianza FC",
-                "image_id": "24383",
-                "cc": "sv"
-            },
-            "o_away": {
-                "id": "262473",
-                "name": "Alianza FC San Salvador",
-                "image_id": "24383",
-                "cc": "sv"
+                "id": "269946",
+                "name": "Atl\u00e9tico Mineiro - Femenino",
+                "image_id": "552277",
+                "cc": "br"
             },
             "ss": "0-0",
             "scores": {
+                "1": {
+                    "home": "0",
+                    "away": "0"
+                },
                 "2": {
                     "home": "0",
                     "away": "0"
                 }
             },
-            "bet365_id": "146364196",
+            "bet365_id": "146728930",
             "timer": {
-                "tm": 47,
-                "ts": 14,
-                "tt": "1",
-                "ta": 2,
-                "md": 0
-            },
-            "stats": {
-                "attacks": [
-                    "47",
-                    "42"
-                ],
-                "corners": [
-                    "1",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "21",
-                    "20"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "off_target": [
-                    "5",
-                    "5"
-                ],
-                "on_target": [
-                    "3",
-                    "3"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "1",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7451584",
-            "sport_id": "1",
-            "time": "1699479000",
-            "time_status": "1",
-            "league": {
-                "id": "258",
-                "name": "Torneo Apertura de El Salvador",
-                "cc": "sv"
-            },
-            "home": {
-                "id": "293251",
-                "name": "Once Deportivo de Ahuachap\u00e1n",
-                "image_id": "24391",
-                "cc": "sv"
-            },
-            "away": {
-                "id": "59871",
-                "name": "Jocoro F.C.",
-                "image_id": "460893",
-                "cc": "sv"
-            },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146364191",
-            "timer": {
-                "tm": 32,
-                "ts": 42,
+                "tm": 55,
+                "ts": 44,
                 "tt": "1",
                 "ta": 0,
-                "md": 0
+                "md": 1
             },
             "stats": {
                 "attacks": [
-                    "28",
-                    "33"
+                    "76",
+                    "59"
                 ],
                 "ball_safe": [
-                    "31",
-                    "24"
+                    "35",
+                    "44"
                 ],
                 "corners": [
-                    "2",
-                    "1"
+                    "7",
+                    "3"
+                ],
+                "corner_h": [
+                    "6",
+                    "3"
                 ],
                 "dangerous_attacks": [
-                    "19",
-                    "20"
+                    "23",
+                    "16"
                 ],
                 "goals": [
                     "0",
@@ -1956,15 +890,119 @@
                 ],
                 "injuries": [
                     "0",
-                    "1"
+                    "3"
                 ],
                 "off_target": [
+                    "7",
+                    "4"
+                ],
+                "on_target": [
+                    "5",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "54",
+                    "46"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
                     "0",
                     "2"
                 ],
-                "on_target": [
-                    "1",
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494296",
+            "sport_id": "1",
+            "time": "1700419800",
+            "time_status": "1",
+            "league": {
+                "id": "17022",
+                "name": "Brasil Pernambucano - Femenino",
+                "cc": "br"
+            },
+            "home": {
+                "id": "160047",
+                "name": "Sport Recife - Femenino",
+                "image_id": "177958",
+                "cc": "br"
+            },
+            "away": {
+                "id": "853143",
+                "name": "N\u00e1utico - Femenino",
+                "image_id": "425631",
+                "cc": "br"
+            },
+            "ss": "1-0",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146757522",
+            "timer": {
+                "tm": 56,
+                "ts": 53,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "73",
+                    "60"
+                ],
+                "ball_safe": [
+                    "3",
+                    "4"
+                ],
+                "corners": [
+                    "5",
                     "2"
+                ],
+                "corner_h": [
+                    "4",
+                    "2"
+                ],
+                "dangerous_attacks": [
+                    "50",
+                    "26"
+                ],
+                "goals": [
+                    "1",
+                    "0"
+                ],
+                "injuries": [
+                    "1",
+                    "0"
+                ],
+                "off_target": [
+                    "7",
+                    "2"
+                ],
+                "on_target": [
+                    "3",
+                    "3"
                 ],
                 "penalties": [
                     "0",
@@ -1976,10 +1014,10 @@
                 ],
                 "substitutions": [
                     "0",
-                    "0"
+                    "1"
                 ],
                 "yellowcards": [
-                    "1",
+                    "0",
                     "1"
                 ],
                 "yellowred_cards": [
@@ -1989,50 +1027,280 @@
             }
         },
         {
-            "id": "7455455",
+            "id": "6947850",
             "sport_id": "1",
-            "time": "1699480200",
-            "time_status": "3",
+            "time": "1700420400",
+            "time_status": "1",
             "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
+                "id": "26931",
+                "name": "Espa\u00f1a - Primera Federaci\u00f3n - Grupo 2",
+                "cc": "es"
             },
             "home": {
-                "id": "931317",
-                "name": "Arsenal (Izzy) Esports",
-                "image_id": null,
-                "cc": null
+                "id": "63332",
+                "name": "Real Madrid Castilla",
+                "image_id": "5069",
+                "cc": "es"
             },
             "away": {
-                "id": "753030",
-                "name": "Man City (Musky) Esports",
-                "image_id": "935481",
-                "cc": null
+                "id": "1199",
+                "name": "Algeciras CF",
+                "image_id": "4489",
+                "cc": "es"
             },
-            "ss": "1-1",
+            "ss": "1-2",
             "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "2"
+                },
                 "2": {
                     "home": "1",
+                    "away": "2"
+                }
+            },
+            "bet365_id": "146306365",
+            "timer": {
+                "tm": 50,
+                "ts": 10,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "53",
+                    "57"
+                ],
+                "ball_safe": [
+                    "41",
+                    "39"
+                ],
+                "corners": [
+                    "5",
+                    "3"
+                ],
+                "corner_h": [
+                    "5",
+                    "3"
+                ],
+                "dangerous_attacks": [
+                    "25",
+                    "23"
+                ],
+                "goals": [
+                    "1",
+                    "2"
+                ],
+                "off_target": [
+                    "3",
+                    "4"
+                ],
+                "on_target": [
+                    "6",
+                    "2"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "52",
+                    "48"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "2"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "6949677",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "26932",
+                "name": "Espa\u00f1a - Primera Federaci\u00f3n - Grupo 1",
+                "cc": "es"
+            },
+            "home": {
+                "id": "3856",
+                "name": "Sestao River",
+                "image_id": "24364",
+                "cc": "es"
+            },
+            "away": {
+                "id": "153",
+                "name": "Fuenlabrada",
+                "image_id": "35097",
+                "cc": "es"
+            },
+            "ss": "0-1",
+            "scores": {
+                "1": {
+                    "home": "0",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "0",
                     "away": "1"
                 }
             },
-            "bet365_id": "146333803",
+            "bet365_id": "146306329",
             "timer": {
-                "tm": 8,
+                "tm": 51,
+                "ts": 6,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "49",
+                    "41"
+                ],
+                "ball_safe": [
+                    "23",
+                    "15"
+                ],
+                "corners": [
+                    "2",
+                    "2"
+                ],
+                "corner_h": [
+                    "1",
+                    "2"
+                ],
+                "dangerous_attacks": [
+                    "22",
+                    "25"
+                ],
+                "goals": [
+                    "0",
+                    "1"
+                ],
+                "off_target": [
+                    "3",
+                    "1"
+                ],
+                "on_target": [
+                    "0",
+                    "3"
+                ],
+                "penalties": [
+                    "0",
+                    "1"
+                ],
+                "possession_rt": [
+                    "49",
+                    "51"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "1",
+                    "2"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7482843",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "637",
+                "name": "El Salvador - Liga B",
+                "cc": "sv"
+            },
+            "home": {
+                "id": "6450",
+                "name": "AD Isidro Metap\u00e1n - B",
+                "image_id": "778014",
+                "cc": "sv"
+            },
+            "away": {
+                "id": "295180",
+                "name": "Alianza FC San Salvador - B",
+                "image_id": "515544",
+                "cc": "sv"
+            },
+            "o_away": {
+                "id": "6451",
+                "name": "Alianza FC - B",
+                "image_id": "781340",
+                "cc": "pa"
+            },
+            "ss": "1-0",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146874624",
+            "timer": {
+                "tm": 45,
                 "ts": 0,
                 "tt": "0",
                 "ta": 0,
                 "md": 1
             },
             "stats": {
+                "attacks": [
+                    "36",
+                    "58"
+                ],
                 "corners": [
-                    "2",
-                    "2"
+                    "0",
+                    "4"
+                ],
+                "corner_h": [
+                    "0",
+                    "4"
+                ],
+                "dangerous_attacks": [
+                    "15",
+                    "40"
                 ],
                 "goals": [
                     "1",
-                    "1"
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "4"
+                ],
+                "on_target": [
+                    "2",
+                    "2"
                 ],
                 "penalties": [
                     "0",
@@ -2053,26 +1321,218 @@
             }
         },
         {
-            "id": "7455468",
+            "id": "6934862",
             "sport_id": "1",
-            "time": "1699480200",
-            "time_status": "3",
+            "time": "1700420400",
+            "time_status": "1",
             "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
+                "id": "14717",
+                "name": "CONCACAF - Liga de Naciones",
                 "cc": null
             },
             "home": {
-                "id": "921483",
-                "name": "Man Utd (Buconi) Esports",
-                "image_id": null,
-                "cc": null
+                "id": "838604",
+                "name": "Santa Luc\u00eda",
+                "image_id": "21820",
+                "cc": "lc"
             },
             "away": {
-                "id": "472568",
-                "name": "Liverpool (MakcwellLm) Esports",
-                "image_id": "809952",
-                "cc": null
+                "id": "269059",
+                "name": "Sint Maarten",
+                "image_id": "496028",
+                "cc": "sx"
+            },
+            "ss": "1-1",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "1"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146744421",
+            "timer": {
+                "tm": 49,
+                "ts": 34,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "36",
+                    "32"
+                ],
+                "ball_safe": [
+                    "25",
+                    "28"
+                ],
+                "corners": [
+                    "6",
+                    "2"
+                ],
+                "corner_h": [
+                    "5",
+                    "2"
+                ],
+                "dangerous_attacks": [
+                    "30",
+                    "20"
+                ],
+                "goals": [
+                    "1",
+                    "1"
+                ],
+                "injuries": [
+                    "1",
+                    "0"
+                ],
+                "off_target": [
+                    "4",
+                    "4"
+                ],
+                "on_target": [
+                    "4",
+                    "2"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494228",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "32720",
+                "name": "Brasil - Encuentros",
+                "cc": "br"
+            },
+            "home": {
+                "id": "173988",
+                "name": "Trindade",
+                "image_id": "32796",
+                "cc": "br"
+            },
+            "away": {
+                "id": "914258",
+                "name": "Itabera\u00ed EC",
+                "image_id": "1059806",
+                "cc": "br"
+            },
+            "ss": "1-0",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146726763",
+            "timer": {
+                "tm": 50,
+                "ts": 12,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "43",
+                    "47"
+                ],
+                "corners": [
+                    "3",
+                    "0"
+                ],
+                "corner_h": [
+                    "2",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "18",
+                    "20"
+                ],
+                "goals": [
+                    "1",
+                    "0"
+                ],
+                "off_target": [
+                    "5",
+                    "4"
+                ],
+                "on_target": [
+                    "2",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "57",
+                    "43"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
+                ]
+            }
+        },
+        {
+            "id": "7462536",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "3573",
+                "name": "Bolivia - Torneo Clausura",
+                "cc": "bo"
+            },
+            "home": {
+                "id": "569260",
+                "name": "Libertad Gran Mamore FC",
+                "image_id": "969699",
+                "cc": "bo"
+            },
+            "away": {
+                "id": "44204",
+                "name": "Oriente Petrolero",
+                "image_id": "33820",
+                "cc": "bo"
             },
             "ss": "1-1",
             "scores": {
@@ -2081,26 +1541,70 @@
                     "away": "1"
                 }
             },
-            "bet365_id": "146333808",
+            "bet365_id": "146693491",
             "timer": {
-                "tm": 8,
-                "ts": 0,
+                "tm": 36,
+                "ts": 30,
                 "tt": "1",
                 "ta": 0,
-                "md": 1
+                "md": 0
             },
             "stats": {
+                "action_areas": [
+                    "24.7",
+                    "21.1"
+                ],
+                "attacks": [
+                    "24",
+                    "41"
+                ],
+                "ball_safe": [
+                    "15",
+                    "7"
+                ],
                 "corners": [
-                    "0",
-                    "4"
+                    "4",
+                    "1"
+                ],
+                "crosses": [
+                    "2",
+                    "2"
+                ],
+                "crossing_accuracy": [
+                    "0.50",
+                    "0.00"
+                ],
+                "dangerous_attacks": [
+                    "11",
+                    "11"
                 ],
                 "goals": [
                     "1",
                     "1"
                 ],
+                "key_passes": [
+                    "5",
+                    "2"
+                ],
+                "off_target": [
+                    "4",
+                    "2"
+                ],
+                "on_target": [
+                    "4",
+                    "2"
+                ],
+                "passing_accuracy": [
+                    "0.43",
+                    "0.56"
+                ],
                 "penalties": [
-                    "0",
-                    "1"
+                    "1",
+                    "0"
+                ],
+                "possession_rt": [
+                    "53",
+                    "47"
                 ],
                 "redcards": [
                     "0",
@@ -2110,6 +1614,358 @@
                     "0",
                     "0"
                 ],
+                "xg": [
+                    "1.35",
+                    "0.32"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7478774",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "4496",
+                "name": "Brasil - Campeonato Paulista - Femenino",
+                "cc": "br"
+            },
+            "home": {
+                "id": "271668",
+                "name": "Sao Paulo - Femenino",
+                "image_id": "552291",
+                "cc": "br"
+            },
+            "away": {
+                "id": "662412",
+                "name": "SC Corinthians Paulista - Femenino",
+                "image_id": "260739",
+                "cc": "br"
+            },
+            "ss": "1-1",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "1"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146757303",
+            "timer": {
+                "tm": 45,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "28",
+                    "59"
+                ],
+                "ball_safe": [
+                    "29",
+                    "34"
+                ],
+                "corners": [
+                    "2",
+                    "1"
+                ],
+                "corner_h": [
+                    "2",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "20",
+                    "43"
+                ],
+                "fouls": [
+                    "4",
+                    "5"
+                ],
+                "goalattempts": [
+                    "3",
+                    "7"
+                ],
+                "goals": [
+                    "1",
+                    "1"
+                ],
+                "injuries": [
+                    "1",
+                    "1"
+                ],
+                "offsides": [
+                    "0",
+                    "1"
+                ],
+                "off_target": [
+                    "1",
+                    "2"
+                ],
+                "on_target": [
+                    "3",
+                    "5"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "28",
+                    "72"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "saves": [
+                    "4",
+                    "1"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "6910121",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "14717",
+                "name": "CONCACAF - Liga de Naciones",
+                "cc": null
+            },
+            "home": {
+                "id": "249507",
+                "name": "Guadeloupe",
+                "image_id": "7299",
+                "cc": "gp"
+            },
+            "away": {
+                "id": "178921",
+                "name": "San Crist\u00f3bal y Nieves",
+                "image_id": "21819",
+                "cc": "kn"
+            },
+            "o_away": {
+                "id": "4126",
+                "name": "San Crist\u00f3bal y Nieves",
+                "image_id": "21819",
+                "cc": "kn"
+            },
+            "ss": "1-0",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "0"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146762706",
+            "timer": {
+                "tm": 50,
+                "ts": 24,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "action_areas": [
+                    "18.8",
+                    "31.1"
+                ],
+                "attacks": [
+                    "44",
+                    "39"
+                ],
+                "ball_safe": [
+                    "32",
+                    "43"
+                ],
+                "corners": [
+                    "2",
+                    "2"
+                ],
+                "corner_h": [
+                    "1",
+                    "2"
+                ],
+                "crosses": [
+                    "3",
+                    "5"
+                ],
+                "crossing_accuracy": [
+                    "0.00",
+                    "0.20"
+                ],
+                "dangerous_attacks": [
+                    "24",
+                    "14"
+                ],
+                "goals": [
+                    "1",
+                    "0"
+                ],
+                "injuries": [
+                    "1",
+                    "1"
+                ],
+                "key_passes": [
+                    "8",
+                    "0"
+                ],
+                "off_target": [
+                    "5",
+                    "1"
+                ],
+                "on_target": [
+                    "4",
+                    "0"
+                ],
+                "passing_accuracy": [
+                    "0.83",
+                    "0.79"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "xg": [
+                    "0.76",
+                    "0.04"
+                ],
+                "yellowcards": [
+                    "1",
+                    "2"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494772",
+            "sport_id": "1",
+            "time": "1700420400",
+            "time_status": "1",
+            "league": {
+                "id": "30915",
+                "name": "Bolivia - Copa Sim\u00f3n Olivar",
+                "cc": "bo"
+            },
+            "home": {
+                "id": "919792",
+                "name": "Gualberto Villarroel",
+                "image_id": "1015661",
+                "cc": "bo"
+            },
+            "o_home": {
+                "id": "867569",
+                "name": "San Jose de Oruro",
+                "image_id": "1015661",
+                "cc": "bo"
+            },
+            "away": {
+                "id": "859447",
+                "name": "Real Mizque",
+                "image_id": "924769",
+                "cc": "bo"
+            },
+            "ss": "3-1",
+            "scores": {
+                "1": {
+                    "home": "3",
+                    "away": "1"
+                },
+                "2": {
+                    "home": "3",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146721709",
+            "timer": {
+                "tm": 45,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "40",
+                    "34"
+                ],
+                "corners": [
+                    "2",
+                    "0"
+                ],
+                "corner_h": [
+                    "2",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "33",
+                    "4"
+                ],
+                "goals": [
+                    "3",
+                    "1"
+                ],
+                "off_target": [
+                    "2",
+                    "1"
+                ],
+                "on_target": [
+                    "8",
+                    "1"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "2"
+                ],
                 "yellowcards": [
                     "0",
                     "0"
@@ -2117,62 +1973,78 @@
             }
         },
         {
-            "id": "7455493",
+            "id": "6949772",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700420400",
             "time_status": "1",
             "league": {
-                "id": "23114",
-                "name": "Esoccer GT Leagues \u2013 12 mins play",
-                "cc": null
+                "id": "26931",
+                "name": "Espa\u00f1a - Primera Federaci\u00f3n - Grupo 2",
+                "cc": "es"
             },
             "home": {
-                "id": "856801",
-                "name": "Juventus (Seagal) Esports",
-                "image_id": "1011719",
-                "cc": null
+                "id": "214",
+                "name": "Melilla",
+                "image_id": "24350",
+                "cc": "es"
             },
             "away": {
-                "id": "886087",
-                "name": "Napoli (Punisher) Esports",
-                "image_id": "1034565",
-                "cc": null
+                "id": "196666",
+                "name": "UD Ibiza",
+                "image_id": "24368",
+                "cc": "es"
             },
-            "ss": "0-2",
+            "ss": "0-1",
             "scores": {
+                "1": {
+                    "home": "0",
+                    "away": "1"
+                },
                 "2": {
                     "home": "0",
-                    "away": "2"
+                    "away": "1"
                 }
             },
-            "bet365_id": "146334402",
+            "bet365_id": "146306368",
             "timer": {
-                "tm": 4,
-                "ts": 38,
+                "tm": 49,
+                "ts": 11,
                 "tt": "1",
                 "ta": 0,
-                "md": 0
+                "md": 1
             },
             "stats": {
                 "attacks": [
-                    "4",
-                    "6"
+                    "53",
+                    "53"
+                ],
+                "ball_safe": [
+                    "52",
+                    "37"
                 ],
                 "corners": [
-                    "0",
-                    "2"
+                    "3",
+                    "3"
+                ],
+                "corner_h": [
+                    "3",
+                    "3"
                 ],
                 "dangerous_attacks": [
-                    "4",
-                    "4"
+                    "24",
+                    "32"
                 ],
                 "goals": [
                     "0",
-                    "2"
+                    "1"
+                ],
+                "injuries": [
+                    "1",
+                    "1"
                 ],
                 "off_target": [
-                    "0",
-                    "0"
+                    "2",
+                    "1"
                 ],
                 "on_target": [
                     "0",
@@ -2182,69 +2054,9 @@
                     "0",
                     "0"
                 ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7455498",
-            "sport_id": "1",
-            "time": "1699480800",
-            "time_status": "1",
-            "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
-            },
-            "home": {
-                "id": "333394",
-                "name": "Man City (Kodak) Esports",
-                "image_id": "946869",
-                "cc": null
-            },
-            "away": {
-                "id": "336133",
-                "name": "Bayern (MeLToSik) Esports",
-                "image_id": "704387",
-                "cc": null
-            },
-            "ss": "0-1",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "1"
-                }
-            },
-            "bet365_id": "146333635",
-            "timer": {
-                "tm": 4,
-                "ts": 14,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "corners": [
-                    "1",
-                    "0"
-                ],
-                "goals": [
-                    "0",
-                    "1"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
+                "possession_rt": [
+                    "57",
+                    "43"
                 ],
                 "redcards": [
                     "0",
@@ -2255,59 +2067,79 @@
                     "0"
                 ],
                 "yellowcards": [
+                    "2",
+                    "0"
+                ],
+                "yellowred_cards": [
                     "0",
                     "0"
                 ]
             }
         },
         {
-            "id": "7455499",
+            "id": "7491433",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700422140",
             "time_status": "1",
             "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
+                "id": "447",
+                "name": "Costa Rica - Liga de Ascenso",
+                "cc": "cr"
             },
             "home": {
-                "id": "723397",
-                "name": "PSG (Boulevard) Esports",
-                "image_id": "943043",
-                "cc": null
+                "id": "747546",
+                "name": "Quepos Cambute F.C.",
+                "image_id": "923161",
+                "cc": "cr"
             },
             "away": {
-                "id": "330781",
-                "name": "Barcelona (Inquisitor) Esports",
-                "image_id": "697883",
-                "cc": null
+                "id": "552045",
+                "name": "CD Escorpiones de Bel\u00e9n FC",
+                "image_id": "831304",
+                "cc": "cr"
             },
-            "ss": "3-0",
+            "ss": "2-0",
             "scores": {
                 "2": {
-                    "home": "3",
+                    "home": "2",
                     "away": "0"
                 }
             },
-            "bet365_id": "146333639",
+            "bet365_id": "146728344",
             "timer": {
-                "tm": 4,
-                "ts": 15,
+                "tm": 39,
+                "ts": 57,
                 "tt": "1",
                 "ta": 0,
-                "md": 1
+                "md": 0
             },
             "stats": {
+                "attacks": [
+                    "11",
+                    "17"
+                ],
                 "corners": [
-                    "0",
+                    "2",
                     "0"
                 ],
+                "dangerous_attacks": [
+                    "6",
+                    "6"
+                ],
                 "goals": [
-                    "3",
+                    "2",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "2"
+                ],
+                "on_target": [
+                    "2",
                     "0"
                 ],
                 "penalties": [
-                    "0",
+                    "1",
                     "0"
                 ],
                 "redcards": [
@@ -2325,26 +2157,26 @@
             }
         },
         {
-            "id": "6590138",
+            "id": "7481664",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700422200",
             "time_status": "1",
             "league": {
-                "id": "155",
-                "name": "Brasil - Serie A",
-                "cc": "br"
+                "id": "912",
+                "name": "Uruguay - Segunda",
+                "cc": "uy"
             },
             "home": {
-                "id": "1420",
-                "name": "Am\u00e9rica MG",
-                "image_id": "1973",
-                "cc": "br"
+                "id": "28751",
+                "name": "Rentistas",
+                "image_id": "35189",
+                "cc": "uy"
             },
             "away": {
-                "id": "1315",
-                "name": "Coritiba",
-                "image_id": "1982",
-                "cc": "br"
+                "id": "1267",
+                "name": "Rampla Juniors",
+                "image_id": "6881",
+                "cc": "uy"
             },
             "ss": "0-0",
             "scores": {
@@ -2353,30 +2185,718 @@
                     "away": "0"
                 }
             },
-            "bet365_id": "145661839",
+            "bet365_id": "146770395",
             "timer": {
-                "tm": 5,
-                "ts": 2,
+                "tm": 33,
+                "ts": 42,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "38",
+                    "49"
+                ],
+                "ball_safe": [
+                    "2",
+                    "1"
+                ],
+                "corners": [
+                    "2",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "21",
+                    "22"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "1",
+                    "2"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "47",
+                    "53"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "1",
+                    "0"
+                ],
+                "yellowred_cards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7013696",
+            "sport_id": "1",
+            "time": "1700422200",
+            "time_status": "1",
+            "league": {
+                "id": "6514",
+                "name": "Uruguay - Torneo Clausura",
+                "cc": "uy"
+            },
+            "home": {
+                "id": "3914",
+                "name": "Danubio",
+                "image_id": "3228",
+                "cc": "uy"
+            },
+            "away": {
+                "id": "1431",
+                "name": "Pe\u00f1arol",
+                "image_id": "3227",
+                "cc": "uy"
+            },
+            "ss": "1-0",
+            "scores": {
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146316311",
+            "timer": {
+                "tm": 35,
+                "ts": 1,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "36",
+                    "36"
+                ],
+                "corners": [
+                    "2",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "27",
+                    "31"
+                ],
+                "goals": [
+                    "1",
+                    "0"
+                ],
+                "off_target": [
+                    "1",
+                    "1"
+                ],
+                "on_target": [
+                    "2",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "44",
+                    "56"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "2"
+                ]
+            }
+        },
+        {
+            "id": "7493895",
+            "sport_id": "1",
+            "time": "1700422200",
+            "time_status": "1",
+            "league": {
+                "id": "22512",
+                "name": "Chile - 1\u00aa Divisi\u00f3n - Femenino",
+                "cc": "cl"
+            },
+            "home": {
+                "id": "68229",
+                "name": "Colo Colo - Femenino",
+                "image_id": "381958",
+                "cc": "cl"
+            },
+            "away": {
+                "id": "328594",
+                "name": "Universidad de Chile - Femenino",
+                "image_id": "684111",
+                "cc": "cl"
+            },
+            "ss": "1-1",
+            "scores": {
+                "2": {
+                    "home": "1",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146718559",
+            "timer": {
+                "tm": 35,
+                "ts": 52,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "35",
+                    "26"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "23",
+                    "5"
+                ],
+                "goals": [
+                    "1",
+                    "1"
+                ],
+                "off_target": [
+                    "2",
+                    "0"
+                ],
+                "on_target": [
+                    "2",
+                    "1"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "55",
+                    "45"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "5741896",
+            "sport_id": "1",
+            "time": "1700423100",
+            "time_status": "1",
+            "league": {
+                "id": "32872",
+                "name": "Euro 2024 - Clasificaci\u00f3n",
+                "cc": null
+            },
+            "home": {
+                "id": "4504",
+                "name": "Espa\u00f1a",
+                "image_id": "4698",
+                "cc": "es"
+            },
+            "away": {
+                "id": "7652",
+                "name": "Georgia",
+                "image_id": "4763",
+                "cc": "ge"
+            },
+            "ss": "1-1",
+            "scores": {
+                "2": {
+                    "home": "1",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "146314213",
+            "timer": {
+                "tm": 23,
+                "ts": 18,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "action_areas": [
-                    "13.6",
-                    "25.4"
+                    "8.9",
+                    "43.3"
                 ],
                 "attacks": [
-                    "12",
-                    "5"
-                ],
-                "ball_safe": [
-                    "8",
-                    "3"
+                    "35",
+                    "6"
                 ],
                 "corners": [
+                    "3",
+                    "0"
+                ],
+                "crosses": [
+                    "6",
+                    "0"
+                ],
+                "crossing_accuracy": [
+                    "0.33",
+                    "0.00"
+                ],
+                "dangerous_attacks": [
+                    "28",
+                    "1"
+                ],
+                "goals": [
+                    "1",
+                    "1"
+                ],
+                "key_passes": [
+                    "3",
+                    "1"
+                ],
+                "off_target": [
+                    "3",
+                    "0"
+                ],
+                "on_target": [
+                    "3",
+                    "1"
+                ],
+                "passing_accuracy": [
+                    "0.90",
+                    "0.72"
+                ],
+                "penalties": [
                     "0",
                     "0"
+                ],
+                "possession_rt": [
+                    "74",
+                    "26"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "xg": [
+                    "0.54",
+                    "0.30"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "5742058",
+            "sport_id": "1",
+            "time": "1700423100",
+            "time_status": "1",
+            "league": {
+                "id": "32872",
+                "name": "Euro 2024 - Clasificaci\u00f3n",
+                "cc": null
+            },
+            "home": {
+                "id": "3831",
+                "name": "Liechtenstein",
+                "image_id": "4830",
+                "cc": "li"
+            },
+            "away": {
+                "id": "5120",
+                "name": "Luxemburgo",
+                "image_id": "4478",
+                "cc": "lu"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146314224",
+            "timer": {
+                "tm": 23,
+                "ts": 17,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "action_areas": [
+                    "29.0",
+                    "23.1"
+                ],
+                "attacks": [
+                    "6",
+                    "25"
+                ],
+                "corners": [
+                    "1",
+                    "2"
+                ],
+                "crosses": [
+                    "1",
+                    "5"
+                ],
+                "crossing_accuracy": [
+                    "0.00",
+                    "0.40"
+                ],
+                "dangerous_attacks": [
+                    "3",
+                    "12"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "key_passes": [
+                    "1",
+                    "2"
+                ],
+                "off_target": [
+                    "1",
+                    "2"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "passing_accuracy": [
+                    "0.82",
+                    "0.90"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "31",
+                    "69"
+                ],
+                "redcards": [
+                    "0",
+                    "1"
+                ],
+                "substitutions": [
+                    "1",
+                    "0"
+                ],
+                "xg": [
+                    "0.03",
+                    "0.09"
+                ],
+                "yellowcards": [
+                    "1",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "5742056",
+            "sport_id": "1",
+            "time": "1700423100",
+            "time_status": "1",
+            "league": {
+                "id": "32872",
+                "name": "Euro 2024 - Clasificaci\u00f3n",
+                "cc": null
+            },
+            "home": {
+                "id": "4509",
+                "name": "Portugal",
+                "image_id": "4704",
+                "cc": "pt"
+            },
+            "away": {
+                "id": "7785",
+                "name": "Islandia",
+                "image_id": "4708",
+                "cc": "is"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146314219",
+            "timer": {
+                "tm": 22,
+                "ts": 32,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "action_areas": [
+                    "18.8",
+                    "39.2"
+                ],
+                "attacks": [
+                    "34",
+                    "20"
+                ],
+                "corners": [
+                    "5",
+                    "0"
+                ],
+                "crosses": [
+                    "6",
+                    "2"
+                ],
+                "crossing_accuracy": [
+                    "0.50",
+                    "0.00"
+                ],
+                "dangerous_attacks": [
+                    "28",
+                    "7"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "key_passes": [
+                    "4",
+                    "3"
+                ],
+                "off_target": [
+                    "3",
+                    "2"
+                ],
+                "on_target": [
+                    "2",
+                    "1"
+                ],
+                "passing_accuracy": [
+                    "0.90",
+                    "0.74"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "63",
+                    "37"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "xg": [
+                    "0.32",
+                    "0.09"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "5742070",
+            "sport_id": "1",
+            "time": "1700423100",
+            "time_status": "1",
+            "league": {
+                "id": "32872",
+                "name": "Euro 2024 - Clasificaci\u00f3n",
+                "cc": null
+            },
+            "home": {
+                "id": "7335",
+                "name": "Escocia",
+                "image_id": "4695",
+                "cc": "gb"
+            },
+            "away": {
+                "id": "3800",
+                "name": "Noruega",
+                "image_id": "4475",
+                "cc": "no"
+            },
+            "ss": "1-2",
+            "scores": {
+                "2": {
+                    "home": "1",
+                    "away": "2"
+                }
+            },
+            "bet365_id": "146314216",
+            "timer": {
+                "tm": 23,
+                "ts": 42,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "action_areas": [
+                    "25.8",
+                    "29.6"
+                ],
+                "attacks": [
+                    "22",
+                    "13"
+                ],
+                "corners": [
+                    "2",
+                    "0"
+                ],
+                "crosses": [
+                    "5",
+                    "2"
+                ],
+                "crossing_accuracy": [
+                    "0.20",
+                    "0.50"
+                ],
+                "dangerous_attacks": [
+                    "10",
+                    "2"
+                ],
+                "goals": [
+                    "1",
+                    "2"
+                ],
+                "key_passes": [
+                    "1",
+                    "1"
+                ],
+                "off_target": [
+                    "3",
+                    "0"
+                ],
+                "on_target": [
+                    "1",
+                    "2"
+                ],
+                "passing_accuracy": [
+                    "0.89",
+                    "0.90"
+                ],
+                "penalties": [
+                    "1",
+                    "0"
+                ],
+                "possession_rt": [
+                    "67",
+                    "33"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "xg": [
+                    "0.86",
+                    "0.90"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
+                ]
+            }
+        },
+        {
+            "id": "5742057",
+            "sport_id": "1",
+            "time": "1700423100",
+            "time_status": "1",
+            "league": {
+                "id": "32872",
+                "name": "Euro 2024 - Clasificaci\u00f3n",
+                "cc": null
+            },
+            "home": {
+                "id": "8504",
+                "name": "Bosnia y Herzegovina",
+                "image_id": "4479",
+                "cc": "ba"
+            },
+            "away": {
+                "id": "7143",
+                "name": "Eslovaquia",
+                "image_id": "4697",
+                "cc": "sk"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146314221",
+            "timer": {
+                "tm": 22,
+                "ts": 39,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "action_areas": [
+                    "31.2",
+                    "33.9"
+                ],
+                "attacks": [
+                    "23",
+                    "22"
+                ],
+                "corners": [
+                    "1",
+                    "1"
                 ],
                 "crosses": [
                     "2",
@@ -2387,12 +2907,310 @@
                     "0.00"
                 ],
                 "dangerous_attacks": [
-                    "4",
-                    "1"
+                    "9",
+                    "13"
                 ],
-                "fouls": [
-                    "1",
+                "goals": [
+                    "0",
                     "0"
+                ],
+                "key_passes": [
+                    "0",
+                    "2"
+                ],
+                "off_target": [
+                    "0",
+                    "2"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "passing_accuracy": [
+                    "0.80",
+                    "0.79"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "48",
+                    "52"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7495612",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "23114",
+                "name": "Esoccer GT Leagues \u2013 12 mins play",
+                "cc": null
+            },
+            "home": {
+                "id": "889530",
+                "name": "Real Madrid (Aladdin) Esports",
+                "image_id": "1036947",
+                "cc": null
+            },
+            "away": {
+                "id": "873402",
+                "name": "Real Sociedad (Seagal) Esports",
+                "image_id": "1024367",
+                "cc": null
+            },
+            "ss": "4-3",
+            "scores": {
+                "2": {
+                    "home": "4",
+                    "away": "3"
+                }
+            },
+            "bet365_id": "146866486",
+            "timer": {
+                "tm": 7,
+                "ts": 41,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "13",
+                    "19"
+                ],
+                "corners": [
+                    "1",
+                    "3"
+                ],
+                "dangerous_attacks": [
+                    "12",
+                    "17"
+                ],
+                "goals": [
+                    "4",
+                    "3"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "4",
+                    "3"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7496296",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "23114",
+                "name": "Esoccer GT Leagues \u2013 12 mins play",
+                "cc": null
+            },
+            "home": {
+                "id": "902317",
+                "name": "A.Madrid (Cruise) Esports",
+                "image_id": "1049331",
+                "cc": null
+            },
+            "away": {
+                "id": "937619",
+                "name": "Girona (Jack) Esports",
+                "image_id": "1083998",
+                "cc": null
+            },
+            "ss": "3-0",
+            "scores": {
+                "2": {
+                    "home": "3",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146866482",
+            "timer": {
+                "tm": 8,
+                "ts": 29,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "15",
+                    "17"
+                ],
+                "corners": [
+                    "0",
+                    "2"
+                ],
+                "dangerous_attacks": [
+                    "8",
+                    "18"
+                ],
+                "goals": [
+                    "3",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "3",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7495764",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "27993",
+                "name": "M\u00e9xico - Liga TDP",
+                "cc": "mx"
+            },
+            "home": {
+                "id": "661389",
+                "name": "La Tribu de Cd. Ju\u00e1rez",
+                "image_id": null,
+                "cc": null
+            },
+            "away": {
+                "id": "785869",
+                "name": "Tecate FC",
+                "image_id": null,
+                "cc": null
+            },
+            "ss": null,
+            "bet365_id": "146772139",
+            "timer": {
+                "tm": 0,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7495672",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "16412",
+                "name": "Costa Rica - Primera Divisi\u00f3n - Femenino",
+                "cc": "cr"
+            },
+            "home": {
+                "id": "296998",
+                "name": "Municipal Pococi - Femenino",
+                "image_id": "588063",
+                "cc": "cr"
+            },
+            "away": {
+                "id": "282371",
+                "name": "Saprissa - Femenino",
+                "image_id": "588083",
+                "cc": "cr"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146722066",
+            "timer": {
+                "tm": 4,
+                "ts": 19,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "4",
+                    "4"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "0",
+                    "4"
                 ],
                 "goals": [
                     "0",
@@ -2403,12 +3221,8 @@
                     "0"
                 ],
                 "on_target": [
-                    "1",
+                    "0",
                     "0"
-                ],
-                "passing_accuracy": [
-                    "0.92",
-                    "0.90"
                 ],
                 "penalties": [
                     "0",
@@ -2426,47 +3240,33 @@
                     "0",
                     "0"
                 ],
-                "xg": [
-                    "0.11",
-                    ""
-                ],
                 "yellowcards": [
-                    "0",
-                    "0"
-                ],
-                "yellowred_cards": [
                     "0",
                     "0"
                 ]
             }
         },
         {
-            "id": "7452394",
+            "id": "7495671",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700424000",
             "time_status": "1",
             "league": {
-                "id": "13799",
-                "name": "Argentina - Torneo Regional Amateur",
-                "cc": "ar"
+                "id": "16412",
+                "name": "Costa Rica - Primera Divisi\u00f3n - Femenino",
+                "cc": "cr"
             },
             "home": {
-                "id": "776442",
-                "name": "CSYD Colon",
-                "image_id": "560660",
-                "cc": "ar"
-            },
-            "o_home": {
-                "id": "626469",
-                "name": "Colon de Colonia Caroya",
-                "image_id": "560660",
-                "cc": "ar"
+                "id": "326971",
+                "name": "Liga Deportiva Alajuelense - Femenino",
+                "image_id": "684789",
+                "cc": "cr"
             },
             "away": {
-                "id": "322569",
-                "name": "Deportivo Comercio de Villa Dolores",
-                "image_id": "672393",
-                "cc": "ar"
+                "id": "652745",
+                "name": "A.D. Municipal P\u00e9rez Zeled\u00f3n - Femenino",
+                "image_id": "600122",
+                "cc": "cr"
             },
             "ss": "0-0",
             "scores": {
@@ -2475,226 +3275,38 @@
                     "away": "0"
                 }
             },
-            "bet365_id": "146364200",
+            "bet365_id": "146722064",
             "timer": {
-                "tm": 2,
-                "ts": 14,
+                "tm": 7,
+                "ts": 57,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "attacks": [
-                    "2",
+                    "8",
+                    "6"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "9",
                     "3"
                 ],
-                "corners": [
-                    "0",
-                    "0"
-                ],
-                "dangerous_attacks": [
-                    "1",
-                    "0"
-                ],
                 "goals": [
                     "0",
                     "0"
                 ],
                 "off_target": [
-                    "0",
-                    "0"
-                ],
-                "on_target": [
-                    "0",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "6677106",
-            "sport_id": "1",
-            "time": "1699480800",
-            "time_status": "1",
-            "league": {
-                "id": "155",
-                "name": "Brasil - Serie A",
-                "cc": "br"
-            },
-            "home": {
-                "id": "1422",
-                "name": "Internacional",
-                "image_id": "1966",
-                "cc": "br"
-            },
-            "away": {
-                "id": "1286",
-                "name": "Fluminense",
-                "image_id": "1961",
-                "cc": "br"
-            },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "145661837",
-            "timer": {
-                "tm": 5,
-                "ts": 15,
-                "tt": "1",
-                "ta": 0,
-                "md": 0
-            },
-            "stats": {
-                "action_areas": [
-                    "23.3",
-                    "33.3"
-                ],
-                "attacks": [
                     "3",
-                    "1"
-                ],
-                "corners": [
-                    "1",
-                    "0"
-                ],
-                "crossing_accuracy": [
-                    "0.00",
-                    "0.00"
-                ],
-                "dangerous_attacks": [
-                    "3",
-                    "1"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "off_target": [
-                    "1",
                     "0"
                 ],
                 "on_target": [
-                    "0",
+                    "1",
                     "0"
-                ],
-                "passing_accuracy": [
-                    "0.83",
-                    "0.78"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "possession_rt": [
-                    "90",
-                    "10"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7402252",
-            "sport_id": "1",
-            "time": "1699480800",
-            "time_status": "1",
-            "league": {
-                "id": "24406",
-                "name": "Argentina - Copa de la Liga Profesional",
-                "cc": "ar"
-            },
-            "home": {
-                "id": "6145",
-                "name": "San Lorenzo",
-                "image_id": "3201",
-                "cc": "ar"
-            },
-            "away": {
-                "id": "1468",
-                "name": "Boca Juniors",
-                "image_id": "3202",
-                "cc": "ar"
-            },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "145844614",
-            "timer": {
-                "tm": 4,
-                "ts": 33,
-                "tt": "1",
-                "ta": 0,
-                "md": 0
-            },
-            "stats": {
-                "action_areas": [
-                    "25.0",
-                    "28.6"
-                ],
-                "attacks": [
-                    "0",
-                    "0"
-                ],
-                "corners": [
-                    "0",
-                    "0"
-                ],
-                "crossing_accuracy": [
-                    "0.00",
-                    "0.00"
-                ],
-                "dangerous_attacks": [
-                    "0",
-                    "0"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "off_target": [
-                    "0",
-                    "0"
-                ],
-                "on_target": [
-                    "0",
-                    "0"
-                ],
-                "passing_accuracy": [
-                    "0.56",
-                    "0.89"
                 ],
                 "penalties": [
                     "0",
@@ -2715,26 +3327,26 @@
             }
         },
         {
-            "id": "7400066",
+            "id": "7495670",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700424000",
             "time_status": "1",
             "league": {
-                "id": "255",
-                "name": "Colombia - Primera B",
-                "cc": "co"
+                "id": "16412",
+                "name": "Costa Rica - Primera Divisi\u00f3n - Femenino",
+                "cc": "cr"
             },
             "home": {
-                "id": "1387",
-                "name": "C\u00facuta Deportivo",
-                "image_id": "6108",
-                "cc": "co"
+                "id": "282374",
+                "name": "Dimas Escazu - Femenino",
+                "image_id": "588099",
+                "cc": "cr"
             },
             "away": {
-                "id": "1386",
-                "name": "Atl\u00e9tico Cali FC",
-                "image_id": "89372",
-                "cc": "co"
+                "id": "326533",
+                "name": "CS Herediano - Femenino",
+                "image_id": "684239",
+                "cc": "cr"
             },
             "ss": "0-0",
             "scores": {
@@ -2743,10 +3355,10 @@
                     "away": "0"
                 }
             },
-            "bet365_id": "146028616",
+            "bet365_id": "146722058",
             "timer": {
-                "tm": 5,
-                "ts": 24,
+                "tm": 9,
+                "ts": 28,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
@@ -2754,11 +3366,265 @@
             "stats": {
                 "attacks": [
                     "7",
+                    "7"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "7",
+                    "5"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "1"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "50",
+                    "50"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494653",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "10584",
+                "name": "Guatemala - Liga Nacional - Femenino",
+                "cc": "gt"
+            },
+            "home": {
+                "id": "231968",
+                "name": "Deportivo Amatitlan - Femenino",
+                "image_id": "476632",
+                "cc": "gt"
+            },
+            "away": {
+                "id": "763973",
+                "name": "Xinabajul - Femenino",
+                "image_id": "840568",
+                "cc": "gt"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146860033",
+            "timer": {
+                "tm": 4,
+                "ts": 15,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "6",
                     "5"
                 ],
                 "corners": [
-                    "1",
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "2",
+                    "4"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
                     "1"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "54",
+                    "46"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494127",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "687",
+                "name": "Copa de Per\u00fa",
+                "cc": "pe"
+            },
+            "home": {
+                "id": "898769",
+                "name": "Club Defensor Porvenir",
+                "image_id": "1046021",
+                "cc": "pe"
+            },
+            "away": {
+                "id": "925966",
+                "name": "FC San Marcos",
+                "image_id": "1068816",
+                "cc": "pe"
+            },
+            "o_away": {
+                "id": "264713",
+                "name": "San Marcos FC",
+                "image_id": "438116",
+                "cc": "ni"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146719319",
+            "timer": {
+                "tm": 4,
+                "ts": 45,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "5",
+                    "8"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "3",
+                    "3"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7494652",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "10584",
+                "name": "Guatemala - Liga Nacional - Femenino",
+                "cc": "gt"
+            },
+            "home": {
+                "id": "384638",
+                "name": "FC Cremas - Femenino",
+                "image_id": "781738",
+                "cc": "gt"
+            },
+            "away": {
+                "id": "326683",
+                "name": "Suchitepequez - Femenino",
+                "image_id": "681161",
+                "cc": "gt"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146857690",
+            "timer": {
+                "tm": 6,
+                "ts": 19,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "4",
+                    "7"
+                ],
+                "corners": [
+                    "1",
+                    "0"
                 ],
                 "dangerous_attacks": [
                     "4",
@@ -2769,16 +3635,20 @@
                     "0"
                 ],
                 "off_target": [
-                    "0",
-                    "2"
+                    "1",
+                    "1"
                 ],
                 "on_target": [
                     "0",
-                    "1"
+                    "0"
                 ],
                 "penalties": [
                     "0",
                     "0"
+                ],
+                "possession_rt": [
+                    "39",
+                    "61"
                 ],
                 "redcards": [
                     "0",
@@ -2795,26 +3665,26 @@
             }
         },
         {
-            "id": "7037563",
+            "id": "7060255",
             "sport_id": "1",
-            "time": "1699480800",
+            "time": "1700424000",
             "time_status": "1",
             "league": {
-                "id": "248",
-                "name": "Honduras - Liga Nacional",
-                "cc": "hn"
+                "id": "940",
+                "name": "Francia - 1\u00aa Divisi\u00f3n - Femenino",
+                "cc": "fr"
             },
             "home": {
-                "id": "47435",
-                "name": "Real Espa\u00f1a",
-                "image_id": "36404",
-                "cc": "hn"
+                "id": "184157",
+                "name": "Paris FC - Femenino",
+                "image_id": "308650",
+                "cc": "fr"
             },
             "away": {
-                "id": "1354",
-                "name": "CD Real Sociedad",
-                "image_id": "76997",
-                "cc": "hn"
+                "id": "43991",
+                "name": "Burdeos - Femenino",
+                "image_id": "284561",
+                "cc": "fr"
             },
             "ss": "0-0",
             "scores": {
@@ -2823,42 +3693,62 @@
                     "away": "0"
                 }
             },
-            "bet365_id": "145331108",
+            "bet365_id": "146718230",
             "timer": {
-                "tm": 1,
-                "ts": 43,
+                "tm": 8,
+                "ts": 56,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
+                "action_areas": [
+                    "22.4",
+                    "36.8"
+                ],
                 "attacks": [
-                    "3",
-                    "3"
+                    "19",
+                    "6"
                 ],
                 "corners": [
-                    "0",
-                    "0"
-                ],
-                "dangerous_attacks": [
                     "1",
                     "0"
+                ],
+                "crosses": [
+                    "2",
+                    "0"
+                ],
+                "crossing_accuracy": [
+                    "0.00",
+                    "0.00"
+                ],
+                "dangerous_attacks": [
+                    "11",
+                    "2"
                 ],
                 "goals": [
                     "0",
                     "0"
                 ],
                 "off_target": [
-                    "1",
+                    "0",
                     "0"
                 ],
                 "on_target": [
-                    "0",
+                    "1",
                     "0"
+                ],
+                "passing_accuracy": [
+                    "0.78",
+                    "0.41"
                 ],
                 "penalties": [
                     "0",
                     "0"
+                ],
+                "possession_rt": [
+                    "68",
+                    "32"
                 ],
                 "redcards": [
                     "0",
@@ -2868,6 +3758,10 @@
                     "0",
                     "0"
                 ],
+                "xg": [
+                    "0.02",
+                    ""
+                ],
                 "yellowcards": [
                     "0",
                     "0"
@@ -2875,49 +3769,149 @@
             }
         },
         {
-            "id": "7455491",
+            "id": "7481667",
             "sport_id": "1",
-            "time": "1699480806",
+            "time": "1700424000",
             "time_status": "1",
             "league": {
-                "id": "23114",
-                "name": "Esoccer GT Leagues \u2013 12 mins play",
-                "cc": null
+                "id": "688",
+                "name": "Jamaica - Premier League",
+                "cc": "jm"
             },
             "home": {
-                "id": "907477",
-                "name": "Fiorentina (Jack) Esports",
-                "image_id": "1055341",
-                "cc": null
+                "id": "236402",
+                "name": "Mount Pleasant FA",
+                "image_id": "502938",
+                "cc": "jm"
             },
             "away": {
-                "id": "907527",
-                "name": "AC Milan (Cruise) Esports",
-                "image_id": "1055143",
-                "cc": null
+                "id": "44218",
+                "name": "Harbour View FC",
+                "image_id": "22050",
+                "cc": "jm"
             },
-            "ss": "2-0",
+            "ss": null,
+            "bet365_id": "146726086",
+            "timer": {
+                "tm": 0,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7481668",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "688",
+                "name": "Jamaica - Premier League",
+                "cc": "jm"
+            },
+            "home": {
+                "id": "925566",
+                "name": "Treasure Beach FC",
+                "image_id": "1072968",
+                "cc": "jm"
+            },
+            "away": {
+                "id": "216927",
+                "name": "Dunbeholden FC",
+                "image_id": "502940",
+                "cc": "jm"
+            },
+            "ss": null,
+            "bet365_id": "146726082",
+            "timer": {
+                "tm": 0,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7481709",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "688",
+                "name": "Jamaica - Premier League",
+                "cc": "jm"
+            },
+            "home": {
+                "id": "44220",
+                "name": "Portmore United",
+                "image_id": "124528",
+                "cc": "jm"
+            },
+            "away": {
+                "id": "165189",
+                "name": "Molynes United FC",
+                "image_id": "544005",
+                "cc": "jm"
+            },
+            "ss": "0-0",
             "scores": {
                 "2": {
-                    "home": "2",
+                    "home": "0",
                     "away": "0"
                 }
             },
-            "bet365_id": "146334393",
+            "bet365_id": "146726073",
             "timer": {
-                "tm": 4,
-                "ts": 37,
+                "tm": 5,
+                "ts": 23,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "attacks": [
-                    "12",
-                    "7"
+                    "10",
+                    "8"
                 ],
                 "corners": [
-                    "1",
+                    "0",
                     "0"
                 ],
                 "dangerous_attacks": [
@@ -2925,7 +3919,7 @@
                     "5"
                 ],
                 "goals": [
-                    "2",
+                    "0",
                     "0"
                 ],
                 "off_target": [
@@ -2933,7 +3927,159 @@
                     "0"
                 ],
                 "on_target": [
+                    "1",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "63",
+                    "37"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
+                ]
+            }
+        },
+        {
+            "id": "7496792",
+            "sport_id": "1",
+            "time": "1700424000",
+            "time_status": "1",
+            "league": {
+                "id": "16412",
+                "name": "Costa Rica - Primera Divisi\u00f3n - Femenino",
+                "cc": "cr"
+            },
+            "home": {
+                "id": "819528",
+                "name": "A.D. Cofutpa - Femenino",
+                "image_id": "985435",
+                "cc": "cr"
+            },
+            "away": {
+                "id": "353218",
+                "name": "Sporting FC - Femenino",
+                "image_id": "684489",
+                "cc": "cr"
+            },
+            "ss": "0-0",
+            "scores": {
+                "2": {
+                    "home": "0",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146891530",
+            "timer": {
+                "tm": 8,
+                "ts": 37,
+                "tt": "1",
+                "ta": 0,
+                "md": 0
+            },
+            "stats": {
+                "attacks": [
+                    "9",
+                    "9"
+                ],
+                "corners": [
+                    "0",
+                    "0"
+                ],
+                "dangerous_attacks": [
                     "2",
+                    "3"
+                ],
+                "goals": [
+                    "0",
+                    "0"
+                ],
+                "off_target": [
+                    "1",
+                    "1"
+                ],
+                "on_target": [
+                    "0",
+                    "0"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "possession_rt": [
+                    "52",
+                    "48"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "0"
+                ]
+            }
+        },
+        {
+            "id": "7499130",
+            "sport_id": "1",
+            "time": "1700424240",
+            "time_status": "1",
+            "league": {
+                "id": "22614",
+                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
+                "cc": null
+            },
+            "home": {
+                "id": "512735",
+                "name": "Bayer 04 (Jekos) Esports",
+                "image_id": "816772",
+                "cc": null
+            },
+            "away": {
+                "id": "752808",
+                "name": "Dortmund (Musky) Esports",
+                "image_id": "935457",
+                "cc": null
+            },
+            "ss": "1-0",
+            "scores": {
+                "2": {
+                    "home": "1",
+                    "away": "0"
+                }
+            },
+            "bet365_id": "146865875",
+            "timer": {
+                "tm": 4,
+                "ts": 29,
+                "tt": "1",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "corners": [
+                    "1",
+                    "0"
+                ],
+                "goals": [
+                    "1",
                     "0"
                 ],
                 "penalties": [
@@ -2955,9 +4101,9 @@
             }
         },
         {
-            "id": "7455504",
+            "id": "7499129",
             "sport_id": "1",
-            "time": "1699480920",
+            "time": "1700424240",
             "time_status": "1",
             "league": {
                 "id": "22614",
@@ -2965,28 +4111,28 @@
                 "cc": null
             },
             "home": {
-                "id": "472568",
-                "name": "Liverpool (MakcwellLm) Esports",
-                "image_id": "809952",
+                "id": "505430",
+                "name": "RB Leipzig (MakcwellLm) Esports",
+                "image_id": "814198",
                 "cc": null
             },
             "away": {
-                "id": "931317",
-                "name": "Arsenal (Izzy) Esports",
+                "id": "870424",
+                "name": "Wolfsburg (Vicmestro) Esports",
                 "image_id": null,
                 "cc": null
             },
-            "ss": "0-0",
+            "ss": "2-1",
             "scores": {
                 "2": {
-                    "home": "0",
-                    "away": "0"
+                    "home": "2",
+                    "away": "1"
                 }
             },
-            "bet365_id": "146333830",
+            "bet365_id": "146865872",
             "timer": {
-                "tm": 1,
-                "ts": 3,
+                "tm": 3,
+                "ts": 43,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
@@ -2997,16 +4143,16 @@
                     "0"
                 ],
                 "goals": [
-                    "0",
-                    "0"
+                    "2",
+                    "1"
                 ],
                 "penalties": [
-                    "0",
+                    "1",
                     "0"
                 ],
                 "redcards": [
                     "0",
-                    "0"
+                    "1"
                 ],
                 "substitutions": [
                     "0",
@@ -3019,198 +4165,50 @@
             }
         },
         {
-            "id": "7455505",
+            "id": "7494134",
             "sport_id": "1",
-            "time": "1699480920",
+            "time": "1700424900",
             "time_status": "1",
             "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
+                "id": "20698",
+                "name": "Guatemala - Liga B",
+                "cc": "gt"
             },
             "home": {
-                "id": "753030",
-                "name": "Man City (Musky) Esports",
-                "image_id": "935481",
-                "cc": null
-            },
-            "away": {
-                "id": "335290",
-                "name": "Tottenham (NicolasRage) Esports",
-                "image_id": "815132",
-                "cc": null
-            },
-            "o_away": {
-                "id": "508788",
-                "name": "Tottenham (Nicolas_Rage) Esports",
-                "image_id": "815132",
-                "cc": null
-            },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146333863",
-            "timer": {
-                "tm": 1,
-                "ts": 8,
-                "tt": "1",
-                "ta": 0,
-                "md": 0
-            },
-            "stats": {
-                "corners": [
-                    "0",
-                    "0"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7455502",
-            "sport_id": "1",
-            "time": "1699481040",
-            "time_status": "1",
-            "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
-            },
-            "home": {
-                "id": "925714",
-                "name": "Argentina (Petruchio) Esports",
+                "id": "908187",
+                "name": "Coatepeque FC - B",
                 "image_id": null,
                 "cc": null
             },
             "away": {
-                "id": "928337",
-                "name": "Portugal (Bronyn) Esports",
+                "id": "315146",
+                "name": "Antigua GFC - B",
                 "image_id": null,
-                "cc": null
+                "cc": "gt"
             },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146333708",
-            "timer": {
-                "tm": 0,
-                "ts": 50,
-                "tt": "1",
-                "ta": 0,
-                "md": 0
-            },
-            "stats": {
-                "corners": [
-                    "0",
-                    "0"
-                ],
-                "goals": [
-                    "0",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
-                    "0",
-                    "0"
-                ]
-            }
-        },
-        {
-            "id": "7455503",
-            "sport_id": "1",
-            "time": "1699481040",
-            "time_status": "1",
-            "league": {
-                "id": "22614",
-                "name": "eSports - Batalla de f\u00fatbol - 8 min de juego",
-                "cc": null
-            },
-            "home": {
-                "id": "927218",
-                "name": "England (palkan) Esports",
-                "image_id": null,
-                "cc": null
-            },
-            "away": {
-                "id": "927909",
-                "name": "Germany (hanbas) Esports",
-                "image_id": null,
-                "cc": null
-            },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
-            "bet365_id": "146333712",
+            "ss": null,
+            "bet365_id": "146745690",
             "timer": {
                 "tm": 0,
-                "ts": 53,
-                "tt": "1",
+                "ts": 0,
+                "tt": "0",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
-                "corners": [
+                "attacks": [
                     "0",
                     "0"
                 ],
-                "goals": [
+                "dangerous_attacks": [
                     "0",
                     "0"
                 ],
-                "penalties": [
+                "off_target": [
                     "0",
                     "0"
                 ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
+                "on_target": [
                     "0",
                     "0"
                 ]

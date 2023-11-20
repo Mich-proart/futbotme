@@ -20,7 +20,6 @@
                             <tr>
                                 <th scope="col">id partido</th>
                                 <th scope="col">id betsapi</th>
-                                <th scope="col">temporada</th>
                                 <th scope="col">fecha</th>
                                 <th scope="col">hora prevista</th>
                                 <th scope="col">hora real</th>
@@ -28,22 +27,27 @@
                                 <th scope="col">local</th>
                                 <th scope="col">visitante</th>
                                 <th scope="col">acción</th>
-
+                                <th scope="col">temporada</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($partidosTodosLosEstados as $partido)
                                 <tr class="fila-directos-partido">
                                     <th scope="row"><span class="fila-id-directo-partido">{{ $partido['idPartido'] }}</span></th>
-                                    <th scope="row"><span class="fila-idBetsapi-directo-partido">{{ $partido['idBetsapi'] }}</span></th>
-                                    <td><span attr-id="{{ $partido['tituloTemporada'][0]->id }}" class="fila-idTemporada-directo-partido">{{ $partido['tituloTemporada'][0]->nombre }}</span></td>
-                                    <td><span class="fila-fecha-directo-partido">{{ $partido['fecha'] }}</span></td>
+                                    <th scope="row">
+                                        <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['idBetsapi'] }}</span>
+                                        <input style="width: 78px;" class="fila-idBetsapi-directo-partido" type="text" name="" value="{{ $partido['idBetsapi'] }}">
+                                    </th>
                                     <td>
-                                        <input style="width: 68px;" class="fila-hora-directo-partido" type="text" name="" value="{{ $partido['hora_prevista'] }}">
+                                        <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['fecha'] }}</span>
+                                        <input style="width: 100px;" class="fila-fecha-directo-partido" type="text" name="" value="{{ $partido['fecha'] }}">
+                                    </td>
+                                    <td>
+                                        <input style="width: 74px;" class="fila-hora-directo-partido-prevista" type="text" name="" value="{{ $partido['hora_prevista'] }}">
                                         <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['hora_prevista'] }}</span>
                                     </td>
                                     <td>
-                                        <input style="width: 68px;" class="fila-hora-directo-partido" type="text" name="" value="{{ $partido['hora_real'] }}">
+                                        <input style="width: 74px;" class="fila-hora-directo-partido-real" type="text" name="" value="{{ $partido['hora_real'] }}">
                                         <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['hora_real'] }}</span>
                                     </td>
                                     <td>
@@ -65,54 +69,14 @@
                                     </td>
                                     <td>
                                         <span attr-id="{{ $partido['idLocal'] }}" class="mb-2 fila-local-directo-partido">{{ $partido['nombreLocal'] }}</span>
-                                        <input class="fila-local-gol-directo-partido" style="width: 12%;" type="text" name="" value="{{ $partido['golLocal'] }}">
+                                        <input class="fila-local-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;" type="text" name="" value="{{ $partido['golLocal'] }}">
                                     </td>
                                     <td>
                                         <span attr-id="{{ $partido['idVisitante'] }}" class="mb-2 fila-visitante-directo-partido">{{ $partido['nombreVisitante'] }}</span>
-                                        <input class="fila-visitante-gol-directo-partido" style="width: 12%;" type="text" name="" value="{{ $partido['golVisitante'] }}">
+                                        <input class="fila-visitante-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;" type="text" name="" value="{{ $partido['golVisitante'] }}">
                                     </td>
                                     <td><input class="btn btn-primary guardar-cambios-partidos-panel" type="button" value="Guardar"></td>
-                                    {{-- <td>
-                                        <div class="row">
-                                            <p class="mb-0">{{ $partido->nombreVisitante }}</p>
-                                            <input type="text" name="" value="{{ $partido->nombreVisitante }}">
-                                        </div>
-                                    </td> --}}
-                                        {{-- <ul class="d-flex list-unstyled">
-                                            @foreach ($directo['home'] as $home)
-                                                <li class="ps-2">{{ $home }}</li>
-                                            @endforeach
-                                        </ul> --}}
-                                        {{-- <div class="row">
-                                            <div class="col-12"> --}}
-                                                
-                                                {{-- <h1>hola mundo</h1>
-                                                <p>text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                                    nihil eligendi laboriosam</p>
-                                            </div>
-                                        </div> --}}
-                                    {{-- </td>
-                                    <td> --}}
-                                        {{-- <ul class="d-flex list-unstyled">
-                                            @foreach ($directo['away'] as $away)
-                                                <li class="ps-2">{{ $away }}</li>
-                                            @endforeach
-                                        </ul> --}}
-                                    {{-- </td>
-                                    <td> --}}
-                                        {{-- <ul class="d-flex list-unstyled"> --}}
-                                            {{-- @foreach ($directo['league'] as $liga)
-                                                <li class="ps-2">{{ $liga }}</li>
-                                            @endforeach --}}
-                                        {{-- </ul> --}}
-                                    {{-- </td> --}}
-                                    {{-- <td>
-                                        @php
-                                            $timestamp = $directo['time'];
-                                            $fecha = \Carbon\Carbon::createFromTimestamp($timestamp);
-                                            $fecha_formateada = $fecha->format('Y-m-d H:i:s');
-                                        @endphp
-                                        {{ $fecha_formateada }}</td> --}}
+                                    <td><span attr-id="{{ $partido['tituloTemporada'][0]->id }}" class="fila-idTemporada-directo-partido">{{ $partido['tituloTemporada'][0]->nombre }}</span></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -122,3 +86,9 @@
         </div><!-- end col-->
     </div> <!-- end row-->
 @endsection
+
+<style>
+    .content-page .content .container-fluid{
+        max-width: 100%!important;
+    }
+</style>
