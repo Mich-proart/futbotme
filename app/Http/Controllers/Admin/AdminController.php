@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Admin\AdminEquiposController;
+use App\Helpers\HelperFunctions;
 
 
 //alineacion https://api.b365api.com/v1/event/lineup?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919
@@ -33,7 +34,6 @@ class AdminController extends Controller
         ->get();
 
         // convertimos el resultado a obj con repuestas personalizadas
-        //echo "<pre>";
         foreach ($dataPartidosDia as $key => $value) {
             $obj = [
                 'idPartido' => $value->id,
@@ -50,11 +50,8 @@ class AdminController extends Controller
                 'nombreVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
                 'golVisitante' => $value->goles_visitante
             ];
-            //var_dump($value);
             array_push($partidosObj, $obj);
         }
-        //echo "</pre>";
-        //dd($partidosObj);
         return $partidosObj;
     }
 
@@ -72,6 +69,59 @@ class AdminController extends Controller
     
         // Retorna el array de datos como viene de la API
         return $response;
+    }
+
+    /****** obtenemos una mezcla de los datos de Base de datos y Json *****/
+    public static function get_mix_partidos_db_mix_json($fechaActual){
+        $partidosObj = array();
+        $directos_json = Self::obtener_directos_de_json();
+        $dataPartidosDia = DB::table('partido')
+        ->select('*')
+        ->where('fecha', '=', $fechaActual)
+        ->get();
+
+        // guardamos los partidos en base de datos
+        // foreach ($dataPartidosDia as $key => $value) {
+        //     $obj = [
+        //         'idPartido' => $value->id,
+        //         'idBetsapi' => $value->betsapi,
+        //         'tituloTemporada' => Self::get_name_temporada($value->temporada_id),
+        //         'fecha' => $value->fecha,
+        //         'hora_prevista' => $value->hora_prevista,
+        //         'hora_real' => $value->hora_real,
+        //         'estadoPartido' => $value->estado_partido,
+        //         'idLocal' => $value->equipoLocal_id,
+        //         'nombreLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
+        //         'golLocal' => $value->goles_local,
+        //         'idVisitante' => $value->equipoVisitante_id,
+        //         'nombreVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
+        //         'golVisitante' => $value->goles_visitante
+        //     ];
+        //     array_push($partidosObj, $obj);
+        // }
+
+        // guardamos los partidos en json
+        foreach ($directos_json as $key => $value) {
+            $objNuevo = [
+                'idPartido' => 'No disponible',
+                'idBetsapi' => $value['id'],
+                'tituloTemporada' => 33333,
+                'fecha' => 44444,
+                'hora_prevista' => 5555555,
+                'hora_real' => 6666666,
+                'estadoPartido' => 7777777,
+                'idLocal' => 88888888,
+                'nombreLocal' => 'aaaaaaaa',
+                'golLocal' => 'bbbbbb',
+                'idVisitante' => 'cccccc',
+                'nombreVisitante' => 'dddddd',
+                'golVisitante' => 'eeeeeeeeee'
+            ];
+            array_push($partidosObj, $objNuevo);
+        }
+
+        var_dump($directos_json);
+        return $partidosObj;
     }
 
     /****** directos agrupados por id de competicion ******/
@@ -178,19 +228,17 @@ class AdminController extends Controller
     // enviamos la vista y los datos de los directos que vienen del fichero json
     public function index(){
         // obtenemos todos los partidos del dia
-        $fechaActual = Carbon::now();
-        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
-        $fechaActual = '2023-10-31';
-        $partidosTodosLosEstados = $this->get_all_partidos_curtdate($fechaActual);
+        $partidosTodosLosEstados = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
         return view('admin.index')->with(['partidosTodosLosEstados'=>$partidosTodosLosEstados,]);
     }
 
     public function indexApi(){
-        $fechaActual = Carbon::now();
-        $fechaActual = $fechaActual->year.'-'.$fechaActual->month.'-'.$fechaActual->day;
-        $fechaActual = '2023-10-31';
-        $partidosTodosLosEstados = $this->get_all_partidos_curtdate($fechaActual);
+        $partidosTodosLosEstados = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
         $directosAPI = $this->obtener_directos_de_json();
+        $directosMixMix = $this->get_mix_partidos_db_mix_json(HelperFunctions::get_fecha_current_generic());
+        echo "<pre>";var_dump($directosMixMix);echo "</pre>";
+        //echo "<pre>";var_dump($directosAPI);echo "</pre>";
+
         return view('admin.indexApi')->with([
             'partidosTodosLosEstados'=>$partidosTodosLosEstados,
             'directosAPI'=>$directosAPI

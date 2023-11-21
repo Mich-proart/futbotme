@@ -9,7 +9,8 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    {{-- @dump($directosAPI) --}}
+
+                    {{-- @dump($directosMixMix) --}}
                     {{-- <ul> --}}
 
                         {{-- @foreach ($directosAPI as $directo )
