@@ -1,29 +1,4 @@
 {
-    "DIVISI\u00d3N DE HONOR JUVENIL - Grupo 4": [
-        {
-            "idTemporada": 37,
-            "datosTemporadaSeccion": {
-                "fechaPartido": "2023-11-22",
-                "horaPartido": "18:00:00",
-                "idFase": 9,
-                "nombreFase": "3\u00ba y 4\u00ba puesto",
-                "partidoId": 1155622,
-                "escudoLocal": 0,
-                "equipoLocal_id": 13775,
-                "nombre_local": "Xerez Deportivo FC",
-                "nombre_local_completo": "Xerez Deportivo FC",
-                "nombre_local_corto": "Xerez Deportivo FC",
-                "goles_local": 0,
-                "escudoVisitante": 1679,
-                "equipoVisitante_id": 1396,
-                "nombre_visitante": "C\u00f3rdoba CF",
-                "nombre_visitante_completo": "C\u00f3rdoba Club de F\u00fatbol",
-                "nombre_visitante_corto": "C\u00f3rdoba CF",
-                "goles_visitante": 0
-            },
-            "nombreFase": "3\u00ba y 4\u00ba puesto"
-        }
-    ],
     "PREMIJER LIGA - Bosnia y Herzegovina": [
         {
             "idTemporada": 119,
@@ -38,7 +13,7 @@
                 "nombre_local": "HSK Zrinjski",
                 "nombre_local_completo": "Hrvatski Sportski Klub Zrinjski Mostar",
                 "nombre_local_corto": "HSK Zrinjski",
-                "goles_local": 1,
+                "goles_local": 0,
                 "escudoVisitante": 2752,
                 "equipoVisitante_id": 2327,
                 "nombre_visitante": "NK Siroki Brijeg",

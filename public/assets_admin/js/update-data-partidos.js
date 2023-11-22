@@ -2,9 +2,7 @@
     "use strict";
     // guardamos cambios en fichero json y db
     $(".guardar-cambios-partidos-panel").on("click", function (e) {
-        guardarDatosPartidosDirectosDb(
-            $(this).closest(".fila-directos-partido")
-        );
+        guardarDatosPartidosDirectosDb($(this).closest(".fila-directos-partido"));
     });
 })(window.jQuery);
 
@@ -41,14 +39,15 @@ const guardarDatosPartidosDirectosDb = (filaBotonPartido) => {
         headers: {
             "X-CSRF-TOKEN": csrfToken,
         },
-        beforeSend: function () {
-            //$(".spiner-competiciones").fadeIn();
-            //$(acordion).html("");
-        },
+        beforeSend: function () {},
         success: function (response) {
             console.log(response);
-            //let result = JSON.parse(response);
-            //$(acordion).append(result)
+            let result = JSON.parse(response);
+            if (result == 'guardado') {
+                alertFeed('alert-success', 'Guardado exitoso')
+            }else{
+                alertFeed('alert-danger', 'Error al guardar')
+            }
         },
         complete: function () {
             //$(".spiner-competiciones").fadeOut();

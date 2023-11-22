@@ -273,7 +273,11 @@ class AdminController extends Controller
         // Ruta y nombre del archivo donde se guardará el JSON
         $rutaArchivo = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
         // Guardar el JSON en el archivo
-        file_put_contents($rutaArchivo, $json);
+        if (file_exists($rutaArchivo)) {
+            file_put_contents($rutaArchivo, $json);
+            return  json_encode('guardado');
+        }
+        return  json_encode('error');
     } 
 
 
