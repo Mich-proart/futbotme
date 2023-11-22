@@ -72,20 +72,20 @@ class AdminController extends Controller
     }
 
     /****** obtenemos una mezcla de los datos de Base de datos y Json *****/
-    public static function get_mix_partidos_db_mix_json($fechaActual){
-        $partidosObj = array();
-        $directos_json = Self::obtener_directos_de_json();
-        $dataPartidosDia = DB::table('partido')
-        ->select('*')
-        ->where('fecha', '=', $fechaActual)
-        ->get();
+    //public static function get_mix_partidos_db_mix_json($fechaActual){
+        // $partidosObj = array();
+        // $directos_json = Self::obtener_directos_de_json();
+        // $dataPartidosDia = DB::table('partido')
+        // ->select('*')
+        // ->where('fecha', '=', $fechaActual)
+        // ->get();
 
         // guardamos los partidos en base de datos
         // foreach ($dataPartidosDia as $key => $value) {
         //     $obj = [
         //         'idPartido' => $value->id,
         //         'idBetsapi' => $value->betsapi,
-        //         'tituloTemporada' => Self::get_name_temporada($value->temporada_id),
+        //         'tituloTemporada' => Self::get_name_temporada($value->temporada_id)[0]->nombre,
         //         'fecha' => $value->fecha,
         //         'hora_prevista' => $value->hora_prevista,
         //         'hora_real' => $value->hora_real,
@@ -101,28 +101,29 @@ class AdminController extends Controller
         // }
 
         // guardamos los partidos en json
-        foreach ($directos_json as $key => $value) {
-            $objNuevo = [
-                'idPartido' => 'No disponible',
-                'idBetsapi' => $value['id'],
-                'tituloTemporada' => 33333,
-                'fecha' => 44444,
-                'hora_prevista' => 5555555,
-                'hora_real' => 6666666,
-                'estadoPartido' => 7777777,
-                'idLocal' => 88888888,
-                'nombreLocal' => 'aaaaaaaa',
-                'golLocal' => 'bbbbbb',
-                'idVisitante' => 'cccccc',
-                'nombreVisitante' => 'dddddd',
-                'golVisitante' => 'eeeeeeeeee'
-            ];
-            array_push($partidosObj, $objNuevo);
-        }
-
-        var_dump($directos_json);
-        return $partidosObj;
-    }
+        // foreach ($directos_json as $key => $value) {
+        //     $objNuevo = [
+        //         'idPartido' => 'No disponible',
+        //         'idBetsapi' => $value['id'],
+        //         'tituloTemporada' => (count(Self::get_name_temporada($value['league']['id'])) > 0) ? Self::get_name_temporada($value['league']['id'])[0]->nombre : $value['league']['name'],
+        //         'fecha' => HelperFunctions::get_fecha_format_second($value['time'])['fechaFormat'],
+        //         'hora_prevista' =>  HelperFunctions::get_fecha_format_second($value['time'])['horaFormat'],
+        //         'hora_real' =>  HelperFunctions::get_fecha_format_second($value['time'])['horaFormat'],
+        //         'estadoPartido' => $value['time_status'],
+        //         'idLocal' => $value['home']['id'],
+        //         'nombreLocal' => (count(AdminEquiposController::getDataEquipo($value['home']['id'])) > 0) ? AdminEquiposController::getDataEquipo($value['home']['id'])[0]->nombre : $value['home']['name'],
+        //         'golLocal' => isset($value['scores']) ? $value['scores'][2]['home'] : 0,
+        //         'idVisitante' => $value['away']['id'],
+        //         'nombreVisitante' => (count(AdminEquiposController::getDataEquipo($value['away']['id'])) > 0) ? AdminEquiposController::getDataEquipo($value['away']['id'])[0]->nombre : $value['away']['name'],
+        //         'golVisitante' => isset($value['scores']) ? $value['scores'][2]['away'] : 0, 
+        //     ];
+        //     array_push($partidosObj, $objNuevo);
+        // }
+        //var_dump(HelperFunctions::get_fecha_format_second(1700416800)['fechaFormat']);
+        //var_dump(HelperFunctions::get_fecha_format_second(1700416800)['horaFormat']);
+        //var_dump($directos_json);
+        //return $partidosObj;
+    //}
 
     /****** directos agrupados por id de competicion ******/
     public static function obtener_directos_agrupados_competicion(){
@@ -214,11 +215,7 @@ class AdminController extends Controller
 
         // ordenamo el resultado para devolverlo ordenado por el nombre
         ksort($partidosAgrupados);
-        // echo "<pre>";
-        // var_dump($partidosAgrupados);
-        // echo "</pre>";
         return $partidosAgrupados;
-
     }
 
     /*************************************************/
@@ -229,19 +226,10 @@ class AdminController extends Controller
     public function index(){
         // obtenemos todos los partidos del dia
         $partidosTodosLosEstados = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
-        return view('admin.index')->with(['partidosTodosLosEstados'=>$partidosTodosLosEstados,]);
-    }
-
-    public function indexApi(){
-        $partidosTodosLosEstados = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
-        $directosAPI = $this->obtener_directos_de_json();
-        $directosMixMix = $this->get_mix_partidos_db_mix_json(HelperFunctions::get_fecha_current_generic());
-        echo "<pre>";var_dump($directosMixMix);echo "</pre>";
-        //echo "<pre>";var_dump($directosAPI);echo "</pre>";
-
-        return view('admin.indexApi')->with([
-            'partidosTodosLosEstados'=>$partidosTodosLosEstados,
-            'directosAPI'=>$directosAPI
+        $totalPartidosHoy = count($partidosTodosLosEstados);
+        return view('admin.index')->with([
+            'totalPartidosHoy' => $totalPartidosHoy,
+            'partidosTodosLosEstados' => $partidosTodosLosEstados,
         ]);
     }
 
@@ -261,53 +249,31 @@ class AdminController extends Controller
         $gol_visitante_partido = $data['golVisitantePartido'];
         $temporada_partido  = $data['idTemporadaPartido'];
 
-        // insercion DB
-        // $filasActualizadas = DB::table('partido')
-        // ->where('id', $id_partido)
-        // ->where('temporada_id', $temporada_partido)
-        // ->where('fecha', $fecha_partido)
-        // ->where('equipoLocal_id', $id_local_partido)
-        // ->where('equipoVisitante_id', $id_visitante_partido)
-        // ->update([
-        //     'estado_partido' => $estado_partido,
-        //     'fecha' => $fecha_partido,
-        //     'hora_prevista' => $hora_partido,
-        //     'goles_local' => $gol_local_partido,
-        //     'goles_visitante' => $gol_visitante_partido
-        // ]);
+        // Actualizamos datos en db
+        $filasActualizadas = DB::table('partido')
+        ->where('id', $id_partido)
+        ->where('temporada_id', $temporada_partido)
+        ->where('fecha', $fecha_partido)
+        ->where('equipoLocal_id', $id_local_partido)
+        ->where('equipoVisitante_id', $id_visitante_partido)
+        ->update([
+            'betsapi' => $id_partido_betsapi_no, 
+            'fecha' => $fecha_partido,
+            'hora_prevista' => $hora_prevista,
+            'hora_real' => $hora_real,
+            'estado_partido' => $estado_partido,
+            'goles_local' => $gol_local_partido,
+            'goles_visitante' => $gol_visitante_partido
+        ]);
 
-        // fichero JSON
-        $ruta = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
-        // Verifica si el archivo existe
-        if (file_exists($ruta)) {
-            // Lee el contenido del archivo JSON
-            $contenido = file_get_contents($ruta);
-            // Decodifica el contenido JSON
-            $partidos = json_decode($contenido, true); // true para obtener un array asociativo
-            var_dump($partidos);
-            // Manipula los datos según sea necesario
-            // Por ejemplo, podrías hacer algo como
-            foreach ($partidos as $partido) {
-                // Accede a las propiedades del partido
-                $idPartido = key($partido);
-                $datosPartido = $partido[$idPartido];
-                // Realiza las acciones que necesites con los datos del partido
-                // ...
-
-                // Por ejemplo, imprimir información
-                echo "ID Partido: $idPartido<br>";
-                echo "Estado Partido: {$datosPartido['estadoPartido']}<br>";
-                // ...
-            }
-
-            // ... O devuelve los datos para utilizarlos en la vista
-            // return view('tu_vista', compact('partidos'));
-        } else {
-            // Manejar el caso en que el archivo no exista
-            //return "El archivo partidos.json no existe en la raíz del proyecto.";
-        }
-
-        //return json_encode($filasActualizadas);
+        // generamos fichero json con partidos en juego con los datos actualizados
+        $partidosDirectos = $this->get_partidos_curtdate(2,HelperFunctions::get_fecha_current_generic());
+         // Convertir el array a formato JSON
+        $json = json_encode($partidosDirectos, JSON_PRETTY_PRINT);
+        // Ruta y nombre del archivo donde se guardará el JSON
+        $rutaArchivo = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
+        // Guardar el JSON en el archivo
+        file_put_contents($rutaArchivo, $json);
     } 
 
 

@@ -10,9 +10,8 @@ use App\Http\Controllers\Admin\AdminJugadoresController;
 
 // Rutas para el panel admin 
 
-// rutas directos (DB) y (API)
+// rutas directos
 Route::get('admin-panel/', [AdminController::class, 'index']);
-Route::get('admin-panel/directos', [AdminController::class, 'indexApi']);
 
 Route::get('admin-panel/ligas/', [AdminLigasController::class, 'indexLigas']);
 

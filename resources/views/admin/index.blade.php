@@ -7,10 +7,7 @@
                 aria-expanded="false">Actualizar Datos</a>
         </div>
         <div class="d-flex align-items-center justify-content-start my-3">
-            <span attr-id-partido="1114892" class="id-partido-directo-db">1114892</span>
-            <div id="reloj" class="px-3"></div>
-            <button class="btn ms-2 w-25 btn-success init-reloj-partido">init partido</button>
-            <button class="btn ms-2 w-25 btn-info detener-reloj-partido">descanso</button>
+            <span attr-id-partido="1114892" class="id-partido-directo-db fw-bold">Total partidos hoy: {{ $totalPartidosHoy }}</span>
         </div>
         <div class="col-12">
             <div class="card">

@@ -1,40 +1,52 @@
-[
-    {
-        "1114892": {
-            "idPartidoBetsapiOno": "6418047",
-            "fechaPartido": "2023-10-31",
-            "horaPrevistaPartido": "17:00:00",
-            "horaRealPartido": "00:00:00",
-            "estadoPartido": "0",
-            "idLocalPartido": "51497",
-            "golLocalPartido": "2",
-            "idVisitantePartido": "2860",
-            "golVisitantePartido": "4",
-            "idTemporadaPartido": "127"
-        },
-        "1114893": {
-            "idPartidoBetsapiOno": "6419652",
-            "fechaPartido": "2023-10-31",
-            "horaPrevistaPartido": "18:45:00",
-            "horaRealPartido": "00:00:00",
-            "estadoPartido": "0",
-            "idLocalPartido": "1990",
-            "golLocalPartido": "1",
-            "idVisitantePartido": "2409",
-            "golVisitantePartido": "3",
-            "idTemporadaPartido": "127"
-        },
-        "1127333": {
-            "idPartidoBetsapiOno": "6844756",
-            "fechaPartido": "2023-10-31",
-            "horaPrevistaPartido": "20:45:00",
-            "horaRealPartido": "00:00:00",
-            "estadoPartido": "0",
-            "idLocalPartido": "1913",
-            "golLocalPartido": "2",
-            "idVisitantePartido": "5912",
-            "golVisitantePartido": "1",
-            "idTemporadaPartido": "103"
+{
+    "DIVISI\u00d3N DE HONOR JUVENIL - Grupo 4": [
+        {
+            "idTemporada": 37,
+            "datosTemporadaSeccion": {
+                "fechaPartido": "2023-11-22",
+                "horaPartido": "18:00:00",
+                "idFase": 9,
+                "nombreFase": "3\u00ba y 4\u00ba puesto",
+                "partidoId": 1155622,
+                "escudoLocal": 0,
+                "equipoLocal_id": 13775,
+                "nombre_local": "Xerez Deportivo FC",
+                "nombre_local_completo": "Xerez Deportivo FC",
+                "nombre_local_corto": "Xerez Deportivo FC",
+                "goles_local": 0,
+                "escudoVisitante": 1679,
+                "equipoVisitante_id": 1396,
+                "nombre_visitante": "C\u00f3rdoba CF",
+                "nombre_visitante_completo": "C\u00f3rdoba Club de F\u00fatbol",
+                "nombre_visitante_corto": "C\u00f3rdoba CF",
+                "goles_visitante": 0
+            },
+            "nombreFase": "3\u00ba y 4\u00ba puesto"
         }
-    }
-]
+    ],
+    "PREMIJER LIGA - Bosnia y Herzegovina": [
+        {
+            "idTemporada": 119,
+            "datosTemporadaSeccion": {
+                "fechaPartido": "2023-11-22",
+                "horaPartido": "18:00:00",
+                "idFase": 6,
+                "nombreFase": " Ronda de Clasificaci\u00f3n",
+                "partidoId": 1132527,
+                "escudoLocal": 3709,
+                "equipoLocal_id": 3147,
+                "nombre_local": "HSK Zrinjski",
+                "nombre_local_completo": "Hrvatski Sportski Klub Zrinjski Mostar",
+                "nombre_local_corto": "HSK Zrinjski",
+                "goles_local": 1,
+                "escudoVisitante": 2752,
+                "equipoVisitante_id": 2327,
+                "nombre_visitante": "NK Siroki Brijeg",
+                "nombre_visitante_completo": "Nogometni Klub Siroki Brijeg",
+                "nombre_visitante_corto": "NK Siroki Brijeg",
+                "goles_visitante": 0
+            },
+            "nombreFase": " Ronda de Clasificaci\u00f3n"
+        }
+    ]
+}
