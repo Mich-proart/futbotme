@@ -927,9 +927,7 @@ body {
     font-size: 18px;
     height: 43px;
 }
-.ficha-uno{
-    height: 303px;
-}
+
 .link-equipo{
     font-size: 15px;
 }
@@ -954,18 +952,7 @@ body {
 .partido-jornada:last-child{
     border: none;
 }
-.partido{
-    font-size: 14px;
-    font-weight: 500;
-    height: 20px;
-}
-.jornada{
-    font-size: 11px;
-}
-.gol{
-    font-size: 11px;
-    height: 22px;
-}
+
 
 /* Estilos especiales para móvil */
 
