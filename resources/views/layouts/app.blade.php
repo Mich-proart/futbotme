@@ -187,6 +187,7 @@
         <script src="{{ asset('assets_admin/js/ligas-torneos.js') }}"></script>
         <script src="{{ asset('assets_admin/js/clubes.js') }}"></script>
         <script src="{{ asset('assets_admin/js/update-data-partidos.js') }}"></script>
+        <script src="{{ asset('assets_admin/js/agenda.js') }}"></script>
 
         {{-- ejecucion del cliente donde recibimos datos del servidor --}}
 

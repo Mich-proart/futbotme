@@ -430,12 +430,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/directos') }}" role="button" aria-haspopup="true"
-                            aria-expanded="false">
-                            Directos API
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url('/admin-panel/ligas/') }}" role="button"
                             aria-haspopup="true" aria-expanded="false">
                             Ligas
@@ -448,7 +442,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin-panel/agenda/') }}" role="button"
+                        <a class="nav-link" href="{{ url('/admin-panel/agenda/' . date('m') . '/' . date('Y')) }}" role="button"
                             aria-haspopup="true" aria-expanded="false">
                             Agenda
                         </a>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminTorneosController;
 use App\Http\Controllers\Admin\AdminClubesController;
 use App\Http\Controllers\Admin\AdminEquiposController;
 use App\Http\Controllers\Admin\AdminJugadoresController;
+use App\Http\Controllers\Admin\AdminAgendaController;
 
 // Rutas para el panel admin 
 
@@ -16,8 +17,6 @@ Route::get('admin-panel/', [AdminController::class, 'index']);
 Route::get('admin-panel/ligas/', [AdminLigasController::class, 'indexLigas']);
 
 Route::get('admin-panel/torneos/', [AdminTorneosController::class, 'indexTorneos']);
-
-Route::get('admin-panel/agenda/', [AdminController::class, 'indexAgenda']);
 
 Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederaciones']);
 
@@ -33,6 +32,10 @@ Route::get('admin-panel/jugadores/', [AdminJugadoresController::class, 'indexJug
 Route::get('admin-panel/jugadores/editar-jugador/{id}', [AdminJugadoresController::class, 'editarJugador']);
 
 Route::get('admin-panel/admin-disenho-menu/', [AdminController::class, 'indexCrearMenu']);
+
+// Peticiones POST y GET Agenda/Calendario
+Route::get('admin-panel/agenda/{mes}/{anho}', [AdminAgendaController::class, 'indexAgenda']);
+Route::get('admin-panel/agenda/listado-agenda/{categoria}/{fecha}', [AdminAgendaController::class, 'listadoAgenda']);
 
 // Peticiones post partidos
 Route::post('admin-panel/editar-partido/', [AdminController::class, 'editarPartido'])->name('editarPartido');

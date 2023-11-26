@@ -35,6 +35,7 @@ class AdminController extends Controller
 
         // convertimos el resultado a obj con repuestas personalizadas
         foreach ($dataPartidosDia as $key => $value) {
+            //var_dump($value->equipoLocal_id);
             $obj = [
                 'idPartido' => $value->id,
                 'idBetsapi' => $value->betsapi,
@@ -44,12 +45,15 @@ class AdminController extends Controller
                 'hora_real' => $value->hora_real,
                 'estadoPartido' => $value->estado_partido,
                 'idLocal' => $value->equipoLocal_id,
-                'nombreLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
+                'nombreLocal' => isset(AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre) ? AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre : 'Sin nombre',
                 'golLocal' => $value->goles_local,
                 'idVisitante' => $value->equipoVisitante_id,
-                'nombreVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
+                'nombreVisitante' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre : 'Sin nombre', 
                 'golVisitante' => $value->goles_visitante
             ];
+            // echo "<pre>";
+            // var_dump($obj);
+            // echo "</pre>";
             array_push($partidosObj, $obj);
         }
         return $partidosObj;
@@ -305,12 +309,6 @@ class AdminController extends Controller
     //////////////////////////////////////
     ////////////////////////////////////// MOVER LUEGO A SU PROPIO CONTROLADOR
     //////////////////////////////////////
-    // funcion con la que mostraremos el calendario de dia a dia de los tipos de torneos y cantidad de partidos
-    public function indexAgenda(){
-
-        $response = $this->obtener_directos_de_json();
-        return view('admin.agenda')->with(['datos' => $response]);
-    }
 
     // function para obtener todas las federaciones de todas las comunidades 
     public function indexFederaciones(){
