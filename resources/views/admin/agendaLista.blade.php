@@ -17,7 +17,7 @@
             <tr bgcolor="gainsboro">
                 <td style="width: 80px;">{{$partido['id']}}</td>
                 <td title="{{$partido['temporada_nombre']}}">{{$partido['temporada_nombre']}}</td>
-                <td style="width: 60px;" align="center">{{$partido['hora_real']}}</td>
+                <td style="width: 60px;" align="center">{{$partido['hora_prevista']}}</td>
                 <td style="width: 120px;" align="center">--</td>
                 <td align="center" title="{{$partido['localCorto']}} - {{$partido['visitanteCorto']}}">{{$partido['localCorto']}} - {{$partido['visitanteCorto']}}</td>
                 <td style="width: 90px;" align="center">{{$partido['goles_local']}} - {{$partido['goles_visitante']}}</td>
