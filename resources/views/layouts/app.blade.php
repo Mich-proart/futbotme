@@ -176,8 +176,6 @@
         <script src="{{ asset('assets_admin/js/vendor/fixedColumns.bootstrap5.min.js') }}"></script>
         <script src="{{ asset('assets_admin/js/vendor/fixedHeader.bootstrap5.min.js') }}"></script>
         <script src="{{ asset('assets_admin/js/pages/demo.datatable-init.js') }}"></script>
-
-        {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         {{-- custom scripts --}}
@@ -189,52 +187,9 @@
         <script src="{{ asset('assets_admin/js/update-data-partidos.js') }}"></script>
         <script src="{{ asset('assets_admin/js/agenda.js') }}"></script>
 
-        {{-- ejecucion del cliente donde recibimos datos del servidor --}}
-
-        {{-- real --}}
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script> --}}
-
-
-
-        {{-- <script>
-            const socket = io("http://localhost:3000"); // Reemplaza con la URL de tu servidor
-
-            let content = jQuery('#actualizaciones')        
-            socket.on("actualizacion_en_tiempo_real", (datos) => {
-                content.empty();
-                for (const iterator of datos) {
-                    content.append(`<li>${iterator.name}</li>`);
-                    console.log(iterator)
-                }
-                console.log(datos)
-            });
-
-            socket.on("disconnect", () => {
-                console.log("Desconectado del servidor");
-            });
-        </script> --}}
-
-
-        {{-- real --}}
-
-
-        {{-- ESTE ES EL ORIGINAL --}}
-        {{-- ESTE ES EL ORIGINAL --}}
-        {{-- <script>
-            const socket = io("http://localhost:3000");
-
-            socket.on('json-data', (datos) => {
-                console.log('Datos JSON recibidos:', datos);
-                // Aquí puedes procesar los datos como lo desees
-            });
-
-            socket.on('nuevos-datos', (nuevosDatos) => {
-                console.log('Nuevos datos recibidos:', nuevosDatos);
-                // Aquí puedes procesar los nuevos datos como lo desees
-            });
-        </script> --}}
-        {{-- ESTE ES EL ORIGINAL --}}
-        {{-- ESTE ES EL ORIGINAL --}}
+        {{-- cdn para utilizar socket io --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+        <script src="{{ asset('assets_admin/js/response-server.js') }}"></script>
 
     </body>
 

@@ -49,8 +49,6 @@ const guardarDatosPartidosDirectosDb = (filaBotonPartido) => {
                 alertFeed('alert-danger', 'Error al guardar')
             }
         },
-        complete: function () {
-            //$(".spiner-competiciones").fadeOut();
-        },
+        complete: function () {},
     });
 };

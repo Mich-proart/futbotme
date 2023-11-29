@@ -39,6 +39,7 @@ Route::get('admin-panel/agenda/listado-agenda/{categoria}/{fecha}', [AdminAgenda
 
 // Peticiones post partidos
 Route::post('admin-panel/editar-partido/', [AdminController::class, 'editarPartido'])->name('editarPartido');
+Route::post('admin-panel/update-partido-automatic/', [AdminController::class, 'updateAutomaticPartido'])->name('updateAutomaticPartido');
 
 // Peticiones post ligas y torneos
 Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'indexCompeticionesLigas'])->name('indexCompeticionesLigas');

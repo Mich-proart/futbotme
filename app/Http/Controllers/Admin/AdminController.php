@@ -35,7 +35,6 @@ class AdminController extends Controller
 
         // convertimos el resultado a obj con repuestas personalizadas
         foreach ($dataPartidosDia as $key => $value) {
-            //var_dump($value->equipoLocal_id);
             $obj = [
                 'idPartido' => $value->id,
                 'idBetsapi' => $value->betsapi,
@@ -51,9 +50,6 @@ class AdminController extends Controller
                 'nombreVisitante' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre : 'Sin nombre', 
                 'golVisitante' => $value->goles_visitante
             ];
-            // echo "<pre>";
-            // var_dump($obj);
-            // echo "</pre>";
             array_push($partidosObj, $obj);
         }
         return $partidosObj;
@@ -222,6 +218,15 @@ class AdminController extends Controller
         return $partidosAgrupados;
     }
 
+    /*****++ verificamos si partido betsapi esta en db para update automatico */
+    public static function verify_id_betsapi_in_db($idBetsapi){
+        $query_partido = DB::table('partido')
+        ->select('*')
+        ->where('betsapi', '=', $idBetsapi)
+        ->get();
+        return $query_partido;
+    }
+
     /*************************************************/
     /********************* HELPERS *******************/
     /*************************************************/
@@ -283,6 +288,17 @@ class AdminController extends Controller
         }
         return  json_encode('error');
     } 
+
+    // actualizamos partidos en DB por medio de cron consumiendo url api
+    public function updateAutomaticPartido(Request $request){
+        $data = $request->all()['response_array'];
+        foreach ($data as $key => $value) {
+            if(isset($this->verify_id_betsapi_in_db($value['idBetsapi'])[0]->id)){
+              var_dump($this->verify_id_betsapi_in_db($value['idBetsapi'])[0]->id);
+              // TODO: si existe el partido en DB machacamos con el valor que viene de api automatic
+            }
+        }
+    }
 
 
 
