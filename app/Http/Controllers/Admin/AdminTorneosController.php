@@ -64,7 +64,8 @@ class AdminTorneosController extends Controller
             'torneo.categoria_torneo_id',
             'torneo.apifutbol_tipo',
             'comunidad.nombre as nombreComunidad',
-            'torneo.betsapi',
+            'torneo.betsapi as torneoIdBetsapi',
+            'torneo.tipo_torneo as tipoTorneo',
             'eliminatorio.fase_activa',
             'fase.tipo_eliminatoria'
         )
@@ -95,8 +96,10 @@ class AdminTorneosController extends Controller
                 'torneosComunidad' => [
                     'nombreCom' => $value['nombre'],
                     'idBetsapi' => $value['betsapi'],
-                    'pais' => $value['nombrePais'],'temporadaId' => $value['temporadaId'],
-                    'torneoId' => $value['torneoId']
+                    'pais' => $value['nombrePais'],
+                    'temporadaId' => $value['temporada_id'],
+                    'torneoIdBetsapi' => $value['torneoIdBetsapi'],
+                    'tipoTorneo' => $value['tipoTorneo']
                 ]
             ];
             array_push($arrayTorneos, $obj);
@@ -127,7 +130,7 @@ class AdminTorneosController extends Controller
                     <div class="card-body">
                         <ul class="list-group list-group-flush listado-torneo-competicion">';
                             foreach ($value as $keyItem => $item) {
-                                $tabs .= '<li class="list-group-item" style="cursor:pointer;">'.$item['pais'].' - '.$item['nombreCom'].'</li>';
+                                $tabs .= '<li class="list-group-item" style="cursor:pointer;">'.$item['pais'].' - '.$item['nombreCom'].' - '.$item['temporadaId'].' - '.$item['torneoIdBetsapi'].' - '.$item['tipoTorneo'].'</li>';
                             }
                         $tabs .= '</ul>
                     </div>

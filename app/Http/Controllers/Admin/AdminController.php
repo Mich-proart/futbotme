@@ -292,11 +292,20 @@ class AdminController extends Controller
     // actualizamos partidos en DB por medio de cron consumiendo url api
     public function updateAutomaticPartido(Request $request){
         $data = $request->all()['response_array'];
+
+        //var_dump($data);
         foreach ($data as $key => $value) {
-            if(isset($this->verify_id_betsapi_in_db($value['idBetsapi'])[0]->id)){
-              var_dump($this->verify_id_betsapi_in_db($value['idBetsapi'])[0]->id);
+            //if(count($this->verify_id_betsapi_in_db($value['idBetsapi']))){
+              var_dump($value['idBetsapi']);
+              var_dump($value['leagueId']);
+              var_dump($value['idLocal']);
+              var_dump($value['nombreLocal']);
+              var_dump($value['golesLocal']);
+              var_dump($value['idVisitante']);
+              var_dump($value['nombreVisitante']);
+              var_dump($value['golesVisitante']);
               // TODO: si existe el partido en DB machacamos con el valor que viene de api automatic
-            }
+            //}
         }
     }
 

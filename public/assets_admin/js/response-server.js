@@ -29,13 +29,15 @@ const functionUpdatePartidos = (data) => {
             'leagueId' : partido.league.id,
             'idLocal' : partido.home.id,
             'nombreLocal' : partido.home.name,
-            'golesLocal' : partido.ss.substring(0,1),
+            'golesLocal' : (partido.ss != undefined) ? partido.ss.substring(0,1) : 0,
             'idVisitante' : partido.away.id,
             'nombreVisitante' : partido.away.name,
-            'golesVisitante' : partido.ss.substring(2),
+            'golesVisitante' : (partido.ss != undefined) ? partido.ss.substring(2) : 0,
         }
         response_array.push(obj_response_partidos)
     });
+
+    console.log(response_array)
 
     jQuery.ajax({
         url: `${urlBase}admin-panel/update-partido-automatic/`,

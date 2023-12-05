@@ -3,9 +3,101 @@
     "pager": {
         "page": 1,
         "per_page": 1000,
-        "total": 20
+        "total": 21
     },
     "results": [
+        {
+            "id": "7532233",
+            "sport_id": "1",
+            "time": "1701288000",
+            "time_status": "1",
+            "league": {
+                "id": "25194",
+                "name": "Argentina - Liga Regional",
+                "cc": "ar"
+            },
+            "home": {
+                "id": "542195",
+                "name": "CA Bancarios",
+                "image_id": null,
+                "cc": null
+            },
+            "away": {
+                "id": "388548",
+                "name": "CA Regional",
+                "image_id": "1066588",
+                "cc": "ar"
+            },
+            "ss": "2-1",
+            "scores": {
+                "2": {
+                    "home": "2",
+                    "away": "1"
+                },
+                "1": {
+                    "home": "2",
+                    "away": "1"
+                }
+            },
+            "bet365_id": "147322460",
+            "timer": {
+                "tm": 96,
+                "ts": 26,
+                "tt": "1",
+                "ta": 5,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "58",
+                    "86"
+                ],
+                "corners": [
+                    "2",
+                    "4"
+                ],
+                "corner_f": [
+                    "2",
+                    "4"
+                ],
+                "corner_h": [
+                    "2",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "21",
+                    "60"
+                ],
+                "goals": [
+                    "2",
+                    "1"
+                ],
+                "off_target": [
+                    "4",
+                    "9"
+                ],
+                "on_target": [
+                    "6",
+                    "9"
+                ],
+                "penalties": [
+                    "0",
+                    "1"
+                ],
+                "redcards": [
+                    "1",
+                    "1"
+                ],
+                "substitutions": [
+                    "4",
+                    "5"
+                ],
+                "yellowcards": [
+                    "2",
+                    "1"
+                ]
+            }
+        },
         {
             "id": "7536292",
             "sport_id": "1",
@@ -41,20 +133,20 @@
             },
             "bet365_id": "147372573",
             "timer": {
-                "tm": 69,
-                "ts": 37,
+                "tm": 67,
+                "ts": 38,
                 "tt": "1",
                 "ta": 0,
                 "md": 1
             },
             "stats": {
                 "attacks": [
-                    "75",
-                    "82"
+                    "73",
+                    "76"
                 ],
                 "corners": [
                     "3",
-                    "3"
+                    "2"
                 ],
                 "corner_h": [
                     "2",
@@ -62,7 +154,7 @@
                 ],
                 "dangerous_attacks": [
                     "34",
-                    "40"
+                    "38"
                 ],
                 "goals": [
                     "2",
@@ -91,6 +183,94 @@
                 "yellowcards": [
                     "1",
                     "3"
+                ]
+            }
+        },
+        {
+            "id": "7535856",
+            "sport_id": "1",
+            "time": "1701291600",
+            "time_status": "1",
+            "league": {
+                "id": "29195",
+                "name": "Honduras - Liga B",
+                "cc": "hn"
+            },
+            "home": {
+                "id": "678422",
+                "name": "C.D.S. Vida - B",
+                "image_id": null,
+                "cc": null
+            },
+            "away": {
+                "id": "709689",
+                "name": "CD Victoria La Ceiba - B",
+                "image_id": null,
+                "cc": null
+            },
+            "ss": "1-2",
+            "scores": {
+                "1": {
+                    "home": "1",
+                    "away": "2"
+                },
+                "2": {
+                    "home": "1",
+                    "away": "2"
+                }
+            },
+            "bet365_id": "147372577",
+            "timer": {
+                "tm": 45,
+                "ts": 0,
+                "tt": "0",
+                "ta": 0,
+                "md": 1
+            },
+            "stats": {
+                "attacks": [
+                    "33",
+                    "16"
+                ],
+                "corners": [
+                    "3",
+                    "1"
+                ],
+                "corner_h": [
+                    "3",
+                    "1"
+                ],
+                "dangerous_attacks": [
+                    "16",
+                    "4"
+                ],
+                "goals": [
+                    "1",
+                    "2"
+                ],
+                "off_target": [
+                    "0",
+                    "0"
+                ],
+                "on_target": [
+                    "1",
+                    "2"
+                ],
+                "penalties": [
+                    "0",
+                    "0"
+                ],
+                "redcards": [
+                    "0",
+                    "0"
+                ],
+                "substitutions": [
+                    "0",
+                    "0"
+                ],
+                "yellowcards": [
+                    "0",
+                    "1"
                 ]
             }
         },
@@ -129,7 +309,7 @@
             },
             "bet365_id": "147373094",
             "timer": {
-                "tm": 55,
+                "tm": 53,
                 "ts": 50,
                 "tt": "1",
                 "ta": 0,
@@ -137,8 +317,8 @@
             },
             "stats": {
                 "attacks": [
-                    "63",
-                    "62"
+                    "60",
+                    "57"
                 ],
                 "corners": [
                     "2",
@@ -150,7 +330,7 @@
                 ],
                 "dangerous_attacks": [
                     "27",
-                    "29"
+                    "26"
                 ],
                 "goals": [
                     "1",
@@ -217,7 +397,7 @@
             },
             "bet365_id": "147336925",
             "timer": {
-                "tm": 47,
+                "tm": 45,
                 "ts": 57,
                 "tt": "1",
                 "ta": 0,
@@ -274,7 +454,7 @@
                 ],
                 "yellowcards": [
                     "0",
-                    "1"
+                    "0"
                 ],
                 "yellowred_cards": [
                     "0",
@@ -317,23 +497,23 @@
             },
             "bet365_id": "147336917",
             "timer": {
-                "tm": 47,
-                "ts": 50,
+                "tm": 45,
+                "ts": 51,
                 "tt": "1",
                 "ta": 0,
                 "md": 1
             },
             "stats": {
                 "attacks": [
-                    "82",
-                    "48"
+                    "80",
+                    "47"
                 ],
                 "ball_safe": [
                     "52",
                     "50"
                 ],
                 "corners": [
-                    "3",
+                    "2",
                     "1"
                 ],
                 "corner_h": [
@@ -341,7 +521,7 @@
                     "1"
                 ],
                 "dangerous_attacks": [
-                    "48",
+                    "45",
                     "27"
                 ],
                 "goals": [
@@ -365,8 +545,8 @@
                     "0"
                 ],
                 "possession_rt": [
-                    "66",
-                    "34"
+                    "65",
+                    "35"
                 ],
                 "redcards": [
                     "0",
@@ -427,9 +607,9 @@
             },
             "bet365_id": "147372575",
             "timer": {
-                "tm": 46,
-                "ts": 10,
-                "tt": "1",
+                "tm": 45,
+                "ts": 0,
+                "tt": "0",
                 "ta": 0,
                 "md": 1
             },
@@ -471,100 +651,12 @@
                     "0"
                 ],
                 "substitutions": [
-                    "1",
-                    "0"
-                ],
-                "yellowcards": [
-                    "1",
-                    "2"
-                ]
-            }
-        },
-        {
-            "id": "7535856",
-            "sport_id": "1",
-            "time": "1701291600",
-            "time_status": "1",
-            "league": {
-                "id": "29195",
-                "name": "Honduras - Liga B",
-                "cc": "hn"
-            },
-            "home": {
-                "id": "678422",
-                "name": "C.D.S. Vida - B",
-                "image_id": null,
-                "cc": null
-            },
-            "away": {
-                "id": "709689",
-                "name": "CD Victoria La Ceiba - B",
-                "image_id": null,
-                "cc": null
-            },
-            "ss": "1-2",
-            "scores": {
-                "1": {
-                    "home": "1",
-                    "away": "2"
-                },
-                "2": {
-                    "home": "1",
-                    "away": "2"
-                }
-            },
-            "bet365_id": "147372577",
-            "timer": {
-                "tm": 46,
-                "ts": 29,
-                "tt": "1",
-                "ta": 0,
-                "md": 1
-            },
-            "stats": {
-                "attacks": [
-                    "33",
-                    "17"
-                ],
-                "corners": [
-                    "3",
-                    "1"
-                ],
-                "corner_h": [
-                    "3",
-                    "1"
-                ],
-                "dangerous_attacks": [
-                    "16",
-                    "4"
-                ],
-                "goals": [
-                    "1",
-                    "2"
-                ],
-                "off_target": [
-                    "0",
-                    "0"
-                ],
-                "on_target": [
-                    "1",
-                    "2"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
                     "0",
                     "0"
                 ],
                 "yellowcards": [
-                    "0",
-                    "1"
+                    "1",
+                    "2"
                 ]
             }
         },
@@ -599,7 +691,7 @@
             },
             "bet365_id": "147373096",
             "timer": {
-                "tm": 39,
+                "tm": 37,
                 "ts": 3,
                 "tt": "1",
                 "ta": 0,
@@ -607,16 +699,16 @@
             },
             "stats": {
                 "attacks": [
-                    "42",
-                    "54"
+                    "39",
+                    "52"
                 ],
                 "corners": [
                     "4",
-                    "2"
+                    "1"
                 ],
                 "dangerous_attacks": [
-                    "16",
-                    "30"
+                    "14",
+                    "28"
                 ],
                 "goals": [
                     "1",
@@ -679,8 +771,8 @@
             },
             "bet365_id": "147348381",
             "timer": {
-                "tm": 7,
-                "ts": 27,
+                "tm": 5,
+                "ts": 26,
                 "tt": "1",
                 "ta": 0,
                 "md": 1
@@ -688,7 +780,7 @@
             "stats": {
                 "corners": [
                     "0",
-                    "1"
+                    "0"
                 ],
                 "goals": [
                     "2",
@@ -743,8 +835,8 @@
             },
             "bet365_id": "147348378",
             "timer": {
-                "tm": 7,
-                "ts": 18,
+                "tm": 5,
+                "ts": 23,
                 "tt": "1",
                 "ta": 0,
                 "md": 1
@@ -752,7 +844,7 @@
             "stats": {
                 "corners": [
                     "1",
-                    "3"
+                    "1"
                 ],
                 "goals": [
                     "0",
@@ -807,8 +899,8 @@
             },
             "bet365_id": "147386902",
             "timer": {
-                "tm": 7,
-                "ts": 37,
+                "tm": 5,
+                "ts": 38,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
@@ -816,7 +908,7 @@
             "stats": {
                 "attacks": [
                     "3",
-                    "12"
+                    "11"
                 ],
                 "corners": [
                     "0",
@@ -824,7 +916,7 @@
                 ],
                 "dangerous_attacks": [
                     "1",
-                    "13"
+                    "11"
                 ],
                 "goals": [
                     "0",
@@ -836,7 +928,7 @@
                 ],
                 "on_target": [
                     "0",
-                    "2"
+                    "1"
                 ],
                 "penalties": [
                     "0",
@@ -887,7 +979,7 @@
             },
             "bet365_id": "146690616",
             "timer": {
-                "tm": 4,
+                "tm": 2,
                 "ts": 23,
                 "tt": "1",
                 "ta": 0,
@@ -895,19 +987,15 @@
             },
             "stats": {
                 "action_areas": [
-                    "22.6",
-                    "35.5"
+                    "9.5",
+                    "33.3"
                 ],
                 "attacks": [
                     "2",
-                    "4"
+                    "3"
                 ],
                 "corners": [
                     "0",
-                    "0"
-                ],
-                "crosses": [
-                    "2",
                     "0"
                 ],
                 "crossing_accuracy": [
@@ -915,7 +1003,7 @@
                     "0.00"
                 ],
                 "dangerous_attacks": [
-                    "5",
+                    "0",
                     "0"
                 ],
                 "goals": [
@@ -931,7 +1019,7 @@
                     "0"
                 ],
                 "passing_accuracy": [
-                    "1.00",
+                    "0.00",
                     "0.95"
                 ],
                 "penalties": [
@@ -939,8 +1027,8 @@
                     "0"
                 ],
                 "possession_rt": [
-                    "32",
-                    "68"
+                    "50",
+                    "50"
                 ],
                 "redcards": [
                     "0",
@@ -978,35 +1066,21 @@
                 "image_id": "3228",
                 "cc": "uy"
             },
-            "ss": "0-0",
-            "scores": {
-                "2": {
-                    "home": "0",
-                    "away": "0"
-                }
-            },
+            "ss": null,
             "bet365_id": "147257348",
             "timer": {
-                "tm": 1,
-                "ts": 41,
-                "tt": "1",
+                "tm": 0,
+                "ts": 0,
+                "tt": "0",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "attacks": [
-                    "3",
-                    "4"
-                ],
-                "corners": [
                     "0",
                     "0"
                 ],
                 "dangerous_attacks": [
-                    "0",
-                    "1"
-                ],
-                "goals": [
                     "0",
                     "0"
                 ],
@@ -1015,22 +1089,6 @@
                     "0"
                 ],
                 "on_target": [
-                    "0",
-                    "0"
-                ],
-                "penalties": [
-                    "0",
-                    "0"
-                ],
-                "redcards": [
-                    "0",
-                    "0"
-                ],
-                "substitutions": [
-                    "0",
-                    "0"
-                ],
-                "yellowcards": [
                     "0",
                     "0"
                 ]
@@ -1058,45 +1116,45 @@
                 "image_id": "1087532",
                 "cc": null
             },
-            "ss": "4-1",
+            "ss": "2-0",
             "scores": {
                 "2": {
-                    "home": "4",
-                    "away": "1"
+                    "home": "2",
+                    "away": "0"
                 }
             },
             "bet365_id": "147343876",
             "timer": {
-                "tm": 6,
-                "ts": 15,
+                "tm": 4,
+                "ts": 49,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "attacks": [
-                    "17",
-                    "8"
+                    "15",
+                    "7"
                 ],
                 "corners": [
                     "1",
-                    "3"
+                    "1"
                 ],
                 "dangerous_attacks": [
-                    "15",
-                    "12"
+                    "11",
+                    "8"
                 ],
                 "goals": [
-                    "4",
-                    "1"
+                    "2",
+                    "0"
                 ],
                 "off_target": [
                     "0",
                     "0"
                 ],
                 "on_target": [
-                    "4",
-                    "1"
+                    "2",
+                    "0"
                 ],
                 "penalties": [
                     "0",
@@ -1138,45 +1196,37 @@
                 "image_id": "1058319",
                 "cc": null
             },
-            "ss": "1-2",
+            "ss": "1-1",
             "scores": {
-                "1": {
-                    "home": "1",
-                    "away": "2"
-                },
                 "2": {
                     "home": "1",
-                    "away": "2"
+                    "away": "1"
                 }
             },
             "bet365_id": "147343874",
             "timer": {
-                "tm": 6,
-                "ts": 0,
-                "tt": "0",
+                "tm": 4,
+                "ts": 50,
+                "tt": "1",
                 "ta": 0,
-                "md": 1
+                "md": 0
             },
             "stats": {
                 "attacks": [
-                    "17",
-                    "21"
+                    "14",
+                    "16"
                 ],
                 "corners": [
                     "1",
-                    "3"
-                ],
-                "corner_h": [
-                    "1",
-                    "3"
+                    "1"
                 ],
                 "dangerous_attacks": [
-                    "10",
-                    "15"
+                    "9",
+                    "10"
                 ],
                 "goals": [
                     "1",
-                    "2"
+                    "1"
                 ],
                 "off_target": [
                     "0",
@@ -1184,11 +1234,11 @@
                 ],
                 "on_target": [
                     "1",
-                    "2"
+                    "1"
                 ],
                 "penalties": [
                     "0",
-                    "1"
+                    "0"
                 ],
                 "redcards": [
                     "0",
@@ -1235,7 +1285,7 @@
             },
             "bet365_id": "147357414",
             "timer": {
-                "tm": 7,
+                "tm": 5,
                 "ts": 8,
                 "tt": "1",
                 "ta": 0,
@@ -1243,16 +1293,16 @@
             },
             "stats": {
                 "attacks": [
-                    "11",
-                    "18"
+                    "7",
+                    "16"
                 ],
                 "corners": [
                     "0",
                     "0"
                 ],
                 "dangerous_attacks": [
-                    "2",
-                    "12"
+                    "1",
+                    "10"
                 ],
                 "goals": [
                     "0",
@@ -1315,11 +1365,11 @@
             },
             "bet365_id": "147348263",
             "timer": {
-                "tm": 4,
-                "ts": 24,
+                "tm": 2,
+                "ts": 41,
                 "tt": "1",
                 "ta": 0,
-                "md": 1
+                "md": 0
             },
             "stats": {
                 "corners": [
@@ -1379,11 +1429,11 @@
             },
             "bet365_id": "147348260",
             "timer": {
-                "tm": 4,
-                "ts": 17,
+                "tm": 2,
+                "ts": 54,
                 "tt": "1",
                 "ta": 0,
-                "md": 1
+                "md": 0
             },
             "stats": {
                 "corners": [
@@ -1443,7 +1493,7 @@
             },
             "bet365_id": "147352734",
             "timer": {
-                "tm": 4,
+                "tm": 2,
                 "ts": 42,
                 "tt": "1",
                 "ta": 0,
@@ -1451,7 +1501,7 @@
             },
             "stats": {
                 "attacks": [
-                    "4",
+                    "3",
                     "3"
                 ],
                 "corners": [
@@ -1459,7 +1509,7 @@
                     "0"
                 ],
                 "dangerous_attacks": [
-                    "3",
+                    "2",
                     "0"
                 ],
                 "goals": [
@@ -1467,7 +1517,7 @@
                     "0"
                 ],
                 "off_target": [
-                    "1",
+                    "0",
                     "0"
                 ],
                 "on_target": [
@@ -1479,8 +1529,8 @@
                     "0"
                 ],
                 "possession_rt": [
-                    "62",
-                    "38"
+                    "61",
+                    "39"
                 ],
                 "redcards": [
                     "0",
@@ -1518,29 +1568,29 @@
                 "image_id": null,
                 "cc": null
             },
-            "ss": "0-2",
+            "ss": "0-1",
             "scores": {
                 "2": {
                     "home": "0",
-                    "away": "2"
+                    "away": "1"
                 }
             },
             "bet365_id": "147348433",
             "timer": {
-                "tm": 3,
-                "ts": 41,
+                "tm": 1,
+                "ts": 46,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
             },
             "stats": {
                 "corners": [
-                    "1",
+                    "0",
                     "1"
                 ],
                 "goals": [
                     "0",
-                    "2"
+                    "1"
                 ],
                 "penalties": [
                     "0",
@@ -1582,17 +1632,17 @@
                 "image_id": "968267",
                 "cc": null
             },
-            "ss": "1-1",
+            "ss": "1-0",
             "scores": {
                 "2": {
                     "home": "1",
-                    "away": "1"
+                    "away": "0"
                 }
             },
             "bet365_id": "147348438",
             "timer": {
-                "tm": 3,
-                "ts": 21,
+                "tm": 1,
+                "ts": 40,
                 "tt": "1",
                 "ta": 0,
                 "md": 0
@@ -1600,11 +1650,11 @@
             "stats": {
                 "corners": [
                     "0",
-                    "3"
+                    "2"
                 ],
                 "goals": [
                     "1",
-                    "1"
+                    "0"
                 ],
                 "penalties": [
                     "0",

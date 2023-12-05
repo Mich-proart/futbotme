@@ -26,8 +26,19 @@ class AdminLigasController extends Controller
 
         // consulta obtener las ligas
         $consultaCompeticiones = Torneo::select(
-        'temporada.id as temporadaId', 'torneo.nombre', 'torneo.pais_id', 'torneo.comunidad_id', 'pais.nombre as nombrePais', 'torneo.categoria_torneo_id', 
-        'torneo.id as torneoId', 'torneo.apifutbol_tipo', 'torneo.betsapi', 'comunidad.nombre as nombreComunidad', 'liga.jornadas', 'liga.jornadaActiva')
+            'temporada.id as temporadaId',
+            'torneo.nombre',
+            'torneo.pais_id',
+            'torneo.comunidad_id',
+            'pais.nombre as nombrePais',
+            'torneo.categoria_torneo_id',
+            'torneo.id as torneoId',
+            'torneo.apifutbol_tipo',
+            'comunidad.nombre as nombreComunidad',
+            'torneo.betsapi as torneoIdBetsapi',
+            'torneo.tipo_torneo as tipoTorneo',
+            'liga.jornadas', 'liga.jornadaActiva'
+        )
         ->join('temporada', 'temporada.torneo_id', '=', 'torneo.id')
         ->join('pais', 'pais.id', '=', 'torneo.pais_id')
         ->join('comunidad', 'comunidad.id', '=', 'torneo.comunidad_id')
@@ -46,6 +57,8 @@ class AdminLigasController extends Controller
             })
         ->get();
 
+        //echo "<pre>";var_dump($consultaCompeticiones);echo "</pre>";
+
         // creamos array para obtener los nombres de comunidad y array de torneos
         foreach ($consultaCompeticiones as $key => $value) {
             $obj = [
@@ -53,8 +66,11 @@ class AdminLigasController extends Controller
                 'torneosComunidad' => [
                     'nombreCom' => $value['nombre'],
                     'idBetsapi' => $value['betsapi'],
-                    'pais' => $value['nombrePais'],'temporadaId' => $value['temporadaId'],
-                    'torneoId' => $value['torneoId']
+                    'pais' => $value['nombrePais'],
+                    'temporadaId' => $value['temporadaId'],
+                    'torneoId' => $value['torneoId'],
+                    'torneoIdBetsapi' => $value['torneoIdBetsapi'],
+                    'tipoTorneo' => $value['tipoTorneo']
                 ]
             ];
             array_push($arrayTorneos, $obj);
@@ -85,7 +101,7 @@ class AdminLigasController extends Controller
                     <div class="card-body">
                         <ul class="list-group list-group-flush listado-torneo-competicion">';
                             foreach ($value as $keyItem => $item) {
-                                $tabs .= '<li class="list-group-item" style="cursor:pointer;">'.$item['pais'].' - '.$item['nombreCom'].'</li>';
+                                $tabs .= '<li class="list-group-item" style="cursor:pointer;">'.$item['pais'].' - '.$item['nombreCom'].' - '.$item['temporadaId'].' - '.$item['torneoIdBetsapi'].' - '.$item['tipoTorneo'].'</li>';
                             }
                         $tabs .= '</ul>
                     </div>
