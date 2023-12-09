@@ -227,6 +227,24 @@ class AdminController extends Controller
         return $query_partido;
     }
 
+    /*****++ obtenemos todos los datos de un partido por medio del id */
+    public static function get_datos_partido_db($idpartido){
+        $query_partido = DB::table('partido')
+        ->select('*')
+        ->where('id', '=', $idpartido)
+        ->get();
+        return $query_partido;
+    }
+
+    /*****++ obtenemos todos los datos de un partido por medio del id */
+    public static function get_medio_partido_in_db($idpartido){
+        $query_medio_partido = DB::table('partido_medio')
+        ->select('*')
+        ->where('partido_id', '=', $idpartido)
+        ->get();
+        return $query_medio_partido;
+    }
+
     /*************************************************/
     /********************* HELPERS *******************/
     /*************************************************/

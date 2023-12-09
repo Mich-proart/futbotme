@@ -56,4 +56,33 @@ class HelperFunctions
         
         return $meses;
     }
+
+    public static function get_estados_partidos(){
+        $estados = [
+            0 => 'No jugado',
+            1 => 'FINAL',
+            3 => 'Suspendido',
+            4 => 'Aplazado',
+            5 => 'Anulado',
+        ];
+        return $estados;
+    }
+    public static function get_estados_partidos_directos(){
+
+        $estados = [
+            0 => 'No jugado',
+            1 => 'FINAL',
+            2 => 'En juego',
+            3 => 'Suspendido',
+            4 => 'Aplazado',
+            5 => 'Anulado',
+            6 => 'Descanso',
+            7 => 'Penaltis',
+            8 => 'Prórroga',
+            9 => 'Prór. 1T',
+            10 => 'Prór. 2T',
+            11 => 'Desc.Prór.',
+        ];
+        return $estados;
+    }
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\AdminClubesController;
 use App\Http\Controllers\Admin\AdminEquiposController;
 use App\Http\Controllers\Admin\AdminJugadoresController;
 use App\Http\Controllers\Admin\AdminAgendaController;
+use App\Http\Controllers\Admin\AdminPartidoLigaTorneoController;
 
 // Rutas para el panel admin 
 
@@ -41,9 +42,18 @@ Route::get('admin-panel/agenda/listado-agenda/{categoria}/{fecha}', [AdminAgenda
 Route::post('admin-panel/editar-partido/', [AdminController::class, 'editarPartido'])->name('editarPartido');
 Route::post('admin-panel/update-partido-automatic/', [AdminController::class, 'updateAutomaticPartido'])->name('updateAutomaticPartido');
 
+// Peticion para editar partido finalizado LIGA/TORNEO
+Route::get('admin-panel/editar-partido-no-direct/{idPartido}', [AdminPartidoLigaTorneoController::class, 'editarPartidoLigaTorneo'])->name('editarPartidoLigaTorneo');
+
+
 // Peticiones post ligas y torneos
 Route::post('admin-panel/competicion-ligas/', [AdminLigasController::class, 'indexCompeticionesLigas'])->name('indexCompeticionesLigas');
 Route::post('admin-panel/competicion-torneos/', [AdminTorneosController::class, 'indexCompeticionesTorneos'])->name('indexCompeticionesTorneos');
+
+// Peticiones get de ligas y torneos separados por temporadas y id betsapi
+Route::get('admin-panel/liga/{idBetsapi}/{temporadaId}/{jornadaAct}/{totalJor}', [AdminLigasController::class, 'competicionLigaActiva'])->name('competicionLigaActiva');
+Route::get('admin-panel/torneo/{temporadaId}/{idBetsapi}/{faseActiva}/', [AdminTorneosController::class, 'competicionTorneoActiva'])->name('competicionTorneoActiva');
+//<!-- !-->
 
 // Peticiones post clubs
 Route::get('admin-panel/pais-club/{id}', [AdminClubesController::class, 'getClubes'])->name('getClubes');

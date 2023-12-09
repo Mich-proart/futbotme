@@ -5,6 +5,15 @@
 <div class="row mt-5">
     <div class="col-12">
 
+        SELECT tor.id, tor.nombre, tor.categoria_torneo_id, tor.tipo_torneo, te.id temporada_id, tor.orden, 
+        pa.nombre nombrePais, pa.id imagenPais, co.nombre nombreComunidad, co.id imagenComunidad, tor.division_id, tor.visible
+        FROM torneo tor
+        INNER JOIN temporada te ON te.torneo_id=tor.id
+        INNER JOIN categoriatorneo ctor ON tor.categoria_torneo_id=ctor.id
+        INNER JOIN pais pa ON tor.pais_id=pa.id
+        INNER JOIN comunidad co ON tor.comunidad_id=co.id
+        WHERE tor.visible>4 AND tor.visible<100 AND tor.id>7 ORDER BY tor.categoria_torneo_id, tor.division_id, tor.orden
+
 
         <div class="menu-container">
             <ul id="draggable-menu" class="menu">
