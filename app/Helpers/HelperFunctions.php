@@ -6,6 +6,13 @@ use App\Models\OtraTabla;
 use Carbon\Carbon;
 class HelperFunctions
 {
+    public static function get_tokken_betsapi(){
+        return $string = '153716-4djEyj4e6JZVou';
+    }
+    public static function get_url_upcoming($ligaId){
+        return $url = 'https://api.betsapi.com/v3/events/upcoming?sport_id=1&token='.HelperFunctions::get_tokken_betsapi().'&league_id='.$ligaId.'&page=1';
+    }
+
     // aqui generamos la obtencion de fecha estandar para ocuparla en todo el panel
     public static function get_fecha_current_generic(){
         $fechaActual = Carbon::now();
@@ -57,6 +64,7 @@ class HelperFunctions
         return $meses;
     }
 
+    // estados para los partidos LIGA/TORNEO
     public static function get_estados_partidos(){
         $estados = [
             0 => 'No jugado',
@@ -67,6 +75,8 @@ class HelperFunctions
         ];
         return $estados;
     }
+
+    // estados partidos en directo
     public static function get_estados_partidos_directos(){
 
         $estados = [

@@ -3,24 +3,23 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-12">
-            url betsapi proximos partidos
-            https://api.betsapi.com/v2/events/upcoming?sport_id=1&token=153716-4djEyj4e6JZVou&league_id=207&page=1
-            <p>temporad id {{ $temporadaId }}idBetsapi {{ $idBetsapi }} la jornada activa es {{ $jornadaActiva }} y el
-                total es : {{ $totalJordanas }}</p>
-            <a href="/panelBack/partidosProximos.php?id=207&amp;temporada_id=1&amp;tipo_torneo=1" target="_blank">Próximos
+            {{-- <strong>{{ $urlUpcomingPartido }}</strong> --}}
+            <p>temporad id {{ $temporadaId }} idBetsapi {{ $idBetsapi }} la jornada activa es {{ $jornadaActiva }} y el total de jornadas es : {{ $totalJordanas }}</p>
+            <a href="{{ $urlUpcomingPartido }}" target="_blank">Próximos
                 partidos BETSAPI</a>
-            <select name="" id="">
-                @for ($i = 1; $i <= $totalJordanas; $i++)
-                    <option value="{{ $i }}" <?php if (intval($i) === intval($jornadaActiva)) {
-                        echo 'selected';
-                    } else {
-                        echo '';
-                    } ?>>Jornada {{ $i }}</option>
-                @endfor
-            </select>
+            @if ($totalJordanas > 0)
+                <select name="" id="">
+                    @for ($i = 1; $i <= $totalJordanas; $i++)
+                        <option value="{{ $i }}" <?php if (intval($i) === intval($jornadaActiva)) {
+                            echo 'selected';
+                        } else {
+                            echo '';
+                        } ?> >Jornada {{ $i }}</option>
+                    @endfor
+                </select>
+            @endif
         </div>
         <div class="col-12">
-            {{-- @dump($resultado) --}}
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -33,7 +32,7 @@
                 </thead>
                 <tbody>
                     @foreach ($resultado as $item)
-                        @if ($item->estado_partido == 2) {{ $item->estado_partido = 1 }} @endif
+                        {{-- @if ($item->estado_partido == 2) {{ $item->estado_partido = 1 }} @endif --}}
                         <tr>
                             <td class="estado">
                                 <select name="estado_partido[]">

@@ -181,11 +181,9 @@
         {{-- custom scripts --}}
         <script src="{{ asset('assets/js/app.js') }}"></script>
         <script src="{{ asset('assets/js/customVars.js') }}"></script>
-        <script src="{{ asset('assets_admin/js/import.js') }}"></script>
         <script src="{{ asset('assets_admin/js/ligas-torneos.js') }}"></script>
-        <script src="{{ asset('assets_admin/js/clubes.js') }}"></script>
+        <script src="{{ asset('assets_admin/js/ligas-torneos-active.js') }}"></script>
         <script src="{{ asset('assets_admin/js/update-data-partidos.js') }}"></script>
-        <script src="{{ asset('assets_admin/js/agenda.js') }}"></script>
 
         {{-- cdn para utilizar socket io --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>

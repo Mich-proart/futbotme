@@ -101,7 +101,8 @@ class AdminLigasController extends Controller
                 'idBetsapi' => $idBetsapi,
                 'temporadaId' => $temporadaId,
                 'jornadaActiva' => $jornadaActiva,
-                'totalJordanas' => $totalJordanas
+                'totalJordanas' => $totalJordanas,
+                'urlUpcomingPartido' => HelperFunctions::get_url_upcoming($idBetsapi)
             ]
         );
     }

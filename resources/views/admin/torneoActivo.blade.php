@@ -3,11 +3,10 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-12">
-            url betsapi proximos partidos
-            https://api.betsapi.com/v2/events/upcoming?sport_id=1&token=153716-4djEyj4e6JZVou&league_id=207&page=1
-            <p>temporad id {{ $temporadaId }}idBetsapi {{ $idBetsapi }} la fase activa es {{ $faseActiva }}</p>
+            {{-- <strong>{{ $urlUpcomingPartido }}</strong> --}}
+            <p>temporad id {{ $temporadaId }} idBetsapi {{ $idBetsapi }} la fase activa es {{ $faseActiva }}</p>
             
-            <a href="/panelBack/partidosProximos.php?id=207&amp;temporada_id=1&amp;tipo_torneo=1" target="_blank">Próximos
+            <a href="{{ $urlUpcomingPartido }}" target="_blank">Próximos
                 partidos BETSAPI</a>
             <select name="" id="">
                 @foreach ($fasesTotales as $fases)

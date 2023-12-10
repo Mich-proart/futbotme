@@ -107,6 +107,7 @@ class AdminTorneosController extends Controller
                 'temporadaId' => $temporadaId,
                 'fasesTotales' => $fasesTotales,
                 'faseActiva' => $faseActiva,
+                'urlUpcomingPartido' => HelperFunctions::get_url_upcoming($idBetsapi)
             ]
         );
     }

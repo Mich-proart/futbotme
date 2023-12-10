@@ -5,7 +5,7 @@
         <div class="col-lg-2">
             {{-- onchange="cargar_torneos(this.value,2,<?php //echo $externo; ?>)"> --}}
             <h2 class="mt-0">Torneos</h2>
-            <select attr-tipo-competicion="2" class="disparador-competicion w-100 me-3">
+            <select attr-tipo-competicion="2" class="reset-select disparador-competicion w-100 me-3">
                 <option value="0" selected>Categorias</option>
                 <option value="1">RFEF</option>
                 <option value="2">FIFA</option>
