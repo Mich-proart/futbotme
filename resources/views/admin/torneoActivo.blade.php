@@ -68,7 +68,7 @@
                                 <input class="hora_input" type="text" name="hora_prevista[]" value="{{ $item->hora_prevista }}" size="10">
                             </td>
                             <td class="detallesP">
-                                <a href="">Ver/Editar</a>
+                                <a href="{{ url('/admin-panel/editar-partido-no-direct/' . $item->partido_id) }}">Ver/Editar</a>
                             </td>
                         </tr>
                     @endforeach

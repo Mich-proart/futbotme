@@ -22,6 +22,7 @@ class AdminEquiposController extends Controller
         ->get();
         return $equipaciones;
     }
+
     // equipos que pertenecen a club especifico
     public static function equiposPorClub($idClub){
         $equipos = DB::table('equipo')
@@ -72,6 +73,7 @@ class AdminEquiposController extends Controller
 
         return $temporadas;
     }
+
     /*************************************************/
     /********************* HELPERS *******************/
     /*************************************************/

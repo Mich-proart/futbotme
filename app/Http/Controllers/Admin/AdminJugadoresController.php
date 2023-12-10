@@ -44,6 +44,16 @@ class AdminJugadoresController extends Controller
         return $jugadores;
     }
 
+    public static function getCurrentPlayersTeam($idEquipo){
+        $jugadores = DB::table('jugador as j')
+        ->select('j.id', 'j.apodo', 'j.nombre', 'j.apellidos', 'j.posicion', 'j.equipoActual_id')
+        ->where('j.equipoActual_id', $idEquipo)
+        ->where('j.es_baja', 0)
+        ->orderBy('j.posicion', 'ASC')
+        ->get();
+        return $jugadores;
+    }
+
     // enviamos jugadores en formato ajax 
     public static function getJugadoresAjax(){
         $jugadores = Self::getJugadores();

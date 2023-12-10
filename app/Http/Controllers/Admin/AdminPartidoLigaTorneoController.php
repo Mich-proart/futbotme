@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 //importaciones
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminEquiposController;
+use App\Http\Controllers\Admin\AdminJugadoresController;
 use App\Helpers\HelperFunctions;
 
 class AdminPartidoLigaTorneoController extends Controller
@@ -31,15 +32,20 @@ class AdminPartidoLigaTorneoController extends Controller
         $medioPartido = AdminController::get_medio_partido_in_db($idPartido);
         $dataEquipoLocal = AdminEquiposController::getDataEquipo($datosPartido[0]->equipoLocal_id);
         $dataEquipoVisitante = AdminEquiposController::getDataEquipo($datosPartido[0]->equipoVisitante_id);
+        $jugadoresEquipos = array();
+        
         $medios = $this->get_medios();
 
         return view('admin.editarPartido')->with(
             [
                 'datosPartido' => $datosPartido,
                 'dataEquipoLocal' => $dataEquipoLocal,
+                'plantillaLocal' => AdminJugadoresController::getCurrentPlayersTeam($datosPartido[0]->equipoLocal_id),
+                'plantillaVisitante' => AdminJugadoresController::getCurrentPlayersTeam($datosPartido[0]->equipoVisitante_id),
                 'dataEquipoVisitante' => $dataEquipoVisitante,
                 'medios' => $medios,
                 'medioPartido' => $medioPartido
+                
             ]
         );
     }

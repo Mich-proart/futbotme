@@ -20,7 +20,7 @@
             </select>
         </div>
         <div class="col-12">
-            @dump($resultado)
+            {{-- @dump($resultado) --}}
             <table class="table table-striped">
                 <thead>
                     <tr>

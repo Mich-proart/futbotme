@@ -177,17 +177,17 @@ class AdminController extends Controller
                 'idFase' => Self::get_name_fase($value->jornada)[0]->id,
                 'nombreFase' => Self::get_name_fase($value->jornada)[0]->nombre,
                 'partidoId' => $value->id,
-                'escudoLocal' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->escudo,
+                'escudoLocal' => isset(AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->escudo) ? AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->escudo : '',
                 'equipoLocal_id' => $value->equipoLocal_id,
-                'nombre_local' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre,
-                'nombre_local_completo' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre_completo,
-                'nombre_local_corto' => AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombreCorto,
+                'nombre_local' => isset(AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre) ? AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre : '',
+                'nombre_local_completo' => isset(AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre_completo) ? AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombre_completo : '',
+                'nombre_local_corto' => isset(AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombreCorto) ? AdminEquiposController::getDataEquipo($value->equipoLocal_id)[0]->nombreCorto : '',
                 'goles_local' => $value->goles_local,
-                'escudoVisitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->escudo,
+                'escudoVisitante' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->escudo) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->escudo : '',
                 'equipoVisitante_id' => $value->equipoVisitante_id,
-                'nombre_visitante' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre,
-                'nombre_visitante_completo' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo,
-                'nombre_visitante_corto' => AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto,
+                'nombre_visitante' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre) ?AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre : '',
+                'nombre_visitante_completo' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo : '',
+                'nombre_visitante_corto' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto : '',
                 'goles_visitante' => $value->goles_visitante
             ];
             $obj_parent = [
@@ -236,7 +236,7 @@ class AdminController extends Controller
         return $query_partido;
     }
 
-    /*****++ obtenemos todos los datos de un partido por medio del id */
+    /*****++ obtenemos todos de los medios de un partido */
     public static function get_medio_partido_in_db($idpartido){
         $query_medio_partido = DB::table('partido_medio')
         ->select('*')
@@ -310,7 +310,6 @@ class AdminController extends Controller
     // actualizamos partidos en DB por medio de cron consumiendo url api
     public function updateAutomaticPartido(Request $request){
         $data = $request->all()['response_array'];
-
         //var_dump($data);
         foreach ($data as $key => $value) {
             //if(count($this->verify_id_betsapi_in_db($value['idBetsapi']))){
