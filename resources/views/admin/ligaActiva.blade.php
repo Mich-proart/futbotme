@@ -4,6 +4,7 @@
     <div class="row mt-5">
         <div class="col-12">
             {{-- <strong>{{ $urlUpcomingPartido }}</strong> --}}
+            <h1>aqui onchange para cambiar de jornada</h1>
             <p>temporad id {{ $temporadaId }} idBetsapi {{ $idBetsapi }} la jornada activa es {{ $jornadaActiva }} y el total de jornadas es : {{ $totalJordanas }}</p>
             <a href="{{ $urlUpcomingPartido }}" target="_blank">Próximos
                 partidos BETSAPI</a>
