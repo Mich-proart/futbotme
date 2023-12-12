@@ -42,7 +42,7 @@
         <script src="{{ asset('assets/js/apiBetsapi.js') }}"></script>
         <script src="{{ asset('assets/js/customVars.js') }}"></script>
         <script src="{{ asset('assets/js/buscador.js') }}"></script>      
-
+        <script src="https://tags.refinery89.com/futbolmeeu.js" async></script>
     </head>
 
     <body>        

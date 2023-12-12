@@ -1,6 +1,7 @@
 <x-layouts.app title="ASCENSOS, DESCENSOS Y PROMOCIONES" meta-description="ASCENSOS, DESCENSOS Y PROMOCIONES page">
 
     <h1 class="title_page my-lg-5 my-3">ASCENSOS, DESCENSOS Y PROMOCIONES</h1>
+    {{dd($datos)}}
     <div class="accordion accordion-flush" id="accordionAscensos">
         <div class="accordion-item mb-3">
             <h2 class="accordion-header">
