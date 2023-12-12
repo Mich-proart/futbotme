@@ -39,7 +39,7 @@
                                                         <li class="list-group-item mb-3 border-0">
                                                             <div class="visitante">
                                                                 <div class="escudo d-lg-inline-block d-none">
-                                                                    <img src="https://futbolme.com/static/img/club/escudo{{ $item->equipo_id }}.png"
+                                                                    <img src="https://futbolme.com/static/img/club/escudo{{ $item->club_id }}.png"
                                                                         class="logo_s img-fluid"
                                                                         alt="Escudo de {{ $item->equipo }}">
                                                                 </div>
