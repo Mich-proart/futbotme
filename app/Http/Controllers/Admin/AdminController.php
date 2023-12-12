@@ -305,24 +305,73 @@ class AdminController extends Controller
             return  json_encode('guardado');
         }
         return  json_encode('error');
-    } 
+    }
+
+    // goles del partido matcheado con id de betsapi
+    public static function golesPartidoBetsapiDb($idBetsapi){
+        $dataParido = DB::table('partido')
+        ->select('*')
+        ->where('betsapi', '=', $idBetsapi)
+        ->get();
+        return $dataParido;
+    }
+
+    // hacemos el update en db con los valores ya matcheados para updatear los goles
+    public static function updateDbPartidosMatching($arrayMatcheados){
+        try {
+            $array_response_front = array();
+            // updateamos valores en la base de datos
+            foreach ($arrayMatcheados as $key => $value) {
+                $updateDataPartido = DB::table('partido')
+                ->where('betsapi', $value['idBetsapi'])
+                ->update([
+                    'goles_local' => $value['golesLocal'],
+                    'goles_visitante' => $value['golesVisitante']
+                ]);
+
+                $obj_response = [
+                    'idBetsapi' => $value['idBetsapi'],
+                    'leagueId' => $value['leagueId'],
+                    'idLocal' => $value['idLocal'],
+                    'nombreLocal' => $value['nombreLocal'],
+                    'golesLocal' => AdminController::golesPartidoBetsapiDb($value['idBetsapi'])[0]->goles_local,
+                    'idVisitante' => $value['idVisitante'],
+                    'nombreVisitante' => $value['nombreVisitante'],
+                    'golesVisitante' => AdminController::golesPartidoBetsapiDb($value['idBetsapi'])[0]->goles_visitante
+                ];
+                array_push($array_response_front,$obj_response);
+            }
+            return $array_response_front;
+
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Error al actualizar el usuario: ' . $e->getMessage()], 500);
+        }
+    }
 
     // actualizamos partidos en DB por medio de cron consumiendo url api
     public function updateAutomaticPartido(Request $request){
+        // $id_betsapi_partido = 6808532;
+        $array_response_id_match = array();
         $data = $request->all()['response_array'];
-        //var_dump($data);
         foreach ($data as $key => $value) {
-            //if(count($this->verify_id_betsapi_in_db($value['idBetsapi']))){
-              var_dump($value['idBetsapi']);
-              var_dump($value['leagueId']);
-              var_dump($value['idLocal']);
-              var_dump($value['nombreLocal']);
-              var_dump($value['golesLocal']);
-              var_dump($value['idVisitante']);
-              var_dump($value['nombreVisitante']);
-              var_dump($value['golesVisitante']);
-              // TODO: si existe el partido en DB machacamos con el valor que viene de api automatic
-            //}
+            if(count($this->verify_id_betsapi_in_db(intval($value['idBetsapi'])))){
+                $obj_response = [
+                    'idBetsapi' => $value['idBetsapi'],
+                    'leagueId' => $value['leagueId'],
+                    'idLocal' => $value['idLocal'],
+                    'nombreLocal' => $value['nombreLocal'],
+                    'golesLocal' => $value['golesLocal'],
+                    'idVisitante' => $value['idVisitante'],
+                    'nombreVisitante' => $value['nombreVisitante'],
+                    'golesVisitante' => $value['golesVisitante']
+                ];
+                array_push($array_response_id_match,$obj_response);
+            }
+        }
+        if(count($array_response_id_match) > 0){
+            echo json_encode($this->updateDbPartidosMatching($array_response_id_match));
+        }else{
+            return response()->json(['error' => 'Error al actualizar el usuario: ' . $e->getMessage()], 500);
         }
     }
 

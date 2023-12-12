@@ -29,7 +29,7 @@
                         </thead>
                         <tbody>
                             @foreach ($partidosTodosLosEstados as $partido)
-                                <tr class="fila-directos-partido">
+                                <tr class="fila-directos-partido" tr-attr-id="{{ $partido['idBetsapi'] }}">
                                     <th scope="row"><span class="fila-id-directo-partido">{{ $partido['idPartido'] }}</span></th>
                                     <th scope="row">
                                         <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['idBetsapi'] }}</span>
