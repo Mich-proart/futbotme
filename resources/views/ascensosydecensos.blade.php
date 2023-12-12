@@ -25,10 +25,8 @@
                         <div class="row row-cols-2">
                             @foreach ($categorias as $temporada => $temporadas)
                                 <div class="col">
-
-
                                     <h2 class="subtitle_page bg-silver-medium p-4">{{ $temporada }}</h2>
-                                    @foreach ($temporadas as $id => $item)
+                                    @foreach ($categorias as $id => $item)
                                         <div class="items-equipos mt-4 mb-lg-5 mb-4 px-4">
                                             <h3 class="subtitle_page2">{{ $item->nombre }}</h3>
 
