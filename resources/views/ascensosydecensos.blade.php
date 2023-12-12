@@ -22,7 +22,7 @@
                 <div id="flush_array_{{ $loop->iteration }}" class="accordion-collapse collapse show"
                     data-bs-parent="#accordionAscensos">
                     <div class="accordion-body px-0">
-                        <div class="row row-cols-2">
+                        <div class="row row-cols-1 row-cols-lg-2">
                             @foreach ($categorias as $temporada => $temporadas)
                                 <div class="col">
                                     <h2 class="subtitle_page bg-silver-medium p-4">{{ $temporada }}</h2>
@@ -38,7 +38,7 @@
                                                     @foreach ($itemsConNombre as $item)
                                                         <li class="list-group-item mb-3 border-0">
                                                             <div class="visitante">
-                                                                <div class="escudo d-lg-inline-block d-none">
+                                                                <div class="escudo d-inline-block ">
                                                                     <img src="https://futbolme.com/static/img/club/escudo{{ $item->club_id }}.png"
                                                                         class="logo_s img-fluid"
                                                                         alt="Escudo de {{ $item->equipo }}">

@@ -147,7 +147,7 @@ body {
 
 .subtitle_page {
     color: var(--color-brand-green);
-    font-size: 22px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
@@ -156,7 +156,7 @@ body {
 
 .subtitle_page2 {
     color: var(--color-green-feature, #1fa95a);
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px; /* 142.857% */
@@ -174,6 +174,13 @@ body {
 
 .w-custom {
     width: 100%;
+}
+
+@media (min-width: 991px) {
+    .subtitle_page,
+    .subtitle_page2 {
+        font-size: 22px;
+    }
 }
 
 /* PARTIDOS EN GENERAL */
@@ -923,72 +930,68 @@ body {
     z-index: 99;
 }
 
-
 /* ESTILOS DE BECARIO DE JUGADOR Y EQUIPO */
 
-.p-normal p{
+.p-normal p {
     margin: 7px 0px;
 }
-.nombre-jugador{
+.nombre-jugador {
     font-size: 18px;
     height: 43px;
 }
 
-.link-equipo{
+.link-equipo {
     font-size: 15px;
 }
 /* TRAYECTORIA JUGADOR */
-.trayectoria-div p{
+.trayectoria-div p {
     font-size: 14px;
     font-weight: 500;
     margin: 2px 0px 4px 0px;
 }
 /* CARACTERISTICAS GOLES */
-.carac{
-    background-color:#EAF9F0;
+.carac {
+    background-color: #eaf9f0;
     margin-bottom: 10px;
 }
-.carac-goles{
+.carac-goles {
     font-size: 16px;
     margin: 8px 0px 8px 10px;
 }
-.partido-jornada{
+.partido-jornada {
     border-bottom: 1px solid lightgray;
 }
-.partido-jornada:last-child{
+.partido-jornada:last-child {
     border: none;
 }
 
-
 /* Estilos especiales para móvil */
 
-.p-movil p{
+.p-movil p {
     margin: 4px 0px;
 }
-.delantero{
+.delantero {
     font-size: 15px;
 }
-.equipo-actual{
+.equipo-actual {
     font-size: 12px;
 }
-.equipo{
+.equipo {
     font-size: 13px;
 }
-.p-movil-datos p{
+.p-movil-datos p {
     font-size: 14px;
     margin: 5px 0px;
 }
-.partido-movil{
+.partido-movil {
     font-size: 12px;
     font-weight: 500;
     height: 20px;
 }
-.partido-movil strong{
+.partido-movil strong {
     font-size: 14px;
 }
 
-
-
-.articulo{
+.articulo {
     width: 648px;
 }
