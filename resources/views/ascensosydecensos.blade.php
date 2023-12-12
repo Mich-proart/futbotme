@@ -27,23 +27,26 @@
                                 <div class="col">
                                     <h2 class="subtitle_page bg-silver-medium p-4">{{ $temporada }}</h2>
                                     @foreach ($temporadas as $id => $items)
-                                        @foreach ($items as $item)
+                                        
                                             <div class="items-equipos mt-4 mb-lg-5 mb-4 px-4">
                                                 <h3 class="subtitle_page2">{{ $item->nombre }}</h3>
+                                                
                                                 <ul class="list-group list-group-flush">
+                                                    @foreach ($items as $item)
                                                     <li class="list-group-item mb-3 border-0">
                                                         <div class="visitante">
                                                             <div class="escudo d-lg-inline-block d-none">
-                                                                <img src="https://futbolme.com/static/img/estadios/estadi{{ $item->equipo_id }}.png"
+                                                                <img src="https://futbolme.com/static/img/club/escudo{{ $item->equipo_id }}.png"
                                                                     class="logo_s img-fluid"
                                                                     alt="Escudo de {{ $item->equipo }}">
                                                             </div>
                                                             <h3 class="d-block">{{ $item->equipo }}</h3>
                                                         </div>
                                                     </li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
-                                        @endforeach
+                                        
                                     @endforeach
                                 </div>
                             @endforeach
