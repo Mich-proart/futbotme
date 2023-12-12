@@ -1,5 +1,5 @@
 <x-layouts.app title="Home" meta-description="Home page">
-
+    <?php $Url_static = 'https://futbolme.eu/'; ?>
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
@@ -153,7 +153,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
                                 class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
                             </a>
                         </div>
@@ -420,7 +420,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
                                 class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
                             </a>
                         </div>
@@ -533,7 +533,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
                                 class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?></a>
                         </div>
 
