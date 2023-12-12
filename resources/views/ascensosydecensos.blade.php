@@ -6,7 +6,6 @@
     <div class="accordion accordion-flush" id="accordionAscensos">
 
         @foreach ($datos as $categoria => $categorias)
-
             <div class="accordion-item mb-3">
                 <h2 class="accordion-header">
                     <button
@@ -46,8 +45,8 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                    @endforeach
                                 </div>
-
                             @endforeach
                         </div>
 
