@@ -16,6 +16,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "inter";
+    overflow-x: hidden;
 }
 
 /* size fonts */
@@ -235,6 +236,11 @@ body {
 }
 .visitante .escudo {
     padding-right: 1rem;
+}
+
+#accordionAscensos .visitante .escudo {
+    padding-right: 1rem;
+    width: 9%;
 }
 
 .local .goleadores {
