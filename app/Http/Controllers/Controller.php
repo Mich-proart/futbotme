@@ -64,6 +64,13 @@ class Controller extends BaseController
         INNER JOIN torneo tor ON tor.id=t.torneo_id 
         INNER JOIN categoriatorneo cat ON cat.id=a.categoria_id ORDER BY a.categoria_id, a.division_id, tor.orden, a.orden, ae.posicion");
 
-        return view('ascensosydecensos', ['nombre' => $nacional, 'datos' => $datos]);
+        $datosOrganizados = collect($datos)->groupBy('categoria')->map(function ($categorias) {
+            return $categorias->groupBy('temporada')->map(function ($temporadas) {
+                return $temporadas->sortBy('id')->groupBy('id')->map(function ($items) {
+                    return $items->sortBy('posicion');
+                });
+            });
+        });
+        return view('ascensosydecensos', ['nombre' => $nacional, 'datos' => $datosOrganizados]);
     }
 }
