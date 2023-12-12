@@ -29,7 +29,7 @@
                                     @foreach ($temporadas as $id => $items)
                                         
                                             <div class="items-equipos mt-4 mb-lg-5 mb-4 px-4">
-                                                <h3 class="subtitle_page2">{{ $item->nombre }}</h3>
+                                                <h3 class="subtitle_page2">{{ $items }}</h3>
                                                 
                                                 <ul class="list-group list-group-flush">
                                                     @foreach ($items as $item)
