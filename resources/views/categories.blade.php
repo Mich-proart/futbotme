@@ -44,17 +44,13 @@
                     aria-controls="pills-fichajes" aria-selected="false">Fichajes</button>
             </li>
             <li class="nav-item" role="presentation">
-                {{-- <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-ascensos-descensos-tab"
-                    data-bs-toggle="pill" data-bs-target="#pills-ascensos-descensos" type="button" role="tab"
-                    aria-controls="pills-ascensos-descensos" aria-selected="false">Ascensos y descensos</button> --}}
-                    <a href="{{ route('categories-ascenso-descenso', ['nacional' => 'nacional']) }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Ascensos y descensos</a>
-
+                
+                <a href="{{ route('categories-ascenso-descenso', ['nacional' => 'nacional']) }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Ascensos y descensos</a>
 
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-golaverage-tab"
-                    data-bs-toggle="pill" data-bs-target="#pills-golaverage" type="button" role="tab"
-                    aria-controls="pills-golaverage" aria-selected="false">Calcular Golaverage</button>
+                <a href="{{ route('gol-average') }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Gol Average</a>
+
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">

@@ -85,6 +85,7 @@ $agent = new Agent();
                             </div>
                         </div> --}}
                     {{-- <img src="{{ asset('assets/images/test_publi3.png') }}" alt="test_publi" class="img-fluid"> --}}
+                    <script type="text/javascript" src="https://video.onnetwork.tv/embed.php?sid=NDBZLDAsMTNN"></script>
                 </div>
             </div>
         </div>
