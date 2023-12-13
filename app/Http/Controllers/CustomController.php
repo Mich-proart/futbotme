@@ -4,25 +4,39 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CustomModel;
+use Jenssegers\Agent\Agent;
 
-class CustomController extends Controller{
-    
-    public function indexContacto(){
+class CustomController extends Controller
+{
+
+    public function indexApp()
+    {
+
+        $agent = new Agent();
+
+        return view('/components/layouts/app', ['agent' => $agent]);
+    }
+
+    public function indexContacto()
+    {
 
         return view('contact');
     }
 
-    public function indexNoticias(){
- 
+    public function indexNoticias()
+    {
+
         return view('notices');
     }
 
-    public function indexPreguntas(){
+    public function indexPreguntas()
+    {
 
         return view('preguntas-frecuentes');
     }
 
-    public function indexPublicidad(){
+    public function indexPublicidad()
+    {
 
         return view('publicidad');
     }
@@ -32,24 +46,26 @@ class CustomController extends Controller{
         return view('partidos');
     } */
 
-    public function indexPartidosTelevisados(){
+    public function indexPartidosTelevisados()
+    {
         return view('televisados');
     }
 
-    public function indexGolAverage(){
+    public function indexGolAverage()
+    {
 
         return view('gol-average');
     }
 
-    public function indexPoliticaCookies(){
+    public function indexPoliticaCookies()
+    {
 
         return view('politica-cookies');
     }
 
-    public function indexCondicionesUso(){
+    public function indexCondicionesUso()
+    {
 
         return view('condiciones-uso');
     }
-    
-
 }
