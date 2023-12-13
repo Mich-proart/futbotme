@@ -260,7 +260,7 @@ class AdminController extends Controller
         ]);
     }
 
-    // editar partidos en DB y en JSON
+    // editar partidos en DB los que haremos manuales
     public function editarPartido(Request $request){
         // Obtener la variable enviada por el front
         $data = $request->all()['formData']; 
@@ -274,7 +274,7 @@ class AdminController extends Controller
         $gol_local_partido = $data['golLocalPartido'];
         $id_visitante_partido = $data['idVisitantePartido'];
         $gol_visitante_partido = $data['golVisitantePartido'];
-        $temporada_partido  = $data['idTemporadaPartido'];
+        $temporada_partido = $data['idTemporadaPartido'];
 
         // Actualizamos datos en db
         $filasActualizadas = DB::table('partido')
@@ -284,19 +284,37 @@ class AdminController extends Controller
         ->where('equipoLocal_id', $id_local_partido)
         ->where('equipoVisitante_id', $id_visitante_partido)
         ->update([
-            'betsapi' => $id_partido_betsapi_no, 
+            'estado_partido' => $estado_partido,
             'fecha' => $fecha_partido,
             'hora_prevista' => $hora_prevista,
             'hora_real' => $hora_real,
-            'estado_partido' => $estado_partido,
             'goles_local' => $gol_local_partido,
-            'goles_visitante' => $gol_visitante_partido
+            'goles_visitante' => $gol_visitante_partido,
+            'betsapi' => $id_partido_betsapi_no
         ]);
 
-        // generamos fichero json con partidos en juego con los datos actualizados
-        $partidosDirectos = $this->get_partidos_curtdate(2,HelperFunctions::get_fecha_current_generic());
-         // Convertir el array a formato JSON
-        $json = json_encode($partidosDirectos, JSON_PRETTY_PRINT);
+        // Volvemos a traer los datos actualizados de la fila partido actualizada
+        $dataPartidoModificado = DB::table('partido')
+        ->select('*')
+        ->where('id', '=', $id_partido)
+        ->where('temporada_id', $temporada_partido)
+        ->get();
+
+        $obj_response = [
+            'idPartido' => $dataPartidoModificado[0]->id,
+            'estaPartido' => $dataPartidoModificado[0]->estado_partido,
+            'golesLocal' => $dataPartidoModificado[0]->goles_local,
+            'golesVisitante' => $dataPartidoModificado[0]->goles_visitante,
+            'idLocal' => $dataPartidoModificado[0]->equipoLocal_id,
+            'idVisitante' => $dataPartidoModificado[0]->equipoVisitante_id,
+        ];
+
+        //var_dump($obj_response);
+
+        // $partidosDirectos = $this->get_partidos_curtdate(2,HelperFunctions::get_fecha_current_generic());
+        // generamos fichero json con el partido editado
+        // Convertir el array a formato JSON
+        $json = json_encode($obj_response, JSON_PRETTY_PRINT);
         // Ruta y nombre del archivo donde se guardará el JSON
         $rutaArchivo = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
         // Guardar el JSON en el archivo

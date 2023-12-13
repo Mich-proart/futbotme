@@ -1,16 +1,17 @@
 !(function ($) {
     "use strict";
     const socket = io("http://localhost:3000");
-
-    // socket.on("json-data", (datos) => {
-    //     console.log("Datos JSON recibidos:", datos);
-    //     // Aquí puedes procesar los datos como lo desees
-    //     functionUpdatePartidos(datos.results);
-    // });
+    const socket_futbolme = io("http://localhost:5000");
 
     socket.on("nuevos-datos", (nuevosDatos) => {
         console.log("Nuevos datos recibidos:", nuevosDatos);
         functionUpdatePartidos(nuevosDatos.results);
+        // Aquí puedes procesar los nuevos datos como lo desees
+    });
+
+    socket_futbolme.on("nuevos-datos-futbolme", (nuevosDatos) => {
+        console.log("Nuevos datos del otro fichero:", nuevosDatos);
+        //functionUpdatePartidos(nuevosDatos.results);
         // Aquí puedes procesar los nuevos datos como lo desees
     });
 })(window.jQuery);
@@ -55,14 +56,6 @@ const functionUpdatePartidos = (data) => {
             console.log(response);
             let result = JSON.parse(response);
             updateFrontPanelDirect(result);
-
-            // aqui refrescamos el front de los id que hicimos match
-            // let result = JSON.parse(response);
-            // if (result == 'guardado') {
-            //     alertFeed('alert-success', 'Guardado exitoso')
-            // }else{
-            //     alertFeed('alert-danger', 'Error al guardar')
-            // }
         },
         complete: function () {},
     });
@@ -79,8 +72,12 @@ const updateFrontPanelDirect = (data) => {
 
         if (fila) {
             // Modifica los elementos dentro de la fila según sea necesario
-            const inputGolLocal = fila.querySelector(".fila-local-gol-directo-partido");
-            const inputGolVisitante = fila.querySelector(".fila-visitante-gol-directo-partido");
+            const inputGolLocal = fila.querySelector(
+                ".fila-local-gol-directo-partido"
+            );
+            const inputGolVisitante = fila.querySelector(
+                ".fila-visitante-gol-directo-partido"
+            );
             // ... y así sucesivamente con los elementos que necesites modificar
 
             // Por ejemplo, si quieres modificar el valor de los inputs
@@ -90,8 +87,6 @@ const updateFrontPanelDirect = (data) => {
             if (inputGolVisitante) {
                 inputGolVisitante.value = iterator.golesVisitante; // Suponiendo que horaPrevista es un campo en el iterador
             }
-
-            // Puedes realizar otras modificaciones en otros elementos dentro de la fila aquí
         }
     }
 };
