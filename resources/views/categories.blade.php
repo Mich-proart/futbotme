@@ -639,7 +639,7 @@
                                         href="{{ url('/resultados-directo/equipo/real-madrid-cf/' . $equipo->equipo_id) }}">
                                         {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
 
-                                        <img src="{{ url('/assets/images/img/club/escudo' . $equipo->club_id) }}.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $equipo->club_id) }}.png"
                                             alt="escudo {{ $equipo->nombre }} " class="img-fluid">
                                     </a>
                                 </div>
@@ -654,7 +654,7 @@
                                     <a
                                         href="{{ url('/resultados-directo/equipo/real-madrid-cf/' . $equipo->equipo_id) }}">
                                         <img class="img-fluid"
-                                            src="{{ url('/assets/images/img/equipaciones/eq' . $equipo->equipacion_id) }}.png"
+                                            src="{{ asset('assets/images/img/equipaciones/eq' . $equipo->equipacion_id) }}.png"
                                             alt="Equipacion {{ $equipo->nombre }}" class="img-fluid">
                                     </a>
                                 </div>
