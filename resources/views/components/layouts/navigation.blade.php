@@ -12,7 +12,7 @@
 <div class="publicidad-header bg-dark-green remove-mobile">
     <div class="container-fluid-custom pb-lg-5 pb-3">
         <div class="content-publi d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/test_publi1.png') }}" alt="test_publi" class="img-fluid">
+            {{-- <img src="{{ asset('assets/images/test_publi1.png') }}" alt="test_publi" class="img-fluid"> --}}
         </div>
     </div>
 </div>
