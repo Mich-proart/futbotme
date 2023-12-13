@@ -46,7 +46,7 @@
 </head>
 
 <body>
-
+<?php $agent = new Agent();?>
     {{-- navbar --}}
     <x-layouts.navigation />
 
