@@ -9,13 +9,13 @@ use Jenssegers\Agent\Agent;
 class CustomController extends Controller
 {
 
-    public function indexApp()
+    /* public function indexApp()
     {
 
         $agent = new Agent();
 
         return view('components.layouts.app', ['agent' => $agent]);
-    }
+    } */
 
     public function indexContacto()
     {
