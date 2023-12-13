@@ -44,12 +44,14 @@
                     aria-controls="pills-fichajes" aria-selected="false">Fichajes</button>
             </li>
             <li class="nav-item" role="presentation">
-                
-                <a href="{{ route('categories-ascenso-descenso', ['nacional' => 'nacional']) }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Ascensos y descensos</a>
+
+                <a href="{{ route('categories-ascenso-descenso', ['nacional' => 'nacional']) }}"
+                    class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Ascensos y descensos</a>
 
             </li>
             <li class="nav-item" role="presentation">
-                <a href="{{ route('gol-average') }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Gol Average</a>
+                <a href="{{ route('gol-average') }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Gol
+                    Average</a>
 
             </li>
         </ul>
@@ -634,25 +636,25 @@
                             <div class="col-12 py-3 bg-white center_center mb-3">
                                 <div class="escudo col-4">
                                     <a
-                                        href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
+                                        href="{{ url('/resultados-directo/equipo/real-madrid-cf/' . $equipo->equipo_id) }}">
                                         {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
 
-                                        <img src="https://futbolme.com/static/img/club/escudo{{ $equipo->club_id }}.png"
+                                        <img src="{{ url('/assets/images/img/club/escudo' . $equipo->club_id) }}.png"
                                             alt="escudo {{ $equipo->nombre }} " class="img-fluid">
                                     </a>
                                 </div>
 
                                 <div class="nombre col-4 text-center">
                                     <a class="text-decoration-none fs-22px color-black fw-semibold"
-                                        href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}"
+                                        href="{{ url('/resultados-directo/equipo/real-madrid-cf/' . $equipo->equipo_id) }}"
                                         class="img-fluid"> {{ $equipo->nombre }} </a>
                                 </div>
 
                                 <div class="indumentaria col-4 text-end">
                                     <a
-                                        href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
+                                        href="{{ url('/resultados-directo/equipo/real-madrid-cf/' . $equipo->equipo_id) }}">
                                         <img class="img-fluid"
-                                            src="https://futbolme.eu/static/img/equipaciones/eq{{ $equipo->equipacion_id }}.png"
+                                            src="{{ url('/assets/images/img/equipaciones/eq' . $equipo->equipacion_id) }}.png"
                                             alt="Equipacion {{ $equipo->nombre }}" class="img-fluid">
                                     </a>
                                 </div>
