@@ -14,7 +14,7 @@ class CustomController extends Controller
 
         $agent = new Agent();
 
-        return view('/components/layouts/app', ['agent' => $agent]);
+        return view('components.layouts.app', ['agent' => $agent]);
     }
 
     public function indexContacto()
