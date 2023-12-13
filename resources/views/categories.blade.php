@@ -633,7 +633,7 @@
                         {{-- {{ dd($equipos) }} --}}
                         @foreach ($equipos as $equipo)
                             <div class="col-12 py-3 bg-white center_center mb-3">
-                                <div class="escudo">
+                                <div class="escudo col-4">
                                     <a
                                         href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
                                         {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
@@ -643,13 +643,13 @@
                                     </a>
                                 </div>
 
-                                <div class="nombre">
+                                <div class="nombre col-4">
                                     <a class="text-decoration-none fs-22px color-black fw-semibold"
                                         href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}"
                                         class="img-fluid"> {{ $equipo->nombre }} </a>
                                 </div>
 
-                                <div class="indumentaria">
+                                <div class="indumentaria col-4 text-end">
                                     <a
                                         href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
                                         <img class="img-fluid"
