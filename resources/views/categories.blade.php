@@ -630,55 +630,34 @@
                 <div class="container-fluid mt-5 pt-lg-5 pt-4">
                     <div class="row">
 
-                        {{ dd($equipos) }}
+                        {{-- {{ dd($equipos) }} --}}
+                        @foreach ($equipos as $equipo)
+                            <div class="col-12 py-3 bg-white center_center mb-3">
+                                <div class="escudo">
+                                    <a
+                                        href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
+                                        <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png"
+                                            alt="Real Madrid" class="img-fluid">
+                                    </a>
+                                </div>
 
-                        <div class="col-12 py-3 bg-white center_center mb-3">
-                            <div class="escudo">
-                                <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
-                                    <img src="https://assets.b365api.com/images/team/b/2829.png" alt="Real Madrid"
-                                        class="img-fluid">
-                                </a>
+                                <div class="nombre">
+                                    <a class="text-decoration-none fs-22px color-black fw-semibold"
+                                        href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}"
+                                        class="img-fluid"> {{ $equipo->nombre }} </a>
+                                </div>
+
+                                <div class="indumentaria">
+                                    <a
+                                        href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
+                                        <img class="img-fluid"
+                                            src="https://futbolme.com//static/img/equipaciones/eq{{ $equipo->equipacion_id }}.png"
+                                            alt="" class="img-fluid">
+                                    </a>
+                                </div>
+
                             </div>
-
-                            <div class="nombre">
-                                <a class="text-decoration-none fs-22px color-black fw-semibold"
-                                    href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415"
-                                    class="img-fluid"> Real
-                                    Madrid</a>
-                            </div>
-
-                            <div class="indumentaria">
-                                <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
-                                    <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq369.png" alt=""
-                                        class="img-fluid">
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="col-12 py-3 bg-white center_center mb-3">
-                            <div class="escudo">
-                                <a href="#">
-                                    <img src="https://assets.b365api.com/images/team/b/2817.png" alt="Real Madrid"
-                                        class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="nombre">
-                                <a class="text-decoration-none fs-22px color-black fw-semibold" href="#"> FC
-                                    Barcelona</a>
-                            </div>
-
-                            <div class="indumentaria">
-                                <a href="#">
-                                    <img class="img-fluid"
-                                        src="https://futbolme.com//static/img/equipaciones/eq699.png" alt=""
-                                        class="img-fluid">
-                                </a>
-                            </div>
-
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>
