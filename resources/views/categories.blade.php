@@ -629,6 +629,9 @@
                 {{-- TAB DE EQUIPO --}}
                 <div class="container-fluid mt-5 pt-lg-5 pt-4">
                     <div class="row">
+
+                        {{ dd($equipos) }}
+
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="https://futbolme.com/resultados-directo/equipo/real-madrid-cf/415">
@@ -653,6 +656,7 @@
                             </div>
 
                         </div>
+
                         <div class="col-12 py-3 bg-white center_center mb-3">
                             <div class="escudo">
                                 <a href="#">

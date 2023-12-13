@@ -35,10 +35,38 @@ class Controller extends BaseController
         ]);
     }
 
-    public function indexCategorias($nombre)
+    public function indexCategorias($nombre, $id = null)
     {
 
-        return view('categories', ['nombre' => $nombre]);
+        if (!is_null($id)) {
+            // Hacer algo con $id
+            $equipos = DB::select("SELECT 
+            te.equipo_id, 
+            te.grupo, 
+            e.nombre, 
+            e.nombreCorto, 
+            e.estadio_id, 
+            e.betsapi, 
+            e.club_id, 
+            e.equipacion_id, 
+            e.slug, 
+            l.id localidad_id, 
+            p.id provincia_id, 
+            c.id comunidad_id, 
+            l.nombre localidad, 
+            p.nombre provincia, 
+            c.nombre comunidad, 
+            cl.pais_id, 
+            cl.es_seleccion 
+            FROM temporada_equipo te 
+            INNER JOIN equipo e ON te.equipo_id=e.id 
+            INNER JOIN club cl ON e.club_id=cl.id 
+            LEFT JOIN localidad l ON cl.localidad_id=l.id 
+            LEFT JOIN provincia p ON l.provincia_id=p.id 
+            LEFT JOIN comunidad c ON p.comunidad_id=c.id WHERE te.temporada_id=$id ORDER BY e.nombre;");
+        }
+
+        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos]);
     }
 
     public function indexCategoriasAscenso($nacional)
