@@ -44,9 +44,12 @@
                     aria-controls="pills-fichajes" aria-selected="false">Fichajes</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-ascensos-descensos-tab"
+                {{-- <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-ascensos-descensos-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-ascensos-descensos" type="button" role="tab"
-                    aria-controls="pills-ascensos-descensos" aria-selected="false">Ascensos y descensos</button>
+                    aria-controls="pills-ascensos-descensos" aria-selected="false">Ascensos y descensos</button> --}}
+                    <a href="{{ route('categories-ascenso-descenso', ['nacional' => 'nacional']) }}" class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3">Ascensos y descensos</a>
+
+
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-golaverage-tab"
@@ -1176,11 +1179,11 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-ascensos-descensos" role="tabpanel"
+            {{-- <div class="tab-pane fade" id="pills-ascensos-descensos" role="tabpanel"
                 aria-labelledby="pills-ascensos-descensos-tab">...</div>
             <div class="tab-pane fade" id="pills-golaverage" role="tabpanel" aria-labelledby="pills-golaverage-tab">
                 ...
-            </div>
+            </div> --}}
         </div>
     </section>
 
