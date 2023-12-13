@@ -636,7 +636,9 @@
                                 <div class="escudo">
                                     <a
                                         href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}">
-                                        <img src="https://assets.b365api.com/images/team/b/{{ $equipo->club_id }}.png"
+                                        {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
+
+                                        <img src="https://futbolme.com/static/img/club/escudo{{ $equipo->club_id }}.png"
                                             alt="escudo {{ $equipo->nombre }} " class="img-fluid">
                                     </a>
                                 </div>
