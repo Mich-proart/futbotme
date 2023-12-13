@@ -46,7 +46,10 @@
 </head>
 
 <body>
-<?php $agent = new Agent();?>
+<?php 
+use Jenssegers\Agent\Agent;
+$agent = new Agent();
+?>
     {{-- navbar --}}
     <x-layouts.navigation />
 
