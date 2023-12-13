@@ -643,7 +643,7 @@
                                     </a>
                                 </div>
 
-                                <div class="nombre col-4">
+                                <div class="nombre col-4 text-center">
                                     <a class="text-decoration-none fs-22px color-black fw-semibold"
                                         href="https://futbolme.eu/resultados-directo/equipo/real-madrid-cf/{{ $equipo->equipo_id }}"
                                         class="img-fluid"> {{ $equipo->nombre }} </a>
