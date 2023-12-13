@@ -60,10 +60,10 @@
             <div class="tab-pane fade show active" id="pills-jornada" role="tabpanel"
                 aria-labelledby="pills-jornada-tab">
                 {{-- CAMBIAR DE JORNADA --}}
-                <div class="wrapper">
-                    <input type="number" id="jornada_actual" value="1" />
-                    <span class="input-button jornada_actual_add"><i class="bi bi-chevron-up"></i></span>
-                    <span class="input-button jornada_actual_remove"><i class="bi bi-chevron-down"></i></span>
+                <div class="selector_de_jornadas">
+                    <label for="spinner">JORNADA</label>
+                    <input type="number" pattern="[0-9]*" id="spinner" name="value" value="1" min="1"
+                        max="200" step="1" oninput="maxLengthCheck(this)" maxlength="3">
                 </div>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5">

@@ -768,36 +768,18 @@ body {
 
     /* INPUT NUMBER DE JORNADA DESKTOP */
 
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    input[type="number"] {
+    .selecto_de_jornadas input[type="number"] {
+        outline: none;
         -moz-appearance: textfield;
     }
-
-    .wrapper {
-        position: relative;
-        background: #818583;
+    
+    .selecto_de_jornadas input[type="number"]::-webkit-inner-spin-button,
+    .selecto_de_jornadas input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
     }
 
-    .wrapper::before {
-        content: "JORNADA";
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        width: auto;
-        text-align: left;
-        transform: translateY(-50%);
-        color: #fff;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 20px;
-        text-transform: uppercase;
-    }
+    /* 
 
     .input-button {
         position: absolute;
@@ -826,7 +808,7 @@ body {
     .input-button.jornada_actual_remove {
         bottom: 0;
         right: 1px;
-    }
+    } */
 }
 
 /* ESTILOS PARA CALENDARIO */

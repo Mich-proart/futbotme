@@ -232,7 +232,27 @@ window.onload = function () {
     }
 };
 
+/* SELECTOR DE JORNADAS */
 
+function spinner() {
+	//  SPINNER
+	$("#spinner").spinner();
+	
+	//  INPUT ONLY NUMBERS
+	$('#spinner').keyup(function () { 
+		 this.value = this.value.replace(/[^0-9]/g,'');
+	});
+}
+
+// INPUT NUMBER MAX LENGHT
+function maxLengthCheck(object) {
+	if (object.value.length > object.maxLength)
+		object.value = object.value.slice(0, object.maxLength)
+}
+
+
+
+window.onload = spinner;
 
 
 
