@@ -1008,7 +1008,7 @@
                 value = 0;
             }
             input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
-            
+
         }
 
         function decrementValue(element) {
@@ -1021,29 +1021,31 @@
             }
         }
 
-        
-            $('#number').on('change', function() {
-                var nuevoJActiva = $(this).val();
-                var id = '{{ $ID_TL }}';
 
-                $.ajax({
-                    url: '{{ route('actualizar-jornada') }}',
-                    method: 'POST',
-                    data: {
-                        nuevoJActiva: nuevoJActiva,
-                        id:id,
-                        // Puedes agregar más datos si es necesario
-                    },
-                    success: function(response) {
-                        // Actualizar el front-end con la nueva vista parcial
-                        $('#jornadas_categorias').html(response);
-                    },
-                    error: function(error) {
-                        console.error(error);
-                    }   
-                });
+        $('#number').on('change', function() {
+            var nuevoJActiva = $(this).val();
+            var id = '{{ $ID_TL }}';
+
+            $.ajax({
+                url: '{{ route('actualizar-jornada') }}',
+                method: 'POST',
+                data: {
+                    nuevoJActiva: nuevoJActiva,
+                    id: id,
+                    // Puedes agregar más datos si es necesario
+                },
+                success: function(response) {
+                    // Actualizar el front-end con la nueva vista parcial
+                    $('#jornadas_categorias').html(response);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+
+                    // Mostrar detalles del error en la consola
+                    console.log(jqXHR);
+                }
             });
-        
+        });
     </script>
 
 
