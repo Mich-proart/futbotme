@@ -272,7 +272,7 @@ class Controller extends BaseController
     INNER JOIN pais pa ON pa.id=tor.pais_id
     INNER JOIN categoriatorneo ct ON ct.id=tor.categoria_torneo_id
     WHERE p.temporada_id = ? AND p.jornada = ?
-    ORDER BY p.fecha, p.hora_prevista", [$id, $JActiva]);
+    ORDER BY p.fecha, p.hora_prevista", [$id, 7]);
 
         // Ordenar el array por fecha y hora descendente
         $jornadaActivaData = collect($jornadaActivaData)->sortByDesc(function ($partido) {
