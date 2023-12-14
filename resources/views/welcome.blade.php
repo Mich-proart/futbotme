@@ -308,8 +308,8 @@
 
                                         <div
                                             class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                            <span class="icon-alienacion d-inline-block fs-1"></span>
-                                            <span class="icon-ball d-inline-block fs-1"></span>
+                                            <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion" attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
+                                            <span class="icon-ball d-inline-block fs-1 span-evento-trigger" attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
                                             <span class="icon-TV d-inline-block fs-1"></span>
                                         </div>
 
@@ -324,8 +324,6 @@
 
                                         <div class="marcador">
                                             <span class="goles-local">{{ $partido['ss'] }}</span>
-                                            {{-- <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">0</span> --}}
                                         </div>
 
                                         <div class="visitante">
@@ -338,6 +336,35 @@
 
                                 </div>
                             </div>
+
+                            {{-- MODALES --}}
+
+                            <div class="d-none content-eventos de-fila-partido" >
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <h3 class="d-block">Eventos</h3>
+                                    <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
+                                </div>
+                                <ul class="list-group lista-eventos text-left"></ul>
+                            </div>
+                            
+        
+                            <div class="d-none content-alineaciones">
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <h3 class="d-block">Alineaciones</h3>
+                                    <span class="cerrar-alineacion display-4" style="cursor: pointer;">&times;</span>
+                                </div>
+                                <div class="align-items-start flex-wrap d-flex">
+                                    <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                        <h4 class="title-alineacion title-alineacion-locales">Local</h4>
+                                        <ul class="list-unstyled listado-locales"></ul>
+                                    </div>
+                                    <div class="rigth-content-alin w-50 text-left">
+                                        <h4 class="title-alineacion title-alineacion-visitantes">Visitante</h4>
+                                        <ul class="list-unstyled listado-visitantes"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         @endforeach
                     </div>
                 @endforeach
@@ -359,7 +386,7 @@
 
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
-                    //print_r($partidos); 
+                    print_r($partidos); 
                     $slug = Str::slug($nombreTemporada);
                 ?>
 
@@ -427,8 +454,6 @@
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
-                                            <span class="icon-ball d-inline-block fs-1"></span> --}}
                                     <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
