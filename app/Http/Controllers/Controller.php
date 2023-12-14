@@ -129,6 +129,7 @@ class Controller extends BaseController
             INNER JOIN pais pa ON tor.pais_id=pa.id
             INNER JOIN comunidad co ON tor.comunidad_id=co.id
             INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id=$id");
+            $torneo_Liga = $Info[0]; 
             $INFO_PAIS = $Info[0];
             $codigoPais = $this->obtenerCodigoPais($INFO_PAIS->nombrePais);
             $JActiva = $INFO_PAIS->jornadaActiva;
@@ -198,7 +199,7 @@ class Controller extends BaseController
             })->values()->all();
         }
 
-        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info, 'CC_Pais' => $codigoPais, 'JornadaActiva' => $JornadaActiva, 'ID_TL' => $id]);
+        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'torneo_Liga' => $torneo_Liga, 'CC_Pais' => $codigoPais, 'JornadaActiva' => $JornadaActiva, 'ID_TL' => $id]);
     }
 
     public function actualizarJornada(Request $request)

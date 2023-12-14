@@ -1,8 +1,6 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
-    {{-- {{ dd($info) }} --}}
-    {{-- Accede directamente a la primera posición del array --}}
-    {$torneo_Liga = $info[0]; }
+    {{-- {{ dd($torneo_Liga) }} --}}
     
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
