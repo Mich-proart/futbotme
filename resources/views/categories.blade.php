@@ -154,7 +154,8 @@
 
                                 </div>
                                 <div class="col">
-                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada {{ $partido->jornada }}</span>
+                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada
+                                        {{ $partido->jornada }}</span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
@@ -167,12 +168,12 @@
                             <div class="mx-0 partido_alineado my-2">
                                 <div class="local">
                                     <h3 class="d-block">{{ $partido->local }}</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png"
-                                            class="logo_s img-fluid"></div>
-                                            <div class="goleadores">
-                                                <span class="d-block">{{$partido->observaciones}}</span>
-                                            </div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
+                                    </div>
+                                    <div class="goleadores">
+                                        <span class="d-block">{!! $partido->observaciones !!}</span>
+                                    </div>
                                 </div>
 
                                 <div class="marcador">
@@ -182,9 +183,9 @@
                                 </div>
 
                                 <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="{{ asset('assets/images/img/club/escudo' . $partido->equipoVisitante_id) }}.png"
-                                            class="logo_s img-fluid"></div>
+                                    <div class="escudo d-lg-inline-block d-none">
+                                        {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoVisitante_id) }}.png" class="logo_s img-fluid"> --}}
+                                    </div>
                                     <h3 class="d-block">{{ $partido->visitante }}</h3>
                                 </div>
                             </div>
