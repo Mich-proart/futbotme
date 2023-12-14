@@ -40,6 +40,7 @@ class Controller extends BaseController
 
         if (!is_null($id)) {
             // Hacer algo con $id
+            /* equipos del torneo */
             $equipos = DB::select("SELECT 
             te.equipo_id, 
             te.grupo, 
@@ -64,9 +65,46 @@ class Controller extends BaseController
             LEFT JOIN localidad l ON cl.localidad_id=l.id 
             LEFT JOIN provincia p ON l.provincia_id=p.id 
             LEFT JOIN comunidad c ON p.comunidad_id=c.id WHERE te.temporada_id=$id ORDER BY e.nombre;");
+
+            /* Info principal de torneo o liga */
+
+            $Info = DB::select("SELECT 
+            t.torneo_id,
+            tor.tipo_torneo, 
+            tor.betsapi,
+            tor.nombre, 
+            tor.traduccion,
+            tor.sexo, 
+            tor.desarrollo, 
+            tor.categoria_id, ce.nombre categoria_nombre,
+            tor.visible,
+            tor.categoria_torneo_id, 
+            tor.id_original,
+            tor.apifutbol,
+            tor.apiRFEFcompeticion,
+            tor.apiRFEFgrupo,
+            tor.whatsapp,
+            tor.whatsapp_url,
+            pa.id idPais, 
+            pa.nombre nombrePais,
+            co.id idComunidad, 
+            co.nombre nombreComunidad, 
+            CASE WHEN (tor.tipo_torneo=1) THEN (select jornadas from liga where id=tor.id) 
+            ELSE 0 END as jornadas,
+            CASE WHEN (tor.tipo_torneo=1) THEN (select jornadaActiva from liga where id=tor.id) 
+            ELSE (select fase_activa from eliminatorio where id=tor.id)  END as jornadaActiva,
+            CASE WHEN (tor.tipo_torneo=1) THEN (select tipoClasificacion from liga where id=tor.id) 
+            ELSE 0 END as tipoClasificacion,
+            CASE WHEN (tor.tipo_torneo=1) THEN (select tipoPuntuacion from liga where id=tor.id) 
+            ELSE 0 END as tipoPuntuacion
+            FROM temporada t
+            INNER JOIN torneo tor ON t.torneo_id=tor.id
+            INNER JOIN pais pa ON tor.pais_id=pa.id
+            INNER JOIN comunidad co ON tor.comunidad_id=co.id
+            INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id=$id");
         }
 
-        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos]);
+        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info]);
     }
 
     public function indexCategoriasAscenso($nacional)

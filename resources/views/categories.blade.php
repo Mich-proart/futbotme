@@ -1,6 +1,6 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
-
+    {{ dd($info) }}
 
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
