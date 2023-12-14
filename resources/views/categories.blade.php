@@ -2,7 +2,7 @@
 
     {{-- {{ dd($info) }} --}}
     {{-- Accede directamente a la primera posición del array --}}
-    <?php $torneo_Liga = $info[0]; ?>
+    {$torneo_Liga = $info[0]; }
     
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
@@ -70,7 +70,7 @@
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
-                        step="1" oninput="maxLengthCheck(this)" maxlength="3" class="text-white fs-4" onchange="actualizarJornadaActiva(this.value)">
+                        step="1" maxlength="3" class="text-white fs-4" onchange="actualizarJornadaActiva(this.value)">
                     <div class="buttons_cat">
                         <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
