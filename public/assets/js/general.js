@@ -40,33 +40,7 @@ $(document).ready(function () {
         }
         input.val(input_val);
     });
-    /* SELECTOR DE JORNADAS */
-    var numInput;
-    var number = 0;
-    var numberInput = 0;
-
-    $(".increment").on("click", function () {
-        numInput = $(this).parent(".buttons_cat").siblings("input");
-        number = parseInt($(numInput).val());
-        if (isNaN(number)) {
-            number = 0;
-        }
-        $(numInput).val(parseInt(number) + 1);
-        numInput = null; number = 0; numInput = 0;
-    });
-
-    $(".decrement").on("click", function () {
-        numInput = $(this).parent(".buttons_cat").siblings("input");
-        number = parseInt($(numInput).val());
-
-        if ((isNaN(number)) || (number < 0)) {
-            number = 0;
-            $(numInput).val(number);
-        } else if ($(numInput).val() > 0) {
-            $(numInput).val(parseInt(number) - 1);
-        }
-        numInput = null; number = 0; numInput = 0;
-    });
+    
 
 })
 
@@ -80,8 +54,25 @@ const is_mobile = () => {
         return true
     }
 }
+/* SELECTOR DE JORNADAS */
+function incrementValue(element) {
+    var input = element.parentNode.previousElementSibling;
+    var value = parseInt(input.value);
+    if (isNaN(value)) {
+        value = 0;
+    }
+    input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
+}
 
-
+function decrementValue(element) {
+    var input = element.parentNode.previousElementSibling;
+    var value = parseInt(input.value);
+    if (isNaN(value) || value <= 0) {
+        value = 0;
+    } else {
+        input.value = value - 1;
+    }
+}
 
 const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
 const weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
