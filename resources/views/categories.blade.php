@@ -1027,7 +1027,7 @@
                 var id = '{{ $ID_TL }}';
 
                 $.ajax({
-                    url: '{{ route('actualizar-jactiva') }}',
+                    url: '{{ route('actualizar-jornada') }}',
                     method: 'POST',
                     data: {
                         nuevoJActiva: nuevoJActiva,
