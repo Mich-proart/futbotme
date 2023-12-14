@@ -999,8 +999,6 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script>
         /* SELECTOR DE JORNADAS */
         function incrementValue(element) {
@@ -1026,8 +1024,8 @@
 
         function updateJornada(action) {
             let jornadaActiva = parseInt(document.getElementById('number').value);
-            var nombre = {{ $nombre }}
-            var IDD = {{ $ID_TL }}
+            var nombre = '{{ $nombre }}';
+            var IDD = '{{ $ID_TL }}';
 
             if (action === 'increment') {
                 jornadaActiva++;
