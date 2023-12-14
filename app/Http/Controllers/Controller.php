@@ -271,8 +271,8 @@ class Controller extends BaseController
     INNER JOIN comunidad co ON co.id=tor.comunidad_id
     INNER JOIN pais pa ON pa.id=tor.pais_id
     INNER JOIN categoriatorneo ct ON ct.id=tor.categoria_torneo_id
-    WHERE p.temporada_id = 1 AND p.jornada = 7
-    ORDER BY p.fecha, p.hora_prevista"/* , [$id, 7] */);
+    WHERE p.temporada_id = ? AND p.jornada = ?
+    ORDER BY p.fecha, p.hora_prevista", [$id, $JActiva]);
 
         // Ordenar el array por fecha y hora descendente
         $jornadaActivaData = collect($jornadaActivaData)->sortByDesc(function ($partido) {
@@ -280,7 +280,7 @@ class Controller extends BaseController
         })->values()->all();
 
         // Devolver la vista parcial con los datos actualizados
-        return view('actualizar-jornada', compact('jornadaActivaData'));
+        return view('partials.actualizar-jornada', compact('jornadaActivaData'));
     }
 
 
