@@ -36,6 +36,10 @@ Route::get('/resultados-directo/torneo/{nombre?}/{id?}', [Controller::class, 'in
 
 Route::get('/resultados-directo/torneo/{nombre?}/{id?}/{tabs?}', [Controller::class, 'indexCategorias'])->name('categories');
 
+/* ESTE ES PARA ACTUALIZAR LAS JORNADAS POR EL INPUT */
+
+Route::post('/actualizar-jornada', [Controller::class, 'actualizarJornada'])->name('actualizar-jornada');
+
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
 
 // equipos
