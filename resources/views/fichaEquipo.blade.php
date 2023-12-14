@@ -4,26 +4,42 @@
 <x-layouts.app title="Ficha equipo" meta-description="ficha individual del equipo">
 
 
-{{dd($teams)}}
-<br>
-<h4>{{ $teams[0]->nombreEstadio }}</h4>
-<p>{{ $teams[0]->estadioDireccion }} - {{ $teamProvincia[0]->nombreProvincia}}</p>
-<p>Año de inauguración: {{ $teams[0]->estadioInauguracion }}</p>
-<p>Capacidad: {{ $teams[0]->estadioCapacidad }}</p>
-<img src="https://futbolme.com/static/img/estadios/estadi{{ $teams[0]->idEquipo }}.png" alt="{{ $teams[0]->nombreEstadio }}">
+{{-- {{dd($teams)}} --}}
+
+{{-- #items: array:1 [▼
+    0 => {#305 ▼
+      +"idEquipo": 421
+      +"nombreEquipo": "Athletic Club"
+      +"nombreCompletoEquipo": "Athletic Club"
+      +"nombreCortoEquipo": "Athletic Club"
+      +"club_id_Equipo": 4443
+      +"nombreCategoria": "Senior Masculino"
+      +"fundadoEquipo": 1901
+      +"debut_nacional_Equipo": 1928
+      +"escudoEquipo": 500
+      +"sexoEquipo": 1
+      +"slugClub": "athletic-club"
+      +"betsapiEquipo": 1210
+      +"codigoRFEF_Equipo": "011"
+      +"nombreEstadio": "San Mamés"
+      +"estadioDireccion": "C/ Felipe Serrate s/n"
+      +"estadioInauguracion": 2013
+      +"estadioCapacidad": 53332
+    }
+  ] --}}
 
 <section class="header_cat p-4 my-3">
     <div class="container-fluid">
         <div class="row row-cols-3">
             <div class="col">
-                <img src="{{ asset('assets/images/img/club/escudo' . $teams[0]->idEquipo) }}.png" alt="escudo {{ $teams[0]->nombreEquipo }} " class="img-fluid">
+                <img src="{{ asset('assets/images/img/club/escudo' . $teams[0]->club_id_Equipo) }}.png" alt="escudo {{ $teams[0]->nombreEquipo }} " class="img-fluid">
             </div>
             <div class="col">
                 <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $teams[0]->nombreEquipo }}</h1>
                 <h3>{{ $teams[0]->nombreCategoria }}</h3>
             </div>
             <div class="col">
-                <img class="img-fluid" src="{{ asset('assets/images/img/equipaciones/eq' . $teams[0]->equipacion_id) }}.png"  alt="Equipacion {{ $teams[0]->nombreEquipo }}" class="img-fluid">
+                {{-- <img class="img-fluid" src="{{ asset('assets/images/img/equipaciones/eq' . $teams[0]->equipacion_id) }}.png"  alt="Equipacion {{ $teams[0]->nombreEquipo }}" class="img-fluid"> --}}
             </div>
         </div>
     </div>
@@ -67,7 +83,20 @@
         {{-- TAB DATOS --}}
         <div class="tab-pane fade show active" id="pills-datos" role="tabpanel"
         aria-labelledby="pills-datos-tab">
-
+            <div class="container-fluid">
+                <div class="row row-cols-lg-2">
+                    <div class="col">
+                        <h4>{{ $teams[0]->nombreEstadio }}</h4>
+                        <p>{{ $teams[0]->estadioDireccion }} - {{ $teamProvincia[0]->nombreProvincia}}</p>
+                        <br>
+                        <p>Año de inauguración: {{ $teams[0]->estadioInauguracion }}</p>
+                        <p>Capacidad: {{ $teams[0]->estadioCapacidad }}</p>
+                    </div>
+                    <div class="col">
+                        <img src="https://futbolme.com/static/img/estadios/estadi{{ $teams[0]->idEquipo }}.png" alt="{{ $teams[0]->nombreEstadio }}">
+                    </div>
+                </div>
+            </div>
         </div>
         {{-- TAB JORNADA --}}
         <div class="tab-pane fade " id="pills-jornada" role="tabpanel"
