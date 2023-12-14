@@ -132,7 +132,7 @@
                         </div>
 
                     </div> --}}
-                    @foreach ($JornadaActiva as $partido)
+                    @foreach ($JornadaActiva->reverse() as $partido)
                         <?php
                         $horabd = $partido->hora_prevista;
                         $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
@@ -153,8 +153,8 @@
                                     </div>
 
                                 </div>
-                                <div class="col"><span
-                                        class="fs-00 d-grid grid-center-xy jornada_tiempo">{{ $partido->jornada }}</span>
+                                <div class="col">
+                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo">Jornada {{ $partido->jornada }}</span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
@@ -170,12 +170,15 @@
                                     <div class="escudo d-lg-inline-block d-none"><img
                                             src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png"
                                             class="logo_s img-fluid"></div>
+                                            <div class="goleadores">
+                                                <span class="d-block">{{$partido->observaciones}}</span>
+                                            </div>
                                 </div>
 
                                 <div class="marcador">
-                                    <span class="goles-local">{{ $partido->goles_local }}</span>
+                                    <span class="goles-local color-red">{{ $partido->goles_local }}</span>
                                     <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">{{ $partido->goles_visitante }}</span>
+                                    <span class="goles-visitante color-red">{{ $partido->goles_visitante }}</span>
                                 </div>
 
                                 <div class="visitante">
