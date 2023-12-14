@@ -132,7 +132,7 @@
                         </div>
 
                     </div> --}}
-                    @foreach ($JornadaActiva->reverse() as $partido)
+                    @foreach ($JornadaActiva as $partido)
                         <?php
                         $horabd = $partido->hora_prevista;
                         $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
