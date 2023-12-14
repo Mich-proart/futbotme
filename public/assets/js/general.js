@@ -54,25 +54,7 @@ const is_mobile = () => {
         return true
     }
 }
-/* SELECTOR DE JORNADAS */
-function incrementValue(element) {
-    var input = element.parentNode.previousElementSibling;
-    var value = parseInt(input.value);
-    if (isNaN(value)) {
-        value = 0;
-    }
-    input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
-}
 
-function decrementValue(element) {
-    var input = element.parentNode.previousElementSibling;
-    var value = parseInt(input.value);
-    if (isNaN(value) || value <= 0) {
-        value = 0;
-    } else {
-        input.value = value - 1;
-    }
-}
 
 const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
 const weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];

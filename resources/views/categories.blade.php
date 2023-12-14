@@ -1,7 +1,7 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
     {{-- {{ dd($torneo_Liga) }} --}}
-    
+
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
 
@@ -69,12 +69,12 @@
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
-                        step="1" maxlength="3" class="text-white fs-4" onchange="actualizarJornadaActiva(this.value)">
+                        step="1" maxlength="3" class="text-white fs-4">
                     <div class="buttons_cat">
                         <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
                     </div>
-                    <input type="hidden" name="id_temporada" value="{{$ID_TL}}">
+                    <input type="hidden" name="id_temporada" value="{{ $ID_TL }}">
                 </form>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
@@ -1002,41 +1002,55 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        function incrementValue() {
+        /* SELECTOR DE JORNADAS */
+        function incrementValue(element) {
+            var input = element.parentNode.previousElementSibling;
+            var value = parseInt(input.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
             updateJornada('increment');
         }
-    
-        function decrementValue() {
+
+        function decrementValue(element) {
+            var input = element.parentNode.previousElementSibling;
+            var value = parseInt(input.value);
+            if (isNaN(value) || value <= 0) {
+                value = 0;
+            } else {
+                input.value = value - 1;
+            }
             updateJornada('decrement');
         }
-    
+
         function updateJornada(action) {
             let jornadaActiva = parseInt(document.getElementById('number').value);
             var nombre = {{ $nombre }}
-            var IDD = {{$ID_TL}}
-    
+            var IDD = {{ $ID_TL }}
+
             if (action === 'increment') {
                 jornadaActiva++;
             } else if (action === 'decrement') {
                 jornadaActiva--;
             }
-    
+
             // Realiza la solicitud Ajax para actualizar la jornada
             $.ajax({
                 type: 'GET',
-                url: '/resultados-directo/torneo/'+nombre+'/'+IDD+'?jornadaActiva=' + jornadaActiva,
-                success: function (data) {
+                url: '/resultados-directo/torneo/' + nombre + '/' + IDD + '?jornadaActiva=' + jornadaActiva,
+                success: function(data) {
                     // Actualiza la interfaz de usuario con los nuevos datos
                     // Puedes utilizar 'data.jornadaActiva' para obtener el nuevo valor de la jornada
                     // y 'data.data' para obtener los nuevos datos
                     $('#jornadas_categorias').html(data);
                 },
-                error: function (error) {
+                error: function(error) {
                     console.error(error);
                 }
             });
         }
     </script>
-    
-    
+
+
 </x-layouts.app>
