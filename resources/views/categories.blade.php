@@ -1032,7 +1032,7 @@
                 data: {
                     nuevoJActiva: nuevoJActiva,
                     id: id,
-                    // Puedes agregar más datos si es necesario
+                    _token: '{{ csrf_token() }}',
                 },
                 success: function(response) {
                     // Actualizar el front-end con la nueva vista parcial

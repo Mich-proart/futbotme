@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use App\Http\Controllers\Admin\AdminController;
 use App\Helpers\HelperFunctions;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
 {
