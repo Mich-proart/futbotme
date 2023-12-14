@@ -24,6 +24,7 @@ Homestead.json
 /public/assets/images/img/club
 /public/assets/images/img/jugadores
 /resources/js/server.js
+composer.lock
 
 # Custom
 

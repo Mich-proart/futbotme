@@ -26,8 +26,6 @@ fs.watch(rutaJson, (event, filename) => {
             try {
                 const nuevosDatos = JSON.parse(data);
 
-                console.log(nuevosDatos)
-
                 // Solo envía si hay cambios
                 if (
                     JSON.stringify(nuevosDatos) !==
@@ -35,6 +33,7 @@ fs.watch(rutaJson, (event, filename) => {
                 ) {
                     io.emit("nuevos-datos-futbolme", nuevosDatos);
                     lastKnownData = nuevosDatos;
+                    console.log(nuevosDatos);
                 }
             } catch (error) {
                 console.error("Error al parsear JSON:", error);
@@ -48,6 +47,8 @@ io.on("connection", (socket) => {
     const contenidoJson = fs.readFileSync(rutaJson, "utf8");
     const datos = JSON.parse(contenidoJson);
     socket.emit("json-data-futbolme", datos);
+
+    console.log(datos)
 });
 
 // abrimos el servidor y los procesos en el puerto 3000
@@ -55,10 +56,6 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
-
-
-
-
 
 // const https = require("https");
 // const fs = require("fs");

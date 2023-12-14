@@ -1,52 +1,8 @@
 {
-    "PREMIJER LIGA - Bosnia y Herzegovina": [
-        {
-            "idTemporada": 119,
-            "datosTemporadaSeccion": {
-                "fechaPartido": "2023-11-22",
-                "horaPartido": "18:00:00",
-                "idFase": 6,
-                "nombreFase": " Ronda de Clasificaci\u00f3n",
-                "partidoId": 1132527,
-                "escudoLocal": 3709,
-                "equipoLocal_id": 3147,
-                "nombre_local": "HSK Zrinjski",
-                "nombre_local_completo": "Hrvatski Sportski Klub Zrinjski Mostar",
-                "nombre_local_corto": "HSK Zrinjski",
-                "goles_local": 0,
-                "escudoVisitante": 2752,
-                "equipoVisitante_id": 2327,
-                "nombre_visitante": "NK Siroki Brijeg",
-                "nombre_visitante_completo": "Nogometni Klub Siroki Brijeg",
-                "nombre_visitante_corto": "NK Siroki Brijeg",
-                "goles_visitante": 0
-            },
-            "nombreFase": " Ronda de Clasificaci\u00f3n"
-        }
-    ],
-    "PRIMERA DIVISION": [
-        {
-            "idTemporada": 119,
-            "datosTemporadaSeccion": {
-                "fechaPartido": "2023-11-22",
-                "horaPartido": "18:00:00",
-                "idFase": 6,
-                "nombreFase": " Ronda de Clasificaci\u00f3n",
-                "partidoId": 1132527,
-                "escudoLocal": 3709,
-                "equipoLocal_id": 3147,
-                "nombre_local": "HSK Zrinjski",
-                "nombre_local_completo": "Hrvatski Sportski Klub Zrinjski Mostar",
-                "nombre_local_corto": "HSK Zrinjski",
-                "goles_local": 0,
-                "escudoVisitante": 2752,
-                "equipoVisitante_id": 2327,
-                "nombre_visitante": "NK Siroki Brijeg",
-                "nombre_visitante_completo": "Nogometni Klub Siroki Brijeg",
-                "nombre_visitante_corto": "NK Siroki Brijeg",
-                "goles_visitante": 0
-            },
-            "nombreFase": " Ronda de Clasificaci\u00f3n"
-        }
-    ]
+    "idPartido": 1139384,
+    "estaPartido": 1,
+    "golesLocal": 1,
+    "golesVisitante": 2,
+    "idLocal": 800,
+    "idVisitante": 38918
 }
