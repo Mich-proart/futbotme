@@ -404,6 +404,9 @@ function terravison() {
         },
     });
 
+}
+
+function terravison22() {
     jQuery.ajax({
         url: `${urlBase}leer-fichero22/`,
         type: "POST",
@@ -431,5 +434,6 @@ function terravison() {
 setInterval(() => {
     console.log("leyendo ficheros")
     terravison()
+    terravison22()
 }, 1000);
 // }, 1000);
