@@ -307,7 +307,7 @@ class Controller extends BaseController
             return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'torneo_Liga' => $torneo_Liga, 'CC_Pais' => $CC_Pais, 'JornadaActiva' => $JornadaActiva, 'ID_TL' => $id]);
         }
 
-        if (!is_null($tabs)) {
+        if (!is_null($request)) {
             //return response()->json(['data' => $JornadaActiva, 'jornadaActiva' => $jornadaActiva]);
 
             $jornadaActiva = $request->input('jornadaActiva', 1); // Valor predeterminado si no se proporciona
