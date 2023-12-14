@@ -386,7 +386,7 @@
 
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
-                    print_r($partidos); 
+                    //print_r($partidos); 
                     $slug = Str::slug($nombreTemporada);
                 ?>
 
