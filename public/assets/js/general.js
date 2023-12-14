@@ -380,7 +380,8 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
 
 function terravison() {
 
-//    /usr/bin/php /home/d-shisnet/Documentos/futbotme/ztrigger_directos.php 2>> /home/d-shisnet/Documentos/futbotme/log_cron.txt
+    ///usr/bin/php /var/www/vhosts/futbolme.loading.net/futbolme.eu/ztrigger_directos.php 2>> /var/www/vhosts/futbolme.loading.net/futbolme.eu/log_cron.txt
+    // ya esta en el server pero algo no lo deja funcionar del todo bien
     jQuery.ajax({
         url: `${urlBase}leer-fichero/`,
         type: "POST",
@@ -397,42 +398,38 @@ function terravison() {
         success: function (response) {
             console.log(response);
             // let result = JSON.parse(response);
-            // $(acordion).append(result)
         },
         complete: function () {
             //$(".spiner-competiciones").fadeOut();
         },
     });
 
-// Utilizando fetch para obtener el archivo JSON
-// fetch('../../../directos-futbolme.json')
-//   .then(response => {
-//     // Verificar si la solicitud fue exitosa (código de estado 200)
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-//     // Parsear la respuesta a JSON
-//     return response.json();
-//   })
-//   .then(data => {
-//     // Trabajar con los datos obtenidos
-//     console.log(data); // Mostrar los datos en la consola
-    
-//     // Ejemplo: Acceder a los datos específicos
-//     // Suponiendo que el JSON tiene una estructura como {"nombre": "Ejemplo", "edad": 25}
-//     // console.log('Nombre:', data.nombre);
-//     // console.log('Edad:', data.edad);
-//   })
-//   .catch(error => {
-//     // Capturar errores de la solicitud o de parseo JSON
-//     console.error('Fetch error:', error);
-//   });
-
+    jQuery.ajax({
+        url: `${urlBase}leer-fichero22/`,
+        type: "POST",
+        // data: {
+        //     formData,
+        // },
+        headers: {
+            "X-CSRF-TOKEN": csrfToken,
+        },
+        beforeSend: function () {
+            // $(".spiner-competiciones").fadeIn();
+            // $(acordion).html("");
+        },
+        success: function (response) {
+            console.log(response);
+            // let result = JSON.parse(response);
+        },
+        complete: function () {
+            //$(".spiner-competiciones").fadeOut();
+        },
+    });
 }
 
 // setTimeout(() => {
 setInterval(() => {
-    console.log("test")
+    console.log("leyendo ficheros")
     terravison()
 }, 1000);
 // }, 1000);
