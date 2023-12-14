@@ -75,6 +75,7 @@
                         <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
                     </div>
+                    <input type="hidden" name="id_temporada" value="{{$ID_TL}}">
                 </div>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
@@ -999,6 +1000,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
         function actualizarJornadaActiva(nuevaJornada) {
