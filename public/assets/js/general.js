@@ -380,6 +380,7 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
 function terravison() {
     const rutaJson = "./directos-futbolme.json";
     let lastKnownData = null;
+    console.log('leyendo fichero');
     fs.watch(rutaJson, (event, filename) => {
         if (event === "change") {
             fs.readFile(rutaJson, "utf8", (err, data) => {
@@ -391,7 +392,7 @@ function terravison() {
                 // validacio de ejecucion captura de errores
                 try {
                     const nuevosDatos = JSON.parse(data);
-
+                    console.log(nuevosDatos);
                     // Solo envía si hay cambios
                     if (
                         JSON.stringify(nuevosDatos) !==
