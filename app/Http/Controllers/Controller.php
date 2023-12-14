@@ -48,14 +48,14 @@ class Controller extends BaseController
                 $data = $response->json();
 
                 // Obtener el código de país (alpha-2 code)
-                $pais = $data[0]['alpha2Code'];
+                $pais = $data[0]['languages'][0]['iso639_1'];
             } else {
                 // Manejar el caso en que la solicitud no fue exitosa
-                $pais = 'No encontrado';
+                $pais = 'eu';
             }
         } catch (\Exception $e) {
             // Manejar cualquier excepción que pueda ocurrir durante la solicitud
-            $pais = 'Error en la solicitud';
+            $pais = 'un';
         }
 
         // Retornar el código del país
