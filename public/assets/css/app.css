@@ -768,25 +768,25 @@ body {
 
     /* INPUT NUMBER DE JORNADA DESKTOP */
 
-    /* .selecto_de_jornadas input[type="number"] {
+    .number-input input[type="number"] {
         outline: none;
         -moz-appearance: textfield;
     }
-    
-    .selecto_de_jornadas input[type="number"]::-webkit-inner-spin-button,
-    .selecto_de_jornadas input[type="number"]::-webkit-outer-spin-button {
+
+    .number-input input[type="number"]::-webkit-inner-spin-button,
+    .number-input input[type="number"]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         appearance: none;
-    } */
+    }
 
     .number-input {
         position: relative;
     }
     .number-input input {
         background: #818583;
-        border-right: 0;
-        font-size: 1.5em;
+        border: 0px;
         overflow: hidden;
+        width: 92%;
     }
     .number-input input:focus,
     .number-input input:active {

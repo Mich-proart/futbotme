@@ -220,17 +220,7 @@ function nextDay() {
 
 //document.onload = generateCalendar(date);
 
-window.onload = function () {
-    generateCalendar();
-    const currentDateElement = document.getElementById("currentDate");
-    if (currentDateElement) {
-        const today = new Date();
-        const dayOfWeek = weekdays[today.getDay()];
-        const day = today.getDate().toString().padStart(2, '0');
-        const month = (today.getMonth() + 1).toString().padStart(2, '0');
-        currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
-    }
-};
+
 
 /* SELECTOR DE JORNADAS */
 var numInput;

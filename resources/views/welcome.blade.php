@@ -1,5 +1,17 @@
 <x-layouts.app title="Home" meta-description="Home page">
-    <?php $Url_static = 'https://futbolme.eu/'; ?>
+    <script>
+        window.onload = function() {
+            generateCalendar();
+            const currentDateElement = document.getElementById("currentDate");
+            if (currentDateElement) {
+                const today = new Date();
+                const dayOfWeek = weekdays[today.getDay()];
+                const day = today.getDate().toString().padStart(2, '0');
+                const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                currentDateElement.textContent = `${dayOfWeek}, ${day}/${month}`;
+            }
+        };
+    </script>
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
@@ -23,14 +35,14 @@
                                     <i class=" bi bi-chevron-left fs-5"></i>
                                 </button>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    
+
                                     <div class="field ps-2">
                                         <form class="form-input" id="date-search" onsubmit="return setDate(this)">
                                             <input type="date" class="text-field" name="date" id="date"
                                                 style="display: none;">
 
-                                            <button type="button" class="btn bg-transparent border-0 color-black " data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal">
+                                            <button type="button" class="btn bg-transparent border-0 color-black "
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                 <i class="icon-Calendar fs-03"></i>
                                             </button>
 
@@ -50,7 +62,8 @@
 
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -65,8 +78,10 @@
 
                                                 </div>
                                                 <div class="buttons">
-                                                    <button class="icon" onclick="prevMonth()" title="Mes anterior"><i class="bi bi-chevron-left"></i></button>
-                                                    <button class="icon" onclick="nextMonth()" title="Próximo mes"><i class="bi bi-chevron-right"></i></button>
+                                                    <button class="icon" onclick="prevMonth()" title="Mes anterior"><i
+                                                            class="bi bi-chevron-left"></i></button>
+                                                    <button class="icon" onclick="nextMonth()" title="Próximo mes"><i
+                                                            class="bi bi-chevron-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,7 +168,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
                                 class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
                             </a>
                         </div>
@@ -202,7 +217,7 @@
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
-                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidoInfo['datosTemporadaSeccion']['escudoLocal']; ?>.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
@@ -218,7 +233,7 @@
                                         {{-- escudo --}}
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"> --}}
-                                            <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidoInfo['datosTemporadaSeccion']['escudoVisitante']; ?>.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
@@ -327,60 +342,6 @@
                     </div>
                 @endforeach
 
-                {{--  <div class="accordion-item br-0">
-
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body border-bottom">
-                            <div class="d-flex aling-items-center justify-content-between ">
-                                <div class="col-2 d-flex aling-items-center ">
-                                    <div class="d-block py-2 px-1 fs-2">
-                                        <span class="icon-resolve-filled">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-red-minutos text-white">74’</span>
-                                    </div>
-
-                                </div>
-
-                                <div
-                                    class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    <span class="icon-alienacion d-inline-block fs-1"></span>
-                                    <span class="icon-ball d-inline-block fs-1"></span>
-                                    <span class="icon-TV d-inline-block fs-1"></span>
-                                </div>
-
-                            </div>
-                            <div class="mx-0 partido_alineado my-2">
-                                <div class="local">
-                                    <h3 class="d-block">Real Madrid</h3>
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2829.png"
-                                            class="logo_s img-fluid"></div>
-                                </div>
-
-                                <div class="marcador">
-                                    <span class="goles-local">4</span>
-                                    <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">0</span>
-                                </div>
-
-                                <div class="visitante">
-                                    <div class="escudo d-lg-inline-block d-none"><img
-                                            src="https://assets.b365api.com/images/team/m/2817.png"
-                                            class="logo_s img-fluid"></div>
-                                    <h3 class="d-block">FC Barcelona</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div> --}}
 
 
             </div>
@@ -420,7 +381,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
                                 class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
                             </a>
                         </div>
@@ -477,7 +438,7 @@
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
-                                        <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidoInfo['datosTemporadaSeccion']['escudoLocal']; ?>.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
@@ -493,7 +454,7 @@
                                         {{-- escudo --}}
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2817.png"
                                             class="logo_s img-fluid"> --}}
-                                            <img src="https://futbolme.com/static/img/club/escudo<?php echo $partidoInfo['datosTemporadaSeccion']['escudoVisitante']; ?>.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
@@ -533,7 +494,7 @@
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
-                            <a href="{{$Url_static}}/resultados-directo/torneo/{{ $slug }}/{{ $partidos[0]['idTemporada'] }}/"
+                            <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
                                 class="d-inline-block fs-01 nombre_torneo_liga"><?php echo $nombreTemporada; ?></a>
                         </div>
 
@@ -590,7 +551,7 @@
                                 <div class="local">
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
-                                        <img src="https://assets.b365api.com/images/team/m/2829.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                     <div class="goleadores">
@@ -608,7 +569,7 @@
 
                                 <div class="visitante">
                                     <div class="escudo d-lg-inline-block d-none">
-                                        <img src="https://assets.b365api.com/images/team/m/2817.png"
+                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>

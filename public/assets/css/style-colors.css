@@ -79,6 +79,10 @@
 .color-gray-medium {
     color: var(--color-gray-medium);
 }
+.color-gray-22{
+    color: var(--color-gray-22);
+}
+
 .color-green-second {
     color: var(--color-green-second);
 }
