@@ -203,7 +203,7 @@ class Controller extends BaseController
     }
 
 
-    private function actualizarJornada(Request $request)
+    public function actualizarJornada(Request $request)
     {
 
 
