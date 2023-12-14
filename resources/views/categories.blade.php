@@ -1,7 +1,7 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
     {{-- {{ dd($torneo_Liga) }} --}}
-    
+
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
 
@@ -69,12 +69,13 @@
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
-                        step="1" maxlength="3" class="text-white fs-4" onchange="actualizarJornadaActiva(this.value)">
+                        step="1" maxlength="3" class="text-white fs-4"
+                        onchange="actualizarJornadaActiva(this.value)">
                     <div class="buttons_cat">
                         <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
                     </div>
-                    <input type="hidden" name="id_temporada" value="{{$ID_TL}}">
+                    <input type="hidden" name="id_temporada" value="{{ $ID_TL }}">
                 </form>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
@@ -1003,9 +1004,13 @@
 
     <script>
         function actualizarJornadaActiva(nuevaJornada) {
-            var id = {{$ID_TL}}; // Ajusta esto según cómo obtienes el ID
-    
-            axios.post('/actualizar-jornada', { nuevaJornada, id })
+            var id = {{ $ID_TL }}; // Ajusta esto según cómo obtienes el ID
+
+            axios.post('/actualizar-jornada', {
+                    nuevaJornada,
+                    id,
+                    _token: '{{ csrf_token() }}'
+                })
                 .then(response => {
                     document.getElementById('jornadas_categorias').innerHTML = response.data.view;
                 })
@@ -1014,6 +1019,6 @@
                 });
         }
     </script>
-    
-    
+
+
 </x-layouts.app>
