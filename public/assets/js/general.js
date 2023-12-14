@@ -40,7 +40,7 @@ $(document).ready(function () {
         }
         input.val(input_val);
     });
-    
+
 
 })
 
@@ -221,3 +221,157 @@ function nextDay() {
 //document.onload = generateCalendar(date);
 
 
+function obtenerEvento(btnIdLiga) {
+
+    jQuery.ajax({
+        url: `/apiBetsapiEventos.php`, // AJAX handler,
+        type: 'POST',
+        data: {
+            id: jQuery(btnIdLiga).attr('attr-id-evento'),
+        },
+        beforeSend: function () {
+            // accion de antes envio
+        },
+        complete: function () {
+
+            // accion cuando este completa la peticion
+        },
+        success: function (data) {
+
+            console.log(jQuery(btnIdLiga).attr('attr-id-evento'));
+            console.log(data)
+
+            let result = JSON.parse(data)
+            jQuery('.lista-eventos').empty()
+            jQuery('.icons-directos-estaticos').find('.content-eventos').addClass('d-none')
+            jQuery('.contenedorIconosPartido').find('.content-eventos').addClass('d-none')
+            jQuery(btnIdLiga).closest('.icons-directos-estaticos').find('.content-eventos').removeClass('d-none')
+            jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.content-eventos').removeClass('d-none')
+            if (result.results[0].events) {
+                for (const iterator of result.results[0].events) {
+
+                    jQuery(btnIdLiga).addClass("d-inline-block");
+
+                    jQuery(btnIdLiga).closest('.icons-directos-estaticos').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
+                    jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
+                }
+            } else {
+                console.log("en el falso")
+                jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.lista-eventos').append(`<li class="list-group-item">No disponible</li>`)
+            }
+        }
+    })
+}
+// Obtenemos las alineciones por medio de api pasando como parametro el id que le pasamos 
+// En el boton click de directo en la portada
+function obtenerAlineacion(btnIdLiga) {
+
+    jQuery.ajax({
+        url: `/apiBetsapi.php`, // AJAX handler,
+        type: 'POST',
+        data: {
+            id: jQuery(btnIdLiga).attr('attr-id-evento'),
+        },
+        beforeSend: function () {
+            // accion de antes envio
+        },
+        complete: function () {
+
+            // accion cuando este completa la peticion
+        },
+        success: function (data) {
+
+            console.log(jQuery(btnIdLiga).attr('attr-id-evento'))
+
+            console.log(data)
+
+            jQuery('.listado-locales').empty()
+
+            jQuery('.listado-visitantes').empty()
+
+            jQuery('.span-id-torneo-alineacion').closest('.pull-right').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
+
+            jQuery('.span-id-torneo-alineacion').closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
+
+            jQuery('.title-alineacion').addClass('d-none')
+
+            let result = JSON.parse(data)
+
+            if (result.results.length == 0) {
+
+                jQuery('.title-alineacion').addClass('d-none')
+
+                jQuery(btnIdLiga).closest('.pull-right').find('.content-alineaciones').find('p').remove()
+
+                jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').find('p').remove()
+
+                jQuery(btnIdLiga).closest('.pull-right').find('.content-alineaciones').append('<p>No disponible</p>')
+
+                jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').append('<p>No disponible</p>')
+
+                jQuery(btnIdLiga).closest('.pull-right').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+
+                jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+
+            } else {
+
+                for (const iterator of result.results.home.startinglineup) {
+
+                    jQuery(btnIdLiga).closest('.pull-right').find('.listado-locales').append(
+                        `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+
+                    jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-locales').append(
+                        `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+
+                    //console.log(iterator)          
+                }
+
+                for (const iterator of result.results.away.startinglineup) {
+
+                    jQuery(btnIdLiga).closest('.pull-right').find('.listado-visitantes').append(
+                        `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+
+                    jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-visitantes').append(
+                        `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+                    //console.log(iterator)          
+                }
+
+                jQuery(btnIdLiga).closest('.pull-right').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+
+                jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+
+                jQuery(btnIdLiga).closest('.pull-right').find('.title-alineacion').removeClass('d-none')
+
+                jQuery(btnIdLiga).closest('.jorge-jorge').find('.title-alineacion').removeClass('d-none')
+            }
+        }
+    })
+
+};
+
+
+
+//Mostramos modal de alineacion
+jQuery(document).on('click', '.span-id-torneo-alineacion', function () {
+
+    obtenerAlineacion(jQuery(this));
+
+});
+
+// Cerramos modal de alineacion
+jQuery(document).on('click', '.cerrar-alineacion', function () {
+
+    jQuery(this).closest('.content-alineaciones').removeClass('d-block').addClass('d-none');
+});
+
+// Mostramos datos de tipo evento de torneo
+jQuery(document).on('click', '.span-evento-trigger', function () {
+
+    obtenerEvento(jQuery(this));
+});
+
+// Ocultar modal de eventos 
+jQuery(document).on('click', '.cerrar-eventos', function () {
+
+    jQuery(this).closest('.content-eventos').addClass('d-none')
+});
