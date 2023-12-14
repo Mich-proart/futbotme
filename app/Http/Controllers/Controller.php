@@ -193,7 +193,7 @@ class Controller extends BaseController
             ORDER BY p.fecha, p.hora_prevista");
         }
 
-        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info, 'CC_Pais' => $codigoPais, 'JornadasActiva' => $JornadaActiva]);
+        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info, 'CC_Pais' => $codigoPais, 'JornadaActiva' => $JornadaActiva]);
     }
 
     public function indexCategoriasAscenso($nacional)
