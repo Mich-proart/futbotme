@@ -64,8 +64,8 @@
             <div class="tab-pane fade show active" id="pills-jornada" role="tabpanel"
                 aria-labelledby="pills-jornada-tab">
                 {{-- CAMBIAR DE JORNADA --}}
-                <form action="/actualizar-jornada" method="post" class="number-input text-white bg-gray-22 p-4">
-                    @csrf
+                <div class="number-input text-white bg-gray-22 p-4">
+
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
@@ -75,7 +75,7 @@
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
                     </div>
                     <input type="hidden" name="id_temporada" value="{{ $ID_TL }}">
-                </form>
+                </div>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
 

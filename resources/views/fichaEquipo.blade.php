@@ -1,6 +1,3 @@
-{{-- <h1> ficha de equipo {{ $club }} con el id {{ $id }}</h1> --}}
-{{-- {{ $teams }} --}}
-
 <x-layouts.app title="Ficha equipo" meta-description="ficha individual del equipo">
 
 
@@ -35,8 +32,8 @@
                 <img src="{{ asset('assets/images/img/club/escudo' . $teams[0]->club_id_Equipo) }}.png" alt="escudo {{ $teams[0]->nombreEquipo }} " class="img-fluid">
             </div>
             <div class="col">
-                <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $teams[0]->nombreEquipo }}</h1>
-                <h3>{{ $teams[0]->nombreCategoria }}</h3>
+                <h1 class="color-brand-green text-uppercase "> {{ $teams[0]->nombreEquipo }}</h1>
+                <h2>{{ $teams[0]->nombreCategoria }}</h2>
             </div>
             <div class="col">
                 {{-- <img class="img-fluid" src="{{ asset('assets/images/img/equipaciones/eq' . $teams[0]->equipacion_id) }}.png"  alt="Equipacion {{ $teams[0]->nombreEquipo }}" class="img-fluid"> --}}
@@ -54,7 +51,7 @@
                 aria-controls="pills-datos" aria-selected="true">Datos</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3 active" id="pills-jornada-tab"
+            <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-jornada-tab"
                 data-bs-toggle="pill" data-bs-target="#pills-jornada" type="button" role="tab"
                 aria-controls="pills-jornada" aria-selected="false">Jornada</button>
         </li>
@@ -86,7 +83,7 @@
             <div class="container-fluid">
                 <div class="row row-cols-lg-2">
                     <div class="col">
-                        <h4>{{ $teams[0]->nombreEstadio }}</h4>
+                        <h3>{{ $teams[0]->nombreEstadio }}</h3>
                         <p>{{ $teams[0]->estadioDireccion }} - {{ $teamProvincia[0]->nombreProvincia}}</p>
                         <br>
                         <p>Año de inauguración: {{ $teams[0]->estadioInauguracion }}</p>
