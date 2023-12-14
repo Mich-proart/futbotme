@@ -79,6 +79,7 @@
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5">
 
+                    {{dd($JornadaActiva)}}
                     {{-- EJEMPLOS OJO CON LAS CLASES DE LOS DIRECTOS, FUTUROS Y FINALIZADOS --}}
                     <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
 
