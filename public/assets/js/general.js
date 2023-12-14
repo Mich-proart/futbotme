@@ -40,6 +40,33 @@ $(document).ready(function () {
         }
         input.val(input_val);
     });
+    /* SELECTOR DE JORNADAS */
+    var numInput;
+    var number = 0;
+    var numberInput = 0;
+
+    $(".increment").on("click", function () {
+        numInput = $(this).parent(".buttons_cat").siblings("input");
+        number = parseInt($(numInput).val());
+        if (isNaN(number)) {
+            number = 0;
+        }
+        $(numInput).val(parseInt(number) + 1);
+        numInput = null; number = 0; numInput = 0;
+    });
+
+    $(".decrement").on("click", function () {
+        numInput = $(this).parent(".buttons_cat").siblings("input");
+        number = parseInt($(numInput).val());
+
+        if ((isNaN(number)) || (number < 0)) {
+            number = 0;
+            $(numInput).val(number);
+        } else if ($(numInput).val() > 0) {
+            $(numInput).val(parseInt(number) - 1);
+        }
+        numInput = null; number = 0; numInput = 0;
+    });
 
 })
 
@@ -219,36 +246,5 @@ function nextDay() {
 }
 
 //document.onload = generateCalendar(date);
-
-
-
-/* SELECTOR DE JORNADAS */
-var numInput;
-var number = 0;
-var numberInput = 0;
-
-$(".increment").on("click", function () {
-    numInput = $(this).parent(".buttons").siblings("input");
-    number = parseInt($(numInput).val());
-    if (isNaN(number)) {
-        number = 0;
-    }
-    $(numInput).val(parseInt(number) + 1);
-    numInput = null; number = 0; numInput = 0;
-});
-
-$(".decrement").on("click", function () {
-    numInput = $(this).parent(".buttons").siblings("input");
-    number = parseInt($(numInput).val());
-
-    if ((isNaN(number)) || (number < 0)) {
-        number = 0;
-        $(numInput).val(number);
-    } else if ($(numInput).val() > 0) {
-        $(numInput).val(parseInt(number) - 1);
-    }
-    numInput = null; number = 0; numInput = 0;
-});
-
 
 

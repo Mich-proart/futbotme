@@ -66,12 +66,12 @@
             <div class="tab-pane fade show active" id="pills-jornada" role="tabpanel"
                 aria-labelledby="pills-jornada-tab">
                 {{-- CAMBIAR DE JORNADA --}}
-                <div class="number-input text-white color-gray-22">
+                <div class="number-input text-white bg-gray-22">
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
                         step="1" oninput="maxLengthCheck(this)" maxlength="3" class="text-white fs-4">
-                    <div class="buttons">
+                    <div class="buttons_cat">
                         <div class="increment"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement"><i class="bi bi-chevron-down"></i></div>
                     </div>

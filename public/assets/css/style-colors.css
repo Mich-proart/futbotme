@@ -52,6 +52,10 @@
     background-color: var(--color-gray-hora);
 }
 
+.bg-gray-22{
+    background-color: var(--color-gray-22);
+}
+
 .bg-feature {
     background-color: var(--color-green-feature);
 }
