@@ -375,3 +375,39 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
 
     jQuery(this).closest('.content-eventos').addClass('d-none')
 });
+
+/*  */
+function terravison() {
+    const rutaJson = "./directos-futbolme.json";
+    let lastKnownData = null;
+    fs.watch(rutaJson, (event, filename) => {
+        if (event === "change") {
+            fs.readFile(rutaJson, "utf8", (err, data) => {
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+
+                // validacio de ejecucion captura de errores
+                try {
+                    const nuevosDatos = JSON.parse(data);
+
+                    // Solo envía si hay cambios
+                    if (
+                        JSON.stringify(nuevosDatos) !==
+                        JSON.stringify(lastKnownData)
+                    ) {
+                        lastKnownData = nuevosDatos;
+                        console.log(nuevosDatos);
+                    }
+                } catch (error) {
+                    console.error("Error al parsear JSON:", error);
+                }
+            });
+        }
+    });
+}
+
+setTimeout(() => {
+    terravison()
+}, 1000);
