@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Controllers\Admin\AdminController;
 use App\Helpers\HelperFunctions;
+use Illuminate\Support\Facades\Http;
 
 class Controller extends BaseController
 {
@@ -33,6 +34,32 @@ class Controller extends BaseController
             'partidosEnJuegoCurDate' => $partidosEnJuegoCurDate,
             'partidosTerminadosCurDate' => $partidosTerminadosCurDate
         ]);
+    }
+
+    /* FUNCION PARA BUSCAR EL CODIGO DE PAIS POR MEDIO DEL NOMBRE DEL PAIS */
+    public function obtenerCodigoPais($pnombrepais)
+    {
+        try {
+            // Llamada a la API para obtener información del país por nombre
+            $response = Http::get('https://restcountries.com/v2/name/' . $pnombrepais);
+
+            // Verificar si la solicitud fue exitosa
+            if ($response->successful()) {
+                $data = $response->json();
+
+                // Obtener el código de país (alpha-2 code)
+                $pais = $data[0]['alpha2Code'];
+            } else {
+                // Manejar el caso en que la solicitud no fue exitosa
+                $pais = 'No encontrado';
+            }
+        } catch (\Exception $e) {
+            // Manejar cualquier excepción que pueda ocurrir durante la solicitud
+            $pais = 'Error en la solicitud';
+        }
+
+        // Retornar el código del país
+        return $pais;
     }
 
     public function indexCategorias($nombre, $id = null)
@@ -102,9 +129,11 @@ class Controller extends BaseController
             INNER JOIN pais pa ON tor.pais_id=pa.id
             INNER JOIN comunidad co ON tor.comunidad_id=co.id
             INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id=$id");
+            $INFO_PAIS = $Info[0];
+            $codigoPais = $this->obtenerCodigoPais($INFO_PAIS->nombrePais);
         }
 
-        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info]);
+        return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'info' => $Info, 'CC_Pais' => $codigoPais]);
     }
 
     public function indexCategoriasAscenso($nacional)

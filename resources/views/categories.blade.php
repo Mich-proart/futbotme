@@ -1,6 +1,11 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
-    {{ dd($info) }}
+    {{-- {{ dd($info) }} --}}
+    {{-- Accede directamente a la primera posición del array --}}
+    <?php $torneo_Liga = $Info[0]; ?>
+
+    {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
+    <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
 
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
@@ -8,10 +13,10 @@
                 <img src="https://flagcdn.com/es.svg" width="32" height="32" alt="bandera del pais del torneo"
                     class="rounded-circle">
             </div>
-            <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $nombre }}</h1>
+            <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $torneo_Liga->nombre }}</h1>
         </div>
 
-        <p class="fs-000">La SEGUNDA FEDERACIÓN - Grupo 3, con 652 goles en 306 partidos, obtiene un coeficiente de 2.13
+        <p class="fs-000">{{ $torneo_Liga->nombre }} - Grupo 3, con 652 goles en 306 partidos, obtiene un coeficiente de 2.13
             goles por
             partido, que materializan 128 victorias locales, 100 empates y 78 victorias visitantes.</p>
     </section>
