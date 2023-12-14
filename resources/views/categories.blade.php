@@ -1008,7 +1008,7 @@
                 value = 0;
             }
             input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
-            updateJornada('increment');
+            
         }
 
         function decrementValue(element) {
@@ -1019,37 +1019,31 @@
             } else {
                 input.value = value - 1;
             }
-            updateJornada('decrement');
         }
 
-        function updateJornada(action) {
-            let jornadaActiva = parseInt(document.getElementById('number').value);
-            var nombre = '{{ $nombre }}';
-            var IDD = '{{ $ID_TL }}';
+        
+            $('#number').on('change', function() {
+                var nuevoJActiva = $(this).val();
+                var id = '{{ $ID_TL }}';
 
-            if (action === 'increment') {
-                jornadaActiva++;
-            } else if (action === 'decrement') {
-                jornadaActiva--;
-            }
-
-            // Realiza la solicitud Ajax para actualizar la jornada
-            $.ajax({
-                type: 'GET',
-                url: '/resultados-directo/torneo/' + nombre + '/' + IDD + '?jornadaActiva=' + jornadaActiva,
-                success: function(data) {
-                    // Actualiza la interfaz de usuario con los nuevos datos
-                    // Puedes utilizar 'data.jornadaActiva' para obtener el nuevo valor de la jornada
-                    // y 'data.data' para obtener los nuevos datos
-                    console.log('data.jornadaActiva');
-                    console.log(data.jornadaActiva);
-                    //$('#jornadas_categorias').empty().html(data);
-                },
-                error: function(error) {
-                    console.error(error);
-                }
+                $.ajax({
+                    url: '{{ route('actualizar-jactiva') }}',
+                    method: 'POST',
+                    data: {
+                        nuevoJActiva: nuevoJActiva,
+                        id:id,
+                        // Puedes agregar más datos si es necesario
+                    },
+                    success: function(response) {
+                        // Actualizar el front-end con la nueva vista parcial
+                        $('#jornadas_categorias').html(response);
+                    },
+                    error: function(error) {
+                        console.error(error);
+                    }   
+                });
             });
-        }
+        
     </script>
 
 
