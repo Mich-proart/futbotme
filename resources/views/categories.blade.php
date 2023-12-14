@@ -1041,8 +1041,8 @@
                     // Actualiza la interfaz de usuario con los nuevos datos
                     // Puedes utilizar 'data.jornadaActiva' para obtener el nuevo valor de la jornada
                     // y 'data.data' para obtener los nuevos datos
-                    console.log(data.data);
-                    $('#jornadas_categorias').empty().html(data);
+                    console.log('data.jornadaActiva');
+                    //$('#jornadas_categorias').empty().html(data);
                 },
                 error: function(error) {
                     console.error(error);
