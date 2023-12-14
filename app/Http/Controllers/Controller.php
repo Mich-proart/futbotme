@@ -245,7 +245,7 @@ class Controller extends BaseController
         INNER JOIN torneo tor ON t.torneo_id=tor.id
         INNER JOIN pais pa ON tor.pais_id=pa.id
         INNER JOIN comunidad co ON tor.comunidad_id=co.id
-        INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id=$id");
+        INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id= :valor_id", ['valor_id' => $id]);
         
         $INFO_PAIS = $Info[0];
         $CC_Pais = $this->obtenerCodigoPais($INFO_PAIS->nombrePais);
