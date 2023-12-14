@@ -23,7 +23,6 @@
                                 <th>Caracteristicas</th>
                             </tr>
                         </thead>
-                        -- llenamos la tabla por medio de ajax --
                         <tbody></tbody>
                     </table>
                 </div> <!-- end card body-->

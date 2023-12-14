@@ -15,6 +15,8 @@
             <br>
             <ul>
                 <li>Gol equipoA David Soria Solís minuto 30', observación Una</li>
+                <li>Gol equipoB David Soria Solís minuto 40', observación Dos</li>
+                <li>Gol equipoC David Soria Solís minuto 10', observación Una</li>
             </ul>
             <table width="100%" bgcolor="gainsboro">
                 <tbody>
@@ -72,9 +74,9 @@
             </table>
             <div class="row pb-3">
                 <div class="col-12 mt-2">
-                    http://localhost:8000/admin-panel/torneo/216/5361/188 --> no resolve
+                    {{-- http://localhost:8000/admin-panel/torneo/216/5361/188 --> no resolve --}}
 
-                    consulta front ascensos
+                    {{-- consulta front ascensos
                     $consulta = 'SELECT a.id, a.categoria_id, a.division_id, a.nombre, a.orden, ae.equipo_id, ae.ascenso_id, ae.posicion, ae.temporada_id, e.nombre equipo, e.club_id, cat.nombre categoria, t.nombre temporada
                     FROM ascenso a
                     INNER JOIN ascensoequipo ae ON a.id=ae.ascenso_id
@@ -82,15 +84,15 @@
                     INNER JOIN temporada t ON t.id=ae.temporada_id
                     INNER JOIN torneo tor ON tor.id=t.torneo_id
                     INNER JOIN categoriatorneo cat ON cat.id=a.categoria_id
-                    ORDER BY a.categoria_id, a.division_id, tor.orden, a.orden, ae.posicion';
+                    ORDER BY a.categoria_id, a.division_id, tor.orden, a.orden, ae.posicion'; --}}
 
 
 
-                    para obtener todos los torneos 
-                    SELECT t.id, t.nombre, te.id as temporada_id FROM torneo t INNER JOIN temporada te ON te.torneo_id=t.id WHERE t.visible>4;
+                    {{-- para obtener todos los torneos  --}}
+                    {{-- SELECT t.id, t.nombre, te.id as temporada_id FROM torneo t INNER JOIN temporada te ON te.torneo_id=t.id WHERE t.visible>4; --}}
 
 
-                    <br><br><br><br><br><br>
+                    {{-- <br><br><br><br><br><br> --}}
 
                     <?php        
                     
@@ -160,8 +162,8 @@
                             $consulta = 'SELECT '.$campos.' FROM '.$tabla.$union.$condicion.$orden; ?>
 
 
-<?php var_dump($consulta);?>
-<br><br><br><br><br>
+<?php //var_dump($consulta);?>
+
 
 <?php 
 $temporada_id = 99;
@@ -174,7 +176,7 @@ $consulta = 'SELECT a.id, a.categoria_id, a.division_id, a.nombre, a.orden, ae.e
         INNER JOIN categoriatorneo cat ON cat.id=a.categoria_id
         ORDER BY a.categoria_id, a.division_id, tor.orden, a.orden, ae.posicion';
 
-        var_dump($consulta);
+        //var_dump($consulta);
 ?>
 
 
@@ -185,57 +187,6 @@ $consulta = 'SELECT a.id, a.categoria_id, a.division_id, a.nombre, a.orden, ae.e
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br>
                     <span class="">Observaciones partido</span>
                     <textarea class="w-100 my-2" name="" rows="10">{{ $datosPartido[0]->observaciones }}</textarea>
                 </div>
