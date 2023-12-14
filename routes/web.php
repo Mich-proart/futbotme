@@ -38,7 +38,7 @@ Route::get('/resultados-directo/torneo/{nombre?}/{id?}/{tabs?}', [Controller::cl
 
 /* ESTE ES PARA ACTUALIZAR LAS JORNADAS POR EL INPUT */
 
-Route::post('/actualizar-jornada', [Controller::class, 'actualizarJornada'])->name('actualizar-jornada');
+/* Route::post('/actualizar-jornada', [Controller::class, 'actualizarJornada'])->name('actualizar-jornada'); */
 
 Route::get('/ascensos-y-descensos/{nacional}', [Controller::class, 'indexCategoriasAscenso'])->name('categories-ascenso-descenso');
 

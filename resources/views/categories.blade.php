@@ -1,14 +1,14 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
 
     {{-- {{ dd($torneo_Liga) }} --}}
-
+    
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
 
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
             <div class="rounded-circle bandera_pais">
-                <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                <img src="https://flagcdn.com/{{ $CC_Pais }}.svg" width="32" height="32"
                     alt="bandera del pais del torneo" class="rounded-circle">
             </div>
             <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $torneo_Liga->nombre }}</h1>
@@ -69,13 +69,12 @@
                     <label for="number" class="fs-4">JORNADA</label>
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
-                        step="1" maxlength="3" class="text-white fs-4"
-                        onchange="actualizarJornadaActiva(this.value)">
+                        step="1" maxlength="3" class="text-white fs-4" onchange="actualizarJornadaActiva(this.value)">
                     <div class="buttons_cat">
                         <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
                         <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
                     </div>
-                    <input type="hidden" name="id_temporada" value="{{ $ID_TL }}">
+                    <input type="hidden" name="id_temporada" value="{{$ID_TL}}">
                 </form>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
@@ -1003,22 +1002,41 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        function actualizarJornadaActiva(nuevaJornada) {
-            var id = {{ $ID_TL }}; // Ajusta esto según cómo obtienes el ID
-
-            axios.post('/actualizar-jornada', {
-                    nuevaJornada,
-                    id,
-                    _token: '{{ csrf_token() }}'
-                })
-                .then(response => {
-                    document.getElementById('jornadas_categorias').innerHTML = response.data.view;
-                })
-                .catch(error => {
+        function incrementValue() {
+            updateJornada('increment');
+        }
+    
+        function decrementValue() {
+            updateJornada('decrement');
+        }
+    
+        function updateJornada(action) {
+            let jornadaActiva = parseInt(document.getElementById('number').value);
+            var nombre = {{nombre}}
+            var IDD = {{$ID_TL}}
+    
+            if (action === 'increment') {
+                jornadaActiva++;
+            } else if (action === 'decrement') {
+                jornadaActiva--;
+            }
+    
+            // Realiza la solicitud Ajax para actualizar la jornada
+            $.ajax({
+                type: 'GET',
+                url: '/resultados-directo/torneo/'+nombre+'/'+IDD+'?jornadaActiva=' + jornadaActiva,
+                success: function (data) {
+                    // Actualiza la interfaz de usuario con los nuevos datos
+                    // Puedes utilizar 'data.jornadaActiva' para obtener el nuevo valor de la jornada
+                    // y 'data.data' para obtener los nuevos datos
+                    $('#jornadas_categorias').html(data);
+                },
+                error: function (error) {
                     console.error(error);
-                });
+                }
+            });
         }
     </script>
-
-
+    
+    
 </x-layouts.app>
