@@ -28,9 +28,27 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $estado_clase = '';?>
                             @foreach ($partidosTodosLosEstados as $partido)
-                                <tr class="fila-directos-partido" tr-attr-id="{{ $partido['idBetsapi'] }}">
-                                    <th scope="row"><span class="fila-id-directo-partido">{{ $partido['idPartido'] }}</span></th>
+                                <?php if(intval($partido['estadoPartido']) === 2){ 
+                                    $estado_clase = '<span class="badge bg-success rounded-pill">Directo</span>';
+                                }elseif(intval($partido['estadoPartido']) === 1){ 
+                                    $estado_clase = '<span class="badge bg-danger rounded-pill">Final</span>';
+                                }else{ 
+                                    $estado_clase = '<span class="badge bg-info rounded-pill">No jugado</span>';
+                                }?>
+                                <tr class="fila-directos-partido" tr-attr-id-partido="{{ $partido['idPartido'] }}" tr-attr-id="{{ $partido['idBetsapi'] }}">
+                                    <th scope="row">
+                                        {{-- <span class="badge bg-primary rounded-pill">Primary</span> --}}
+                                        {{-- <span class="badge bg-secondary text-light rounded-pill">Secondary</span> --}}
+                                        <?php echo $estado_clase; ?>
+                                        {{-- <span class="badge bg-danger rounded-pill">Danger</span> --}}
+                                        {{-- <span class="badge bg-warning rounded-pill">Warning</span> --}}
+                                        {{-- <span class="badge bg-info rounded-pill">Info</span> --}}
+                                        {{-- <span class="badge bg-light text-dark rounded-pill">Light</span> --}}
+                                        {{-- <span class="badge bg-dark text-light rounded-pill">Dark</span> --}}
+                                        <span class="fila-id-directo-partido">{{ $partido['idPartido'] }}</span>
+                                    </th>
                                     <th scope="row">
                                         <span style="width: 0px;display: block;height: 0px;font-size: 0px;line-height: 0px;opacity: 0;">{{ $partido['idBetsapi'] }}</span>
                                         <input style="width: 78px;" class="fila-idBetsapi-directo-partido" type="text" name="" value="{{ $partido['idBetsapi'] }}">
@@ -50,18 +68,18 @@
                                     <td>
                                         <p class="mb-0" style="opacity: 0;font-size: 0;width: 0;height: 0;">{{ $partido['estadoPartido'] }}</p>
                                         <select class="fila-estado-directo-partido" name="estado_partido">
-                                            <option value="3" <?php if($partido['estadoPartido'] == 3){ echo "selected";}else{ echo '';}?>>Suspendido</option>
-                                            <option value="4" <?php if($partido['estadoPartido'] == 4){ echo "selected";}else{ echo '';}?>>Aplazado</option>
-                                            <option value="5" <?php if($partido['estadoPartido'] == 5){ echo "selected";}else{ echo '';}?>>Anulado</option>
-                                            <option value="6" <?php if($partido['estadoPartido'] == 6){ echo "selected";}else{ echo '';}?>>Descanso</option>
-                                            <option value="7" <?php if($partido['estadoPartido'] == 7){ echo "selected";}else{ echo '';}?>>Penaltis</option>
-                                            <option value="8" <?php if($partido['estadoPartido'] == 8){ echo "selected";}else{ echo '';}?>>Prórroga</option>
-                                            <option value="9" <?php if($partido['estadoPartido'] == 9){ echo "selected";}else{ echo '';}?>>Prór. 1T</option>
-                                            <option value="10" <?php if($partido['estadoPartido'] == 10){ echo "selected";}else{ echo '';}?>>Prór. 2T</option>
-                                            <option value="11" <?php if($partido['estadoPartido'] == 11){ echo "selected";}else{ echo '';}?>>Desc.Prór.</option>
-                                            <option value="2" <?php if($partido['estadoPartido'] == 2){ echo "selected";}else{ echo '';}?>>En juego</option>
-                                            <option value="0" <?php if($partido['estadoPartido'] == 0){ echo "selected";}else{ echo '';}?>>No jugado</option>
-                                            <option value="1" <?php if($partido['estadoPartido'] == 1){ echo "selected";}else{ echo '';}?>>FINAL</option>
+                                            <option value="3" <?php if(intval($partido['estadoPartido']) == 3){ echo "selected";}else{ echo '';}?> >Suspendido</option>
+                                            <option value="4" <?php if(intval($partido['estadoPartido']) == 4){ echo "selected";}else{ echo '';}?> >Aplazado</option>
+                                            <option value="5" <?php if(intval($partido['estadoPartido']) == 5){ echo "selected";}else{ echo '';}?> >Anulado</option>
+                                            <option value="6" <?php if(intval($partido['estadoPartido']) == 6){ echo "selected";}else{ echo '';}?> >Descanso</option>
+                                            <option value="7" <?php if(intval($partido['estadoPartido']) == 7){ echo "selected";}else{ echo '';}?> >Penaltis</option>
+                                            <option value="8" <?php if(intval($partido['estadoPartido']) == 8){ echo "selected";}else{ echo '';}?> >Prórroga</option>
+                                            <option value="9" <?php if(intval($partido['estadoPartido']) == 9){ echo "selected";}else{ echo '';}?> >Prór. 1T</option>
+                                            <option value="10" <?php if(intval($partido['estadoPartido']) == 10){ echo "selected";}else{ echo '';}?> >Prór. 2T</option>
+                                            <option value="11" <?php if(intval($partido['estadoPartido']) == 11){ echo "selected";}else{ echo '';}?> >Desc.Prór.</option>
+                                            <option value="2" <?php if(intval($partido['estadoPartido']) == 2){ echo "selected";}else{ echo '';}?> >En juego</option>
+                                            <option value="0" <?php if(intval($partido['estadoPartido']) == 0){ echo "selected";}else{ echo '';}?> >No jugado</option>
+                                            <option value="1" <?php if(intval($partido['estadoPartido']) == 1){ echo "selected";}else{ echo '';}?> >FINAL</option>
                                         </select>
                                     </td>
                                     <td>
