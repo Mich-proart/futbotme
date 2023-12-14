@@ -450,7 +450,7 @@
                             <div class="col-12 py-3 bg-white center_center mb-3">
                                 <div class="escudo col-4">
                                     <a
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id '/datos') }}">
+                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}">
                                         {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
 
                                         <img src="{{ asset('assets/images/img/club/escudo' . $equipo->club_id) }}.png"
@@ -460,13 +460,13 @@
 
                                 <div class="nombre col-4 text-center">
                                     <a class="text-decoration-none fs-22px color-black fw-semibold"
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id '/datos') }}"
+                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}"
                                         class="img-fluid"> {{ $equipo->nombre }} </a>
                                 </div>
 
                                 <div class="indumentaria col-4 text-end">
                                     <a
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id '/datos') }}">
+                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}">
                                         <img class="img-fluid"
                                             src="{{ asset('assets/images/img/equipaciones/eq' . $equipo->equipacion_id) }}.png"
                                             alt="Equipacion {{ $equipo->nombre }}" class="img-fluid">
