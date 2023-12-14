@@ -768,7 +768,7 @@ body {
 
     /* INPUT NUMBER DE JORNADA DESKTOP */
 
-    .selecto_de_jornadas input[type="number"] {
+    /* .selecto_de_jornadas input[type="number"] {
         outline: none;
         -moz-appearance: textfield;
     }
@@ -777,38 +777,71 @@ body {
     .selecto_de_jornadas input[type="number"]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         appearance: none;
-    }
-
-    /* 
-
-    .input-button {
-        position: absolute;
-        width: 75px;
-        border: 1px solid transparent;
-        color: #fff;
-        background: var(--color-gray-medium, #4e4e4e);
-        text-align: center;
-        line-height: 27px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .input-button:hover {
-        background: var(--color-gray-contrast, #565656);
-    }
-
-    .input-button.jornada_actual_add {
-        top: 0;
-        right: 1px;
-    }
-
-    .input-button.jornada_actual_remove {
-        bottom: 0;
-        right: 1px;
     } */
+
+    .number-input {
+        position: relative;
+    }
+    .number-input input {
+        background: #818583;
+        border-right: 0;
+        font-size: 1.5em;
+        overflow: hidden;
+    }
+    .number-input input:focus,
+    .number-input input:active {
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+        outline: none;
+        transition: 0.5s ease all;
+    }
+
+    .buttons {
+        border-left: 1px solid #666;
+        border-radius: 0 5px 5px 0 0;
+        overflow: hidden;
+        float: left;
+        top: 1px;
+        position: absolute;
+        right: 0;
+        width: 26px;
+        z-index: 1;
+    }
+
+    .increment,
+    .decrement {
+        background: #e1e1e1;
+        border-right: 1px solid #444;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        float: left;
+        height: 26px;
+        padding: 0.15em 0;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: -1px;
+        width: 25px;
+        z-index: 2;
+    }
+    .increment:hover,
+    .decrement:hover {
+        background: #c8c8c8;
+    }
+    .increment::selected,
+    .decrement::selected {
+        background: #e1e1e1;
+    }
+
+    .increment {
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+        border-radius: 0 5px 0 0;
+    }
+
+    .decrement {
+        border-radius: 0 0 5px 0;
+        border-bottom: 1px solid #444;
+    }
 }
 
 /* ESTILOS PARA CALENDARIO */

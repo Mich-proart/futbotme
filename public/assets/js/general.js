@@ -233,26 +233,32 @@ window.onload = function () {
 };
 
 /* SELECTOR DE JORNADAS */
+var numInput;
+var number = 0;
+var numberInput = 0;
 
-function spinner() {
-	//  SPINNER
-	$("#spinner").spinner();
-	
-	//  INPUT ONLY NUMBERS
-	$('#spinner').keyup(function () { 
-		 this.value = this.value.replace(/[^0-9]/g,'');
-	});
-}
+$(".increment").on("click", function () {
+    numInput = $(this).parent(".buttons").siblings("input");
+    number = parseInt($(numInput).val());
+    if (isNaN(number)) {
+        number = 0;
+    }
+    $(numInput).val(parseInt(number) + 1);
+    numInput = null; number = 0; numInput = 0;
+});
 
-// INPUT NUMBER MAX LENGHT
-function maxLengthCheck(object) {
-	if (object.value.length > object.maxLength)
-		object.value = object.value.slice(0, object.maxLength)
-}
+$(".decrement").on("click", function () {
+    numInput = $(this).parent(".buttons").siblings("input");
+    number = parseInt($(numInput).val());
 
-
-
-window.onload = spinner;
+    if ((isNaN(number)) || (number < 0)) {
+        number = 0;
+        $(numInput).val(number);
+    } else if ($(numInput).val() > 0) {
+        $(numInput).val(parseInt(number) - 1);
+    }
+    numInput = null; number = 0; numInput = 0;
+});
 
 
 

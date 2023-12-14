@@ -66,10 +66,20 @@
             <div class="tab-pane fade show active" id="pills-jornada" role="tabpanel"
                 aria-labelledby="pills-jornada-tab">
                 {{-- CAMBIAR DE JORNADA --}}
-                <div class="selector_de_jornadas">
+                {{-- <div class="selector_de_jornadas">
                     <label for="spinner">JORNADA</label>
-                    <input type="number" pattern="[0-9]*" id="spinner" name="value" value="1" min="1"
-                        max="200" step="1" oninput="maxLengthCheck(this)" maxlength="3">
+                    <input type="number" pattern="[0-9]*" id="spinner" name="value" value="{{ $torneo_Liga->jornadaActiva }}" min="1"
+                        max="{{ $torneo_Liga->jornadas }}" step="1" oninput="maxLengthCheck(this)" maxlength="3">
+                </div> --}}
+                <div class="number-input">
+                    <label for="number">JORNADA</label>
+                    <input id="number" type="number" pattern="[0-9]*" name="value"
+                        value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
+                        step="1" oninput="maxLengthCheck(this)" maxlength="3">
+                    <div class="buttons">
+                        <div class="increment"><i class="bi bi-chevron-up"></i></div>
+                        <div class="decrement"><i class="bi bi-chevron-down"></i></div>
+                    </div>
                 </div>
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5">
