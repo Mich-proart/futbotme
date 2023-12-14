@@ -56,6 +56,8 @@ Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorControlle
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');
 
+Route::post('/leer-fichero', [BuscadorController::class, 'leerFichero'])->name('leerFichero');
+
 /* login */
 
 Auth::routes();

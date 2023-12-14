@@ -377,38 +377,62 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
 });
 
 /*  */
-function terravison() {
-    const rutaJson = "./directos-futbolme.json";
-    let lastKnownData = null;
-    console.log('leyendo fichero');
-    fs.watch(rutaJson, (event, filename) => {
-        if (event === "change") {
-            fs.readFile(rutaJson, "utf8", (err, data) => {
-                if (err) {
-                    console.error(err);
-                    return;
-                }
 
-                // validacio de ejecucion captura de errores
-                try {
-                    const nuevosDatos = JSON.parse(data);
-                    console.log(nuevosDatos);
-                    // Solo envía si hay cambios
-                    if (
-                        JSON.stringify(nuevosDatos) !==
-                        JSON.stringify(lastKnownData)
-                    ) {
-                        lastKnownData = nuevosDatos;
-                        console.log(nuevosDatos);
-                    }
-                } catch (error) {
-                    console.error("Error al parsear JSON:", error);
-                }
-            });
-        }
+function terravison() {
+
+//    /usr/bin/php /home/d-shisnet/Documentos/futbotme/ztrigger_directos.php 2>> /home/d-shisnet/Documentos/futbotme/log_cron.txt
+    jQuery.ajax({
+        url: `${urlBase}leer-fichero/`,
+        type: "POST",
+        // data: {
+        //     formData,
+        // },
+        headers: {
+            "X-CSRF-TOKEN": csrfToken,
+        },
+        beforeSend: function () {
+            // $(".spiner-competiciones").fadeIn();
+            // $(acordion).html("");
+        },
+        success: function (response) {
+            console.log(response);
+            // let result = JSON.parse(response);
+            // $(acordion).append(result)
+        },
+        complete: function () {
+            //$(".spiner-competiciones").fadeOut();
+        },
     });
+
+// Utilizando fetch para obtener el archivo JSON
+// fetch('../../../directos-futbolme.json')
+//   .then(response => {
+//     // Verificar si la solicitud fue exitosa (código de estado 200)
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     // Parsear la respuesta a JSON
+//     return response.json();
+//   })
+//   .then(data => {
+//     // Trabajar con los datos obtenidos
+//     console.log(data); // Mostrar los datos en la consola
+    
+//     // Ejemplo: Acceder a los datos específicos
+//     // Suponiendo que el JSON tiene una estructura como {"nombre": "Ejemplo", "edad": 25}
+//     // console.log('Nombre:', data.nombre);
+//     // console.log('Edad:', data.edad);
+//   })
+//   .catch(error => {
+//     // Capturar errores de la solicitud o de parseo JSON
+//     console.error('Fetch error:', error);
+//   });
+
 }
 
-setTimeout(() => {
+// setTimeout(() => {
+setInterval(() => {
+    console.log("test")
     terravison()
 }, 1000);
+// }, 1000);
