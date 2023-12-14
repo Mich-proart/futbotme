@@ -1012,7 +1012,7 @@
     
         function updateJornada(action) {
             let jornadaActiva = parseInt(document.getElementById('number').value);
-            var nombre = {{nombre}}
+            var nombre = {{ $nombre }}
             var IDD = {{$ID_TL}}
     
             if (action === 'increment') {
