@@ -335,9 +335,9 @@
                                         <div
                                             class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                             <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
-                                                attr-id-evento=""></span>
+                                                attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
                                             <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
-                                                attr-id-evento=""></span>
+                                                attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
                                             <span class="icon-TV d-inline-block fs-1"></span>
                                         </div>
 
@@ -366,7 +366,8 @@
 
                                 </div>
                             </div>
-                            {{ dd($partidosPorLiga) }}
+                            {{-- {{ dd($partidosPorLiga) }} --}}
+
                             <div class="accordion-body border-bottom partido_futuro"
                                 id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
                                 <div class="d-flex aling-items-center justify-content-between ">
