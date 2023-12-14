@@ -266,7 +266,7 @@ class Controller extends BaseController
         INNER JOIN comunidad co ON co.id=tor.comunidad_id 
         INNER JOIN pais pa ON pa.id=tor.pais_id 
         INNER JOIN categoriatorneo ct ON ct.id=tor.categoria_torneo_id 
-        WHERE p.temporada_id=$id AND p.jornada=$JActiva
+        WHERE p.temporada_id=1 AND p.jornada=$JActiva
         ORDER BY p.fecha, p.hora_prevista");
 
         // Devuelve la vista como respuesta JSON
