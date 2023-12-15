@@ -206,8 +206,10 @@
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                    <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion" attr-id-evento=""></span>
-                                    <span class="icon-ball d-inline-block fs-1 span-evento-trigger" attr-id-evento=""></span>
+                                    <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
+                                        attr-id-evento=""></span>
+                                    <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
+                                        attr-id-evento=""></span>
                                     <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
@@ -223,9 +225,9 @@
                                 </div>
 
                                 <div class="marcador">
-                                    <span class="goles-local">-</span>
+                                    <span class="goles-local"><?php echo $partidoInfo['datosTemporadaSeccion']['goles_local']; ?></span>
                                     <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante">-</span>
+                                    <span class="goles-visitante"><?php echo $partidoInfo['datosTemporadaSeccion']['goles_visitante']; ?></span>
                                 </div>
 
                                 <div class="visitante">
@@ -308,8 +310,10 @@
 
                                         <div
                                             class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                            <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion" attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
-                                            <span class="icon-ball d-inline-block fs-1 span-evento-trigger" attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
+                                            <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
+                                                attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
+                                            <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
+                                                attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
                                             <span class="icon-TV d-inline-block fs-1"></span>
                                         </div>
 
@@ -339,15 +343,15 @@
 
                             {{-- MODALES --}}
 
-                            <div class="d-none content-eventos de-fila-partido" >
+                            <div class="d-none content-eventos de-fila-partido">
                                 <div class="d-flex align-items-center justify-content-between w-100">
                                     <h3 class="d-block">Eventos</h3>
                                     <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
                                 </div>
                                 <ul class="list-group lista-eventos text-left"></ul>
                             </div>
-                            
-        
+
+
                             <div class="d-none content-alineaciones">
                                 <div class="d-flex align-items-center justify-content-between w-100">
                                     <h3 class="d-block">Alineaciones</h3>
@@ -364,7 +368,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         @endforeach
                     </div>
                 @endforeach
