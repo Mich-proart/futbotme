@@ -21,6 +21,9 @@ Route::get('admin-panel/torneos/', [AdminTorneosController::class, 'indexTorneos
 
 Route::get('admin-panel/federaciones/', [AdminController::class, 'indexFederaciones']);
 
+// peticiones post status directos
+Route::post('admin-panel/update-status-football-soccer/', [AdminController::class, 'refreshStatusFootballSoccer'])->name('refreshStatusFootballSoccer');
+
 // clubes
 Route::get('admin-panel/clubes/', [AdminClubesController::class, 'indexPaises']);
 Route::get('admin-panel/clubes/{id}', [AdminClubesController::class, 'editarClub']);

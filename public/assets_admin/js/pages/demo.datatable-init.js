@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // para directos en pagina index
     $("#fixed-columns-datatable").DataTable({
-        scrollY: "calc(100vh - 570px)",
+        //scrollY: "calc(100vh - 570px)",
         scrollX: !0,
         scrollCollapse: !0,
         pageLength: 50,

@@ -393,6 +393,29 @@ class AdminController extends Controller
         }
     }
 
+    public function refreshStatusFootballSoccer(){
+        $jsonFile = base_path() . '/directos-futbolme.json';
+        var_dump(response()->file($jsonFile));
+
+        // var_dump("test");
+    }
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

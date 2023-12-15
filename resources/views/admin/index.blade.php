@@ -2,12 +2,18 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-3">
-            <a class="btn btn-primary my-3 btn-importar" href="{{ url('/admin-panel') }}" role="button" aria-haspopup="false"
-                aria-expanded="false">Actualizar Datos</a>
-        </div>
-        <div class="d-flex align-items-center justify-content-start my-3">
-            <span attr-id-partido="1114892" class="id-partido-directo-db fw-bold">Total partidos hoy: {{ $totalPartidosHoy }}</span>
+        <div class="col-lg-3" id="info-btn-principales">
+            <span class="fw-bold me-3">Total partidos hoy: {{ $totalPartidosHoy }}</span>
+            <span 
+            class="btn btn-primary my-3 btn-forzar-estados" 
+            role="button" 
+            aria-haspopup="false" 
+            aria-expanded="false"
+            data-bs-container="#info-btn-principales" 
+            data-bs-toggle="tooltip" 
+            data-bs-placement="top" 
+            title="boton forzar actualización de datos por si existe algun fallo"
+            >Verificar </span>
         </div>
         <div class="col-12">
             <div class="card">
@@ -103,6 +109,9 @@
 @endsection
 
 <style>
+    body > .wrapper{
+        overflow-y: auto;    
+    }
     .content-page .content .container-fluid{
         max-width: 100%!important;
     }

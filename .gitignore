@@ -25,6 +25,8 @@ Homestead.json
 /public/assets/images/img/jugadores
 /resources/js/server.js
 composer.lock
+directos.json
+directos-futbolme.json
 
 # Custom
 
