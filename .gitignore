@@ -25,8 +25,11 @@ Homestead.json
 /public/assets/images/img/jugadores
 /resources/js/server.js
 composer.lock
+
+#separacion de logs directos
 directos.json
 directos-futbolme.json
+log_cron.txt
 
 # Custom
 

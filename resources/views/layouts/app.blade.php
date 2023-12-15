@@ -190,7 +190,6 @@
     <script src="{{ asset('assets_admin/js/ligas-torneos-active.js') }}"></script>
     <script src="{{ asset('assets_admin/js/update-data-partidos.js') }}"></script>
     <script src="{{ asset('assets_admin/js/reset-panel-admin.js') }}"></script>
-    <script src="{{ asset('assets_admin/js/update.blade.js') }}"></script>
 
     {{-- cdn para utilizar socket io --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
