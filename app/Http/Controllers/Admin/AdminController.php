@@ -394,25 +394,116 @@ class AdminController extends Controller
     }
 
     public function refreshStatusFootballSoccer(Request $request){
-        $data = $request->all()['idVerify'];
-        $directos_json = $this->obtener_directos_de_json();
+        date_default_timezone_set('Europe/Madrid');
         $array_response_match = array();
-        foreach ($directos_json as $key => $value) {
-            if(intval($data) === intval($value['id'])){
-                $cambiar_id = 'match';
-                //var_dump("coinciden: ".$value['id']);
-            }else{
-                $cambiar_id = 'notFound';
-                //var_dump("NO MATCH: ".$value['id']);
+        $array_response_notfound = array();
+        $directos_json = $this->obtener_directos_de_json();
+        $partidos_db = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
+        foreach ($partidos_db as $key => $value) {
+            if((intval($value['idBetsapi']) != 1) && (intval($value['idBetsapi']) != -1)){
+                foreach ($directos_json as $keyJson => $valueJson) {
+                    if(intval($valueJson['id']) === intval($value['idBetsapi'])){
+                        $obj_found = [
+                            'id' => $valueJson['id']
+                        ];
+                        array_push($array_response_match, $obj_found);
+                    }else{
+                        $obj_no_found = [
+                            'id' => $valueJson['id']
+                        ];
+                        array_push($array_response_notfound, $obj_no_found);
+                    }
+                }
             }
-            $obj_response = [
-                'idModificar' => $value['id'],
-                'tipoResponse' => $cambiar_id
-            ];
-            array_push($array_response_match,$obj_response);
         }
-        echo json_encode($array_response_match);
+        $response_object = [
+            'arrayFound' => $array_response_match,
+            'arrayNotFound' => $array_response_notfound,
+        ];
+
+        echo json_encode($response_object);
+
+
+
+
+        //$data = $request->all()['idVerify'];
+        
+        // $array_response_match = array();
+        // foreach ($directos_json as $key => $value) {
+        //     $timestamp = $value['time'];
+        //     $hora = date("H:i:s", $timestamp);
+
+        //     var_dump($value['id']." - ".$hora);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //$timestamp = 1702746000;
+
+            //$hora = date("H:i:s", $timestamp);
+
+            //echo $hora; // Esto mostrará la hora ajustada para España en formato 00:00:00
+
+
+            //echo $hora; // Esto mostrará la hora en formato 00:00:00
+
+            // if(intval($data) === intval($value['id'])){
+            //     $cambiar_id = 'match';
+            //     //var_dump("coinciden: ".$value['id']);
+            // }else{
+            //     $cambiar_id = 'notFound';
+            //     //var_dump("NO MATCH: ".$value['id']);
+            // }
+            // $obj_response = [
+            //     'idModificar' => $value['id'],
+            //     'tipoResponse' => $cambiar_id
+            // ];
+            // array_push($array_response_match,$obj_response);
+        //}
+        //echo json_encode($array_response_match);
     }
+
+
+
+            // Verificar qué partidos ya no están presentes en la respuesta actual
+            // foreach ($partidos_previos as $partido_previo) {
+            //     $id_partido_previo = $partido_previo['id'];
+
+            //     // Verificar si el partido previo ya no está presente en la respuesta actual
+            //     $partido_presente = false;
+            //     foreach ($partidos_en_juego as $partido_actual) {
+            //         if ($partido_actual['id'] == $id_partido_previo) {
+            //             $partido_presente = true;
+            //             break;
+            //         }
+            //     }
+
+            //     // Si el partido previo ya no está presente, considerarlo finalizado
+            //     if (!$partido_presente) {
+            //         // Marcar el partido como finalizado en tu sistema
+            //         // ... tu lógica para marcar el partido como finalizado
+            //         echo "El partido con ID $id_partido_previo ha finalizado.\n";
+            //     }
+            // }
+
 
     
 

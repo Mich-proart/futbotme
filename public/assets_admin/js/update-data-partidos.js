@@ -19,7 +19,7 @@ const guardarDatosPartidosDirectosDb = (filaBotonPartido) => {
 
     console.log($(filaBotonPartido).find('.fila-idBetsapi-directo-partido').val())
     console.log(typeof $(filaBotonPartido).find('.fila-idBetsapi-directo-partido').val())
-    if(parseInt($(filaBotonPartido).find('.fila-idBetsapi-directo-partido').val()) === -1){
+    if(parseInt($(filaBotonPartido).find('.fila-idBetsapi-directo-partido').val()) === 1 || parseInt($(filaBotonPartido).find('.fila-idBetsapi-directo-partido').val()) === -1){
         const formData = {
             idPartido: $(filaBotonPartido).attr('tr-attr-id-partido'),
             idPartidoBetsapiOno: $(filaBotonPartido).find(".fila-idBetsapi-directo-partido").val(),
