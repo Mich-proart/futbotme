@@ -393,13 +393,28 @@ class AdminController extends Controller
         }
     }
 
-    public function refreshStatusFootballSoccer(){
-        $jsonFile = base_path() . '/directos.json';
-        var_dump(response()->file($jsonFile));
-
-        // var_dump("test");
+    public function refreshStatusFootballSoccer(Request $request){
+        $data = $request->all()['idVerify'];
+        $directos_json = $this->obtener_directos_de_json();
+        $array_response_match = array();
+        foreach ($directos_json as $key => $value) {
+            if(intval($data) === intval($value['id'])){
+                $cambiar_id = 'match';
+                //var_dump("coinciden: ".$value['id']);
+            }else{
+                $cambiar_id = 'notFound';
+                //var_dump("NO MATCH: ".$value['id']);
+            }
+            $obj_response = [
+                'idModificar' => $value['id'],
+                'tipoResponse' => $cambiar_id
+            ];
+            array_push($array_response_match,$obj_response);
+        }
+        echo json_encode($array_response_match);
     }
 
+    
 
     
     

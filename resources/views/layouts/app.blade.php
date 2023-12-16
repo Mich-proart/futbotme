@@ -71,12 +71,6 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6"> --}}
-            <script>
-                //document.write(new Date().getFullYear())
-            </script>
-            <script>
-                const archivoJsonUrl = "{{ asset('directos-futbolme.json') }}";
-            </script>
             {{-- © Futbolme.com --}}
             {{-- </div>
                             <div class="col-md-6">

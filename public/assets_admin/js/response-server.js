@@ -1,19 +1,19 @@
 !(function ($) {
     "use strict";
-    const socket = io("http://localhost:3000");
-    const socket_futbolme = io("http://localhost:5000");
+    // const socket = io("http://localhost:3000");
+    // const socket_futbolme = io("http://localhost:5000");
 
-    socket.on("nuevos-datos", (nuevosDatos) => {
-        console.log("Nuevos datos recibidos:", nuevosDatos);
-        functionUpdatePartidos(nuevosDatos.results);
-        // Aquí puedes procesar los nuevos datos como lo desees
-    });
+    // socket.on("nuevos-datos", (nuevosDatos) => {
+    //     console.log("Nuevos datos recibidos:", nuevosDatos);
+    //     functionUpdatePartidos(nuevosDatos.results);
+    //     // Aquí puedes procesar los nuevos datos como lo desees
+    // });
 
-    socket_futbolme.on("nuevos-datos-futbolme", (nuevosDatos) => {
-        console.log("Nuevos datos del otro fichero:", nuevosDatos);
-        //functionUpdatePartidos(nuevosDatos.results);
-        // Aquí puedes procesar los nuevos datos como lo desees
-    });
+    // socket_futbolme.on("nuevos-datos-futbolme", (nuevosDatos) => {
+    //     console.log("Nuevos datos del otro fichero:", nuevosDatos);
+    //     //functionUpdatePartidos(nuevosDatos.results);
+    //     // Aquí puedes procesar los nuevos datos como lo desees
+    // });
 })(window.jQuery);
 
 // con esta funcion updateamos base de datos y fichero json agrupadon directos para enviar al front

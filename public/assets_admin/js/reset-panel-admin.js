@@ -1,18 +1,50 @@
 !(function ($) {
     "use strict";
 
-    jQuery('.btn-forzar-estados').on('click', function (){
-        leerFicheroJson()
-    })
+    jQuery(".btn-forzar-estados").on("click", function () {
+        getEachStatusFootballSoccer()
+    });
+
+    jQuery("#fixed-columns-datatable").on("page.dt", function () {
+        getEachStatusFootballSoccer();
+    });
 })(window.jQuery);
 
-const leerFicheroJson = () => {
+const getEachStatusFootballSoccer = () => {
+
+    // Obtener la hora actual
+    let fechaActual = new Date();
+    let horaActual = fechaActual.getHours() + ':' + fechaActual.getMinutes() + ':' + fechaActual.getSeconds();
+    let table =jQuery("#fixed-columns-datatable").DataTable();
+    // Obtener los datos de la página actual
+    let currentPageData = table.rows({ page: 'current' }).data().toArray();
+    currentPageData.forEach(function (row) {
+        let horaFila = jQuery(row[3]).find('.fila-hora-directo-partido-prevista').prevObject[0].value
+        let filaIdDirectoPartido = jQuery(row[1]).find('.fila-id-directo-partido').prevObject[0].childNodes[0].data
+        verifyInFileDirecto(filaIdDirectoPartido,horaActual,horaFila)
+    });
+};
+
+const verifyInFileDirecto = (idVerify,horaActual,horaFila) => {
+    if(parseInt(idVerify) != -1){
+        if (horaActual < horaFila) {
+            console.log(`ponemos el partido ${idVerify} en estado no jugado`)
+            // (parseInt(idVerify) != -1) && console.log('id en verify: ', idVerify);
+        }{
+            leerFicheroJson(idVerify)
+            //console.log(`aqui verificamos si esta en juego o no`)
+        }
+    }
+}
+
+
+const leerFicheroJson = (idVerify) => {
     jQuery.ajax({
         url: `${urlBase}admin-panel/update-status-football-soccer/`,
         type: "POST",
-        // data: {
-        //     formData,
-        // },
+        data: {
+            idVerify
+        },
         headers: {
             "X-CSRF-TOKEN": csrfToken,
         },
@@ -23,6 +55,7 @@ const leerFicheroJson = () => {
         success: function (response) {
             console.log(response);
             // let result = JSON.parse(response);
+            // console.log(result);
             // $(acordion).append(result)
         },
         complete: function () {
@@ -30,17 +63,3 @@ const leerFicheroJson = () => {
         },
     });
 };
-
-leerFicheroJson();
-
-// checkeamos todos los estados, partidos para actualizar estados
-// const checkedStatusFootballGame = () => {};
-
-// {
-//     "idPartido": 1169362,
-//     "estaPartido": 2,
-//     "golesLocal": 0,
-//     "golesVisitante": 0,
-//     "idLocal": 15233,
-//     "idVisitante": 51101
-// }

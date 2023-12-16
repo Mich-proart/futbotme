@@ -40,6 +40,12 @@
                                     $estado_clase = '<span class="badge bg-success rounded-pill">Directo</span>';
                                 }elseif(intval($partido['estadoPartido']) === 1){ 
                                     $estado_clase = '<span class="badge bg-danger rounded-pill">Final</span>';
+                                }elseif(intval($partido['estadoPartido']) === 3){ 
+                                    $estado_clase = '<span class="badge bg-warning rounded-pill">Suspendido</span>';
+                                }elseif(intval($partido['estadoPartido']) === 4){ 
+                                    $estado_clase = '<span class="badge bg-secondary rounded-pill">Aplazado</span>';
+                                }elseif(intval($partido['estadoPartido']) === 6){ 
+                                    $estado_clase = '<span class="badge bg-success rounded-pill">Descanso</span>';
                                 }else{ 
                                     $estado_clase = '<span class="badge bg-info rounded-pill">No jugado</span>';
                                 }?>
@@ -74,6 +80,9 @@
                                     <td>
                                         <p class="mb-0" style="opacity: 0;font-size: 0;width: 0;height: 0;">{{ $partido['estadoPartido'] }}</p>
                                         <select class="fila-estado-directo-partido" name="estado_partido">
+                                            <option value="0" <?php if(intval($partido['estadoPartido']) == 0){ echo "selected";}else{ echo '';}?> >No jugado</option>
+                                            <option value="1" <?php if(intval($partido['estadoPartido']) == 1){ echo "selected";}else{ echo '';}?> >FINAL</option>
+                                            <option value="2" <?php if(intval($partido['estadoPartido']) == 2){ echo "selected";}else{ echo '';}?> >En juego</option>
                                             <option value="3" <?php if(intval($partido['estadoPartido']) == 3){ echo "selected";}else{ echo '';}?> >Suspendido</option>
                                             <option value="4" <?php if(intval($partido['estadoPartido']) == 4){ echo "selected";}else{ echo '';}?> >Aplazado</option>
                                             <option value="5" <?php if(intval($partido['estadoPartido']) == 5){ echo "selected";}else{ echo '';}?> >Anulado</option>
@@ -83,18 +92,15 @@
                                             <option value="9" <?php if(intval($partido['estadoPartido']) == 9){ echo "selected";}else{ echo '';}?> >Prór. 1T</option>
                                             <option value="10" <?php if(intval($partido['estadoPartido']) == 10){ echo "selected";}else{ echo '';}?> >Prór. 2T</option>
                                             <option value="11" <?php if(intval($partido['estadoPartido']) == 11){ echo "selected";}else{ echo '';}?> >Desc.Prór.</option>
-                                            <option value="2" <?php if(intval($partido['estadoPartido']) == 2){ echo "selected";}else{ echo '';}?> >En juego</option>
-                                            <option value="0" <?php if(intval($partido['estadoPartido']) == 0){ echo "selected";}else{ echo '';}?> >No jugado</option>
-                                            <option value="1" <?php if(intval($partido['estadoPartido']) == 1){ echo "selected";}else{ echo '';}?> >FINAL</option>
                                         </select>
                                     </td>
-                                    <td>
+                                    <td style="min-width: 260px;">
                                         <span attr-id="{{ $partido['idLocal'] }}" class="mb-2 fila-local-directo-partido">{{ $partido['nombreLocal'] }}</span>
-                                        <input class="fila-local-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;" type="text" name="" value="{{ $partido['golLocal'] }}">
+                                        <input class="fila-local-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;float: right;" type="text" name="" value="{{ $partido['golLocal'] }}">
                                     </td>
-                                    <td>
+                                    <td style="min-width: 260px;">
                                         <span attr-id="{{ $partido['idVisitante'] }}" class="mb-2 fila-visitante-directo-partido">{{ $partido['nombreVisitante'] }}</span>
-                                        <input class="fila-visitante-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;" type="text" name="" value="{{ $partido['golVisitante'] }}">
+                                        <input class="fila-visitante-gol-directo-partido" style="width: 28px;text-align: center;margin-left: 10px;float: right;" type="text" name="" value="{{ $partido['golVisitante'] }}">
                                     </td>
                                     <td><input class="btn btn-primary guardar-cambios-partidos-panel" type="button" value="Guardar"></td>
                                     <td><span attr-id="{{ $partido['tituloTemporada'][0]->id }}" class="fila-idTemporada-directo-partido">{{ $partido['tituloTemporada'][0]->nombre }}</span></td>
