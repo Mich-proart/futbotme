@@ -408,10 +408,14 @@ class AdminController extends Controller
                         ];
                         array_push($array_response_match, $obj_found);
                     }else{
-                        $obj_no_found = [
-                            'id' => $valueJson['id']
-                        ];
-                        array_push($array_response_notfound, $obj_no_found);
+                        $hora = HelperFunctions::get_fecha_format_second($valueJson['time'])['horaFormat'];
+                        $hora_exacta = HelperFunctions::get_fecha_current_now()['horaFormat'];
+                        if($hora > $hora_exacta){
+                            $obj_no_found = [
+                                'id' => $valueJson['id']
+                            ];
+                            array_push($array_response_notfound, $obj_no_found);
+                        }
                     }
                 }
             }

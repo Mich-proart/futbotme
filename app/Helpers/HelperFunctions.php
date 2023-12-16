@@ -44,6 +44,19 @@ class HelperFunctions
         return $objResponse; 
     }
 
+    // hora timestamp para traer el momento exacto
+    public static function get_fecha_current_now(){
+        $zonaHoraria = 'Europe/Madrid';
+        $fechaHora = \Carbon\Carbon::now($zonaHoraria);
+        $fechaFormateada = $fechaHora->format('Y-m-d'); // Formato: Año-Mes-Día 
+        $horaFormateada = $fechaHora->format('H:i:s'); // Formato: Hora:Minutos:Segundos
+        $objResponse = [
+            'fechaFormat' => $fechaFormateada,
+            'horaFormat' => $horaFormateada
+        ];
+        return $objResponse;
+    }
+
     // aqui enviamos array de meses en español
     public static function get_array_meses(){
         $meses = [
