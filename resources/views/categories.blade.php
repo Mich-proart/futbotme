@@ -1,5 +1,4 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
-
     {{-- {{ dd($torneo_Liga) }} --}}
 
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
@@ -183,9 +182,21 @@
                                 </div>
 
                                 <div class="marcador">
-                                    <span class="goles-local color-red">{{ $partido->goles_local }}</span>
+                                    <span class="goles-local color-red">
+                                        @if ($partido->goles_local == '0')
+                                            -
+                                        @else
+                                            {{ $partido->goles_local }}
+                                        @endif
+                                    </span>
                                     <span class="fs-01 color-red">-</span>
-                                    <span class="goles-visitante color-red">{{ $partido->goles_visitante }}</span>
+                                    <span class="goles-visitante color-red">
+                                        @if ($partido->goles_visitante == '0')
+                                            -
+                                        @else
+                                            {{ $partido->goles_visitante }}
+                                        @endif
+                                    </span>
                                 </div>
 
                                 <div class="visitante">

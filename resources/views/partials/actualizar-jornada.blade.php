@@ -62,21 +62,9 @@
                 </div>
 
                 <div class="marcador">
-                    <span class="goles-local color-red">
-                        @if ($partido->goles_local == '0')
-                            -
-                        @else
-                            {{ $partido->goles_local }}
-                        @endif
-                    </span>
+                    <span class="goles-local color-red"> {{ $partido->goles_local }} </span>
                     <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante color-red">
-                        @if ($partido->goles_visitante == '0')
-                            -
-                        @else
-                            {{ $partido->goles_visitante }}
-                        @endif
-                    </span>
+                    <span class="goles-visitante color-red"> {{ $partido->goles_visitante }} </span>
                 </div>
 
                 <div class="visitante">
