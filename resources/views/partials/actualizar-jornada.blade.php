@@ -9,7 +9,7 @@
         
         $observaciones = $partido->observaciones;
         
-        // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
+        /* // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
         $expresion_regular_A = "/\*A\s(.*?)(?=\*B|$)/s";
         $expresion_regular_B = '/\*B\s(.*?)/s';
         
@@ -23,7 +23,24 @@
             $goles_visitante = trim($coincidencias_B[1]);
         } else {
             $goles_visitante = '<span class="nada"></span>';
-        }
+        } */
+
+
+// Buscar la posición de *A y *B en el string
+$posicionA = strpos($observaciones, '*A');
+$posicionB = strpos($observaciones, '*B');
+
+// Extraer la primera variable desde *A hasta justo antes de *B
+$goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+
+// Extraer la segunda variable desde *B hasta el final del observaciones
+$goles_visitante = substr($observaciones, $posicionB + 2);
+
+
+
+
+
+
         ?>
         <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2">
             <div class="d-flex aling-items-center justify-content-between partido_futuro">
