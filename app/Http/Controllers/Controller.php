@@ -195,22 +195,21 @@ class Controller extends BaseController
             ORDER BY p.fecha, p.hora_prevista");
 
             $observaciones = $JornadaActiva[0]->observaciones;
-            
+
             // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
             $expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
-            
+
             // Realizamos la coincidencia con la expresión regular
             if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
                 // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
                 $goles_local = $coincidencias[1];
                 $goles_visitante = $coincidencias[2];
-                
             } else {
                 // No hubo coincidencia con la expresión regular
                 $goles_local = '<span class="nada"></span>';
                 $goles_visitante = '<span class="nada"></span>';
             }
-            
+
 
             // Ordena el array por fecha y hora descendente
             $JornadaActiva = collect($JornadaActiva)->sortByDesc(function ($partido) {
@@ -218,12 +217,12 @@ class Controller extends BaseController
             })->values()->all();
 
             return view('categories', [
-                'nombre' => $nombre, 
-                'equipos' => $equipos, 
-                'torneo_Liga' => $torneo_Liga, 
-                'CC_Pais' => $CC_Pais, 
-                'JornadaActiva' => $JornadaActiva, 
-                'ID_TL' => $id, 
+                'nombre' => $nombre,
+                'equipos' => $equipos,
+                'torneo_Liga' => $torneo_Liga,
+                'CC_Pais' => $CC_Pais,
+                'JornadaActiva' => $JornadaActiva,
+                'ID_TL' => $id,
                 'goles_local' => $goles_local,
                 'goles_visitante' => $goles_visitante,
             ]);
@@ -302,22 +301,21 @@ class Controller extends BaseController
     WHERE p.temporada_id = ? AND p.jornada = ?
     ORDER BY p.fecha, p.hora_prevista", [$id, $JActiva]);
 
-$observaciones = $jornadaActivaData[0]->observaciones;
-            
-// Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
-$expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
+        $observaciones = $jornadaActivaData[0]->observaciones;
 
-// Realizamos la coincidencia con la expresión regular
-if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
-    // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
-    $goles_local = $coincidencias[1];
-    $goles_visitante = $coincidencias[2];
-    
-} else {
-    // No hubo coincidencia con la expresión regular
-    $goles_local = '<span class="nada"></span>';
-    $goles_visitante = '<span class="nada"></span>';
-}
+        // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
+        $expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
+
+        // Realizamos la coincidencia con la expresión regular
+        if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
+            // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
+            $goles_local = $coincidencias[1];
+            $goles_visitante = $coincidencias[2];
+        } else {
+            // No hubo coincidencia con la expresión regular
+            $goles_local = '<span class="nada"></span>';
+            $goles_visitante = '<span class="nada"></span>';
+        }
 
         // Ordenar el array por fecha y hora descendente
         $jornadaActivaData = collect($jornadaActivaData)->sortByDesc(function ($partido) {
