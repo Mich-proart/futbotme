@@ -1,6 +1,5 @@
 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
 
-    {{dd($JornadaActiva)}}
     {{-- EJEMPLOS OJO CON LAS CLASES DE LOS DIRECTOS, FUTUROS Y FINALIZADOS --}}
 
     @foreach ($jornadaActivaData as $partido)
@@ -42,7 +41,7 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <div class="goleadores">
-                        <span class="d-block">{!! $goles_local !!}</span>
+                        <span class="d-block">{{ $goles_local }}</span>{{-- {!! $partido->observaciones !!} --}}
                     </div>
                 </div>
 
@@ -58,7 +57,7 @@
                     </div>
                     <h3 class="d-block">{{ $partido->visitante }}</h3>
                     <div class="goleadores">
-                        <span class="d-block">{!! $goles_visitante !!}</span>
+                        <span class="d-block">{{ $goles_visitante }}</span>
                     </div>
                 </div>
             </div>
