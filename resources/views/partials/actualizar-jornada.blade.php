@@ -57,7 +57,7 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <div class="goleadores">
-                        <span class="d-block">{!! $goles_local !!}</span> {{-- {!! $partido->observaciones !!} --}}
+                        <span class="d-block">{!! $goles_local !!}</span> {!! $partido->observaciones !!}
                     </div>
                 </div>
 
