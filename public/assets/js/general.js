@@ -378,7 +378,7 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
 
 /*  */
 
-function terravison() {
+/* function terravison() {
 
     ///usr/bin/php /var/www/vhosts/futbolme.loading.net/futbolme.eu/ztrigger_directos.php 2>> /var/www/vhosts/futbolme.loading.net/futbolme.eu/log_cron.txt
     // ya esta en el server pero algo no lo deja funcionar del todo bien
@@ -404,9 +404,9 @@ function terravison() {
         },
     });
 
-}
+} */
 
-function terravison22() {
+/* function terravison22() {
     jQuery.ajax({
         url: `${urlBase}leer-fichero22/`,
         method: "POST",
@@ -428,12 +428,12 @@ function terravison22() {
             //$(".spiner-competiciones").fadeOut();
         },
     });
-}
+} */
 
 // setTimeout(() => {
-setInterval(() => {
+/* setInterval(() => {
     console.log("leyendo ficheros")
     terravison()
     terravison22()
-}, 1000);
+}, 1000); */
 // }, 1000);

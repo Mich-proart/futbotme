@@ -253,7 +253,6 @@
 
                 {{-- DIRECTOS DE LA API  --}}
                 @foreach ($directos as $leagueId => $partidosPorLiga)
-                
                     <?php if (is_null($partidosPorLiga[0]['league']['cc'])) {
                         $bandera = 'eu';
                     } else {
@@ -623,5 +622,63 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+        function terravison() {
+            $.ajax({
+                url: '{{ route('leer-fichero') }}',
+                method: 'POST',
+                /* data: {
+                    nuevoJActiva: nuevoJActiva,
+                    id: id,
+                    _token: '{{ csrf_token() }}',
+                }, */
+                success: function(response) {
+                    // Actualizar el front-end con la nueva vista parcial
+                    //$('#jornadas_categorias').html(response);
+                    console.log(response);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+
+                    // Mostrar detalles del error en la consola
+                    console.log(jqXHR);
+                }
+            });
+        }
+
+
+        function terravison22() {
+            $.ajax({
+                url: '{{ route('leer-fichero22') }}',
+                method: "POST",
+                // data: {
+                //     formData,
+                // },
+                headers: {
+                    "X-CSRF-TOKEN": csrfToken,
+                },
+                beforeSend: function() {
+                    // $(".spiner-competiciones").fadeIn();
+                    // $(acordion).html("");
+                },
+                success: function(response) {
+                    console.log(response);
+                    // let result = JSON.parse(response);
+                },
+                complete: function() {
+                    //$(".spiner-competiciones").fadeOut();
+                },
+            });
+        }
+
+
+        setInterval(() => {
+            console.log("leyendo ficheros")
+            terravison()
+            terravison22()
+        }, 1000);
+    </script>
 
 </x-layouts.app>
