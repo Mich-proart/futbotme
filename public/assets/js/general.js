@@ -225,7 +225,7 @@ function obtenerEvento(btnIdLiga) {
 
     jQuery.ajax({
         url: `/apiBetsapiEventos`, // AJAX handler,
-        type: 'POST',
+        method: 'POST',
         data: {
             id: jQuery(btnIdLiga).attr('attr-id-evento'),
         },
@@ -268,7 +268,7 @@ function obtenerAlineacion(btnIdLiga) {
 
     jQuery.ajax({
         url: `/apiBetsapi`, // AJAX handler,
-        type: 'POST',
+        method: 'POST',
         data: {
             id: jQuery(btnIdLiga).attr('attr-id-evento'),
         },
@@ -384,7 +384,7 @@ function terravison() {
     // ya esta en el server pero algo no lo deja funcionar del todo bien
     jQuery.ajax({
         url: `${urlBase}leer-fichero/`,
-        type: "POST",
+        method: "POST",
         // data: {
         //     formData,
         // },
@@ -409,7 +409,7 @@ function terravison() {
 function terravison22() {
     jQuery.ajax({
         url: `${urlBase}leer-fichero22/`,
-        type: "POST",
+        method: "POST",
         // data: {
         //     formData,
         // },
