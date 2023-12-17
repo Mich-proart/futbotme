@@ -2,57 +2,7 @@
 
     {{-- {{dd($JornadaActiva)}} --}}
     {{-- EJEMPLOS OJO CON LAS CLASES DE LOS DIRECTOS, FUTUROS Y FINALIZADOS --}}
-    {{--  <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
 
-        <div class="d-flex aling-items-center justify-content-between ">
-            <div class="col-2 d-flex aling-items-center ">
-                <div class="d-block py-2 px-1 fs-2">
-                    <span class="icon-resolve-filled">
-                        <span class="path1"></span>
-                        <span class="path2"></span>
-                        <span class="path3"></span>
-                    </span>
-                </div>
-                <div>
-                    <span
-                        class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg-red-minutos text-white">74’</span>
-                </div>
-
-            </div>
-
-            <div
-                class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                <span class="icon-alienacion d-inline-block fs-1"></span>
-                <span class="icon-ball d-inline-block fs-1"></span>
-                <span class="icon-TV d-inline-block fs-1"></span>
-            </div>
-
-        </div>
-        <div class="mx-0 partido_alineado my-2">
-            <div class="local">
-                <h3 class="d-block">Real Madrid</h3>
-                <div class="escudo d-lg-inline-block d-none"><img
-                        src="https://assets.b365api.com/images/team/m/2829.png"
-                        class="logo_s img-fluid">
-                </div>
-            </div>
-
-            <div class="marcador">
-                <span class="goles-local">4</span>
-                <span class="fs-01 color-red">-</span>
-                <span class="goles-visitante">0</span>
-            </div>
-
-            <div class="visitante">
-                <div class="escudo d-lg-inline-block d-none"><img
-                        src="https://assets.b365api.com/images/team/m/2817.png"
-                        class="logo_s img-fluid">
-                </div>
-                <h3 class="d-block">FC Barcelona</h3>
-            </div>
-        </div>
-
-    </div> --}}
     @foreach ($jornadaActivaData as $partido)
         <?php
         $horabd = $partido->hora_prevista;
@@ -92,7 +42,7 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <div class="goleadores">
-                        <span class="d-block">{!! $partido->observaciones !!}</span>
+                        <span class="d-block">{!! $goles_local !!}</span>
                     </div>
                 </div>
 
@@ -107,6 +57,9 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoVisitante_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <h3 class="d-block">{{ $partido->visitante }}</h3>
+                    <div class="goleadores">
+                        <span class="d-block">{!! $goles_visitante !!}</span>
+                    </div>
                 </div>
             </div>
 

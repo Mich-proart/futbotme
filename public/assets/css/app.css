@@ -765,82 +765,6 @@ body {
         font-style: normal;
         line-height: 20px;
     }
-
-    /* INPUT NUMBER DE JORNADA DESKTOP */
-
-    .number-input input[type="number"] {
-        outline: none;
-        -moz-appearance: textfield;
-    }
-
-    .number-input input[type="number"]::-webkit-inner-spin-button,
-    .number-input input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    .number-input {
-        position: relative;
-    }
-    .number-input input {
-        background: #818583;
-        border: 0px;
-        overflow: hidden;
-        width: 92%;
-    }
-    .number-input input:focus,
-    .number-input input:active {
-        outline: none;
-        box-shadow: none;
-    }
-
-    .buttons_cat {
-        border-left: 1px solid #666;
-        border-radius: 0 5px 5px 0 0;
-        overflow: hidden;
-        float: left;
-        top: 1px;
-        position: absolute;
-        right: 0;
-        width: 26px;
-        z-index: 1;
-    }
-
-    .increment,
-    .decrement {
-        background: #e1e1e1;
-        border-right: 1px solid #444;
-        font-weight: bold;
-        cursor: pointer;
-        display: block;
-        float: left;
-        height: 26px;
-        padding: 0.15em 0;
-        text-align: center;
-        vertical-align: middle;
-        margin-top: -1px;
-        width: 25px;
-        z-index: 2;
-    }
-    .increment:hover,
-    .decrement:hover {
-        background: #c8c8c8;
-    }
-    .increment::selected,
-    .decrement::selected {
-        background: #e1e1e1;
-    }
-
-    .increment {
-        border-top: 1px solid #444;
-        border-bottom: 1px solid #444;
-        border-radius: 0 5px 0 0;
-    }
-
-    .decrement {
-        border-radius: 0 0 5px 0;
-        border-bottom: 1px solid #444;
-    }
 }
 
 /* ESTILOS PARA CALENDARIO */
@@ -1008,4 +932,13 @@ body {
 
 .articulo {
     width: 648px;
+}
+
+/*  QUITAR ENLACES DE GOLEADORES */
+
+.goleadores a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+    pointer-events: none;
 }
