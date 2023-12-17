@@ -253,6 +253,14 @@
 
                 {{-- DIRECTOS DE LA API  --}}
                 @foreach ($directos as $leagueId => $partidosPorLiga)
+                
+                    <?php if (is_null($partidosPorLiga[0]['league']['cc'])) {
+                        $bandera = 'eu';
+                    } else {
+                        $bandera = $partidosPorLiga[0]['league']['cc'];
+                    }
+                    ?>
+
                     <div class="accordion-item br-0">
                         <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
                             id="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
@@ -267,9 +275,8 @@
                                 </div>
 
                                 <div class="d-inline-flex rounded-circle bandera_pais">
-                                    <img src="https://flagcdn.com/{{ $partidosPorLiga[0]['league']['cc'] }}.svg"
-                                        width="32" height="32" alt="bandera del pais del torneo"
-                                        class="rounded-circle">
+                                    <img src="https://flagcdn.com/{{ $bandera }}.svg" width="32"
+                                        height="32" alt="bandera del pais del torneo" class="rounded-circle">
                                 </div>
                                 @if ($partidosPorLiga[0]['league'])
                                     <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"
