@@ -194,18 +194,6 @@ class Controller extends BaseController
             WHERE p.temporada_id=$id AND p.jornada=$JActiva
             ORDER BY p.fecha, p.hora_prevista");
 
-            $observaciones = $JornadaActiva[0]->observaciones;
-
-            // Buscar la posición de *A y *B en el string
-            $posicionA = strpos($observaciones, '*A');
-            $posicionB = strpos($observaciones, '*B');
-
-            // Extraer la primera variable desde *A hasta justo antes de *B
-            $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
-
-            // Extraer la segunda variable desde *B hasta el final del observaciones
-            $goles_visitante = substr($observaciones, $posicionB + 2);
-
 
             // Ordena el array por fecha y hora descendente
             $JornadaActiva = collect($JornadaActiva)->sortByDesc(function ($partido) {
@@ -219,8 +207,6 @@ class Controller extends BaseController
                 'CC_Pais' => $CC_Pais,
                 'JornadaActiva' => $JornadaActiva,
                 'ID_TL' => $id,
-                'goles_local' => $goles_local,
-                'goles_visitante' => $goles_visitante,
             ]);
         }
     }
