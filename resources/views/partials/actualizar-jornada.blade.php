@@ -6,6 +6,22 @@
         <?php
         $horabd = $partido->hora_prevista;
         $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
+        
+        $observaciones = $partido->observaciones;
+        
+        // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
+        $expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
+        
+        // Realizamos la coincidencia con la expresión regular
+        if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
+            // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
+            $goles_local = $coincidencias[1];
+            $goles_visitante = $coincidencias[2];
+        } else {
+            // No hubo coincidencia con la expresión regular
+            $goles_local = '<span class="nada"></span>';
+            $goles_visitante = '<span class="nada"></span>';
+        }
         ?>
         <div id="" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2">
             <div class="d-flex aling-items-center justify-content-between partido_futuro">
@@ -41,14 +57,26 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <div class="goleadores">
-                        <span class="d-block">{{ $goles_local }}</span>{{-- {!! $partido->observaciones !!} --}}
+                        <span class="d-block">{!! $goles_local !!}</span> {{-- {!! $partido->observaciones !!} --}}
                     </div>
                 </div>
 
                 <div class="marcador">
-                    <span class="goles-local color-red">{{ $partido->goles_local }}</span>
+                    <span class="goles-local color-red">
+                        @if ($partido->goles_local == '0')
+                            -
+                        @else
+                            {{ $partido->goles_local }}
+                        @endif
+                    </span>
                     <span class="fs-01 color-red">-</span>
-                    <span class="goles-visitante color-red">{{ $partido->goles_visitante }}</span>
+                    <span class="goles-visitante color-red">
+                        @if ($partido->goles_visitante == '0')
+                            -
+                        @else
+                            {{ $partido->goles_visitante }}
+                        @endif
+                    </span>
                 </div>
 
                 <div class="visitante">
@@ -57,7 +85,7 @@
                     </div>
                     <h3 class="d-block">{{ $partido->visitante }}</h3>
                     <div class="goleadores">
-                        <span class="d-block">{{ $goles_visitante }}</span>
+                        <span class="d-block">{!! $goles_visitante !!}</span>
                     </div>
                 </div>
             </div>
