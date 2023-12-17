@@ -70,10 +70,16 @@
                     <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
                         step="1" maxlength="3" class="text-white fs-4">
-                    <div class="buttons_cat">
-                        <div class="increment" onclick="incrementValue(this)"><i class="bi bi-chevron-up"></i></div>
-                        <div class="decrement" onclick="decrementValue(this)"><i class="bi bi-chevron-down"></i></div>
-                    </div>
+
+                    <select name="value" id="number">
+                        @foreach (range(1, $torneo_Liga->jornadas) as $jornada)
+                            <option value="{{ $jornada }}"
+                                {{ $jornada == $torneo_Liga->jornadaActiva ? 'selected' : '' }}>
+                                {{ $jornada }}
+                            </option>
+                        @endforeach
+                    </select>
+
                     <input type="hidden" name="id_temporada" value="{{ $ID_TL }}">
                 </div>
                 {{-- JORNADAS --}}
@@ -172,7 +178,7 @@
                                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                                     </div>
                                     <div class="goleadores">
-                                        <span class="d-block">{!! $partido->observaciones !!}</span>
+                                        <span class="d-block">{{$goles_local}}</span>
                                     </div>
                                 </div>
 
@@ -187,6 +193,9 @@
                                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoVisitante_id) }}.png" class="logo_s img-fluid"> --}}
                                     </div>
                                     <h3 class="d-block">{{ $partido->visitante }}</h3>
+                                    <div class="goleadores">
+                                        <span class="d-block">{{$goles_visitante}}</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -450,7 +459,7 @@
                             <div class="col-12 py-3 bg-white center_center mb-3">
                                 <div class="escudo col-4">
                                     <a
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}">
+                                        href="{{ url('/resultados-directo/equipo/' . $equipo->slug . '/' . $equipo->equipo_id . '/datos') }}">
                                         {{-- <img src="https://assets.b365api.com/images/team/b/{{ $equipo->betsapi }}.png" alt="escudo {{ $equipo->nombre }} " class="img-fluid"> --}}
 
                                         <img src="{{ asset('assets/images/img/club/escudo' . $equipo->club_id) }}.png"
@@ -460,13 +469,13 @@
 
                                 <div class="nombre col-4 text-center">
                                     <a class="text-decoration-none fs-22px color-black fw-semibold"
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}"
+                                        href="{{ url('/resultados-directo/equipo/' . $equipo->slug . '/' . $equipo->equipo_id . '/datos') }}"
                                         class="img-fluid"> {{ $equipo->nombre }} </a>
                                 </div>
 
                                 <div class="indumentaria col-4 text-end">
                                     <a
-                                        href="{{ url('/resultados-directo/equipo/'. $equipo->slug .'/' . $equipo->equipo_id .'/datos') }}">
+                                        href="{{ url('/resultados-directo/equipo/' . $equipo->slug . '/' . $equipo->equipo_id . '/datos') }}">
                                         <img class="img-fluid"
                                             src="{{ asset('assets/images/img/equipaciones/eq' . $equipo->equipacion_id) }}.png"
                                             alt="Equipacion {{ $equipo->nombre }}" class="img-fluid">

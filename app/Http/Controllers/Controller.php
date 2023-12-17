@@ -194,12 +194,38 @@ class Controller extends BaseController
             WHERE p.temporada_id=$id AND p.jornada=$JActiva
             ORDER BY p.fecha, p.hora_prevista");
 
+            $observaciones = $JornadaActiva[0]->observaciones;
+            
+            // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
+            $expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
+            
+            // Realizamos la coincidencia con la expresión regular
+            if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
+                // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
+                $goles_local = $coincidencias[1];
+                $goles_visitante = $coincidencias[2];
+                
+            } else {
+                // No hubo coincidencia con la expresión regular
+                //echo "No se encontraron coincidencias.\n";
+            }
+            
+
             // Ordena el array por fecha y hora descendente
             $JornadaActiva = collect($JornadaActiva)->sortByDesc(function ($partido) {
                 return $partido->fecha . ' ' . $partido->hora_prevista;
             })->values()->all();
 
-            return view('categories', ['nombre' => $nombre, 'equipos' => $equipos, 'torneo_Liga' => $torneo_Liga, 'CC_Pais' => $CC_Pais, 'JornadaActiva' => $JornadaActiva, 'ID_TL' => $id]);
+            return view('categories', [
+                'nombre' => $nombre, 
+                'equipos' => $equipos, 
+                'torneo_Liga' => $torneo_Liga, 
+                'CC_Pais' => $CC_Pais, 
+                'JornadaActiva' => $JornadaActiva, 
+                'ID_TL' => $id, 
+                'goles_local' => $goles_local,
+                'goles_visitante' => $goles_visitante,
+            ]);
         }
     }
 
