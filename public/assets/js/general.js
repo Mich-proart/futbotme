@@ -224,7 +224,7 @@ function nextDay() {
 function obtenerEvento(btnIdLiga) {
 
     jQuery.ajax({
-        url: `/apiBetsapiEventos`, // AJAX handler,
+        url: `/public/apiBetsapiEventos`, // AJAX handler,
         type: 'POST',
         data: {
             id: jQuery(btnIdLiga).attr('attr-id-evento'),
@@ -267,7 +267,7 @@ function obtenerEvento(btnIdLiga) {
 function obtenerAlineacion(btnIdLiga) {
 
     jQuery.ajax({
-        url: `/apiBetsapi`, // AJAX handler,
+        url: `/public/apiBetsapi`, // AJAX handler,
         type: 'POST',
         data: {
             id: jQuery(btnIdLiga).attr('attr-id-evento'),
