@@ -10,16 +10,18 @@
         $observaciones = $partido->observaciones;
         
         // Utilizamos una expresión regular para encontrar la parte después de "*A" y "*B"
-        $expresion_regular = "/\*A\s(.*?)\n\*B\s(.*?)/s";
+        $expresion_regular_A = "/\*A\s(.*?)(?=\*B|$)/s";
+        $expresion_regular_B = '/\*B\s(.*?)/s';
         
-        // Realizamos la coincidencia con la expresión regular
-        if (preg_match($expresion_regular, $observaciones, $coincidencias)) {
-            // Las variables que necesitas estarán en $coincidencias[1] y $coincidencias[2]
-            $goles_local = $coincidencias[1];
-            $goles_visitante = $coincidencias[2];
+        if (preg_match($expresion_regular_A, $observaciones, $coincidencias_A)) {
+            $goles_local = trim($coincidencias_A[1]);
         } else {
-            // No hubo coincidencia con la expresión regular
             $goles_local = '<span class="nada"></span>';
+        }
+        // Realizamos la coincidencia con la expresión regular
+        if (preg_match($expresion_regular_B, $observaciones, $coincidencias_B)) {
+            $goles_visitante = trim($coincidencias_B[1]);
+        } else {
             $goles_visitante = '<span class="nada"></span>';
         }
         ?>
@@ -57,7 +59,7 @@
                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                     </div>
                     <div class="goleadores">
-                        <span class="d-block">{!! $goles_local !!}</span> {!! $partido->observaciones !!}
+                        <span class="d-block">{!! $goles_local !!}</span> {{-- {!! $partido->observaciones !!} --}}
                     </div>
                 </div>
 
