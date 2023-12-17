@@ -43,7 +43,6 @@
                 <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                     {{-- <span class="icon-alienacion d-inline-block fs-1"></span>
                 <span class="icon-ball d-inline-block fs-1"></span> --}}
-                    <span class="icon-TV d-inline-block fs-1"></span>
                 </div>
 
             </div>
