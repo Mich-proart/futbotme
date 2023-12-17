@@ -207,7 +207,8 @@ class Controller extends BaseController
                 
             } else {
                 // No hubo coincidencia con la expresión regular
-                //echo "No se encontraron coincidencias.\n";
+                $goles_local = '<span class="nada"></span>';
+                $goles_visitante = '<span class="nada"></span>';
             }
             
 
