@@ -193,7 +193,7 @@ $consulta = 'SELECT a.id, a.categoria_id, a.division_id, a.nombre, a.orden, ae.e
                 @foreach ($medios as $medio)
                     <div class="col-lg-2 col12">
                         <div class="form-check">
-                            <input class="form-check-input" <?php if (intval($medio->id) === intval($medioPartido[0]->medio_id)) {
+                            <input class="form-check-input" <?php if (isset($medioPartido[0]->medio_id) && intval($medio->id) === intval($medioPartido[0]->medio_id)) {
                                 echo 'checked';
                             } else {
                                 echo '';

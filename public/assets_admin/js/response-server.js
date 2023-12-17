@@ -29,8 +29,7 @@ const functionUpdatePartidos = (data) => {
             leagueId: partido.league.id,
             idLocal: partido.home.id,
             nombreLocal: partido.home.name,
-            golesLocal:
-                partido.ss != undefined ? partido.ss.substring(0, 1) : 0,
+            golesLocal: partido.ss != undefined ? partido.ss.substring(0, 1) : 0,
             idVisitante: partido.away.id,
             nombreVisitante: partido.away.name,
             golesVisitante:

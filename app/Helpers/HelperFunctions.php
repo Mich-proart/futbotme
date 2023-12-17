@@ -12,6 +12,9 @@ class HelperFunctions
     public static function get_url_upcoming($ligaId){
         return $url = 'https://api.betsapi.com/v3/events/upcoming?sport_id=1&token='.HelperFunctions::get_tokken_betsapi().'&league_id='.$ligaId.'&page=1';
     }
+    public static function get_url_status_football($idEvento){
+        return $url = 'https://api.b365api.com/v1/event/view?token='.HelperFunctions::get_tokken_betsapi().'&event_id='.$idEvento;
+    }
 
     // aqui generamos la obtencion de fecha estandar para ocuparla en todo el panel
     public static function get_fecha_current_generic(){

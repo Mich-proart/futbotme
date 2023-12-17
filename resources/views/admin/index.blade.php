@@ -34,31 +34,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $estado_clase = '';?>
+                            {{-- https://api.b365api.com/v1/events/search?token=153716-4djEyj4e6JZVou&sport_id=1&home=605821&away=194909&time=1702818000 --}}
+                            <?php //$estado_clase = '<span class="badge-change-js badge '.$bgColor.' rounded-pill">'.$stringEstado.' Directo</span>';?>
                             @foreach ($partidosTodosLosEstados as $partido)
                                 <?php if(intval($partido['estadoPartido']) === 2){ 
-                                    $estado_clase = '<span class="badge bg-success rounded-pill">Directo</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-success rounded-pill">Directo</span>';
                                 }elseif(intval($partido['estadoPartido']) === 1){ 
-                                    $estado_clase = '<span class="badge bg-danger rounded-pill">Final</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-danger rounded-pill">Final</span>';
                                 }elseif(intval($partido['estadoPartido']) === 3){ 
-                                    $estado_clase = '<span class="badge bg-warning rounded-pill">Suspendido</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-warning rounded-pill">Suspendido</span>';
                                 }elseif(intval($partido['estadoPartido']) === 4){ 
-                                    $estado_clase = '<span class="badge bg-secondary rounded-pill">Aplazado</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-secondary rounded-pill">Aplazado</span>';
                                 }elseif(intval($partido['estadoPartido']) === 6){ 
-                                    $estado_clase = '<span class="badge bg-success rounded-pill">Descanso</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-success rounded-pill">Descanso</span>';
                                 }else{ 
-                                    $estado_clase = '<span class="badge bg-info rounded-pill">No jugado</span>';
+                                    $estado_clase = '<span class="badge-change-js badge bg-info rounded-pill">No jugado</span>';
                                 }?>
                                 <tr class="fila-directos-partido" tr-attr-id-partido="{{ $partido['idPartido'] }}" tr-attr-id="{{ $partido['idBetsapi'] }}">
                                     <th scope="row">
-                                        {{-- <span class="badge bg-primary rounded-pill">Primary</span> --}}
-                                        {{-- <span class="badge bg-secondary text-light rounded-pill">Secondary</span> --}}
                                         <?php echo $estado_clase; ?>
-                                        {{-- <span class="badge bg-danger rounded-pill">Danger</span> --}}
-                                        {{-- <span class="badge bg-warning rounded-pill">Warning</span> --}}
-                                        {{-- <span class="badge bg-info rounded-pill">Info</span> --}}
-                                        {{-- <span class="badge bg-light text-dark rounded-pill">Light</span> --}}
-                                        {{-- <span class="badge bg-dark text-light rounded-pill">Dark</span> --}}
+                                        <a target="_blank" href="{{ url('/admin-panel/editar-partido-no-direct/' . $partido['idPartido']) }}">Ver/Editar</a>
                                         <span class="fila-id-directo-partido">{{ $partido['idPartido'] }}</span>
                                     </th>
                                     <th scope="row">

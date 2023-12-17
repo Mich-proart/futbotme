@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 //importaciones
 use Carbon\Carbon;
@@ -12,7 +13,6 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Admin\AdminEquiposController;
 use App\Helpers\HelperFunctions;
-
 
 //alineacion https://api.b365api.com/v1/event/lineup?token=153716-4djEyj4e6JZVou&LNG_ID=3&event_id=5981919
 
@@ -245,6 +245,26 @@ class AdminController extends Controller
         return $query_medio_partido;
     }
 
+    /*****++ curl para obtener los datos del evento que toca como estado de partido */
+    public static function get_curl_status_football_soccer($idEvento){
+        // var_dump(HelperFunctions::get_url_status_football($idEvento));
+        $url = 'https://api.b365api.com/v1/event/view?token=153716-4djEyj4e6JZVou&event_id='.$idEvento;
+        $response = Http::get($url);
+        // Verificar si la solicitud fue exitosa (código 200)
+        if ($response->ok()) {
+            $data = $response->json();
+            $obj_transform = [
+                'idEvento' => $data['results'][0]['id'],
+                'id_time_status' => $data['results'][0]['time_status']
+            ];
+            echo json_encode($obj_transform);
+        } else {
+            $errorCode = $response->status();
+            return "Error al obtener los datos. Código de error: $errorCode";
+        }
+    }
+
+
     /*************************************************/
     /********************* HELPERS *******************/
     /*************************************************/
@@ -393,39 +413,106 @@ class AdminController extends Controller
         }
     }
 
+    // refrescamos el estatus del partido de betsapi si el partido ya termino
     public function refreshStatusFootballSoccer(Request $request){
-        date_default_timezone_set('Europe/Madrid');
-        $array_response_match = array();
-        $array_response_notfound = array();
-        $directos_json = $this->obtener_directos_de_json();
-        $partidos_db = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
-        foreach ($partidos_db as $key => $value) {
-            if((intval($value['idBetsapi']) != 1) && (intval($value['idBetsapi']) != -1)){
-                foreach ($directos_json as $keyJson => $valueJson) {
-                    if(intval($valueJson['id']) === intval($value['idBetsapi'])){
-                        $obj_found = [
-                            'id' => $valueJson['id']
-                        ];
-                        array_push($array_response_match, $obj_found);
-                    }else{
-                        $hora = HelperFunctions::get_fecha_format_second($valueJson['time'])['horaFormat'];
-                        $hora_exacta = HelperFunctions::get_fecha_current_now()['horaFormat'];
-                        if($hora > $hora_exacta){
-                            $obj_no_found = [
-                                'id' => $valueJson['id']
-                            ];
-                            array_push($array_response_notfound, $obj_no_found);
-                        }
-                    }
-                }
-            }
-        }
-        $response_object = [
-            'arrayFound' => $array_response_match,
-            'arrayNotFound' => $array_response_notfound,
-        ];
 
-        echo json_encode($response_object);
+
+        $filaIdDirectoPartido = $request->input('filaIdDirectoPartido');
+        $horaActual = $request->input('horaActual');
+        $horaFila = $request->input('horaFila');
+
+        $this->get_curl_status_football_soccer($filaIdDirectoPartido);
+
+        // var_dump($filaIdDirectoPartido);
+        // var_dump($horaActual);
+        // var_dump($horaFila);
+
+        // $data = $request->all()['data'];
+        // data: {
+        //     filaIdDirectoPartido,
+        //     horaActual,
+        //     horaFila
+        // },
+
+
+
+
+
+
+
+
+        // $array_response_status_affter = array();
+        // $data = $request->all()['arrayIdFront'];
+        // foreach ($data as $key => $value) {
+        //     $id_directo = intval($value['idEvento']);
+        //     $this->get_curl_status_football_soccer($id_directo);
+        //     // $id_directo = intval($value['idEvento']);
+        //     // $obj_response = [
+        //     //     'id' => $this->get_curl_status_football_soccer($id_directo)[0]['id'],
+        //     //     'time_status' => $this->get_curl_status_football_soccer($id_directo)[0]['time_status']
+        //     // ];
+        //     // array_push($array_response_status_affter, $obj_response);
+        // }
+
+        //echo json_encode($array_response_status_affter);
+
+
+
+        // $idEvento = 6836559;
+        // var_dump($this->get_curl_status_football_soccer($idEvento));
+        // $obj_response = [
+        //     'id' => $this->get_curl_status_football_soccer($idEvento)[0]['id'],
+        //     'time' => $this->get_curl_status_football_soccer($idEvento)[0]['time'],
+        //     'time_status' => $this->get_curl_status_football_soccer($idEvento)[0]['time_status'],
+        //     'time_status_fecha_convert' => HelperFunctions::get_fecha_format_second($this->get_curl_status_football_soccer($idEvento)[0]['time_status'])['fechaFormat'],
+        //     'time_status_hora_convert' => HelperFunctions::get_fecha_format_second($this->get_curl_status_football_soccer($idEvento)[0]['time_status'])['horaFormat']
+        // ];
+        // var_dump($obj_response);
+        
+
+
+
+
+        //https://api.b365api.com/v1/event/view?token=153716-4djEyj4e6JZVou&event_id=6811266
+        // date_default_timezone_set('Europe/Madrid');
+        // $array_response_match = array();
+        // $array_response_notfound = array();
+        // $directos_json = $this->obtener_directos_de_json();
+        // $partidos_db = $this->get_all_partidos_curtdate(HelperFunctions::get_fecha_current_generic());
+        // foreach ($partidos_db as $key => $value) {
+        //     if((intval($value['idBetsapi']) != 1) && (intval($value['idBetsapi']) != -1)){
+        //         foreach ($directos_json as $keyJson => $valueJson) {
+        //             if(intval($valueJson['id']) === intval($value['idBetsapi'])){
+        //                 $obj_found = [
+        //                     'id' => $value['idBetsapi'],
+        //                     'value' => 'jugando'
+        //                 ];
+        //                 array_push($array_response_match, $obj_found);
+        //             }else{
+        //                 $hora = $value['hora_prevista'];
+        //                 $hora_exacta = HelperFunctions::get_fecha_current_now()['horaFormat'];
+        //                 if($hora < $hora_exacta){
+        //                     $obj_no_found = [
+        //                         'id' => $value['idBetsapi'],
+        //                         'value' => 'no-jugado'
+        //                     ];
+        //                 }else{
+        //                     $obj_no_found = [
+        //                         'id' => $value['idBetsapi'],
+        //                         'value' => 'terminado'
+        //                     ];
+        //                 }
+        //                 array_push($array_response_notfound, $obj_no_found);
+        //             }
+        //         }
+        //     }
+        // }
+        // $response_object = [
+        //     'arrayFound' => $array_response_match,
+        //     'arrayNotFound' => $array_response_notfound,
+        // ];
+
+        // echo json_encode($response_object);
 
 
 

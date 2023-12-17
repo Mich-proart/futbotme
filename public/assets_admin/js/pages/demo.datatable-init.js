@@ -6,7 +6,7 @@ $(document).ready(function () {
         //scrollY: "calc(100vh - 570px)",
         scrollX: !0,
         scrollCollapse: !0,
-        pageLength: 50,
+        pageLength: 60,
         fixedColumns: !0,
         language: {
             sProcessing: "Procesando...",
