@@ -67,9 +67,9 @@
                 <div class="number-input text-white bg-gray-22 p-4">
 
                     <label for="number" class="fs-4">JORNADA</label>
-                    <input id="number" type="number" pattern="[0-9]*" name="value"
+                    {{-- <input id="number" type="number" pattern="[0-9]*" name="value"
                         value="{{ $torneo_Liga->jornadaActiva }}" min="1" max="{{ $torneo_Liga->jornadas }}"
-                        step="1" maxlength="3" class="text-white fs-4">
+                        step="1" maxlength="3" class="text-white fs-4"> --}}
 
                     <select name="value" id="number">
                         @foreach (range(1, $torneo_Liga->jornadas) as $jornada)
@@ -178,7 +178,7 @@
                                         {{-- <img src="{{ asset('assets/images/img/club/escudo' . $partido->equipoLocal_id) }}.png" class="logo_s img-fluid"> --}}
                                     </div>
                                     <div class="goleadores">
-                                        <span class="d-block">{{$goles_local}}</span>
+                                        <span class="d-block">{!! $goles_local !!}</span>
                                     </div>
                                 </div>
 
@@ -194,7 +194,7 @@
                                     </div>
                                     <h3 class="d-block">{{ $partido->visitante }}</h3>
                                     <div class="goleadores">
-                                        <span class="d-block">{{$goles_visitante}}</span>
+                                        <span class="d-block">{!! $goles_visitante !!}</span>
                                     </div>
                                 </div>
                             </div>
@@ -1010,26 +1010,6 @@
 
     <script>
         /* SELECTOR DE JORNADAS */
-        function incrementValue(element) {
-            var input = element.parentNode.previousElementSibling;
-            var value = parseInt(input.value);
-            if (isNaN(value)) {
-                value = 0;
-            }
-            input.value = Math.min(value + 1, parseInt(input.max) || Infinity);
-
-        }
-
-        function decrementValue(element) {
-            var input = element.parentNode.previousElementSibling;
-            var value = parseInt(input.value);
-            if (isNaN(value) || value <= 0) {
-                value = 0;
-            } else {
-                input.value = value - 1;
-            }
-        }
-
 
         $('#number').on('change', function() {
             var nuevoJActiva = $(this).val();
