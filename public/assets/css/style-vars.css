@@ -40,8 +40,8 @@
 @media (min-width: 992px) { 
 
   :root {        
-    --fs-ciegos:22px;
-    --fs-large:18px;
+    --fs-ciegos:18px;
+    --fs-large:17px;
     --fs-standar: 16px;
     --fs-small:16px;/* 14px */
     --fs-small-xs:14px; /* 12px */

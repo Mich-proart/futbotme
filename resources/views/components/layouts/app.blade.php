@@ -19,6 +19,11 @@
     {{-- css files --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style-navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style-footer.css') }}">
@@ -46,10 +51,10 @@
 </head>
 
 <body>
-<?php 
-use Jenssegers\Agent\Agent;
-$agent = new Agent();
-?>
+    <?php
+    use Jenssegers\Agent\Agent;
+    $agent = new Agent();
+    ?>
     {{-- navbar --}}
     <x-layouts.navigation />
 
@@ -67,7 +72,7 @@ $agent = new Agent();
                             <!-- Contenido específico para dispositivos móviles -->
                         @else
                             <!-- Contenido para otros dispositivos (no móviles) -->
-                            <script src="https://emea.hhkld.com/tag/load-107393.js" async  charset="UTF-8" ></script>
+                            <script src="https://emea.hhkld.com/tag/load-107393.js" async charset="UTF-8"></script>
                         @endif
 
                     </div>
