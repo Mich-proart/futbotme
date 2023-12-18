@@ -588,8 +588,8 @@
 
                                 </div>
                                 <div class="col"><span
-                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?>
-                                        <?php echo $partidos[0]['jornada']; ?></span>
+                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidoInfo['datosTemporadaSeccion']['nombreFase']; ?>
+                                        <?php echo $partidoInfo['datosTemporadaSeccion']['jornada']; ?></span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
