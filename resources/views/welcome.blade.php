@@ -551,8 +551,6 @@
                         $pais = trim(end($paisArray));
                         $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
                     }
-
-
                     
                 ?>
 
@@ -673,8 +671,35 @@
                 {{-- PARTIDOS FINALIZADOS --}}
 
                 {{-- echo 'PARTIDOS TERMINADOS</br>' --}}
-                <?php foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) {
-                $slug = Str::slug($nombreTemporada);    
+                <?php
+
+                    foreach ($partidosTerminadosCurDate as $nombreTemporada => $partidos) {
+                    $slug = Str::slug($nombreTemporada);    
+
+                    // Cadena dada
+                    $string = $nombreTemporada;
+
+                    // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
+                    if (
+                        strpos($string, "PRIMERA DIVISIÓN") !== false ||
+                        strpos($string, "SEGUNDA DIVISIÓN") !== false ||
+                        strpos($string, "PREFERENTE") !== false ||
+                        strpos($string, "REGIONAL") !== false ||
+                        strpos($string, "GRUPO") !== false ||
+                        strpos($string, "FEDERACIÓN") !== false
+                    ) {
+                        // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
+                        $pais = "España";
+                        //$CC_pais = obtenerCodigoPais($pais);
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
+                    } else {
+                        // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
+                        $paisArray = explode("-", $string);
+                        
+                        // Obtiene el último elemento del array después de dividir por el guion
+                        $pais = trim(end($paisArray));
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
+                    }
                 ?>
                 <div class="accordion-item br-0">
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
@@ -706,21 +731,29 @@
                     </h2>
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
-                        <?php foreach ($partidos as $partidoInfo) {
-                            //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
+                        <?php 
+                            foreach ($partidos as $partidoInfo) {
+                                //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
 
-                            $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
-                        
-                        // Buscar la posición de *A y *B en el string
-                        $posicionA = strpos($observaciones, '*A');
-                        $posicionB = strpos($observaciones, '*B');
-                        
-                        // Extraer la primera variable desde *A hasta justo antes de *B
-                        $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
-                        
-                        // Extraer la segunda variable desde *B hasta el final del observaciones
-                        $goles_visitante = substr($observaciones, $posicionB + 2);
-                            ?>
+                                /* FASE O JORNADA */
+                                if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                                    $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                                }else {
+                                    $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                                }   
+
+                                    $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
+                                
+                                // Buscar la posición de *A y *B en el string
+                                $posicionA = strpos($observaciones, '*A');
+                                $posicionB = strpos($observaciones, '*B');
+                                
+                                // Extraer la primera variable desde *A hasta justo antes de *B
+                                $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+                                
+                                // Extraer la segunda variable desde *B hasta el final del observaciones
+                                $goles_visitante = substr($observaciones, $posicionB + 2);
+                        ?>
 
                         <div class="accordion-body border-bottom partido_finalizado">
                             <div class="d-flex aling-items-center justify-content-between ">
@@ -748,14 +781,13 @@
                                 </div>
                                 <div class="col">
                                     <span class="fs-00 d-grid grid-center-xy jornada_tiempo">
-                                        <?php echo $partidos[0]['nombreFase']; ?>
+                                        <?php echo $FaseJornada; ?>
                                     </span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1"></span>
                                     <span class="icon-ball d-inline-block fs-1"></span>
-                                    <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
                             </div>
