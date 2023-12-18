@@ -26,16 +26,18 @@ class Controller extends BaseController
             // Llamada a la API para obtener información del país por nombre
             if ($pnombrepais == 'Chipre') {
                 $pnombrepais = 'Cyprus';
-            }elseif ($pnombrepais == 'Polonia') {
+            } elseif ($pnombrepais == 'Polonia') {
                 $pnombrepais = 'Poland';
-            }elseif ($pnombrepais == 'Bosnia y Herzegovina') {
+            } elseif ($pnombrepais == 'Bosnia y Herzegovina') {
                 $pnombrepais = 'Bosnia and Herzegovina';
-            }elseif ($pnombrepais == 'Azerbaiyán') {
+            } elseif ($pnombrepais == 'Azerbaiyán') {
                 $pnombrepais = 'Azerbaijan';
-            }elseif ($pnombrepais == 'Grecia') {
+            } elseif ($pnombrepais == 'Grecia') {
                 $pnombrepais = 'Greece';
-            }elseif ($pnombrepais == 'Inglaterra') {
+            } elseif ($pnombrepais == 'Inglaterra') {
                 $pnombrepais = 'United Kingdom';
+            } else {
+                $pnombrepais = $pnombrepais;
             }
             $response = Http::get('https://restcountries.com/v2/name/' . $pnombrepais);
 
@@ -44,14 +46,14 @@ class Controller extends BaseController
                 $data = $response->json();
 
                 // Obtener el código de país (alpha-2 code)
-                $pais = $data[0]['languages'][0]['iso639_1'];
+                $pais = $data[0]['flag'];
             } else {
                 // Manejar el caso en que la solicitud no fue exitosa
-                $pais = 'eu';
+                $pais = 'https://flagcdn.com/eu.svg';
             }
         } catch (\Exception $e) {
             // Manejar cualquier excepción que pueda ocurrir durante la solicitud
-            $pais = 'un';
+            $pais = 'https://flagcdn.com/un.svg';
         }
 
         // Retornar el código del país
@@ -76,7 +78,7 @@ class Controller extends BaseController
         ]);
     }
 
-    
+
 
     public function indexCategorias(Request $request, $nombre, $id = null, $tabs = null)
     {

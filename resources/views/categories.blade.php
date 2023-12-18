@@ -7,7 +7,7 @@
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
             <div class="rounded-circle bandera_pais">
-                <img src="https://flagcdn.com/{{ $CC_Pais }}.svg" width="32" height="32"
+                <img src="{{ $CC_pais }}" width="32" height="32"
                     alt="bandera del pais del torneo" class="rounded-circle">
             </div>
             <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $torneo_Liga->nombre }}</h1>

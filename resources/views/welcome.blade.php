@@ -229,7 +229,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/{{ $CC_pais }}.svg" width="32" height="32"
+                                <img src="{{ $CC_pais }}" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
@@ -544,7 +544,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/{{ $CC_pais }}.svg" width="32" height="32"
+                                <img src="{{ $CC_pais }}" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
@@ -564,7 +564,7 @@
 
                         <?php 
                         foreach ($partidos as $partidoInfo) { 
-                            
+
                         /* FASE O JORNADA */
                         if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                             $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
