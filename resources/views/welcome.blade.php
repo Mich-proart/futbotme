@@ -815,7 +815,7 @@
                 }, */
                 success: function(response) {
                     // Actualizar el front-end con la nueva vista parcial
-                    //$('#jornadas_categorias').html(response);
+                    $('#PartidosEnDirecto').html(response);
                     console.log(response);
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
@@ -843,6 +843,7 @@
                     // $(acordion).html("");
                 },
                 success: function(response) {
+                    $('#PartidosEnDirecto').html(response);
                     console.log(response);
                     // let result = JSON.parse(response);
                 },

@@ -122,7 +122,9 @@ class BuscadorController extends Controller{
 
             // Hacer algo con los datos
             // Por ejemplo, devolverlos como respuesta
-            return response()->json($datos);
+            //return response()->json($datos);
+            $datosPartidos = response()->json($datos);
+            return view('partials.actualizarPartidos', compact('datosPartidos'));
         } else {
             // El archivo no existe
             return response()->json(['error' => 'El archivo no existe'], 404);
@@ -142,7 +144,9 @@ class BuscadorController extends Controller{
 
             // Hacer algo con los datos
             // Por ejemplo, devolverlos como respuesta
-            return response()->json($datos);
+            //return response()->json($datos);
+            $datosPartidos = response()->json($datos);
+            return view('partials.actualizarPartidos', compact('datosPartidos'));
         } else {
             // El archivo no existe
             return response()->json(['error' => 'El archivo no existe'], 404);
