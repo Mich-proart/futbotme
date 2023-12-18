@@ -12,9 +12,6 @@
             }
         };
     </script>
-    <?php 
-    use App\Http\Controllers\Controller;
-    ?>
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
@@ -415,14 +412,14 @@
                         // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
                         $pais = "España";
                         //$CC_pais = obtenerCodigoPais($pais);
-                        $CC_pais = app(Controller::class)->obtenerCodigoPais($pais);
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
                     } else {
                         // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
                         $paisArray = explode("-", $string);
                         
                         // Obtiene el último elemento del array después de dividir por el guion
                         $pais = trim(end($paisArray));
-                        $CC_pais = app(Controller::class)->obtenerCodigoPais($pais);
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
                     }
 
                 ?>
