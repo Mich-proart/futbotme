@@ -247,7 +247,27 @@
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
-                        <?php foreach ($partidos as $partidoInfo) { ?>
+                        <?php 
+                            foreach ($partidos as $partidoInfo) { 
+                                /* FASE O JORNADA */
+                        if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                            $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                        }else {
+                            $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                        } 
+                        
+                        $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
+                        
+                        // Buscar la posición de *A y *B en el string
+                        $posicionA = strpos($observaciones, '*A');
+                        $posicionB = strpos($observaciones, '*B');
+                        
+                        // Extraer la primera variable desde *A hasta justo antes de *B
+                        $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+                        
+                        // Extraer la segunda variable desde *B hasta el final del observaciones
+                        $goles_visitante = substr($observaciones, $posicionB + 2);
+                        ?>
 
                         <div class="accordion-body border-bottom partido_futuro"
                             id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
@@ -266,15 +286,15 @@
                                     </div>
 
                                 </div>
-                                <div class="col"><span
-                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span>
+                                <div class="col">
+                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
-                                        attr-id-evento=""></span>
+                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"></span>
                                     <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
-                                        attr-id-evento=""></span>
+                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"></span>
                                     <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
@@ -286,6 +306,9 @@
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
+                                    </div>
+                                    <div class="goleadores">
+                                        <span class="d-block">{!! $goles_local !!}</span>
                                     </div>
                                 </div>
 
@@ -304,6 +327,9 @@
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
+                                    <div class="goleadores">
+                                        <span class="d-block">{!! $goles_visitante !!}</span>
+                                    </div>
                                 </div>
                             </div>
 
