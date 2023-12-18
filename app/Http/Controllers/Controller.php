@@ -25,21 +25,21 @@ class Controller extends BaseController
         try {
             // Llamada a la API para obtener información del país por nombre
             if ($pnombrepais == 'Chipre') {
-                $pnombrepais = 'Cyprus';
+                $nombrepais = 'Cyprus';
             } elseif ($pnombrepais == 'Polonia') {
-                $pnombrepais = 'Poland';
+                $nombrepais = 'Poland';
             } elseif ($pnombrepais == 'Bosnia y Herzegovina') {
-                $pnombrepais = 'Bosnia and Herzegovina';
+                $nombrepais = 'Bosnia and Herzegovina';
             } elseif ($pnombrepais == 'Azerbaiyán') {
-                $pnombrepais = 'Azerbaijan';
+                $nombrepais = 'Azerbaijan';
             } elseif ($pnombrepais == 'Grecia') {
-                $pnombrepais = 'Greece';
+                $nombrepais = 'Greece';
             } elseif ($pnombrepais == 'Inglaterra') {
-                $pnombrepais = 'United Kingdom';
+                $nombrepais = 'United Kingdom';
             } else {
-                $pnombrepais = $pnombrepais;
+                $nombrepais = $pnombrepais;
             }
-            $response = Http::get('https://restcountries.com/v2/name/' . $pnombrepais);
+            $response = Http::get('https://restcountries.com/v2/name/' . $nombrepais);
 
             // Verificar si la solicitud fue exitosa
             if ($response->successful()) {
