@@ -197,31 +197,31 @@
                                 <div class="marcador">
                                     <span class="goles-local color-red">
 
-                                        <?php 
-                                            if($partido->estado_partido == 3){
+                                        <?php
+                                        if ($partido->estado_partido == 3) {
+                                            echo $partido->goles_local;
+                                        } else {
+                                            if ($partido->goles_local == '0'):
+                                                echo '-';
+                                            else:
                                                 echo $partido->goles_local;
-                                            }else {
-                                                @if ($partido->goles_local == '0')
-                                                    -
-                                                @else
-                                                    echo $partido->goles_local;
-                                                @endif
-                                            }
+                                            endif;
+                                        }
                                         ?>
                                     </span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante color-red">
-                                        <?php 
-
-                                            if ($partido->estado_partido == 3) {
+                                        <?php
+                                        
+                                        if ($partido->estado_partido == 3) {
+                                            echo $partido->goles_visitante;
+                                        } else {
+                                            if ($partido->goles_visitante == '0'):
+                                                echo '-';
+                                            else:
                                                 echo $partido->goles_visitante;
-                                            }else {
-                                                @if ($partido->goles_visitante == '0')
-                                                    -
-                                                @else
-                                                    echo $partido->goles_visitante;
-                                                @endif
-                                            }
+                                            endif;
+                                        }
                                         ?>
                                     </span>
                                 </div>
