@@ -198,7 +198,7 @@
                                     <span class="goles-local color-red">
 
                                         <?php
-                                        if ($partido->estado_partido == 3) {
+                                        if ($partido->estado_partido !== 3) {
                                             echo $partido->goles_local;
                                         } else {
                                             if ($partido->goles_local == '0'):
@@ -213,7 +213,7 @@
                                     <span class="goles-visitante color-red">
                                         <?php
                                         
-                                        if ($partido->estado_partido == 3) {
+                                        if ($partido->estado_partido !== 3) {
                                             echo $partido->goles_visitante;
                                         } else {
                                             if ($partido->goles_visitante == '0'):
