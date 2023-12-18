@@ -199,12 +199,12 @@
 
                                         <?php 
                                             if($partido->estado_partido == 3){
-                                                {{ $partido->goles_local }}
+                                                echo $partido->goles_local;
                                             }else {
                                                 @if ($partido->goles_local == '0')
                                                     -
                                                 @else
-                                                    {{ $partido->goles_local }}
+                                                    echo $partido->goles_local;
                                                 @endif
                                             }
                                         ?>
@@ -214,12 +214,12 @@
                                         <?php 
 
                                             if ($partido->estado_partido == 3) {
-                                                {{ $partido->goles_visitante }}
+                                                echo $partido->goles_visitante;
                                             }else {
                                                 @if ($partido->goles_visitante == '0')
                                                     -
                                                 @else
-                                                    {{ $partido->goles_visitante }}
+                                                    echo $partido->goles_visitante;
                                                 @endif
                                             }
                                         ?>
