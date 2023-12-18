@@ -147,7 +147,7 @@ class Controller extends BaseController
             INNER JOIN pais pa ON tor.pais_id=pa.id
             INNER JOIN comunidad co ON tor.comunidad_id=co.id
             INNER JOIN categoria ce ON tor.categoria_id=ce.id WHERE t.id=$id");
-            
+
             $torneo_Liga = $Info[0];
             $INFO_PAIS = $Info[0];
             $CC_Pais = $this->obtenerCodigoPais($INFO_PAIS->nombrePais);
@@ -223,9 +223,9 @@ class Controller extends BaseController
                 'nombre' => $nombre,
                 'equipos' => $equipos,
                 'torneo_Liga' => $torneo_Liga,
-                'CC_Pais' => $CC_Pais,
                 'JornadaActiva' => $JornadaActiva,
                 'ID_TL' => $id,
+                'CC_Pais' => $CC_Pais,
             ]);
         }
     }
