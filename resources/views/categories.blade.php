@@ -7,7 +7,7 @@
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
             <div class="rounded-circle bandera_pais">
-                <img src="{{-- {{ $CC_pais }} --}}" width="32" height="32"
+                <img src="{{ $CC_pais }}" width="32" height="32"
                     alt="bandera del pais del torneo" class="rounded-circle">
             </div>
             <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $torneo_Liga->nombre }}</h1>
@@ -84,7 +84,7 @@
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
 
-                    {{-- {{dd($JornadaActiva)}} --}}
+                    {{dd($JornadaActiva)}}
                     {{-- EJEMPLOS OJO CON LAS CLASES DE LOS DIRECTOS, FUTUROS Y FINALIZADOS --}}
                     {{--  <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
 
