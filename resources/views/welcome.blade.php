@@ -715,7 +715,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
