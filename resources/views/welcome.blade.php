@@ -145,9 +145,74 @@
                 {{-- PARTIDOS MANUALES --}}
 
 
-                <?php foreach ($partidosEnJuegoCurDate as $nombreTemporada => $partidos) { 
+                <?php 
+                
+                $espanaPartidos = [];
+                $otrosPartidos = [];
+
+                foreach ($partidosEnJuegoCurDate as $nombreTemporada => $partidos) {
+                    // Suponiendo que $partidos es un arreglo asociativo y 'pais' es la clave que contiene el país
+                    // Cadena dada
+                    $string = $nombreTemporada;
+
+                    // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
+                    if (
+                        strpos($string, "PRIMERA DIVISIÓN") !== false ||
+                        strpos($string, "SEGUNDA DIVISIÓN") !== false ||
+                        strpos($string, "PREFERENTE") !== false ||
+                        strpos($string, "REGIONAL") !== false ||
+                        strpos($string, "GRUPO") !== false ||
+                        strpos($string, "FEDERACIÓN") !== false
+                    ) {
+                        // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
+                        $pais = "España";
+                    } else {
+                        // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
+                        $paisArray = explode("-", $string);
+                        
+                        // Obtiene el último elemento del array después de dividir por el guion
+                        $pais = trim(end($paisArray));
+                    }
+
+                    // Verifica si el país es España
+                    if ($pais === 'España') {
+                        $espanaPartidos[$nombreTemporada] = $partidos;
+                    } else {
+                        $otrosPartidos[$nombreTemporada] = $partidos;
+                    }
+                }
+
+                // Concatena los arreglos, poniendo primero los partidos de España
+                $partidosOrdenadosESLIVE = $espanaPartidos + $otrosPartidos;
+                
+                foreach ($partidosOrdenadosESLIVE as $nombreTemporada => $partidos) { 
                     //print_r($partidos); 
                     $slug = Str::slug($nombreTemporada);
+
+                    // Cadena dada
+                    $string = $nombreTemporada;
+
+                    // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
+                    if (
+                        strpos($string, "PRIMERA DIVISIÓN") !== false ||
+                        strpos($string, "SEGUNDA DIVISIÓN") !== false ||
+                        strpos($string, "PREFERENTE") !== false ||
+                        strpos($string, "REGIONAL") !== false ||
+                        strpos($string, "GRUPO") !== false ||
+                        strpos($string, "FEDERACIÓN") !== false
+                    ) {
+                        // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
+                        $pais = "España";
+                        //$CC_pais = obtenerCodigoPais($pais);
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
+                    } else {
+                        // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
+                        $paisArray = explode("-", $string);
+                        
+                        // Obtiene el último elemento del array después de dividir por el guion
+                        $pais = trim(end($paisArray));
+                        $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
+                    }
                 ?>
 
                 <div class="accordion-item br-0">
@@ -164,7 +229,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
@@ -477,9 +542,8 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
+                                <img src="https://flagcdn.com/{{ $CC_pais }}.svg" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
-                                    <span>{{$pais}}</span>
                             </div>
 
                             <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
@@ -524,7 +588,8 @@
 
                                 </div>
                                 <div class="col"><span
-                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?></span>
+                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidos[0]['nombreFase']; ?>
+                                        <?php echo $partidos[0]['jornada']; ?></span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
