@@ -188,7 +188,9 @@ class AdminController extends Controller
                 'nombre_visitante' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre) ?AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre : '',
                 'nombre_visitante_completo' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombre_completo : '',
                 'nombre_visitante_corto' => isset(AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto) ? AdminEquiposController::getDataEquipo($value->equipoVisitante_id)[0]->nombreCorto : '',
-                'goles_visitante' => $value->goles_visitante
+                'goles_visitante' => $value->goles_visitante,
+                'observaciones' => $value->observaciones,
+                'jornada' =>$value->jornada
             ];
             $obj_parent = [
                 'idTemporadaSeccion' => Self::get_name_temporada($value->temporada_id)[0]->id,
