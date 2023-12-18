@@ -391,7 +391,7 @@
 
             <div class="accordion" id="PartidosFuturos">
 
-                dd($partidosPorJugarCurDate);
+                {{dd($partidosPorJugarCurDate)}}
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
                     //print_r($partidos); 
