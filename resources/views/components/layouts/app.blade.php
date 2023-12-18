@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -15,6 +15,7 @@
     <title>futbolme - {{ $title ?? 'Titulo Web' }}</title>
 
     <meta name="description" content="{{ $metaDescription }}">
+    <link rel="icon" type="image/ico" href="/favicon.ico"/>
 
     {{-- css files --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
