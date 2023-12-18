@@ -527,12 +527,7 @@
                     }
 
 
-                    /* FASE O JORNADA */
-                    if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
-                        $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
-                    }else {
-                        $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
-                    }
+                    
                 ?>
 
                 <div class="accordion-item br-0">
@@ -567,7 +562,16 @@
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
-                        <?php foreach ($partidos as $partidoInfo) { ?>
+                        <?php 
+                        foreach ($partidos as $partidoInfo) { 
+                            
+                        /* FASE O JORNADA */
+                        if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                            $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                        }else {
+                            $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                        }    
+                            ?>
                         {{-- echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . </br>"; --}}
 
                         <div class="accordion-body border-bottom partido_futuro">
