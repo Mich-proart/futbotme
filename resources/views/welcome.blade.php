@@ -252,12 +252,12 @@
                 <?php } ?>
 
                 {{-- DIRECTOS DE LA API  --}}
-                @foreach ($directos as $leagueId => $partidosPorLiga)
-                    <?php if (is_null($partidosPorLiga[0]['league']['cc'])) {
+                {{-- @foreach ($directos as $leagueId => $partidosPorLiga)
+                    <?php /* if (is_null($partidosPorLiga[0]['league']['cc'])) {
                         $bandera = 'eu';
                     } else {
                         $bandera = $partidosPorLiga[0]['league']['cc'];
-                    }
+                    } */
                     ?>
 
                     <div class="accordion-item br-0">
@@ -347,8 +347,6 @@
                                 </div>
                             </div>
 
-                            {{-- MODALES --}}
-
                             <div class="d-none content-eventos de-fila-partido">
                                 <div class="d-flex align-items-center justify-content-between w-100">
                                     <h3 class="d-block">Eventos</h3>
@@ -376,7 +374,7 @@
                             </div>
                         @endforeach
                     </div>
-                @endforeach
+                @endforeach --}}
 
 
 
@@ -588,11 +586,11 @@
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <div class="goleadores">
+                                    {{-- <div class="goleadores">
                                         <span class="d-block">0-1, Amath - 21´</span>
                                         <span class="d-block">0-2, Joan - 30´</span>
                                         <span class="d-block">1-3, Ronaldo - 55´</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <div class="marcador ">
