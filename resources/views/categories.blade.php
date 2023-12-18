@@ -1,10 +1,10 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
-    {{-- {{ dd($torneo_Liga) }} --}}
+    {{ dd($torneo_Liga) }}
 
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
     <?php
-    $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($torneo_Liga->pais_nombre);
+    //$CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($torneo_Liga->pais_nombre);
     ?>
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
