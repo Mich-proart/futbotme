@@ -715,8 +715,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
-                                    alt="bandera del pais del torneo" class="rounded-circle">
+                                <img src="{{$CC_pais}}" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
                             <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"

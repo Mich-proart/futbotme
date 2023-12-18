@@ -3,11 +3,14 @@
 
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
-
+    <?php
+    $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($torneo_Liga->pais_nombre);
+    ?>
     <section class="header_cat p-4 my-3">
         <div class="d-flex align-items-center mb-3">
             <div class="rounded-circle bandera_pais">
-                <img src="{{-- {{ $CC_pais }} --}}" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                <img src="{{ $CC_pais }}" width="32" height="32" alt="bandera del pais del torneo"
+                    class="rounded-circle">
             </div>
             <h1 class="color-brand-green text-uppercase ps-3 mb-0"> {{ $torneo_Liga->nombre }}</h1>
         </div>
@@ -83,7 +86,7 @@
                 {{-- JORNADAS --}}
                 <div class="jornadas_categorias mt-3 mb-5" id="jornadas_categorias">
 
-                    {{dd($JornadaActiva)}}
+                    {{-- {{ dd($JornadaActiva) }} --}}
                     {{-- EJEMPLOS OJO CON LAS CLASES DE LOS DIRECTOS, FUTUROS Y FINALIZADOS --}}
                     {{--  <div id="" class="PartidosEnDirecto bg-white p-lg-4 p-3 mb-2">
 
@@ -193,19 +196,33 @@
 
                                 <div class="marcador">
                                     <span class="goles-local color-red">
-                                        @if ($partido->goles_local == '0')
-                                            -
-                                        @else
-                                            {{ $partido->goles_local }}
-                                        @endif
+
+                                        <?php 
+                                            if($partido->estado_partido == 3){
+                                                {{ $partido->goles_local }}
+                                            }else {
+                                                @if ($partido->goles_local == '0')
+                                                    -
+                                                @else
+                                                    {{ $partido->goles_local }}
+                                                @endif
+                                            }
+                                        ?>
                                     </span>
                                     <span class="fs-01 color-red">-</span>
                                     <span class="goles-visitante color-red">
-                                        @if ($partido->goles_visitante == '0')
-                                            -
-                                        @else
-                                            {{ $partido->goles_visitante }}
-                                        @endif
+                                        <?php 
+
+                                            if ($partido->estado_partido == 3) {
+                                                {{ $partido->goles_visitante }}
+                                            }else {
+                                                @if ($partido->goles_visitante == '0')
+                                                    -
+                                                @else
+                                                    {{ $partido->goles_visitante }}
+                                                @endif
+                                            }
+                                        ?>
                                     </span>
                                 </div>
 
@@ -222,8 +239,6 @@
 
                         </div>
                     @endforeach
-
-
 
                 </div>
 
