@@ -391,11 +391,36 @@
 
             <div class="accordion" id="PartidosFuturos">
 
-                {{dd($partidosPorJugarCurDate)}}
+                {{-- {{ dd($partidosPorJugarCurDate) }} --}}
                 {{-- PARTIDOS FUTUROS --}}
                 <?php foreach ($partidosPorJugarCurDate as $nombreTemporada => $partidos) { 
                     //print_r($partidos); 
                     $slug = Str::slug($nombreTemporada);
+
+                    // Cadena dada
+                    $string = $nombreTemporada;
+
+                    // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
+                    if (
+                        strpos($string, "PRIMERA DIVISIÓN") !== false ||
+                        strpos($string, "SEGUNDA DIVISIÓN") !== false ||
+                        strpos($string, "PREFERENTE") !== false ||
+                        strpos($string, "REGIONAL") !== false ||
+                        strpos($string, "GRUPO") !== false ||
+                        strpos($string, "FEDERACIÓN") !== false
+                    ) {
+                        // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
+                        $pais = "España";
+                        $CC_pais = obtenerCodigoPais($pais);
+                    } else {
+                        // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
+                        $paisArray = explode("-", $string);
+                        
+                        // Obtiene el último elemento del array después de dividir por el guion
+                        $pais = trim(end($paisArray));
+                        $CC_pais = obtenerCodigoPais($pais);
+                    }
+
                 ?>
 
                 <div class="accordion-item br-0">
@@ -412,7 +437,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/es.svg" width="32" height="32"
+                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
@@ -541,6 +566,18 @@
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
                         <?php foreach ($partidos as $partidoInfo) {
                             //echo '- Partido ID: ' . $partidoInfo['datosTemporadaSeccion']['partidoId'] .'';
+
+                            $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
+                        
+                        // Buscar la posición de *A y *B en el string
+                        $posicionA = strpos($observaciones, '*A');
+                        $posicionB = strpos($observaciones, '*B');
+                        
+                        // Extraer la primera variable desde *A hasta justo antes de *B
+                        $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+                        
+                        // Extraer la segunda variable desde *B hasta el final del observaciones
+                        $goles_visitante = substr($observaciones, $posicionB + 2);
                             ?>
 
                         <div class="accordion-body border-bottom partido_finalizado">
@@ -587,11 +624,9 @@
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    {{-- <div class="goleadores">
-                                        <span class="d-block">0-1, Amath - 21´</span>
-                                        <span class="d-block">0-2, Joan - 30´</span>
-                                        <span class="d-block">1-3, Ronaldo - 55´</span>
-                                    </div> --}}
+                                    <div class="goleadores">
+                                        <span class="d-block">{!! $goles_local !!}</span>
+                                    </div>
                                 </div>
 
                                 <div class="marcador ">
@@ -606,6 +641,9 @@
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
+                                    <div class="goleadores">
+                                        <span class="d-block">{!! $goles_visitante !!}</span>
+                                    </div>
                                 </div>
                             </div>
 
