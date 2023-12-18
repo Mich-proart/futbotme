@@ -229,7 +229,7 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/{{$CC_pais}}.svg" width="32" height="32"
+                                <img src="https://flagcdn.com/{{ $CC_pais }}.svg" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
@@ -526,6 +526,13 @@
                         $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
                     }
 
+
+                    /* FASE O JORNADA */
+                    if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                        $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                    }else {
+                        $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                    }
                 ?>
 
                 <div class="accordion-item br-0">
@@ -588,8 +595,7 @@
 
                                 </div>
                                 <div class="col"><span
-                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $partidoInfo['datosTemporadaSeccion']['nombreFase']; ?>
-                                        <?php echo $partidoInfo['datosTemporadaSeccion']['jornada']; ?></span>
+                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
