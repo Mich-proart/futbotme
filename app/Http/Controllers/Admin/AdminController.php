@@ -174,6 +174,7 @@ class AdminController extends Controller
             $obj = [
                 'fechaPartido' => $value->fecha,
                 'horaPartido' => $value->hora_prevista,
+                'horaPartidoR' => $value->hora_real,
                 'idFase' => Self::get_name_fase($value->jornada)[0]->id,
                 'nombreFase' => Self::get_name_fase($value->jornada)[0]->nombre,
                 'partidoId' => $value->id,

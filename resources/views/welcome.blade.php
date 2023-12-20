@@ -253,7 +253,7 @@
 
                             print_r($partidoInfo);
 
-                            $hora = '10:00:00'; // Debes sustituir esto con tu variable que contiene la hora
+                            $hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
                             // Obtener la hora actual
                             $horaActual = now()->format('H:i:s');
@@ -501,7 +501,7 @@
 
             <div class="accordion" id="PartidosFuturos">
 
-                {{ dd($partidosPorJugarCurDate) }}
+                {{-- {{ dd($partidosPorJugarCurDate) }} --}}
                 {{-- PARTIDOS FUTUROS --}}
                 <?php 
                 $espanaPartidos = [];
@@ -655,7 +655,7 @@
                                     <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
-                                        <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
+                                        <img src="{{ asset('images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
                                 </div>
