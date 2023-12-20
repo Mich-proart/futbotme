@@ -251,7 +251,7 @@
                             foreach ($partidos as $partidoInfo) { 
                             /* FASE O JORNADA */
 
-                            print_r($partidoInfo);
+                            //print_r($partidoInfo);
 
                             $hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
@@ -301,12 +301,13 @@
                                     </div>
                                     <div>
                                         <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_x_minutos text-white"><?php echo $diferenciaEnMinutos?>’</span>
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_<?php echo $diferenciaEnMinutos; ?>_minutos text-white"><?php echo $diferenciaEnMinutos; ?>’</span>
                                     </div>
 
                                 </div>
                                 <div class="col">
-                                    <span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
+                                    <span
+                                        class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
                                 </div>
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
