@@ -451,7 +451,9 @@
 
             <div class="tab-pane fade" id="pills-goleadores" role="tabpanel" aria-labelledby="pills-goleadores-tab">
                 {{-- TAB DE GOLEADORES --}}
+                {{dd($goleadores)}}
                 <div class="mt-5 pt-lg-5 pt-4 table-responsive">
+                    
                     <table id="tabla_goleadores" class="table table-hover table-white border-light">
                         <thead>
                             <tr class="table-success">
@@ -461,6 +463,7 @@
                                 <th scope="col">Goles</th>
                             </tr>
                         </thead>
+                        @foreach ($goleadores as $goleador)
                         <tbody class="table-group-divider">
                             <tr>
                                 <th scope="row">1</th>
@@ -481,6 +484,7 @@
                                 <td>20</td>
                             </tr>
                         </tbody>
+                        @endforeach
                     </table>
                 </div>
             </div>
