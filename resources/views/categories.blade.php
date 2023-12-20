@@ -451,9 +451,9 @@
 
             <div class="tab-pane fade" id="pills-goleadores" role="tabpanel" aria-labelledby="pills-goleadores-tab">
                 {{-- TAB DE GOLEADORES --}}
-                {{dd($goleadores)}}
+                {{-- {{dd($goleadores)}} --}}
                 <div class="mt-5 pt-lg-5 pt-4 table-responsive">
-                    
+
                     <table id="tabla_goleadores" class="table table-hover table-white border-light">
                         <thead>
                             <tr class="table-success">
@@ -463,27 +463,15 @@
                                 <th scope="col">Goles</th>
                             </tr>
                         </thead>
-                        @foreach ($goleadores as $goleador)
-                        <tbody class="table-group-divider">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Ronaldinho</td>
-                                <td>FC Barcelona</td>
-                                <td>30</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Herrera</td>
-                                <td>FC Barcelona</td>
-                                <td>25</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Ronaldo</td>
-                                <td>Real Madrid</td>
-                                <td>20</td>
-                            </tr>
-                        </tbody>
+                        @foreach ($goleadores as $index => $goleador)
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">{{ $index }}</th>
+                                    <td>{{ $goleador['jugador'] }}</td>
+                                    <td>{{ $goleador['equipoCorto'] }}</td>
+                                    <td>{{ $goleador['goles'] }}</td>
+                                </tr>
+                            </tbody>
                         @endforeach
                     </table>
                 </div>
