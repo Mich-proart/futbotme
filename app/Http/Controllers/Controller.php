@@ -85,7 +85,13 @@ class Controller extends BaseController
 
         if (!is_null($id)) {
 
-            $goleadores = DB::select("SELECT count(g.id) goles, g.jugador_id, j.apodo jugador, e.nombre equipo, e.id equipo_id, e.nombreCorto equipoCorto FROM gol g INNER JOIN jugador j ON g.jugador_id=j.id INNER JOIN equipo e ON j.equipoActual_id=e.id WHERE g.temporada_id=$id AND tipo<10 GROUP BY e.id,g.jugador_id ORDER BY count(g.id) DESC;");
+            $goleadores = DB::select("SELECT COUNT(g.id) AS goles, g.jugador_id, j.apodo AS jugador, e.nombre AS equipo, e.id AS equipo_id, e.nombreCorto AS equipoCorto
+            FROM gol g
+            INNER JOIN jugador j ON g.jugador_id = j.id
+            INNER JOIN equipo e ON j.equipoActual_id = e.id
+            WHERE g.temporada_id = $id AND g.tipo < 10
+            GROUP BY e.id, g.jugador_id, j.apodo, e.nombre, e.nombreCorto
+            ORDER BY COUNT(g.id) DESC;");
 
             // Hacer algo con $id
             /* equipos del torneo */
