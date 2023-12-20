@@ -18,14 +18,20 @@
                 <li>Gol equipoB David Soria Solís minuto 40', observación Dos</li>
                 <li>Gol equipoC David Soria Solís minuto 10', observación Una</li>
             </ul>
+            <br>
+            <div class="d-flex align-items-center">
+                <p class="mb-0 id-editar-partido" attr-id-partido="{{$datosPartido[0]->id}}">El id del partido es: {{$datosPartido[0]->id}}</p>
+                <p class="mb-0 ms-3 temporada-editar-partido" attr-temporada-partido="{{$datosPartido[0]->temporada_id}}">La temporada es: {{$datosPartido[0]->temporada_id}}</p>
+            </div>
+            <br>
             <table width="100%" bgcolor="gainsboro">
                 <tbody>
                     <tr>
                         <td align="left">
-                            <div class="mb-3">
+                            <div class="mb-3 p-2">
                                 <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">Jugador</span>
                                 <br>
-                                <select class="">
+                                <select class="id-jugador-editar-partido">
                                     @foreach ($plantillaLocal as $jugador)
                                         <option value="{{ $jugador->id }}">{{ ($jugador->apodo) }} - {{ $jugador->nombre }} {{ $jugador->apellidos }}</option>
                                     @endforeach
@@ -38,13 +44,13 @@
                         <td align="left">
                             <div class="mb-3">
                                 <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">minuto</span>
-                                <input name="minuto" size="2">
+                                <input class="minuto-editar-partido" ="minuto" size="2">
                             </div>
                         </td>
                         <td align="left">
                             <div class="mb-3">
-                                <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">tipo</span>
-                                <select name="tipo">
+                                <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">tipo gol</span>
+                                <select class="tipo-gol-editar-partido" name="tipo">
                                     <option value="0">jugada</option>
                                     <option value="1">penalti</option>
                                     <option value="10">propia puerta</option>
@@ -55,19 +61,19 @@
                         <td align="left">
                             <div class="mb-3">
                                 <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">esLocal</span>
-                                <input type="checkbox" name="" id="">
+                                <input class="es-local-editar-partido" type="checkbox" name="" id="">
                             </div>
                         </td>
                         <td align="left">
                             <div class="mb-3">
                                 <span style="cursor:pointer; color: maroon;vertical-align: top;" class="boldfont">observaciones</span>
-                                <textarea name=""></textarea>
+                                <textarea class="observaciones-editar-partido" name=""></textarea>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5">
-                            <button class="btn btn-primary my-2">Agregar gol</button>
+                            <button class="btn btn-primary my-2 guardar-goleador-editar-partido">Agregar gol</button>
                         </td>
                     </tr>
                 </tbody>
@@ -188,7 +194,7 @@ $consulta = 'SELECT a.id, a.categoria_id, a.division_id, a.nombre, a.orden, ae.e
 
 
                     <span class="">Observaciones partido</span>
-                    <textarea class="w-100 my-2" name="" rows="10">{{ $datosPartido[0]->observaciones }}</textarea>
+                    <textarea class="bandeja-goleadores w-100 my-2" name="" rows="10">{{ $datosPartido[0]->observaciones }}</textarea>
                 </div>
                 @foreach ($medios as $medio)
                     <div class="col-lg-2 col12">

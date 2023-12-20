@@ -47,6 +47,7 @@ Route::post('admin-panel/update-partido-automatic/', [AdminController::class, 'u
 
 // Peticion para editar partido finalizado LIGA/TORNEO
 Route::get('admin-panel/editar-partido-no-direct/{idPartido}', [AdminPartidoLigaTorneoController::class, 'editarPartidoLigaTorneo'])->name('editarPartidoLigaTorneo');
+Route::post('admin-panel/guardar-goles-partido/', [AdminPartidoLigaTorneoController::class, 'guardarGolesPartido'])->name('guardarGolesPartido');
 
 
 // Peticiones post ligas y torneos
