@@ -249,24 +249,27 @@
 
                         <?php 
                             foreach ($partidos as $partidoInfo) { 
-                                /* FASE O JORNADA */
-                        if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
-                            $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
-                        }else {
-                            $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
-                        } 
-                        
-                        $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
-                        
-                        // Buscar la posición de *A y *B en el string
-                        $posicionA = strpos($observaciones, '*A');
-                        $posicionB = strpos($observaciones, '*B');
-                        
-                        // Extraer la primera variable desde *A hasta justo antes de *B
-                        $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
-                        
-                        // Extraer la segunda variable desde *B hasta el final del observaciones
-                        $goles_visitante = substr($observaciones, $posicionB + 2);
+                            /* FASE O JORNADA */
+
+                            print_r($partidoInfo);
+
+                            if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                                $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                            }else {
+                                $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                            } 
+                            
+                            $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
+                            
+                            // Buscar la posición de *A y *B en el string
+                            $posicionA = strpos($observaciones, '*A');
+                            $posicionB = strpos($observaciones, '*B');
+                            
+                            // Extraer la primera variable desde *A hasta justo antes de *B
+                            $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+                            
+                            // Extraer la segunda variable desde *B hasta el final del observaciones
+                            $goles_visitante = substr($observaciones, $posicionB + 2);
                         ?>
 
                         <div class="accordion-body border-bottom partido_futuro"
@@ -885,11 +888,11 @@
         }
 
 
-        setInterval(() => {
+        /* setInterval(() => {
             console.log("leyendo ficheros")
             terravison()
             terravison22()
-        }, 1000);
+        }, 1000); */
     </script>
 
 </x-layouts.app>

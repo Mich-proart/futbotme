@@ -376,59 +376,6 @@ jQuery(document).on('click', '.cerrar-eventos', function () {
     jQuery(this).closest('.content-eventos').addClass('d-none')
 });
 
-/*  */
-
-/* function terravison() {
-
-    ///usr/bin/php /var/www/vhosts/futbolme.loading.net/futbolme.eu/ztrigger_directos.php 2>> /var/www/vhosts/futbolme.loading.net/futbolme.eu/log_cron.txt
-    // ya esta en el server pero algo no lo deja funcionar del todo bien
-    jQuery.ajax({
-        url: `${urlBase}leer-fichero/`,
-        method: "POST",
-        // data: {
-        //     formData,
-        // },
-        headers: {
-            "X-CSRF-TOKEN": csrfToken,
-        },
-        beforeSend: function () {
-            // $(".spiner-competiciones").fadeIn();
-            // $(acordion).html("");
-        },
-        success: function (response) {
-            console.log(response);
-            // let result = JSON.parse(response);
-        },
-        complete: function () {
-            //$(".spiner-competiciones").fadeOut();
-        },
-    });
-
-} */
-
-/* function terravison22() {
-    jQuery.ajax({
-        url: `${urlBase}leer-fichero22/`,
-        method: "POST",
-        // data: {
-        //     formData,
-        // },
-        headers: {
-            "X-CSRF-TOKEN": csrfToken,
-        },
-        beforeSend: function () {
-            // $(".spiner-competiciones").fadeIn();
-            // $(acordion).html("");
-        },
-        success: function (response) {
-            console.log(response);
-            // let result = JSON.parse(response);
-        },
-        complete: function () {
-            //$(".spiner-competiciones").fadeOut();
-        },
-    });
-} */
 
 // setTimeout(() => {
 /* setInterval(() => {
