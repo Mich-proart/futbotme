@@ -253,6 +253,22 @@
 
                             print_r($partidoInfo);
 
+                            $hora = '10:00:00'; // Debes sustituir esto con tu variable que contiene la hora
+
+                            // Obtener la hora actual
+                            $horaActual = now()->format('H:i:s');
+
+                            // Convertir las horas a objetos DateTime para facilitar la comparación
+                            $horaObjeto = \DateTime::createFromFormat('H:i:s', $hora);
+                            $horaActualObjeto = \DateTime::createFromFormat('H:i:s', $horaActual);
+
+                            // Calcular la diferencia en minutos
+                            $diferenciaEnMinutos = $horaObjeto->diff($horaActualObjeto)->format('%i');
+
+                            // Mostrar la diferencia en minutos
+                            //echo "La diferencia en minutos es: $diferenciaEnMinutos minutos";
+
+
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                                 $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
                             }else {
@@ -285,7 +301,7 @@
                                     </div>
                                     <div>
                                         <span
-                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_x_minutos text-white">x’</span>
+                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_x_minutos text-white"><?php echo $diferenciaEnMinutos?>’</span>
                                     </div>
 
                                 </div>
@@ -718,7 +734,8 @@
                             </div>
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="{{$CC_pais}}" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                                <img src="{{ $CC_pais }}" width="32" height="32"
+                                    alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
 
                             <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
