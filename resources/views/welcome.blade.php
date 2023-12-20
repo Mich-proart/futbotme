@@ -501,7 +501,7 @@
 
             <div class="accordion" id="PartidosFuturos">
 
-                {{-- {{ dd($partidosPorJugarCurDate) }} --}}
+                {{ dd($partidosPorJugarCurDate) }}
                 {{-- PARTIDOS FUTUROS --}}
                 <?php 
                 $espanaPartidos = [];
