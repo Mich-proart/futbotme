@@ -881,7 +881,7 @@
         } */
 
 
-        function terravison22() {
+        function terravison() {
             $.ajax({
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
@@ -910,7 +910,7 @@
         setInterval(() => {
             console.log("leyendo ficheros")
             terravison()
-            terravison22()
+            //terravison22()
         }, 1000);
     </script>
 
