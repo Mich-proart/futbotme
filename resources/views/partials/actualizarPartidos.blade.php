@@ -77,7 +77,8 @@
         }
 
         if (is_array($partidos)) {
-            $ID_temporada = $partidos[0]['idTemporada'];
+            //$ID_temporada = $partidos[0]['idTemporada'];
+            $ID_temporada = $contador;
         } else {
             // Manejar el caso en que $partidos no es un array
             $ID_temporada = $contador;
