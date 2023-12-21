@@ -467,9 +467,9 @@
                             <tbody class="table-group-divider">
                                 <tr>
                                     <th scope="row">{{ $index }}</th>
-                                    <td>{{ $goleador['jugador'] }}</td>
-                                    <td>{{ $goleador['equipoCorto'] }}</td>
-                                    <td>{{ $goleador['goles'] }}</td>
+                                    <td>{{ $goleador->jugador }}</td>
+                                    <td>{{ $goleador->equipoCorto }}</td>
+                                    <td>{{ $goleador->goles }}</td>
                                 </tr>
                             </tbody>
                         @endforeach
