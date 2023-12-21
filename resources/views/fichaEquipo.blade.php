@@ -1,7 +1,7 @@
 <x-layouts.app title="Ficha equipo" meta-description="ficha individual del equipo">
 
 
-{{-- {{dd($teams)}} --}}
+{{dd($teams)}}
 
 {{-- #items: array:1 [▼
     0 => {#305 ▼

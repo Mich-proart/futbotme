@@ -21,7 +21,7 @@ class AjaxController extends Controller
         return response()->json(['posts' => $posts]);
     } */
 
-    public function leerFichero(){
+    public function leerFichero(Request $request){
 
         $rutaArchivo = base_path('directos-futbolme.json');
         // Verificar si el archivo existe
@@ -43,7 +43,7 @@ class AjaxController extends Controller
         }
     }
 
-    public function leerFichero22(){
+    public function leerFichero22(Request $request){
 
         $rutaArchivo = base_path('directos.json');
         // Verificar si el archivo existe
