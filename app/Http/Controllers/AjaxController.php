@@ -21,9 +21,10 @@ class AjaxController extends Controller
         return response()->json(['posts' => $posts]);
     } */
 
-    
 
-    public function leerFichero(Request $request){
+
+    public function leerFichero(Request $request)
+    {
 
         $rutaArchivo = base_path('directos.json');
         // Verificar si el archivo existe
@@ -32,13 +33,20 @@ class AjaxController extends Controller
             $contenidoJSON = file_get_contents($rutaArchivo);
 
             // Decodificar el contenido JSON a un array asociativo
-            $datos = json_decode($contenidoJSON, true);
+            $datosPartidos = json_decode($contenidoJSON, true);
 
             // Hacer algo con los datos
             // Por ejemplo, devolverlos como respuesta
             //return response()->json($datos);
-            $datosPartidos = $datos;
-            return view('partials.actualizarPartidos', compact('datosPartidos'));
+            //$datosPartidos = $datos;
+
+            // Verificar si la decodificación fue exitosa
+            if ($datosPartidos === null && json_last_error() !== JSON_ERROR_NONE) {
+                // Manejar el error de decodificación
+                die('Error al decodificar el JSON: ' . json_last_error_msg());
+            } else {
+                return view('partials.actualizarPartidos', compact('datosPartidos'));
+            }
         } else {
             // El archivo no existe
             return response()->json(['error' => 'El archivo no existe', 'ruta' => $rutaArchivo], 404);
@@ -67,5 +75,4 @@ class AjaxController extends Controller
             return response()->json(['error' => 'El archivo no existe', 'ruta' => $rutaArchivo], 404);
         }
     } */
-
 }
