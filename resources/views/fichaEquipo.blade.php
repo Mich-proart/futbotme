@@ -2,7 +2,7 @@
 
 
 {{-- {{dd($teams)}} --}}
-<?php $team = $team[0] ?>
+<?php $team = $teams[0] ?>
 {{-- #items: array:1 [▼
     0 => {#305 ▼
       +"idEquipo": 421
