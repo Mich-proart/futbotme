@@ -109,47 +109,5 @@ class BuscadorController extends Controller{
         return response()->json(['jugadores' => $arrayJugadores, 'equipos' => $arrayEquipos]);
     }
 
-    public function leerFichero(){
-
-        $rutaArchivo = base_path('directos-futbolme.json');
-        // Verificar si el archivo existe
-        if (file_exists($rutaArchivo)) {
-            // Leer el contenido del archivo JSON
-            $contenidoJSON = file_get_contents($rutaArchivo);
-
-            // Decodificar el contenido JSON a un array asociativo
-            $datos = json_decode($contenidoJSON, true);
-
-            // Hacer algo con los datos
-            // Por ejemplo, devolverlos como respuesta
-            //return response()->json($datos);
-            $datosPartidos = $datos;
-            return view('partials.actualizarPartidos', compact('datosPartidos'));
-        } else {
-            // El archivo no existe
-            return response()->json(['error' => 'El archivo no existe'], 404);
-        }
-    }
-
-    public function leerFichero22(){
-
-        $rutaArchivo = base_path('directos.json');
-        // Verificar si el archivo existe
-        if (file_exists($rutaArchivo)) {
-            // Leer el contenido del archivo JSON
-            $contenidoJSON = file_get_contents($rutaArchivo);
-
-            // Decodificar el contenido JSON a un array asociativo
-            $datos = json_decode($contenidoJSON, true);
-
-            // Hacer algo con los datos
-            // Por ejemplo, devolverlos como respuesta
-            //return response()->json($datos);
-            $datosPartidos = $datos;
-            return view('partials.actualizarPartidos', compact('datosPartidos'));
-        } else {
-            // El archivo no existe
-            return response()->json(['error' => 'El archivo no existe'], 404);
-        }
-    }
+    
 }

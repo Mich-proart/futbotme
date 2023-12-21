@@ -867,8 +867,9 @@
                 }, */
                 success: function(response) {
                     // Actualizar el front-end con la nueva vista parcial
-                    $('#PartidosEnDirecto').html(response);
                     console.log(response);
+                    $('#PartidosEnDirecto').html(response);
+
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
@@ -895,8 +896,9 @@
                     // $(acordion).html("");
                 },
                 success: function(response) {
-                    $('#PartidosEnDirecto').html(response);
+
                     console.log(response);
+                    $('#PartidosEnDirecto').html(response);
                     // let result = JSON.parse(response);
                 },
                 complete: function() {
@@ -906,11 +908,11 @@
         }
 
 
-        /* setInterval(() => {
+        setInterval(() => {
             console.log("leyendo ficheros")
             terravison()
             terravison22()
-        }, 1000); */
+        }, 1000);
     </script>
 
 </x-layouts.app>

@@ -87,8 +87,8 @@
                 </div>
 
                 <div class="d-inline-flex rounded-circle bandera_pais">
-                    <img src="{{ $CC_pais }}" width="32" height="32"
-                        alt="bandera del pais del torneo" class="rounded-circle">
+                    <img src="{{ $CC_pais }}" width="32" height="32" alt="bandera del pais del torneo"
+                        class="rounded-circle">
                 </div>
 
                 <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
@@ -147,8 +147,7 @@
                     <div class="col">
                         <span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
                     </div>
-                    <div
-                        class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                    <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                         <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
                             attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"></span>
                         <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
@@ -204,3 +203,63 @@
 
 
 </div>
+
+<script>
+    function terravison() {
+        $.ajax({
+            url: '{{ route('leer-fichero') }}',
+            method: 'POST',
+            /* data: {
+                nuevoJActiva: nuevoJActiva,
+                id: id,
+                _token: '{{ csrf_token() }}',
+            }, */
+            success: function(response) {
+                // Actualizar el front-end con la nueva vista parcial
+                console.log(response);
+                $('#PartidosEnDirecto').html(response);
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+
+                // Mostrar detalles del error en la consola
+                console.log(jqXHR);
+            }
+        });
+    }
+
+
+    function terravison22() {
+        $.ajax({
+            url: '{{ route('leer-fichero22') }}',
+            method: "POST",
+            // data: {
+            //     formData,
+            // },
+            headers: {
+                "X-CSRF-TOKEN": csrfToken,
+            },
+            beforeSend: function() {
+                // $(".spiner-competiciones").fadeIn();
+                // $(acordion).html("");
+            },
+            success: function(response) {
+
+                console.log(response);
+                $('#PartidosEnDirecto').html(response);
+                // let result = JSON.parse(response);
+            },
+            complete: function() {
+                //$(".spiner-competiciones").fadeOut();
+            },
+        });
+    }
+
+
+    setInterval(() => {
+        console.log("leyendo ficheros")
+        terravison()
+        terravison22()
+    }, 1000);
+</script>
