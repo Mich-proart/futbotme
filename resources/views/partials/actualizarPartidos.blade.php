@@ -7,8 +7,10 @@
 
     $espanaPartidos = [];
     $otrosPartidos = [];
+    $ID_temporada = [];
 
     foreach ($datosPartidos as $nombreTemporada => $partidos) {
+        if (is_array($partidos)) {
         // Suponiendo que $partidos es un arreglo asociativo y 'pais' es la clave que contiene el país
         // Cadena dada
         $string = $nombreTemporada;
@@ -39,12 +41,14 @@
             $otrosPartidos[$nombreTemporada] = $partidos;
         }
     }
+    }
 
     // Concatena los arreglos, poniendo primero los partidos de España
     $partidosOrdenadosESLIVE = $espanaPartidos + $otrosPartidos;
     $contador = 01; 
     foreach ($partidosOrdenadosESLIVE as $nombreTemporada => $partidos) { 
         //print_r($partidos); 
+        if (is_array($partidos)) {
         $slug = Str::slug($nombreTemporada);
 
         // Cadena dada
@@ -207,8 +211,10 @@
 
 
     <?php 
- $contador++;
-} ?>
+     $contador++;
+        }
+    }    
+?>
 
 
 
