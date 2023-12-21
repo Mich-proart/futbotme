@@ -884,14 +884,11 @@
         function terravison22() {
             $.ajax({
                 url: '{{ route('leer-fichero22') }}',
-                method: "POST",
+                method: 'POST',
                 data: {
                     //nuevoJActiva: nuevoJActiva,
                     //id: id,
                     _token: '{{ csrf_token() }}',
-                },
-                headers: {
-                    "X-CSRF-TOKEN": csrfToken,
                 },
                 beforeSend: function() {
                     // $(".spiner-competiciones").fadeIn();

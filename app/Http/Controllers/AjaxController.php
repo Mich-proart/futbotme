@@ -24,6 +24,7 @@ class AjaxController extends Controller
     public function leerFichero(Request $request){
 
         $rutaArchivo = base_path('directos-futbolme.json');
+
         // Verificar si el archivo existe
         if (file_exists($rutaArchivo)) {
             // Leer el contenido del archivo JSON
@@ -39,7 +40,7 @@ class AjaxController extends Controller
             return view('partials.actualizarPartidos', compact('datosPartidos'));
         } else {
             // El archivo no existe
-            return response()->json(['error' => 'El archivo no existe'], 404);
+            return response()->json(['error' => 'El archivo no existe', 'ruta' => $rutaArchivo], 404);
         }
     }
 
@@ -61,7 +62,7 @@ class AjaxController extends Controller
             return view('partials.actualizarPartidos', compact('datosPartidos'));
         } else {
             // El archivo no existe
-            return response()->json(['error' => 'El archivo no existe'], 404);
+            return response()->json(['error' => 'El archivo no existe', 'ruta' => $rutaArchivo], 404);
         }
     }
 
