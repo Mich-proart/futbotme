@@ -209,11 +209,11 @@
         $.ajax({
             url: '{{ route('leer-fichero') }}',
             method: 'POST',
-            /* data: {
-                nuevoJActiva: nuevoJActiva,
-                id: id,
+            data: {
+                //nuevoJActiva: nuevoJActiva,
+                //id: id,
                 _token: '{{ csrf_token() }}',
-            }, */
+            },
             success: function(response) {
                 // Actualizar el front-end con la nueva vista parcial
                 console.log(response);
@@ -234,9 +234,11 @@
         $.ajax({
             url: '{{ route('leer-fichero22') }}',
             method: "POST",
-            // data: {
-            //     formData,
-            // },
+            data: {
+                //nuevoJActiva: nuevoJActiva,
+                //id: id,
+                _token: '{{ csrf_token() }}',
+            },
             headers: {
                 "X-CSRF-TOKEN": csrfToken,
             },
