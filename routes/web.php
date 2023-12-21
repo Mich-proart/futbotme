@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomController;
 use App\Http\Controllers\ApiController;
@@ -58,8 +59,8 @@ Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscado
 
 //Route::post('/leer-fichero', [BuscadorController::class, 'leerFichero'])->name('leerFichero');
 
-Route::post('/leer-fichero22', [BuscadorController::class, 'leerFichero22'])->name('leer-fichero22');
-Route::post('/leer-fichero', [BuscadorController::class, 'leerFichero'])->name('leer-fichero');
+Route::post('/leer-fichero22', [AjaxController::class, 'leerFichero22'])->name('leer-fichero22');
+Route::post('/leer-fichero', [AjaxController::class, 'leerFichero'])->name('leer-fichero');
 
 //Route::get('/ajax-example', 'AjaxController@index')->name('ajax.example');
 //Route::post('/ajax-example', 'AjaxController@getData')->name('ajax.get_data');
