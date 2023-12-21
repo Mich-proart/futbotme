@@ -1,7 +1,7 @@
 <x-layouts.app title="Ficha equipo" meta-description="ficha individual del equipo">
 
 
-{{dd($teams)}}
+{{-- {{dd($teams)}} --}}
 
 {{-- #items: array:1 [▼
     0 => {#305 ▼
@@ -29,14 +29,14 @@
     <div class="container-fluid">
         <div class="row row-cols-3">
             <div class="col">
-                <img src="{{ asset('assets/images/img/club/escudo' . $teams[0]->club_id_Equipo) }}.png" alt="escudo {{ $teams[0]->nombreEquipo }} " class="img-fluid">
+                <img src="{{ asset('assets/images/img/club/escudo' . $teams->club_id_Equipo) }}.png" alt="escudo {{ $teams->nombreEquipo }} " class="img-fluid">
             </div>
             <div class="col">
-                <h1 class="color-brand-green text-uppercase "> {{ $teams[0]->nombreEquipo }}</h1>
-                <h2>{{ $teams[0]->nombreCategoria }}</h2>
+                <h1 class="color-brand-green text-uppercase "> {{ $teams->nombreEquipo }}</h1>
+                <h2>{{ $teams->nombreCategoria }}</h2>
             </div>
             <div class="col">
-                {{-- <img class="img-fluid" src="{{ asset('assets/images/img/equipaciones/eq' . $teams[0]->equipacion_id) }}.png"  alt="Equipacion {{ $teams[0]->nombreEquipo }}" class="img-fluid"> --}}
+                {{-- <img class="img-fluid" src="{{ asset('assets/images/img/equipaciones/eq' . $teams->equipacion_id) }}.png"  alt="Equipacion {{ $teams->nombreEquipo }}" class="img-fluid"> --}}
             </div>
         </div>
     </div>
@@ -83,14 +83,14 @@
             <div class="container-fluid">
                 <div class="row row-cols-lg-2">
                     <div class="col">
-                        <h3>{{ $teams[0]->nombreEstadio }}</h3>
-                        <p>{{ $teams[0]->estadioDireccion }} - {{ $teamProvincia[0]->nombreProvincia}}</p>
+                        <h3>{{ $teams->nombreEstadio }}</h3>
+                        <p>{{ $teams->estadioDireccion }} - {{ $teamProvincia->nombreProvincia}}</p>
                         <br>
-                        <p>Año de inauguración: {{ $teams[0]->estadioInauguracion }}</p>
-                        <p>Capacidad: {{ $teams[0]->estadioCapacidad }}</p>
+                        <p>Año de inauguración: {{ $teams->estadioInauguracion }}</p>
+                        <p>Capacidad: {{ $teams->estadioCapacidad }}</p>
                     </div>
                     <div class="col">
-                        <img src="https://futbolme.com/static/img/estadios/estadi{{ $teams[0]->idEquipo }}.png" alt="{{ $teams[0]->nombreEstadio }}">
+                        <img src="https://futbolme.com/static/img/estadios/estadi{{ $teams->idEquipo }}.png" alt="{{ $teams->nombreEstadio }}">
                     </div>
                 </div>
             </div>
