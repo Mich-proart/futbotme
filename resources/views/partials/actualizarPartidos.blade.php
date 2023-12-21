@@ -42,7 +42,7 @@
 
     // Concatena los arreglos, poniendo primero los partidos de España
     $partidosOrdenadosESLIVE = $espanaPartidos + $otrosPartidos;
-    
+    $contador = 01; 
     foreach ($partidosOrdenadosESLIVE as $nombreTemporada => $partidos) { 
         //print_r($partidos); 
         $slug = Str::slug($nombreTemporada);
@@ -71,11 +71,19 @@
             $pais = trim(end($paisArray));
             $CC_pais = app(\App\Http\Controllers\Controller::class)->obtenerCodigoPais($pais);
         }
+
+        if (is_array($partidos)) {
+            $ID_temporada = $partidos[0]['idTemporada'];
+        } else {
+            // Manejar el caso en que $partidos no es un array
+            $ID_temporada = $contador;
+        }
+
     ?>
 
     <div class="accordion-item br-0">
         <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
-            id="panelFuturosOpen-manual<?php echo $partidos[0]['idTemporada']; ?>">
+            id="panelFuturosOpen-manual<?php echo $ID_Temporada; ?>">
 
             <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
                 <div class="d-block ps-4">
@@ -91,19 +99,19 @@
                         class="rounded-circle">
                 </div>
 
-                <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $partidos[0]['idTemporada'] . '/') }}"
+                <a href="{{ url('/resultados-directo/torneo/' . $slug . '/' . $ID_Temporada . '/') }}"
                     class="d-inline-block fs-01 nombre_torneo_liga"> <?php echo $nombreTemporada; ?>
                 </a>
             </div>
 
             <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white" type="button"
-                data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>"
-                aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>">
+                data-bs-toggle="collapse" data-bs-target="#panelFuturosOpen-collapse<?php echo $ID_Temporada; ?>"
+                aria-expanded="true" aria-controls="panelFuturosOpen-collapse<?php echo $ID_Temporada; ?>">
                 <i class="bi bi-chevron-up fs-3"></i>
             </button>
         </h2>
-        <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
-            aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
+        <div id="panelFuturosOpen-collapse<?php echo $ID_Temporada; ?>" class="accordion-collapse collapse show"
+            aria-labelledby="panelFuturosOpen-heading<?php echo $ID_Temporada; ?>">
 
             <?php 
                 foreach ($partidos as $partidoInfo) { 
@@ -197,7 +205,10 @@
         </div>
     </div>
 
-    <?php } ?>
+
+    <?php 
+ $contador++;
+} ?>
 
 
 
