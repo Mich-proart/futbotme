@@ -856,7 +856,7 @@
 
 
     <script>
-        function terravison() {
+        /* function terravison() {
             $.ajax({
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
@@ -878,7 +878,7 @@
                     console.log(jqXHR);
                 }
             });
-        }
+        } */
 
 
         function terravison22() {

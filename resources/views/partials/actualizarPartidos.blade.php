@@ -205,7 +205,7 @@
 </div>
 
 <script>
-    function terravison() {
+    /* function terravison() {
         $.ajax({
             url: '{{ route('leer-fichero') }}',
             method: 'POST',
@@ -263,5 +263,5 @@
         console.log("leyendo ficheros")
         terravison()
         terravison22()
-    }, 1000);
+    }, 1000); */
 </script>
