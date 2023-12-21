@@ -23,7 +23,7 @@ class AjaxController extends Controller
 
     
 
-    public function leerFichero22(Request $request){
+    public function leerFichero(Request $request){
 
         $rutaArchivo = base_path('directos.json');
         // Verificar si el archivo existe

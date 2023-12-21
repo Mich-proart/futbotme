@@ -883,7 +883,7 @@
 
         function terravison22() {
             $.ajax({
-                url: '{{ route('leer-fichero22') }}',
+                url: '{{ route('leer-fichero') }}',
                 method: 'POST',
                 data: {
                     //nuevoJActiva: nuevoJActiva,
