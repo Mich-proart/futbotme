@@ -7,7 +7,7 @@
 
     $espanaPartidos = [];
     $otrosPartidos = [];
-    $ID_temporada = [];
+    $ID_temporada = '';
 
     foreach ($datosPartidos as $nombreTemporada => $partidos) {
         if (is_array($partidos)) {
@@ -83,6 +83,8 @@
             // Manejar el caso en que $partidos no es un array
             $ID_temporada = $contador;
         }
+
+        $ID_temporada = $contador;
 
     ?>
 

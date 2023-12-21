@@ -85,7 +85,7 @@
                     <div class="row row-cols-lg-2">
                         <div class="col">
                             <h3>{{ $team->nombreEstadio }}</h3>
-                            <p>{{ $team->estadioDireccion }} - {{ $teamProvincia[0]->nombreProvincia }}</p>
+                            <p>{{ $team->estadioDireccion }} - {{-- {{ $teamProvincia[0]->nombreProvincia }} --}}</p>
                             <br>
                             <p>Año de inauguración: {{ $team->estadioInauguracion }}</p>
                             <p>Capacidad: {{ $team->estadioCapacidad }}</p>
