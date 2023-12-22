@@ -123,7 +123,7 @@
             <?php 
                 foreach ($partidos as $partidoInfo) { 
 
-                    if (is_array($partidpInfo)) {
+                    if (is_array($partidoInfo)) {
                     
                     /* FASE O JORNADA */
                     if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
