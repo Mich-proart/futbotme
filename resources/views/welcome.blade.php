@@ -883,7 +883,7 @@
         function terravison() {
             let PartidoID = '';
             $('.partido_futuro.directo_api_manual').each(function (index, element) {
-                PartidoID += (element).data('id') + ',';
+                PartidoID += $(element).data('id') + ',';
                 
             }),
             PartidoID = PartidoID.replace(/,\s*$/, '');
