@@ -189,6 +189,11 @@
     {{-- cdn para utilizar socket io --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
     <script src="{{ asset('assets_admin/js/response-server.js') }}"></script>
+    <script>
+        var adminEditarPartido = "{{ route('editarPartido') }}";
+        // var apiUrlEvents = "{{ route('apiBetsapiEventos') }}";
+    </script>
+
 
 </body>
 
