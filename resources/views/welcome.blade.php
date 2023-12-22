@@ -989,7 +989,7 @@
                 },
                 success: function(response) {
                     for (const iterator of response) {
-                        console.log(iterator.id);
+                        //console.log(iterator.id);
                         const fila = document.querySelector(`#PartidoID_` + iterator.id);
 
 
@@ -1040,12 +1040,12 @@
             });
         }
 
-
-        setInterval(() => {
+        terravison()
+        /* setInterval(() => {
             console.log("leyendo ficheros")
             terravison()
             //terravison22()
-        }, 1000);
+        }, 1000); */
     </script>
 
 </x-layouts.app>
