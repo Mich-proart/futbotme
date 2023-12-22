@@ -240,9 +240,12 @@ function obtenerEvento(btnIdLiga) {
         success: function (data) {
 
             console.log(jQuery(btnIdLiga).attr('attr-id-evento'));
-            console.log(data)
+            console.log(data);
+            // Elimina cualquier contenido adicional después del JSON
+            const jsonData = data.substring(0, data.lastIndexOf('}') + 1);
 
-            let result = JSON.parse(data)
+            // Parsea el JSON
+            let result = JSON.parse(jsonData)
             jQuery('.lista-eventos').empty()
             jQuery('.icons-directos-estaticos').find('.content-eventos').addClass('d-none')
             jQuery('.contenedorIconosPartido').find('.content-eventos').addClass('d-none')
