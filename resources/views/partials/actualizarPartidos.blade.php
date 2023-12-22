@@ -1,7 +1,10 @@
 <div class="accordion" id="PartidosEnDirecto">
 
     {{-- PARTIDOS MANUALES --}}
-{{dd($datosPartidos)}}
+    {{-- {{dd($datosPartidos)}} --}}
+
+    print_r($datosPartidos);
+
     <?php 
     
 
