@@ -1029,7 +1029,7 @@
             console.log("leyendo ficheros")
             terravison()
             //terravison22()
-        }, 1000);
+        }, 30000);
     </script>
 
 </x-layouts.app>
