@@ -966,13 +966,13 @@
 
                     //console.log(response);
                     let PartidoIDArray = PartidoID.split(',');
-                    /* let ItemsPartidos = $(response);
+                    /* 
                     PartidoIDArray.forEach(element => {
                         let PartidoEncontrado = ItemsPartidos.find('#PartidoID_' + element);
                         console.log(PartidoEncontrado);
                         $('#PartidoID_' + element).html(PartidoEncontrado);
                     }); */
-
+                    let ItemsPartidos = $(response);
                     PartidoIDArray.forEach(element => {
                         // Buscar el elemento con el ID 'PartidoID_' + element en ItemsPartidos
                         let PartidoEncontrado = ItemsPartidos.filter('#PartidoID_' + element);
