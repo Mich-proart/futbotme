@@ -288,7 +288,9 @@ function obtenerAlineacion(btnIdLiga) {
 
             console.log(jQuery(btnIdLiga).attr('attr-id-evento'))
 
-            console.log(data)
+            console.log(data);
+            // Elimina cualquier contenido adicional después del JSON
+            const jsonData = data.substring(0, data.lastIndexOf('}') + 1);
 
             jQuery('.listado-locales').empty()
 
@@ -299,8 +301,9 @@ function obtenerAlineacion(btnIdLiga) {
             jQuery('.span-id-torneo-alineacion').closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
 
             jQuery('.title-alineacion').addClass('d-none')
-
-            let result = JSON.parse(data)
+            
+            // Parsea el JSON
+            let result = JSON.parse(jsonData);
 
             if (result.results.length == 0) {
 
