@@ -997,7 +997,9 @@
                         $('#PartidoID_' + element).html(PartidoEncontrado);
                     }); */
                     let ItemsPartidos = $(response);
+                    
                     PartidoIDArray.forEach(element => {
+                        console.log(element);
                         // Buscar el elemento con el ID 'PartidoID_' + element en ItemsPartidos
                         let PartidoEncontrado = ItemsPartidos.filter('#PartidoID_' + element);
 
