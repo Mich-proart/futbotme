@@ -122,12 +122,15 @@
 
             <?php 
                 foreach ($partidos as $partidoInfo) { 
+
+                    if (is_array($partidpInfo)) {
+                    
                     /* FASE O JORNADA */
-            if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
-                $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
-            }else {
-                $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
-            } 
+                    if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                        $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                    }else {
+                        $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
+                    } 
             
             $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
             
@@ -207,7 +210,18 @@
 
             </div>
 
+            <?php } else { ?>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
+            <?php } ?>
             <?php } ?>
         </div>
     </div>
