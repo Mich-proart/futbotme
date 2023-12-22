@@ -5,6 +5,7 @@
 
     <?php 
         print_r($datosPartidos);
+        die;
 
     $espanaPartidos = [];
     $otrosPartidos = [];
@@ -12,36 +13,36 @@
 
     foreach ($datosPartidos as $nombreTemporada => $partidos) {
         if (is_array($partidos)) {
-        // Suponiendo que $partidos es un arreglo asociativo y 'pais' es la clave que contiene el país
-        // Cadena dada
-        $string = $nombreTemporada;
+            // Suponiendo que $partidos es un arreglo asociativo y 'pais' es la clave que contiene el país
+            // Cadena dada
+            $string = $nombreTemporada;
 
-        // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
-        if (
-            strpos($string, "PRIMERA DIVISIÓN") !== false ||
-            strpos($string, "SEGUNDA DIVISIÓN") !== false ||
-            strpos($string, "PREFERENTE") !== false ||
-            strpos($string, "REGIONAL") !== false ||
-            strpos($string, "GRUPO") !== false ||
-            strpos($string, "FEDERACIÓN") !== false
-        ) {
-            // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
-            $pais = "España";
-        } else {
-            // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
-            $paisArray = explode("-", $string);
-            
-            // Obtiene el último elemento del array después de dividir por el guion
-            $pais = trim(end($paisArray));
-        }
+            // Verifica si la cadena contiene "PRIMERA DIVISIÓN", "SEGUNDA DIVISIÓN", "PREFERENTE", "REGIONAL", "GRUPO" o "FEDERACIÓN"
+            if (
+                strpos($string, "PRIMERA DIVISIÓN") !== false ||
+                strpos($string, "SEGUNDA DIVISIÓN") !== false ||
+                strpos($string, "PREFERENTE") !== false ||
+                strpos($string, "REGIONAL") !== false ||
+                strpos($string, "GRUPO") !== false ||
+                strpos($string, "FEDERACIÓN") !== false
+            ) {
+                // Si la cadena contiene alguna de las palabras clave, establece la variable del país a "España"
+                $pais = "España";
+            } else {
+                // Si no contiene ninguna de las palabras clave, encuentra el país después del guion
+                $paisArray = explode("-", $string);
+                
+                // Obtiene el último elemento del array después de dividir por el guion
+                $pais = trim(end($paisArray));
+            }
 
-        // Verifica si el país es España
-        if ($pais === 'España') {
-            $espanaPartidos[$nombreTemporada] = $partidos;
-        } else {
-            $otrosPartidos[$nombreTemporada] = $partidos;
+            // Verifica si el país es España
+            if ($pais === 'España') {
+                $espanaPartidos[$nombreTemporada] = $partidos;
+            } else {
+                $otrosPartidos[$nombreTemporada] = $partidos;
+            }
         }
-    }
     }
 
     // Concatena los arreglos, poniendo primero los partidos de España
