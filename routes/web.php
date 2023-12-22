@@ -57,10 +57,9 @@ Route::get('/resultados-directo/jugador/{nombre?}/{id?}', [FichaJugadorControlle
 // buscador
 Route::post('/buscador', [BuscadorController::class, 'buscador'])->name('buscador');
 
-//Route::post('/leer-fichero', [BuscadorController::class, 'leerFichero'])->name('leerFichero');
 
 Route::post('/leer-fichero', [AjaxController::class, 'leerFichero'])->name('leer-fichero');
-//Route::post('/leer-fichero', [AjaxController::class, 'leerFichero'])->name('leer-fichero');
+Route::post('/leer-fichero-manual', [AjaxController::class, 'leerFicherManuales'])->name('leer-fichero-manual');
 
 //Route::get('/ajax-example', 'AjaxController@index')->name('ajax.example');
 //Route::post('/ajax-example', 'AjaxController@getData')->name('ajax.get_data');

@@ -892,8 +892,7 @@
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
                 data: {
-                    PartidoID: PartidoID
-                    //id: id,
+                    PartidoID: PartidoID,
                     _token: '{{ csrf_token() }}',
                 },
                 beforeSend: function() {

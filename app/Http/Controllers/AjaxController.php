@@ -57,7 +57,7 @@ class AjaxController extends Controller
         }
     }
 
-    /* public function leerFichero(Request $request){
+    public function leerFicherManuales(Request $request){
 
         $rutaArchivo = base_path('directos-futbolme.json');
 
@@ -73,10 +73,10 @@ class AjaxController extends Controller
             // Por ejemplo, devolverlos como respuesta
             //return response()->json($datos);
             $datosPartidos = $datos;
-            return view('partials.actualizarPartidos', compact('datosPartidos'));
+            return view('partials.actualizarPartidosM', compact('datosPartidos'));
         } else {
             // El archivo no existe
             return response()->json(['error' => 'El archivo no existe', 'ruta' => $rutaArchivo], 404);
         }
-    } */
+    }
 }
