@@ -3,10 +3,8 @@
     {{-- PARTIDOS MANUALES --}}
     {{-- {{dd($datosPartidos)}} --}}
 
-    print_r($datosPartidos);
-
     <?php 
-    
+        print_r($datosPartidos);
 
     $espanaPartidos = [];
     $otrosPartidos = [];
