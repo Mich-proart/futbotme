@@ -13,9 +13,9 @@
         };
     </script>
     @php
-        use Jenssegers\Agent\Agent;
-        $agent = new Agent();
+        $agent = new Jenssegers\Agent\Agent;
     @endphp
+
 
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
