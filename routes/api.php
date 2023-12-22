@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,5 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/apiBetsapiEventos', 'ApiController@apiBetsapiEventos')->name('apiBetsapiEventos');
-Route::post('/apiBetsapi', 'ApiController@apiBetsapi')->name('apiBetsapi');
+/* EVENTOS */
+Route::post('/apiBetsapiEventos', [ApiController::class, 'apiBetsapiEventos'])->name('apiBetsapiEventos');
+
+/* ALINEACIONES */
+Route::post('/apiBetsapi', [ApiController::class, 'apiBetsapi'])->name('apiBetsapi');
