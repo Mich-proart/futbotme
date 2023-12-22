@@ -338,15 +338,15 @@ class AdminController extends Controller
         // $partidosDirectos = $this->get_partidos_curtdate(2,HelperFunctions::get_fecha_current_generic());
         // generamos fichero json con el partido editado
         // Convertir el array a formato JSON
-        $json = json_encode($obj_response, JSON_PRETTY_PRINT);
-        // Ruta y nombre del archivo donde se guardará el JSON
-        $rutaArchivo = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
-        // Guardar el JSON en el archivo
-        if (file_exists($rutaArchivo)) {
-            file_put_contents($rutaArchivo, $json);
+        // $json = json_encode($obj_response, JSON_PRETTY_PRINT);
+        // // Ruta y nombre del archivo donde se guardará el JSON
+        // $rutaArchivo = base_path('directos-futbolme.json'); // Ruta al archivo JSON en la raíz del proyecto
+        // // Guardar el JSON en el archivo
+        // if (file_exists($rutaArchivo)) {
+        //     file_put_contents($rutaArchivo, $json);
             return  json_encode('guardado');
-        }
-        return  json_encode('error');
+        // }
+        // return  json_encode('error');
     }
 
     // goles del partido matcheado con id de betsapi
