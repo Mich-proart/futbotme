@@ -1,7 +1,7 @@
 <div class="accordion" id="PartidosEnDirecto">
 
     {{-- PARTIDOS MANUALES --}}
-
+{{dd($datosPartidos)}}
     <?php 
     
 
@@ -125,6 +125,7 @@
 
                     if (is_array($partidoInfo)) {
                     print_r($partidoInfo);
+
                     /* FASE O JORNADA */
                     if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                         $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
