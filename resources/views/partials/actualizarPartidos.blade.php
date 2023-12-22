@@ -1,7 +1,4 @@
 {{-- 'datosPartidos','PartidosIDs' --}}
-<?php
-$indexMatch = array_filter($datosPartidos, array_column($datosPartidos, 'bet365_id'));
-?>
 
 @foreach ($PartidosIDs as $PartidoID)
     <?php
