@@ -256,19 +256,17 @@
                                 // Obtener la hora del partido desde $partidoInfo
                                 $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
-                                // Convertir la hora del partido a un objeto Carbon
-                                $horaPartidoCarbon = app('Carbon\Carbon')->parse($horaPartido);
+                                // Convertir la hora del partido a un objeto Carbon con la zona horaria de Madrid
+                                $horaPartidoCarbon = app('Carbon\Carbon')->parse($horaPartido, 'Europe/Madrid');
 
-                                // Obtener la hora actual en un objeto Carbon
-                                $horaActual = app('Carbon\Carbon')->now();
+                                // Obtener la hora actual en un objeto Carbon con la zona horaria de Madrid
+                                $horaActual = app('Carbon\Carbon')->now('Europe/Madrid');
 
                                 // Calcular la diferencia en minutos
                                 $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
-                                 // Agregar para debugging
-                                dd($horaPartido, $horaActual, $diferenciaEnMinutos);
                             @endphp
 
-                        <?php
+                       <?php
                             /* FASE O JORNADA */
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                                 $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
