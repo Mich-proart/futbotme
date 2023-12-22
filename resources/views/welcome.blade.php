@@ -13,7 +13,7 @@
         };
     </script>
     @php
-        $agent = new Jenssegers\Agent\Agent;
+        $agent = new Jenssegers\Agent\Agent();
     @endphp
 
 
@@ -253,43 +253,43 @@
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
                         <?php foreach ($partidos as $partidoInfo) { ?>
-                            
 
-                            <?php /* print_r($partidoInfo); */ ?>
 
-                            @php
-                                // Obtener la hora del partido desde $partidoInfo
-                                $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+                        <?php /* print_r($partidoInfo); */ ?>
 
-                                // Convertir la hora del partido a un objeto Carbon con la zona horaria de Madrid
-                                $horaPartidoCarbon = app('Carbon\Carbon')->parse($horaPartido, 'Europe/Madrid');
+                        @php
+                            // Obtener la hora del partido desde $partidoInfo
+                            $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
-                                // Obtener la hora actual en un objeto Carbon con la zona horaria de Madrid
-                                $horaActual = app('Carbon\Carbon')->now('Europe/Madrid');
+                            // Convertir la hora del partido a un objeto Carbon con la zona horaria de Madrid
+                            $horaPartidoCarbon = app('Carbon\Carbon')->parse($horaPartido, 'Europe/Madrid');
 
-                                // Calcular la diferencia en minutos
-                                $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
-                            @endphp
+                            // Obtener la hora actual en un objeto Carbon con la zona horaria de Madrid
+                            $horaActual = app('Carbon\Carbon')->now('Europe/Madrid');
 
-                       <?php
-                            /* FASE O JORNADA */
-                            if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
-                                $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
-                            }else {
-                                $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
-                            } 
-                            
-                            $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
-                            
-                            // Buscar la posición de *A y *B en el string
-                            $posicionA = strpos($observaciones, '*A');
-                            $posicionB = strpos($observaciones, '*B');
-                            
-                            // Extraer la primera variable desde *A hasta justo antes de *B
-                            $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
-                            
-                            // Extraer la segunda variable desde *B hasta el final del observaciones
-                            $goles_visitante = substr($observaciones, $posicionB + 2);
+                            // Calcular la diferencia en minutos
+                            $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
+                        @endphp
+
+                        <?php
+                        /* FASE O JORNADA */
+                        if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
+                            $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
+                        } else {
+                            $FaseJornada = 'Jornada ' . $partidoInfo['datosTemporadaSeccion']['jornada'];
+                        }
+                        
+                        $observaciones = $partidoInfo['datosTemporadaSeccion']['observaciones'];
+                        
+                        // Buscar la posición de *A y *B en el string
+                        $posicionA = strpos($observaciones, '*A');
+                        $posicionB = strpos($observaciones, '*B');
+                        
+                        // Extraer la primera variable desde *A hasta justo antes de *B
+                        $goles_local = substr($observaciones, $posicionA + 2, $posicionB - ($posicionA + 2));
+                        
+                        // Extraer la segunda variable desde *B hasta el final del observaciones
+                        $goles_visitante = substr($observaciones, $posicionB + 2);
                         ?>
 
                         <div class="accordion-body border-bottom partido_futuro directo_api_manual"
@@ -331,10 +331,10 @@
                                     <h3 class="d-block">
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local_corto'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local'] }}
                                         @endif
                                     </h3>
                                     <div class="escudo d-lg-inline-block d-none">
@@ -362,13 +362,13 @@
                                             class="logo_s img-fluid">
                                     </div>
                                     <h3 class="d-block">
-                                        
+
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto'] }}
                                         @endif
                                     </h3>
                                     <div class="goleadores">
@@ -681,11 +681,11 @@
                                     <h3 class="d-block">
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local_corto'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
-                                        @endif    
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local'] }}
+                                        @endif
                                     </h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
@@ -711,10 +711,10 @@
                                     <h3 class="d-block">
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto'] }}
                                         @endif
                                     </h3>
                                 </div>
@@ -863,11 +863,11 @@
                                     <h3 class="d-block">
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local_corto'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
-                                        @endif    
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_local'] }}
+                                        @endif
                                     </h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
@@ -892,10 +892,10 @@
                                     <h3 class="d-block">
                                         @if ($agent->isMobile())
                                             <!-- Contenido específico para dispositivos móviles -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante'] }}
                                         @else
                                             <!-- Contenido para otros dispositivos (no móviles) -->
-                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                            {{ $partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto'] }}
                                         @endif
                                     </h3>
                                     <div class="goleadores">
@@ -920,28 +920,28 @@
 
     <script>
         /* function terravison() {
-                $.ajax({
-                    url: '{{ route('leer-fichero') }}',
-                    method: 'POST',
-                    data: {
-                        //nuevoJActiva: nuevoJActiva,
-                        //id: id,
-                        _token: '{{ csrf_token() }}',
-                    },
-                    success: function(response) {
-                        // Actualizar el front-end con la nueva vista parcial
-                        console.log(response);
-                        $('#PartidosEnDirecto').html(response);
+                    $.ajax({
+                        url: '{{ route('leer-fichero') }}',
+                        method: 'POST',
+                        data: {
+                            //nuevoJActiva: nuevoJActiva,
+                            //id: id,
+                            _token: '{{ csrf_token() }}',
+                        },
+                        success: function(response) {
+                            // Actualizar el front-end con la nueva vista parcial
+                            console.log(response);
+                            $('#PartidosEnDirecto').html(response);
 
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                        // Mostrar detalles del error en la consola
-                        console.log(jqXHR);
-                    }
-                });
-            } */
+                            // Mostrar detalles del error en la consola
+                            console.log(jqXHR);
+                        }
+                    });
+                } */
 
 
         function terravison() {
@@ -964,13 +964,31 @@
                 },
                 success: function(response) {
 
-                    console.log(response);
+                    //console.log(response);
                     let PartidoIDArray = PartidoID.split(',');
-                    let ItemsPartidos = $(response);
+                    /* let ItemsPartidos = $(response);
                     PartidoIDArray.forEach(element => {
                         let PartidoEncontrado = ItemsPartidos.find('#PartidoID_' + element);
+                        console.log(PartidoEncontrado);
                         $('#PartidoID_' + element).html(PartidoEncontrado);
+                    }); */
+
+                    PartidoIDArray.forEach(element => {
+                        // Buscar el elemento con el ID 'PartidoID_' + element en ItemsPartidos
+                        let PartidoEncontrado = ItemsPartidos.filter('#PartidoID_' + element);
+
+                        // Verificar si se encontró un partido
+                        if (PartidoEncontrado.length > 0) {
+                            // Extraer el contenido HTML del elemento encontrado
+                            let contenidoHTML = PartidoEncontrado.html();
+                            console.log(contenidoHTML);
+                            // Actualizar el contenido HTML del elemento con el ID 'PartidoID_' + element
+                            $('#PartidoID_' + element).html(contenidoHTML);
+                        } else {
+                            console.log('Partido no encontrado para el ID ' + element);
+                        }
                     });
+
 
                     // let result = JSON.parse(response);
                 },
