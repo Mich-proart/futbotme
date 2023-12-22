@@ -252,20 +252,21 @@
                             /* FASE O JORNADA */
 
                             print_r($partidoInfo);
-                            $hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+                            //$hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
-                            // Obtener la hora actual
+                                // Obtener la hora actual en formato H:i:s
                             $horaActual = now()->format('H:i:s');
 
-                            // Convertir las horas a objetos DateTime para facilitar la comparación
-                            $horaObjeto = \DateTime::createFromFormat('H:i:s', $hora);
-                            $horaActualObjeto = \DateTime::createFromFormat('H:i:s', $horaActual);
+                            // Hora del partido
+                            $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+
+                            // Convertir las horas a objetos DateTime para realizar la comparación
+                            $horaActualObj = new DateTime($horaActual);
+                            $horaPartidoObj = new DateTime($horaPartido);
 
                             // Calcular la diferencia en minutos
-                            $diferenciaEnMinutos = max(0, $horaObjeto->diff($horaActualObjeto)->format('%i'));
-
-                            // Mostrar los minutos transcurridos
-                            //echo "Han pasado {$diferenciaEnMinutos} minutos desde la hora del partido hasta ahora.";
+                            $diferenciaEnMinutos = $horaPartidoObj->diff($horaActualObj)->format('%i');
+                      
 
 
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
@@ -287,8 +288,11 @@
                             $goles_visitante = substr($observaciones, $posicionB + 2);
                         ?>
 
-                        <div class="accordion-body border-bottom partido_futuro directo_api_manual" id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"  data-id="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
-                            <input type="hidden" value="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                        <div class="accordion-body border-bottom partido_futuro directo_api_manual"
+                            id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"
+                            data-id="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                            <input type="hidden"
+                                value="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
                             <div class="d-flex aling-items-center justify-content-between ">
                                 <div class="col d-flex aling-items-center ">
                                     <div class="d-block py-2 px-1 fs-2">
@@ -858,37 +862,37 @@
 
     <script>
         /* function terravison() {
-            $.ajax({
-                url: '{{ route('leer-fichero') }}',
-                method: 'POST',
-                data: {
-                    //nuevoJActiva: nuevoJActiva,
-                    //id: id,
-                    _token: '{{ csrf_token() }}',
-                },
-                success: function(response) {
-                    // Actualizar el front-end con la nueva vista parcial
-                    console.log(response);
-                    $('#PartidosEnDirecto').html(response);
+                $.ajax({
+                    url: '{{ route('leer-fichero') }}',
+                    method: 'POST',
+                    data: {
+                        //nuevoJActiva: nuevoJActiva,
+                        //id: id,
+                        _token: '{{ csrf_token() }}',
+                    },
+                    success: function(response) {
+                        // Actualizar el front-end con la nueva vista parcial
+                        console.log(response);
+                        $('#PartidosEnDirecto').html(response);
 
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                    // Mostrar detalles del error en la consola
-                    console.log(jqXHR);
-                }
-            });
-        } */
+                        // Mostrar detalles del error en la consola
+                        console.log(jqXHR);
+                    }
+                });
+            } */
 
 
         function terravison() {
             let PartidoID = '';
-            $('.partido_futuro.directo_api_manual').each(function (index, element) {
-                PartidoID += $(element).data('id') + ',';
-                
-            }),
-            PartidoID = PartidoID.replace(/,\s*$/, '');
+            $('.partido_futuro.directo_api_manual').each(function(index, element) {
+                    PartidoID += $(element).data('id') + ',';
+
+                }),
+                PartidoID = PartidoID.replace(/,\s*$/, '');
             $.ajax({
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
@@ -906,10 +910,10 @@
                     let PartidoIDArray = PartidoID.split(',');
                     let ItemsPartidos = $(response);
                     PartidoIDArray.forEach(element => {
-                        let PartidoEncontrado = ItemsPartidos.find('#PartidoID_'+element);
-                        $('#PartidoID_'+element).html(PartidoEncontrado);
+                        let PartidoEncontrado = ItemsPartidos.find('#PartidoID_' + element);
+                        $('#PartidoID_' + element).html(PartidoEncontrado);
                     });
-                    
+
                     // let result = JSON.parse(response);
                 },
                 complete: function() {
