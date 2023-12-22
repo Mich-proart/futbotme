@@ -251,7 +251,7 @@
                             foreach ($partidos as $partidoInfo) { 
                             /* FASE O JORNADA */
 
-                            //print_r($partidoInfo);
+                            print_r($partidoInfo);
                             $hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
                             // Obtener la hora actual
@@ -614,6 +614,7 @@
                         }else {
                             $FaseJornada = 'Jornada '.$partidoInfo['datosTemporadaSeccion']['jornada'];
                         }    
+                        print_r($partidoInfo);
                             ?>
                         {{-- echo "- Partido ID: " . $partidoInfo['datosTemporadaSeccion']["partidoId"] . </br>"; --}}
 
@@ -772,6 +773,7 @@
                                 
                                 // Extraer la segunda variable desde *B hasta el final del observaciones
                                 $goles_visitante = substr($observaciones, $posicionB + 2);
+                                print_r($partidoInfo);
                         ?>
 
                         <div class="accordion-body border-bottom partido_finalizado">
