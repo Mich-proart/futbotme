@@ -246,34 +246,28 @@
                     </h2>
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
-                        @php
-                        // Importar la clase Carbon
-                        use Carbon\Carbon;
-                        @endphp
 
-                        <?php 
-                            foreach ($partidos as $partidoInfo) { 
+                        <?php foreach ($partidos as $partidoInfo) { ?>
+                            
+
+                            <?php print_r($partidoInfo); ?>
+
+                            @php
+                                // Obtener la hora del partido desde $partidoInfo
+                                $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
+
+                                // Convertir la hora del partido a un objeto Carbon
+                                $horaPartidoCarbon = app('Carbon\Carbon')->parse($horaPartido);
+
+                                // Obtener la hora actual en un objeto Carbon
+                                $horaActual = app('Carbon\Carbon')->now();
+
+                                // Calcular la diferencia en minutos
+                                $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
+                            @endphp
+
+                        <?php
                             /* FASE O JORNADA */
-
-                            print_r($partidoInfo);
-                            //$hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
-
-                            use Carbon\Carbon;
-
-                            // $partidoInfo['datosTemporadaSeccion']['horaPartido'] es la hora del partido en formato 'HH:mm:ss'
-                            $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
-
-                            // Convertir la hora del partido a un objeto Carbon
-                            $horaPartidoCarbon = Carbon::parse($horaPartido);
-
-                            // Obtener la hora actual en un objeto Carbon
-                            $horaActual = Carbon::now();
-
-                            // Calcular la diferencia en minutos
-                            $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
-
-
-
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                                 $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
                             }else {
