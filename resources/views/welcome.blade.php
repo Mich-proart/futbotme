@@ -252,7 +252,6 @@
                             /* FASE O JORNADA */
 
                             //print_r($partidoInfo);
-
                             $hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
                             // Obtener la hora actual
@@ -264,6 +263,9 @@
 
                             // Calcular la diferencia en minutos
                             $diferenciaEnMinutos = $horaObjeto->diff($horaActualObjeto)->format('%i');
+
+                            // Asegurarse de que la diferencia no sea negativa (ya que el partido aún no ha comenzado)
+                            $diferenciaEnMinutos = max($diferenciaEnMinutos, 0);
 
                             // Mostrar la diferencia en minutos
                             //echo "La diferencia en minutos es: $diferenciaEnMinutos minutos";
