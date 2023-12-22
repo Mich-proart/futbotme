@@ -246,6 +246,10 @@
                     </h2>
                     <div id="panelFuturosOpen-collapse<?php echo $partidos[0]['idTemporada']; ?>" class="accordion-collapse collapse show"
                         aria-labelledby="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
+                        @php
+                        // Importar la clase Carbon
+                        use Carbon\Carbon;
+                        @endphp
 
                         <?php 
                             foreach ($partidos as $partidoInfo) { 
@@ -253,9 +257,6 @@
 
                             print_r($partidoInfo);
                             //$hora = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
-
-                                // Obtener la hora actual en formato H:i:s
-                            $horaActual = now()->format('H:i:s');
 
                             use Carbon\Carbon;
 
