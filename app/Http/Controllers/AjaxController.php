@@ -41,10 +41,11 @@ class AjaxController extends Controller
             //$datosPartidos = $datos;
 
             // Verificar si la decodificación fue exitosa
-            if ($datosPartidos === null && json_last_error() !== JSON_ERROR_NONE) {
+            if (!isset($datosPartidos) && json_last_error() !== JSON_ERROR_NONE) {
                 // Manejar el error de decodificación
                 die('Error al decodificar el JSON: ' . json_last_error_msg());
             } else {
+                $datosPartidos = $datosPartidos['results'];
                 return view('partials.actualizarPartidos', compact('datosPartidos'));
             }
         } else {

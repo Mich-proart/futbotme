@@ -186,7 +186,7 @@
                 $partidosOrdenadosESLIVE = $espanaPartidos + $otrosPartidos;
                 
                 foreach ($partidosOrdenadosESLIVE as $nombreTemporada => $partidos) { 
-                    print_r($partidos); 
+                    //print_r($partidos); 
                     $slug = Str::slug($nombreTemporada);
 
                     // Cadena dada

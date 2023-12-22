@@ -4,6 +4,7 @@ $ruta = __DIR__ . '/directos.json';
 $tokken_api = "153716-4djEyj4e6JZVou";
 $url_inplay_api = "https://api.b365api.com/v3/events/inplay?sport_id=1";
 
+//El resulado de la peticion devuelve solo la primera pagina, abria que hacer llamadas recursivas con la finalidad de obtener todas las paginas.. URGENTE HABLAR CON JORGE
 
 // leemos url y  guardamos los datos en un json
 $url = $url = $url_inplay_api."&token=".$tokken_api."&LNG_ID=3";
