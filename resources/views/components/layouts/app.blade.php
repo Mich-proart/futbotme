@@ -101,8 +101,8 @@
     <x-layouts.footer />
     <!-- Puedes asignar la URL a una variable de JavaScript -->
     <script>
-        var apiUrlAlineaciones = "{{ route('apiBetsapiEventos') }}";
-        var apiUrlEvents = "{{ route('apiBetsapi') }}";
+        var apiUrlAlineaciones = "{{ route('apiBetsapi') }}";
+        var apiUrlEvents = "{{ route('apiBetsapiEventos') }}";
     </script>
 
 </body>
