@@ -305,7 +305,7 @@ function obtenerAlineacion(btnIdLiga) {
             // Parsea el JSON
             let result = JSON.parse(jsonData);
             console.log(result);
-            if (result.results[0].length == 0) {
+            if (result.results.length == 0) {
 
                 jQuery('.title-alineacion').addClass('d-none')
 
@@ -323,7 +323,7 @@ function obtenerAlineacion(btnIdLiga) {
 
             } else {
 
-                for (const iterator of result.results[0].home.startinglineup) {
+                for (const iterator of result.results.home.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.pull-right').find('.listado-locales').append(
                         `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
@@ -334,7 +334,7 @@ function obtenerAlineacion(btnIdLiga) {
                     //console.log(iterator)          
                 }
 
-                for (const iterator of result.results[0].away.startinglineup) {
+                for (const iterator of result.results.away.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.pull-right').find('.listado-visitantes').append(
                         `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
