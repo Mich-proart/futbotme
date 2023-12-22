@@ -12,10 +12,11 @@
             }
         };
     </script>
-    <?php
-    use Jenssegers\Agent\Agent;
-    $agent = new Agent();
-    ?>
+    @php
+        use Jenssegers\Agent\Agent;
+        $agent = new Agent();
+    @endphp
+
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
