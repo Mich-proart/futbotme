@@ -224,7 +224,7 @@ function nextDay() {
 function obtenerEvento(btnIdLiga) {
 
     jQuery.ajax({
-        url: url('apiBetsapiEventos'), // AJAX handler,
+        url: route('apiBetsapiEventos'), // AJAX handler,
         method: 'POST',
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
@@ -268,7 +268,7 @@ function obtenerEvento(btnIdLiga) {
 function obtenerAlineacion(btnIdLiga) {
 
     jQuery.ajax({
-        url: url('/apiBetsapi'), // AJAX handler,
+        url: route('apiBetsapi'), // AJAX handler,
         method: 'POST',
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
