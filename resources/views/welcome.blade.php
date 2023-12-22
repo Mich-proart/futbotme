@@ -988,7 +988,7 @@
                 },
                 success: function(response) {
 
-                    //console.log(response);
+                    console.log(response);
                     let PartidoIDArray = PartidoID.split(',');
                     /* 
                     PartidoIDArray.forEach(element => {
