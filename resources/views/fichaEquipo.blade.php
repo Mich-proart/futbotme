@@ -29,7 +29,7 @@
     <section class="header_cat p-4 my-3">
         <div class="container-fluid">
             <div class="row row-cols-3">
-                <div class="col">
+                <div class="col escudo_equipo">
                     <img src="{{ asset('assets/images/img/club/escudo' . $team->club_id_Equipo) }}.png"
                         alt="escudo {{ $team->nombreEquipo }} " class="img-fluid">
                 </div>

@@ -12,6 +12,10 @@
             }
         };
     </script>
+    <?php
+    use Jenssegers\Agent\Agent;
+    $agent = new Agent();
+    ?>
     <section>
         <div class="container-fluid pt-lg-5 pt-3">
             <div class="row row-cols-2 align-items-end justify-content-between">
@@ -323,7 +327,15 @@
                             </div>
                             <div class="partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
+                                    <h3 class="d-block">
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
+                                        @endif
+                                    </h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
@@ -348,7 +360,16 @@
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
+                                    <h3 class="d-block">
+                                        
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                        @endif
+                                    </h3>
                                     <div class="goleadores">
                                         <span class="d-block">{!! $goles_visitante !!}</span>
                                     </div>
@@ -499,7 +520,7 @@
                 </div>
             </div>
 
-            {{-- FUTUROS Y FINALIZADOS --}}
+            {{-- FUTUROS --}}
 
 
             <div class="accordion" id="PartidosFuturos">
@@ -656,7 +677,15 @@
                             </div>
                             <div class="partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
+                                    <h3 class="d-block">
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
+                                        @endif    
+                                    </h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         {{-- <img src="https://assets.b365api.com/images/team/m/2829.png" class="logo_s img-fluid"> --}}
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
@@ -678,7 +707,15 @@
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
+                                    <h3 class="d-block">
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                        @endif
+                                    </h3>
                                 </div>
                             </div>
 
@@ -817,7 +854,15 @@
                             </div>
                             <div class="partido_alineado my-2">
                                 <div class="local">
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_local']; ?></h3>
+                                    <h3 class="d-block">
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local_corto']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_local']}}
+                                        @endif    
+                                    </h3>
                                     <div class="escudo d-lg-inline-block d-none">
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoLocal']) }}.png"
                                             class="logo_s img-fluid">
@@ -838,7 +883,15 @@
                                         <img src="{{ asset('assets/images/img/club/escudo' . $partidoInfo['datosTemporadaSeccion']['escudoVisitante']) }}.png"
                                             class="logo_s img-fluid">
                                     </div>
-                                    <h3 class="d-block"><?php echo $partidoInfo['datosTemporadaSeccion']['nombre_visitante']; ?></h3>
+                                    <h3 class="d-block">
+                                        @if ($agent->isMobile())
+                                            <!-- Contenido específico para dispositivos móviles -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante']}}
+                                        @else
+                                            <!-- Contenido para otros dispositivos (no móviles) -->
+                                            {{$partidoInfo['datosTemporadaSeccion']['nombre_visitante_corto']}}
+                                        @endif
+                                    </h3>
                                     <div class="goleadores">
                                         <span class="d-block">{!! $goles_visitante !!}</span>
                                     </div>

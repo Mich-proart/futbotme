@@ -249,6 +249,11 @@ body {
     padding-right: 1rem;
 }
 
+.escudo img.logo_s,
+.escudo_equipo img{
+    mix-blend-mode:darken;
+}
+
 #accordionAscensos .visitante .escudo {
     padding-right: 1rem;
     width: 9%;
