@@ -1004,9 +1004,10 @@
 
                         // Verificar si se encontró un partido
                         if (PartidoEncontrado.length > 0) {
+                            console.log(element);
                             // Extraer el contenido HTML del elemento encontrado
                             let contenidoHTML = PartidoEncontrado.html();
-                            console.log(contenidoHTML);
+                            //console.log(contenidoHTML);
                             // Actualizar el contenido HTML del elemento con el ID 'PartidoID_' + element
                             $('#PartidoID_' + element).html(contenidoHTML);
                         } else {
