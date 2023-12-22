@@ -26,6 +26,9 @@ class AjaxController extends Controller
     public function leerFichero(Request $request)
     {
 
+        $PartidosIDs = explode(',' , $request->input('PartidoID'));
+
+
         $rutaArchivo = base_path('directos.json');
         // Verificar si el archivo existe
         if (file_exists($rutaArchivo)) {
@@ -46,7 +49,7 @@ class AjaxController extends Controller
                 die('Error al decodificar el JSON: ' . json_last_error_msg());
             } else {
                 $datosPartidos = $datosPartidos['results'];
-                return view('partials.actualizarPartidos', compact('datosPartidos'));
+                return view('partials.actualizarPartidos', compact('datosPartidos','PartidosIDs'));
             }
         } else {
             // El archivo no existe

@@ -288,8 +288,8 @@
                             $goles_visitante = substr($observaciones, $posicionB + 2);
                         ?>
 
-                        <div class="accordion-body border-bottom partido_futuro"
-                            id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                        <div class="accordion-body border-bottom partido_futuro directo_api_manual" id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"  data-id="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                            <input type="hidden" value="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
                             <div class="d-flex aling-items-center justify-content-between ">
                                 <div class="col d-flex aling-items-center ">
                                     <div class="d-block py-2 px-1 fs-2">
@@ -882,11 +882,17 @@
 
 
         function terravison() {
+            let PartidoID = '';
+            $('.partido_futuro.directo_api_manual').each(function (index, element) {
+                PartidoID += (element).data(id) + ',';
+                
+            }),
+            PartidoID = PartidoID.replace(/,\s*$/, '');
             $.ajax({
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
                 data: {
-                    //nuevoJActiva: nuevoJActiva,
+                    PartidoID: PartidoID
                     //id: id,
                     _token: '{{ csrf_token() }}',
                 },
@@ -897,7 +903,13 @@
                 success: function(response) {
 
                     console.log(response);
-                    $('#PartidosEnDirecto').html(response);
+                    let PartidoIDArray = PartidoID.split(',');
+                    let ItemsPartidos = $(response);
+                    PartidoIDArray.forEach(element => {
+                        let PartidoEncontrado = ItemsPartidos.find('#PartidoID_'+element);
+                        $('#PartidoID_'+element).html(PartidoEncontrado);
+                    });
+                    
                     // let result = JSON.parse(response);
                 },
                 complete: function() {
