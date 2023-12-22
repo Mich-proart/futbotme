@@ -116,13 +116,10 @@
                             $horaActualObjeto = \DateTime::createFromFormat('H:i:s', $horaActual);
 
                             // Calcular la diferencia en minutos
-                            $diferenciaEnMinutos = $horaObjeto->diff($horaActualObjeto)->format('%i');
+                            $diferenciaEnMinutos = max(0, $horaObjeto->diff($horaActualObjeto)->format('%i'));
 
-                            // Asegurarse de que la diferencia no sea negativa (ya que el partido aún no ha comenzado)
-                            $diferenciaEnMinutos = max($diferenciaEnMinutos, 0);
-
-                            // Mostrar la diferencia en minutos
-                            //echo "La diferencia en minutos es: $diferenciaEnMinutos minutos";
+                            // Mostrar los minutos transcurridos
+                            //echo "Han pasado {$diferenciaEnMinutos} minutos desde la hora del partido hasta ahora.";
 
 
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
