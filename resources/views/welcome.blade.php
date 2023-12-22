@@ -264,6 +264,8 @@
 
                                 // Calcular la diferencia en minutos
                                 $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
+                                 // Agregar para debugging
+                                dd($horaPartido, $horaActual, $diferenciaEnMinutos);
                             @endphp
 
                         <?php
