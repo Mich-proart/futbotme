@@ -293,10 +293,10 @@
                         ?>
 
                         <div class="accordion-body border-bottom partido_futuro directo_api_manual"
-                            id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"
-                            data-id="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                            id="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"
+                            data-id="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}">
                             <input type="hidden"
-                                value="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}">
+                                value="PartidoID_{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}">
                             <div class="d-flex aling-items-center justify-content-between ">
                                 <div class="col d-flex aling-items-center ">
                                     <div class="d-block py-2 px-1 fs-2">
@@ -319,9 +319,9 @@
                                 <div
                                     class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                                     <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
-                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"></span>
+                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"></span>
                                     <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
-                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['partidoId'] }}"></span>
+                                        attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"></span>
                                     <span class="icon-TV d-inline-block fs-1"></span>
                                 </div>
 
