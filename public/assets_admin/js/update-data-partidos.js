@@ -36,7 +36,7 @@ const guardarDatosPartidosDirectosDb = (filaBotonPartido) => {
 
         // 7524523
         jQuery.ajax({
-            url: `${urlBase}admin-panel/editar-partido/`,
+            url: adminEditarPartido,
             type: "POST",
             data: {
                 formData,
