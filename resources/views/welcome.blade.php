@@ -257,16 +257,20 @@
                                 // Obtener la hora actual en formato H:i:s
                             $horaActual = now()->format('H:i:s');
 
-                            // Hora del partido
+                            use Carbon\Carbon;
+
+                            // $partidoInfo['datosTemporadaSeccion']['horaPartido'] es la hora del partido en formato 'HH:mm:ss'
                             $horaPartido = $partidoInfo['datosTemporadaSeccion']['horaPartido'];
 
-                            // Convertir las horas a objetos DateTime para realizar la comparación
-                            $horaActualObj = new DateTime($horaActual);
-                            $horaPartidoObj = new DateTime($horaPartido);
+                            // Convertir la hora del partido a un objeto Carbon
+                            $horaPartidoCarbon = Carbon::parse($horaPartido);
+
+                            // Obtener la hora actual en un objeto Carbon
+                            $horaActual = Carbon::now();
 
                             // Calcular la diferencia en minutos
-                            $diferenciaEnMinutos = $horaPartidoObj->diff($horaActualObj)->format('%i');
-                      
+                            $diferenciaEnMinutos = $horaActual->diffInMinutes($horaPartidoCarbon);
+
 
 
                             if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
