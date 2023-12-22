@@ -48,8 +48,8 @@ class AjaxController extends Controller
                 // Manejar el error de decodificación
                 die('Error al decodificar el JSON: ' . json_last_error_msg());
             } else {
-                //$datosPartidos = $datosPartidos['results'];
-                $datosPartidos = json_encode($datosPartidos['results']);
+                $datosPartidos = $datosPartidos['results'];
+                
                 return view('partials.actualizarPartidos', compact('datosPartidos','PartidosIDs'));
             }
         } else {

@@ -988,7 +988,10 @@
                     // $(acordion).html("");
                 },
                 success: function(response) {
-                    let result = JSON.parse(response)
+                    console.log(response);
+                    console.log(typeof response);
+                    let result = JSON.parse(response);
+
                     for (const iterator of result) {
                         //console.log(iterator.id);
                         const fila = document.querySelector(`#PartidoID_` + iterator.id);
