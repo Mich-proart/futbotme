@@ -124,7 +124,7 @@
                 foreach ($partidos as $partidoInfo) { 
 
                     if (is_array($partidoInfo)) {
-                    
+                    print_r($partidoInfo);
                     /* FASE O JORNADA */
                     if ($partidoInfo['datosTemporadaSeccion']['jornada'] >= 38) {
                         $FaseJornada = $partidoInfo['datosTemporadaSeccion']['nombreFase'];
