@@ -944,28 +944,28 @@
 
     <script>
         /* function terravison() {
-                            $.ajax({
-                                url: '{{ route('leer-fichero') }}',
-                                method: 'POST',
-                                data: {
-                                    //nuevoJActiva: nuevoJActiva,
-                                    //id: id,
-                                    _token: '{{ csrf_token() }}',
-                                },
-                                success: function(response) {
-                                    // Actualizar el front-end con la nueva vista parcial
-                                    console.log(response);
-                                    $('#PartidosEnDirecto').html(response);
+                        $.ajax({
+                            url: '{{ route('leer-fichero') }}',
+                            method: 'POST',
+                            data: {
+                                //nuevoJActiva: nuevoJActiva,
+                                //id: id,
+                                _token: '{{ csrf_token() }}',
+                            },
+                            success: function(response) {
+                                // Actualizar el front-end con la nueva vista parcial
+                                console.log(response);
+                                $('#PartidosEnDirecto').html(response);
 
-                                },
-                                error: function(jqXHR, textStatus, errorThrown) {
-                                    console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                                    // Mostrar detalles del error en la consola
-                                    console.log(jqXHR);
-                                }
-                            });
-                        } */
+                                // Mostrar detalles del error en la consola
+                                console.log(jqXHR);
+                            }
+                        });
+                    } */
 
 
         function terravison() {
@@ -975,7 +975,6 @@
 
                 }),
                 PartidoID = PartidoID.replace(/,\s*$/, '');
-            let PartidoIDArray = document.querySelectorAll('.directo_api_manual');
             $.ajax({
                 url: '{{ route('leer-fichero') }}',
                 method: 'POST',
@@ -988,38 +987,18 @@
                     // $(acordion).html("");
                 },
                 success: function(response) {
-                    console.log(response);
-                    console.log(typeof response);
-                    let result = JSON.parse(response);
 
-                    for (const iterator of result) {
-                        //console.log(iterator.id);
-                        const fila = document.querySelector(`#PartidoID_` + iterator.id);
-
-
-                        PartidoIDArray.forEach(element => {
-                            let IDPartidoBetsapi = $(element).data('id');
-                            console.log(parseInt(iterator.id));
-                            console.log(parseInt(IDPartidoBetsapi));
-                            if (parseInt(iterator.id) == parseInt(IDPartidoBetsapi)) {
-                                let contenidoHTML = IDPartidoBetsapi.html();
-                                $('#PartidoID_' + element).html(contenidoHTML);
-                            }
-                        });
-
-                    }
                     //console.log(response);
-                    //let PartidoIDArray = PartidoID.split(',');
+                    let PartidoIDArray = PartidoID.split(',');
                     /* 
                     PartidoIDArray.forEach(element => {
                         let PartidoEncontrado = ItemsPartidos.find('#PartidoID_' + element);
                         console.log(PartidoEncontrado);
                         $('#PartidoID_' + element).html(PartidoEncontrado);
                     }); */
-                    //let ItemsPartidos = $(response);
-
-                    /* PartidoIDArray.forEach(element => {
-                        //console.log(element);
+                    let ItemsPartidos = $(response);
+                    
+                    PartidoIDArray.forEach(element => {
                         // Buscar el elemento con el ID 'PartidoID_' + element en ItemsPartidos
                         let PartidoEncontrado = ItemsPartidos.filter('#PartidoID_' + element);
 
@@ -1033,7 +1012,7 @@
                         } else {
                             console.log('Partido no encontrado para el ID ' + element);
                         }
-                    }); */
+                    });
 
 
                     // let result = JSON.parse(response);
@@ -1044,12 +1023,12 @@
             });
         }
 
-        terravison()
-        /* setInterval(() => {
+
+        setInterval(() => {
             console.log("leyendo ficheros")
             terravison()
             //terravison22()
-        }, 1000); */
+        }, 1000);
     </script>
 
 </x-layouts.app>

@@ -2,9 +2,9 @@
 
 @foreach ($PartidosIDs as $PartidoID)
     <?php
-    //$indexMatch = array_filter($PartidoID, array_column($datosPartidos, 'bet365_id'));
-    //$indexMatch = array_filter( array_column($datosPartidos, 'bet365_id', $PartidoID));
-    $indexMatch = array_search($PartidoID, array_column($datosPartidos, 'bet365_id'));
+    //$indexMatch = array_filter($PartidoID, array_column($datosPartidos, 'id'));
+    //$indexMatch = array_filter( array_column($datosPartidos, 'id', $PartidoID));
+    $indexMatch = array_search($PartidoID, array_column($datosPartidos, 'id'));
     $PartidoJson = $datosPartidos[$indexMatch];
     
     /* RUTAS DE IMAGENES DE ESCUDO */
@@ -37,7 +37,7 @@
     
     ?>
 
-    <div class="accordion-body border-bottom partido_futuro" id="PartidoID_{{ $PartidoJson['bet365_id'] }}">
+    <div class="accordion-body border-bottom partido_futuro res" id="PartidoID_{{ $PartidoJson['id'] }}">
         <div class="d-flex aling-items-center justify-content-between ">
             <div class="col d-flex aling-items-center ">
                 <div class="d-block py-2 px-1 fs-2">
@@ -58,9 +58,9 @@
             </div>
             <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                 <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
-                    attr-id-evento="{{ $PartidoJson['bet365_id'] }}"></span>
+                    attr-id-evento="{{ $PartidoJson['id'] }}"></span>
                 <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
-                    attr-id-evento="{{ $PartidoJson['bet365_id'] }}"></span>
+                    attr-id-evento="{{ $PartidoJson['id'] }}"></span>
                 <span class="icon-TV d-inline-block fs-1"></span>
             </div>
 
