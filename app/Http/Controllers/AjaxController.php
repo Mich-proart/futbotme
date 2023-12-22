@@ -49,7 +49,6 @@ class AjaxController extends Controller
                 die('Error al decodificar el JSON: ' . json_last_error_msg());
             } else {
                 $datosPartidos = $datosPartidos['results'];
-                var_dump($datosPartidos);
                 return view('partials.actualizarPartidos', compact('datosPartidos','PartidosIDs'));
             }
         } else {

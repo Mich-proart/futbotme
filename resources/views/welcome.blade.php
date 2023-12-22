@@ -988,7 +988,7 @@
                 },
                 success: function(response) {
 
-                    console.log(response);
+                    //console.log(response);
                     let PartidoIDArray = PartidoID.split(',');
                     /* 
                     PartidoIDArray.forEach(element => {
@@ -999,7 +999,7 @@
                     let ItemsPartidos = $(response);
                     
                     PartidoIDArray.forEach(element => {
-                        console.log(element);
+                        //console.log(element);
                         // Buscar el elemento con el ID 'PartidoID_' + element en ItemsPartidos
                         let PartidoEncontrado = ItemsPartidos.filter('#PartidoID_' + element);
 
