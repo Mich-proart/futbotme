@@ -3,7 +3,8 @@
 @foreach ($PartidosIDs as $PartidoID)
     <?php
     //$indexMatch = array_filter($PartidoID, array_column($datosPartidos, 'bet365_id'));
-    $indexMatch = array_filter( array_column($datosPartidos, 'bet365_id', $PartidoID));
+    //$indexMatch = array_filter( array_column($datosPartidos, 'bet365_id', $PartidoID));
+    $indexMatch = array_search($PartidoID, array_column($datosPartidos, 'bet365_id'));
     $PartidoJson = $datosPartidos[$indexMatch];
     
     /* RUTAS DE IMAGENES DE ESCUDO */
@@ -53,7 +54,7 @@
 
             </div>
             <div class="col">
-                <span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php echo $FaseJornada; ?></span>
+                <span class="fs-00 d-grid grid-center-xy jornada_tiempo"><?php //echo $FaseJornada; ?></span>
             </div>
             <div class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
                 <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
