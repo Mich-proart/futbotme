@@ -2,7 +2,8 @@
 
 @foreach ($PartidosIDs as $PartidoID)
     <?php
-    $indexMatch = array_filter($PartidoID, array_column($datosPartidos, 'bet365_id'));
+    //$indexMatch = array_filter($PartidoID, array_column($datosPartidos, 'bet365_id'));
+    $indexMatch = array_filter( array_column($datosPartidos, 'bet365_id', $PartidosId));
     $PartidoJson = $datosPartidos[$indexMatch];
     
     /* RUTAS DE IMAGENES DE ESCUDO */
