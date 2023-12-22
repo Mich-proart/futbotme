@@ -15,7 +15,7 @@
     <title>futbolme - {{ $title ?? 'Titulo Web' }}</title>
 
     <meta name="description" content="{{ $metaDescription }}">
-    <link rel="icon" type="image/ico" href="/favicon.ico"/>
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
 
     {{-- css files --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -99,6 +99,11 @@
 
     {{-- footer --}}
     <x-layouts.footer />
+    <!-- Puedes asignar la URL a una variable de JavaScript -->
+    <script>
+        var apiUrlAlineaciones = "{{ route('apiBetsapiEventos') }}";
+        var apiUrlEvents = "{{ route('apiBetsapi') }}";
+    </script>
 
 </body>
 
