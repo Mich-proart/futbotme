@@ -93,8 +93,13 @@ class FetchDataDirect extends Command
                     'id_partido' => $value['id'],
                     'estado_partido' => $value['time_status'],
                     'goles_local' => $goles_local,
-                    'goles_visitante' => $goles_visitante
+                    'goles_visitante' => $goles_visitante,
+                    'timer' => $value['timer']
                 ];
+                DB::table('wtestapi')->insert([
+                    'partidoid' => $value['id'],
+                    'datos' => json_encode($objt),
+                ]);
                 var_dump($objt);
             }
         }
