@@ -49,11 +49,36 @@ class FetchDataCommand extends Command
 
     public function handle()
     {
-        // $fecha = HelperFunctions::get_fecha_current_generic();
-        // $dataDb = Partido::where('fecha', $fecha)
-        // ->whereNotIn('betsapi', [-1, 1])
-        // ->get();
-        // foreach ($dataDb as $item) {
+        $fecha = HelperFunctions::get_fecha_current_generic();
+        $dataDb = Partido::where('fecha', $fecha)
+        ->whereNotIn('betsapi', [-1, 1])
+        ->get();
+
+
+        //var_dump($dataDb);
+        foreach ($dataDb as $item) {
+            //if($item->betsapi == 7542625){
+                $horaInicio = $item->hora_prevista;
+                $duracionPartidoMinutos = $item->tiempo_partido;
+                list($horas, $minutos) = explode(':', $horaInicio);
+                $nuevaHoraEnMinutos = ($horas * 60) + $minutos + $duracionPartidoMinutos;
+                $nuevasHoras = floor($nuevaHoraEnMinutos / 60);
+                $nuevosMinutos = $nuevaHoraEnMinutos % 60;
+                $nuevaHora = sprintf("%02d:%02d", $nuevasHoras, $nuevosMinutos);
+                $horaActual = date("H:i:s");
+                //$horaActual = "19:54";
+                if($horaActual > $nuevaHora){
+                    echo "finalizamos el partido ".$item->betsapi." - ".$nuevaHora." - ".$horaActual;
+                    $updateDataPartido = DB::table('partido')
+                        ->where('betsapi', $item->betsapi)
+                        ->update([
+                            'estado_partido' => 1
+                        ]);
+                }else{
+                    echo "el partido sigue en juego ".$item->betsapi." - ".$horaInicio." - ".$nuevaHora." - ".$horaActual;
+                }
+            //}
+        }
         //     $url = 'https://api.b365api.com/v1/event/view?token=153716-4djEyj4e6JZVou&event_id='.$item->betsapi.'&LNG_ID=3';
         //     $response = Http::get($url);
         //     if ($response->ok()) {
