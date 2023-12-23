@@ -82,10 +82,24 @@ class FetchDataDirect extends Command
                 $goles = explode("-", $goles);
                 $goles_local = $goles[0];
                 $goles_visitante = $goles[1];
+                $estado_partido = $value['time_status'];
+                if(intval($value['timer']['ts']) > 0){
+                    $estado_partido = 2;
+                }
+
+                if(intval($value['timer']['ts']) <= 0){
+                    $estado_partido = 0;
+                }
+
+                if ($value['time_status'] === 3) {
+                    $estado_partido = 1;
+                }
+                    //'estado_partido' => (intval($value['timer']['ts']) > 0) ? 2 : 0,
                     $updateDataPartido = DB::table('partido')
                     ->where('betsapi', $value['id'])
                     ->update([
-                        'estado_partido' => (intval($value['timer']['ts']) > 0) ? 2 : 0,
+                        'tiempo_partido' => $value['timer']['tm'],
+                        'estado_partido' => $estado_partido,
                         'goles_local' => $goles_local,
                         'goles_visitante' => $goles_visitante
                     ]);
@@ -94,7 +108,8 @@ class FetchDataDirect extends Command
                     'estado_partido' => $value['time_status'],
                     'goles_local' => $goles_local,
                     'goles_visitante' => $goles_visitante,
-                    'timer' => $value['timer']
+                    'timer' => $value['timer'],
+                    'estado_modif' => $estado_partido
                 ];
                 DB::table('wtestapi')->insert([
                     'partidoid' => $value['id'],

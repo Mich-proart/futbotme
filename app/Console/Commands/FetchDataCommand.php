@@ -32,16 +32,16 @@ class FetchDataCommand extends Command
      * @param array $events Los eventos para procesar
      * @param int $eventId El ID del evento relacionado
      */
-    public function handleEvents(array $obj_response)
-    {
-        var_dump($obj_response);
+    //public function handleEvents(array $obj_response)
+    //{
+        //var_dump($obj_response);
         // Realizar acciones con los eventos
         //foreach ($events as $event) {
             // Hacer algo con cada evento
             // Por ejemplo, guardar en la base de datos, procesar datos, etc.
             // Aquí puedes trabajar con $event y $eventId según sea necesario
         //}
-    }
+    //}
 
     /**
      * Execute the console command.
@@ -49,46 +49,46 @@ class FetchDataCommand extends Command
 
     public function handle()
     {
-        $fecha = HelperFunctions::get_fecha_current_generic();
-        $dataDb = Partido::where('fecha', $fecha)
-        ->whereNotIn('betsapi', [-1, 1])
-        ->get();
-        foreach ($dataDb as $item) {
-            $url = 'https://api.b365api.com/v1/event/view?token=153716-4djEyj4e6JZVou&event_id='.$item->betsapi.'&LNG_ID=3';
-            $response = Http::get($url);
-            if ($response->ok()) {
-                $data = $response->json();
-                foreach ($data['results'] as $key => $value) {
-                    if(intval($value['id']) === intval($item->betsapi)){
-                        //if(intval($value['id']) == 6838052){
-                            $goles = $value['ss'];
-                            if ($goles === null) {
-                                $goles = "0-0";
-                            }
-                            $goles = explode("-", $goles);
-                            $goles_local = $goles[0];
-                            $goles_visitante = $goles[1];
-                            $time_status = isset($value['events']) && $value['time_status'] == 3 ? 1 : 2;
-                            var_dump(isset($value['events']) ? $value['id'].' - events mayor > 0 '.count($value['events']) : $value['id'].' - estado anulado');
-                            if(isset($value['events'])){
-                                $obj_response = [
-                                    'idPartidoBetsapi' => $value['id'],
-                                    'eventosPartido' => $value['events']
-                                ];
-                                //$this->handleEvents($obj_response);
-                            }
-                            $updateDataPartido = DB::table('partido')
-                            ->where('betsapi', $value['id'])
-                            ->update([
-                                'estado_partido' => isset($value['events']) ? $time_status : 5,
-                                'goles_local' => $goles_local,
-                                'goles_visitante' => $goles_visitante
-                            ]);
-                        //}
-                    }
-                }
-            }
-        }
+        // $fecha = HelperFunctions::get_fecha_current_generic();
+        // $dataDb = Partido::where('fecha', $fecha)
+        // ->whereNotIn('betsapi', [-1, 1])
+        // ->get();
+        // foreach ($dataDb as $item) {
+        //     $url = 'https://api.b365api.com/v1/event/view?token=153716-4djEyj4e6JZVou&event_id='.$item->betsapi.'&LNG_ID=3';
+        //     $response = Http::get($url);
+        //     if ($response->ok()) {
+        //         $data = $response->json();
+        //         foreach ($data['results'] as $key => $value) {
+        //             if(intval($value['id']) === intval($item->betsapi)){
+        //                 //if(intval($value['id']) == 6838052){
+        //                     $goles = $value['ss'];
+        //                     if ($goles === null) {
+        //                         $goles = "0-0";
+        //                     }
+        //                     $goles = explode("-", $goles);
+        //                     $goles_local = $goles[0];
+        //                     $goles_visitante = $goles[1];
+        //                     $time_status = isset($value['events']) && $value['time_status'] == 3 ? 1 : 2;
+        //                     var_dump(isset($value['events']) ? $value['id'].' - events mayor > 0 '.count($value['events']) : $value['id'].' - estado anulado');
+        //                     if(isset($value['events'])){
+        //                         $obj_response = [
+        //                             'idPartidoBetsapi' => $value['id'],
+        //                             'eventosPartido' => $value['events']
+        //                         ];
+        //                         //$this->handleEvents($obj_response);
+        //                     }
+        //                     $updateDataPartido = DB::table('partido')
+        //                     ->where('betsapi', $value['id'])
+        //                     ->update([
+        //                         'estado_partido' => isset($value['events']) ? $time_status : 5,
+        //                         'goles_local' => $goles_local,
+        //                         'goles_visitante' => $goles_visitante
+        //                     ]);
+        //                 //}
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 
