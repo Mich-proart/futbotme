@@ -49,7 +49,11 @@ class FetchDataCommand extends Command
 
     public function handle()
     {
+
+        // decirle a mitch que si en un partido que sea hecho manual la hora real es distinta de 
+        // 00:00:11 entonces coger la hora real para conteo de minutos
         date_default_timezone_set('Europe/Madrid');
+        $horaActual = date("H:i:s");
         $fecha = HelperFunctions::get_fecha_current_generic();
         $dataDb = Partido::where('fecha', $fecha)
         ->whereNotIn('betsapi', [-1, 1])
@@ -66,7 +70,7 @@ class FetchDataCommand extends Command
                 $nuevasHoras = floor($nuevaHoraEnMinutos / 60);
                 $nuevosMinutos = $nuevaHoraEnMinutos % 60;
                 $nuevaHora = sprintf("%02d:%02d", $nuevasHoras, $nuevosMinutos);
-                $horaActual = date("H:i:s");
+                
                 //$horaActual = "19:54";
                 if($horaActual > $nuevaHora){
                     echo "finalizamos el partido ".$item->betsapi." - ".$nuevaHora." - ".$horaActual;

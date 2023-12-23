@@ -98,7 +98,7 @@ class FetchDataDirect extends Command
                     $updateDataPartido = DB::table('partido')
                     ->where('betsapi', $value['id'])
                     ->update([
-                        'tiempo_partido' => $value['timer']['tm'],
+                        'tiempo_partido' => (90 + intval($value['timer']['ta'])),
                         'estado_partido' => $estado_partido,
                         'goles_local' => $goles_local,
                         'goles_visitante' => $goles_visitante
