@@ -49,6 +49,7 @@ class FetchDataCommand extends Command
 
     public function handle()
     {
+        date_default_timezone_set('Europe/Madrid');
         $fecha = HelperFunctions::get_fecha_current_generic();
         $dataDb = Partido::where('fecha', $fecha)
         ->whereNotIn('betsapi', [-1, 1])
