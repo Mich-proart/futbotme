@@ -224,15 +224,8 @@
                     <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
                         id="panelFuturosOpen-manual<?php echo $partidos[0]['idTemporada']; ?>">
 
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
-                            </div>
-
+                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3 ps-4">
+                            
                             <div class="d-inline-flex rounded-circle bandera_pais">
                                 <img src="{{ $CC_pais }}" width="32" height="32"
                                     alt="bandera del pais del torneo" class="rounded-circle">
@@ -626,14 +619,7 @@
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
                         id="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
-                            </div>
+                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3 ps-4">
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
                                 <img src="{{ $CC_pais }}" width="32" height="32"
@@ -795,14 +781,7 @@
                     <h2 class="accordion-header d-flex align-items-center justify-content-between"
                         id="panelFuturosOpen-heading<?php echo $partidos[0]['idTemporada']; ?>">
 
-                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                            <div class="d-block ps-4">
-                                <span class="icon-resolve-filled">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </span>
-                            </div>
+                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3 ps-4">
 
                             <div class="d-inline-flex rounded-circle bandera_pais">
                                 <img src="{{ $CC_pais }}" width="32" height="32"
