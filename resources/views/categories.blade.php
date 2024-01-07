@@ -1,5 +1,5 @@
 <x-layouts.app title="Categorias dinamicas" meta-description="Categorias page">
-    {{-- {{ dd($torneo_Liga) }} --}}
+    {{ dd($torneo_Liga) }}
 
     {{-- <p>Torneo ID: {{ $torneo_Liga->torneo_id }}</p>
     <p>Tipo Torneo: {{ $torneo_Liga->tipo_torneo }}</p> --}}
