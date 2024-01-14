@@ -1215,7 +1215,7 @@
                                 $bandera = $partidosPorLiga[0]['league']['cc'];
                             } ?>
 
-                            @if ($userLocation && $userLocation->country_code == $bandera)
+                            {{-- @if ($userLocation && $userLocation->country_code == $bandera) --}}
                                 <div class="accordion-item br-0">
                                     <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
                                         id="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
@@ -1335,7 +1335,7 @@
                                         </div>
                                     @endforeach
                                 </div>
-                            @endif
+                            {{-- @endif --}}
                         @endforeach
 
 
