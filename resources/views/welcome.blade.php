@@ -1,5 +1,5 @@
 {{dd($userLocation)}}
-@if ($userLocation && $userLocation->countryCode == 'ES')
+@if ($userLocation->countryCode == 'ES')
     <x-layouts.app title="Home" meta-description="Home page">
         <script>
             window.onload = function() {
