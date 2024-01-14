@@ -1222,11 +1222,6 @@
 
                                         <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
                                             <div class="d-block ps-4">
-                                                <span class="icon-resolve-filled">
-                                                    <span class="path1"></span>
-                                                    <span class="path2"></span>
-                                                    <span class="path3"></span>
-                                                </span>
                                             </div>
 
                                             <div class="d-inline-flex rounded-circle bandera_pais">
