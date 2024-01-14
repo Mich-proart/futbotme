@@ -1,5 +1,55 @@
 {{dd($userLocation)}}
-@if ($userLocation->countryCode == 'ES')
+{{-- {#686 ▼ // resources/views/welcome.blade.php
+  +"ip": "85.56.72.166"
+  +"type": "ipv4"
+  +"continent_code": "EU"
+  +"continent_name": "Europe"
+  +"country_code": "ES"
+  +"country_name": "Spain"
+  +"region_code": "CT"
+  +"region_name": "Catalonia"
+  +"city": "Barcelona"
+  +"zip": "08001"
+  +"latitude": 41.379589080811
+  +"longitude": 2.1683599948883
+  +"location": {#684 ▼
+    +"geoname_id": 3128760
+    +"capital": "Madrid"
+    +"languages": array:5 [▼
+      0 => {#670 ▼
+        +"code": "es"
+        +"name": "Spanish"
+        +"native": "Español"
+      }
+      1 => {#679 ▼
+        +"code": "eu"
+        +"name": "Basque"
+        +"native": "Euskara"
+      }
+      2 => {#673 ▼
+        +"code": "ca"
+        +"name": "Catalan"
+        +"native": "Català"
+      }
+      3 => {#672 ▼
+        +"code": "gl"
+        +"name": "Galician"
+        +"native": "Galego"
+      }
+      4 => {#669 ▼
+        +"code": "oc"
+        +"name": "Occitan"
+        +"native": "Occitan"
+      }
+    ]
+    +"country_flag": "https://assets.ipstack.com/flags/es.svg"
+    +"country_flag_emoji": "🇪🇸"
+    +"country_flag_emoji_unicode": "U+1F1EA U+1F1F8"
+    +"calling_code": "34"
+    +"is_eu": true
+  }
+} --}}
+@if ($userLocation->country_code == 'ES')
     <x-layouts.app title="Home" meta-description="Home page">
         <script>
             window.onload = function() {
@@ -1165,7 +1215,7 @@
                                 $bandera = $partidosPorLiga[0]['league']['cc'];
                             } ?>
 
-                            @if ($userLocation && $userLocation->countryCode == $bandera)
+                            @if ($userLocation && $userLocation->country_code == $bandera)
                                 <div class="accordion-item br-0">
                                     <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
                                         id="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
