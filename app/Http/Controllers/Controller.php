@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Helpers\HelperFunctions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\View;
+use Stevebauman\Location\Facades\Location;
 
 class Controller extends BaseController
 {
@@ -68,13 +69,14 @@ class Controller extends BaseController
         $partidosPorJugarCurDate = AdminController::get_partidos_curtdate(0, HelperFunctions::get_fecha_current_generic());
         $partidosEnJuegoCurDate = AdminController::get_partidos_curtdate(2, HelperFunctions::get_fecha_current_generic());
         $partidosTerminadosCurDate = AdminController::get_partidos_curtdate(1, HelperFunctions::get_fecha_current_generic());
-
+        $userLocation = Location::get();
         // retornamos los datos de directo DB, finalizados DB, por Jugar DB
         return view('welcome', [
             'directos' => $directosFhicheroJson,
             'partidosPorJugarCurDate' => $partidosPorJugarCurDate,
             'partidosEnJuegoCurDate' => $partidosEnJuegoCurDate,
-            'partidosTerminadosCurDate' => $partidosTerminadosCurDate
+            'partidosTerminadosCurDate' => $partidosTerminadosCurDate,
+            'userLocation' => $userLocation
         ]);
     }
 
