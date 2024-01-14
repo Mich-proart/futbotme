@@ -1,4 +1,4 @@
-{{dd($userLocation)}}
+{{-- {{dd($userLocation)}} --}}
 {{-- {#686 ▼ // resources/views/welcome.blade.php
   +"ip": "85.56.72.166"
   +"type": "ipv4"
