@@ -1014,3 +1014,7 @@ body {
 .title-alineacion{
     text-align: center !important;
 }
+
+.mas_info_partido *{
+    cursor: pointer;
+}
