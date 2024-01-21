@@ -324,6 +324,8 @@ function obtenerAlineacion(btnIdLiga) {
             } else {
                 console.log('si hay alineaciones');
 
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.title-alineacion-locales').append(`${result.results.home.formation}`)
+
                 for (const iterator of result.results.home.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-locales').append(
@@ -350,7 +352,7 @@ function obtenerAlineacion(btnIdLiga) {
                 for (const iterator of result.results.away.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-visitantes').append(
-                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                        `<li class="item-alineacion item-visitante bg_${iterator.pos}">
                             
                             
                             <div class="d-inline-flex rounded-circle bandera_pais">
@@ -361,7 +363,7 @@ function obtenerAlineacion(btnIdLiga) {
                         </li>`)
 
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-visitantes').append(
-                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                        `<li class="item-alineacion item-visitante bg_${iterator.pos}">
                             
                             
                             <div class="d-inline-flex rounded-circle bandera_pais">

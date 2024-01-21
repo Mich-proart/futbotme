@@ -971,11 +971,24 @@ body {
     background: #cce6d7;
 }
 
+.content-alineaciones *{
+    max-width: 80%;
+    margin: auto;
+}
+
 .item-alineacion {
     border: solid #fff 2px;
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
+}
+
+.item-alineacion.item-local{
+    justify-content: end;
+}
+
+.item-alineacion.item-visitante{
+    justify-content: flex-start;
 }
 
 .bg_Guard {
@@ -996,4 +1009,8 @@ body {
 
 .item-alineacion .dorsal {
     padding: 1rem;
+}
+
+.title-alineacion{
+    text-align: center !important;
 }

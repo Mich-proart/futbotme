@@ -356,13 +356,12 @@
                                                     style="cursor: pointer;">&times;</span>
                                             </div>
                                             <div class="align-items-start flex-wrap d-flex">
-                                                <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                                    <h4 class="title-alineacion title-alineacion-locales">Local</h4>
+                                                <div class="left-content-alin pr-lg-3 w-50 ">
+                                                    <h4 class="title-alineacion title-alineacion-locales"></h4>
                                                     <ul class="list-unstyled listado-locales"></ul>
                                                 </div>
-                                                <div class="rigth-content-alin w-50 text-left">
-                                                    <h4 class="title-alineacion title-alineacion-visitantes">Visitante
-                                                    </h4>
+                                                <div class="rigth-content-alin w-50 ">
+                                                    <h4 class="title-alineacion title-alineacion-visitantes"></h4>
                                                     <ul class="list-unstyled listado-visitantes"></ul>
                                                 </div>
                                             </div>
