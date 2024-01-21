@@ -13,13 +13,13 @@ html {
 @font-face {
     /* font-family: "Inter";
     src: url(fonts/Inter_Variable.ttf); */
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
     font-size: 1.6rem;
     /* font-family: "inter"; */
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     overflow-x: hidden;
 }
 
@@ -250,8 +250,8 @@ body {
 }
 
 .escudo img.logo_s,
-.escudo_equipo img{
-    mix-blend-mode:darken;
+.escudo_equipo img {
+    mix-blend-mode: darken;
 }
 
 #accordionAscensos .visitante .escudo {
@@ -949,4 +949,20 @@ body {
     color: inherit;
     cursor: default;
     pointer-events: none;
+}
+
+/* estilos modales alineaciones y eventos */
+
+.content-alineaciones,
+.content-eventos,
+.modal_info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    background: white;
+    z-index: 99999999;
+    padding: 3rem;
+    height: 100vh;
+    overflow-y: auto;
 }

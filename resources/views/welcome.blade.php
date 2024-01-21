@@ -391,7 +391,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-none content-eventos de-fila-partido">
+                            <div class="d-none modal_info content-eventos de-fila-partido">
                                 <div class="d-flex align-items-center justify-content-between w-100">
                                     <h3 class="d-block">Eventos</h3>
                                     <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
@@ -400,7 +400,7 @@
                             </div>
 
 
-                            <div class="d-none content-alineaciones">
+                            <div class="d-none modal_info content-alineaciones">
                                 <div class="d-flex align-items-center justify-content-between w-100">
                                     <h3 class="d-block">Alineaciones</h3>
                                     <span class="cerrar-alineacion display-4" style="cursor: pointer;">&times;</span>
