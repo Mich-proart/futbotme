@@ -296,7 +296,7 @@ function obtenerAlineacion(btnIdLiga) {
 
             jQuery('.listado-visitantes').empty()
 
-            jQuery('.span-id-torneo-alineacion').closest('.accordion-body').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
+            jQuery('.span-id-torneo-alineacion').closest('.mas_info_partido').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
 
             jQuery('.span-id-torneo-alineacion').closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-block').addClass('d-none')
 
@@ -309,15 +309,15 @@ function obtenerAlineacion(btnIdLiga) {
                 console.log('no hay alineaciones');
                 jQuery('.title-alineacion').addClass('d-none')
 
-                jQuery(btnIdLiga).closest('.accordion-body').find('.content-alineaciones').find('p').remove()
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-alineaciones').find('p').remove()
 
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').find('p').remove()
 
-                jQuery(btnIdLiga).closest('.accordion-body').find('.content-alineaciones').append('<p>No disponible</p>')
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-alineaciones').append('<p>No disponible</p>')
 
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').append('<p>No disponible</p>')
 
-                jQuery(btnIdLiga).closest('.accordion-body').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
 
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
 
@@ -326,7 +326,7 @@ function obtenerAlineacion(btnIdLiga) {
 
                 for (const iterator of result.results.home.startinglineup) {
 
-                    jQuery(btnIdLiga).closest('.accordion-body').find('.listado-locales').append(
+                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-locales').append(
                         `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
 
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-locales').append(
@@ -337,7 +337,7 @@ function obtenerAlineacion(btnIdLiga) {
 
                 for (const iterator of result.results.away.startinglineup) {
 
-                    jQuery(btnIdLiga).closest('.accordion-body').find('.listado-visitantes').append(
+                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-visitantes').append(
                         `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
 
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-visitantes').append(
@@ -345,11 +345,11 @@ function obtenerAlineacion(btnIdLiga) {
                     //console.log(iterator)          
                 }
 
-                jQuery(btnIdLiga).closest('.accordion-body').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
 
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
 
-                jQuery(btnIdLiga).closest('.accordion-body').find('.title-alineacion').removeClass('d-none')
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.title-alineacion').removeClass('d-none')
 
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.title-alineacion').removeClass('d-none')
             }

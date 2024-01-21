@@ -336,6 +336,38 @@
                                         <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
                                             attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"></span>
                                         <span class="icon-TV d-inline-block fs-1"></span>
+
+                                        {{-- modales --}}
+
+                                        <div class="d-none modal_info content-eventos de-fila-partido">
+                                            <div class="d-flex align-items-center justify-content-between w-100">
+                                                <h3 class="d-block">Eventos</h3>
+                                                <span class="cerrar-eventos display-4"
+                                                    style="cursor: pointer;">&times;</span>
+                                            </div>
+                                            <ul class="list-group lista-eventos text-left"></ul>
+                                        </div>
+
+
+                                        <div class="d-none modal_info content-alineaciones">
+                                            <div class="d-flex align-items-center justify-content-between w-100">
+                                                <h3 class="d-block">Alineaciones</h3>
+                                                <span class="cerrar-alineacion display-4"
+                                                    style="cursor: pointer;">&times;</span>
+                                            </div>
+                                            <div class="align-items-start flex-wrap d-flex">
+                                                <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                                    <h4 class="title-alineacion title-alineacion-locales">Local</h4>
+                                                    <ul class="list-unstyled listado-locales"></ul>
+                                                </div>
+                                                <div class="rigth-content-alin w-50 text-left">
+                                                    <h4 class="title-alineacion title-alineacion-visitantes">Visitante
+                                                    </h4>
+                                                    <ul class="list-unstyled listado-visitantes"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
@@ -390,35 +422,9 @@
                                     </div>
                                 </div>
 
-                                {{-- modales --}}
 
-                                <div class="d-none modal_info content-eventos de-fila-partido">
-                                    <div class="d-flex align-items-center justify-content-between w-100">
-                                        <h3 class="d-block">Eventos</h3>
-                                        <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
-                                    </div>
-                                    <ul class="list-group lista-eventos text-left"></ul>
-                                </div>
-    
-    
-                                <div class="d-none modal_info content-alineaciones">
-                                    <div class="d-flex align-items-center justify-content-between w-100">
-                                        <h3 class="d-block">Alineaciones</h3>
-                                        <span class="cerrar-alineacion display-4" style="cursor: pointer;">&times;</span>
-                                    </div>
-                                    <div class="align-items-start flex-wrap d-flex">
-                                        <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                            <h4 class="title-alineacion title-alineacion-locales">Local</h4>
-                                            <ul class="list-unstyled listado-locales"></ul>
-                                        </div>
-                                        <div class="rigth-content-alin w-50 text-left">
-                                            <h4 class="title-alineacion title-alineacion-visitantes">Visitante</h4>
-                                            <ul class="list-unstyled listado-visitantes"></ul>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                            
+
 
                             <?php } ?>
                         </div>
@@ -497,6 +503,41 @@
                                                 <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
                                                     attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
                                                 <span class="icon-TV d-inline-block fs-1"></span>
+
+                                                {{-- modales --}}
+
+                                                <div class="d-none modal_info content-eventos de-fila-partido">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-between w-100">
+                                                        <h3 class="d-block">Eventos</h3>
+                                                        <span class="cerrar-eventos display-4"
+                                                            style="cursor: pointer;">&times;</span>
+                                                    </div>
+                                                    <ul class="list-group lista-eventos text-left"></ul>
+                                                </div>
+
+
+                                                <div class="d-none modal_info content-alineaciones">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-between w-100">
+                                                        <h3 class="d-block">Alineaciones</h3>
+                                                        <span class="cerrar-alineacion display-4"
+                                                            style="cursor: pointer;">&times;</span>
+                                                    </div>
+                                                    <div class="align-items-start flex-wrap d-flex">
+                                                        <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                                            <h4 class="title-alineacion title-alineacion-locales">Local
+                                                            </h4>
+                                                            <ul class="list-unstyled listado-locales"></ul>
+                                                        </div>
+                                                        <div class="rigth-content-alin w-50 text-left">
+                                                            <h4 class="title-alineacion title-alineacion-visitantes">
+                                                                Visitante
+                                                            </h4>
+                                                            <ul class="list-unstyled listado-visitantes"></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -520,33 +561,6 @@
                                             </div>
                                         </div>
 
-                                    </div>
-                                </div>
-
-                                <div class="d-none content-eventos de-fila-partido">
-                                    <div class="d-flex align-items-center justify-content-between w-100">
-                                        <h3 class="d-block">Eventos</h3>
-                                        <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
-                                    </div>
-                                    <ul class="list-group lista-eventos text-left"></ul>
-                                </div>
-
-
-                                <div class="d-none content-alineaciones">
-                                    <div class="d-flex align-items-center justify-content-between w-100">
-                                        <h3 class="d-block">Alineaciones</h3>
-                                        <span class="cerrar-alineacion display-4"
-                                            style="cursor: pointer;">&times;</span>
-                                    </div>
-                                    <div class="align-items-start flex-wrap d-flex">
-                                        <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                            <h4 class="title-alineacion title-alineacion-locales">Local</h4>
-                                            <ul class="list-unstyled listado-locales"></ul>
-                                        </div>
-                                        <div class="rigth-content-alin w-50 text-left">
-                                            <h4 class="title-alineacion title-alineacion-visitantes">Visitante</h4>
-                                            <ul class="list-unstyled listado-visitantes"></ul>
-                                        </div>
                                     </div>
                                 </div>
                             @endforeach
@@ -885,8 +899,42 @@
                                     </div>
                                     <div
                                         class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
-                                        <span class="icon-alienacion d-inline-block fs-1"></span>
-                                        <span class="icon-ball d-inline-block fs-1"></span>
+                                        <span class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
+                                            attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"></span>
+                                        <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
+                                            attr-id-evento="{{ $partidoInfo['datosTemporadaSeccion']['IDBetsapi'] }}"></span>
+                                        <span class="icon-TV d-inline-block fs-1"></span>
+
+                                        {{-- modales --}}
+
+                                        <div class="d-none modal_info content-eventos de-fila-partido">
+                                            <div class="d-flex align-items-center justify-content-between w-100">
+                                                <h3 class="d-block">Eventos</h3>
+                                                <span class="cerrar-eventos display-4"
+                                                    style="cursor: pointer;">&times;</span>
+                                            </div>
+                                            <ul class="list-group lista-eventos text-left"></ul>
+                                        </div>
+
+
+                                        <div class="d-none modal_info content-alineaciones">
+                                            <div class="d-flex align-items-center justify-content-between w-100">
+                                                <h3 class="d-block">Alineaciones</h3>
+                                                <span class="cerrar-alineacion display-4"
+                                                    style="cursor: pointer;">&times;</span>
+                                            </div>
+                                            <div class="align-items-start flex-wrap d-flex">
+                                                <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                                    <h4 class="title-alineacion title-alineacion-locales">Local</h4>
+                                                    <ul class="list-unstyled listado-locales"></ul>
+                                                </div>
+                                                <div class="rigth-content-alin w-50 text-left">
+                                                    <h4 class="title-alineacion title-alineacion-visitantes">Visitante
+                                                    </h4>
+                                                    <ul class="list-unstyled listado-visitantes"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -952,28 +1000,28 @@
 
         <script>
             /* function terravison() {
-                                        $.ajax({
-                                            url: '{{ route('leer-fichero') }}',
-                                            method: 'POST',
-                                            data: {
-                                                //nuevoJActiva: nuevoJActiva,
-                                                //id: id,
-                                                _token: '{{ csrf_token() }}',
-                                            },
-                                            success: function(response) {
-                                                // Actualizar el front-end con la nueva vista parcial
-                                                console.log(response);
-                                                $('#PartidosEnDirecto').html(response);
+                                                                $.ajax({
+                                                                    url: '{{ route('leer-fichero') }}',
+                                                                    method: 'POST',
+                                                                    data: {
+                                                                        //nuevoJActiva: nuevoJActiva,
+                                                                        //id: id,
+                                                                        _token: '{{ csrf_token() }}',
+                                                                    },
+                                                                    success: function(response) {
+                                                                        // Actualizar el front-end con la nueva vista parcial
+                                                                        console.log(response);
+                                                                        $('#PartidosEnDirecto').html(response);
 
-                                            },
-                                            error: function(jqXHR, textStatus, errorThrown) {
-                                                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                                                                    },
+                                                                    error: function(jqXHR, textStatus, errorThrown) {
+                                                                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                                                // Mostrar detalles del error en la consola
-                                                console.log(jqXHR);
-                                            }
-                                        });
-                                    } */
+                                                                        // Mostrar detalles del error en la consola
+                                                                        console.log(jqXHR);
+                                                                    }
+                                                                });
+                                                            } */
 
 
             function terravison() {
@@ -1182,120 +1230,125 @@
                             } ?>
 
                             {{-- @if ($userLocation && $userLocation->country_code == $bandera) --}}
-                                <div class="accordion-item br-0">
-                                    <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
-                                        id="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
+                            <div class="accordion-item br-0">
+                                <h2 class="accordion-header d-flex align-items-center justify-content-between text-white"
+                                    id="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
 
-                                        <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
-                                            <div class="d-block ps-4">
-                                            </div>
-
-                                            <div class="d-inline-flex rounded-circle bandera_pais">
-                                                <img src="https://flagcdn.com/{{ $bandera }}.svg" width="32"
-                                                    height="32" alt="bandera del pais del torneo"
-                                                    class="rounded-circle">
-                                            </div>
-                                            @if ($partidosPorLiga[0]['league'])
-                                                <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"
-                                                    id="{{ $leagueId }}">{{ $partidosPorLiga[0]['league']['name'] }}</a>
-                                            @else
-                                                <p>Liga no disponible</p>
-                                            @endif
-
+                                    <div class="py-2 col-lg-10 col d-flex align-items-center gap-3">
+                                        <div class="d-block ps-4">
                                         </div>
-                                        <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white"
-                                            type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
-                                            aria-expanded="true"
-                                            aria-controls="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}">
-                                            <i class="bi bi-chevron-up fs-3"></i>
-                                        </button>
-                                    </h2>
-                                    @foreach ($partidosPorLiga as $partido)
-                                        <div id="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
-                                            class="accordion-collapse collapse show"
-                                            aria-labelledby="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
-                                            <div class="accordion-body border-bottom">
-                                                <div class="d-flex aling-items-center justify-content-between ">
-                                                    <div class="col-2 d-flex aling-items-center ">
-                                                        <div class="d-block py-2 px-1 fs-2">
-                                                            <span class="icon-resolve-filled">
-                                                                <span class="path1"></span>
-                                                                <span class="path2"></span>
-                                                                <span class="path3"></span>
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span
-                                                                class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_{{ $partido['timer']['tm'] }}_minutos text-white">{{ $partido['timer']['tm'] }}’</span>
-                                                        </div>
 
+                                        <div class="d-inline-flex rounded-circle bandera_pais">
+                                            <img src="https://flagcdn.com/{{ $bandera }}.svg" width="32"
+                                                height="32" alt="bandera del pais del torneo"
+                                                class="rounded-circle">
+                                        </div>
+                                        @if ($partidosPorLiga[0]['league'])
+                                            <a href="#" class="d-inline-block fs-01 nombre_torneo_liga"
+                                                id="{{ $leagueId }}">{{ $partidosPorLiga[0]['league']['name'] }}</a>
+                                        @else
+                                            <p>Liga no disponible</p>
+                                        @endif
+
+                                    </div>
+                                    <button class="accordion-button w-auto py-lg-4 px-lg-5 p-2 text-white"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}">
+                                        <i class="bi bi-chevron-up fs-3"></i>
+                                    </button>
+                                </h2>
+                                @foreach ($partidosPorLiga as $partido)
+                                    <div id="panelsStayOpen-collapse{{ $partidosPorLiga[0]['id'] }}"
+                                        class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-heading{{ $partidosPorLiga[0]['id'] }}">
+                                        <div class="accordion-body border-bottom">
+                                            <div class="d-flex aling-items-center justify-content-between ">
+                                                <div class="col-2 d-flex aling-items-center ">
+                                                    <div class="d-block py-2 px-1 fs-2">
+                                                        <span class="icon-resolve-filled">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </span>
                                                     </div>
-
-                                                    <div
-                                                        class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                                                    <div>
                                                         <span
-                                                            class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
-                                                            attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
-                                                        <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
-                                                            attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
-                                                        <span class="icon-TV d-inline-block fs-1"></span>
+                                                            class="mx-4 hora minitos_partidos d-inline-block fw-semibold px-4 bg_{{ $partido['timer']['tm'] }}_minutos text-white">{{ $partido['timer']['tm'] }}’</span>
                                                     </div>
 
                                                 </div>
-                                                <div class="mx-0 partido_alineado my-2">
-                                                    <div class="local">
-                                                        <h3 class="d-block">{{ $partido['home']['name'] }}</h3>
-                                                        <div class="escudo d-lg-inline-block d-none"><img
-                                                                src="https://assets.b365api.com/images/team/m/{{ $partido['home']['image_id'] }}.png"
-                                                                class="logo_s img-fluid"></div>
+
+                                                <div
+                                                    class="col text-end mas_info_partido d-flex aling-items-center justify-content-end gap-4">
+                                                    <span
+                                                        class="icon-alienacion d-inline-block fs-1 span-id-torneo-alineacion"
+                                                        attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
+                                                    <span class="icon-ball d-inline-block fs-1 span-evento-trigger"
+                                                        attr-id-evento="{{ $partidosPorLiga[0]['id'] }}"></span>
+                                                    <span class="icon-TV d-inline-block fs-1"></span>
+
+                                                    <div class="d-none content-eventos de-fila-partido">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between w-100">
+                                                            <h3 class="d-block">Eventos</h3>
+                                                            <span class="cerrar-eventos display-4"
+                                                                style="cursor: pointer;">&times;</span>
+                                                        </div>
+                                                        <ul class="list-group lista-eventos text-left"></ul>
                                                     </div>
 
-                                                    <div class="marcador">
-                                                        <span class="goles-local">{{ $partido['ss'] }}</span>
-                                                    </div>
 
-                                                    <div class="visitante">
-                                                        <div class="escudo d-lg-inline-block d-none"><img
-                                                                src="https://assets.b365api.com/images/team/m/{{ $partido['away']['image_id'] }}.png"
-                                                                class="logo_s img-fluid"></div>
-                                                        <h3 class="d-block">{{ $partido['away']['name'] }}</h3>
+                                                    <div class="d-none content-alineaciones">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between w-100">
+                                                            <h3 class="d-block">Alineaciones</h3>
+                                                            <span class="cerrar-alineacion display-4"
+                                                                style="cursor: pointer;">&times;</span>
+                                                        </div>
+                                                        <div class="align-items-start flex-wrap d-flex">
+                                                            <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                                                <h4 class="title-alineacion title-alineacion-locales">
+                                                                    Local</h4>
+                                                                <ul class="list-unstyled listado-locales"></ul>
+                                                            </div>
+                                                            <div class="rigth-content-alin w-50 text-left">
+                                                                <h4
+                                                                    class="title-alineacion title-alineacion-visitantes">
+                                                                    Visitante
+                                                                </h4>
+                                                                <ul class="list-unstyled listado-visitantes"></ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div>
+                                            <div class="mx-0 partido_alineado my-2">
+                                                <div class="local">
+                                                    <h3 class="d-block">{{ $partido['home']['name'] }}</h3>
+                                                    <div class="escudo d-lg-inline-block d-none"><img
+                                                            src="https://assets.b365api.com/images/team/m/{{ $partido['home']['image_id'] }}.png"
+                                                            class="logo_s img-fluid"></div>
+                                                </div>
+
+                                                <div class="marcador">
+                                                    <span class="goles-local">{{ $partido['ss'] }}</span>
+                                                </div>
+
+                                                <div class="visitante">
+                                                    <div class="escudo d-lg-inline-block d-none"><img
+                                                            src="https://assets.b365api.com/images/team/m/{{ $partido['away']['image_id'] }}.png"
+                                                            class="logo_s img-fluid"></div>
+                                                    <h3 class="d-block">{{ $partido['away']['name'] }}</h3>
+                                                </div>
+                                            </div>
+
                                         </div>
-
-                                        <div class="d-none content-eventos de-fila-partido">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <h3 class="d-block">Eventos</h3>
-                                                <span class="cerrar-eventos display-4"
-                                                    style="cursor: pointer;">&times;</span>
-                                            </div>
-                                            <ul class="list-group lista-eventos text-left"></ul>
-                                        </div>
-
-
-                                        <div class="d-none content-alineaciones">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <h3 class="d-block">Alineaciones</h3>
-                                                <span class="cerrar-alineacion display-4"
-                                                    style="cursor: pointer;">&times;</span>
-                                            </div>
-                                            <div class="align-items-start flex-wrap d-flex">
-                                                <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                                    <h4 class="title-alineacion title-alineacion-locales">Local</h4>
-                                                    <ul class="list-unstyled listado-locales"></ul>
-                                                </div>
-                                                <div class="rigth-content-alin w-50 text-left">
-                                                    <h4 class="title-alineacion title-alineacion-visitantes">Visitante
-                                                    </h4>
-                                                    <ul class="list-unstyled listado-visitantes"></ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
+                            </div>
                             {{-- @endif --}}
                         @endforeach
 
@@ -1309,35 +1362,35 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
         </section>
 
 
         <script>
             /* function terravison() {
-                                        $.ajax({
-                                            url: '{{ route('leer-fichero') }}',
-                                            method: 'POST',
-                                            data: {
-                                                //nuevoJActiva: nuevoJActiva,
-                                                //id: id,
-                                                _token: '{{ csrf_token() }}',
-                                            },
-                                            success: function(response) {
-                                                // Actualizar el front-end con la nueva vista parcial
-                                                console.log(response);
-                                                $('#PartidosEnDirecto').html(response);
+                                                                $.ajax({
+                                                                    url: '{{ route('leer-fichero') }}',
+                                                                    method: 'POST',
+                                                                    data: {
+                                                                        //nuevoJActiva: nuevoJActiva,
+                                                                        //id: id,
+                                                                        _token: '{{ csrf_token() }}',
+                                                                    },
+                                                                    success: function(response) {
+                                                                        // Actualizar el front-end con la nueva vista parcial
+                                                                        console.log(response);
+                                                                        $('#PartidosEnDirecto').html(response);
 
-                                            },
-                                            error: function(jqXHR, textStatus, errorThrown) {
-                                                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                                                                    },
+                                                                    error: function(jqXHR, textStatus, errorThrown) {
+                                                                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                                                // Mostrar detalles del error en la consola
-                                                console.log(jqXHR);
-                                            }
-                                        });
-                                    } */
+                                                                        // Mostrar detalles del error en la consola
+                                                                        console.log(jqXHR);
+                                                                    }
+                                                                });
+                                                            } */
 
 
             function terravison() {
