@@ -1,6 +1,18 @@
-{{dd($userLocation)}}
+{{-- {{dd($userLocation)}} --}}
 
-@if ($userLocation->country_code == 'ES')
+{{-- {#1284 ▼ // resources/views/welcome.blade.php
+    +"ip": "85.56.72.166"
+    +"hostname": "166.pool85-56-72.dynamic.orange.es"
+    +"city": "Barcelona"
+    +"region": "Catalonia"
+    +"country": "ES"
+    +"loc": "41.3722,2.1593"
+    +"org": "AS12479 Orange Espagne SA"
+    +"postal": "08004"
+    +"timezone": "Europe/Madrid"
+  } --}}
+
+@if ($userLocation->country == 'ES')
     <x-layouts.app title="Home" meta-description="Home page">
         <script>
             window.onload = function() {
