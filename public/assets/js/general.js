@@ -251,14 +251,32 @@ function obtenerEvento(btnIdLiga) {
             jQuery('.mas_info_partido').find('.content-eventos').addClass('d-none')
             jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-eventos').removeClass('d-none')
             jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-eventos').removeClass('d-none')
+            console.log(result)
             if (result.results[0].events) {
                 for (const iterator of result.results[0].events) {
 
-                    console.log(iterator);
                     jQuery(btnIdLiga).addClass("d-inline-block");
+                    let LineaEvento = iterator.text.split(/[-~]+/);
+                    if (LineaEvento.length > 3){
+                        let Minuto = LineaEvento[0];
+                        let evento = LineaEvento[1];
+                        let Resto = LineaEvento[2];
+                        jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">
+                        <span class="acontecimiento">${evento}</span>
+                        <span class="minuto_evento">${Minuto}</span>
+                        <span class="resto_evento">${Resto}</span>
+                        </li>`)
+                    }else{
+                        let Minuto = LineaEvento[0];
+                        let evento = LineaEvento[1];
+                        let Resto = LineaEvento[2];
 
-                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
-                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
+                        jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">
+                        <span class="acontecimiento">${evento}</span>
+                        <span class="minuto_evento">${Minuto}</span>
+                        <span class="resto_evento">${Resto}</span>
+                        </li>`)
+                    }
                 }
             } else {
                 console.log("en el falso")

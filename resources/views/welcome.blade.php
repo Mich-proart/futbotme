@@ -345,7 +345,7 @@
                                                 <span class="cerrar-eventos display-4"
                                                     style="cursor: pointer;">&times;</span>
                                             </div>
-                                            <ul class="list-group lista-eventos text-left"></ul>
+                                            <ul class="list-unstyled lista-eventos text-start"></ul>
                                         </div>
 
 
@@ -516,7 +516,7 @@
                                                         <span class="cerrar-eventos display-4"
                                                             style="cursor: pointer;">&times;</span>
                                                     </div>
-                                                    <ul class="list-group lista-eventos text-left"></ul>
+                                                    <ul class="list-unstyled lista-eventos text-start"></ul>
                                                 </div>
 
 
@@ -917,7 +917,7 @@
                                                 <span class="cerrar-eventos display-4"
                                                     style="cursor: pointer;">&times;</span>
                                             </div>
-                                            <ul class="list-group lista-eventos text-left"></ul>
+                                            <ul class="list-unstyled lista-eventos text-start"></ul>
                                         </div>
 
 
@@ -1303,7 +1303,7 @@
                                                             <span class="cerrar-eventos display-4"
                                                                 style="cursor: pointer;">&times;</span>
                                                         </div>
-                                                        <ul class="list-group lista-eventos text-left"></ul>
+                                                        <ul class="list-unstyled lista-eventos text-start"></ul>
                                                     </div>
 
 
