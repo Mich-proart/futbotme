@@ -400,11 +400,12 @@ function obtenerAlineacion(btnIdLiga) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado_banca_visitantes').append(
                         `<li class="item-alineacion item-visitante bg_${iterator22.pos}">
-                            ${iterator22.player.name} 
-                            <span class="dorsal">${iterator22.shirtnumber}</span> 
+                            
                             <div class="d-inline-flex rounded-circle bandera_pais">
                                 <img src="https://flagcdn.com/${iterator22.player.cc}.svg" width="16" height="16" alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
+                            <span class="dorsal">${iterator22.shirtnumber}</span> 
+                            ${iterator22.player.name} 
                         </li>`)
 
 
