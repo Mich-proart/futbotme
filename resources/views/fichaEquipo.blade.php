@@ -55,33 +55,34 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-jornada-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-jornada" type="button" role="tab"
-                    aria-controls="pills-jornada" aria-selected="false">Jornada</button>
+                    aria-controls="pills-jornada" aria-selected="false">Calendario</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-goleadores-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-goleadores" type="button" role="tab"
-                    aria-controls="pills-goleadores" aria-selected="false">Goleadores</button>
+                    aria-controls="pills-goleadores" aria-selected="false">Clasificación</button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-equipo-tab"
-                    data-bs-toggle="pill" data-bs-target="#pills-equipo" type="button" role="tab"
-                    aria-controls="pills-equipo" aria-selected="false">Equipo</button>
-            </li>
+
             <li class="nav-item" role="presentation">
                 <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-calendario-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-calendario" type="button" role="tab"
-                    aria-controls="pills-calendario" aria-selected="false">Calendario</button>
+                    aria-controls="pills-calendario" aria-selected="false">Plantilla</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-fichajes-tab"
                     data-bs-toggle="pill" data-bs-target="#pills-fichajes" type="button" role="tab"
                     aria-controls="pills-fichajes" aria-selected="false">Fichajes</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link btn px-3 py-2 fw-semibold fs-00 me-3 mb-3" id="pills-equipo-tab"
+                    data-bs-toggle="pill" data-bs-target="#pills-equipo" type="button" role="tab"
+                    aria-controls="pills-equipo" aria-selected="false">Equipo</button>
+            </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             {{-- TAB DATOS --}}
             <div class="tab-pane fade show active" id="pills-datos" role="tabpanel" aria-labelledby="pills-datos-tab">
-                <div class="container-fluid">
+                <div class="container-fluid p-4 bg-white br-6 mb-4">
                     <div class="row row-cols-lg-2">
                         <div class="col">
                             <h3>{{ $team->nombreEstadio }}</h3>
@@ -96,8 +97,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="container-fluid p-4 bg-white br-6">
+                    <div class="row row-cols-lg-2">
+                        <div class="col">
+                            <h3>Datos del Club</h3>
+                            <p>{{ $team->nombreCompletoEquipo }}</p>
+                            <p>Fundado en {{ $team->fundadoEquipo }}</p>
+                            <p>Equipación: </p>
+                            <p>Web: </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {{-- TAB JORNADA --}}
+            {{-- TAB Calendario --}}
             <div class="tab-pane fade " id="pills-jornada" role="tabpanel" aria-labelledby="pills-jornada-tab">
 
                 {{-- JORNADAS --}}
@@ -169,7 +182,7 @@
             </div>
 
             <div class="tab-pane fade" id="pills-goleadores" role="tabpanel" aria-labelledby="pills-goleadores-tab">
-                {{-- TAB DE GOLEADORES --}}
+                {{-- TAB DE Clasificación --}}
                 <div class="mt-5 pt-lg-5 pt-4 table-responsive">
                     <table id="tabla_goleadores" class="table table-hover table-white border-light">
                         <thead>
@@ -203,20 +216,11 @@
                     </table>
                 </div>
             </div>
-
-            <div class="tab-pane fade" id="pills-equipo" role="tabpanel" aria-labelledby="pills-equipo-tab">
-                {{-- TAB DE EQUIPO --}}
-                <div class="container-fluid mt-5 pt-lg-5 pt-4">
-                    <div class="row">
-
-                    </div>
-                </div>
-
-            </div>
             <div class="tab-pane fade" id="pills-calendario" role="tabpanel" aria-labelledby="pills-calendario-tab">
-                {{-- TAB DE CALENDARIO --}}
+                {{-- TAB DE Plantilla --}}
 
             </div>
+
             <div class="tab-pane fade" id="pills-fichajes" role="tabpanel" aria-labelledby="pills-fichajes-tab">
                 {{-- FICHAJES --}}
                 <div class="accordion accordion-flush" id="accordionFichajes">
@@ -341,6 +345,18 @@
                     </div>
                 </div>
             </div>
+
+            <div class="tab-pane fade" id="pills-equipo" role="tabpanel" aria-labelledby="pills-equipo-tab">
+                {{-- TAB DE EQUIPO --}}
+                <div class="container-fluid mt-5 pt-lg-5 pt-4">
+                    <div class="row">
+
+                    </div>
+                </div>
+
+            </div>
+
+
             {{-- <div class="tab-pane fade" id="pills-ascensos-descensos" role="tabpanel"
             aria-labelledby="pills-ascensos-descensos-tab">...</div>
         <div class="tab-pane fade" id="pills-golaverage" role="tabpanel" aria-labelledby="pills-golaverage-tab">
