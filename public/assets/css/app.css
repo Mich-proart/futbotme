@@ -1008,7 +1008,10 @@ body {
 }
 
 .item-alineacion .dorsal {
-    padding: 1rem;
+    padding: 0rem .5rem;
+    background: white;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 .title-alineacion{
