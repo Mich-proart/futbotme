@@ -331,7 +331,7 @@ function obtenerAlineacion(btnIdLiga) {
                             ${iterator.player.name} 
                             <span class="dorsal">${iterator.shirtnumber}</span> 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="16" height="16" alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
                         </li>`)
 
@@ -340,7 +340,7 @@ function obtenerAlineacion(btnIdLiga) {
                             ${iterator.player.name} 
                             <span class="dorsal">${iterator.shirtnumber}</span> 
                             <div class="d-inline-flex rounded-circle bandera_pais">
-                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="16" height="16" alt="bandera del pais del torneo" class="rounded-circle">
                             </div>
                         </li>`)
 
@@ -350,10 +350,26 @@ function obtenerAlineacion(btnIdLiga) {
                 for (const iterator of result.results.away.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-visitantes').append(
-                        `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                            
+                            
+                            <div class="d-inline-flex rounded-circle bandera_pais">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="16" height="16" alt="bandera del pais del torneo" class="rounded-circle">
+                            </div>
+                            <span class="dorsal">${iterator.shirtnumber}</span> 
+                            ${iterator.player.name} 
+                        </li>`)
 
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-visitantes').append(
-                        `<li class="item-alineacion item-visitantes">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                            
+                            
+                            <div class="d-inline-flex rounded-circle bandera_pais">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="16" height="16" alt="bandera del pais del torneo" class="rounded-circle">
+                            </div>
+                            <span class="dorsal">${iterator.shirtnumber}</span> 
+                            ${iterator.player.name} 
+                        </li>`)
                     //console.log(iterator)          
                 }
 

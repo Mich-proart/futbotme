@@ -966,3 +966,34 @@ body {
     height: 100vh;
     overflow-y: auto;
 }
+
+.content-alineaciones {
+    background: #cce6d7;
+}
+
+.item-alineacion {
+    border: solid #fff 2px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.bg_Guard {
+    background-color: #c0e2cf;
+}
+
+.bg_Defender {
+    background-color: #f9c2c2;
+}
+
+.bg_Centrocampista {
+    background-color: #fcd9b9;
+}
+
+.bg_Forward {
+    background-color: #d6f0ff;
+}
+
+.item-alineacion .dorsal {
+    padding: 1rem;
+}
