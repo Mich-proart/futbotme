@@ -70,14 +70,24 @@ class Controller extends BaseController
         $partidosPorJugarCurDate = AdminController::get_partidos_curtdate(0, HelperFunctions::get_fecha_current_generic());
         $partidosEnJuegoCurDate = AdminController::get_partidos_curtdate(2, HelperFunctions::get_fecha_current_generic());
         $partidosTerminadosCurDate = AdminController::get_partidos_curtdate(1, HelperFunctions::get_fecha_current_generic());
-        // Realizar la solicitud a ipstack
+        /* // Realizar la solicitud a ipstack
         $apiKey = '74ceba1835ce5771f6b2e37f3011d886'; // Obtén tu clave API registrándote en ipstack.com
         $ip = request()->ip(); // Obtiene la dirección IP del usuario
 
         $client = new Client();
         $response = $client->get("http://api.ipstack.com/{$ip}?access_key={$apiKey}");
+        $userLocation = json_decode($response->getBody()); */
+        
+        // Realizar la solicitud a ipinfo.io
+        $accessToken = '96d2dea2d00c58'; // Obtén tu token de acceso registrándote en ipinfo.io
+        $ip = request()->ip(); // Obtiene la dirección IP del usuario
+
+        $client = new Client();
+        $response = $client->get("http://ipinfo.io/{$ip}?token={$accessToken}");
         $userLocation = json_decode($response->getBody());
-        //$userLocation = Location::get();
+
+
+
         // retornamos los datos de directo DB, finalizados DB, por Jugar DB
         return view('welcome', [
             'directos' => $directosFhicheroJson,
