@@ -306,7 +306,7 @@ function obtenerAlineacion(btnIdLiga) {
             let result = JSON.parse(jsonData);
             console.log(result);
             if (!(result.results && result.results.home && result.results.away)) {
-
+                console.log('no hay alineaciones');
                 jQuery('.title-alineacion').addClass('d-none')
 
                 jQuery(btnIdLiga).closest('.pull-right').find('.content-alineaciones').find('p').remove()
@@ -322,6 +322,7 @@ function obtenerAlineacion(btnIdLiga) {
                 jQuery(btnIdLiga).closest('.jorge-jorge').find('.content-alineaciones').removeClass('d-none').addClass('d-block')
 
             } else {
+                console.log('si hay alineaciones');
 
                 for (const iterator of result.results.home.startinglineup) {
 
@@ -331,7 +332,7 @@ function obtenerAlineacion(btnIdLiga) {
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-locales').append(
                         `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
 
-                    //console.log(iterator)          
+                    console.log(iterator)          
                 }
 
                 for (const iterator of result.results.away.startinglineup) {
