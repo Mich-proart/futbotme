@@ -359,10 +359,14 @@
                                                 <div class="left-content-alin pr-lg-3 w-50 ">
                                                     <h4 class="title-alineacion title-alineacion-locales"></h4>
                                                     <ul class="list-unstyled listado-locales"></ul>
+                                                    <div class="division_banca"></div>
+                                                    <ul class="list-unstyled listado_banca_locales"></ul>
                                                 </div>
                                                 <div class="rigth-content-alin w-50 ">
                                                     <h4 class="title-alineacion title-alineacion-visitantes"></h4>
                                                     <ul class="list-unstyled listado-visitantes"></ul>
+                                                    <div class="division_banca"></div>
+                                                    <ul class="list-unstyled listado_banca_visitantes"></ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -524,16 +528,17 @@
                                                             style="cursor: pointer;">&times;</span>
                                                     </div>
                                                     <div class="align-items-start flex-wrap d-flex">
-                                                        <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                                            <h4 class="title-alineacion title-alineacion-locales">
-                                                            </h4>
+                                                        <div class="left-content-alin pr-lg-3 w-50 ">
+                                                            <h4 class="title-alineacion title-alineacion-locales"></h4>
                                                             <ul class="list-unstyled listado-locales"></ul>
+                                                            <div class="division_banca"></div>
+                                                            <ul class="list-unstyled listado_banca_locales"></ul>
                                                         </div>
-                                                        <div class="rigth-content-alin w-50 text-left">
-                                                            <h4 class="title-alineacion title-alineacion-visitantes">
-                                                                
-                                                            </h4>
+                                                        <div class="rigth-content-alin w-50 ">
+                                                            <h4 class="title-alineacion title-alineacion-visitantes"></h4>
                                                             <ul class="list-unstyled listado-visitantes"></ul>
+                                                            <div class="division_banca"></div>
+                                                            <ul class="list-unstyled listado_banca_visitantes"></ul>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -923,14 +928,17 @@
                                                     style="cursor: pointer;">&times;</span>
                                             </div>
                                             <div class="align-items-start flex-wrap d-flex">
-                                                <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                                <div class="left-content-alin pr-lg-3 w-50 ">
                                                     <h4 class="title-alineacion title-alineacion-locales"></h4>
                                                     <ul class="list-unstyled listado-locales"></ul>
+                                                    <div class="division_banca"></div>
+                                                    <ul class="list-unstyled listado_banca_locales"></ul>
                                                 </div>
-                                                <div class="rigth-content-alin w-50 text-left">
-                                                    <h4 class="title-alineacion title-alineacion-visitantes">
-                                                    </h4>
+                                                <div class="rigth-content-alin w-50 ">
+                                                    <h4 class="title-alineacion title-alineacion-visitantes"></h4>
                                                     <ul class="list-unstyled listado-visitantes"></ul>
+                                                    <div class="division_banca"></div>
+                                                    <ul class="list-unstyled listado_banca_visitantes"></ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -999,28 +1007,28 @@
 
         <script>
             /* function terravison() {
-                                                                $.ajax({
-                                                                    url: '{{ route('leer-fichero') }}',
-                                                                    method: 'POST',
-                                                                    data: {
-                                                                        //nuevoJActiva: nuevoJActiva,
-                                                                        //id: id,
-                                                                        _token: '{{ csrf_token() }}',
-                                                                    },
-                                                                    success: function(response) {
-                                                                        // Actualizar el front-end con la nueva vista parcial
-                                                                        console.log(response);
-                                                                        $('#PartidosEnDirecto').html(response);
+                                                                        $.ajax({
+                                                                            url: '{{ route('leer-fichero') }}',
+                                                                            method: 'POST',
+                                                                            data: {
+                                                                                //nuevoJActiva: nuevoJActiva,
+                                                                                //id: id,
+                                                                                _token: '{{ csrf_token() }}',
+                                                                            },
+                                                                            success: function(response) {
+                                                                                // Actualizar el front-end con la nueva vista parcial
+                                                                                console.log(response);
+                                                                                $('#PartidosEnDirecto').html(response);
 
-                                                                    },
-                                                                    error: function(jqXHR, textStatus, errorThrown) {
-                                                                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                                                                            },
+                                                                            error: function(jqXHR, textStatus, errorThrown) {
+                                                                                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                                                                        // Mostrar detalles del error en la consola
-                                                                        console.log(jqXHR);
-                                                                    }
-                                                                });
-                                                            } */
+                                                                                // Mostrar detalles del error en la consola
+                                                                                console.log(jqXHR);
+                                                                            }
+                                                                        });
+                                                                    } */
 
 
             function terravison() {
@@ -1307,17 +1315,17 @@
                                                                 style="cursor: pointer;">&times;</span>
                                                         </div>
                                                         <div class="align-items-start flex-wrap d-flex">
-                                                            <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                                                <h4 class="title-alineacion title-alineacion-locales">
-                                                                    </h4>
+                                                            <div class="left-content-alin pr-lg-3 w-50 ">
+                                                                <h4 class="title-alineacion title-alineacion-locales"></h4>
                                                                 <ul class="list-unstyled listado-locales"></ul>
+                                                                <div class="division_banca"></div>
+                                                                <ul class="list-unstyled listado_banca_locales"></ul>
                                                             </div>
-                                                            <div class="rigth-content-alin w-50 text-left">
-                                                                <h4
-                                                                    class="title-alineacion title-alineacion-visitantes">
-                                                                    
-                                                                </h4>
+                                                            <div class="rigth-content-alin w-50 ">
+                                                                <h4 class="title-alineacion title-alineacion-visitantes"></h4>
                                                                 <ul class="list-unstyled listado-visitantes"></ul>
+                                                                <div class="division_banca"></div>
+                                                                <ul class="list-unstyled listado_banca_visitantes"></ul>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1368,28 +1376,28 @@
 
         <script>
             /* function terravison() {
-                                                                $.ajax({
-                                                                    url: '{{ route('leer-fichero') }}',
-                                                                    method: 'POST',
-                                                                    data: {
-                                                                        //nuevoJActiva: nuevoJActiva,
-                                                                        //id: id,
-                                                                        _token: '{{ csrf_token() }}',
-                                                                    },
-                                                                    success: function(response) {
-                                                                        // Actualizar el front-end con la nueva vista parcial
-                                                                        console.log(response);
-                                                                        $('#PartidosEnDirecto').html(response);
+                                                                        $.ajax({
+                                                                            url: '{{ route('leer-fichero') }}',
+                                                                            method: 'POST',
+                                                                            data: {
+                                                                                //nuevoJActiva: nuevoJActiva,
+                                                                                //id: id,
+                                                                                _token: '{{ csrf_token() }}',
+                                                                            },
+                                                                            success: function(response) {
+                                                                                // Actualizar el front-end con la nueva vista parcial
+                                                                                console.log(response);
+                                                                                $('#PartidosEnDirecto').html(response);
 
-                                                                    },
-                                                                    error: function(jqXHR, textStatus, errorThrown) {
-                                                                        console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
+                                                                            },
+                                                                            error: function(jqXHR, textStatus, errorThrown) {
+                                                                                console.error("Error en la solicitud Ajax:", textStatus, errorThrown);
 
-                                                                        // Mostrar detalles del error en la consola
-                                                                        console.log(jqXHR);
-                                                                    }
-                                                                });
-                                                            } */
+                                                                                // Mostrar detalles del error en la consola
+                                                                                console.log(jqXHR);
+                                                                            }
+                                                                        });
+                                                                    } */
 
 
             function terravison() {

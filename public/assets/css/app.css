@@ -1023,3 +1023,7 @@ body {
 .mas_info_partido *{
     cursor: pointer;
 }
+
+.division_banca{
+    padding-top: 3rem;
+}
