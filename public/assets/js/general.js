@@ -327,12 +327,24 @@ function obtenerAlineacion(btnIdLiga) {
                 for (const iterator of result.results.home.startinglineup) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado-locales').append(
-                        `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                            ${iterator.player.name} 
+                            <span class="dorsal">${iterator.shirtnumber}</span> 
+                            <div class="d-inline-flex rounded-circle bandera_pais">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                            </div>
+                        </li>`)
 
                     jQuery(btnIdLiga).closest('.jorge-jorge').find('.listado-locales').append(
-                        `<li class="item-alineacion item-local">${iterator.shirtnumber} - ${iterator.player.name}</li>`)
+                        `<li class="item-alineacion item-local bg_${iterator.pos}">
+                            ${iterator.player.name} 
+                            <span class="dorsal">${iterator.shirtnumber}</span> 
+                            <div class="d-inline-flex rounded-circle bandera_pais">
+                                <img src="https://flagcdn.com/${iterator.player.cc}.svg" width="32" height="32" alt="bandera del pais del torneo" class="rounded-circle">
+                            </div>
+                        </li>`)
 
-                    console.log(iterator)          
+                    //console.log(iterator)          
                 }
 
                 for (const iterator of result.results.away.startinglineup) {
