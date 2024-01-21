@@ -348,6 +348,8 @@ function obtenerAlineacion(btnIdLiga) {
 
                     //console.log(iterator)          
                 }
+                /* VISITANTE */
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.title-alineacion-visitantes').append(`${result.results.away.formation}`)
 
                 for (const iterator of result.results.away.startinglineup) {
 

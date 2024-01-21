@@ -1013,6 +1013,8 @@ body {
 
 .title-alineacion{
     text-align: center !important;
+    font-size: var(--fs-ciegos);
+    margin-bottom: 3rem;
 }
 
 .mas_info_partido *{
