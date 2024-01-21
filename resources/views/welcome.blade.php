@@ -390,32 +390,35 @@
                                     </div>
                                 </div>
 
-                            </div>
-                            <div class="d-none modal_info content-eventos de-fila-partido">
-                                <div class="d-flex align-items-center justify-content-between w-100">
-                                    <h3 class="d-block">Eventos</h3>
-                                    <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
-                                </div>
-                                <ul class="list-group lista-eventos text-left"></ul>
-                            </div>
+                                {{-- modales --}}
 
-
-                            <div class="d-none modal_info content-alineaciones">
-                                <div class="d-flex align-items-center justify-content-between w-100">
-                                    <h3 class="d-block">Alineaciones</h3>
-                                    <span class="cerrar-alineacion display-4" style="cursor: pointer;">&times;</span>
-                                </div>
-                                <div class="align-items-start flex-wrap d-flex">
-                                    <div class="left-content-alin pr-lg-3 w-50 text-left">
-                                        <h4 class="title-alineacion title-alineacion-locales">Local</h4>
-                                        <ul class="list-unstyled listado-locales"></ul>
+                                <div class="d-none modal_info content-eventos de-fila-partido">
+                                    <div class="d-flex align-items-center justify-content-between w-100">
+                                        <h3 class="d-block">Eventos</h3>
+                                        <span class="cerrar-eventos display-4" style="cursor: pointer;">&times;</span>
                                     </div>
-                                    <div class="rigth-content-alin w-50 text-left">
-                                        <h4 class="title-alineacion title-alineacion-visitantes">Visitante</h4>
-                                        <ul class="list-unstyled listado-visitantes"></ul>
+                                    <ul class="list-group lista-eventos text-left"></ul>
+                                </div>
+    
+    
+                                <div class="d-none modal_info content-alineaciones">
+                                    <div class="d-flex align-items-center justify-content-between w-100">
+                                        <h3 class="d-block">Alineaciones</h3>
+                                        <span class="cerrar-alineacion display-4" style="cursor: pointer;">&times;</span>
+                                    </div>
+                                    <div class="align-items-start flex-wrap d-flex">
+                                        <div class="left-content-alin pr-lg-3 w-50 text-left">
+                                            <h4 class="title-alineacion title-alineacion-locales">Local</h4>
+                                            <ul class="list-unstyled listado-locales"></ul>
+                                        </div>
+                                        <div class="rigth-content-alin w-50 text-left">
+                                            <h4 class="title-alineacion title-alineacion-visitantes">Visitante</h4>
+                                            <ul class="list-unstyled listado-visitantes"></ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
 
                             <?php } ?>
                         </div>
