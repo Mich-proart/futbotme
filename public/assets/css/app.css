@@ -971,7 +971,7 @@ body {
     background: #cce6d7;
 }
 
-.content-alineaciones *{
+.content-alineaciones > .align-items-start.flex-wrap.d-flex{
     max-width: 80%;
     margin: auto;
 }
