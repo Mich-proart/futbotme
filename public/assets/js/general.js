@@ -240,28 +240,29 @@ function obtenerEvento(btnIdLiga) {
         success: function (data) {
 
             console.log(jQuery(btnIdLiga).attr('attr-id-evento'));
-            console.log(data);
+            //console.log(data);
             // Elimina cualquier contenido adicional después del JSON
             const jsonData = data.substring(0, data.lastIndexOf('}') + 1);
 
             // Parsea el JSON
             let result = JSON.parse(jsonData)
             jQuery('.lista-eventos').empty()
-            jQuery('.icons-directos-estaticos').find('.content-eventos').addClass('d-none')
-            jQuery('.contenedorIconosPartido').find('.content-eventos').addClass('d-none')
-            jQuery(btnIdLiga).closest('.icons-directos-estaticos').find('.content-eventos').removeClass('d-none')
-            jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.content-eventos').removeClass('d-none')
+            jQuery('.mas_info_partido').find('.content-eventos').addClass('d-none')
+            jQuery('.mas_info_partido').find('.content-eventos').addClass('d-none')
+            jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-eventos').removeClass('d-none')
+            jQuery(btnIdLiga).closest('.mas_info_partido').find('.content-eventos').removeClass('d-none')
             if (result.results[0].events) {
                 for (const iterator of result.results[0].events) {
 
+                    console.log(iterator);
                     jQuery(btnIdLiga).addClass("d-inline-block");
 
-                    jQuery(btnIdLiga).closest('.icons-directos-estaticos').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
-                    jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
+                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
+                    jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">${iterator.text}</li>`)
                 }
             } else {
                 console.log("en el falso")
-                jQuery(btnIdLiga).closest('.contenedorIconosPartido').find('.lista-eventos').append(`<li class="list-group-item">No disponible</li>`)
+                jQuery(btnIdLiga).closest('.mas_info_partido').find('.lista-eventos').append(`<li class="list-group-item">No disponible</li>`)
             }
         }
     })
@@ -398,7 +399,7 @@ function obtenerAlineacion(btnIdLiga) {
                 for (const iterator22 of result.results.away.substitutes) {
 
                     jQuery(btnIdLiga).closest('.mas_info_partido').find('.listado_banca_visitantes').append(
-                        `<li class="item-alineacion item-local bg_${iterator22.pos}">
+                        `<li class="item-alineacion item-visitante bg_${iterator22.pos}">
                             ${iterator22.player.name} 
                             <span class="dorsal">${iterator22.shirtnumber}</span> 
                             <div class="d-inline-flex rounded-circle bandera_pais">
