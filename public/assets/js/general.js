@@ -305,7 +305,7 @@ function obtenerAlineacion(btnIdLiga) {
             // Parsea el JSON
             let result = JSON.parse(jsonData);
             console.log(result);
-            if (result.results) {
+            if (!(result.results && result.results.home && result.results.away)) {
 
                 jQuery('.title-alineacion').addClass('d-none')
 
