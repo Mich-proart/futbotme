@@ -118,8 +118,8 @@
 
                     <?php for ($i = 0; $i < 10; $i++) { ?>
                     <?php
-                    $horabd = $partido->hora_prevista;
-                    $HoraLimpia = substr($horabd, 0, -3); // Elimina los tres últimos caracteres :00
+                    /* $horabd = $partido->hora_prevista;
+                    $HoraLimpia = substr($horabd, 0, -3); */ // Elimina los tres últimos caracteres :00
                     ?>
                     <div id="<?php echo $i + 1; ?>" class="PartidosFuturos bg-white p-lg-4 p-3 mb-2">
                         <div class="d-flex aling-items-center justify-content-between partido_futuro">
